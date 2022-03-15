@@ -1,0 +1,61 @@
+com/bos/wms/mlkit/databinding/ContentLocationcheckBinding.java
+ com.bos.wms.mlkit.databinding.ContentLocationcheckBinding
+com/bos/wms/mlkit/databinding/ActivityShipmentPalleteReceivingBinding.java
+ com.bos.wms.mlkit.databinding.ActivityShipmentPalleteReceivingBinding
+com/bos/wms/mlkit/customView/PopWindowMain.java
+ com.bos.wms.mlkit.customView.PopWindowMain
+ com.bos.wms.mlkit.customView.PopWindowMain$1
+ com.bos.wms.mlkit.customView.PopWindowMain$2
+ com.bos.wms.mlkit.customView.PopWindowMain$DismissListener
+com/bos/wms/mlkit/databinding/ContentPutawaypalleteBinding.java
+ com.bos.wms.mlkit.databinding.ContentPutawaypalleteBinding
+com/bos/wms/mlkit/databinding/ActivityMainMenuBinding.java
+ com.bos.wms.mlkit.databinding.ActivityMainMenuBinding
+com/bos/wms/mlkit/General.java
+ com.bos.wms.mlkit.General
+ com.bos.wms.mlkit.General$1
+com/bos/wms/mlkit/databinding/ActivityFoldingscanBinding.java
+ com.bos.wms.mlkit.databinding.ActivityFoldingscanBinding
+com/bos/wms/mlkit/databinding/FragmentDashboardBinding.java
+ com.bos.wms.mlkit.databinding.FragmentDashboardBinding
+com/bos/wms/mlkit/databinding/ContentFillpalleteBinding.java
+ com.bos.wms.mlkit.databinding.ContentFillpalleteBinding
+com/bos/wms/mlkit/BuildConfig.java
+ com.bos.wms.mlkit.BuildConfig
+com/bos/wms/mlkit/databinding/FragmentHomeBinding.java
+ com.bos.wms.mlkit.databinding.FragmentHomeBinding
+com/bos/wms/mlkit/databinding/ActivityLocationcheckBinding.java
+ com.bos.wms.mlkit.databinding.ActivityLocationcheckBinding
+com/bos/wms/mlkit/LabelGraphic.java
+ com.bos.wms.mlkit.LabelGraphic
+com/bos/wms/mlkit/databinding/ActivityNextReceivingStatusBinding.java
+ com.bos.wms.mlkit.databinding.ActivityNextReceivingStatusBinding
+com/bos/wms/mlkit/databinding/PopWindowMainBinding.java
+ com.bos.wms.mlkit.databinding.PopWindowMainBinding
+com/bos/wms/mlkit/databinding/ContentPickingBinding.java
+ com.bos.wms.mlkit.databinding.ContentPickingBinding
+com/bos/wms/mlkit/databinding/ContentFoldingscanBinding.java
+ com.bos.wms.mlkit.databinding.ContentFoldingscanBinding
+com/bos/wms/mlkit/storage/Storage.java
+ com.bos.wms.mlkit.storage.Storage
+com/bos/wms/mlkit/databinding/ItemListBinding.java
+ com.bos.wms.mlkit.databinding.ItemListBinding
+com/bos/wms/mlkit/GraphicOverlay.java
+ com.bos.wms.mlkit.GraphicOverlay
+ com.bos.wms.mlkit.GraphicOverlay$Graphic
+com/bos/wms/mlkit/databinding/ActivityFillpalleteBinding.java
+ com.bos.wms.mlkit.databinding.ActivityFillpalleteBinding
+com/bos/wms/mlkit/TextGraphic.java
+ com.bos.wms.mlkit.TextGraphic
+com/bos/wms/mlkit/FaceContourGraphic.java
+ com.bos.wms.mlkit.FaceContourGraphic
+com/bos/wms/mlkit/databinding/ActivityLoginBinding.java
+ com.bos.wms.mlkit.databinding.ActivityLoginBinding
+com/bos/wms/mlkit/databinding/ActivityMainBinding.java
+ com.bos.wms.mlkit.databinding.ActivityMainBinding
+com/bos/wms/mlkit/databinding/ActivityPutawaypalleteBinding.java
+ com.bos.wms.mlkit.databinding.ActivityPutawaypalleteBinding
+com/bos/wms/mlkit/databinding/FragmentNotificationsBinding.java
+ com.bos.wms.mlkit.databinding.FragmentNotificationsBinding
+com/bos/wms/mlkit/databinding/ActivityPickingBinding.java
+ com.bos.wms.mlkit.databinding.ActivityPickingBinding

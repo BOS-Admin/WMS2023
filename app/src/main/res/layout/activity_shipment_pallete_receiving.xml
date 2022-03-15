@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:gravity="center|top"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/headerTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Shipment Pallete Receiving"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:background="@android:color/darker_gray"
+            android:orientation="vertical">
+
+
+        <ImageView
+                android:id="@+id/mImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="Our Image"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnCapture"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.5"
+            android:padding="5dp"
+            android:text="Capture"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btnShipPallReciDone"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.5"
+            android:padding="5dp"
+            android:text="Done"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lblStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lblFoldingScanStation"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:text="Folding Station:"
+            android:textAlignment="textEnd"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/txtFoldingScanStation"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:ems="3"
+            android:inputType="textPersonName"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lblFoldingScanStation"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:text="Folding Station:"
+            android:textAlignment="textEnd"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/txtFoldingScanStation"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:ems="3"
+            android:inputType="textPersonName"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lblFoldingScanStation"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:text="Folding Station:"
+            android:textAlignment="textEnd"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/txtFoldingScanStation"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:ems="3"
+            android:inputType="textPersonName"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lblFoldingScanStation"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:text="Folding Station:"
+            android:textAlignment="textEnd"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/txtFoldingScanStation"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:ems="3"
+            android:inputType="textPersonName"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

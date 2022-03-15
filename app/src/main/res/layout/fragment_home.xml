@@ -1,0 +1,260 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.ui.home.HomeFragment">
+
+    <TableLayout
+        android:id="@+id/tblMainMenu"
+        android:layout_width="414dp"
+        android:layout_height="544dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#F1F1F8"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="219dp">
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            android:layout_marginLeft="50px"
+            android:layout_marginRight="50px">
+
+            <Space
+                android:layout_width="150sp"
+                android:layout_height="40sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp">
+
+            <Button
+                android:id="@+id/btnMenuPicking"
+                style="button"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@android:color/holo_blue_light"
+                android:ellipsize="end"
+                android:shadowColor="@color/colorPrimary"
+                android:singleLine="false"
+                android:soundEffectsEnabled="false"
+                android:text="Picking Orders"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnMenuPutAwayPallete"
+                style="button"
+                android:layout_width="150sp"
+                android:layout_height="100sp"
+                android:background="@android:color/holo_blue_light"
+                android:ellipsize="end"
+                android:shadowColor="@color/colorPrimary"
+                android:singleLine="false"
+                android:soundEffectsEnabled="false"
+                android:text="Put Away Pallete"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            android:layout_marginLeft="50px"
+            android:layout_marginRight="50px">
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp">
+
+        >
+
+            <Button
+                android:id="@+id/btnMenuNextReceivingStatus"
+                style="button"
+                android:layout_width="150sp"
+                android:layout_height="100sp"
+                android:background="@android:color/holo_blue_light"
+                android:ellipsize="end"
+                android:shadowColor="@color/colorPrimary"
+                android:singleLine="false"
+                android:soundEffectsEnabled="false"
+                android:text="Item Receiving Station"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnLocationCheck"
+                style="button"
+                android:layout_width="150sp"
+                android:layout_height="100sp"
+                android:background="@android:color/holo_blue_light"
+                android:ellipsize="end"
+                android:shadowColor="@color/colorPrimary"
+                android:singleLine="false"
+                android:soundEffectsEnabled="false"
+                android:text="Location Check"
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp">
+
+        >
+
+            <Button
+                android:id="@+id/btnMenuFillPallete"
+                style="button"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@android:color/holo_blue_light"
+                android:ellipsize="end"
+                android:shadowColor="@color/colorPrimary"
+                android:singleLine="false"
+                android:soundEffectsEnabled="false"
+                android:text="Fill Pallete"
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnFoldingScan"
+                style="button"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@android:color/holo_blue_light"
+                android:ellipsize="end"
+                android:shadowColor="@color/colorPrimary"
+                android:singleLine="false"
+                android:soundEffectsEnabled="false"
+                android:text="Folding Scan"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp">
+
+            >
+
+            <Button
+                android:id="@+id/btnMenuShipmentPalleteReceiving"
+                style="button"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@android:color/holo_blue_light"
+                android:ellipsize="end"
+                android:shadowColor="@color/colorPrimary"
+                android:singleLine="false"
+                android:soundEffectsEnabled="false"
+                android:text="@string/shipment_pallete_receiving"
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnMenuShipmentCartonReceiving"
+                style="button"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@android:color/holo_blue_light"
+                android:ellipsize="end"
+                android:shadowColor="@color/colorPrimary"
+                android:singleLine="false"
+                android:soundEffectsEnabled="false"
+                android:text="@string/shipment_carton_receiving"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </TableRow>
+    </TableLayout>
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="7dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:height="100sp"
+        android:background="@null"
+        android:cursorVisible="false"
+        android:editable="false"
+        android:inputType="none"
+        android:maxLines="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
