@@ -4,6 +4,7 @@ package com.bos.wms.mlkit
 import Model.ItemOCRModel
 import Remote.APIClient
 import Remote.BasicApi
+import Remote.VolleyMultipartRequest
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
@@ -30,7 +31,6 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.VolleyError
 import com.android.volley.toolbox.Volley
-import Remote.VolleyMultipartRequest
 import com.bos.wms.mlkit.storage.Storage
 import com.google.mlkit.vision.barcode.Barcode
 import com.google.mlkit.vision.barcode.BarcodeScannerOptions
@@ -401,7 +401,27 @@ class MainActivity : AppCompatActivity() {
 
         }, ContextCompat.getMainExecutor(this))
     }
-
+    override fun onBackPressed() {
+        val dialogClickListener =
+            DialogInterface.OnClickListener { dialog, which ->
+                when (which) {
+                    DialogInterface.BUTTON_POSITIVE -> {
+                        //Yes button clicked
+                       this.finish()
+                    }
+                    DialogInterface.BUTTON_NEGATIVE -> {
+                    }
+                }
+            }
+        val builder = android.app.AlertDialog.Builder(
+            applicationContext
+        )
+        builder.setIcon(android.R.drawable.ic_dialog_alert)
+            .setTitle("Closing Form")
+            .setMessage("Are you sure you want to close the form?")
+            .setPositiveButton("Yes", dialogClickListener)
+            .setNegativeButton("No", dialogClickListener).show()
+    }
     private var BarcodeFolder: String? = "All"
     private fun takePhoto() {
         // Get a stable reference of the modifiable image capture use case

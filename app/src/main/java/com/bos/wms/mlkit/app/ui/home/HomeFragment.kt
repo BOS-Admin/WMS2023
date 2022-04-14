@@ -72,6 +72,9 @@ class HomeFragment : Fragment() {
         root.btnMenuShipmentPalleteReceiving.setOnClickListener {
             ProceedShipmentPalleteReceiving()
         }
+        root.btnMenuShipmentCartonReceiving.setOnClickListener {
+            ProceedShipmentCartonReceiving()
+        }
         mStorage= Storage(context?.applicationContext) //sp存储
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82")
 
@@ -174,6 +177,11 @@ class HomeFragment : Fragment() {
     }
     fun ProceedShipmentPalleteReceiving() {
         val intent = Intent (getActivity(), ShipmentPalleteReceivingActivity::class.java)
+        startActivity(intent)
+        txtStatus.setText("")
+    }
+    fun ProceedShipmentCartonReceiving() {
+        val intent = Intent (getActivity(), ShipmentCartonReceivingActivity::class.java)
         startActivity(intent)
         txtStatus.setText("")
     }

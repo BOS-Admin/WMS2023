@@ -50,6 +50,11 @@
             android:label="Shipment Pallete Receiving"
             android:windowSoftInputMode="stateAlwaysHidden"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".app.ShipmentCartonReceivingActivity"
+            android:label="Shipment Carton Receiving"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
 
 
         <activity

@@ -21,6 +21,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\21cf40d31716aa8f01ac2cd4c10b4bb3\\core-1.9.0-alpha02\\res\\values-ru\\values-ru.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "110",
+                        "startColumns": "4",
+                        "startOffsets": "10586",
+                        "endColumns": "100",
+                        "endOffsets": "10682"
+                    }
+                },
+                {
                     "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\d4df58e134d898fbbcb9f3dbcb32eef0\\navigation-ui-2.3.5\\res\\values-ru\\values-ru.xml",
                     "from": {
                         "startLines": "2,3",
@@ -88,23 +105,6 @@
                         "endLines": "7,35,36,37,38,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,108",
                         "endColumns": "12,83,96,136,91,65,98,76,62,117,64,56,69,60,53,115,56,61,53,73,127,87,85,106,83,84,90,66,65,71,77,95,79,75,76,76,88,72,89,94,73,80,92,54,65,85,84,61,63,62,97,99,94,101,79",
                         "endOffsets": "381,3182,3279,3416,3508,6336,6435,6512,6575,6693,6758,6815,6885,6946,7000,7116,7173,7235,7289,7363,7491,7579,7665,7772,7856,7941,8032,8099,8165,8237,8315,8411,8491,8567,8644,8721,8810,8883,8973,9068,9142,9223,9316,9371,9437,9523,9608,9670,9734,9797,9895,9995,10090,10192,10499"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\3999f56294d2565db3b19332ed4c5966\\core-1.9.0-alpha01\\res\\values-ru\\values-ru.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "110",
-                        "startColumns": "4",
-                        "startOffsets": "10586",
-                        "endColumns": "100",
-                        "endOffsets": "10682"
                     }
                 }
             ]

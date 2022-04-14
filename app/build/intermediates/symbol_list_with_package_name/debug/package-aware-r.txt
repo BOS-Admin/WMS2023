@@ -2171,10 +2171,6 @@ id info
 id invisible
 id inward
 id italic
-id item1
-id item2
-id item3
-id item4
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
@@ -2193,6 +2189,13 @@ id lblPickingRackRange
 id lblPickingReminaingBins
 id lblPickingReminaingItems
 id lblPickingWave
+id lblShipCartonReciBolNb
+id lblShipCartonReciCartonCode
+id lblShipCartonReciPalleteNb
+id lblShipPallReciAppointmentNb
+id lblShipPallReciBolNb
+id lblShipPallReciNbOfCartons
+id lblShipPallReciPalleteNb
 id lblStatus
 id lblfillpalleteBarcode
 id lblfillpalleteBinBarcode
@@ -2471,6 +2474,13 @@ id txtPutAwayPalleteBarcode
 id txtRFIDMac
 id txtScaleMac
 id txtShelfBarcode
+id txtShipCartonReciBolNb
+id txtShipCartonReciCartonCode
+id txtShipCartonReciPalleteNb
+id txtShipPallReciAppointmentNb
+id txtShipPallReciBolNb
+id txtShipPallReciNbOfCartons
+id txtShipPallReciPalleteNb
 id txtStatus
 id txtfillpalleteBinBarcode
 id txtlocationcheckBinBarcode
@@ -2579,6 +2589,7 @@ layout activity_main_menu
 layout activity_next_receiving_status
 layout activity_picking
 layout activity_putawaypallete
+layout activity_shipment_pallete_carton
 layout activity_shipment_pallete_receiving
 layout content_fillpallete
 layout content_foldingscan
@@ -2684,8 +2695,6 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu bottom_nav_menu
-menu example_menu
-menu example_menu2
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation

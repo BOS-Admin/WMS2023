@@ -57,5 +57,7 @@ com/bos/wms/mlkit/databinding/ActivityPutawaypalleteBinding.java
  com.bos.wms.mlkit.databinding.ActivityPutawaypalleteBinding
 com/bos/wms/mlkit/databinding/FragmentNotificationsBinding.java
  com.bos.wms.mlkit.databinding.FragmentNotificationsBinding
+com/bos/wms/mlkit/databinding/ActivityShipmentPalleteCartonBinding.java
+ com.bos.wms.mlkit.databinding.ActivityShipmentPalleteCartonBinding
 com/bos/wms/mlkit/databinding/ActivityPickingBinding.java
  com.bos.wms.mlkit.databinding.ActivityPickingBinding

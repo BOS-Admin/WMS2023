@@ -1,23 +1,26 @@
 package com.bos.wms.mlkit.app
 
+import Remote.APIClient
+import Remote.BasicApi
 import Remote.VolleyMultipartRequest
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.app.Activity
-import android.content.ActivityNotFoundException
 import android.content.ContentUris
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.net.Uri
-
-import android.os.Build
-import android.os.Bundle
-import android.os.Environment
+import android.net.sip.SipErrorCode.TIME_OUT
+import android.os.*
 import android.provider.DocumentsContract
 import android.provider.MediaStore
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -26,18 +29,21 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
-import com.android.volley.NetworkResponse
+import androidx.lifecycle.lifecycleScope
 import com.android.volley.Request
 import com.android.volley.Response
-import com.android.volley.VolleyError
 import com.android.volley.toolbox.Volley
 import com.bos.wms.mlkit.General
 import com.bos.wms.mlkit.R
+import com.bos.wms.mlkit.storage.Storage
 import id.zelory.compressor.Compressor
-import kotlinx.coroutines.GlobalScope
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.activity_shipment_pallete_receiving.*
+import kotlinx.android.synthetic.main.content_foldingscan.*
+import kotlinx.android.synthetic.main.content_putawaypallete.*
 import kotlinx.coroutines.launch
-import org.json.JSONException
-import org.json.JSONObject
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.IOException
@@ -57,7 +63,7 @@ class ShipmentPalleteReceivingActivity : AppCompatActivity() {
     //Our constants
     private val OPERATION_CAPTURE_PHOTO = 1
     private val OPERATION_CHOOSE_PHOTO = 2
-
+    private lateinit var TextChangeEvent:TextWatcher
 
     private fun initializeWidgets() {
         btnCapture = findViewById(R.id.btnCapture)
@@ -70,8 +76,11 @@ class ShipmentPalleteReceivingActivity : AppCompatActivity() {
         Toast.makeText(this,message,Toast.LENGTH_SHORT).show()
     }
     private fun capturePhoto(){
-        //val capturedImage = InitializeImageFile()
-        val capturedImage =  File(externalCacheDir, "My_Captured_Photo.jpg")
+        var capturedImage = InitializeImageFile()
+
+        //capturedImage =  File(File(externalCacheDir,"Appointment"), capturedImage.name)
+        capturedImage =  File(externalCacheDir,capturedImage.name)
+
         if(capturedImage.exists()) {
             capturedImage.delete()
         }
@@ -203,12 +212,15 @@ class ShipmentPalleteReceivingActivity : AppCompatActivity() {
                     //mImageView!!.setImageBitmap(bitmap)
                     //
 
-                    GlobalScope.launch {
+                    lifecycleScope.launch {
                         val compressedImageFile = Compressor.compress(applicationContext, mFilePath!!)
                         CompressedBitmap = BitmapFactory.decodeFile(compressedImageFile.path)
-                        //imageView.setImageBitmap(bitmap)
+                        UploadBitmap=CompressedBitmap!!
+                        UploadPath=mFilePath!!
+                        mImageView!!.setImageBitmap(bitmap)
+                        txtShipPallReciAppointmentNb.requestFocus()
                     }
-                    uploadBitmap(CompressedBitmap!!, mFilePath!!)
+
                 }
             OPERATION_CHOOSE_PHOTO ->
                 if (resultCode == Activity.RESULT_OK) {
@@ -218,13 +230,16 @@ class ShipmentPalleteReceivingActivity : AppCompatActivity() {
                 }
         }
     }
+    var UpdatingText:Boolean=false
     var CompressedBitmap:Bitmap?=null;
+    lateinit var  mStorage:Storage ;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shipment_pallete_receiving)
 
         initializeWidgets()
-
+        mStorage = Storage(applicationContext)
+        IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82")
         btnCapture.setOnClickListener{
 
             val checkSelfPermission = ContextCompat.checkSelfPermission(this,
@@ -245,18 +260,287 @@ class ShipmentPalleteReceivingActivity : AppCompatActivity() {
             //check permission at runtime
 
         }
+        TextChangeEvent=object : TextWatcher {
 
+            @SuppressLint("ResourceAsColor")
+            override fun afterTextChanged(s: Editable) {
+                if(UpdatingText)
+                    return;
+                UpdatingText=true;
+                var seqVal:Int=0
+                var AppointmentNbStr:String=txtShipPallReciAppointmentNb.text.toString()
+                var BolNbStr:String=txtShipPallReciBolNb.text.toString()
+                var PalleteNbStr:String=txtShipPallReciPalleteNb.text.toString()
+                var NbOfCartonsStr:String=txtShipPallReciNbOfCartons.text.toString()
+
+
+                if(!General.ValidateAppointmentNoFormat(AppointmentNbStr)){
+                    seqVal=0
+                }
+                else  if(!General.ValidateAppointmentNo(AppointmentNbStr)){
+                    seqVal=0
+                }
+                else  if(!General.ValidateBolNoFormat(BolNbStr)){
+                    seqVal=1
+                }
+                else  if(!General.ValidateBolNo(BolNbStr)){
+                    seqVal=1
+                } else  if(!General.ValidatePalleteNo(PalleteNbStr)){
+                    seqVal=2
+                }
+                else  if(!General.ValidateNbOfCartons(NbOfCartonsStr)){
+                    seqVal=3
+                }
+                else{
+                    seqVal=4
+                }
+                when (seqVal) {
+                    0 -> {
+                        txtShipPallReciAppointmentNb.setText("")
+                        txtShipPallReciBolNb.setText("")
+                        txtShipPallReciPalleteNb.setText("")
+                        txtShipPallReciNbOfCartons.setText("")
+                        txtShipPallReciAppointmentNb.requestFocus()
+                        UpdatingText=false;
+                    }
+                    1 -> {
+                        ValidateAppointment(General.ToInteger(AppointmentNbStr,-1));
+                    }
+                    2 -> {
+                        ValidateAppointmentBol(General.ToInteger(AppointmentNbStr,-1),General.ToInteger(BolNbStr,-1));
+                    }
+                    3 -> {
+                        txtShipPallReciNbOfCartons.setText("")
+                        txtShipPallReciNbOfCartons.requestFocus()
+                        UpdatingText=false;
+                    }
+                    4 -> {
+                        PostShipmentReceivingPallete(
+                            General.ToInteger(AppointmentNbStr,-1),
+                            BolNbStr,
+                            General.ToInteger(PalleteNbStr,-1),
+                            General.ToInteger(NbOfCartonsStr,-1),
+                        )
+
+                    }
+                }
+                txtShipPallReciAppointmentNb.setShowSoftInputOnFocus(false);
+                txtShipPallReciBolNb.setShowSoftInputOnFocus(false);
+                txtShipPallReciPalleteNb.setShowSoftInputOnFocus(false);
+                txtShipPallReciNbOfCartons.setShowSoftInputOnFocus(false);
+            }
+
+            override fun beforeTextChanged(s: CharSequence, start: Int,
+                                           count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int,
+                                       before: Int, count: Int) {
+
+            }
+        }
+        General.hideSoftKeyboard(this)
+        txtShipPallReciAppointmentNb.setShowSoftInputOnFocus(false);
+        txtShipPallReciBolNb.setShowSoftInputOnFocus(false);
+        txtShipPallReciPalleteNb.setShowSoftInputOnFocus(false);
+        txtShipPallReciNbOfCartons.setShowSoftInputOnFocus(false);
         btnCapture.performClick()
+        txtShipPallReciAppointmentNb.addTextChangedListener(TextChangeEvent)
+        txtShipPallReciBolNb.addTextChangedListener(TextChangeEvent);
+        txtShipPallReciPalleteNb.addTextChangedListener(TextChangeEvent);
+        txtShipPallReciNbOfCartons.addTextChangedListener(TextChangeEvent);
     }
+    var ColorGreen = Color.parseColor("#52ac24")
+    var ColorRed = Color.parseColor("#ef2112")
+    var ColorWhite = Color.parseColor("#ffffff")
+    fun RestartScreen(){
+
+    }
+    fun PostShipmentReceivingPallete(AppointmentNo:Int, BolNumber: String, PalleteNb:Int, NbOfCartons:Int){
+        try {
+            // TODO: handle loggedInUser authentication
+            var UserID: Int=General.getGeneral(applicationContext).UserID
+            api = APIClient.getInstance(IPAddress,false).create(BasicApi::class.java)
+            compositeDisposable.addAll(
+                api.ShipmentReceivingPallete(UserID,AppointmentNo,BolNumber, PalleteNb, NbOfCartons)
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(
+                        { s ->
+                            var ErrorMsg = ""
+                            try {
+                                ErrorMsg = s.string()
+                            } catch (e: IOException) {
+                                e.printStackTrace()
+                            }
+                            if (ErrorMsg.isEmpty()) {
+                                ProceedSuccess("Success")
+                                UploadTrial=0
+                                uploadBitmap(UploadBitmap, UploadPath)
+
+
+                            }else {
+                                if(ErrorMsg.startsWith("Success:")){
+                                    ProceedSuccess(ErrorMsg)
+                                    UploadTrial=0
+                                    uploadBitmap(UploadBitmap, UploadPath)
+
+                                }
+                                else{
+                                    ProceedFailure(ErrorMsg)
+                                }
+                            }
+                            UpdatingText=false;
+                        },
+                        { t: Throwable? ->
+                            run {
+                                showErrorProcessing(t.toString())
+                                ProceedFailure(t.toString())
+                                UpdatingText=false;
+                            }
+                        }
+                    )
+            )
+        } catch (e: Throwable) {
+            //throw(IOException("Error PostShipmentReceivingPallete", e))
+            ProceedFailure(e.message!!)
+            UpdatingText=false;
+        } finally {
+        }
+    }
+    fun ProceedSuccess(str:String){
+        General.playSuccess()
+        lblStatus.text = str
+        lblStatus.setTextColor(ColorGreen)
+    }
+    fun ProceedFailure(str:String){
+        General.playError()
+        lblStatus.text = str
+        lblStatus.setTextColor(ColorRed)
+    }
+    lateinit var api: BasicApi
+    var compositeDisposable = CompositeDisposable()
+    override fun onStop() {
+        compositeDisposable.clear()
+        super.onStop()
+    }
+    var IPAddress =""
+    var AppointmentValidated:Boolean=false
+    var BolValidated:Boolean=false
+    fun ValidateAppointment(AppointmentNo: Int) {
+
+        try {
+            // TODO: handle loggedInUser authentication
+
+            api = APIClient.getInstance(IPAddress,false).create(BasicApi::class.java)
+            compositeDisposable.addAll(
+                api.ValidateShipmentAppointment(AppointmentNo)
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(
+                        { s ->
+                            if (s){
+                                AppointmentValidated=true;
+                                ProceedSuccess("Scan Bol Number")
+                                txtShipPallReciBolNb.setText("")
+                                txtShipPallReciPalleteNb.setText("")
+                                txtShipPallReciNbOfCartons.setText("")
+                                txtShipPallReciBolNb.requestFocus()
+                            }
+                            else{
+                                AppointmentValidated=false;
+                                ProceedFailure("Invalid Appointment")
+                                txtShipPallReciAppointmentNb.setText("")
+                                txtShipPallReciBolNb.setText("")
+                                txtShipPallReciPalleteNb.setText("")
+                                txtShipPallReciNbOfCartons.setText("")
+                                txtShipPallReciAppointmentNb.requestFocus()
+                        }
+                            UpdatingText=false;
+                        },
+                        { t: Throwable? ->
+                            run {
+                                showErrorProcessing(t.toString())
+                                UpdatingText=false;
+                            }
+                        }
+                    )
+            )
+        } catch (e: Throwable) {
+            throw(IOException("Error ValidateAppointment", e))
+            UpdatingText=false;
+        } finally {
+        }
+    }
+    fun ValidateAppointmentBol(AppointmentNo: Int,BolNo: Int) {
+
+        try {
+            // TODO: handle loggedInUser authentication
+
+            api = APIClient.getInstance(IPAddress,false).create(BasicApi::class.java)
+            compositeDisposable.addAll(
+                api.ValidateShipmentBol(AppointmentNo,BolNo)
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(
+                        { s ->
+                            if (s){
+                                BolValidated=true;
+                                ProceedSuccess("Scan Pallete Nb")
+                                txtShipPallReciPalleteNb.setText("")
+                                txtShipPallReciNbOfCartons.setText("")
+                                txtShipPallReciPalleteNb.requestFocus()
+                            }
+                            else{
+                                BolValidated=false;
+                                ProceedFailure("Invalid Bol Nb")
+                                txtShipPallReciBolNb.setText("")
+                                txtShipPallReciPalleteNb.setText("")
+                                txtShipPallReciNbOfCartons.setText("")
+                                txtShipPallReciBolNb.requestFocus()
+                            }
+                            UpdatingText=false;
+                        },
+                        { t: Throwable? ->
+                            run {
+                                showErrorProcessing(t.toString())
+                                UpdatingText=false;
+                            }
+                        }
+                    )
+            )
+        } catch (e: Throwable) {
+            throw(IOException("Error ValidateAppointmentBol", e))
+            UpdatingText=false;
+        } finally {
+        }
+    }
+    private var toast: Toast? = null
+    fun showToast(message: String?, Big: Boolean = false) {
+        if (toast != null) {
+            toast!!.cancel()
+        }
+        toast = Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT)
+        if (Big) {
+            val group = toast!!.view as ViewGroup
+            val messageTextView = group.getChildAt(0) as TextView
+            messageTextView.textSize = 35f
+        }
+        toast!!.show()
+    }
+    private fun showErrorProcessing(errorString: String) {
+        showToast(errorString)
+    }
+    lateinit var UploadBitmap:Bitmap
+    lateinit var UploadPath:File
     private fun UploadImage(filePath:File) {
 
             if (filePath != null) {
                 try {
-                    GlobalScope.launch {
+                    lifecycleScope.launch {
                         val compressedImageFile = Compressor.compress(applicationContext, filePath)
-                        var bitmap = BitmapFactory.decodeFile(compressedImageFile.path)
+                        val bitmap = BitmapFactory.decodeFile(compressedImageFile.path)
                         uploadBitmap(bitmap, filePath)
-                        //imageView.setImageBitmap(bitmap)
                     }
 
                 } catch (e: IOException) {
@@ -279,9 +563,24 @@ class ShipmentPalleteReceivingActivity : AppCompatActivity() {
     }
     private val FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS"
     private fun InitializeImageFile():File{
-        val FolerPath = File(
+        var FolerPath = File(
             getOutputDirectory(),
             "/" + "Appointment" + "/"
+        )
+        var AppointmentNbStr:String=txtShipPallReciAppointmentNb.text.toString()
+        var BolNbStr:String=txtShipPallReciBolNb.text.toString()
+        var PalleteNbStr:String=txtShipPallReciPalleteNb.text.toString()
+        FolerPath = File(
+            FolerPath,
+            "/" + AppointmentNbStr + "/"
+        )
+        FolerPath = File(
+            FolerPath,
+            "/" + BolNbStr + "/"
+        )
+        FolerPath = File(
+            FolerPath,
+            "/" + PalleteNbStr + "/"
         )
         FolerPath.mkdirs()
         val photoFile = File(
@@ -308,32 +607,49 @@ class ShipmentPalleteReceivingActivity : AppCompatActivity() {
             currentPhotoPath = absolutePath
         }
     }
+    var UploadTrial:Int=0
     private fun uploadBitmap(bitmap: Bitmap, FileName: File) {
-        lblStatus.setText("Uploading Image")
+        UploadTrial=UploadTrial+1
+        if(UploadTrial>5){
+         lblStatus.setText("Image upload failure, retry!!")
+            lblStatus.setTextColor(ColorRed)
+            General.playError()
+            return
+        }
+        lblStatus.setText(lblStatus.text.toString()+" Uploading Image..")
         btnDone.setEnabled(false)
+        var UploadAPI:String=IPAddress
+        if(!IPAddress.endsWith("/"))
+            UploadAPI=IPAddress+"/"
         val volleyMultipartRequest: VolleyMultipartRequest =
             object : VolleyMultipartRequest(
                 //      Request.Method.POST, "http://10.188.30.110/BOS_WMS_API/FileUpload",
 
-
-                Request.Method.POST, "http://192.168.1.172/BOS_WMS_API/FileUpload",
+                Request.Method.POST, "http://"+UploadAPI+"FileUpload",
                 //Request.Method.POST, "http://192.168.10.82:5000/FileUpload",
                 Response.Listener {
                     val response = it
                     btnDone.setEnabled(true)
-                    lblStatus.setText("Image Uploaded - Fill Pallete info")
+                    lblStatus.setText("Image Uploaded")
+                    Handler(Looper.getMainLooper()).postDelayed(Runnable {
+                        recreate();
+                    }, 3500)
+
+
                     Log.e("",it.toString())
                     // finishSend(response, comment)
                 },
                 Response.ErrorListener {
                     Log.e("",it.toString())
+                    uploadBitmap(bitmap, FileName)
                 }
             ) {
                 override fun getByteData(): Map<String, DataPart>? {
                     val params: MutableMap<String, DataPart> = HashMap()
-                    val imagename = FileName//System.currentTimeMillis()
+                    //val imagename = FileName//System.currentTimeMillis()
+                    val imagename=InitializeImageFile()
                     params["image"] = DataPart(
-                        FileName.absolutePath,
+                        imagename.absolutePath,//FileName.absolutePath.replace("cache","Appointment"),
                         getFileDataFromDrawable(bitmap)!!
                     )
                     return params

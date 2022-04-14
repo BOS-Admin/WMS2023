@@ -70,6 +70,11 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
+            android:name="com.bos.wms.mlkit.app.ShipmentCartonReceivingActivity"
+            android:label="Shipment Carton Receiving"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
             android:name="com.bos.wms.mlkit.app.FoldingScanActivity"
             android:label="Folding Scan"
             android:theme="@style/AppTheme.NoActionBar"

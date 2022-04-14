@@ -21,7 +21,7 @@ public class General {
     private static volatile General instance = null;
     public Integer UserID=0;
     public Integer FloorID=0;
-    public String AppVersion="0.0.6 08/03/2022";
+    public String AppVersion="1.2.0 14/04/2022";
     int interval = 3600;    // when there's no activity
 
     /**
@@ -92,6 +92,56 @@ public class General {
     public static Boolean ValidatePalleteCode(String str){
         return !str.isEmpty() && str.length()>1;
     }
+
+    public static Boolean ValidateAppointmentNoFormat(String str){
+        return !str.isEmpty() && ToInteger(str,0)>0 && ToInteger(str,1000000000)<1000000000;
+    }
+
+    public static Boolean ValidateBolNoFormat(String str){
+        return !str.isEmpty() && ToInteger(str,0)>0 && ToInteger(str,1000000000)<1000000000;
+    }
+
+    public static Boolean ValidateAppointmentNo(String str){
+        return !str.isEmpty() && ToInteger(str,0)>0 && ToInteger(str,1000000000)<1000000000;
+    }
+
+    public static Boolean ValidateBolNo(String str){
+        return !str.isEmpty() && ToInteger(str,0)>0 && ToInteger(str,1000000000)<1000000000;
+    }
+    public  static  Boolean IsInteger(String str){
+        try
+        {
+            Integer.parseInt(str);
+            return true;
+        }
+        catch (NumberFormatException e) {
+            return  false;
+        }
+    }
+    public  static  Integer ToInteger(String str,int Default){
+        try
+        {
+            return Integer.parseInt(str);
+        }
+        catch (NumberFormatException e) {
+            return  Default;
+        }
+        catch (Exception ex) {
+            return  Default;
+        }
+    }
+    public static Boolean ValidatePalleteNo(String str){
+
+        return !str.isEmpty() && ToInteger(str,0)>0 && ToInteger(str,100)<100;
+    }
+    public static Boolean ValidateNbOfCartons(String str){
+        return !str.isEmpty() && ToInteger(str,0)>0 && ToInteger(str,100)<100;
+    }
+
+    public static Boolean ValidateCartonCode(String str){
+        return !str.isEmpty() && str.length()>10;
+    }
+
     public static Boolean ValidateRFIDCode(String str){
         return !str.isEmpty() && str.length()>1;
     }

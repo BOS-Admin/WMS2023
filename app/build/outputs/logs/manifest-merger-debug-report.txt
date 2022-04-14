@@ -11,10 +11,10 @@ INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidMa
 	android:name
 		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:71-120
 manifest
-ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-83:12
+ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-88:12
 MERGED from [androidx.databinding:viewbinding:4.2.2] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\a86ea156f1c6c70da169573cb5f0d3f3\jetified-viewbinding-4.2.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\c769df03204033926a2147a2882f401e\navigation-ui-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\d4df58e134d898fbbcb9f3dbcb32eef0\navigation-ui-2.3.5\AndroidManifest.xml:17:1-24:12
@@ -38,7 +38,7 @@ MERGED from [androidx.fragment:fragment-ktx:1.2.4] C:\Users\HYassine\.gradle\cac
 MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\02f745a730374ddecc29679c166cd34e\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\91dfc1e2c0260b1777303e39ffe6c4c3\navigation-common-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8aeec1a42fdd76f7c2377c68f6f2d7bb\jetified-activity-ktx-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core-ktx:1.9.0-alpha01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\994b6edca52ac654f7e35523b509698f\jetified-core-ktx-1.9.0-alpha01\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.core:core-ktx:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\98cdf304d81f3f30e3e349a67a0e7d03\jetified-core-ktx-1.9.0-alpha02\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\16022fda65e52f1a153b1a97817890a4\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\6beb34cd66cfb7058da4244864872e09\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\dafeb60989f149d261f75912da5819c3\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -69,7 +69,7 @@ MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\HYassine\.gradle
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\b0c4d7ac618575ebe5c725cf0347255d\customview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.transition:transition:1.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\0057fa46b90e52d805e47ca344b36806\transition-1.3.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\a8769ce339851409dcc9b3d41f90ed6b\navigation-common-2.3.5\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.9.0-alpha01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3999f56294d2565db3b19332ed4c5966\core-1.9.0-alpha01\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.core:core:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21cf40d31716aa8f01ac2cd4c10b4bb3\core-1.9.0-alpha02\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21bab031b7c826ab1df86417002012f4\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\b8b2e3b141c865387d31f833098d4c29\lifecycle-runtime-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\1b170f37525690e86272074040d21341\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
@@ -96,20 +96,20 @@ MERGED from [com.android.volley:volley:1.2.0] C:\Users\HYassine\.gradle\caches\t
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\e79ea639585a1d89c7244452787d7828\jetified-rxandroid-2.0.1\AndroidManifest.xml:15:1-21:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\2309c301d9c715399ce59dfc6758a6c1\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\38e89c11bc4340f7fab68339d29f0a52\jetified-image-1.0.0-beta1\AndroidManifest.xml:2:1-9:12
-INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-83:12
+INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-88:12
 	package
 		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-83:12
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-88:12
 		INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-83:12
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:1-88:12
 		INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:2:11-69
@@ -146,7 +146,7 @@ ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManif
 	android:name
 		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:16:22-62
 application
-ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:18:5-81:19
+ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:18:5-86:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\c78e2c0af5afa33232d9367e0579742a\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\c78e2c0af5afa33232d9367e0579742a\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\a64dbcbcb4c4e3cd7cb08491407dcacd\constraintlayout-2.1.1\AndroidManifest.xml:9:5-20
@@ -171,8 +171,8 @@ MERGED from [com.google.android.gms:play-services-tasks:17.2.1] C:\Users\HYassin
 MERGED from [com.google.android.gms:play-services-tasks:17.2.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\2b2ee1a5145278ee29e8b8088d5d9d46\jetified-play-services-tasks-17.2.1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3660efe75059e256e98761f0389e92f8\jetified-play-services-basement-17.6.0\AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3660efe75059e256e98761f0389e92f8\jetified-play-services-basement-17.6.0\AndroidManifest.xml:22:5-26:19
-MERGED from [androidx.core:core:1.9.0-alpha01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3999f56294d2565db3b19332ed4c5966\core-1.9.0-alpha01\AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.9.0-alpha01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3999f56294d2565db3b19332ed4c5966\core-1.9.0-alpha01\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21cf40d31716aa8f01ac2cd4c10b4bb3\core-1.9.0-alpha02\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21cf40d31716aa8f01ac2cd4c10b4bb3\core-1.9.0-alpha02\AndroidManifest.xml:24:5-89
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:25:5-39:19
@@ -182,7 +182,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HY
 MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\38e89c11bc4340f7fab68339d29f0a52\jetified-image-1.0.0-beta1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\38e89c11bc4340f7fab68339d29f0a52\jetified-image-1.0.0-beta1\AndroidManifest.xml:7:5-20
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.9.0-alpha01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3999f56294d2565db3b19332ed4c5966\core-1.9.0-alpha01\AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21cf40d31716aa8f01ac2cd4c10b4bb3\core-1.9.0-alpha02\AndroidManifest.xml:24:18-86
 	android:supportsRtl
 		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:23:9-35
 	android:label
@@ -241,56 +241,66 @@ ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManif
 		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:52:13-56
 	android:name
 		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:49:13-65
-activity#com.bos.wms.mlkit.app.FoldingScanActivity
-ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:55:9-59:59
+activity#com.bos.wms.mlkit.app.ShipmentCartonReceivingActivity
+ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:53:9-57:59
 	android:label
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:57:13-41
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:55:13-54
 	android:windowSoftInputMode
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:58:13-60
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:56:13-60
 	android:theme
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:59:13-56
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:57:13-56
 	android:name
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:56:13-52
-activity#com.bos.wms.mlkit.app.FillPalleteActivity
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:54:13-64
+activity#com.bos.wms.mlkit.app.FoldingScanActivity
 ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:60:9-64:59
 	android:label
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:62:13-50
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:62:13-41
 	android:windowSoftInputMode
 		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:63:13-60
 	android:theme
 		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:64:13-56
 	android:name
 		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:61:13-52
+activity#com.bos.wms.mlkit.app.FillPalleteActivity
+ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:65:9-69:59
+	android:label
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:67:13-50
+	android:windowSoftInputMode
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:68:13-60
+	android:theme
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:69:13-56
+	android:name
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:66:13-52
 activity#com.bos.wms.mlkit.app.MainMenu
-ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:65:9-67:64
+ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:70:9-72:64
 	android:label
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:67:13-61
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:72:13-61
 	android:name
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:66:13-41
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:71:13-41
 activity#com.bos.wms.mlkit.ui.login.LoginActivity
-ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:68:9-76:20
+ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:73:9-81:20
 	android:label
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:70:13-57
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:75:13-57
 	android:name
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:69:13-51
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:74:13-51
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:71:13-75:29
+ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:76:13-80:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:72:17-69
+ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:77:17-69
 	android:name
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:72:25-66
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:77:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:74:17-77
+ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:79:17-77
 	android:name
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:74:27-74
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:79:27-74
 activity#com.bos.wms.mlkit.MainActivity
-ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:77:9-80:52
+ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:82:9-85:52
 	android:screenOrientation
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:80:13-49
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:85:13-49
 	android:configChanges
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:79:13-74
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:84:13-74
 	android:name
-		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:78:13-41
+		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:83:13-41
 uses-sdk
 INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml
@@ -341,8 +351,8 @@ MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\HYassine\
 MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\91dfc1e2c0260b1777303e39ffe6c4c3\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8aeec1a42fdd76f7c2377c68f6f2d7bb\jetified-activity-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8aeec1a42fdd76f7c2377c68f6f2d7bb\jetified-activity-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core-ktx:1.9.0-alpha01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\994b6edca52ac654f7e35523b509698f\jetified-core-ktx-1.9.0-alpha01\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.core:core-ktx:1.9.0-alpha01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\994b6edca52ac654f7e35523b509698f\jetified-core-ktx-1.9.0-alpha01\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\98cdf304d81f3f30e3e349a67a0e7d03\jetified-core-ktx-1.9.0-alpha02\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\98cdf304d81f3f30e3e349a67a0e7d03\jetified-core-ktx-1.9.0-alpha02\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\16022fda65e52f1a153b1a97817890a4\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\16022fda65e52f1a153b1a97817890a4\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\6beb34cd66cfb7058da4244864872e09\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
@@ -403,8 +413,8 @@ MERGED from [androidx.transition:transition:1.3.0] C:\Users\HYassine\.gradle\cac
 MERGED from [androidx.transition:transition:1.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\0057fa46b90e52d805e47ca344b36806\transition-1.3.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\a8769ce339851409dcc9b3d41f90ed6b\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\a8769ce339851409dcc9b3d41f90ed6b\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.9.0-alpha01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3999f56294d2565db3b19332ed4c5966\core-1.9.0-alpha01\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.9.0-alpha01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3999f56294d2565db3b19332ed4c5966\core-1.9.0-alpha01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21cf40d31716aa8f01ac2cd4c10b4bb3\core-1.9.0-alpha02\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21cf40d31716aa8f01ac2cd4c10b4bb3\core-1.9.0-alpha02\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21bab031b7c826ab1df86417002012f4\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21bab031b7c826ab1df86417002012f4\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\b8b2e3b141c865387d31f833098d4c29\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41

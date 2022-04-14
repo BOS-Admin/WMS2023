@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -30,20 +31,56 @@ public final class ActivityShipmentPalleteReceivingBinding implements ViewBindin
   public final TextView headerTxt;
 
   @NonNull
+  public final TextView lblShipPallReciAppointmentNb;
+
+  @NonNull
+  public final TextView lblShipPallReciBolNb;
+
+  @NonNull
+  public final TextView lblShipPallReciNbOfCartons;
+
+  @NonNull
+  public final TextView lblShipPallReciPalleteNb;
+
+  @NonNull
   public final TextView lblStatus;
 
   @NonNull
   public final ImageView mImageView;
 
+  @NonNull
+  public final EditText txtShipPallReciAppointmentNb;
+
+  @NonNull
+  public final EditText txtShipPallReciBolNb;
+
+  @NonNull
+  public final EditText txtShipPallReciNbOfCartons;
+
+  @NonNull
+  public final EditText txtShipPallReciPalleteNb;
+
   private ActivityShipmentPalleteReceivingBinding(@NonNull LinearLayout rootView,
       @NonNull Button btnCapture, @NonNull Button btnShipPallReciDone, @NonNull TextView headerTxt,
-      @NonNull TextView lblStatus, @NonNull ImageView mImageView) {
+      @NonNull TextView lblShipPallReciAppointmentNb, @NonNull TextView lblShipPallReciBolNb,
+      @NonNull TextView lblShipPallReciNbOfCartons, @NonNull TextView lblShipPallReciPalleteNb,
+      @NonNull TextView lblStatus, @NonNull ImageView mImageView,
+      @NonNull EditText txtShipPallReciAppointmentNb, @NonNull EditText txtShipPallReciBolNb,
+      @NonNull EditText txtShipPallReciNbOfCartons, @NonNull EditText txtShipPallReciPalleteNb) {
     this.rootView = rootView;
     this.btnCapture = btnCapture;
     this.btnShipPallReciDone = btnShipPallReciDone;
     this.headerTxt = headerTxt;
+    this.lblShipPallReciAppointmentNb = lblShipPallReciAppointmentNb;
+    this.lblShipPallReciBolNb = lblShipPallReciBolNb;
+    this.lblShipPallReciNbOfCartons = lblShipPallReciNbOfCartons;
+    this.lblShipPallReciPalleteNb = lblShipPallReciPalleteNb;
     this.lblStatus = lblStatus;
     this.mImageView = mImageView;
+    this.txtShipPallReciAppointmentNb = txtShipPallReciAppointmentNb;
+    this.txtShipPallReciBolNb = txtShipPallReciBolNb;
+    this.txtShipPallReciNbOfCartons = txtShipPallReciNbOfCartons;
+    this.txtShipPallReciPalleteNb = txtShipPallReciPalleteNb;
   }
 
   @Override
@@ -91,6 +128,30 @@ public final class ActivityShipmentPalleteReceivingBinding implements ViewBindin
         break missingId;
       }
 
+      id = R.id.lblShipPallReciAppointmentNb;
+      TextView lblShipPallReciAppointmentNb = rootView.findViewById(id);
+      if (lblShipPallReciAppointmentNb == null) {
+        break missingId;
+      }
+
+      id = R.id.lblShipPallReciBolNb;
+      TextView lblShipPallReciBolNb = rootView.findViewById(id);
+      if (lblShipPallReciBolNb == null) {
+        break missingId;
+      }
+
+      id = R.id.lblShipPallReciNbOfCartons;
+      TextView lblShipPallReciNbOfCartons = rootView.findViewById(id);
+      if (lblShipPallReciNbOfCartons == null) {
+        break missingId;
+      }
+
+      id = R.id.lblShipPallReciPalleteNb;
+      TextView lblShipPallReciPalleteNb = rootView.findViewById(id);
+      if (lblShipPallReciPalleteNb == null) {
+        break missingId;
+      }
+
       id = R.id.lblStatus;
       TextView lblStatus = rootView.findViewById(id);
       if (lblStatus == null) {
@@ -103,8 +164,35 @@ public final class ActivityShipmentPalleteReceivingBinding implements ViewBindin
         break missingId;
       }
 
+      id = R.id.txtShipPallReciAppointmentNb;
+      EditText txtShipPallReciAppointmentNb = rootView.findViewById(id);
+      if (txtShipPallReciAppointmentNb == null) {
+        break missingId;
+      }
+
+      id = R.id.txtShipPallReciBolNb;
+      EditText txtShipPallReciBolNb = rootView.findViewById(id);
+      if (txtShipPallReciBolNb == null) {
+        break missingId;
+      }
+
+      id = R.id.txtShipPallReciNbOfCartons;
+      EditText txtShipPallReciNbOfCartons = rootView.findViewById(id);
+      if (txtShipPallReciNbOfCartons == null) {
+        break missingId;
+      }
+
+      id = R.id.txtShipPallReciPalleteNb;
+      EditText txtShipPallReciPalleteNb = rootView.findViewById(id);
+      if (txtShipPallReciPalleteNb == null) {
+        break missingId;
+      }
+
       return new ActivityShipmentPalleteReceivingBinding((LinearLayout) rootView, btnCapture,
-          btnShipPallReciDone, headerTxt, lblStatus, mImageView);
+          btnShipPallReciDone, headerTxt, lblShipPallReciAppointmentNb, lblShipPallReciBolNb,
+          lblShipPallReciNbOfCartons, lblShipPallReciPalleteNb, lblStatus, mImageView,
+          txtShipPallReciAppointmentNb, txtShipPallReciBolNb, txtShipPallReciNbOfCartons,
+          txtShipPallReciPalleteNb);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -3,6 +3,7 @@ package Remote
 import Model.*
 import io.reactivex.Observable
 import okhttp3.ResponseBody
+import retrofit2.Call
 import retrofit2.http.*
 
 interface BasicApi {
@@ -12,6 +13,12 @@ interface BasicApi {
 
     @GET("api/ItemOCR/{id}")
     fun CheckBarcodeOCRDone( @Path("id") id: String): Observable<Boolean>
+
+    @GET("api/ShipmentAppointment")
+    fun ValidateShipmentAppointment( @Query("AppointmentNo") AppointmentNo:Int): Observable<Boolean>
+
+    @GET("api/ShipmentBol")
+    fun ValidateShipmentBol( @Query("AppointmentNo") AppointmentNo:Int, @Query("BolNumber") BolNumber: Int): Observable<Boolean>
 
     @POST("api/ItemOCR")
     fun ProceedItemOCR(@Body ocr: ItemOCRModel): Observable<ResponseBody>
@@ -58,5 +65,31 @@ interface BasicApi {
     fun FoldingItem(@Query("FoldingStationCode") FoldingStationCode:String): Observable<FoldingItem>
     @POST("api/ManualFoldingItem")
     fun FoldingItem(@Body model: FoldingItemModel): Observable<ResponseBody>
+    @GET("api/ShipmentReceivingPallete")
+    fun InitShipmentReceivingPallete(
+        @Query("UserID") UserID:Int,
+        @Query("AppointmentNo") AppointmentNo:Int,
+        @Query("BolNumber") BolNumber: String,
+        @Query("PalleteNb") PalleteNb:Int,
+        @Query("NbOfCartons") NbOfCartons:Int,
+        @Query("FieldValidate") FieldValidate:Int
+    ): Observable<ResponseBody>
+
+    @POST("api/ShipmentReceivingPallete")
+    fun ShipmentReceivingPallete(
+        @Query("UserID") UserID:Int,
+        @Query("AppointmentNo") AppointmentNo:Int,
+        @Query("BolNumber") BolNumber: String,
+        @Query("PalleteNb") PalleteNb:Int,
+        @Query("NbOfCartons") NbOfCartons:Int
+    ): Observable<ResponseBody>
+
+    @POST("api/ShipmentReceivingCarton")
+    fun ShipmentReceivingCarton(
+        @Query("UserID") UserID:Int,
+        @Query("BolNumber") BolNumber: String,
+        @Query("PalleteNb") PalleteNb:Int,
+        @Query("CartonCode") CartonCode:String
+    ): Observable<ResponseBody>
 
 }

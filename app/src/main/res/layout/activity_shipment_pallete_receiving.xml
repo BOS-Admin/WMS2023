@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
               android:layout_width="match_parent"
               android:gravity="center|top"
               android:layout_height="match_parent">
@@ -56,7 +57,8 @@
             android:layout_weight="0.5"
             android:padding="5dp"
             android:text="Done"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            tools:visibility="invisible" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -75,21 +77,21 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/lblFoldingScanStation"
-            android:layout_width="300px"
+            android:id="@+id/lblShipPallReciAppointmentNb"
+            android:layout_width="400px"
             android:layout_height="wrap_content"
-            android:text="Folding Station:"
+            android:text="Appointment"
             android:textAlignment="textEnd"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/txtFoldingScanStation"
+            android:id="@+id/txtShipPallReciAppointmentNb"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_weight="1"
             android:ems="3"
             android:inputType="textPersonName"
-            android:textSize="12sp" />
+            android:textSize="24sp" />
 
     </LinearLayout>
     <LinearLayout
@@ -98,21 +100,21 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/lblFoldingScanStation"
-            android:layout_width="300px"
+            android:id="@+id/lblShipPallReciBolNb"
+            android:layout_width="400px"
             android:layout_height="wrap_content"
-            android:text="Folding Station:"
+            android:text="Bol Nb"
             android:textAlignment="textEnd"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/txtFoldingScanStation"
+            android:id="@+id/txtShipPallReciBolNb"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_weight="1"
             android:ems="3"
             android:inputType="textPersonName"
-            android:textSize="12sp" />
+            android:textSize="24sp" />
 
     </LinearLayout>
     <LinearLayout
@@ -121,21 +123,21 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/lblFoldingScanStation"
-            android:layout_width="300px"
+            android:id="@+id/lblShipPallReciPalleteNb"
+            android:layout_width="400px"
             android:layout_height="wrap_content"
-            android:text="Folding Station:"
+            android:text="Pallete Nb"
             android:textAlignment="textEnd"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/txtFoldingScanStation"
+            android:id="@+id/txtShipPallReciPalleteNb"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_weight="1"
             android:ems="3"
             android:inputType="textPersonName"
-            android:textSize="12sp" />
+            android:textSize="24sp" />
 
     </LinearLayout>
     <LinearLayout
@@ -144,21 +146,21 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/lblFoldingScanStation"
-            android:layout_width="300px"
+            android:id="@+id/lblShipPallReciNbOfCartons"
+            android:layout_width="400px"
             android:layout_height="wrap_content"
-            android:text="Folding Station:"
+            android:text="Cartons"
             android:textAlignment="textEnd"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/txtFoldingScanStation"
+            android:id="@+id/txtShipPallReciNbOfCartons"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_weight="1"
             android:ems="3"
             android:inputType="textPersonName"
-            android:textSize="12sp" />
+            android:textSize="24sp" />
 
     </LinearLayout>
 

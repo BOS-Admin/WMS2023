@@ -78,5 +78,9 @@
     {
         "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_picking.xml",
         "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\activity_picking.xml"
+    },
+    {
+        "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_shipment_pallete_carton.xml",
+        "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\activity_shipment_pallete_carton.xml"
     }
 ]
