@@ -35,12 +35,6 @@ MERGED from [com.google.mlkit:vision-common:16.5.0] C:\Users\HYassine\.gradle\ca
 MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\5a750890d39fd816e8a4571cc0347539\exifinterface-1.3.3\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\a285218d675e382402fa8a000eb4bfcc\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment-ktx:1.2.4] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\5a8a8ec91214e7603fcdfb6095a6dcee\jetified-fragment-ktx-1.2.4\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\02f745a730374ddecc29679c166cd34e\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\91dfc1e2c0260b1777303e39ffe6c4c3\navigation-common-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8aeec1a42fdd76f7c2377c68f6f2d7bb\jetified-activity-ktx-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core-ktx:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\98cdf304d81f3f30e3e349a67a0e7d03\jetified-core-ktx-1.9.0-alpha02\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\16022fda65e52f1a153b1a97817890a4\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\6beb34cd66cfb7058da4244864872e09\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\dafeb60989f149d261f75912da5819c3\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\f93044095f2b885c112d35bf34b3f75a\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:2:1-26:12
@@ -48,12 +42,13 @@ MERGED from [com.google.android.gms:play-services-base:17.6.0] C:\Users\HYassine
 MERGED from [com.google.android.gms:play-services-tasks:17.2.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\2b2ee1a5145278ee29e8b8088d5d9d46\jetified-play-services-tasks-17.2.1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3660efe75059e256e98761f0389e92f8\jetified-play-services-basement-17.6.0\AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ff953813e061668d7ca6bd69b08e4cf3\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\02f745a730374ddecc29679c166cd34e\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\c6777db30b311348803d924ea138d344\navigation-runtime-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8aeec1a42fdd76f7c2377c68f6f2d7bb\jetified-activity-ktx-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.2.4] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\43ca32ca07dcfaf0937dbabca8cde04b\jetified-activity-1.2.4\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\85bdfd2364ffc1836850c08a38d50e68\jetified-appcompat-resources-1.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\112d19ed6f1e45d7592b5c2efe66c21b\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\667b1ae5e8f10d0da20d4ac6a4548ab6\jetified-savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.media:media:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\1be280a1f8635b6197a47fa4e5328d6c\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\16022fda65e52f1a153b1a97817890a4\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\6d46647d828d9f08f8e88e5942790788\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\f2e5b1206570a82806e1a197ad24a53b\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8e6a20d7fc9c099ccd7eba17798bb58f\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -68,8 +63,13 @@ MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\HYassine\.gradle
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\e9c25f98324a6917d37304f142ce30a2\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\b0c4d7ac618575ebe5c725cf0347255d\customview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.transition:transition:1.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\0057fa46b90e52d805e47ca344b36806\transition-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\91dfc1e2c0260b1777303e39ffe6c4c3\navigation-common-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\a8769ce339851409dcc9b3d41f90ed6b\navigation-common-2.3.5\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21cf40d31716aa8f01ac2cd4c10b4bb3\core-1.9.0-alpha02\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.core:core-ktx:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\e229da388e1853d0c06c6246c6cb2692\jetified-core-ktx-1.9.0-alpha04\AndroidManifest.xml:2:1-8:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\6beb34cd66cfb7058da4244864872e09\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\112d19ed6f1e45d7592b5c2efe66c21b\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\667b1ae5e8f10d0da20d4ac6a4548ab6\jetified-savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21bab031b7c826ab1df86417002012f4\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\b8b2e3b141c865387d31f833098d4c29\lifecycle-runtime-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\1b170f37525690e86272074040d21341\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
@@ -171,8 +171,8 @@ MERGED from [com.google.android.gms:play-services-tasks:17.2.1] C:\Users\HYassin
 MERGED from [com.google.android.gms:play-services-tasks:17.2.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\2b2ee1a5145278ee29e8b8088d5d9d46\jetified-play-services-tasks-17.2.1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3660efe75059e256e98761f0389e92f8\jetified-play-services-basement-17.6.0\AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3660efe75059e256e98761f0389e92f8\jetified-play-services-basement-17.6.0\AndroidManifest.xml:22:5-26:19
-MERGED from [androidx.core:core:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21cf40d31716aa8f01ac2cd4c10b4bb3\core-1.9.0-alpha02\AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21cf40d31716aa8f01ac2cd4c10b4bb3\core-1.9.0-alpha02\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:29:5-89
+MERGED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:29:5-89
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:25:5-39:19
@@ -182,7 +182,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HY
 MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\38e89c11bc4340f7fab68339d29f0a52\jetified-image-1.0.0-beta1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\38e89c11bc4340f7fab68339d29f0a52\jetified-image-1.0.0-beta1\AndroidManifest.xml:7:5-20
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21cf40d31716aa8f01ac2cd4c10b4bb3\core-1.9.0-alpha02\AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:29:18-86
 	android:supportsRtl
 		ADDED from C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:23:9-35
 	android:label
@@ -345,18 +345,6 @@ MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\HYassin
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\a285218d675e382402fa8a000eb4bfcc\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment-ktx:1.2.4] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\5a8a8ec91214e7603fcdfb6095a6dcee\jetified-fragment-ktx-1.2.4\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment-ktx:1.2.4] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\5a8a8ec91214e7603fcdfb6095a6dcee\jetified-fragment-ktx-1.2.4\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\02f745a730374ddecc29679c166cd34e\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\02f745a730374ddecc29679c166cd34e\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\91dfc1e2c0260b1777303e39ffe6c4c3\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\91dfc1e2c0260b1777303e39ffe6c4c3\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8aeec1a42fdd76f7c2377c68f6f2d7bb\jetified-activity-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8aeec1a42fdd76f7c2377c68f6f2d7bb\jetified-activity-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core-ktx:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\98cdf304d81f3f30e3e349a67a0e7d03\jetified-core-ktx-1.9.0-alpha02\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.core:core-ktx:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\98cdf304d81f3f30e3e349a67a0e7d03\jetified-core-ktx-1.9.0-alpha02\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\16022fda65e52f1a153b1a97817890a4\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\16022fda65e52f1a153b1a97817890a4\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\6beb34cd66cfb7058da4244864872e09\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\6beb34cd66cfb7058da4244864872e09\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\dafeb60989f149d261f75912da5819c3\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\dafeb60989f149d261f75912da5819c3\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\f93044095f2b885c112d35bf34b3f75a\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
@@ -371,18 +359,20 @@ MERGED from [com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYas
 MERGED from [com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3660efe75059e256e98761f0389e92f8\jetified-play-services-basement-17.6.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ff953813e061668d7ca6bd69b08e4cf3\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ff953813e061668d7ca6bd69b08e4cf3\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\02f745a730374ddecc29679c166cd34e\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\02f745a730374ddecc29679c166cd34e\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\c6777db30b311348803d924ea138d344\navigation-runtime-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\c6777db30b311348803d924ea138d344\navigation-runtime-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8aeec1a42fdd76f7c2377c68f6f2d7bb\jetified-activity-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8aeec1a42fdd76f7c2377c68f6f2d7bb\jetified-activity-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.2.4] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\43ca32ca07dcfaf0937dbabca8cde04b\jetified-activity-1.2.4\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.2.4] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\43ca32ca07dcfaf0937dbabca8cde04b\jetified-activity-1.2.4\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\85bdfd2364ffc1836850c08a38d50e68\jetified-appcompat-resources-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\85bdfd2364ffc1836850c08a38d50e68\jetified-appcompat-resources-1.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\112d19ed6f1e45d7592b5c2efe66c21b\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\112d19ed6f1e45d7592b5c2efe66c21b\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\667b1ae5e8f10d0da20d4ac6a4548ab6\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\667b1ae5e8f10d0da20d4ac6a4548ab6\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.media:media:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\1be280a1f8635b6197a47fa4e5328d6c\media-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\1be280a1f8635b6197a47fa4e5328d6c\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\16022fda65e52f1a153b1a97817890a4\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\16022fda65e52f1a153b1a97817890a4\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\6d46647d828d9f08f8e88e5942790788\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\6d46647d828d9f08f8e88e5942790788\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\f2e5b1206570a82806e1a197ad24a53b\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
@@ -411,10 +401,20 @@ MERGED from [androidx.customview:customview:1.1.0] C:\Users\HYassine\.gradle\cac
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\b0c4d7ac618575ebe5c725cf0347255d\customview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.transition:transition:1.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\0057fa46b90e52d805e47ca344b36806\transition-1.3.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.transition:transition:1.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\0057fa46b90e52d805e47ca344b36806\transition-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\91dfc1e2c0260b1777303e39ffe6c4c3\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\91dfc1e2c0260b1777303e39ffe6c4c3\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\a8769ce339851409dcc9b3d41f90ed6b\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\a8769ce339851409dcc9b3d41f90ed6b\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21cf40d31716aa8f01ac2cd4c10b4bb3\core-1.9.0-alpha02\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21cf40d31716aa8f01ac2cd4c10b4bb3\core-1.9.0-alpha02\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\e229da388e1853d0c06c6246c6cb2692\jetified-core-ktx-1.9.0-alpha04\AndroidManifest.xml:5:5-6:38
+MERGED from [androidx.core:core-ktx:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\e229da388e1853d0c06c6246c6cb2692\jetified-core-ktx-1.9.0-alpha04\AndroidManifest.xml:5:5-6:38
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\6beb34cd66cfb7058da4244864872e09\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\6beb34cd66cfb7058da4244864872e09\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\112d19ed6f1e45d7592b5c2efe66c21b\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\112d19ed6f1e45d7592b5c2efe66c21b\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\667b1ae5e8f10d0da20d4ac6a4548ab6\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\667b1ae5e8f10d0da20d4ac6a4548ab6\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21bab031b7c826ab1df86417002012f4\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21bab031b7c826ab1df86417002012f4\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\b8b2e3b141c865387d31f833098d4c29\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
@@ -577,6 +577,26 @@ ADDED from [com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYass
 		ADDED from [com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3660efe75059e256e98761f0389e92f8\jetified-play-services-basement-17.6.0\AndroidManifest.xml:25:13-66
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3660efe75059e256e98761f0389e92f8\jetified-play-services-basement-17.6.0\AndroidManifest.xml:24:13-58
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:23:5-25:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:25:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:24:9-81
+permission#com.bos.wms.mlkit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:23:5-25:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:25:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:24:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:27:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:27:22-94
+uses-permission#com.bos.wms.mlkit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:27:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:27:22-94
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:5-79
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:22:5-79

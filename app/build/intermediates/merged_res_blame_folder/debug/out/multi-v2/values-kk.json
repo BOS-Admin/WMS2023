@@ -57,6 +57,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\3cf38d9a89065b83ed77d30f23aab322\\core-1.9.0-alpha04\\res\\values-kk\\values-kk.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "108",
+                        "startColumns": "4",
+                        "startOffsets": "10285",
+                        "endColumns": "100",
+                        "endOffsets": "10381"
+                    }
+                },
+                {
                     "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\3660efe75059e256e98761f0389e92f8\\jetified-play-services-basement-17.6.0\\res\\values-kk\\values.xml",
                     "from": {
                         "startLines": "4",
@@ -88,23 +105,6 @@
                         "startOffsets": "9888,10001",
                         "endColumns": "112,117",
                         "endOffsets": "9996,10114"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\21cf40d31716aa8f01ac2cd4c10b4bb3\\core-1.9.0-alpha02\\res\\values-kk\\values-kk.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "108",
-                        "startColumns": "4",
-                        "startOffsets": "10285",
-                        "endColumns": "100",
-                        "endOffsets": "10381"
                     }
                 }
             ]

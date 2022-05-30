@@ -221,7 +221,6 @@ class LoginActivity : AppCompatActivity() {
                     password.text.toString()
                 )
             }
-            password.setText("Hadi123")
             setOnEditorActionListener { _, actionId, _ ->
                 when (actionId) {
                     EditorInfo.IME_ACTION_DONE ->

@@ -40,265 +40,273 @@
 24-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:16:5-65
 24-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:16:22-62
 25
-26    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
-27    <!-- <uses-sdk android:minSdkVersion="14"/> -->
-28    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-28-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:5-79
-28-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:22-76
+26    <permission
+26-->[androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:23:5-25:47
+27        android:name="com.bos.wms.mlkit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+27-->[androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:24:9-81
+28        android:protectionLevel="signature" />
+28-->[androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:25:9-44
 29
-30    <application
-30-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:18:5-86:19
-31        android:allowBackup="true"
-31-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:19:9-35
-32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-32-->[androidx.core:core:1.9.0-alpha02] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\21cf40d31716aa8f01ac2cd4c10b4bb3\core-1.9.0-alpha02\AndroidManifest.xml:24:18-86
-33        android:debuggable="true"
-34        android:icon="@mipmap/ic_launcher"
-34-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:20:9-43
-35        android:label="@string/app_name"
-35-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:21:9-41
-36        android:roundIcon="@mipmap/ic_launcher_round"
-36-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:22:9-54
-37        android:supportsRtl="true"
-37-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:23:9-35
-38        android:testOnly="true"
-39        android:theme="@style/AppTheme"
-39-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:24:9-40
-40        android:usesCleartextTraffic="true" >
-40-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:26:9-44
-41        <provider
-42            android:name="androidx.core.content.FileProvider"
-42-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:71-120
-43            android:authorities="com.bos.wms.mlkit.fileprovider"
-43-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:19-70
-44            android:exported="false"
-44-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:121-145
-45            android:grantUriPermissions="true" >
-45-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:146-180
-46            <meta-data
-46-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:28:13-111
-47                android:name="android.support.FILE_PROVIDER_PATHS"
-47-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:28:24-74
-48                android:resource="@xml/file_paths" />
-48-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:28:75-109
-49        </provider>
-50
-51        <activity android:name="com.bos.wms.mlkit.app.NextReceivingStatusActivity" />
-51-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:31:9-78
-51-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:31:19-66
-52        <activity
-52-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:32:9-36:59
-53            android:name="com.bos.wms.mlkit.app.PickingActivity"
-53-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:33:13-48
-54            android:label="@string/title_activity_picking"
-54-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:34:13-59
-55            android:theme="@style/AppTheme.NoActionBar"
-55-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:36:13-56
-56            android:windowSoftInputMode="stateAlwaysHidden" />
-56-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:35:13-60
-57        <activity
-57-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:37:9-41:59
-58            android:name="com.bos.wms.mlkit.app.LocationCheckActivity"
-58-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:38:13-54
-59            android:label="Location Check"
-59-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:39:13-43
-60            android:theme="@style/AppTheme.NoActionBar"
-60-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:41:13-56
-61            android:windowSoftInputMode="stateAlwaysHidden" />
-61-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:40:13-60
-62        <activity
-62-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:42:9-46:59
-63            android:name="com.bos.wms.mlkit.app.PutAwayPalleteActivity"
-63-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:43:13-55
-64            android:label="Put Away Pallete"
-64-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:44:13-45
-65            android:theme="@style/AppTheme.NoActionBar"
-65-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:46:13-56
-66            android:windowSoftInputMode="stateAlwaysHidden" />
-66-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:45:13-60
-67        <activity
-67-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:48:9-52:59
-68            android:name="com.bos.wms.mlkit.app.ShipmentPalleteReceivingActivity"
-68-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:49:13-65
-69            android:label="Shipment Pallete Receiving"
-69-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:50:13-55
-70            android:theme="@style/AppTheme.NoActionBar"
-70-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:52:13-56
-71            android:windowSoftInputMode="stateAlwaysHidden" />
-71-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:51:13-60
-72        <activity
-72-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:53:9-57:59
-73            android:name="com.bos.wms.mlkit.app.ShipmentCartonReceivingActivity"
-73-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:54:13-64
-74            android:label="Shipment Carton Receiving"
-74-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:55:13-54
-75            android:theme="@style/AppTheme.NoActionBar"
-75-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:57:13-56
-76            android:windowSoftInputMode="stateAlwaysHidden" />
-76-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:56:13-60
-77        <activity
-77-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:60:9-64:59
-78            android:name="com.bos.wms.mlkit.app.FoldingScanActivity"
-78-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:61:13-52
-79            android:label="Folding Scan"
-79-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:62:13-41
-80            android:theme="@style/AppTheme.NoActionBar"
-80-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:64:13-56
-81            android:windowSoftInputMode="stateAlwaysHidden" />
-81-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:63:13-60
-82        <activity
-82-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:65:9-69:59
-83            android:name="com.bos.wms.mlkit.app.FillPalleteActivity"
-83-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:66:13-52
-84            android:label="Fill Pallete Activity"
-84-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:67:13-50
-85            android:theme="@style/AppTheme.NoActionBar"
-85-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:69:13-56
-86            android:windowSoftInputMode="stateAlwaysHidden" />
-86-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:68:13-60
-87        <activity
-87-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:70:9-72:64
-88            android:name="com.bos.wms.mlkit.app.MainMenu"
-88-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:71:13-41
-89            android:label="@string/title_activity_main_menu" />
-89-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:72:13-61
+30    <uses-permission android:name="com.bos.wms.mlkit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+30-->[androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:27:5-97
+30-->[androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:27:22-94
+31    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+32    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+32-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:5-79
+32-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:22-76
+33
+34    <application
+34-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:18:5-86:19
+35        android:allowBackup="true"
+35-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:19:9-35
+36        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+36-->[androidx.core:core:1.9.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3cf38d9a89065b83ed77d30f23aab322\core-1.9.0-alpha04\AndroidManifest.xml:29:18-86
+37        android:debuggable="true"
+38        android:icon="@mipmap/ic_launcher"
+38-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:20:9-43
+39        android:label="@string/app_name"
+39-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:21:9-41
+40        android:roundIcon="@mipmap/ic_launcher_round"
+40-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:22:9-54
+41        android:supportsRtl="true"
+41-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:23:9-35
+42        android:theme="@style/AppTheme"
+42-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:24:9-40
+43        android:usesCleartextTraffic="true" >
+43-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:26:9-44
+44        <provider
+45            android:name="androidx.core.content.FileProvider"
+45-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:71-120
+46            android:authorities="com.bos.wms.mlkit.fileprovider"
+46-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:19-70
+47            android:exported="false"
+47-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:121-145
+48            android:grantUriPermissions="true" >
+48-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:146-180
+49            <meta-data
+49-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:28:13-111
+50                android:name="android.support.FILE_PROVIDER_PATHS"
+50-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:28:24-74
+51                android:resource="@xml/file_paths" />
+51-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:28:75-109
+52        </provider>
+53
+54        <activity android:name="com.bos.wms.mlkit.app.NextReceivingStatusActivity" />
+54-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:31:9-78
+54-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:31:19-66
+55        <activity
+55-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:32:9-36:59
+56            android:name="com.bos.wms.mlkit.app.PickingActivity"
+56-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:33:13-48
+57            android:label="@string/title_activity_picking"
+57-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:34:13-59
+58            android:theme="@style/AppTheme.NoActionBar"
+58-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:36:13-56
+59            android:windowSoftInputMode="stateAlwaysHidden" />
+59-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:35:13-60
+60        <activity
+60-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:37:9-41:59
+61            android:name="com.bos.wms.mlkit.app.LocationCheckActivity"
+61-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:38:13-54
+62            android:label="Location Check"
+62-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:39:13-43
+63            android:theme="@style/AppTheme.NoActionBar"
+63-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:41:13-56
+64            android:windowSoftInputMode="stateAlwaysHidden" />
+64-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:40:13-60
+65        <activity
+65-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:42:9-46:59
+66            android:name="com.bos.wms.mlkit.app.PutAwayPalleteActivity"
+66-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:43:13-55
+67            android:label="Put Away Pallete"
+67-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:44:13-45
+68            android:theme="@style/AppTheme.NoActionBar"
+68-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:46:13-56
+69            android:windowSoftInputMode="stateAlwaysHidden" />
+69-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:45:13-60
+70        <activity
+70-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:48:9-52:59
+71            android:name="com.bos.wms.mlkit.app.ShipmentPalleteReceivingActivity"
+71-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:49:13-65
+72            android:label="Shipment Pallete Receiving"
+72-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:50:13-55
+73            android:theme="@style/AppTheme.NoActionBar"
+73-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:52:13-56
+74            android:windowSoftInputMode="stateAlwaysHidden" />
+74-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:51:13-60
+75        <activity
+75-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:53:9-57:59
+76            android:name="com.bos.wms.mlkit.app.ShipmentCartonReceivingActivity"
+76-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:54:13-64
+77            android:label="Shipment Carton Receiving"
+77-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:55:13-54
+78            android:theme="@style/AppTheme.NoActionBar"
+78-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:57:13-56
+79            android:windowSoftInputMode="stateAlwaysHidden" />
+79-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:56:13-60
+80        <activity
+80-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:60:9-64:59
+81            android:name="com.bos.wms.mlkit.app.FoldingScanActivity"
+81-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:61:13-52
+82            android:label="Folding Scan"
+82-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:62:13-41
+83            android:theme="@style/AppTheme.NoActionBar"
+83-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:64:13-56
+84            android:windowSoftInputMode="stateAlwaysHidden" />
+84-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:63:13-60
+85        <activity
+85-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:65:9-69:59
+86            android:name="com.bos.wms.mlkit.app.FillPalleteActivity"
+86-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:66:13-52
+87            android:label="Fill Pallete Activity"
+87-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:67:13-50
+88            android:theme="@style/AppTheme.NoActionBar"
+88-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:69:13-56
+89            android:windowSoftInputMode="stateAlwaysHidden" />
+89-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:68:13-60
 90        <activity
-90-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:73:9-81:20
-91            android:name="com.bos.wms.mlkit.ui.login.LoginActivity"
-91-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:74:13-51
-92            android:label="@string/title_activity_login" >
-92-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:75:13-57
-93            <intent-filter>
-93-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:76:13-80:29
-94                <action android:name="android.intent.action.MAIN" />
-94-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:77:17-69
-94-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:77:25-66
-95
-96                <category android:name="android.intent.category.LAUNCHER" />
-96-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:79:17-77
-96-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:79:27-74
-97            </intent-filter>
-98        </activity>
-99        <activity
-99-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:82:9-85:52
-100            android:name="com.bos.wms.mlkit.MainActivity"
-100-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:83:13-41
-101            android:configChanges="keyboardHidden|orientation|screenSize"
-101-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:84:13-74
-102            android:screenOrientation="portrait" />
-102-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:85:13-49
-103
-104        <service
-104-->[androidx.camera:camera-camera2:1.1.0-alpha10] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\321ef704abe0b8d62d2c7fbaf32b4e30\jetified-camera-camera2-1.1.0-alpha10\AndroidManifest.xml:26:9-35:19
-105            android:name="androidx.camera.core.impl.MetadataHolderService"
-105-->[androidx.camera:camera-camera2:1.1.0-alpha10] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\321ef704abe0b8d62d2c7fbaf32b4e30\jetified-camera-camera2-1.1.0-alpha10\AndroidManifest.xml:27:13-75
-106            android:enabled="false"
-106-->[androidx.camera:camera-camera2:1.1.0-alpha10] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\321ef704abe0b8d62d2c7fbaf32b4e30\jetified-camera-camera2-1.1.0-alpha10\AndroidManifest.xml:28:13-36
-107            android:exported="false" >
-107-->[androidx.camera:camera-camera2:1.1.0-alpha10] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\321ef704abe0b8d62d2c7fbaf32b4e30\jetified-camera-camera2-1.1.0-alpha10\AndroidManifest.xml:29:13-37
-108            <meta-data
-108-->[androidx.camera:camera-camera2:1.1.0-alpha10] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\321ef704abe0b8d62d2c7fbaf32b4e30\jetified-camera-camera2-1.1.0-alpha10\AndroidManifest.xml:32:13-34:89
-109                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
-109-->[androidx.camera:camera-camera2:1.1.0-alpha10] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\321ef704abe0b8d62d2c7fbaf32b4e30\jetified-camera-camera2-1.1.0-alpha10\AndroidManifest.xml:33:17-103
-110                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
-110-->[androidx.camera:camera-camera2:1.1.0-alpha10] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\321ef704abe0b8d62d2c7fbaf32b4e30\jetified-camera-camera2-1.1.0-alpha10\AndroidManifest.xml:34:17-86
-111        </service>
-112        <service
-112-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ba12e5296a4592ab2fe13d6d4e73fb5d\jetified-play-services-mlkit-barcode-scanning-16.2.1\AndroidManifest.xml:9:9-15:19
-113            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
-113-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ba12e5296a4592ab2fe13d6d4e73fb5d\jetified-play-services-mlkit-barcode-scanning-16.2.1\AndroidManifest.xml:10:13-91
-114            android:directBootAware="true"
-114-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:17:13-43
-115            android:exported="false" >
-115-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ba12e5296a4592ab2fe13d6d4e73fb5d\jetified-play-services-mlkit-barcode-scanning-16.2.1\AndroidManifest.xml:11:13-37
-116            <meta-data
-116-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ba12e5296a4592ab2fe13d6d4e73fb5d\jetified-play-services-mlkit-barcode-scanning-16.2.1\AndroidManifest.xml:12:13-14:85
-117                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
-117-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ba12e5296a4592ab2fe13d6d4e73fb5d\jetified-play-services-mlkit-barcode-scanning-16.2.1\AndroidManifest.xml:13:17-120
-118                android:value="com.google.firebase.components.ComponentRegistrar" />
-118-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ba12e5296a4592ab2fe13d6d4e73fb5d\jetified-play-services-mlkit-barcode-scanning-16.2.1\AndroidManifest.xml:14:17-82
+90-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:70:9-72:64
+91            android:name="com.bos.wms.mlkit.app.MainMenu"
+91-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:71:13-41
+92            android:label="@string/title_activity_main_menu" />
+92-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:72:13-61
+93        <activity
+93-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:73:9-81:20
+94            android:name="com.bos.wms.mlkit.ui.login.LoginActivity"
+94-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:74:13-51
+95            android:label="@string/title_activity_login" >
+95-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:75:13-57
+96            <intent-filter>
+96-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:76:13-80:29
+97                <action android:name="android.intent.action.MAIN" />
+97-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:77:17-69
+97-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:77:25-66
+98
+99                <category android:name="android.intent.category.LAUNCHER" />
+99-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:79:17-77
+99-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:79:27-74
+100            </intent-filter>
+101        </activity>
+102        <activity
+102-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:82:9-85:52
+103            android:name="com.bos.wms.mlkit.MainActivity"
+103-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:83:13-41
+104            android:configChanges="keyboardHidden|orientation|screenSize"
+104-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:84:13-74
+105            android:screenOrientation="portrait" />
+105-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:85:13-49
+106
+107        <service
+107-->[androidx.camera:camera-camera2:1.1.0-alpha10] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\321ef704abe0b8d62d2c7fbaf32b4e30\jetified-camera-camera2-1.1.0-alpha10\AndroidManifest.xml:26:9-35:19
+108            android:name="androidx.camera.core.impl.MetadataHolderService"
+108-->[androidx.camera:camera-camera2:1.1.0-alpha10] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\321ef704abe0b8d62d2c7fbaf32b4e30\jetified-camera-camera2-1.1.0-alpha10\AndroidManifest.xml:27:13-75
+109            android:enabled="false"
+109-->[androidx.camera:camera-camera2:1.1.0-alpha10] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\321ef704abe0b8d62d2c7fbaf32b4e30\jetified-camera-camera2-1.1.0-alpha10\AndroidManifest.xml:28:13-36
+110            android:exported="false" >
+110-->[androidx.camera:camera-camera2:1.1.0-alpha10] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\321ef704abe0b8d62d2c7fbaf32b4e30\jetified-camera-camera2-1.1.0-alpha10\AndroidManifest.xml:29:13-37
+111            <meta-data
+111-->[androidx.camera:camera-camera2:1.1.0-alpha10] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\321ef704abe0b8d62d2c7fbaf32b4e30\jetified-camera-camera2-1.1.0-alpha10\AndroidManifest.xml:32:13-34:89
+112                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+112-->[androidx.camera:camera-camera2:1.1.0-alpha10] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\321ef704abe0b8d62d2c7fbaf32b4e30\jetified-camera-camera2-1.1.0-alpha10\AndroidManifest.xml:33:17-103
+113                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+113-->[androidx.camera:camera-camera2:1.1.0-alpha10] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\321ef704abe0b8d62d2c7fbaf32b4e30\jetified-camera-camera2-1.1.0-alpha10\AndroidManifest.xml:34:17-86
+114        </service>
+115        <service
+115-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ba12e5296a4592ab2fe13d6d4e73fb5d\jetified-play-services-mlkit-barcode-scanning-16.2.1\AndroidManifest.xml:9:9-15:19
+116            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+116-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ba12e5296a4592ab2fe13d6d4e73fb5d\jetified-play-services-mlkit-barcode-scanning-16.2.1\AndroidManifest.xml:10:13-91
+117            android:directBootAware="true"
+117-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:17:13-43
+118            android:exported="false" >
+118-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ba12e5296a4592ab2fe13d6d4e73fb5d\jetified-play-services-mlkit-barcode-scanning-16.2.1\AndroidManifest.xml:11:13-37
 119            <meta-data
-119-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3fc05a3db01829b51186f50bb19d3e93\jetified-play-services-mlkit-face-detection-16.2.0\AndroidManifest.xml:12:13-14:85
-120                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
-120-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3fc05a3db01829b51186f50bb19d3e93\jetified-play-services-mlkit-face-detection-16.2.0\AndroidManifest.xml:13:17-114
+119-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ba12e5296a4592ab2fe13d6d4e73fb5d\jetified-play-services-mlkit-barcode-scanning-16.2.1\AndroidManifest.xml:12:13-14:85
+120                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+120-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ba12e5296a4592ab2fe13d6d4e73fb5d\jetified-play-services-mlkit-barcode-scanning-16.2.1\AndroidManifest.xml:13:17-120
 121                android:value="com.google.firebase.components.ComponentRegistrar" />
-121-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3fc05a3db01829b51186f50bb19d3e93\jetified-play-services-mlkit-face-detection-16.2.0\AndroidManifest.xml:14:17-82
+121-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.1] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ba12e5296a4592ab2fe13d6d4e73fb5d\jetified-play-services-mlkit-barcode-scanning-16.2.1\AndroidManifest.xml:14:17-82
 122            <meta-data
-122-->[com.google.android.gms:play-services-mlkit-text-recognition-common:16.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8c2e82f9631756e596ca9a770a522b97\jetified-play-services-mlkit-text-recognition-common-16.0.0\AndroidManifest.xml:12:13-14:85
-123                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
-123-->[com.google.android.gms:play-services-mlkit-text-recognition-common:16.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8c2e82f9631756e596ca9a770a522b97\jetified-play-services-mlkit-text-recognition-common-16.0.0\AndroidManifest.xml:13:17-114
+122-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3fc05a3db01829b51186f50bb19d3e93\jetified-play-services-mlkit-face-detection-16.2.0\AndroidManifest.xml:12:13-14:85
+123                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
+123-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3fc05a3db01829b51186f50bb19d3e93\jetified-play-services-mlkit-face-detection-16.2.0\AndroidManifest.xml:13:17-114
 124                android:value="com.google.firebase.components.ComponentRegistrar" />
-124-->[com.google.android.gms:play-services-mlkit-text-recognition-common:16.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8c2e82f9631756e596ca9a770a522b97\jetified-play-services-mlkit-text-recognition-common-16.0.0\AndroidManifest.xml:14:17-82
+124-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3fc05a3db01829b51186f50bb19d3e93\jetified-play-services-mlkit-face-detection-16.2.0\AndroidManifest.xml:14:17-82
 125            <meta-data
-125-->[com.google.mlkit:vision-common:16.5.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\32b64df5aa474a3298cd808196d3c512\jetified-vision-common-16.5.0\AndroidManifest.xml:12:13-14:85
-126                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
-126-->[com.google.mlkit:vision-common:16.5.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\32b64df5aa474a3298cd808196d3c512\jetified-vision-common-16.5.0\AndroidManifest.xml:13:17-124
+125-->[com.google.android.gms:play-services-mlkit-text-recognition-common:16.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8c2e82f9631756e596ca9a770a522b97\jetified-play-services-mlkit-text-recognition-common-16.0.0\AndroidManifest.xml:12:13-14:85
+126                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
+126-->[com.google.android.gms:play-services-mlkit-text-recognition-common:16.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8c2e82f9631756e596ca9a770a522b97\jetified-play-services-mlkit-text-recognition-common-16.0.0\AndroidManifest.xml:13:17-114
 127                android:value="com.google.firebase.components.ComponentRegistrar" />
-127-->[com.google.mlkit:vision-common:16.5.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\32b64df5aa474a3298cd808196d3c512\jetified-vision-common-16.5.0\AndroidManifest.xml:14:17-82
+127-->[com.google.android.gms:play-services-mlkit-text-recognition-common:16.0.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\8c2e82f9631756e596ca9a770a522b97\jetified-play-services-mlkit-text-recognition-common-16.0.0\AndroidManifest.xml:14:17-82
 128            <meta-data
-128-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:20:13-22:85
-129                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
-129-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:21:17-120
+128-->[com.google.mlkit:vision-common:16.5.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\32b64df5aa474a3298cd808196d3c512\jetified-vision-common-16.5.0\AndroidManifest.xml:12:13-14:85
+129                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+129-->[com.google.mlkit:vision-common:16.5.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\32b64df5aa474a3298cd808196d3c512\jetified-vision-common-16.5.0\AndroidManifest.xml:13:17-124
 130                android:value="com.google.firebase.components.ComponentRegistrar" />
-130-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:22:17-82
-131        </service>
-132
-133        <provider
-133-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:9:9-13:38
-134            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
-134-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:10:13-78
-135            android:authorities="com.bos.wms.mlkit.mlkitinitprovider"
-135-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:11:13-69
-136            android:exported="false"
-136-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:12:13-37
-137            android:initOrder="99" />
-137-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:13:13-35
-138
-139        <activity
-139-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\075220ce675f7ecdb4df9d393f183611\jetified-play-services-base-17.6.0\AndroidManifest.xml:23:9-26:75
-140            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-140-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\075220ce675f7ecdb4df9d393f183611\jetified-play-services-base-17.6.0\AndroidManifest.xml:24:13-79
-141            android:exported="false"
-141-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\075220ce675f7ecdb4df9d393f183611\jetified-play-services-base-17.6.0\AndroidManifest.xml:25:13-37
-142            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-142-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\075220ce675f7ecdb4df9d393f183611\jetified-play-services-base-17.6.0\AndroidManifest.xml:26:13-72
-143
-144        <meta-data
-144-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3660efe75059e256e98761f0389e92f8\jetified-play-services-basement-17.6.0\AndroidManifest.xml:23:9-25:69
-145            android:name="com.google.android.gms.version"
-145-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3660efe75059e256e98761f0389e92f8\jetified-play-services-basement-17.6.0\AndroidManifest.xml:24:13-58
-146            android:value="@integer/google_play_services_version" />
-146-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3660efe75059e256e98761f0389e92f8\jetified-play-services-basement-17.6.0\AndroidManifest.xml:25:13-66
-147
-148        <service
-148-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
-149            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-149-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
-150            android:exported="false" >
-150-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
-151            <meta-data
-151-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
-152                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-152-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
-153                android:value="cct" />
-153-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
-154        </service>
-155        <service
-155-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
-156            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-156-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
-157            android:exported="false"
-157-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
-158            android:permission="android.permission.BIND_JOB_SERVICE" >
-158-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
-159        </service>
-160
-161        <receiver
-161-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
-162            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-162-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
-163            android:exported="false" />
-163-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
-164    </application>
-165
-166</manifest>
+130-->[com.google.mlkit:vision-common:16.5.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\32b64df5aa474a3298cd808196d3c512\jetified-vision-common-16.5.0\AndroidManifest.xml:14:17-82
+131            <meta-data
+131-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:20:13-22:85
+132                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+132-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:21:17-120
+133                android:value="com.google.firebase.components.ComponentRegistrar" />
+133-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:22:17-82
+134        </service>
+135
+136        <provider
+136-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:9:9-13:38
+137            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+137-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:10:13-78
+138            android:authorities="com.bos.wms.mlkit.mlkitinitprovider"
+138-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:11:13-69
+139            android:exported="false"
+139-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:12:13-37
+140            android:initOrder="99" />
+140-->[com.google.mlkit:common:17.3.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\eecdeb3f76fad1764a0a31f8e310cde2\jetified-common-17.3.0\AndroidManifest.xml:13:13-35
+141
+142        <activity
+142-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\075220ce675f7ecdb4df9d393f183611\jetified-play-services-base-17.6.0\AndroidManifest.xml:23:9-26:75
+143            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+143-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\075220ce675f7ecdb4df9d393f183611\jetified-play-services-base-17.6.0\AndroidManifest.xml:24:13-79
+144            android:exported="false"
+144-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\075220ce675f7ecdb4df9d393f183611\jetified-play-services-base-17.6.0\AndroidManifest.xml:25:13-37
+145            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+145-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\075220ce675f7ecdb4df9d393f183611\jetified-play-services-base-17.6.0\AndroidManifest.xml:26:13-72
+146
+147        <meta-data
+147-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3660efe75059e256e98761f0389e92f8\jetified-play-services-basement-17.6.0\AndroidManifest.xml:23:9-25:69
+148            android:name="com.google.android.gms.version"
+148-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3660efe75059e256e98761f0389e92f8\jetified-play-services-basement-17.6.0\AndroidManifest.xml:24:13-58
+149            android:value="@integer/google_play_services_version" />
+149-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\3660efe75059e256e98761f0389e92f8\jetified-play-services-basement-17.6.0\AndroidManifest.xml:25:13-66
+150
+151        <service
+151-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+152            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+152-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+153            android:exported="false" >
+153-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+154            <meta-data
+154-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+155                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+155-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+156                android:value="cct" />
+156-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\af79b317eb4ebda72a1730f624a9611a\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+157        </service>
+158        <service
+158-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
+159            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+159-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
+160            android:exported="false"
+160-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
+161            android:permission="android.permission.BIND_JOB_SERVICE" >
+161-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
+162        </service>
+163
+164        <receiver
+164-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
+165            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+165-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
+166            android:exported="false" />
+166-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ec078339d27c798fad9ae253ea7d455c\jetified-transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
+167    </application>
+168
+169</manifest>

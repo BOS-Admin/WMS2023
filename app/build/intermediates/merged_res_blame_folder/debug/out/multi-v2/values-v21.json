@@ -4,25 +4,6 @@
             "outputFile": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\21cf40d31716aa8f01ac2cd4c10b4bb3\\core-1.9.0-alpha02\\res\\values-v21\\values-v21.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,13",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,173,237,304,368,484,610,736,864,1036",
-                        "endLines": "2,3,4,5,6,7,8,9,12,17",
-                        "endColumns": "117,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "168,232,299,363,479,605,731,859,1031,1383"
-                    },
-                    "to": {
-                        "startLines": "2,13,14,15,328,329,336,340,387,390",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,1020,1084,1151,24558,24674,25131,25425,28819,28991",
-                        "endLines": "2,13,14,15,328,329,336,340,389,394",
-                        "endColumns": "117,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "168,1079,1146,1210,24669,24795,25252,25548,28986,29338"
-                    }
-                },
-                {
                     "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\1be280a1f8635b6197a47fa4e5328d6c\\media-1.0.0\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
@@ -39,6 +20,25 @@
                         "endLines": "332,335,339,343",
                         "endColumns": "12,12,12,12",
                         "endOffsets": "24963,25126,25420,25715"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\3cf38d9a89065b83ed77d30f23aab322\\core-1.9.0-alpha04\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,173,237,304,368,484,610,736,864,1036",
+                        "endLines": "2,3,4,5,6,7,8,9,12,17",
+                        "endColumns": "117,63,66,63,115,125,125,127,12,12",
+                        "endOffsets": "168,232,299,363,479,605,731,859,1031,1383"
+                    },
+                    "to": {
+                        "startLines": "2,13,14,15,328,329,336,340,387,390",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,1020,1084,1151,24558,24674,25131,25425,28819,28991",
+                        "endLines": "2,13,14,15,328,329,336,340,389,394",
+                        "endColumns": "117,63,66,63,115,125,125,127,12,12",
+                        "endOffsets": "168,1079,1146,1210,24669,24795,25252,25548,28986,29338"
                     }
                 },
                 {

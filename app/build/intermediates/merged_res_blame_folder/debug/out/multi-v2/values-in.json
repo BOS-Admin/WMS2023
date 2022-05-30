@@ -21,23 +21,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\21cf40d31716aa8f01ac2cd4c10b4bb3\\core-1.9.0-alpha02\\res\\values-in\\values-in.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "108",
-                        "startColumns": "4",
-                        "startOffsets": "10268",
-                        "endColumns": "100",
-                        "endOffsets": "10364"
-                    }
-                },
-                {
                     "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\d4df58e134d898fbbcb9f3dbcb32eef0\\navigation-ui-2.3.5\\res\\values-in\\values-in.xml",
                     "from": {
                         "startLines": "2,3",
@@ -105,6 +88,23 @@
                         "endLines": "5,33,34,35,36,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,106",
                         "endColumns": "12,78,105,115,82,64,93,64,58,86,61,59,65,61,53,111,56,60,53,71,125,85,83,108,80,80,89,66,65,71,83,82,74,75,72,74,84,74,91,93,73,72,93,51,68,84,86,61,63,62,102,99,94,101,79",
                         "endOffsets": "269,3052,3158,3274,3357,6112,6206,6271,6330,6417,6479,6539,6605,6667,6721,6833,6890,6951,7005,7077,7203,7289,7373,7482,7563,7644,7734,7801,7867,7939,8023,8106,8181,8257,8330,8405,8490,8565,8657,8751,8825,8898,8992,9044,9113,9198,9285,9347,9411,9474,9577,9677,9772,9874,10178"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\3cf38d9a89065b83ed77d30f23aab322\\core-1.9.0-alpha04\\res\\values-in\\values-in.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "108",
+                        "startColumns": "4",
+                        "startOffsets": "10268",
+                        "endColumns": "100",
+                        "endOffsets": "10364"
                     }
                 }
             ]

@@ -21,7 +21,6 @@
         android:hint="User Name"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
-        android:text="User5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,8 +39,7 @@
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtusername"
-        tools:text="Hadi123" />
+        app:layout_constraintTop_toBottomOf="@+id/txtusername" />
 
     <Button
         android:id="@+id/btnLogin"

@@ -4,23 +4,6 @@
             "outputFile": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-et\\values-et.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\21cf40d31716aa8f01ac2cd4c10b4bb3\\core-1.9.0-alpha02\\res\\values-et\\values-et.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "108",
-                        "startColumns": "4",
-                        "startOffsets": "10330",
-                        "endColumns": "100",
-                        "endOffsets": "10426"
-                    }
-                },
-                {
                     "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\d4df58e134d898fbbcb9f3dbcb32eef0\\navigation-ui-2.3.5\\res\\values-et\\values-et.xml",
                     "from": {
                         "startLines": "2,3",
@@ -35,6 +18,23 @@
                         "startOffsets": "9936,10045",
                         "endColumns": "108,120",
                         "endOffsets": "10040,10161"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\3cf38d9a89065b83ed77d30f23aab322\\core-1.9.0-alpha04\\res\\values-et\\values-et.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "108",
+                        "startColumns": "4",
+                        "startOffsets": "10330",
+                        "endColumns": "100",
+                        "endOffsets": "10426"
                     }
                 },
                 {
