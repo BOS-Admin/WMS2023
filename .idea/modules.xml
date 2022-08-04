@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/WMS.iml" filepath="$PROJECT_DIR$/.idea/modules/WMS.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/WMS.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/WMS.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/WMS.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/WMS.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/WMS.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/WMS.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/WMS.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/WMS.app.unitTest.iml" />
     </modules>
   </component>
 </project>

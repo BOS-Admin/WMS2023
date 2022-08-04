@@ -92,4 +92,14 @@ interface BasicApi {
         @Query("CartonCode") CartonCode:String
     ): Observable<ResponseBody>
 
+
+    @POST("api/ShipmentReceivingCartonCount")
+    fun ShipmentReceivingCartonCount(
+        @Query("UserID") UserID:Int,
+        @Query("BolNumber") BolNumber: String,
+        @Query("PalleteNb") PalleteNb:Int,
+        @Query("NbOfCartons") NbOfCartons:Int,
+        @Query("ForceInsert") ForceInsert:Int
+    ): Observable<ResponseBody>
+
 }

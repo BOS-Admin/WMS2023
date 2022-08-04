@@ -38,6 +38,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\f53bc3aed8a1e1dbf32b778baa23b270\\core-1.9.0-alpha05\\res\\values-bg\\values-bg.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "108",
+                        "startColumns": "4",
+                        "startOffsets": "10598",
+                        "endColumns": "100",
+                        "endOffsets": "10694"
+                    }
+                },
+                {
                     "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\075220ce675f7ecdb4df9d393f183611\\jetified-play-services-base-17.6.0\\res\\values-bg\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
@@ -88,23 +105,6 @@
                         "endLines": "5,33,34,35,36,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,106",
                         "endColumns": "12,82,94,132,88,65,96,79,61,88,64,58,72,62,53,127,56,61,53,72,142,83,87,105,87,87,84,66,65,74,75,85,76,75,76,73,90,74,90,91,73,86,90,54,65,82,85,61,63,62,116,112,110,116,85",
                         "endOffsets": "265,3097,3192,3325,3414,6276,6373,6453,6515,6604,6669,6728,6801,6864,6918,7046,7103,7165,7219,7292,7435,7519,7607,7713,7801,7889,7974,8041,8107,8182,8258,8344,8421,8497,8574,8648,8739,8814,8905,8997,9071,9158,9249,9304,9370,9453,9539,9601,9665,9728,9845,9958,10069,10186,10509"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\3cf38d9a89065b83ed77d30f23aab322\\core-1.9.0-alpha04\\res\\values-bg\\values-bg.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "108",
-                        "startColumns": "4",
-                        "startOffsets": "10598",
-                        "endColumns": "100",
-                        "endOffsets": "10694"
                     }
                 }
             ]

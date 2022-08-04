@@ -21,7 +21,7 @@ public class General {
     private static volatile General instance = null;
     public Integer UserID=0;
     public Integer FloorID=0;
-    public String AppVersion="1.2.1 14/04/2022";
+    public String AppVersion="1.2.2 04/08/2022";
     int interval = 3600;    // when there's no activity
 
     /**
@@ -155,6 +155,25 @@ public class General {
         return !str.isEmpty() && str.length()>4;
     }
 
+
+    public static void showSoftKeyboard(Activity activity) {
+
+        InputMethodManager inputMethodManager =
+                (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+
+        View currentFocus = activity.getCurrentFocus();
+
+        if (inputMethodManager != null) {
+            IBinder windowToken = activity.getWindow().getDecorView().getRootView().getWindowToken();
+            inputMethodManager.showSoftInputFromInputMethod(windowToken, 0);
+            inputMethodManager.showSoftInputFromInputMethod(windowToken, InputMethodManager.SHOW_IMPLICIT);
+
+            if (currentFocus != null) {
+                inputMethodManager.showSoftInputFromInputMethod(currentFocus.getWindowToken(), 0);
+            }
+        }
+
+    }
     public static void hideSoftKeyboard(Activity activity) {
 
         InputMethodManager inputMethodManager =

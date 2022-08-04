@@ -170,7 +170,6 @@ class LoginActivity : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_login)
         mStorage=Storage(this);
         IPAddress=mStorage.getDataString("IPAddress", "192.168.10.82")

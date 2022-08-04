@@ -38,23 +38,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\3cf38d9a89065b83ed77d30f23aab322\\core-1.9.0-alpha04\\res\\values-mr\\values-mr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "108",
-                        "startColumns": "4",
-                        "startOffsets": "10191",
-                        "endColumns": "100",
-                        "endOffsets": "10287"
-                    }
-                },
-                {
                     "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\3660efe75059e256e98761f0389e92f8\\jetified-play-services-basement-17.6.0\\res\\values-mr\\values.xml",
                     "from": {
                         "startLines": "4",
@@ -88,6 +71,23 @@
                         "endLines": "5,33,34,35,36,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,106",
                         "endColumns": "12,82,99,115,81,62,90,64,58,87,61,59,66,62,53,113,56,60,53,69,118,80,84,104,76,76,85,66,65,69,77,86,69,75,70,68,95,73,97,95,73,69,101,54,66,86,92,62,63,62,99,102,93,103,77",
                         "endOffsets": "259,3035,3135,3251,3333,6044,6135,6200,6259,6347,6409,6469,6536,6599,6653,6767,6824,6885,6939,7009,7128,7209,7294,7399,7476,7553,7639,7706,7772,7842,7920,8007,8077,8153,8224,8293,8389,8463,8561,8657,8731,8801,8903,8958,9025,9112,9205,9268,9332,9395,9495,9598,9692,9796,10103"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\f53bc3aed8a1e1dbf32b778baa23b270\\core-1.9.0-alpha05\\res\\values-mr\\values-mr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "108",
+                        "startColumns": "4",
+                        "startOffsets": "10191",
+                        "endColumns": "100",
+                        "endOffsets": "10287"
                     }
                 },
                 {

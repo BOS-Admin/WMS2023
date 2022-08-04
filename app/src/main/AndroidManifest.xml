@@ -55,7 +55,11 @@
             android:label="Shipment Carton Receiving"
             android:windowSoftInputMode="stateAlwaysHidden"
             android:theme="@style/AppTheme.NoActionBar" />
-
+        <activity
+            android:name=".app.ShipmentCartonCountReceivingActivity"
+            android:label="Shipment Receiving Carton Count"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
             android:name=".app.FoldingScanActivity"
@@ -72,7 +76,9 @@
             android:label="@string/title_activity_main_menu" />
         <activity
             android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login">
+            android:label="@string/title_activity_login"
+            android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -156,6 +156,10 @@
         "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
     },
     {
+        "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_shipment_pallete_carton_count.xml.flat",
+        "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\activity_shipment_pallete_carton_count.xml"
+    },
+    {
         "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },

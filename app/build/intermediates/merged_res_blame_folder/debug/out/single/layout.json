@@ -64,6 +64,10 @@
         "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\activity_main_menu.xml"
     },
     {
+        "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_shipment_pallete_carton_count.xml",
+        "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\activity_shipment_pallete_carton_count.xml"
+    },
+    {
         "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_foldingscan.xml",
         "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\content_foldingscan.xml"
     },
