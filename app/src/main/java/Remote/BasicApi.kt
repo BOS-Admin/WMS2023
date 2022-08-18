@@ -65,6 +65,14 @@ interface BasicApi {
     fun FoldingItem(@Query("FoldingStationCode") FoldingStationCode:String): Observable<FoldingItem>
     @POST("api/ManualFoldingItem")
     fun FoldingItem(@Body model: FoldingItemModel): Observable<ResponseBody>
+
+
+    @GET("api/GenerateSerials")
+    fun InitGenerateSerials(@Query("FoldingStationCode") FoldingStationCode:String): Observable<FoldingItem>
+    @POST("api/GenerateSerials")
+    fun PostGenerateSerials(@Body model: FoldingItemModel): Observable<ResponseBody>
+
+
     @GET("api/ShipmentReceivingPallete")
     fun InitShipmentReceivingPallete(
         @Query("UserID") UserID:Int,

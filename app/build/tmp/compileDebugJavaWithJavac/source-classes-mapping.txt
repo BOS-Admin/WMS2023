@@ -11,13 +11,14 @@ com/bos/wms/mlkit/databinding/ContentPutawaypalleteBinding.java
  com.bos.wms.mlkit.databinding.ContentPutawaypalleteBinding
 com/bos/wms/mlkit/databinding/ActivityMainMenuBinding.java
  com.bos.wms.mlkit.databinding.ActivityMainMenuBinding
-com/bos/wms/mlkit/General.java
- com.bos.wms.mlkit.General
- com.bos.wms.mlkit.General$1
+com/bos/wms/mlkit/databinding/ActivityPickingBinding.java
+ com.bos.wms.mlkit.databinding.ActivityPickingBinding
 com/bos/wms/mlkit/databinding/ActivityFoldingscanBinding.java
  com.bos.wms.mlkit.databinding.ActivityFoldingscanBinding
 com/bos/wms/mlkit/databinding/FragmentDashboardBinding.java
  com.bos.wms.mlkit.databinding.FragmentDashboardBinding
+com/bos/wms/mlkit/databinding/ContentSerialGeneratorBinding.java
+ com.bos.wms.mlkit.databinding.ContentSerialGeneratorBinding
 com/bos/wms/mlkit/databinding/ContentFillpalleteBinding.java
  com.bos.wms.mlkit.databinding.ContentFillpalleteBinding
 com/bos/wms/mlkit/BuildConfig.java
@@ -38,8 +39,12 @@ com/bos/wms/mlkit/databinding/ContentFoldingscanBinding.java
  com.bos.wms.mlkit.databinding.ContentFoldingscanBinding
 com/bos/wms/mlkit/storage/Storage.java
  com.bos.wms.mlkit.storage.Storage
+com/bos/wms/mlkit/databinding/ActivitySerialGeneratorBinding.java
+ com.bos.wms.mlkit.databinding.ActivitySerialGeneratorBinding
 com/bos/wms/mlkit/databinding/ItemListBinding.java
  com.bos.wms.mlkit.databinding.ItemListBinding
+com/bos/wms/mlkit/databinding/ActivityShipmentPalleteCartonCountBinding.java
+ com.bos.wms.mlkit.databinding.ActivityShipmentPalleteCartonCountBinding
 com/bos/wms/mlkit/GraphicOverlay.java
  com.bos.wms.mlkit.GraphicOverlay
  com.bos.wms.mlkit.GraphicOverlay$Graphic
@@ -59,5 +64,6 @@ com/bos/wms/mlkit/databinding/FragmentNotificationsBinding.java
  com.bos.wms.mlkit.databinding.FragmentNotificationsBinding
 com/bos/wms/mlkit/databinding/ActivityShipmentPalleteCartonBinding.java
  com.bos.wms.mlkit.databinding.ActivityShipmentPalleteCartonBinding
-com/bos/wms/mlkit/databinding/ActivityPickingBinding.java
- com.bos.wms.mlkit.databinding.ActivityPickingBinding
+com/bos/wms/mlkit/General.java
+ com.bos.wms.mlkit.General
+ com.bos.wms.mlkit.General$1

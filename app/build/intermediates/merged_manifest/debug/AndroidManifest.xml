@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="21"
-        android:targetSdkVersion="29" />
+        android:minSdkVersion="24"
+        android:targetSdkVersion="33" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
@@ -35,6 +35,7 @@
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
+        android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -78,10 +79,19 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
+            android:name="com.bos.wms.mlkit.app.ShipmentCartonCountReceivingActivity"
+            android:label="Shipment Receiving Carton Count"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
             android:name="com.bos.wms.mlkit.app.FoldingScanActivity"
             android:label="Folding Scan"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.SerialGeneratorActivity"
+            android:label="Serial Generator"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.bos.wms.mlkit.app.FillPalleteActivity"
             android:label="Fill Pallete Activity"
@@ -92,6 +102,7 @@
             android:label="@string/title_activity_main_menu" />
         <activity
             android:name="com.bos.wms.mlkit.ui.login.LoginActivity"
+            android:exported="true"
             android:label="@string/title_activity_login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -134,6 +145,17 @@
         </service>
 
         <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.bos.wms.mlkit.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+        <provider
             android:name="com.google.mlkit.common.internal.MlKitInitProvider"
             android:authorities="com.bos.wms.mlkit.mlkitinitprovider"
             android:exported="false"
@@ -147,6 +169,13 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
 
         <service
             android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"

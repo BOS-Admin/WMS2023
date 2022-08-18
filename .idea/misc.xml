@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_foldingscan.xml" value="0.25" />
+        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_serial_generator.xml" value="0.25" />
         <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_shipment_pallete_carton.xml" value="0.33" />
         <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_shipment_pallete_carton_count.xml" value="0.18" />
         <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_shipment_pallete_receiving.xml" value="0.25" />
+        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_foldingscan.xml" value="0.4764705882352941" />
+        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_serial_generator.xml" value="0.25" />
         <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/fragment_home.xml" value="0.15" />
       </map>
     </option>

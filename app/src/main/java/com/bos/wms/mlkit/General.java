@@ -21,7 +21,7 @@ public class General {
     private static volatile General instance = null;
     public Integer UserID=0;
     public Integer FloorID=0;
-    public String AppVersion="1.2.2 04/08/2022";
+    public String AppVersion="1.2.3 18/08/2022";
     int interval = 3600;    // when there's no activity
 
     /**
@@ -136,6 +136,10 @@ public class General {
     }
     public static Boolean ValidateNbOfCartons(String str){
         return !str.isEmpty() && ToInteger(str,0)>0 && ToInteger(str,100)<100;
+    }
+
+    public static Boolean ValidateNbOfSerialsGenerate(String str){
+        return !str.isEmpty() && ToInteger(str,0)>0 && ToInteger(str,101)<101;
     }
 
     public static Boolean ValidateCartonCode(String str){

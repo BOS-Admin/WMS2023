@@ -65,7 +65,7 @@ class HomeFragment : Fragment() {
         root.btnMenuPutAwayPallete.setOnClickListener {
             ProceedPutAwayPallete()
         }
-
+        root.btnFoldingScan.setText("Serial Generator")
         root.btnFoldingScan.setOnClickListener {
             ProceedFoldingScan()
         }
@@ -174,7 +174,7 @@ class HomeFragment : Fragment() {
     }
 
     fun ProceedFoldingScan() {
-        val intent = Intent (getActivity(), FoldingScanActivity::class.java)
+        val intent = Intent (getActivity(), SerialGeneratorActivity::class.java)
         startActivity(intent)
         txtStatus.setText("")
     }

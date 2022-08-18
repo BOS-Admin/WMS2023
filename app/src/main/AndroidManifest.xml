@@ -66,6 +66,11 @@
             android:label="Folding Scan"
             android:windowSoftInputMode="stateAlwaysHidden"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".app.SerialGeneratorActivity"
+            android:label="Serial Generator"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".app.FillPalleteActivity"
             android:label="Fill Pallete Activity"

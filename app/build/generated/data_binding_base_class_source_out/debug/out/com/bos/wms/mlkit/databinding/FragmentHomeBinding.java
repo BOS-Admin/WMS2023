@@ -46,6 +46,9 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final Button btnMenuShipmentPalleteReceiving;
 
   @NonNull
+  public final Button btnMenuShipmentReceivingPalleteCount;
+
+  @NonNull
   public final Space space;
 
   @NonNull
@@ -58,7 +61,8 @@ public final class FragmentHomeBinding implements ViewBinding {
       @NonNull Button btnLocationCheck, @NonNull Button btnMenuFillPallete,
       @NonNull Button btnMenuNextReceivingStatus, @NonNull Button btnMenuPicking,
       @NonNull Button btnMenuPutAwayPallete, @NonNull Button btnMenuShipmentCartonReceiving,
-      @NonNull Button btnMenuShipmentPalleteReceiving, @NonNull Space space,
+      @NonNull Button btnMenuShipmentPalleteReceiving,
+      @NonNull Button btnMenuShipmentReceivingPalleteCount, @NonNull Space space,
       @NonNull TableLayout tblMainMenu, @NonNull EditText txtStatus) {
     this.rootView = rootView;
     this.btnFoldingScan = btnFoldingScan;
@@ -69,6 +73,7 @@ public final class FragmentHomeBinding implements ViewBinding {
     this.btnMenuPutAwayPallete = btnMenuPutAwayPallete;
     this.btnMenuShipmentCartonReceiving = btnMenuShipmentCartonReceiving;
     this.btnMenuShipmentPalleteReceiving = btnMenuShipmentPalleteReceiving;
+    this.btnMenuShipmentReceivingPalleteCount = btnMenuShipmentReceivingPalleteCount;
     this.space = space;
     this.tblMainMenu = tblMainMenu;
     this.txtStatus = txtStatus;
@@ -149,6 +154,12 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnMenuShipmentReceivingPalleteCount;
+      Button btnMenuShipmentReceivingPalleteCount = rootView.findViewById(id);
+      if (btnMenuShipmentReceivingPalleteCount == null) {
+        break missingId;
+      }
+
       id = R.id.space;
       Space space = rootView.findViewById(id);
       if (space == null) {
@@ -169,8 +180,8 @@ public final class FragmentHomeBinding implements ViewBinding {
 
       return new FragmentHomeBinding((ConstraintLayout) rootView, btnFoldingScan, btnLocationCheck,
           btnMenuFillPallete, btnMenuNextReceivingStatus, btnMenuPicking, btnMenuPutAwayPallete,
-          btnMenuShipmentCartonReceiving, btnMenuShipmentPalleteReceiving, space, tblMainMenu,
-          txtStatus);
+          btnMenuShipmentCartonReceiving, btnMenuShipmentPalleteReceiving,
+          btnMenuShipmentReceivingPalleteCount, space, tblMainMenu, txtStatus);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
