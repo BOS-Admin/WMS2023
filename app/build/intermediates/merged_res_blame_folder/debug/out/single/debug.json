@@ -120,6 +120,10 @@
         "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\fragment_dashboard.xml"
     },
     {
+        "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_itemserial_missing.xml.flat",
+        "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\content_itemserial_missing.xml"
+    },
+    {
         "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main_menu.xml.flat",
         "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\activity_main_menu.xml"
     },
@@ -138,6 +142,10 @@
     {
         "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\res\\merged\\debug\\anim_pop_exit_anim.xml.flat",
         "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\anim\\pop_exit_anim.xml"
+    },
+    {
+        "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_item_pricing.xml.flat",
+        "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\activity_item_pricing.xml"
     },
     {
         "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\res\\merged\\debug\\navigation_mobile_navigation.xml.flat",
@@ -180,8 +188,16 @@
         "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\content_picking.xml"
     },
     {
+        "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_item_pricing.xml.flat",
+        "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\content_item_pricing.xml"
+    },
+    {
         "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_locationcheck.xml.flat",
         "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\activity_locationcheck.xml"
+    },
+    {
+        "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_itemserial_missing.xml.flat",
+        "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\activity_itemserial_missing.xml"
     },
     {
         "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",

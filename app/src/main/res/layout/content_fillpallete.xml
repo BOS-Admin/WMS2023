@@ -60,7 +60,8 @@
                 android:layout_weight="1"
                 android:ems="3"
                 android:inputType="textPersonName"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                tools:ignore="SpeakableTextPresentCheck" />
 
         </LinearLayout>
 
@@ -84,7 +85,8 @@
                 android:layout_weight="1"
                 android:ems="3"
                 android:inputType="textPersonName"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                tools:ignore="SpeakableTextPresentCheck" />
 
         </LinearLayout>
 

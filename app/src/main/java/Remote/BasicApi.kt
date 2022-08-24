@@ -72,6 +72,18 @@ interface BasicApi {
     @POST("api/GenerateSerials")
     fun PostGenerateSerials(@Body model: FoldingItemModel): Observable<ResponseBody>
 
+    @GET("api/ItemSerialMissing")
+    fun InitItemSerialMissing(@Query("ItemCode") ItemCode:String): Observable<String>
+    @POST("api/ItemSerialMissing")
+    fun PostItemSerialMissing(@Query("UserID") UserID:Int,@Query("Letter") Letter:String,@Query("ItemSerialNo") ItemSerialNo:String): Observable<ResponseBody>
+
+
+
+    @GET("api/ItemPricing")
+    fun InitItemPricing(@Query("ItemCode") ItemCode:String): Observable<String>
+    @POST("api/ItemPricing")
+    fun PostItemPricing(@Query("UserID") UserID:Int,@Query("PricingLineCode") PricingLineCode:String,@Query("ItemSerials") ItemSerials:String): Observable<ResponseBody>
+
 
     @GET("api/ShipmentReceivingPallete")
     fun InitShipmentReceivingPallete(

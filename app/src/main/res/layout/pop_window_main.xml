@@ -62,6 +62,31 @@
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Pricing Line:"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/txtPricingLineCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:visibility="invisible">
 

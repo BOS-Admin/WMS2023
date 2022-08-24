@@ -8,8 +8,16 @@
         "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\content_putawaypallete.xml"
     },
     {
+        "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_itemserial_missing.xml",
+        "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\content_itemserial_missing.xml"
+    },
+    {
         "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pop_window_main.xml",
         "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\pop_window_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_itemserial_missing.xml",
+        "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\activity_itemserial_missing.xml"
     },
     {
         "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_fillpallete.xml",
@@ -48,6 +56,10 @@
         "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\activity_shipment_pallete_carton.xml"
     },
     {
+        "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_item_pricing.xml",
+        "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\activity_item_pricing.xml"
+    },
+    {
         "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_locationcheck.xml",
         "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\activity_locationcheck.xml"
     },
@@ -70,6 +82,10 @@
     {
         "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
         "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_item_pricing.xml",
+        "source": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\src\\main\\res\\layout\\content_item_pricing.xml"
     },
     {
         "merged": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_foldingscan.xml",

@@ -68,8 +68,20 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
+            android:name=".app.ItemSerialMissingActivity"
+            android:label="Missing Item"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
             android:name=".app.SerialGeneratorActivity"
             android:label="Serial Generator"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".app.ItemPricingActivity"
+            android:label="Item Pricing"
+            android:windowSoftInputMode="stateAlwaysHidden"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".app.FillPalleteActivity"

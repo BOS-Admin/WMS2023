@@ -21,7 +21,7 @@ public class General {
     private static volatile General instance = null;
     public Integer UserID=0;
     public Integer FloorID=0;
-    public String AppVersion="1.2.3 18/08/2022";
+    public String AppVersion="1.2.5 24/08/2022";
     int interval = 3600;    // when there's no activity
 
     /**
@@ -91,6 +91,10 @@ public class General {
     }
     public static Boolean ValidatePalleteCode(String str){
         return !str.isEmpty() && str.length()>1;
+    }
+
+    public static Boolean ValidateItemSerialCode(String str){
+        return !str.isEmpty() && str.length()>10 && str.toUpperCase().startsWith("IS");
     }
 
     public static Boolean ValidateAppointmentNoFormat(String str){

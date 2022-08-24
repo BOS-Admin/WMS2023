@@ -29,6 +29,9 @@ public final class PopWindowMainBinding implements ViewBinding {
   public final EditText txtIPAddress;
 
   @NonNull
+  public final EditText txtPricingLineCode;
+
+  @NonNull
   public final EditText txtRFIDMac;
 
   @NonNull
@@ -36,11 +39,13 @@ public final class PopWindowMainBinding implements ViewBinding {
 
   private PopWindowMainBinding(@NonNull LinearLayout rootView, @NonNull Button btnSave,
       @NonNull LinearLayout popMainFilter, @NonNull EditText txtIPAddress,
-      @NonNull EditText txtRFIDMac, @NonNull EditText txtScaleMac) {
+      @NonNull EditText txtPricingLineCode, @NonNull EditText txtRFIDMac,
+      @NonNull EditText txtScaleMac) {
     this.rootView = rootView;
     this.btnSave = btnSave;
     this.popMainFilter = popMainFilter;
     this.txtIPAddress = txtIPAddress;
+    this.txtPricingLineCode = txtPricingLineCode;
     this.txtRFIDMac = txtRFIDMac;
     this.txtScaleMac = txtScaleMac;
   }
@@ -90,6 +95,12 @@ public final class PopWindowMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txtPricingLineCode;
+      EditText txtPricingLineCode = rootView.findViewById(id);
+      if (txtPricingLineCode == null) {
+        break missingId;
+      }
+
       id = R.id.txtRFIDMac;
       EditText txtRFIDMac = rootView.findViewById(id);
       if (txtRFIDMac == null) {
@@ -103,7 +114,7 @@ public final class PopWindowMainBinding implements ViewBinding {
       }
 
       return new PopWindowMainBinding((LinearLayout) rootView, btnSave, popMainFilter, txtIPAddress,
-          txtRFIDMac, txtScaleMac);
+          txtPricingLineCode, txtRFIDMac, txtScaleMac);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

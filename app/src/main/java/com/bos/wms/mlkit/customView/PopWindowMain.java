@@ -29,6 +29,7 @@ public class PopWindowMain {
     public static final String DATA_KEY = "DATA_KEY_POP_WINDOW";
 
     private AppCompatEditText txtScaleMac;
+    private AppCompatEditText txtPricingLineCode;
     private AppCompatEditText txtRFIDMac;
     private AppCompatEditText txtIP;
     private Button btnSave ;
@@ -53,7 +54,7 @@ public class PopWindowMain {
         // 一个自定义的布局，作为显示的内容
         View contentView = LayoutInflater.from(view.getContext()).inflate(
                 layout, null);
-
+        txtPricingLineCode=contentView.findViewById(R.id.txtPricingLineCode);
         txtIP = contentView.findViewById(R.id.txtIPAddress);
         txtRFIDMac = contentView.findViewById(R.id.txtRFIDMac);
         txtScaleMac = contentView.findViewById(R.id.txtScaleMac);
@@ -90,6 +91,7 @@ public class PopWindowMain {
                         storage.saveData("RFIDMac",txtRFIDMac.getText().toString());
                         storage.saveData("WeightMac",txtScaleMac.getText().toString());
                         storage.saveData("IPAddress",txtIP.getText().toString());
+                        storage.saveData("PricingLineCode",txtPricingLineCode.getText().toString());
                         break;
                 }
             }
@@ -101,6 +103,7 @@ public class PopWindowMain {
                 storage.saveData("RFIDMac",txtRFIDMac.getText().toString());
                 storage.saveData("WeightMac",txtScaleMac.getText().toString());
                 storage.saveData("IPAddress",txtIP.getText().toString());
+                storage.saveData("PricingLineCode",txtPricingLineCode.getText().toString());
                 if (listener != null){
                     listener.onDismissListener(isResetEngine);
                 }
@@ -117,6 +120,7 @@ public class PopWindowMain {
 
         txtRFIDMac.setText(storage.getDataString("RFIDMac","BTR-80021070009"));
         txtIP.setText(storage.getDataString("IPAddress","192.168.10.82"));
+        txtPricingLineCode.setText(storage.getDataString("PricingLineCode","PL001"));
         txtScaleMac.setText(storage.getDataString("WeightMac","58:DA:04:A4:50:14"));
 
     }
