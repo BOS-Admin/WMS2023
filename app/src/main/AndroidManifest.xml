@@ -68,6 +68,12 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
+            android:name=".app.UPCPricingActivity"
+            android:label="UPC Pricing"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
             android:name=".app.ItemSerialMissingActivity"
             android:label="Missing Item"
             android:windowSoftInputMode="stateAlwaysHidden"
@@ -102,10 +108,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

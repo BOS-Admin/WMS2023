@@ -2628,6 +2628,7 @@ id Second2Fragment
 id SecondFragment
 id TOP_END
 id TOP_START
+id UPCPricingListView
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -2720,6 +2721,18 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btn17
+id btn20
+id btn25
+id btn30
+id btn35
+id btn40
+id btn50
+id btn60
+id btn65
+id btn70
+id btn75
+id btn80
 id btnA
 id btnB
 id btnC
@@ -2749,6 +2762,8 @@ id btnSerialMissing
 id btnSettings
 id btnShipPallReciDone
 id btnSubmit
+id btnUPCPricing
+id btnUPCPricingDone
 id btnfillpalleteDone
 id btnlocationcheckDone
 id btnputawaypalleteDone
@@ -2904,6 +2919,7 @@ id layout
 id lblError
 id lblFoldingScanItem
 id lblFoldingScanStation
+id lblItemSerial
 id lblItemsCnt
 id lblLocationCheckRemainingBins
 id lblLocationCheckRemainingShelfs
@@ -2924,6 +2940,7 @@ id lblShipPallReciBolNb
 id lblShipPallReciNbOfCartons
 id lblShipPallReciPalleteNb
 id lblStatus
+id lblUPC
 id lblfillpalleteBarcode
 id lblfillpalleteBinBarcode
 id lblfillpalleteListView
@@ -2949,6 +2966,10 @@ id linearLayout2
 id linearLayout3
 id linearLayout33
 id linearLayout4
+id linearLayout44
+id linearLayout444a
+id linearLayout444b
+id linearLayout444c
 id linearLayout5
 id linearLayout6
 id listMode
@@ -3208,6 +3229,7 @@ id txtFoldingScanItem
 id txtFoldingScanStation
 id txtIPAddress
 id txtItemCode
+id txtItemSerial
 id txtNextReceivingItemBarcode
 id txtNextReceivingStatus
 id txtPalleteBarcode
@@ -3228,6 +3250,7 @@ id txtShipPallReciBolNb
 id txtShipPallReciNbOfCartons
 id txtShipPallReciPalleteNb
 id txtStatus
+id txtUPC
 id txtfillpalleteBinBarcode
 id txtlocationcheckBinBarcode
 id txtpassword
@@ -3356,6 +3379,7 @@ layout activity_fillpallete
 layout activity_foldingscan
 layout activity_item_pricing
 layout activity_itemserial_missing
+layout activity_itemserial_upc_missing
 layout activity_locationcheck
 layout activity_login
 layout activity_main
@@ -3367,14 +3391,17 @@ layout activity_serial_generator
 layout activity_shipment_pallete_carton
 layout activity_shipment_pallete_carton_count
 layout activity_shipment_pallete_receiving
+layout activity_upc_pricing
 layout content_fillpallete
 layout content_foldingscan
 layout content_item_pricing
 layout content_itemserial_missing
+layout content_itemserial_upc_missing
 layout content_locationcheck
 layout content_picking
 layout content_putawaypallete
 layout content_serial_generator
+layout content_upc_pricing
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

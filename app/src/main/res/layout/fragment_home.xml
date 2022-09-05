@@ -48,16 +48,16 @@
             android:layout_marginRight="40dp">
 
             <Button
-                android:id="@+id/btnMenuPicking"
+                android:id="@+id/btnUPCPricing"
                 style="button"
-                android:layout_width="150dp"
-                android:layout_height="70dp"
+                android:layout_width="27dp"
+                android:layout_height="wrap_content"
                 android:background="@android:color/holo_blue_light"
                 android:ellipsize="end"
                 android:shadowColor="@color/colorPrimary"
                 android:singleLine="false"
                 android:soundEffectsEnabled="false"
-                android:text="Picking Orders"
+                android:text="UPC   Pricing"
                 android:textColor="@android:color/white"
                 android:textSize="24sp" />
 
@@ -302,7 +302,19 @@
 
         </TableRow>
     </TableLayout>
-
+    <Button
+        android:id="@+id/btnMenuPicking"
+        style="button"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:ellipsize="end"
+        android:shadowColor="@color/colorPrimary"
+        android:visibility="gone"
+        android:soundEffectsEnabled="false"
+        android:text="Picking Orders"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
     <Space
         android:id="@+id/space"
         android:layout_width="7dp"

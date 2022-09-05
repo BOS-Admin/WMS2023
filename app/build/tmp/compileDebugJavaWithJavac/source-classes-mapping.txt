@@ -1,19 +1,3 @@
-com/bos/wms/mlkit/storage/Storage.java
- com.bos.wms.mlkit.storage.Storage
-com/bos/wms/mlkit/LabelGraphic.java
- com.bos.wms.mlkit.LabelGraphic
-com/bos/wms/mlkit/FaceContourGraphic.java
- com.bos.wms.mlkit.FaceContourGraphic
-com/bos/wms/mlkit/TextGraphic.java
- com.bos.wms.mlkit.TextGraphic
-com/bos/wms/mlkit/BuildConfig.java
- com.bos.wms.mlkit.BuildConfig
-com/bos/wms/mlkit/General.java
- com.bos.wms.mlkit.General
- com.bos.wms.mlkit.General$1
-com/bos/wms/mlkit/GraphicOverlay.java
- com.bos.wms.mlkit.GraphicOverlay
- com.bos.wms.mlkit.GraphicOverlay$Graphic
 com/bos/wms/mlkit/databinding/ContentLocationcheckBinding.java
  com.bos.wms.mlkit.databinding.ContentLocationcheckBinding
 com/bos/wms/mlkit/databinding/ActivityShipmentPalleteReceivingBinding.java
@@ -27,6 +11,9 @@ com/bos/wms/mlkit/databinding/ContentPutawaypalleteBinding.java
  com.bos.wms.mlkit.databinding.ContentPutawaypalleteBinding
 com/bos/wms/mlkit/databinding/ActivityMainMenuBinding.java
  com.bos.wms.mlkit.databinding.ActivityMainMenuBinding
+com/bos/wms/mlkit/General.java
+ com.bos.wms.mlkit.General
+ com.bos.wms.mlkit.General$1
 com/bos/wms/mlkit/databinding/ActivityFoldingscanBinding.java
  com.bos.wms.mlkit.databinding.ActivityFoldingscanBinding
 com/bos/wms/mlkit/databinding/FragmentDashboardBinding.java
@@ -37,28 +24,49 @@ com/bos/wms/mlkit/databinding/ContentFillpalleteBinding.java
  com.bos.wms.mlkit.databinding.ContentFillpalleteBinding
 com/bos/wms/mlkit/databinding/ActivityItemPricingBinding.java
  com.bos.wms.mlkit.databinding.ActivityItemPricingBinding
+com/bos/wms/mlkit/BuildConfig.java
+ com.bos.wms.mlkit.BuildConfig
 com/bos/wms/mlkit/databinding/FragmentHomeBinding.java
  com.bos.wms.mlkit.databinding.FragmentHomeBinding
+com/bos/wms/mlkit/databinding/ActivityItemserialUpcMissingBinding.java
+ com.bos.wms.mlkit.databinding.ActivityItemserialUpcMissingBinding
 com/bos/wms/mlkit/databinding/ActivityLocationcheckBinding.java
  com.bos.wms.mlkit.databinding.ActivityLocationcheckBinding
+com/bos/wms/mlkit/LabelGraphic.java
+ com.bos.wms.mlkit.LabelGraphic
 com/bos/wms/mlkit/databinding/ActivityNextReceivingStatusBinding.java
  com.bos.wms.mlkit.databinding.ActivityNextReceivingStatusBinding
+com/bos/wms/mlkit/databinding/ContentItemserialUpcMissingBinding.java
+ com.bos.wms.mlkit.databinding.ContentItemserialUpcMissingBinding
+com/bos/wms/mlkit/databinding/ContentUpcPricingBinding.java
+ com.bos.wms.mlkit.databinding.ContentUpcPricingBinding
+com/bos/wms/mlkit/databinding/ActivityUpcPricingBinding.java
+ com.bos.wms.mlkit.databinding.ActivityUpcPricingBinding
 com/bos/wms/mlkit/databinding/PopWindowMainBinding.java
  com.bos.wms.mlkit.databinding.PopWindowMainBinding
 com/bos/wms/mlkit/databinding/ContentPickingBinding.java
  com.bos.wms.mlkit.databinding.ContentPickingBinding
 com/bos/wms/mlkit/databinding/ContentFoldingscanBinding.java
  com.bos.wms.mlkit.databinding.ContentFoldingscanBinding
+com/bos/wms/mlkit/storage/Storage.java
+ com.bos.wms.mlkit.storage.Storage
 com/bos/wms/mlkit/databinding/ActivitySerialGeneratorBinding.java
  com.bos.wms.mlkit.databinding.ActivitySerialGeneratorBinding
 com/bos/wms/mlkit/databinding/ItemListBinding.java
  com.bos.wms.mlkit.databinding.ItemListBinding
 com/bos/wms/mlkit/databinding/ActivityShipmentPalleteCartonCountBinding.java
  com.bos.wms.mlkit.databinding.ActivityShipmentPalleteCartonCountBinding
-com/bos/wms/mlkit/databinding/ContentItemPricingBinding.java
- com.bos.wms.mlkit.databinding.ContentItemPricingBinding
+com/bos/wms/mlkit/GraphicOverlay.java
+ com.bos.wms.mlkit.GraphicOverlay
+ com.bos.wms.mlkit.GraphicOverlay$Graphic
+com/bos/wms/mlkit/databinding/ContentItemserialMissingBinding.java
+ com.bos.wms.mlkit.databinding.ContentItemserialMissingBinding
 com/bos/wms/mlkit/databinding/ActivityFillpalleteBinding.java
  com.bos.wms.mlkit.databinding.ActivityFillpalleteBinding
+com/bos/wms/mlkit/TextGraphic.java
+ com.bos.wms.mlkit.TextGraphic
+com/bos/wms/mlkit/FaceContourGraphic.java
+ com.bos.wms.mlkit.FaceContourGraphic
 com/bos/wms/mlkit/databinding/ActivityLoginBinding.java
  com.bos.wms.mlkit.databinding.ActivityLoginBinding
 com/bos/wms/mlkit/databinding/ActivityMainBinding.java
@@ -73,5 +81,5 @@ com/bos/wms/mlkit/databinding/ActivityItemserialMissingBinding.java
  com.bos.wms.mlkit.databinding.ActivityItemserialMissingBinding
 com/bos/wms/mlkit/databinding/ActivityPickingBinding.java
  com.bos.wms.mlkit.databinding.ActivityPickingBinding
-com/bos/wms/mlkit/databinding/ContentItemserialMissingBinding.java
- com.bos.wms.mlkit.databinding.ContentItemserialMissingBinding
+com/bos/wms/mlkit/databinding/ContentItemPricingBinding.java
+ com.bos.wms.mlkit.databinding.ContentItemPricingBinding

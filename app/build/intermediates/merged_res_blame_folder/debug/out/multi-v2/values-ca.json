@@ -4,6 +4,23 @@
             "outputFile": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ca\\values-ca.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\1a51164dd0cc3e1901ebdd1a40027046\\core-1.9.0-rc01\\res\\values-ca\\values-ca.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "108",
+                        "startColumns": "4",
+                        "startOffsets": "10066",
+                        "endColumns": "100",
+                        "endOffsets": "10162"
+                    }
+                },
+                {
                     "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\be72cc2a14925941bda86dd05edac4ba\\navigation-ui-2.5.1\\res\\values-ca\\values-ca.xml",
                     "from": {
                         "startLines": "2,3",
@@ -37,23 +54,6 @@
                         "endLines": "5,33,34,35,36,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,106",
                         "endColumns": "12,87,100,127,83,64,96,79,64,94,71,61,75,62,56,120,57,60,56,79,136,86,83,108,77,78,88,66,65,77,80,87,77,76,73,78,89,91,91,100,73,81,100,49,65,91,86,61,63,62,122,102,103,105,85",
                         "endOffsets": "274,3087,3188,3316,3400,5713,5810,5890,5955,6050,6122,6184,6260,6323,6380,6501,6559,6620,6677,6757,6894,6981,7065,7174,7252,7331,7420,7487,7553,7631,7712,7800,7878,7955,8029,8108,8198,8290,8382,8483,8557,8639,8740,8790,8856,8948,9035,9097,9161,9224,9347,9450,9554,9660,9979"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\ea93e1b72ccc4893e91d9add22418c07\\core-1.9.0-beta01\\res\\values-ca\\values-ca.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "108",
-                        "startColumns": "4",
-                        "startOffsets": "10066",
-                        "endColumns": "100",
-                        "endOffsets": "10162"
                     }
                 },
                 {

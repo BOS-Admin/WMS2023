@@ -69,6 +69,9 @@ class HomeFragment : Fragment() {
         root.btnFoldingScan.setOnClickListener {
             ProceedFoldingScan()
         }
+        root.btnUPCPricing.setOnClickListener {
+            ProceedUPCPricing()
+        }
         root.btnMenuShipmentPalleteReceiving.setOnClickListener {
             ProceedShipmentPalleteReceiving()
         }
@@ -181,6 +184,11 @@ class HomeFragment : Fragment() {
         txtStatus.setText("")
     }
 
+    fun ProceedUPCPricing() {
+        val intent = Intent (getActivity(), UPCPricingActivity::class.java)
+        startActivity(intent)
+        txtStatus.setText("")
+    }
     fun ProceedFoldingScan() {
         val intent = Intent (getActivity(), SerialGeneratorActivity::class.java)
         startActivity(intent)

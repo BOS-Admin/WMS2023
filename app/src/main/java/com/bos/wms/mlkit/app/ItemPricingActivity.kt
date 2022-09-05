@@ -134,7 +134,7 @@ class ItemPricingActivity : AppCompatActivity() {
                     .subscribe(
                         {s->
                             var resp=s
-                            if(s.isNullOrEmpty()){
+                            if(s.isNullOrEmpty() || s.lowercase().startsWith("success")){
 
                             Items.add(0,ItemStr)
                             ValidatedItems.add(0,ItemStr)

@@ -67,6 +67,12 @@ interface BasicApi {
     fun FoldingItem(@Body model: FoldingItemModel): Observable<ResponseBody>
 
 
+    @GET("api/UPCPricing")
+    fun ValidateUPCPricing(@Query("ItemSerial") ItemSerial:String,@Query("ItemUPC") ItemUPC:String): Observable<String>
+    @POST("api/UPCPricing")
+    fun PostUPCPricing(@Query("UserID") UserID:Int,@Query("ItemSerials") ItemSerials:String,@Query("ItemUPCs") ItemUPCs:String,@Query("PricingLineCode") PricingLineCode:String): Observable<ResponseBody>
+
+
     @GET("api/GenerateSerials")
     fun InitGenerateSerials(@Query("FoldingStationCode") FoldingStationCode:String): Observable<FoldingItem>
     @POST("api/GenerateSerials")

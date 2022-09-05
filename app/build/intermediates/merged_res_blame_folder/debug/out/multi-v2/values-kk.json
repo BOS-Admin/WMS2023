@@ -55,6 +55,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\1a51164dd0cc3e1901ebdd1a40027046\\core-1.9.0-rc01\\res\\values-kk\\values-kk.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "108",
+                        "startColumns": "4",
+                        "startOffsets": "9796",
+                        "endColumns": "100",
+                        "endOffsets": "9892"
+                    }
+                },
+                {
                     "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\be72cc2a14925941bda86dd05edac4ba\\navigation-ui-2.5.1\\res\\values-kk\\values-kk.xml",
                     "from": {
                         "startLines": "2,3",
@@ -88,23 +105,6 @@
                         "endLines": "5,33,34,35,36,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,106",
                         "endColumns": "12,78,91,111,81,63,94,69,62,106,66,60,66,61,53,113,58,60,53,74,125,87,88,111,71,72,88,66,65,70,76,85,71,75,80,69,86,71,90,92,73,74,91,51,65,83,85,61,63,62,103,99,93,100,83",
                         "endOffsets": "273,3043,3135,3247,3329,5610,5705,5775,5838,5945,6012,6073,6140,6202,6256,6370,6429,6490,6544,6619,6745,6833,6922,7034,7106,7179,7268,7335,7401,7472,7549,7635,7707,7783,7864,7934,8021,8093,8184,8277,8351,8426,8518,8570,8636,8720,8806,8868,8932,8995,9099,9199,9293,9394,9709"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\ea93e1b72ccc4893e91d9add22418c07\\core-1.9.0-beta01\\res\\values-kk\\values-kk.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "108",
-                        "startColumns": "4",
-                        "startOffsets": "9796",
-                        "endColumns": "100",
-                        "endOffsets": "9892"
                     }
                 }
             ]

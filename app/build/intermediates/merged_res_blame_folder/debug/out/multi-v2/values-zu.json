@@ -21,6 +21,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\1a51164dd0cc3e1901ebdd1a40027046\\core-1.9.0-rc01\\res\\values-zu\\values-zu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "108",
+                        "startColumns": "4",
+                        "startOffsets": "10026",
+                        "endColumns": "100",
+                        "endOffsets": "10122"
+                    }
+                },
+                {
                     "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\be72cc2a14925941bda86dd05edac4ba\\navigation-ui-2.5.1\\res\\values-zu\\values-zu.xml",
                     "from": {
                         "startLines": "2,3",
@@ -71,23 +88,6 @@
                         "endLines": "5,33,34,35,36,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,106",
                         "endColumns": "12,76,111,125,80,66,102,74,62,91,64,66,71,71,53,120,58,63,53,76,131,84,80,118,86,82,91,66,65,71,76,90,79,78,74,78,89,72,93,96,73,72,98,54,67,87,88,61,63,62,108,104,102,108,81",
                         "endOffsets": "271,3034,3146,3272,3353,5705,5808,5883,5946,6038,6103,6170,6242,6314,6368,6489,6548,6612,6666,6743,6875,6960,7041,7160,7247,7330,7422,7489,7555,7627,7704,7795,7875,7954,8029,8108,8198,8271,8365,8462,8536,8609,8708,8763,8831,8919,9008,9070,9134,9197,9306,9411,9514,9623,9939"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\ea93e1b72ccc4893e91d9add22418c07\\core-1.9.0-beta01\\res\\values-zu\\values-zu.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "108",
-                        "startColumns": "4",
-                        "startOffsets": "10026",
-                        "endColumns": "100",
-                        "endOffsets": "10122"
                     }
                 },
                 {

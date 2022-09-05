@@ -21,7 +21,7 @@ public class General {
     private static volatile General instance = null;
     public Integer UserID=0;
     public Integer FloorID=0;
-    public String AppVersion="1.2.5 24/08/2022";
+    public String AppVersion="1.2.6 27/08/2022";
     int interval = 3600;    // when there's no activity
 
     /**

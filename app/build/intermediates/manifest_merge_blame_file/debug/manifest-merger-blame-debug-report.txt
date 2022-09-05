@@ -41,26 +41,26 @@
 24-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:16:22-62
 25
 26    <permission
-26-->[androidx.core:core:1.9.0-beta01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ea93e1b72ccc4893e91d9add22418c07\core-1.9.0-beta01\AndroidManifest.xml:22:5-24:47
+26-->[androidx.core:core:1.9.0-rc01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\1a51164dd0cc3e1901ebdd1a40027046\core-1.9.0-rc01\AndroidManifest.xml:22:5-24:47
 27        android:name="com.bos.wms.mlkit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-27-->[androidx.core:core:1.9.0-beta01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ea93e1b72ccc4893e91d9add22418c07\core-1.9.0-beta01\AndroidManifest.xml:23:9-81
+27-->[androidx.core:core:1.9.0-rc01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\1a51164dd0cc3e1901ebdd1a40027046\core-1.9.0-rc01\AndroidManifest.xml:23:9-81
 28        android:protectionLevel="signature" />
-28-->[androidx.core:core:1.9.0-beta01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ea93e1b72ccc4893e91d9add22418c07\core-1.9.0-beta01\AndroidManifest.xml:24:9-44
+28-->[androidx.core:core:1.9.0-rc01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\1a51164dd0cc3e1901ebdd1a40027046\core-1.9.0-rc01\AndroidManifest.xml:24:9-44
 29
 30    <uses-permission android:name="com.bos.wms.mlkit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
-30-->[androidx.core:core:1.9.0-beta01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ea93e1b72ccc4893e91d9add22418c07\core-1.9.0-beta01\AndroidManifest.xml:26:5-97
-30-->[androidx.core:core:1.9.0-beta01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ea93e1b72ccc4893e91d9add22418c07\core-1.9.0-beta01\AndroidManifest.xml:26:22-94
+30-->[androidx.core:core:1.9.0-rc01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\1a51164dd0cc3e1901ebdd1a40027046\core-1.9.0-rc01\AndroidManifest.xml:26:5-97
+30-->[androidx.core:core:1.9.0-rc01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\1a51164dd0cc3e1901ebdd1a40027046\core-1.9.0-rc01\AndroidManifest.xml:26:22-94
 31    <!-- <uses-sdk android:minSdkVersion="14"/> -->
 32    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 32-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\b31203e9bb2a39dd54936d2a150a9552\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:5-79
 32-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\b31203e9bb2a39dd54936d2a150a9552\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:22-76
 33
 34    <application
-34-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:18:5-109:19
+34-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:18:5-111:19
 35        android:allowBackup="true"
 35-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:19:9-35
 36        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-36-->[androidx.core:core:1.9.0-beta01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\ea93e1b72ccc4893e91d9add22418c07\core-1.9.0-beta01\AndroidManifest.xml:28:18-86
+36-->[androidx.core:core:1.9.0-rc01] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\1a51164dd0cc3e1901ebdd1a40027046\core-1.9.0-rc01\AndroidManifest.xml:28:18-86
 37        android:debuggable="true"
 38        android:extractNativeLibs="false"
 39        android:icon="@mipmap/ic_launcher"
@@ -71,172 +71,173 @@
 41-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:22:9-54
 42        android:supportsRtl="true"
 42-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:23:9-35
-43        android:testOnly="true"
-44        android:theme="@style/AppTheme"
-44-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:24:9-40
-45        android:usesCleartextTraffic="true" >
-45-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:26:9-44
-46        <provider
-47            android:name="androidx.core.content.FileProvider"
-47-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:71-120
-48            android:authorities="com.bos.wms.mlkit.fileprovider"
-48-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:19-70
-49            android:exported="false"
-49-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:121-145
-50            android:grantUriPermissions="true" >
-50-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:146-180
-51            <meta-data
-51-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:28:13-111
-52                android:name="android.support.FILE_PROVIDER_PATHS"
-52-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:28:24-74
-53                android:resource="@xml/file_paths" />
-53-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:28:75-109
-54        </provider>
-55
-56        <activity android:name="com.bos.wms.mlkit.app.NextReceivingStatusActivity" />
-56-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:31:9-78
-56-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:31:19-66
-57        <activity
-57-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:32:9-36:59
-58            android:name="com.bos.wms.mlkit.app.PickingActivity"
-58-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:33:13-48
-59            android:label="@string/title_activity_picking"
-59-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:34:13-59
-60            android:theme="@style/AppTheme.NoActionBar"
-60-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:36:13-56
-61            android:windowSoftInputMode="stateAlwaysHidden" />
-61-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:35:13-60
-62        <activity
-62-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:37:9-41:59
-63            android:name="com.bos.wms.mlkit.app.LocationCheckActivity"
-63-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:38:13-54
-64            android:label="Location Check"
-64-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:39:13-43
-65            android:theme="@style/AppTheme.NoActionBar"
-65-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:41:13-56
-66            android:windowSoftInputMode="stateAlwaysHidden" />
-66-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:40:13-60
-67        <activity
-67-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:42:9-46:59
-68            android:name="com.bos.wms.mlkit.app.PutAwayPalleteActivity"
-68-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:43:13-55
-69            android:label="Put Away Pallete"
-69-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:44:13-45
-70            android:theme="@style/AppTheme.NoActionBar"
-70-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:46:13-56
-71            android:windowSoftInputMode="stateAlwaysHidden" />
-71-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:45:13-60
-72        <activity
-72-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:48:9-52:59
-73            android:name="com.bos.wms.mlkit.app.ShipmentPalleteReceivingActivity"
-73-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:49:13-65
-74            android:label="Shipment Pallete Receiving"
-74-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:50:13-55
-75            android:theme="@style/AppTheme.NoActionBar"
-75-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:52:13-56
-76            android:windowSoftInputMode="stateAlwaysHidden" />
-76-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:51:13-60
-77        <activity
-77-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:53:9-57:59
-78            android:name="com.bos.wms.mlkit.app.ShipmentCartonReceivingActivity"
-78-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:54:13-64
-79            android:label="Shipment Carton Receiving"
-79-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:55:13-54
-80            android:theme="@style/AppTheme.NoActionBar"
-80-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:57:13-56
-81            android:windowSoftInputMode="stateAlwaysHidden" />
-81-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:56:13-60
-82        <activity
-82-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:58:9-62:59
-83            android:name="com.bos.wms.mlkit.app.ShipmentCartonCountReceivingActivity"
-83-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:59:13-69
-84            android:label="Shipment Receiving Carton Count"
-84-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:60:13-60
-85            android:theme="@style/AppTheme.NoActionBar"
-85-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:62:13-56
-86            android:windowSoftInputMode="stateAlwaysHidden" />
-86-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:61:13-60
-87        <activity
-87-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:64:9-68:59
-88            android:name="com.bos.wms.mlkit.app.FoldingScanActivity"
-88-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:65:13-52
-89            android:label="Folding Scan"
-89-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:66:13-41
-90            android:theme="@style/AppTheme.NoActionBar"
-90-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:68:13-56
-91            android:windowSoftInputMode="stateAlwaysHidden" />
-91-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:67:13-60
-92        <activity
-92-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:70:9-74:59
-93            android:name="com.bos.wms.mlkit.app.ItemSerialMissingActivity"
-93-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:71:13-58
-94            android:label="Missing Item"
-94-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:72:13-41
-95            android:theme="@style/AppTheme.NoActionBar"
-95-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:74:13-56
-96            android:windowSoftInputMode="stateAlwaysHidden" />
-96-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:73:13-60
-97        <activity
-97-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:76:9-79:59
-98            android:name="com.bos.wms.mlkit.app.SerialGeneratorActivity"
-98-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:77:13-56
-99            android:label="Serial Generator"
-99-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:78:13-45
-100            android:theme="@style/AppTheme.NoActionBar" />
-100-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:79:13-56
+43        android:theme="@style/AppTheme"
+43-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:24:9-40
+44        android:usesCleartextTraffic="true" >
+44-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:26:9-44
+45        <provider
+46            android:name="androidx.core.content.FileProvider"
+46-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:71-120
+47            android:authorities="com.bos.wms.mlkit.fileprovider"
+47-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:19-70
+48            android:exported="false"
+48-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:121-145
+49            android:grantUriPermissions="true" >
+49-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:27:146-180
+50            <meta-data
+50-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:28:13-111
+51                android:name="android.support.FILE_PROVIDER_PATHS"
+51-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:28:24-74
+52                android:resource="@xml/file_paths" />
+52-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:28:75-109
+53        </provider>
+54
+55        <activity android:name="com.bos.wms.mlkit.app.NextReceivingStatusActivity" />
+55-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:31:9-78
+55-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:31:19-66
+56        <activity
+56-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:32:9-36:59
+57            android:name="com.bos.wms.mlkit.app.PickingActivity"
+57-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:33:13-48
+58            android:label="@string/title_activity_picking"
+58-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:34:13-59
+59            android:theme="@style/AppTheme.NoActionBar"
+59-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:36:13-56
+60            android:windowSoftInputMode="stateAlwaysHidden" />
+60-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:35:13-60
+61        <activity
+61-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:37:9-41:59
+62            android:name="com.bos.wms.mlkit.app.LocationCheckActivity"
+62-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:38:13-54
+63            android:label="Location Check"
+63-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:39:13-43
+64            android:theme="@style/AppTheme.NoActionBar"
+64-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:41:13-56
+65            android:windowSoftInputMode="stateAlwaysHidden" />
+65-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:40:13-60
+66        <activity
+66-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:42:9-46:59
+67            android:name="com.bos.wms.mlkit.app.PutAwayPalleteActivity"
+67-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:43:13-55
+68            android:label="Put Away Pallete"
+68-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:44:13-45
+69            android:theme="@style/AppTheme.NoActionBar"
+69-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:46:13-56
+70            android:windowSoftInputMode="stateAlwaysHidden" />
+70-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:45:13-60
+71        <activity
+71-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:48:9-52:59
+72            android:name="com.bos.wms.mlkit.app.ShipmentPalleteReceivingActivity"
+72-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:49:13-65
+73            android:label="Shipment Pallete Receiving"
+73-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:50:13-55
+74            android:theme="@style/AppTheme.NoActionBar"
+74-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:52:13-56
+75            android:windowSoftInputMode="stateAlwaysHidden" />
+75-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:51:13-60
+76        <activity
+76-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:53:9-57:59
+77            android:name="com.bos.wms.mlkit.app.ShipmentCartonReceivingActivity"
+77-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:54:13-64
+78            android:label="Shipment Carton Receiving"
+78-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:55:13-54
+79            android:theme="@style/AppTheme.NoActionBar"
+79-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:57:13-56
+80            android:windowSoftInputMode="stateAlwaysHidden" />
+80-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:56:13-60
+81        <activity
+81-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:58:9-62:59
+82            android:name="com.bos.wms.mlkit.app.ShipmentCartonCountReceivingActivity"
+82-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:59:13-69
+83            android:label="Shipment Receiving Carton Count"
+83-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:60:13-60
+84            android:theme="@style/AppTheme.NoActionBar"
+84-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:62:13-56
+85            android:windowSoftInputMode="stateAlwaysHidden" />
+85-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:61:13-60
+86        <activity
+86-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:64:9-68:59
+87            android:name="com.bos.wms.mlkit.app.FoldingScanActivity"
+87-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:65:13-52
+88            android:label="Folding Scan"
+88-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:66:13-41
+89            android:theme="@style/AppTheme.NoActionBar"
+89-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:68:13-56
+90            android:windowSoftInputMode="stateAlwaysHidden" />
+90-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:67:13-60
+91        <activity
+91-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:70:9-74:59
+92            android:name="com.bos.wms.mlkit.app.UPCPricingActivity"
+92-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:71:13-51
+93            android:label="UPC Pricing"
+93-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:72:13-40
+94            android:theme="@style/AppTheme.NoActionBar"
+94-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:74:13-56
+95            android:windowSoftInputMode="stateAlwaysHidden" />
+95-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:73:13-60
+96        <activity
+96-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:76:9-80:59
+97            android:name="com.bos.wms.mlkit.app.ItemSerialMissingActivity"
+97-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:77:13-58
+98            android:label="Missing Item"
+98-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:78:13-41
+99            android:theme="@style/AppTheme.NoActionBar"
+99-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:80:13-56
+100            android:windowSoftInputMode="stateAlwaysHidden" />
+100-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:79:13-60
 101        <activity
-101-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:81:9-85:59
-102            android:name="com.bos.wms.mlkit.app.ItemPricingActivity"
-102-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:82:13-52
-103            android:label="Item Pricing"
-103-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:83:13-41
-104            android:theme="@style/AppTheme.NoActionBar"
+101-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:82:9-85:59
+102            android:name="com.bos.wms.mlkit.app.SerialGeneratorActivity"
+102-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:83:13-56
+103            android:label="Serial Generator"
+103-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:84:13-45
+104            android:theme="@style/AppTheme.NoActionBar" />
 104-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:85:13-56
-105            android:windowSoftInputMode="stateAlwaysHidden" />
-105-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:84:13-60
-106        <activity
-106-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:86:9-90:59
-107            android:name="com.bos.wms.mlkit.app.FillPalleteActivity"
-107-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:87:13-52
-108            android:label="Fill Pallete Activity"
-108-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:88:13-50
-109            android:theme="@style/AppTheme.NoActionBar"
-109-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:90:13-56
-110            android:windowSoftInputMode="stateAlwaysHidden" />
-110-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:89:13-60
-111        <activity
-111-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:91:9-93:64
-112            android:name="com.bos.wms.mlkit.app.MainMenu"
-112-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:92:13-41
-113            android:label="@string/title_activity_main_menu" />
-113-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:93:13-61
-114        <activity
-114-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:94:9-104:20
-115            android:name="com.bos.wms.mlkit.ui.login.LoginActivity"
-115-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:95:13-51
-116            android:exported="true"
-116-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:97:13-36
-117            android:label="@string/title_activity_login" >
-117-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:96:13-57
-118            <intent-filter>
-118-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:99:13-103:29
-119                <action android:name="android.intent.action.MAIN" />
-119-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:100:17-69
-119-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:100:25-66
-120
-121                <category android:name="android.intent.category.LAUNCHER" />
-121-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:102:17-77
-121-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:102:27-74
-122            </intent-filter>
-123        </activity>
-124        <activity
-124-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:105:9-108:52
-125            android:name="com.bos.wms.mlkit.MainActivity"
-125-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:106:13-41
-126            android:configChanges="keyboardHidden|orientation|screenSize"
-126-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:107:13-74
-127            android:screenOrientation="portrait" />
-127-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:108:13-49
+105        <activity
+105-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:87:9-91:59
+106            android:name="com.bos.wms.mlkit.app.ItemPricingActivity"
+106-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:88:13-52
+107            android:label="Item Pricing"
+107-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:89:13-41
+108            android:theme="@style/AppTheme.NoActionBar"
+108-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:91:13-56
+109            android:windowSoftInputMode="stateAlwaysHidden" />
+109-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:90:13-60
+110        <activity
+110-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:92:9-96:59
+111            android:name="com.bos.wms.mlkit.app.FillPalleteActivity"
+111-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:93:13-52
+112            android:label="Fill Pallete Activity"
+112-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:94:13-50
+113            android:theme="@style/AppTheme.NoActionBar"
+113-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:96:13-56
+114            android:windowSoftInputMode="stateAlwaysHidden" />
+114-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:95:13-60
+115        <activity
+115-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:97:9-99:64
+116            android:name="com.bos.wms.mlkit.app.MainMenu"
+116-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:98:13-41
+117            android:label="@string/title_activity_main_menu" />
+117-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:99:13-61
+118        <activity
+118-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:100:9-110:20
+119            android:name="com.bos.wms.mlkit.ui.login.LoginActivity"
+119-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:101:13-51
+120            android:exported="true"
+120-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:103:13-36
+121            android:label="@string/title_activity_login" >
+121-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:102:13-57
+122            <intent-filter>
+122-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:105:13-109:29
+123                <action android:name="android.intent.action.MAIN" />
+123-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:106:17-69
+123-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:106:25-66
+124
+125                <category android:name="android.intent.category.LAUNCHER" />
+125-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:108:17-77
+125-->C:\Users\HYassine\AndroidStudioProjects\WMS\app\src\main\AndroidManifest.xml:108:27-74
+126            </intent-filter>
+127        </activity>
 128
 129        <service
 129-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\HYassine\.gradle\caches\transforms-2\files-2.1\7945b5f48a14dfcd8823d00bb5d7d76a\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:24:9-33:19

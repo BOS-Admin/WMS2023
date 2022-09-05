@@ -12,13 +12,15 @@
         <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_shipment_pallete_carton.xml" value="0.33" />
         <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_shipment_pallete_carton_count.xml" value="0.18" />
         <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_shipment_pallete_receiving.xml" value="0.25" />
+        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_upc_pricing.xml" value="0.1" />
         <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_fillpallete.xml" value="0.1490036231884058" />
         <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_foldingscan.xml" value="0.4764705882352941" />
         <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_itemPricing.xml" value="0.25" />
         <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_item_pricing.xml" value="0.1" />
         <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_itemserial_missing.xml" value="0.2" />
         <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_serial_generator.xml" value="0.25" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/fragment_home.xml" value="0.15" />
+        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_upc_pricing.xml" value="0.33" />
+        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/fragment_home.xml" value="0.18" />
         <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/pop_window_main.xml" value="0.25" />
       </map>
     </option>
