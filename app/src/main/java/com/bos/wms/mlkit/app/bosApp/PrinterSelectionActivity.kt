@@ -29,6 +29,9 @@ class PrinterSelectionActivity : AppCompatActivity() {
         mStorage= Storage(applicationContext)
         var FloorID: Int= General.getGeneral(applicationContext).FloorID
         GetPrinters(""+FloorID);
+        btnPackingReasonDone.setOnClickListener{
+             Log.i("AH-Log-Printer","spinner "+spinner.selectedItem.toString())
+        }
 
     }
 
