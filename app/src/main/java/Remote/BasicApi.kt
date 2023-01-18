@@ -1,12 +1,18 @@
 package Remote
 
 import Model.*
+import Model.BosApp.PrinterModelItem
+import Model.BosApp.PrintersModel
 import io.reactivex.Observable
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
 
 interface BasicApi {
+
+
+    @GET("PrintSections")
+    fun GetPrintSections(): Observable<PrintersModel>
 
     @POST("api/Login")
     fun Login(@Body usr: UserLoginModel): Observable<UserLoginResultModel>
@@ -73,15 +79,20 @@ interface BasicApi {
     fun PostUPCPricing(@Query("UserID") UserID:Int,@Query("ItemSerials") ItemSerials:String,@Query("ItemUPCs") ItemUPCs:String,@Query("PricingLineCode") PricingLineCode:String): Observable<ResponseBody>
 
 
+    @GET("api/PGPricing")
+    fun ValidatePGPricing(@Query("ItemCode") ItemCode:String,@Query("PG") PG:String,@Query("Season") Season:String): Observable<String>
+    @POST("api/PGPricing")
+    fun PostPGPricing(@Query("UserID") UserID:Int,@Query("PricingLineCode") PricingLineCode:String,@Query("ItemSerials") ItemSerials:String,@Query("PG") PG:String,@Query("Season") Season:String): Observable<ResponseBody>
+
     @GET("api/GenerateSerials")
     fun InitGenerateSerials(@Query("FoldingStationCode") FoldingStationCode:String): Observable<FoldingItem>
     @POST("api/GenerateSerials")
     fun PostGenerateSerials(@Body model: FoldingItemModel): Observable<ResponseBody>
 
     @GET("api/ItemSerialMissing")
-    fun InitItemSerialMissing(@Query("ItemCode") ItemCode:String): Observable<String>
+    fun InitItemSerialMissing(@Query("UserID") UserID:Int,@Query("ItemSerialNo") ItemSerialNo:String): Observable<String>
     @POST("api/ItemSerialMissing")
-    fun PostItemSerialMissing(@Query("UserID") UserID:Int,@Query("Letter") Letter:String,@Query("ItemSerialNo") ItemSerialNo:String): Observable<ResponseBody>
+    fun PostItemSerialMissing(@Query("UserID") UserID:Int,@Query("upc") upc:String,@Query("ItemSerialNo") ItemSerialNo:String,@Query("Perc") Perc:Float): Observable<String>
 
 
 

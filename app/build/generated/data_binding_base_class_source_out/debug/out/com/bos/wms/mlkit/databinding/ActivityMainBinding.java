@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.camera.view.PreviewView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -74,31 +75,31 @@ public final class ActivityMainBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnCapture;
-      Button btnCapture = rootView.findViewById(id);
+      Button btnCapture = ViewBindings.findChildViewById(rootView, id);
       if (btnCapture == null) {
         break missingId;
       }
 
       id = R.id.btnDone;
-      Button btnDone = rootView.findViewById(id);
+      Button btnDone = ViewBindings.findChildViewById(rootView, id);
       if (btnDone == null) {
         break missingId;
       }
 
       id = R.id.btnPause;
-      Button btnPause = rootView.findViewById(id);
+      Button btnPause = ViewBindings.findChildViewById(rootView, id);
       if (btnPause == null) {
         break missingId;
       }
 
       id = R.id.imageView;
-      ImageView imageView = rootView.findViewById(id);
+      ImageView imageView = ViewBindings.findChildViewById(rootView, id);
       if (imageView == null) {
         break missingId;
       }
 
       id = R.id.viewFinder;
-      PreviewView viewFinder = rootView.findViewById(id);
+      PreviewView viewFinder = ViewBindings.findChildViewById(rootView, id);
       if (viewFinder == null) {
         break missingId;
       }

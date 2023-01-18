@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -104,67 +105,67 @@ public final class ContentPutawaypalleteBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnputawaypalleteDone;
-      Button btnputawaypalleteDone = rootView.findViewById(id);
+      Button btnputawaypalleteDone = ViewBindings.findChildViewById(rootView, id);
       if (btnputawaypalleteDone == null) {
         break missingId;
       }
 
       id = R.id.lblError;
-      TextView lblError = rootView.findViewById(id);
+      TextView lblError = ViewBindings.findChildViewById(rootView, id);
       if (lblError == null) {
         break missingId;
       }
 
       id = R.id.lblputawaypalleteBarcode;
-      TextView lblputawaypalleteBarcode = rootView.findViewById(id);
+      TextView lblputawaypalleteBarcode = ViewBindings.findChildViewById(rootView, id);
       if (lblputawaypalleteBarcode == null) {
         break missingId;
       }
 
       id = R.id.lblputawaypalleteListView;
-      TextView lblputawaypalleteListView = rootView.findViewById(id);
+      TextView lblputawaypalleteListView = ViewBindings.findChildViewById(rootView, id);
       if (lblputawaypalleteListView == null) {
         break missingId;
       }
 
       id = R.id.lblputawaypalleteRack;
-      TextView lblputawaypalleteRack = rootView.findViewById(id);
+      TextView lblputawaypalleteRack = ViewBindings.findChildViewById(rootView, id);
       if (lblputawaypalleteRack == null) {
         break missingId;
       }
 
       id = R.id.lblputawaypalleteShelfBarcode;
-      TextView lblputawaypalleteShelfBarcode = rootView.findViewById(id);
+      TextView lblputawaypalleteShelfBarcode = ViewBindings.findChildViewById(rootView, id);
       if (lblputawaypalleteShelfBarcode == null) {
         break missingId;
       }
 
       id = R.id.linearLayout;
-      LinearLayout linearLayout = rootView.findViewById(id);
+      LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout == null) {
         break missingId;
       }
 
       id = R.id.recyclerView;
-      RecyclerView recyclerView = rootView.findViewById(id);
+      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
       if (recyclerView == null) {
         break missingId;
       }
 
       id = R.id.textView;
-      TextView textView = rootView.findViewById(id);
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
         break missingId;
       }
 
       id = R.id.txtPutAwayPalleteBarcode;
-      EditText txtPutAwayPalleteBarcode = rootView.findViewById(id);
+      EditText txtPutAwayPalleteBarcode = ViewBindings.findChildViewById(rootView, id);
       if (txtPutAwayPalleteBarcode == null) {
         break missingId;
       }
 
       id = R.id.txtputawaypalleteShelfBarcode;
-      EditText txtputawaypalleteShelfBarcode = rootView.findViewById(id);
+      EditText txtputawaypalleteShelfBarcode = ViewBindings.findChildViewById(rootView, id);
       if (txtputawaypalleteShelfBarcode == null) {
         break missingId;
       }

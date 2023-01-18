@@ -164,7 +164,7 @@ class ItemSerialMissingActivity : AppCompatActivity() {
             txtItemCode.requestFocus()
             var letter=GetMissingLetter()
 
-            compositeDisposable.addAll(
+           /* compositeDisposable.addAll(
                 api.PostItemSerialMissing(UserID,letter, ItemStr)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
@@ -172,7 +172,7 @@ class ItemSerialMissingActivity : AppCompatActivity() {
                         {s->
                             var resp = ""
                             try {
-                                resp = s.string()
+                                //resp = s.string()
                             } catch (e: IOException) {
                                 e.printStackTrace()
                             }
@@ -200,7 +200,7 @@ class ItemSerialMissingActivity : AppCompatActivity() {
                             }
                         }
                     )
-            )
+            )*/
         } catch (e: Throwable) {
             lblError.setText(e?.message)
             throw(IOException("ItemPricing Activity - ValidateItemSerial", e))

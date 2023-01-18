@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -130,103 +131,103 @@ public final class ContentPickingBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnPickingDone;
-      Button btnPickingDone = rootView.findViewById(id);
+      Button btnPickingDone = ViewBindings.findChildViewById(rootView, id);
       if (btnPickingDone == null) {
         break missingId;
       }
 
       id = R.id.lblError;
-      TextView lblError = rootView.findViewById(id);
+      TextView lblError = ViewBindings.findChildViewById(rootView, id);
       if (lblError == null) {
         break missingId;
       }
 
       id = R.id.lblPickingBinBarcode;
-      TextView lblPickingBinBarcode = rootView.findViewById(id);
+      TextView lblPickingBinBarcode = ViewBindings.findChildViewById(rootView, id);
       if (lblPickingBinBarcode == null) {
         break missingId;
       }
 
       id = R.id.lblPickingItemSerialBarcode;
-      LinearLayout lblPickingItemSerialBarcode = rootView.findViewById(id);
+      LinearLayout lblPickingItemSerialBarcode = ViewBindings.findChildViewById(rootView, id);
       if (lblPickingItemSerialBarcode == null) {
         break missingId;
       }
 
       id = R.id.lblPickingListView;
-      TextView lblPickingListView = rootView.findViewById(id);
+      TextView lblPickingListView = ViewBindings.findChildViewById(rootView, id);
       if (lblPickingListView == null) {
         break missingId;
       }
 
       id = R.id.lblPickingRackBarcode;
-      TextView lblPickingRackBarcode = rootView.findViewById(id);
+      TextView lblPickingRackBarcode = ViewBindings.findChildViewById(rootView, id);
       if (lblPickingRackBarcode == null) {
         break missingId;
       }
 
       id = R.id.lblPickingRackRange;
-      TextView lblPickingRackRange = rootView.findViewById(id);
+      TextView lblPickingRackRange = ViewBindings.findChildViewById(rootView, id);
       if (lblPickingRackRange == null) {
         break missingId;
       }
 
       id = R.id.lblPickingReminaingBins;
-      TextView lblPickingReminaingBins = rootView.findViewById(id);
+      TextView lblPickingReminaingBins = ViewBindings.findChildViewById(rootView, id);
       if (lblPickingReminaingBins == null) {
         break missingId;
       }
 
       id = R.id.lblPickingReminaingItems;
-      TextView lblPickingReminaingItems = rootView.findViewById(id);
+      TextView lblPickingReminaingItems = ViewBindings.findChildViewById(rootView, id);
       if (lblPickingReminaingItems == null) {
         break missingId;
       }
 
       id = R.id.lblPickingWave;
-      TextView lblPickingWave = rootView.findViewById(id);
+      TextView lblPickingWave = ViewBindings.findChildViewById(rootView, id);
       if (lblPickingWave == null) {
         break missingId;
       }
 
       id = R.id.linearLayout;
-      LinearLayout linearLayout = rootView.findViewById(id);
+      LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout == null) {
         break missingId;
       }
 
       id = R.id.recyclerView;
-      RecyclerView recyclerView = rootView.findViewById(id);
+      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
       if (recyclerView == null) {
         break missingId;
       }
 
       id = R.id.textView;
-      TextView textView = rootView.findViewById(id);
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
         break missingId;
       }
 
       id = R.id.textView6;
-      TextView textView6 = rootView.findViewById(id);
+      TextView textView6 = ViewBindings.findChildViewById(rootView, id);
       if (textView6 == null) {
         break missingId;
       }
 
       id = R.id.txtPickingBinBarcode;
-      EditText txtPickingBinBarcode = rootView.findViewById(id);
+      EditText txtPickingBinBarcode = ViewBindings.findChildViewById(rootView, id);
       if (txtPickingBinBarcode == null) {
         break missingId;
       }
 
       id = R.id.txtPickingItemBarcode;
-      EditText txtPickingItemBarcode = rootView.findViewById(id);
+      EditText txtPickingItemBarcode = ViewBindings.findChildViewById(rootView, id);
       if (txtPickingItemBarcode == null) {
         break missingId;
       }
 
       id = R.id.txtPickingItemSerialBarcode;
-      EditText txtPickingItemSerialBarcode = rootView.findViewById(id);
+      EditText txtPickingItemSerialBarcode = ViewBindings.findChildViewById(rootView, id);
       if (txtPickingItemSerialBarcode == null) {
         break missingId;
       }

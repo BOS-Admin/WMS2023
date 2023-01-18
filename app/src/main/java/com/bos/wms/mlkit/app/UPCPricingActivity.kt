@@ -38,6 +38,8 @@ class UPCPricingActivity : AppCompatActivity() {
     private lateinit var ItemUPCs:ArrayList<String>
     private lateinit var adp:CustomListAdapter
     private lateinit var PricingLineCode:String
+    private var testingUPCAlwaysValid:Boolean =false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,7 +49,11 @@ class UPCPricingActivity : AppCompatActivity() {
         mStorage = Storage(applicationContext) //sp存储
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82")
         PricingLineCode = mStorage.getDataString("PricingLineCode", "PL001")
-        adp= CustomListAdapter(applicationContext,ItemSerials)
+        if(ItemSerials==null)
+            ItemSerials=  arrayListOf<String>()
+        var items= arrayListOf<String>()
+        items.addAll( ItemSerials.reversed())
+        adp = CustomListAdapter(this, items)
         recyclerView.setAdapter(adp)
         txtUPC.setShowSoftInputOnFocus(false);
         txtItemSerial.setShowSoftInputOnFocus(false);
@@ -75,7 +81,12 @@ class UPCPricingActivity : AppCompatActivity() {
                     return
                 }
 
-                if(!General.ValidateItemCode(UPCStr)){
+                if(ItemSerials!=null && ItemSerials.contains(txtItemSerial.text.toString().trim())) {
+                    Cancel();
+                    UpdatingText=false;
+                    return
+                }
+                if( !General.ValidateItemCode(UPCStr)){
                     txtUPC.setText("")
                     txtUPC.requestFocus()
                     UpdatingText=false;
@@ -83,7 +94,10 @@ class UPCPricingActivity : AppCompatActivity() {
                     return
                 }
                 var UserID: Int=General.getGeneral(applicationContext).UserID
-                ValidateScan(itemSerialStr,UPCStr)
+
+
+
+                 ValidateScan(itemSerialStr,UPCStr)
                 txtItemSerial.setShowSoftInputOnFocus(false);
                 txtUPC.setShowSoftInputOnFocus(false);
             }
@@ -101,6 +115,69 @@ class UPCPricingActivity : AppCompatActivity() {
         txtItemSerial.addTextChangedListener(TextChangeEvent);
         txtUPC.addTextChangedListener(TextChangeEvent);
     }
+
+    fun Cancel(){
+        lblError.text = "Item Scanned Twice !!"
+        txtUPC.isEnabled=false
+        txtItemSerial.isEnabled=false;
+        recyclerView.setLayoutManager(LinearLayoutManager(this))
+        if(ItemSerials==null)
+            ItemSerials=  arrayListOf<String>()
+        var items= arrayListOf<String>()
+        items.addAll( ItemSerials.reversed())
+        adp = CustomListAdapter(this, items)
+        recyclerView.setAdapter(adp)
+
+            btnUPCPricingDone.visibility= View.VISIBLE
+            btnUPCPricingDone.text="Start Over"
+            btnUPCPricingDone.setOnClickListener {
+                if(btnUPCPricingDone.text.equals("Start Over")) {
+                    txtItemSerial.setText("")
+                    txtUPC.setText("")
+                    txtItemSerial.requestFocus()
+                    ItemSerials.clear()
+                    adp = CustomListAdapter(this, ItemSerials)
+                    recyclerView.setAdapter(adp)
+                    lblError.text = ""
+                    btnUPCPricingDone.setText("Done")
+                    txtUPC.isEnabled = true
+                    txtItemSerial.isEnabled = true
+                    startActivity(getIntent());
+                    finish();
+                    overridePendingTransition(0, 0);
+                    RefreshLabels()
+                    txtUPC.setText("")
+                    txtUPC.requestFocus()
+                    adp.notifyDataSetChanged()
+                    //val stringResponse = s.string()
+                    lblError.setText("")
+                }
+
+            }
+
+        hideSoftKeyboard(this)
+    }
+
+    fun RefreshLabels(){
+        lblError.text = ""
+        recyclerView.setLayoutManager(LinearLayoutManager(this))
+        if(ItemSerials==null)
+            ItemSerials=  arrayListOf<String>()
+        var items= arrayListOf<String>()
+        items.addAll( ItemSerials.reversed())
+        adp = CustomListAdapter(this, items)
+        recyclerView.setAdapter(adp)
+
+        if(ItemSerials.size>0){
+            btnUPCPricingDone.visibility= View.VISIBLE
+            btnUPCPricingDone.setOnClickListener {
+                PostFoldingScanItem(ItemSerials.joinToString(),ItemUPCs.joinToString())
+            }
+        }
+        hideSoftKeyboard(this)
+    }
+
+
     lateinit var api: BasicApi
     var compositeDisposable= CompositeDisposable()
     var UpdatingText:Boolean=false
@@ -123,7 +200,7 @@ class UPCPricingActivity : AppCompatActivity() {
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
                         {s->
-                            if(s.isNullOrEmpty() || s.lowercase().startsWith("success")){
+                            if(testingUPCAlwaysValid || s.isNullOrEmpty() || s.lowercase().startsWith("success")){
                                 ItemSerials.add(ItemSerial)
                                 ItemUPCs.add(ItemUPC)
                                 General.playSuccess()
@@ -172,20 +249,7 @@ class UPCPricingActivity : AppCompatActivity() {
         finally {
         }
     }
-    fun RefreshLabels(){
-        lblError.text = ""
-        recyclerView.setLayoutManager(LinearLayoutManager(this))
-        adp = CustomListAdapter(this, ItemSerials)
-        recyclerView.setAdapter(adp)
 
-      if(ItemSerials.size>0){
-            btnUPCPricingDone.visibility= View.VISIBLE
-          btnUPCPricingDone.setOnClickListener {
-              PostFoldingScanItem(ItemSerials.joinToString(),ItemUPCs.joinToString())
-          }
-        }
-        hideSoftKeyboard(this)
-    }
     var ColorGreen = Color.parseColor("#52ac24")
     var ColorRed = Color.parseColor("#ef2112")
     var ColorWhite = Color.parseColor("#ffffff")
@@ -193,6 +257,7 @@ class UPCPricingActivity : AppCompatActivity() {
     fun PostFoldingScanItem(StrItemSerials:String,StrItemUPCs: String) {
 
         try {
+            btnUPCPricingDone.isEnabled = false
             // TODO: handle loggedInUser authentication
             var UserID: Int=General.getGeneral(applicationContext).UserID
             txtUPC.isEnabled=false
@@ -203,7 +268,7 @@ class UPCPricingActivity : AppCompatActivity() {
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
                         {s->
-                            var ErrorMsg = ""
+                             var ErrorMsg = ""
                                 try {
                                     ErrorMsg = s.string()
                                 } catch (e: IOException) {
@@ -231,6 +296,7 @@ class UPCPricingActivity : AppCompatActivity() {
                                 lblError.setText("")
                             } else {
                                 txtUPC.setText("")
+                                btnUPCPricingDone.isEnabled = true
                                 General.playError()
                                 txtUPC.requestFocus()
                                 lblError.setTextColor(R.color.design_default_color_error)
@@ -246,6 +312,7 @@ class UPCPricingActivity : AppCompatActivity() {
                                 lblError.setText(t?.message)
                                 txtUPC.isEnabled=true
                                 UpdatingText=false
+                                btnUPCPricingDone.isEnabled = true
                             }
                         }
                     )
@@ -253,6 +320,7 @@ class UPCPricingActivity : AppCompatActivity() {
         } catch (e: Throwable) {
             lblError.setText(e?.message)
             txtUPC.isEnabled=true
+            btnUPCPricingDone.isEnabled = true
             throw(IOException("UPC Pricing Activity - PostUPCPricing", e))
         }
         finally {

@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -55,7 +56,7 @@ public final class ActivityLocationcheckBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.toolbar;
-      Toolbar toolbar = rootView.findViewById(id);
+      Toolbar toolbar = ViewBindings.findChildViewById(rootView, id);
       if (toolbar == null) {
         break missingId;
       }

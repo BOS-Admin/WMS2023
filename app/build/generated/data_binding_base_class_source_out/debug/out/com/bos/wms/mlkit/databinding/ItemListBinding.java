@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -54,7 +55,7 @@ public final class ItemListBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.tv_label;
-      TextView tvLabel = rootView.findViewById(id);
+      TextView tvLabel = ViewBindings.findChildViewById(rootView, id);
       if (tvLabel == null) {
         break missingId;
       }

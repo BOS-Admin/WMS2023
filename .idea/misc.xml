@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DesignSurface">
-    <option name="filePathToZoomLevelMap">
-      <map>
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_fillpallete.xml" value="0.25" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_foldingscan.xml" value="0.25" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_itemPricing.xml" value="0.1490036231884058" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_item_pricing.xml" value="0.22" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_itemserial_missing.xml" value="0.1" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_serial_generator.xml" value="0.25" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_shipment_pallete_carton.xml" value="0.33" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_shipment_pallete_carton_count.xml" value="0.18" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_shipment_pallete_receiving.xml" value="0.25" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/activity_upc_pricing.xml" value="0.1" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_fillpallete.xml" value="0.1490036231884058" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_foldingscan.xml" value="0.4764705882352941" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_itemPricing.xml" value="0.25" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_item_pricing.xml" value="0.1" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_itemserial_missing.xml" value="0.2" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_serial_generator.xml" value="0.25" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/content_upc_pricing.xml" value="0.33" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/fragment_home.xml" value="0.18" />
-        <entry key="..\:/Users/HYassine/AndroidStudioProjects/WMS/app/src/main/res/layout/pop_window_main.xml" value="0.25" />
-      </map>
-    </option>
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

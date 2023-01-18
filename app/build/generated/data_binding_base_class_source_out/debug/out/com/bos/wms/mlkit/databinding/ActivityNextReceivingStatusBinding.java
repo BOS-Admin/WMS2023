@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -75,31 +76,31 @@ public final class ActivityNextReceivingStatusBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.lblPickingRackBarcode;
-      TextView lblPickingRackBarcode = rootView.findViewById(id);
+      TextView lblPickingRackBarcode = ViewBindings.findChildViewById(rootView, id);
       if (lblPickingRackBarcode == null) {
         break missingId;
       }
 
       id = R.id.linearLayout33;
-      LinearLayout linearLayout33 = rootView.findViewById(id);
+      LinearLayout linearLayout33 = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout33 == null) {
         break missingId;
       }
 
       id = R.id.textView3;
-      TextView textView3 = rootView.findViewById(id);
+      TextView textView3 = ViewBindings.findChildViewById(rootView, id);
       if (textView3 == null) {
         break missingId;
       }
 
       id = R.id.txtNextReceivingItemBarcode;
-      EditText txtNextReceivingItemBarcode = rootView.findViewById(id);
+      EditText txtNextReceivingItemBarcode = ViewBindings.findChildViewById(rootView, id);
       if (txtNextReceivingItemBarcode == null) {
         break missingId;
       }
 
       id = R.id.txtNextReceivingStatus;
-      TextView txtNextReceivingStatus = rootView.findViewById(id);
+      TextView txtNextReceivingStatus = ViewBindings.findChildViewById(rootView, id);
       if (txtNextReceivingStatus == null) {
         break missingId;
       }

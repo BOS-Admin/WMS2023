@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -55,7 +56,7 @@ public final class FragmentNotificationsBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.text_notifications;
-      TextView textNotifications = rootView.findViewById(id);
+      TextView textNotifications = ViewBindings.findChildViewById(rootView, id);
       if (textNotifications == null) {
         break missingId;
       }

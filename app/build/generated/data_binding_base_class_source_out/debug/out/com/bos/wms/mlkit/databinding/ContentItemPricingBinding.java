@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -94,55 +95,55 @@ public final class ContentItemPricingBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnSubmit;
-      Button btnSubmit = rootView.findViewById(id);
+      Button btnSubmit = ViewBindings.findChildViewById(rootView, id);
       if (btnSubmit == null) {
         break missingId;
       }
 
       id = R.id.lblError;
-      TextView lblError = rootView.findViewById(id);
+      TextView lblError = ViewBindings.findChildViewById(rootView, id);
       if (lblError == null) {
         break missingId;
       }
 
       id = R.id.lblfillpalleteBarcode;
-      TextView lblfillpalleteBarcode = rootView.findViewById(id);
+      TextView lblfillpalleteBarcode = ViewBindings.findChildViewById(rootView, id);
       if (lblfillpalleteBarcode == null) {
         break missingId;
       }
 
       id = R.id.lblfillpalleteListView;
-      TextView lblfillpalleteListView = rootView.findViewById(id);
+      TextView lblfillpalleteListView = ViewBindings.findChildViewById(rootView, id);
       if (lblfillpalleteListView == null) {
         break missingId;
       }
 
       id = R.id.lblfillpalleteRemainingShelfs;
-      TextView lblfillpalleteRemainingShelfs = rootView.findViewById(id);
+      TextView lblfillpalleteRemainingShelfs = ViewBindings.findChildViewById(rootView, id);
       if (lblfillpalleteRemainingShelfs == null) {
         break missingId;
       }
 
       id = R.id.linearLayout;
-      LinearLayout linearLayout = rootView.findViewById(id);
+      LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout == null) {
         break missingId;
       }
 
       id = R.id.recyclerView;
-      RecyclerView recyclerView = rootView.findViewById(id);
+      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
       if (recyclerView == null) {
         break missingId;
       }
 
       id = R.id.textView;
-      TextView textView = rootView.findViewById(id);
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
         break missingId;
       }
 
       id = R.id.txtItemCode;
-      EditText txtItemCode = rootView.findViewById(id);
+      EditText txtItemCode = ViewBindings.findChildViewById(rootView, id);
       if (txtItemCode == null) {
         break missingId;
       }

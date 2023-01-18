@@ -134,6 +134,7 @@ class LoginActivity : AppCompatActivity() {
             val location:String=locationModel!!.locations[ddlLogin.selectedItemPosition].location
             val locationID:Int = locationModel!!.locations[ddlLogin.selectedItemPosition].id
 
+            General.getGeneral(applicationContext).LocationString=location;
             General.getGeneral(applicationContext).FloorID=locationID
             General.getGeneral(applicationContext).saveGeneral(applicationContext)
 
@@ -238,78 +239,17 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    /*
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
 
-        binding = ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        val username = binding.username
-        val password = binding.password
-        val login = binding.login
-        val loading = binding.loading
-
-        loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
-            .get(LoginViewModel::class.java)
-
-        loginViewModel.loginFormState.observe(this@LoginActivity, Observer {
-            val loginState = it ?: return@Observer
-
-            // disable login button unless both username / password is valid
-            login.isEnabled = loginState.isDataValid
-
-            if (loginState.usernameError != null) {
-                username.error = getString(loginState.usernameError)
-            }
-            if (loginState.passwordError != null) {
-                password.error = getString(loginState.passwordError)
-            }
-        })
-
-
-
-        username.afterTextChanged {
-            loginViewModel.loginDataChanged(
-                username.text.toString(),
-                password.text.toString()
-            )
-        }
-
-        password.apply {
-            afterTextChanged {
-                loginViewModel.loginDataChanged(
-                    username.text.toString(),
-                    password.text.toString()
-                )
-            }
-
-            setOnEditorActionListener { _, actionId, _ ->
-                when (actionId) {
-                    EditorInfo.IME_ACTION_DONE ->
-                        login(
-                            username.text.toString(),
-                            password.text.toString()
-                        )
-                }
-                false
-            }
-
-            login.setOnClickListener {
-                loading.visibility = View.VISIBLE
-                login(username.text.toString(), password.text.toString())
-            }
-        }
-    }
-*/
     private fun updateUiWithUser(model: UserLoginResultModel) {
 
         General.getGeneral(applicationContext).UserID=model.Id
+        General.getGeneral(applicationContext).UserName=model.FullName
         General.getGeneral(applicationContext).saveGeneral(applicationContext)
 
         GetSystemControl(model.Id!!,0)
         val welcome = getString(R.string.welcome)
         val displayName = model.FullName
+
         // TODO : initiate successful logged in experience
         Toast.makeText(
             applicationContext,

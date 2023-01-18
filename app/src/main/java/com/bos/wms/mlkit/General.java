@@ -21,7 +21,9 @@ public class General {
     private static volatile General instance = null;
     public Integer UserID=0;
     public Integer FloorID=0;
-    public String AppVersion="1.2.6 27/08/2022";
+    public String LocationString="";
+    public String UserName="";
+    public String AppVersion="2.0.2 14/01/2023";
     int interval = 3600;    // when there's no activity
 
     /**
@@ -100,18 +102,28 @@ public class General {
     public static Boolean ValidateAppointmentNoFormat(String str){
         return !str.isEmpty() && ToInteger(str,0)>0 && ToInteger(str,1000000000)<1000000000;
     }
+/*
 
     public static Boolean ValidateBolNoFormat(String str){
         return !str.isEmpty() && ToInteger(str,0)>0 && ToInteger(str,1000000000)<1000000000;
+    }
+*/
+
+    public static Boolean ValidateBolNoFormat(String str){
+        return !str.isEmpty() && ToLong(str,0)>0;
     }
 
     public static Boolean ValidateAppointmentNo(String str){
         return !str.isEmpty() && ToInteger(str,0)>0 && ToInteger(str,1000000000)<1000000000;
     }
+    public static Boolean ValidateBolNo(String str){
+        return !str.isEmpty() && ToLong(str,0)>0;
+    }
+    /*
 
     public static Boolean ValidateBolNo(String str){
         return !str.isEmpty() && ToInteger(str,0)>0 && ToInteger(str,1000000000)<1000000000;
-    }
+    }*/
     public  static  Boolean IsInteger(String str){
         try
         {
@@ -120,6 +132,18 @@ public class General {
         }
         catch (NumberFormatException e) {
             return  false;
+        }
+    }
+    public  static  long ToLong(String str,long Default){
+        try
+        {
+            return Long.parseLong(str);
+        }
+        catch (NumberFormatException e) {
+            return  Default;
+        }
+        catch (Exception ex) {
+            return  Default;
         }
     }
     public  static  Integer ToInteger(String str,int Default){
@@ -155,6 +179,14 @@ public class General {
     }
     public static Boolean ValidateItemCode(String str){
         return !str.isEmpty() && str.length()>8;
+    }
+
+    public static Boolean ValidatePG(String str){
+        return !str.isEmpty() && str.length()==10;
+    }
+
+    public static Boolean ValidateSeason(String str){
+        return !str.isEmpty() && str.length()>4;
     }
     public static Boolean ValidateItemSerial(String str){
         return !str.isEmpty() && str.length()>1;
@@ -211,6 +243,8 @@ public class General {
             UserID = sp.getInt("UserID", UserID);
             interval = sp.getInt("interval", interval);
             FloorID = sp.getInt("FloorID", FloorID);
+            LocationString = sp.getString("LocationString", "");
+            UserName = sp.getString("UserName", "");
 
 
         } catch (Exception e) {
@@ -241,6 +275,8 @@ public class General {
             sp.putInt("UserID", UserID);
             sp.putInt("interval", interval);
             sp.putInt("FloorID",FloorID);
+            sp.putString("LocationString",LocationString);
+            sp.putString("UserName",UserName);
             sp.commit();
         } catch (Exception e) {
             Log.e("General", "exception reading preferences: " + e, e);
@@ -272,6 +308,9 @@ public class General {
         state.putInt("UserID", UserID);
         state.putInt("interval", interval);
         state.putInt("FloorID",FloorID);
+        state.putString("LocationString",LocationString);
+        state.putString("UserName",UserName);
+
     }
 
     /**
@@ -283,5 +322,8 @@ public class General {
         UserID = state.getInt("UserID");
         interval = state.getInt("interval");
         FloorID=state.getInt("FloorID");
+        LocationString=state.getString("LocationString");
+        UserName=state.getString("UserName");
+
     }
 }

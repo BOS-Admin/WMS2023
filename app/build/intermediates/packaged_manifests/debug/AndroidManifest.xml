@@ -40,6 +40,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <provider
@@ -53,6 +54,27 @@
         </provider>
 
         <activity android:name="com.bos.wms.mlkit.app.NextReceivingStatusActivity" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.PackingDCActivity"
+            android:label="@string/title_activity_packing_dc"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.ScanContainerActivity"
+            android:label="@string/title_activity_scan_container"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.PrinterSelectionActivity"
+            android:label="@string/title_activity_printer_selection"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.PackingReasonActivity"
+            android:label="@string/title_activity_packing_reason"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.PackingActivity"
+            android:label="@string/title_activity_packing_dc"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="com.bos.wms.mlkit.app.PickingActivity"
             android:label="@string/title_activity_picking"
@@ -94,7 +116,17 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
+            android:name="com.bos.wms.mlkit.app.PGPricingActivity"
+            android:label="PG Pricing"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
             android:name="com.bos.wms.mlkit.app.ItemSerialMissingActivity"
+            android:label="Missing Item"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.ItemSerialUPCMissingActivity"
             android:label="Missing Item"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />

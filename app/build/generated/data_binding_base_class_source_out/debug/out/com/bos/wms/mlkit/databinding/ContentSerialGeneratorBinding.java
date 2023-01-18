@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -103,67 +104,67 @@ public final class ContentSerialGeneratorBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnFoldingScanDone;
-      Button btnFoldingScanDone = rootView.findViewById(id);
+      Button btnFoldingScanDone = ViewBindings.findChildViewById(rootView, id);
       if (btnFoldingScanDone == null) {
         break missingId;
       }
 
       id = R.id.btnSubmit;
-      Button btnSubmit = rootView.findViewById(id);
+      Button btnSubmit = ViewBindings.findChildViewById(rootView, id);
       if (btnSubmit == null) {
         break missingId;
       }
 
       id = R.id.lblError;
-      TextView lblError = rootView.findViewById(id);
+      TextView lblError = ViewBindings.findChildViewById(rootView, id);
       if (lblError == null) {
         break missingId;
       }
 
       id = R.id.lblFoldingScanItem;
-      TextView lblFoldingScanItem = rootView.findViewById(id);
+      TextView lblFoldingScanItem = ViewBindings.findChildViewById(rootView, id);
       if (lblFoldingScanItem == null) {
         break missingId;
       }
 
       id = R.id.lblFoldingScanStation;
-      TextView lblFoldingScanStation = rootView.findViewById(id);
+      TextView lblFoldingScanStation = ViewBindings.findChildViewById(rootView, id);
       if (lblFoldingScanStation == null) {
         break missingId;
       }
 
       id = R.id.lblputawaypalleteListView;
-      TextView lblputawaypalleteListView = rootView.findViewById(id);
+      TextView lblputawaypalleteListView = ViewBindings.findChildViewById(rootView, id);
       if (lblputawaypalleteListView == null) {
         break missingId;
       }
 
       id = R.id.linearLayout;
-      LinearLayout linearLayout = rootView.findViewById(id);
+      LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout == null) {
         break missingId;
       }
 
       id = R.id.nbFoldingScanItem;
-      EditText nbFoldingScanItem = rootView.findViewById(id);
+      EditText nbFoldingScanItem = ViewBindings.findChildViewById(rootView, id);
       if (nbFoldingScanItem == null) {
         break missingId;
       }
 
       id = R.id.recyclerView;
-      RecyclerView recyclerView = rootView.findViewById(id);
+      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
       if (recyclerView == null) {
         break missingId;
       }
 
       id = R.id.textView;
-      TextView textView = rootView.findViewById(id);
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
         break missingId;
       }
 
       id = R.id.txtFoldingScanStation;
-      EditText txtFoldingScanStation = rootView.findViewById(id);
+      EditText txtFoldingScanStation = ViewBindings.findChildViewById(rootView, id);
       if (txtFoldingScanStation == null) {
         break missingId;
       }

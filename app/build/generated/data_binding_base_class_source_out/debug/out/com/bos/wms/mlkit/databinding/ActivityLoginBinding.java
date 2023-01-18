@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -90,13 +91,13 @@ public final class ActivityLoginBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnLogin;
-      Button btnLogin = rootView.findViewById(id);
+      Button btnLogin = ViewBindings.findChildViewById(rootView, id);
       if (btnLogin == null) {
         break missingId;
       }
 
       id = R.id.btnSettings;
-      ImageView btnSettings = rootView.findViewById(id);
+      ImageView btnSettings = ViewBindings.findChildViewById(rootView, id);
       if (btnSettings == null) {
         break missingId;
       }
@@ -104,31 +105,31 @@ public final class ActivityLoginBinding implements ViewBinding {
       ConstraintLayout container = (ConstraintLayout) rootView;
 
       id = R.id.ddlFloor;
-      Spinner ddlFloor = rootView.findViewById(id);
+      Spinner ddlFloor = ViewBindings.findChildViewById(rootView, id);
       if (ddlFloor == null) {
         break missingId;
       }
 
       id = R.id.loading;
-      ProgressBar loading = rootView.findViewById(id);
+      ProgressBar loading = ViewBindings.findChildViewById(rootView, id);
       if (loading == null) {
         break missingId;
       }
 
       id = R.id.txtAppVersion;
-      TextView txtAppVersion = rootView.findViewById(id);
+      TextView txtAppVersion = ViewBindings.findChildViewById(rootView, id);
       if (txtAppVersion == null) {
         break missingId;
       }
 
       id = R.id.txtpassword;
-      EditText txtpassword = rootView.findViewById(id);
+      EditText txtpassword = ViewBindings.findChildViewById(rootView, id);
       if (txtpassword == null) {
         break missingId;
       }
 
       id = R.id.txtusername;
-      EditText txtusername = rootView.findViewById(id);
+      EditText txtusername = ViewBindings.findChildViewById(rootView, id);
       if (txtusername == null) {
         break missingId;
       }

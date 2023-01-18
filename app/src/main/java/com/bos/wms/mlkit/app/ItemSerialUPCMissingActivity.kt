@@ -25,13 +25,7 @@ import com.bos.wms.mlkit.storage.Storage
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.content_item_pricing.*
-import kotlinx.android.synthetic.main.content_item_pricing.btnSubmit
-import kotlinx.android.synthetic.main.content_item_pricing.lblError
-import kotlinx.android.synthetic.main.content_item_pricing.recyclerView
-import kotlinx.android.synthetic.main.content_item_pricing.txtItemCode
-import kotlinx.android.synthetic.main.content_itemserial_missing.*
-import kotlinx.android.synthetic.main.content_serial_generator.*
+import kotlinx.android.synthetic.main.content_itemserial_upc_missing.*
 import java.io.IOException
 
 
@@ -40,6 +34,7 @@ class ItemSerialUPCMissingActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var TextChangeEvent:TextWatcher
+    private lateinit var TextUPCChangeEvent:TextWatcher
     private lateinit var MissingLetter:String
     private lateinit var Items:ArrayList<String>
     private lateinit var ValidatedItems:ArrayList<String>
@@ -47,27 +42,10 @@ class ItemSerialUPCMissingActivity : AppCompatActivity() {
 
     private var  NbOfItems:Int = 0
     private lateinit var adp:CustomListAdapter
-    private fun GetMissingLetter():String{
-        if(btnA.isChecked)
-            MissingLetter="A"
-        else if(btnB.isChecked)
-            MissingLetter="B"
-        else if(btnC.isChecked)
-            MissingLetter="C"
-        else if(btnD.isChecked)
-            MissingLetter="D"
-        else if(btnE.isChecked)
-            MissingLetter="E"
-        else if(btnF.isChecked)
-            MissingLetter="F"
-        else
-            MissingLetter=""
-
-        return  MissingLetter;
-    }
+    var UpdatingText:Boolean=false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_itemserial_missing)
+        setContentView(R.layout.activity_itemserial_upc_missing)
         Items= arrayListOf()
         ValidatedItems= arrayListOf()
 
@@ -76,33 +54,13 @@ class ItemSerialUPCMissingActivity : AppCompatActivity() {
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82")
         MissingLetter = mStorage.getDataString("MissingLetter", "PL001")
 
-        btnMissingLetter1.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { group, checkedId ->
-            if(checkedId<0)
-                return@OnCheckedChangeListener
-            val checkedRadioButton = group.findViewById<View>(checkedId) as RadioButton
-            val isChecked = checkedRadioButton.isChecked
-            if (isChecked) {
-                btnMissingLetter2.clearCheck()
-            }
-            txtItemCode.requestFocus()
-        })
-        btnMissingLetter2.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { group, checkedId ->
-            if(checkedId<0)
-                return@OnCheckedChangeListener
-            val checkedRadioButton = group.findViewById<View>(checkedId) as RadioButton
-            val isChecked = checkedRadioButton.isChecked
-            if (isChecked) {
-                btnMissingLetter1.clearCheck()
-            }
-            txtItemCode.requestFocus()
-        })
         txtItemCode.setShowSoftInputOnFocus(false);
 
         txtItemCode.requestFocus()
         txtItemCode.setShowSoftInputOnFocus(false);
 
         TextChangeEvent=object : TextWatcher {
-            var UpdatingText:Boolean=false
+
             @SuppressLint("ResourceAsColor")
             override fun afterTextChanged(s: Editable) {
                 if(UpdatingText)
@@ -112,19 +70,17 @@ class ItemSerialUPCMissingActivity : AppCompatActivity() {
 
                 lblError.setText("")
 
-                if(GetMissingLetter().isNullOrEmpty()){
-                    lblError.setText("Select Missing Letter!!")
-                    txtItemCode.setText("")
-                    txtItemCode.requestFocus()
-                }
-                else if(General.ValidateItemSerialCode(ItemStr)){
+                if(General.ValidateItemSerialCode(ItemStr)){
 
-                    PostItemSerial(ItemStr)
+                    //PostItemSerial(ItemStr)
                     adp= CustomListAdapter(applicationContext,Items)
                     recyclerView.setAdapter(adp)
-                    txtItemCode.requestFocus()
+                    InitItemSerial(ItemStr)
                 }
-                UpdatingText=false;
+                else{
+                    txtItemCode.setText("")
+                    UpdatingText=false;
+                }
                 RefreshLabels()
                 txtItemCode.setShowSoftInputOnFocus(false);
             }
@@ -143,8 +99,59 @@ class ItemSerialUPCMissingActivity : AppCompatActivity() {
 
 
         }
+
+        TextUPCChangeEvent=object : TextWatcher {
+
+            @SuppressLint("ResourceAsColor")
+            override fun afterTextChanged(s: Editable) {
+                if(UpdatingText)
+                    return;
+                UpdatingText=true;
+                var ItemUPC:String=txtUPC.text.toString()
+
+                lblError.setText("")
+
+                if(!General.ValidateItemCode(ItemUPC)){
+                    txtUPC.setText("")
+
+                }
+                UpdatingText=false;
+                RefreshLabels()
+                txtItemCode.setShowSoftInputOnFocus(false);
+            }
+
+            /*  override fun afterTextChanged(p0: Editable?) {
+                  TODO("Not yet implemented")
+              }*/
+            override fun beforeTextChanged(s: CharSequence, start: Int,
+                                           count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int,
+                                       before: Int, count: Int) {
+
+            }
+
+
+        }
+
+
+        btn17.setOnClickListener { PostItemSerial(0.17f) }
+        btn20.setOnClickListener { PostItemSerial(0.2f) }
+        btn25.setOnClickListener { PostItemSerial(0.25f) }
+        btn30.setOnClickListener { PostItemSerial(0.30f) }
+        btn35.setOnClickListener { PostItemSerial(0.35f) }
+        btn40.setOnClickListener { PostItemSerial(0.4f) }
+        btn50.setOnClickListener { PostItemSerial(0.5f) }
+        btn60.setOnClickListener { PostItemSerial(0.6f) }
+        btn65.setOnClickListener { PostItemSerial(0.65f) }
+        btn70.setOnClickListener { PostItemSerial(0.7f) }
+        btn75.setOnClickListener { PostItemSerial(0.75f) }
+        btn80.setOnClickListener { PostItemSerial(0.8f) }
         hideSoftKeyboard(this)
         txtItemCode.addTextChangedListener(TextChangeEvent);
+        txtUPC.addTextChangedListener(TextUPCChangeEvent);
+
     }
     lateinit var api: BasicApi
     var compositeDisposable= CompositeDisposable()
@@ -155,41 +162,113 @@ class ItemSerialUPCMissingActivity : AppCompatActivity() {
     private fun Beep(){
         ToneGenerator(AudioManager.STREAM_MUSIC, ToneGenerator.MAX_VOLUME).startTone(ToneGenerator.TONE_SUP_ERROR, 300)
     }
-    fun PostItemSerial(ItemStr:String) {
+
+    fun InitItemSerial(ItemStr:String) {
         try {
             // TODO: handle loggedInUser authentication
             var UserID: Int=General.getGeneral(applicationContext).UserID
             api= APIClient.getInstance(IPAddress ,false).create(BasicApi::class.java)
-            txtItemCode.setText("")
-            txtItemCode.requestFocus()
-            var letter=GetMissingLetter()
 
             compositeDisposable.addAll(
-                api.PostItemSerialMissing(UserID,letter, ItemStr)
+                api.InitItemSerialMissing(UserID, ItemStr)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
                         {s->
                             var resp = ""
                             try {
-                                resp = s.string()
+                                resp = s
                             } catch (e: IOException) {
                                 e.printStackTrace()
                             }
 
                             if(resp.isNullOrEmpty()){
-
-                            Items.add(0,ItemStr+ ":"+letter)
-                            ValidatedItems.add(0,ItemStr)
-                            PostMissingItems.add(0, ItemStr)
-                            NbOfItems=NbOfItems+1
-                            lblError.setText("Item Added")
+                                lblError.setText("Valid Item!!")
+                                txtUPC.requestFocus()
+                            }
+                            else if (resp.lowercase().startsWith("success")){
+                                lblError.setText(resp)
+                                txtUPC.requestFocus()
                             }
                             else{
+                                txtItemCode.setText("")
+                                txtItemCode.requestFocus()
+                            lblError.setText(resp)
+                        }
+                            RefreshLabels();
+                            UpdatingText=false;
+                            //val stringResponse = s.string()
+                        },
+                        {t:Throwable?->
+                            run {
+                                lblError.setText(t?.message)
+                                RefreshLabels();
+                                UpdatingText=false;
+                            }
+                        }
+                    )
+            )
+        } catch (e: Throwable) {
+            lblError.setText(e?.message)
+            throw(IOException("ItemPricing Activity - ValidateItemSerial", e))
+            UpdatingText=false;
+        }
+        finally {
+        }
+    }
+    fun PostItemSerial(Perc:Float) {
+        try {
+            var ItemStr:String="";
+            var UPCStr:String="";
+            try {
+                ItemStr=txtItemCode.text.toString()
+            }catch (ex:Exception){
+                lblError.setText("Invalid ItemSerial!!")
+                txtUPC.setText("")
+                txtItemCode.requestFocus()
+                UpdatingText=false
+                return
+            }
+            try {
+                UPCStr=txtUPC.text.toString()
+                if(!General.ValidateItemCode(UPCStr))
+                    UPCStr=""
+            }catch (ex:Exception){}
+            // TODO: handle loggedInUser authentication
+            var UserID: Int=General.getGeneral(applicationContext).UserID
+            api= APIClient.getInstance(IPAddress ,false).create(BasicApi::class.java)
+            txtItemCode.setText("")
+            txtUPC.setText("")
+            txtItemCode.requestFocus()
+
+
+            compositeDisposable.addAll(
+                api.PostItemSerialMissing(UserID,UPCStr, ItemStr,Perc)
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(
+                        {s->
+                            var resp = ""
+                            try {
+                                resp = s
+                            } catch (e: IOException) {
+                                e.printStackTrace()
+                            }
+
+                            if(resp.isNullOrEmpty()|| resp.equals("Success")){
+                                Items.add(0,ItemStr+ ":"+UPCStr+Perc.toString())
+                                ValidatedItems.add(0,ItemStr)
+                                PostMissingItems.add(0, ItemStr)
+                                NbOfItems=NbOfItems+1
+                                lblError.setText("Item Added")
+                                General.playSuccess()
+                            }
+                            else{
+                                General.playError()
                                 lblError.setText(resp)
                             }
+
                             RefreshLabels();
-                            btnSubmit.requestFocus()
                             txtItemCode.requestFocus()
                             //val stringResponse = s.string()
                         },
@@ -211,24 +290,14 @@ class ItemSerialUPCMissingActivity : AppCompatActivity() {
     fun RefreshLabels() {
 
         lblItemsCnt.setText("Nb Items:"+Items.size)
+        var ItemStr:String=txtItemCode.text.toString()
+        if(ItemStr.isNullOrEmpty())
+            txtItemCode.requestFocus()
+        else
+            txtUPC.requestFocus()
         recyclerView.setLayoutManager(LinearLayoutManager(this))
         adp = CustomListAdapter(this, Items)
         recyclerView.setAdapter(adp)
-        var UserID: Int = General.getGeneral(applicationContext).UserID
-
-        txtItemCode.requestFocus()
-        btnSubmit.visibility = View.VISIBLE
-        btnSubmit.setOnClickListener {
-            try {
-               finish()
-            } catch (ex: Exception) {
-                lblError.setText(ex.message)
-
-            }
-            hideSoftKeyboard(this)
-        }
-        btnSubmit.requestFocus()
-        txtItemCode.requestFocus()
     }
   //  @SuppressLint("ResourceAsColor")
    /* fun PostItemPricing(UserID:Int,MissingLetter:String,ItemsStr:String) {

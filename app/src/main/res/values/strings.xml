@@ -19,6 +19,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_picking">Picking</string>
+    <string name="title_activity_packing_dc">Packing DC</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -30,4 +31,8 @@
     <string name="title_activity_put_away">PutAwayActivity</string>
     <string name="shipment_pallete_receiving">Shipment Pallete Receiving</string>
     <string name="shipment_carton_receiving">Shipment Carton Receiving</string>
+    <string name="title_activity_packing">Packing</string>
+    <string name="title_activity_printer_selection">Printer Selection</string>
+    <string name="title_activity_packing_reason">Packing Reason</string>
+    <string name="title_activity_scan_container">Scan Container</string>
 </resources>

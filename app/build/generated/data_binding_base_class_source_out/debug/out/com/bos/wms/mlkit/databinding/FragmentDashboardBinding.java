@@ -4,11 +4,13 @@ package com.bos.wms.mlkit.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -19,12 +21,20 @@ public final class FragmentDashboardBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView textDashboard;
+  public final Button btnDestination;
+
+  @NonNull
+  public final EditText textBranch;
+
+  @NonNull
+  public final EditText textUser;
 
   private FragmentDashboardBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView textDashboard) {
+      @NonNull Button btnDestination, @NonNull EditText textBranch, @NonNull EditText textUser) {
     this.rootView = rootView;
-    this.textDashboard = textDashboard;
+    this.btnDestination = btnDestination;
+    this.textBranch = textBranch;
+    this.textUser = textUser;
   }
 
   @Override
@@ -54,13 +64,26 @@ public final class FragmentDashboardBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.text_dashboard;
-      TextView textDashboard = rootView.findViewById(id);
-      if (textDashboard == null) {
+      id = R.id.btnDestination;
+      Button btnDestination = ViewBindings.findChildViewById(rootView, id);
+      if (btnDestination == null) {
         break missingId;
       }
 
-      return new FragmentDashboardBinding((ConstraintLayout) rootView, textDashboard);
+      id = R.id.textBranch;
+      EditText textBranch = ViewBindings.findChildViewById(rootView, id);
+      if (textBranch == null) {
+        break missingId;
+      }
+
+      id = R.id.textUser;
+      EditText textUser = ViewBindings.findChildViewById(rootView, id);
+      if (textUser == null) {
+        break missingId;
+      }
+
+      return new FragmentDashboardBinding((ConstraintLayout) rootView, btnDestination, textBranch,
+          textUser);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

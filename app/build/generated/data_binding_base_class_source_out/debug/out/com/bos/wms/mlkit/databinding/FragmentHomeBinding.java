@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -35,6 +36,9 @@ public final class FragmentHomeBinding implements ViewBinding {
 
   @NonNull
   public final Button btnMenuNextReceivingStatus;
+
+  @NonNull
+  public final Button btnMenuPGPricing;
 
   @NonNull
   public final Button btnMenuPicking;
@@ -69,8 +73,8 @@ public final class FragmentHomeBinding implements ViewBinding {
   private FragmentHomeBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnFoldingScan,
       @NonNull Button btnLocationCheck, @NonNull Button btnMenuFillPallete,
       @NonNull Button btnMenuItemPricing, @NonNull Button btnMenuNextReceivingStatus,
-      @NonNull Button btnMenuPicking, @NonNull Button btnMenuPutAwayPallete,
-      @NonNull Button btnMenuShipmentCartonReceiving,
+      @NonNull Button btnMenuPGPricing, @NonNull Button btnMenuPicking,
+      @NonNull Button btnMenuPutAwayPallete, @NonNull Button btnMenuShipmentCartonReceiving,
       @NonNull Button btnMenuShipmentPalleteReceiving,
       @NonNull Button btnMenuShipmentReceivingPalleteCount, @NonNull Button btnSerialMissing,
       @NonNull Button btnUPCPricing, @NonNull Space space, @NonNull TableLayout tblMainMenu,
@@ -81,6 +85,7 @@ public final class FragmentHomeBinding implements ViewBinding {
     this.btnMenuFillPallete = btnMenuFillPallete;
     this.btnMenuItemPricing = btnMenuItemPricing;
     this.btnMenuNextReceivingStatus = btnMenuNextReceivingStatus;
+    this.btnMenuPGPricing = btnMenuPGPricing;
     this.btnMenuPicking = btnMenuPicking;
     this.btnMenuPutAwayPallete = btnMenuPutAwayPallete;
     this.btnMenuShipmentCartonReceiving = btnMenuShipmentCartonReceiving;
@@ -121,100 +126,106 @@ public final class FragmentHomeBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnFoldingScan;
-      Button btnFoldingScan = rootView.findViewById(id);
+      Button btnFoldingScan = ViewBindings.findChildViewById(rootView, id);
       if (btnFoldingScan == null) {
         break missingId;
       }
 
       id = R.id.btnLocationCheck;
-      Button btnLocationCheck = rootView.findViewById(id);
+      Button btnLocationCheck = ViewBindings.findChildViewById(rootView, id);
       if (btnLocationCheck == null) {
         break missingId;
       }
 
       id = R.id.btnMenuFillPallete;
-      Button btnMenuFillPallete = rootView.findViewById(id);
+      Button btnMenuFillPallete = ViewBindings.findChildViewById(rootView, id);
       if (btnMenuFillPallete == null) {
         break missingId;
       }
 
       id = R.id.btnMenuItemPricing;
-      Button btnMenuItemPricing = rootView.findViewById(id);
+      Button btnMenuItemPricing = ViewBindings.findChildViewById(rootView, id);
       if (btnMenuItemPricing == null) {
         break missingId;
       }
 
       id = R.id.btnMenuNextReceivingStatus;
-      Button btnMenuNextReceivingStatus = rootView.findViewById(id);
+      Button btnMenuNextReceivingStatus = ViewBindings.findChildViewById(rootView, id);
       if (btnMenuNextReceivingStatus == null) {
         break missingId;
       }
 
+      id = R.id.btnMenuPGPricing;
+      Button btnMenuPGPricing = ViewBindings.findChildViewById(rootView, id);
+      if (btnMenuPGPricing == null) {
+        break missingId;
+      }
+
       id = R.id.btnMenuPicking;
-      Button btnMenuPicking = rootView.findViewById(id);
+      Button btnMenuPicking = ViewBindings.findChildViewById(rootView, id);
       if (btnMenuPicking == null) {
         break missingId;
       }
 
       id = R.id.btnMenuPutAwayPallete;
-      Button btnMenuPutAwayPallete = rootView.findViewById(id);
+      Button btnMenuPutAwayPallete = ViewBindings.findChildViewById(rootView, id);
       if (btnMenuPutAwayPallete == null) {
         break missingId;
       }
 
       id = R.id.btnMenuShipmentCartonReceiving;
-      Button btnMenuShipmentCartonReceiving = rootView.findViewById(id);
+      Button btnMenuShipmentCartonReceiving = ViewBindings.findChildViewById(rootView, id);
       if (btnMenuShipmentCartonReceiving == null) {
         break missingId;
       }
 
       id = R.id.btnMenuShipmentPalleteReceiving;
-      Button btnMenuShipmentPalleteReceiving = rootView.findViewById(id);
+      Button btnMenuShipmentPalleteReceiving = ViewBindings.findChildViewById(rootView, id);
       if (btnMenuShipmentPalleteReceiving == null) {
         break missingId;
       }
 
       id = R.id.btnMenuShipmentReceivingPalleteCount;
-      Button btnMenuShipmentReceivingPalleteCount = rootView.findViewById(id);
+      Button btnMenuShipmentReceivingPalleteCount = ViewBindings.findChildViewById(rootView, id);
       if (btnMenuShipmentReceivingPalleteCount == null) {
         break missingId;
       }
 
       id = R.id.btnSerialMissing;
-      Button btnSerialMissing = rootView.findViewById(id);
+      Button btnSerialMissing = ViewBindings.findChildViewById(rootView, id);
       if (btnSerialMissing == null) {
         break missingId;
       }
 
       id = R.id.btnUPCPricing;
-      Button btnUPCPricing = rootView.findViewById(id);
+      Button btnUPCPricing = ViewBindings.findChildViewById(rootView, id);
       if (btnUPCPricing == null) {
         break missingId;
       }
 
       id = R.id.space;
-      Space space = rootView.findViewById(id);
+      Space space = ViewBindings.findChildViewById(rootView, id);
       if (space == null) {
         break missingId;
       }
 
       id = R.id.tblMainMenu;
-      TableLayout tblMainMenu = rootView.findViewById(id);
+      TableLayout tblMainMenu = ViewBindings.findChildViewById(rootView, id);
       if (tblMainMenu == null) {
         break missingId;
       }
 
       id = R.id.txtStatus;
-      EditText txtStatus = rootView.findViewById(id);
+      EditText txtStatus = ViewBindings.findChildViewById(rootView, id);
       if (txtStatus == null) {
         break missingId;
       }
 
       return new FragmentHomeBinding((ConstraintLayout) rootView, btnFoldingScan, btnLocationCheck,
-          btnMenuFillPallete, btnMenuItemPricing, btnMenuNextReceivingStatus, btnMenuPicking,
-          btnMenuPutAwayPallete, btnMenuShipmentCartonReceiving, btnMenuShipmentPalleteReceiving,
-          btnMenuShipmentReceivingPalleteCount, btnSerialMissing, btnUPCPricing, space, tblMainMenu,
-          txtStatus);
+          btnMenuFillPallete, btnMenuItemPricing, btnMenuNextReceivingStatus, btnMenuPGPricing,
+          btnMenuPicking, btnMenuPutAwayPallete, btnMenuShipmentCartonReceiving,
+          btnMenuShipmentPalleteReceiving, btnMenuShipmentReceivingPalleteCount, btnSerialMissing,
+          btnUPCPricing, space, tblMainMenu, txtStatus);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

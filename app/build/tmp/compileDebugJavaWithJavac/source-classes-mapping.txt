@@ -11,9 +11,8 @@ com/bos/wms/mlkit/databinding/ContentPutawaypalleteBinding.java
  com.bos.wms.mlkit.databinding.ContentPutawaypalleteBinding
 com/bos/wms/mlkit/databinding/ActivityMainMenuBinding.java
  com.bos.wms.mlkit.databinding.ActivityMainMenuBinding
-com/bos/wms/mlkit/General.java
- com.bos.wms.mlkit.General
- com.bos.wms.mlkit.General$1
+com/bos/wms/mlkit/databinding/ContentItemPricingBinding.java
+ com.bos.wms.mlkit.databinding.ContentItemPricingBinding
 com/bos/wms/mlkit/databinding/ActivityFoldingscanBinding.java
  com.bos.wms.mlkit.databinding.ActivityFoldingscanBinding
 com/bos/wms/mlkit/databinding/FragmentDashboardBinding.java
@@ -59,6 +58,8 @@ com/bos/wms/mlkit/databinding/ActivityShipmentPalleteCartonCountBinding.java
 com/bos/wms/mlkit/GraphicOverlay.java
  com.bos.wms.mlkit.GraphicOverlay
  com.bos.wms.mlkit.GraphicOverlay$Graphic
+com/bos/wms/mlkit/databinding/ActivityPgPricingBinding.java
+ com.bos.wms.mlkit.databinding.ActivityPgPricingBinding
 com/bos/wms/mlkit/databinding/ContentItemserialMissingBinding.java
  com.bos.wms.mlkit.databinding.ContentItemserialMissingBinding
 com/bos/wms/mlkit/databinding/ActivityFillpalleteBinding.java
@@ -73,6 +74,8 @@ com/bos/wms/mlkit/databinding/ActivityMainBinding.java
  com.bos.wms.mlkit.databinding.ActivityMainBinding
 com/bos/wms/mlkit/databinding/ActivityPutawaypalleteBinding.java
  com.bos.wms.mlkit.databinding.ActivityPutawaypalleteBinding
+com/bos/wms/mlkit/databinding/ContentPgPricingBinding.java
+ com.bos.wms.mlkit.databinding.ContentPgPricingBinding
 com/bos/wms/mlkit/databinding/FragmentNotificationsBinding.java
  com.bos.wms.mlkit.databinding.FragmentNotificationsBinding
 com/bos/wms/mlkit/databinding/ActivityShipmentPalleteCartonBinding.java
@@ -81,5 +84,6 @@ com/bos/wms/mlkit/databinding/ActivityItemserialMissingBinding.java
  com.bos.wms.mlkit.databinding.ActivityItemserialMissingBinding
 com/bos/wms/mlkit/databinding/ActivityPickingBinding.java
  com.bos.wms.mlkit.databinding.ActivityPickingBinding
-com/bos/wms/mlkit/databinding/ContentItemPricingBinding.java
- com.bos.wms.mlkit.databinding.ContentItemPricingBinding
+com/bos/wms/mlkit/General.java
+ com.bos.wms.mlkit.General
+ com.bos.wms.mlkit.General$1

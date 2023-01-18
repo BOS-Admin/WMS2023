@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -114,79 +115,79 @@ public final class ContentLocationcheckBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnlocationcheckDone;
-      Button btnlocationcheckDone = rootView.findViewById(id);
+      Button btnlocationcheckDone = ViewBindings.findChildViewById(rootView, id);
       if (btnlocationcheckDone == null) {
         break missingId;
       }
 
       id = R.id.lblError;
-      TextView lblError = rootView.findViewById(id);
+      TextView lblError = ViewBindings.findChildViewById(rootView, id);
       if (lblError == null) {
         break missingId;
       }
 
       id = R.id.lblLocationCheckRemainingBins;
-      TextView lblLocationCheckRemainingBins = rootView.findViewById(id);
+      TextView lblLocationCheckRemainingBins = ViewBindings.findChildViewById(rootView, id);
       if (lblLocationCheckRemainingBins == null) {
         break missingId;
       }
 
       id = R.id.lblLocationCheckRemainingShelfs;
-      TextView lblLocationCheckRemainingShelfs = rootView.findViewById(id);
+      TextView lblLocationCheckRemainingShelfs = ViewBindings.findChildViewById(rootView, id);
       if (lblLocationCheckRemainingShelfs == null) {
         break missingId;
       }
 
       id = R.id.lbllocationcheckBinBarcode;
-      TextView lbllocationcheckBinBarcode = rootView.findViewById(id);
+      TextView lbllocationcheckBinBarcode = ViewBindings.findChildViewById(rootView, id);
       if (lbllocationcheckBinBarcode == null) {
         break missingId;
       }
 
       id = R.id.lbllocationcheckListView;
-      TextView lbllocationcheckListView = rootView.findViewById(id);
+      TextView lbllocationcheckListView = ViewBindings.findChildViewById(rootView, id);
       if (lbllocationcheckListView == null) {
         break missingId;
       }
 
       id = R.id.lbllocationcheckRack;
-      TextView lbllocationcheckRack = rootView.findViewById(id);
+      TextView lbllocationcheckRack = ViewBindings.findChildViewById(rootView, id);
       if (lbllocationcheckRack == null) {
         break missingId;
       }
 
       id = R.id.lbllocationcheckShelfBarcode;
-      TextView lbllocationcheckShelfBarcode = rootView.findViewById(id);
+      TextView lbllocationcheckShelfBarcode = ViewBindings.findChildViewById(rootView, id);
       if (lbllocationcheckShelfBarcode == null) {
         break missingId;
       }
 
       id = R.id.linearLayout;
-      LinearLayout linearLayout = rootView.findViewById(id);
+      LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout == null) {
         break missingId;
       }
 
       id = R.id.recyclerView;
-      RecyclerView recyclerView = rootView.findViewById(id);
+      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
       if (recyclerView == null) {
         break missingId;
       }
 
       id = R.id.textView;
-      TextView textView = rootView.findViewById(id);
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
         break missingId;
       }
 
       id = R.id.txtShelfBarcode;
-      EditText txtShelfBarcode = rootView.findViewById(id);
+      EditText txtShelfBarcode = ViewBindings.findChildViewById(rootView, id);
       if (txtShelfBarcode == null) {
         break missingId;
       }
 
       id = R.id.txtlocationcheckBinBarcode;
-      EditText txtlocationcheckBinBarcode = rootView.findViewById(id);
+      EditText txtlocationcheckBinBarcode = ViewBindings.findChildViewById(rootView, id);
       if (txtlocationcheckBinBarcode == null) {
         break missingId;
       }

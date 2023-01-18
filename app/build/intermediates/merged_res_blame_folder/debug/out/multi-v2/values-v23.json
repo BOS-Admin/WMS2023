@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\HYassine\\AndroidStudioProjects\\WMS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "com.bos.wms.mlkit.app-mergeDebugResources-52:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\f39c7bf9cf489159b4204ea6faaeeaca\\appcompat-1.5.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\a.haydar\\.gradle\\caches\\transforms-3\\6d166b95bb8540df22d8c1df04765546\\transformed\\appcompat-1.5.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\aef483342d7292f43dae4d6283a6bcf1\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\a.haydar\\.gradle\\caches\\transforms-3\\59eb8d3a3db1dec343c794b27ee6ec18\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -34,7 +34,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\HYassine\\.gradle\\caches\\transforms-2\\files-2.1\\070e0a55203a8a169c92e30f291d4d4e\\material-1.6.1\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\a.haydar\\.gradle\\caches\\transforms-3\\df9b48493701655e3dc9295004ec28ad\\transformed\\material-1.6.1\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,5,8,13,17,20,23,26,31,34,38",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

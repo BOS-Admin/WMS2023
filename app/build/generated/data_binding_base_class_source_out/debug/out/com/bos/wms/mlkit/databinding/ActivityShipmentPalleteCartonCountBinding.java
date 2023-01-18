@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -100,61 +101,61 @@ public final class ActivityShipmentPalleteCartonCountBinding implements ViewBind
     int id;
     missingId: {
       id = R.id.btnDone;
-      Button btnDone = rootView.findViewById(id);
+      Button btnDone = ViewBindings.findChildViewById(rootView, id);
       if (btnDone == null) {
         break missingId;
       }
 
       id = R.id.headerTxt;
-      TextView headerTxt = rootView.findViewById(id);
+      TextView headerTxt = ViewBindings.findChildViewById(rootView, id);
       if (headerTxt == null) {
         break missingId;
       }
 
       id = R.id.lblShipCartonReciBolNb;
-      TextView lblShipCartonReciBolNb = rootView.findViewById(id);
+      TextView lblShipCartonReciBolNb = ViewBindings.findChildViewById(rootView, id);
       if (lblShipCartonReciBolNb == null) {
         break missingId;
       }
 
       id = R.id.lblShipCartonReciNbofCartons;
-      TextView lblShipCartonReciNbofCartons = rootView.findViewById(id);
+      TextView lblShipCartonReciNbofCartons = ViewBindings.findChildViewById(rootView, id);
       if (lblShipCartonReciNbofCartons == null) {
         break missingId;
       }
 
       id = R.id.lblShipCartonReciPalleteNb;
-      TextView lblShipCartonReciPalleteNb = rootView.findViewById(id);
+      TextView lblShipCartonReciPalleteNb = ViewBindings.findChildViewById(rootView, id);
       if (lblShipCartonReciPalleteNb == null) {
         break missingId;
       }
 
       id = R.id.lblStatus;
-      TextView lblStatus = rootView.findViewById(id);
+      TextView lblStatus = ViewBindings.findChildViewById(rootView, id);
       if (lblStatus == null) {
         break missingId;
       }
 
       id = R.id.mImageView;
-      ImageView mImageView = rootView.findViewById(id);
+      ImageView mImageView = ViewBindings.findChildViewById(rootView, id);
       if (mImageView == null) {
         break missingId;
       }
 
       id = R.id.txtShipCartonReciBolNb;
-      EditText txtShipCartonReciBolNb = rootView.findViewById(id);
+      EditText txtShipCartonReciBolNb = ViewBindings.findChildViewById(rootView, id);
       if (txtShipCartonReciBolNb == null) {
         break missingId;
       }
 
       id = R.id.txtShipCartonReciNbofCartons;
-      EditText txtShipCartonReciNbofCartons = rootView.findViewById(id);
+      EditText txtShipCartonReciNbofCartons = ViewBindings.findChildViewById(rootView, id);
       if (txtShipCartonReciNbofCartons == null) {
         break missingId;
       }
 
       id = R.id.txtShipCartonReciPalleteNb;
-      EditText txtShipCartonReciPalleteNb = rootView.findViewById(id);
+      EditText txtShipCartonReciPalleteNb = ViewBindings.findChildViewById(rootView, id);
       if (txtShipCartonReciPalleteNb == null) {
         break missingId;
       }

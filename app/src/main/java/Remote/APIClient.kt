@@ -9,7 +9,9 @@ import retrofit2.converter.scalars.ScalarsConverterFactory
 
 object APIClient {
     private var instance: Retrofit?=null
-    fun getInstance(IPAddress:String,ForceInit:Boolean):Retrofit {
+    private var isFake: Boolean =false
+    fun getInstance(IPAddress:String,ForceInit:Boolean,fake:Boolean):Retrofit {
+        isFake=fake;
         if (instance == null || ForceInit) {
             //instance = Retrofit.Builder().baseUrl("http://10.188.30.110/BOS_WMS_API/")
             val gson = GsonBuilder()
@@ -18,15 +20,63 @@ object APIClient {
             var IP:String=IPAddress;
             if(!IP.endsWith("/"))
                 IP=IP+"/";
-            instance = Retrofit.Builder().baseUrl("http://" + IP)
+            if(isFake){
+                instance = Retrofit.Builder().baseUrl("https://bosapp.free.beeceptor.com/")
 
-                //instance = Retrofit.Builder().baseUrl("http://192.168.10.82:5000/")
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .addConverterFactory(ScalarsConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .build()
+                    //instance = Retrofit.Builder().baseUrl("http://192.168.10.82:5000/")
+                    .addConverterFactory(GsonConverterFactory.create(gson))
+                    .addConverterFactory(ScalarsConverterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                    .build()
+            }
+            else{
+                instance = Retrofit.Builder().baseUrl("http://" + IP)
+
+                    //instance = Retrofit.Builder().baseUrl("http://192.168.10.82:5000/")
+                    .addConverterFactory(GsonConverterFactory.create(gson))
+                    .addConverterFactory(ScalarsConverterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                    .build()
+            }
+
 
         }
         return instance!!
     }
+
+    fun getInstance(IPAddress:String,ForceInit:Boolean):Retrofit {
+        isFake=false;
+        if (instance == null || ForceInit) {
+            //instance = Retrofit.Builder().baseUrl("http://10.188.30.110/BOS_WMS_API/")
+            val gson = GsonBuilder()
+                .setLenient()
+                .create()
+            var IP:String=IPAddress;
+            if(!IP.endsWith("/"))
+                IP=IP+"/";
+            if(isFake){
+                instance = Retrofit.Builder().baseUrl("https://bosapp.free.beeceptor.com/")
+
+                    //instance = Retrofit.Builder().baseUrl("http://192.168.10.82:5000/")
+                    .addConverterFactory(GsonConverterFactory.create(gson))
+                    .addConverterFactory(ScalarsConverterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                    .build()
+            }
+            else{
+                instance = Retrofit.Builder().baseUrl("http://" + IP)
+
+                    //instance = Retrofit.Builder().baseUrl("http://192.168.10.82:5000/")
+                    .addConverterFactory(GsonConverterFactory.create(gson))
+                    .addConverterFactory(ScalarsConverterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                    .build()
+            }
+
+
+        }
+        return instance!!
+    }
+
+
 }

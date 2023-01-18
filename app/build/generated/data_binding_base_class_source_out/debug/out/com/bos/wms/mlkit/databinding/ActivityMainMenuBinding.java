@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
@@ -61,7 +62,7 @@ public final class ActivityMainMenuBinding implements ViewBinding {
       ConstraintLayout container = (ConstraintLayout) rootView;
 
       id = R.id.nav_view;
-      BottomNavigationView navView = rootView.findViewById(id);
+      BottomNavigationView navView = ViewBindings.findChildViewById(rootView, id);
       if (navView == null) {
         break missingId;
       }

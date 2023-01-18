@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -78,37 +79,37 @@ public final class PopWindowMainBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnSave;
-      Button btnSave = rootView.findViewById(id);
+      Button btnSave = ViewBindings.findChildViewById(rootView, id);
       if (btnSave == null) {
         break missingId;
       }
 
       id = R.id.pop_main_filter;
-      LinearLayout popMainFilter = rootView.findViewById(id);
+      LinearLayout popMainFilter = ViewBindings.findChildViewById(rootView, id);
       if (popMainFilter == null) {
         break missingId;
       }
 
       id = R.id.txtIPAddress;
-      EditText txtIPAddress = rootView.findViewById(id);
+      EditText txtIPAddress = ViewBindings.findChildViewById(rootView, id);
       if (txtIPAddress == null) {
         break missingId;
       }
 
       id = R.id.txtPricingLineCode;
-      EditText txtPricingLineCode = rootView.findViewById(id);
+      EditText txtPricingLineCode = ViewBindings.findChildViewById(rootView, id);
       if (txtPricingLineCode == null) {
         break missingId;
       }
 
       id = R.id.txtRFIDMac;
-      EditText txtRFIDMac = rootView.findViewById(id);
+      EditText txtRFIDMac = ViewBindings.findChildViewById(rootView, id);
       if (txtRFIDMac == null) {
         break missingId;
       }
 
       id = R.id.txtScaleMac;
-      EditText txtScaleMac = rootView.findViewById(id);
+      EditText txtScaleMac = ViewBindings.findChildViewById(rootView, id);
       if (txtScaleMac == null) {
         break missingId;
       }

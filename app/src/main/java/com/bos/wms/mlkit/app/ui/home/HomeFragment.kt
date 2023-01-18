@@ -84,6 +84,9 @@ class HomeFragment : Fragment() {
         root.btnMenuItemPricing.setOnClickListener {
             ProceedItemPricingActivity()
         }
+        root.btnMenuPGPricing.setOnClickListener {
+            ProceedPGPricingActivity()
+        }
         root.btnSerialMissing.setOnClickListener {
             ProceedMissingItem()
         }
@@ -216,9 +219,14 @@ class HomeFragment : Fragment() {
         startActivity(intent)
         txtStatus.setText("")
     }
+    fun ProceedPGPricingActivity() {
+        val intent = Intent (getActivity(), PGPricingActivity::class.java)
+        startActivity(intent)
+        txtStatus.setText("")
+    }
 
     fun ProceedMissingItem() {
-        val intent = Intent (getActivity(), ItemSerialMissingActivity::class.java)
+        val intent = Intent (getActivity(), ItemSerialUPCMissingActivity::class.java)
         startActivity(intent)
         txtStatus.setText("")
     }
