@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
+import Model.LocationModel;
 import Model.SystemControlModel;
 import Model.SystemControlModelItem;
 import Model.UserLoginResultModel;
@@ -21,11 +22,152 @@ public class General {
     private static volatile General instance = null;
     public Integer UserID=0;
     public Integer FloorID=0;
-    public String LocationString="";
+
     public String UserName="";
-    public String AppVersion="2.0.2 14/01/2023";
+    public String AppVersion="2.0.9 18/02/2023";
     int interval = 3600;    // when there's no activity
 
+    public String ipAddress="";
+
+    public String UserCode="";
+
+    public String boxNb;
+    public String destination;
+    public String packReason="";
+    public Integer packReasonId=-1;
+    public String printerStationCode="";
+    public String packType="";
+    public Integer stockType=-1;
+
+    public Integer operationType=-1;
+    public String BoxStartsWith="";
+    public String BoxNbDigits= "" ;
+
+    public String LocationString="";
+
+    public Integer locationTypeID=0;
+
+    public Integer mainLocationID =0;
+    public String mainLocation ;
+    public Integer subLocationID =0;
+    public String subLocation ;
+
+    public String userFullName="" ;
+
+    public Integer transactionType=-1;
+
+    public String transferNavNo="" ;
+
+
+
+
+    /**
+     * Re-read all preferences (you never need to call this explicitly)
+     */
+    private void readGeneral(Context ctx) {
+        try {
+            SharedPreferences sp =
+                    PreferenceManager.getDefaultSharedPreferences(ctx);
+
+            UserID = sp.getInt("UserID", UserID);
+            interval = sp.getInt("interval", interval);
+            FloorID = sp.getInt("FloorID", FloorID);
+            ipAddress = sp.getString("ipAddress", ipAddress);
+
+            UserName = sp.getString("UserName", "");
+            UserCode = sp.getString("UserCode", "");
+            userFullName = UserCode+", "+UserName;
+
+            locationTypeID = sp.getInt("LocationTypeID", locationTypeID);
+            mainLocationID = sp.getInt("MainLocationId", mainLocationID);
+            mainLocation = sp.getString("MainLocation", mainLocation);
+            subLocationID = sp.getInt("SubLocationId", subLocationID);
+            subLocation = sp.getString("SubLocation", subLocation);
+            LocationString =  mainLocation+", "+subLocation;
+
+
+            boxNb = sp.getString("BoxNb", "");
+            destination = sp.getString("Destination", "");
+
+            packReason = sp.getString("PackReason", "");
+            packReasonId = sp.getInt("packReasonId", packReasonId);
+            printerStationCode = sp.getString("PrinterStationCode", "");
+
+            packType = sp.getString("PackType", "");
+            transferNavNo = sp.getString("TransferNavNo", "");
+            BoxStartsWith=sp.getString("BoxStartsWith","");
+            BoxNbDigits=sp.getString("BoxNbDigits","");
+            stockType=sp.getInt("StockType",-1);
+            operationType=sp.getInt("OperationType",-1);
+            transactionType=sp.getInt("TransactionType",-1);
+
+
+
+
+        } catch (Exception e) {
+            Log.e("General", "exception reading preferences: " + e, e);
+            // TODO: report it
+        }
+    }
+
+    public String getSetting(Context ctx,String SettingsCode) {
+        try {
+            SharedPreferences sp =PreferenceManager.getDefaultSharedPreferences(ctx);
+            return sp.getString(SettingsCode, "");
+        } catch (Exception e) {
+            Log.e("General", "exception reading preferences: " + e, e);
+            // TODO: report it
+        }
+        return "";
+    }
+
+    /**
+     * Save preferences; you can call this from onPause()
+     */
+    public void saveGeneral(Context ctx) {
+        try {
+            SharedPreferences.Editor sp =
+                    PreferenceManager.getDefaultSharedPreferences(ctx).edit();
+
+            sp.putInt("UserID", UserID);
+            sp.putInt("interval", interval);
+            sp.putInt("FloorID",FloorID);
+
+
+            sp.putString("UserName",UserName);
+            sp.putInt("LocationTypeID",locationTypeID);
+            sp.putInt("MainLocationId",mainLocationID);
+            sp.putInt("SubLocationId",subLocationID);
+            sp.putString("MainLocation",mainLocation);
+            sp.putString("SubLocation",subLocation);
+            sp.putString("LocationString",mainLocation+" ,"+subLocation);
+
+            sp.putString("UserCode",UserCode);
+            sp.putString("BoxNb",boxNb);
+            sp.putString("Destination",destination);
+
+            sp.putString("PackReason",packReason);
+            sp.putInt("packReasonId",packReasonId);
+            sp.putString("PrinterStationCode",printerStationCode);
+
+            sp.putString("PackType",packType);
+            sp.putString("TransferNavNo",transferNavNo);
+            sp.putString("ipAddress",ipAddress);
+            sp.putInt("StockType",stockType);
+            sp.putInt("OperationType",operationType);
+            sp.putInt("TransactionType",transactionType);
+            sp.commit();
+        } catch (Exception e) {
+            Log.e("General", "exception reading preferences: " + e, e);
+            // TODO: report it
+        }
+    }
+
+
+
+    public String getFullLocation(){
+        return mainLocation +", "+subLocation;
+    }
     /**
      * Return the single instance of this class, creating it
      * if necessary. This method is thread-safe.
@@ -89,7 +231,12 @@ public class General {
         return !str.isEmpty() && str.length()>1;
     }
     public static Boolean ValidateBinCode(String str){
-        return !str.isEmpty() && str.length()>1;
+        return !str.isEmpty();
+    }
+
+
+    public static Boolean ValidateDestination(String str){
+        return !str.isEmpty() && str.length() >2;
     }
     public static Boolean ValidatePalleteCode(String str){
         return !str.isEmpty() && str.length()>1;
@@ -195,6 +342,10 @@ public class General {
         return !str.isEmpty() && str.length()>4;
     }
 
+    public static Boolean ValidateUserCode(String str){
+        return str!=null && !str.isEmpty() && str.length()>=4;
+    }
+
 
     public static void showSoftKeyboard(Activity activity) {
 
@@ -235,54 +386,7 @@ public class General {
     /**
      * Re-read all preferences (you never need to call this explicitly)
      */
-    private void readGeneral(Context ctx) {
-        try {
-            SharedPreferences sp =
-                    PreferenceManager.getDefaultSharedPreferences(ctx);
 
-            UserID = sp.getInt("UserID", UserID);
-            interval = sp.getInt("interval", interval);
-            FloorID = sp.getInt("FloorID", FloorID);
-            LocationString = sp.getString("LocationString", "");
-            UserName = sp.getString("UserName", "");
-
-
-        } catch (Exception e) {
-            Log.e("General", "exception reading preferences: " + e, e);
-            // TODO: report it
-        }
-    }
-
-    public String getSetting(Context ctx,String SettingsCode) {
-        try {
-            SharedPreferences sp =PreferenceManager.getDefaultSharedPreferences(ctx);
-            return sp.getString(SettingsCode, "");
-        } catch (Exception e) {
-            Log.e("General", "exception reading preferences: " + e, e);
-            // TODO: report it
-        }
-        return "";
-    }
-
-    /**
-     * Save preferences; you can call this from onPause()
-     */
-    public void saveGeneral(Context ctx) {
-        try {
-            SharedPreferences.Editor sp =
-                    PreferenceManager.getDefaultSharedPreferences(ctx).edit();
-
-            sp.putInt("UserID", UserID);
-            sp.putInt("interval", interval);
-            sp.putInt("FloorID",FloorID);
-            sp.putString("LocationString",LocationString);
-            sp.putString("UserName",UserName);
-            sp.commit();
-        } catch (Exception e) {
-            Log.e("General", "exception reading preferences: " + e, e);
-            // TODO: report it
-        }
-    }
     public void saveGeneral(Context ctx, SystemControlModel Model) {
         try {
             SharedPreferences.Editor sp =

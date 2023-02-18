@@ -1,8 +1,11 @@
 package Remote
 
 import Model.*
-import Model.BosApp.PrinterModelItem
-import Model.BosApp.PrintersModel
+import Model.BosApp.*
+import Model.BosApp.Checking.CheckingDCModel
+import Model.BosApp.Packing.FillBinDCModel
+import Model.BosApp.StockTake.FillRackStockTakeDCModel
+import Model.BosApp.Transfer.TransferDCModel
 import io.reactivex.Observable
 import okhttp3.ResponseBody
 import retrofit2.Call
@@ -10,9 +13,211 @@ import retrofit2.http.*
 
 interface BasicApi {
 
+    @POST("api/Transfer/EndProcess")
+    fun EndTransferReceivingProcess(
+        @Query("NavNo") NavNo: String,
+        @Query("LocationCode") LocationCode: String,
+    ): Observable<ResponseBody>
+    @POST("api/StockTake/FillRackStockTakeDC")
+    fun FillRackStockTake(@Body model: FillRackStockTakeDCModel): Observable<ResponseBody>
+    @POST("api/FillBinBarcodes/ValidateCheckingDC")
+    fun CheckingDC(@Body model: CheckingDCModel): Observable<ResponseBody>
+    @POST("api/FillBinBarcodes/FillBinDC")
+    fun FillBinDC(@Body model: FillBinDCModel): Observable<ResponseBody>
+    @POST("api/StockTake/FillBinStockTake1")
+    fun FillBinStockTake1(@Body model: FillStockTakeDCModel): Observable<ResponseBody>
+    @POST("api/Transfer/TransferDC")
+    fun TransferDC(@Body model: TransferDCModel
+    ): Observable<ResponseBody>
 
-    @GET("PrintSections")
-    fun GetPrintSections(): Observable<PrintersModel>
+
+
+    @GET("api/Transfer/ValidateTransferItem")
+    fun ValidateTransferItem(
+        @Query("ItemCode") ItemCode: String,
+        @Query("Location") Location:String,
+        @Query("UserID") UserID: Int
+    ): Observable<ResponseBody>
+
+    @GET("api/Transfer/CheckTransferBinCount")
+    fun CheckTransferBinCount(
+        @Query("UserID") UserID: Int,
+        @Query("Count") ItemSerials: Int,
+        @Query("BinBarcode") BinBarcode: String,
+        @Query("LocationId") LocationId:Int,
+        @Query("TransferNavNo") transferNavNo:String,
+    ): Observable<ResponseBody>
+
+    @GET("/api/Transfer/GetBinInfo")
+    fun GetBinTransferInfo(
+        @Query("binBarcode") binBarcode: String,
+    ): Observable<BinModelItem2>
+
+    @GET("api/Transfer/GetTransferBins")
+    fun GetTransferBins(@Query("transferNavNo") transferNavNo:String): Observable<List<BinModelItem1>>
+
+
+    @GET("api/Transfer/ValidateBinForTransfer")
+    fun ValidateBinForTransfer(
+        @Query("BinBarcode") ItemCode: String,
+        @Query("FromLocationBarcode") FromLocation: String,
+        @Query("ToLocationBarcode") ToLocation: String,
+    ): Observable<ResponseBody>
+
+    @GET("api/Transfer/TransferShipment")
+    fun TransferShipment(
+        @Query("UserID") UserID: Int,
+        @Query("FromLocationCode") FromLocationCode: String,
+        @Query("ToLocationCode") ToLocationCode: String,
+        @Query("BinBarcodes") BinBarcodes: String
+    ): Observable<ResponseBody>
+
+
+    @GET("/api/Transfer/ValidateReceiving")
+    fun ValidateReceiving(
+        @Query("locationCode") binBarcode: String,
+        @Query("navNo") navNo: String
+    ): Observable<ResponseBody>
+
+
+
+    @GET("api/FillBin/GetPrintSections")
+    fun GetPrintSections(@Query("locationId") locationId:String): Observable<List<PrinterModelItem>>
+
+    @GET("api/FillBin/GetPackReasons")
+    fun GetPackReasons(): Observable<List<PackReasonModelItem>>
+
+    @GET("/api/FillBin/ValidateBin")
+    fun ValidateBin(
+        @Query("binBarcode") binBarcode: String,
+        @Query("packingTypeId") packingTypeId: Int,
+        @Query("userId") userId: Int,
+        @Query("locationId") locationId: Int
+    ): Observable<BinModelItem>
+
+    @GET("/api/StockTake/ValidateBin")
+    fun ValidateBinForStockTake(
+        @Query("binBarcode") binBarcode: String,
+        @Query("transactionType") transactionType: Int,
+        @Query("userId") userId: Int,
+        @Query("locationId") locationId: Int
+    ): Observable<BinModelItem>
+
+
+    @GET("api/FillBinBarcodes/ValidateBinForCount")
+    fun ValidateBinForCount(
+        @Query("binBarcode") binBarcode: String,
+        @Query("packingTypeId") packingTypeId: Int,
+        @Query("userId") userId: Int,
+        @Query("locationId") locationId: Int
+    ): Observable<ResponseBody>
+
+
+
+
+    @GET("api/FillBinBarcodes/FillBinCount")
+    fun FillBinCount(
+        @Query("UserID") UserID: Int,
+        @Query("Count") ItemSerials: Int,
+        @Query("BinBarcode") BinBarcode: String,
+        @Query("LocationId") LocationId:Int
+    ): Observable<ResponseBody>
+
+
+    @GET("api/FillBinBarcodes/ValidateFillBinItem")
+    fun ValidateFillBinItem(
+        @Query("ItemCode") ItemCode: String,
+        @Query("Location") Location: String,
+        @Query("UserId") UserId: Int=-1,
+        @Query("PackReasonId") PackReasonId: Int): Observable<ResponseBody>
+
+
+    @GET("api/StockTake/ValidateItem")
+    fun ValidateStockTakeItem(@Query("ItemCode") ItemCode: String): Observable<ResponseBody>
+
+
+
+    @GET("api/StockTake/ValidateReleasedBin")
+    fun ValidateStockTakeItemForRack(@Query("binBarcode") ItemCode: String): Observable<ResponseBody>
+
+    @GET("api/StockTake/ValidateRack")
+    fun ValidateRack(
+        @Query("transactionType") transactionType: Int,
+        @Query("rackCode") ItemCode: String): Observable<RackModelItem>
+
+    @GET("api/FillBinBarcodes/ValidateBinForChecking")
+    fun ValidateBinForChecking(
+        @Query("BinBarcode") BinBarcode: String,
+        @Query("UserID") UserID: Int,
+        @Query("LocationId") LocationId: Int
+    ): Observable<ResponseBody>
+
+    @GET("api/FillBinBarcodes/ValidateFillBinCheckItem")
+    fun ValidateFillBinCheckingItem(
+        @Query("ItemCode") ItemCode: String,
+        @Query("Location") Location: String,
+        @Query("UserId") UserId: Int): Observable<ResponseBody>
+
+    @GET("api/FillBinBarcodes/ValidateChecking")
+    fun ValidateChecking(
+        @Query("UserID") UserID: Int,
+        @Query("ItemSerials") ItemSerials: String,
+        @Query("BinBarcode") BinBarcode: String,
+        @Query("PackingReasonType") PackingReasonType :Int,
+        @Query("LocationID") LocationId:Int
+    ): Observable<ResponseBody>
+
+    @POST("api/StockTake/FillBinStockTake")
+    fun FillBinStockTake(
+        @Query("UserID") UserID: Int,
+        @Query("ItemSerials") ItemSerials: String,
+        @Query("BinBarcode") BinBarcode: String,
+        @Query("PackingReasonType") PackingReasonType :Int,
+        @Query("LocationId") LocationId:Int
+    ): Observable<ResponseBody>
+
+
+
+
+
+
+    @POST("api/FillBinBarcodes")
+    fun PostPackingItems(
+        @Query("UserID") UserID: Int,
+        @Query("ItemSerials") ItemSerials: String,
+        @Query("BinBarcode") BinBarcode: String,
+        @Query("PackingReasonType") PackingReasonType :Int,
+        @Query("Destination") Destination:String,
+        @Query("LocationId") LocationId:Int
+    ): Observable<ResponseBody>
+
+
+    @POST("api/StockTake/FillRackStockTake")
+    fun FillRackStockTake(
+        @Query("UserID") UserID: Int,
+        @Query("Items") ItemSerials: String,
+        @Query("RackBarcode") BinBarcode: String,
+        @Query("LocationId") LocationId:Int
+    ): Observable<ResponseBody>
+
+
+    @GET("api/StockTake/ValidateRackCount")
+    fun ValidateRackCountStockTake(
+        @Query("UserID") UserID: Int,
+        @Query("Count") ItemSerials: Int,
+        @Query("RackBarcode") RackBarcode: String,
+        @Query("LocationId") LocationId:Int
+    ): Observable<ResponseBody>
+
+    @GET("api/StockTake/ValidateBinCount")
+    fun ValidatBinCountStockTake(
+        @Query("UserID") UserID: Int,
+        @Query("Count") ItemSerials: Int,
+        @Query("BinBarcode") RackBarcode: String,
+        @Query("LocationId") LocationId:Int
+    ): Observable<ResponseBody>
+
+
 
     @POST("api/Login")
     fun Login(@Body usr: UserLoginModel): Observable<UserLoginResultModel>
@@ -129,6 +334,13 @@ interface BasicApi {
         @Query("CartonCode") CartonCode:String
     ): Observable<ResponseBody>
 
+    @POST("api/ShipmentReceivingCarton/PostV2")
+    fun ShipmentReceivingCartonV2(
+        @Query("UserID") UserID:Int,
+        @Query("BolNumber") BolNumber: String,
+        @Query("PalleteNb") PalleteNb:Int,
+        @Query("CartonCode") CartonCode:String
+    ): Observable<ResponseBody>
 
     @POST("api/ShipmentReceivingCartonCount")
     fun ShipmentReceivingCartonCount(

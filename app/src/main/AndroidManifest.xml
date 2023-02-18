@@ -28,6 +28,36 @@
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
         </provider>
 
+        <activity
+            android:name=".app.bosApp.Transfer.TransferReceivingDCActivity"
+            android:label="Transfer Receiving DC"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".app.bosApp.Transfer.TransferReceivingActivity"
+            android:label="Transfer Receiving"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <activity
+            android:name=".app.bosApp.Transfer.ScanTransferReceivingActivity"
+            android:label="Scan Transfer Receiving"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
+
+        <activity
+            android:name=".app.bosApp.Transfer.TransferActivity"
+            android:label="Transfer Type"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".app.bosApp.Transfer.ShipmentActivity"
+            android:label="Transfer Shipment"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
         <activity android:name=".app.NextReceivingStatusActivity"></activity>
 
         <activity
@@ -35,6 +65,68 @@
             android:label="@string/title_activity_packing_dc"
             android:windowSoftInputMode="stateAlwaysHidden"
             />
+
+
+        <activity
+            android:name=".app.bosApp.StockTakeCountActivity"
+            android:label="@string/title_activity_stock_count"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".app.bosApp.ScanForCountStockTakeActivity"
+            android:label="@string/title_activity_scan_count_stock_ake"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".app.bosApp.ScanRackStockTakeActivity"
+            android:label="@string/title_activity_scan_rack_count_stock_ake"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
+
+        <activity
+            android:name=".app.bosApp.CheckingActivity"
+            android:label="@string/title_activity_checking_dc"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".app.bosApp.ScanBinForCheckingActivity"
+            android:label="@string/title_activity_scan_checking"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".app.bosApp.StockTakeDCActivity"
+            android:label="@string/title_activity_stock_take_dc"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <activity
+            android:name=".app.bosApp.CountActivity"
+            android:label="Count"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
+
+        <activity
+            android:name=".app.bosApp.ScanBoxForStockTakeActivity"
+            android:label="@string/title_activity_scan_box_stock_dc"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".app.bosApp.StockTakeActivity"
+            android:label="@string/title_activity_stock_take"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <activity
+            android:name=".app.bosApp.ScanBinForCountActivity"
+            android:label="@string/title_activity_scan_count"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
         <activity
             android:name=".app.bosApp.ScanContainerActivity"
             android:label="@string/title_activity_scan_container"
@@ -59,6 +151,13 @@
             android:label="@string/title_activity_packing_dc"
             android:windowSoftInputMode="stateAlwaysHidden"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".app.bosApp.StockTakeRackDCActivity"
+            android:label="Stock Take Rack DC"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
+
 
 
         <activity
@@ -85,6 +184,11 @@
         <activity
             android:name=".app.ShipmentCartonReceivingActivity"
             android:label="Shipment Carton Receiving"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".app.ShipmentCartonReceivingV2Activity"
+            android:label="Shipment Carton Receiving V2"
             android:windowSoftInputMode="stateAlwaysHidden"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

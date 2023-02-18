@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -23,6 +24,18 @@ public final class ActivityScanContainerBinding implements ViewBinding {
   public final ConstraintLayout activityScanRfid;
 
   @NonNull
+  public final TextView lblBox;
+
+  @NonNull
+  public final TextView lblDescription;
+
+  @NonNull
+  public final TextView lblDestination;
+
+  @NonNull
+  public final TextView lblError;
+
+  @NonNull
   public final EditText textBox;
 
   @NonNull
@@ -38,11 +51,17 @@ public final class ActivityScanContainerBinding implements ViewBinding {
   public final EditText textUserScan;
 
   private ActivityScanContainerBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout activityScanRfid, @NonNull EditText textBox,
-      @NonNull EditText textBranch, @NonNull EditText textDestination, @NonNull EditText textUser,
+      @NonNull ConstraintLayout activityScanRfid, @NonNull TextView lblBox,
+      @NonNull TextView lblDescription, @NonNull TextView lblDestination,
+      @NonNull TextView lblError, @NonNull EditText textBox, @NonNull EditText textBranch,
+      @NonNull EditText textDestination, @NonNull EditText textUser,
       @NonNull EditText textUserScan) {
     this.rootView = rootView;
     this.activityScanRfid = activityScanRfid;
+    this.lblBox = lblBox;
+    this.lblDescription = lblDescription;
+    this.lblDestination = lblDestination;
+    this.lblError = lblError;
     this.textBox = textBox;
     this.textBranch = textBranch;
     this.textDestination = textDestination;
@@ -79,6 +98,30 @@ public final class ActivityScanContainerBinding implements ViewBinding {
     missingId: {
       ConstraintLayout activityScanRfid = (ConstraintLayout) rootView;
 
+      id = R.id.lblBox;
+      TextView lblBox = ViewBindings.findChildViewById(rootView, id);
+      if (lblBox == null) {
+        break missingId;
+      }
+
+      id = R.id.lblDescription;
+      TextView lblDescription = ViewBindings.findChildViewById(rootView, id);
+      if (lblDescription == null) {
+        break missingId;
+      }
+
+      id = R.id.lblDestination;
+      TextView lblDestination = ViewBindings.findChildViewById(rootView, id);
+      if (lblDestination == null) {
+        break missingId;
+      }
+
+      id = R.id.lblError;
+      TextView lblError = ViewBindings.findChildViewById(rootView, id);
+      if (lblError == null) {
+        break missingId;
+      }
+
       id = R.id.textBox;
       EditText textBox = ViewBindings.findChildViewById(rootView, id);
       if (textBox == null) {
@@ -109,8 +152,9 @@ public final class ActivityScanContainerBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityScanContainerBinding((ConstraintLayout) rootView, activityScanRfid,
-          textBox, textBranch, textDestination, textUser, textUserScan);
+      return new ActivityScanContainerBinding((ConstraintLayout) rootView, activityScanRfid, lblBox,
+          lblDescription, lblDestination, lblError, textBox, textBranch, textDestination, textUser,
+          textUserScan);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

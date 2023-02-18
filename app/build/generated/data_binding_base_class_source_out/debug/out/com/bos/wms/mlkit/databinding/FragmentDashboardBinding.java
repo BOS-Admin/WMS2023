@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -21,7 +22,16 @@ public final class FragmentDashboardBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button btnDestination;
+  public final Button btnCount;
+
+  @NonNull
+  public final Button btnStockTake;
+
+  @NonNull
+  public final Button btnTransfer;
+
+  @NonNull
+  public final LinearLayout layoutDashboard;
 
   @NonNull
   public final EditText textBranch;
@@ -29,10 +39,15 @@ public final class FragmentDashboardBinding implements ViewBinding {
   @NonNull
   public final EditText textUser;
 
-  private FragmentDashboardBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button btnDestination, @NonNull EditText textBranch, @NonNull EditText textUser) {
+  private FragmentDashboardBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnCount,
+      @NonNull Button btnStockTake, @NonNull Button btnTransfer,
+      @NonNull LinearLayout layoutDashboard, @NonNull EditText textBranch,
+      @NonNull EditText textUser) {
     this.rootView = rootView;
-    this.btnDestination = btnDestination;
+    this.btnCount = btnCount;
+    this.btnStockTake = btnStockTake;
+    this.btnTransfer = btnTransfer;
+    this.layoutDashboard = layoutDashboard;
     this.textBranch = textBranch;
     this.textUser = textUser;
   }
@@ -64,9 +79,27 @@ public final class FragmentDashboardBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnDestination;
-      Button btnDestination = ViewBindings.findChildViewById(rootView, id);
-      if (btnDestination == null) {
+      id = R.id.btnCount;
+      Button btnCount = ViewBindings.findChildViewById(rootView, id);
+      if (btnCount == null) {
+        break missingId;
+      }
+
+      id = R.id.btnStockTake;
+      Button btnStockTake = ViewBindings.findChildViewById(rootView, id);
+      if (btnStockTake == null) {
+        break missingId;
+      }
+
+      id = R.id.btnTransfer;
+      Button btnTransfer = ViewBindings.findChildViewById(rootView, id);
+      if (btnTransfer == null) {
+        break missingId;
+      }
+
+      id = R.id.layoutDashboard;
+      LinearLayout layoutDashboard = ViewBindings.findChildViewById(rootView, id);
+      if (layoutDashboard == null) {
         break missingId;
       }
 
@@ -82,8 +115,8 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentDashboardBinding((ConstraintLayout) rootView, btnDestination, textBranch,
-          textUser);
+      return new FragmentDashboardBinding((ConstraintLayout) rootView, btnCount, btnStockTake,
+          btnTransfer, layoutDashboard, textBranch, textUser);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

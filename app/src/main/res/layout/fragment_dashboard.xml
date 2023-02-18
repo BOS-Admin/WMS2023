@@ -6,11 +6,10 @@
     tools:context=".app.ui.dashboard.DashboardFragment">
 
 
-
     <LinearLayout
+        android:id="@+id/layoutDashboard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:orientation="vertical"
         android:padding="10dp">
 
@@ -49,7 +48,8 @@
                 android:id="@+id/textUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:enabled="false" />
         </LinearLayout>
 
 
@@ -60,13 +60,41 @@
             android:padding="10dp">
 
             <Button
-                android:id="@+id/btnDestination"
-                android:layout_width="120dp"
+                android:id="@+id/btnCount"
+                android:layout_width="140dp"
                 android:layout_height="120dp"
                 android:background="?attr/colorPrimary"
                 android:text="Packing"
                 android:textColor="#F6F0F0"
                 android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnStockTake"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="20dp"
+                android:background="?attr/colorPrimary"
+                android:text="Stock Take"
+                android:textColor="#F6F0F0"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btnTransfer"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:text="Transfer"
+                android:textColor="#F6F0F0"
+                android:background="?attr/colorPrimary"
+                android:textSize="20sp" />
+
+
         </LinearLayout>
     </LinearLayout>
 

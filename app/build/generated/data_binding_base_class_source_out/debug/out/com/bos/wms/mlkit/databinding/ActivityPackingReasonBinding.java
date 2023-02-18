@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -28,6 +29,9 @@ public final class ActivityPackingReasonBinding implements ViewBinding {
   public final Button btnPackingReasonDone;
 
   @NonNull
+  public final TextView lblError;
+
+  @NonNull
   public final LinearLayout linearLayout7;
 
   @NonNull
@@ -35,10 +39,11 @@ public final class ActivityPackingReasonBinding implements ViewBinding {
 
   private ActivityPackingReasonBinding(@NonNull CoordinatorLayout rootView,
       @NonNull CoordinatorLayout activityPackingReason, @NonNull Button btnPackingReasonDone,
-      @NonNull LinearLayout linearLayout7, @NonNull Spinner spinner) {
+      @NonNull TextView lblError, @NonNull LinearLayout linearLayout7, @NonNull Spinner spinner) {
     this.rootView = rootView;
     this.activityPackingReason = activityPackingReason;
     this.btnPackingReasonDone = btnPackingReasonDone;
+    this.lblError = lblError;
     this.linearLayout7 = linearLayout7;
     this.spinner = spinner;
   }
@@ -78,6 +83,12 @@ public final class ActivityPackingReasonBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.lblError;
+      TextView lblError = ViewBindings.findChildViewById(rootView, id);
+      if (lblError == null) {
+        break missingId;
+      }
+
       id = R.id.linearLayout7;
       LinearLayout linearLayout7 = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout7 == null) {
@@ -91,7 +102,7 @@ public final class ActivityPackingReasonBinding implements ViewBinding {
       }
 
       return new ActivityPackingReasonBinding((CoordinatorLayout) rootView, activityPackingReason,
-          btnPackingReasonDone, linearLayout7, spinner);
+          btnPackingReasonDone, lblError, linearLayout7, spinner);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -30,6 +30,12 @@
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/lblError"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+               />
+
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"

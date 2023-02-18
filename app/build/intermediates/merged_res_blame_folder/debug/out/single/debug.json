@@ -1,278 +1,298 @@
 [
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_shipment_pallete_carton_count.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_shipment_pallete_carton_count.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_itemserial_missing.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_itemserial_missing.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_foldingscan.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_foldingscan.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_fillpallete.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_fillpallete.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\navigation_nav_graph.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\navigation\\nav_graph.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\navigation_nav_graph2.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\navigation\\nav_graph2.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\anim_pop_enter_anim.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\anim\\pop_enter_anim.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_packing_reason.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_packing_reason.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_putawaypallete.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_putawaypallete.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_customborder1.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\customborder1.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_stock_take.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_stock_take.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_background.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\background.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\navigation_mobile_navigation.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\navigation\\mobile_navigation.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_shipment_pallete_carton_count.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_shipment_pallete_carton_count.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_ic_home_black_24dp.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\ic_home_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_fillpallete.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_fillpallete.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_serial_generator.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_serial_generator.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_putawaypallete.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_putawaypallete.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_pop_window_main.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\pop_window_main.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\navigation_nav_graph2.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\navigation\\nav_graph2.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_picking.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_picking.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_item_pricing.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_item_pricing.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_shipment.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_shipment.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_locationcheck.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_locationcheck.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_fillpallete.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_fillpallete.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_ic_notifications_black_24dp.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\ic_notifications_black_24dp.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_packing_dc.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_packing_dc.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_serial_generator.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_serial_generator.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_main_menu1.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_main_menu1.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_packing_dc.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_packing_dc.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_packing.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_packing.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_serial_generator.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_serial_generator.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_pg_pricing.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_pg_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_picking.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_picking.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_item_pricing.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_item_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_upc_pricing.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_upc_pricing.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_a9.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\a9.png"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-merged_res-54:/layout_activity_printer_selection.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-56:/layout/activity_printer_selection.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_picking.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_picking.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_itemserial_missing.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_itemserial_missing.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_printer_selection.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_printer_selection.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_fragment_notifications.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\fragment_notifications.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_upc_pricing.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_upc_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_locationcheck.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_locationcheck.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_next_receiving_status.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_next_receiving_status.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_next_receiving_status.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_next_receiving_status.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_fragment_dashboard.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\fragment_dashboard.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_transfer_receiving.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_transfer_receiving.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\fragment_home.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_customborder1.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\customborder1.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\anim_pop_exit_anim.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\anim\\pop_exit_anim.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_foldingscan.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_foldingscan.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_count.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_count.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_itemserial_upc_missing.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_itemserial_upc_missing.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_pg_pricing.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_pg_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_scan_container.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_scan_container.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_fillpallete.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_fillpallete.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_putawaypallete.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_putawaypallete.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_packing.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_packing.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_fragment_dashboard.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\fragment_dashboard.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_ic_dashboard_black_24dp.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\ic_dashboard_black_24dp.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_main_menu.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_main_menu.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_serial_generator.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_serial_generator.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_shipment_pallete_carton.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_shipment_pallete_carton.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\navigation\\nav_graph.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_main_menu.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_main_menu.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_picking.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_picking.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_a9.png.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\a9.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_foldingscan.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_foldingscan.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\xml_file_paths.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\xml\\file_paths.xml"
+        "merged": "com.bos.wms.mlkit.app-merged_res-54:/layout_activity_transfer_receiving.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-56:/layout/activity_transfer_receiving.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_foldingscan.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_foldingscan.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_upc_pricing.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_upc_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_pg_pricing.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_pg_pricing.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\menu_bottom_nav_menu.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\menu\\bottom_nav_menu.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\menu\\bottom_nav_menu.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_item_pricing.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_item_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\xml_file_paths.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\xml\\file_paths.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_pg_pricing.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_pg_pricing.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_scan_container.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_scan_container.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_customborder.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\customborder.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_itemserial_upc_missing.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_itemserial_upc_missing.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_itemserial_upc_missing.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_itemserial_upc_missing.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_shipment_pallete_receiving.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_shipment_pallete_receiving.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_shipment_pallete_carton.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_shipment_pallete_carton.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_ic_home_black_24dp.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\ic_home_black_24dp.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_fragment_notifications.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\fragment_notifications.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\navigation\\mobile_navigation.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_pop_window_main.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\pop_window_main.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_packing_reason.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_packing_reason.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_itemserial_upc_missing.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_itemserial_upc_missing.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_itemserial_missing.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_itemserial_missing.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_transfer.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_transfer.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_item_list.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\item_list.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\anim_pop_enter_anim.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\anim\\pop_enter_anim.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_item_pricing.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_item_pricing.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\anim_pop_exit_anim.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\anim\\pop_exit_anim.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_background.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\background.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_itemserial_missing.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_itemserial_missing.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_printer_selection.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_printer_selection.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_upc_pricing.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_upc_pricing.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\drawable_customborder.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\drawable\\customborder.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_locationcheck.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_locationcheck.xml"
     },
     {
-        "merged": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\a.haydar\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_item_list.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\item_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_putawaypallete.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_putawaypallete.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_shipment_pallete_receiving.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_shipment_pallete_receiving.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_activity_main_menu1.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_main_menu1.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\layout_content_locationcheck.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_locationcheck.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-54:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\mipmap-xhdpi\\ic_launcher_round.png"
     }
 ]

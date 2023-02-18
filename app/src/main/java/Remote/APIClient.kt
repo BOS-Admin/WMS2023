@@ -54,26 +54,12 @@ object APIClient {
             var IP:String=IPAddress;
             if(!IP.endsWith("/"))
                 IP=IP+"/";
-            if(isFake){
-                instance = Retrofit.Builder().baseUrl("https://bosapp.free.beeceptor.com/")
-
-                    //instance = Retrofit.Builder().baseUrl("http://192.168.10.82:5000/")
-                    .addConverterFactory(GsonConverterFactory.create(gson))
-                    .addConverterFactory(ScalarsConverterFactory.create())
-                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                    .build()
-            }
-            else{
                 instance = Retrofit.Builder().baseUrl("http://" + IP)
-
                     //instance = Retrofit.Builder().baseUrl("http://192.168.10.82:5000/")
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .addConverterFactory(ScalarsConverterFactory.create())
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build()
-            }
-
-
         }
         return instance!!
     }

@@ -35,4 +35,19 @@
     <string name="title_activity_printer_selection">Printer Selection</string>
     <string name="title_activity_packing_reason">Packing Reason</string>
     <string name="title_activity_scan_container">Scan Container</string>
+    <string name="title_activity_count">Count</string>
+    <string name="title_activity_stock_take">Stock Take Type</string>
+    <string name="title_activity_scan_count">Scan For Count</string>
+    <string name="title_activity_checking_dc">Checking </string>
+    <string name="title_activity_Stock_Take_Box">Stock Take Box </string>
+    <string name="title_activity_Stock_Take_Stand">Stock Take Stand </string>
+    <string name="title_activity_Stock_Take_Rack">Stock Take Rack </string>
+    <string name="title_activity_Stock_Take_Count">Stock Take Count </string>
+    <string name="title_activity_scan_box_stock_dc">Stock Take Scan Box/Stand</string>
+    <string name="title_activity_scan_checking">Scan Bin For Checking</string>
+    <string name="title_activity_stock_take_dc">Stock Take DC</string>
+    <string name="title_activity_stock_count">Stock Take Count</string>
+    <string name="title_activity_scan_count_stock_ake">Stock Take Count</string>
+    <string name="title_activity_scan_rack_count_stock_ake">Scan Rack </string>
+
 </resources>

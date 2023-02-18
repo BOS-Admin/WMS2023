@@ -1,0 +1,1 @@
+com.bos.wms.mlkit.test

@@ -5,7 +5,7 @@
     android:id="@+id/activity_scan_rfid"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".app.bosApp.PackingDCActivity">
+    tools:context=".app.bosApp.ScanContainerActivity">
 
     <TextView
         android:layout_width="332dp"
@@ -38,7 +38,8 @@
                 android:id="@+id/textBranch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:enabled="false" />
         </LinearLayout>
 
         <LinearLayout
@@ -58,17 +59,24 @@
                 android:id="@+id/textUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:enabled="false" />
         </LinearLayout>
 
         <TextView
+            android:id="@+id/lblDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="50dp"
+            android:paddingTop="5dp"
             android:paddingBottom="10dp"
             android:text="Please scan your barcode and the box/stand barcode"
             android:textAlignment="center"
             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblError"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -79,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:paddingTop="20dp"
+                android:paddingTop="5dp"
                 android:paddingBottom="10dp"
                 android:text="User"
                 android:textAlignment="center"
@@ -98,10 +106,11 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/lblBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:paddingTop="20dp"
+                    android:paddingTop="5dp"
                     android:paddingBottom="10dp"
                     android:text="Box/Stand"
                     android:textAlignment="center"
@@ -121,10 +130,11 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/lblDestination"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:paddingTop="20dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingTop="5dp"
                     android:paddingBottom="10dp"
                     android:text="Destination"
                     android:textAlignment="center"

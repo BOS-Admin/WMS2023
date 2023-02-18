@@ -1,6 +1,7 @@
 package com.bos.wms.mlkit.ui.login
 
 import Model.LocationModel
+import Model.SystemControlModelItem
 import Model.UserLoginModel
 import Model.UserLoginResultModel
 import Remote.APIClient
@@ -52,6 +53,11 @@ class LoginActivity : AppCompatActivity() {
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
                         {s->
+                            for(x in s.settings){
+                                Log.i("settings-ah",x.code+" => "+x.value)
+
+                        }
+
                             General.getGeneral(applicationContext).saveGeneral(applicationContext,s)
                             val DefaultShelfNbOfBins:String= General.getGeneral(application).getSetting(applicationContext,"DefaultShelfNbOfBins")
                             Log.println(Log.DEBUG,"DefaultShelfNbOfBins",DefaultShelfNbOfBins)
@@ -133,9 +139,17 @@ class LoginActivity : AppCompatActivity() {
                 return
             val location:String=locationModel!!.locations[ddlLogin.selectedItemPosition].location
             val locationID:Int = locationModel!!.locations[ddlLogin.selectedItemPosition].id
-
+            val mainLocation:String=locationModel!!.mainLocation
+            val mainLocationId:Int=locationModel!!.mainLocationID
+            val subLocation:String = locationModel!!.locations[ddlLogin.selectedItemPosition].location
+            //Log.i("LocationId","LocationId "+)
             General.getGeneral(applicationContext).LocationString=location;
             General.getGeneral(applicationContext).FloorID=locationID
+            General.getGeneral(applicationContext).UserCode=username
+            General.getGeneral(applicationContext).ipAddress=IPAddress
+            General.getGeneral(applicationContext).mainLocation=mainLocation
+            General.getGeneral(applicationContext).mainLocationID=mainLocationId
+            General.getGeneral(applicationContext).subLocation=subLocation
             General.getGeneral(applicationContext).saveGeneral(applicationContext)
 
             Log.println(Log.DEBUG,"Location",location+ " - " + locationID.toString())
@@ -208,35 +222,57 @@ class LoginActivity : AppCompatActivity() {
         getLocations(2)
 
         username.afterTextChanged {
-            loginViewModel.loginDataChanged(
-                username.text.toString(),
-                password.text.toString()
-            )
+ //           loginViewModel.loginDataChanged(
+ //               username.text.toString(),
+ //               password.text.toString()
+ //           )
+            //password.requestFocus()
         }
 
         password.apply {
             afterTextChanged {
-                loginViewModel.loginDataChanged(
-                    username.text.toString(),
-                    password.text.toString()
-                )
-            }
-            setOnEditorActionListener { _, actionId, _ ->
-                when (actionId) {
-                    EditorInfo.IME_ACTION_DONE ->
-                        login(
-                            username.text.toString(),
-                            password.text.toString()
-                        )
-                }
-                false
+              // loginViewModel.loginDataChanged(
+              //     username.text.toString(),
+              //     password.text.toString()
+              // )
+              //  username.requestFocus()
+
+                login.isEnabled=true
             }
 
-            login.setOnClickListener {
-                //   loading.visibility = View.VISIBLE
-                login(username.text.toString(), password.text.toString())
-            }
+
         }
+
+//        password.apply {
+//            afterTextChanged {
+//                loginViewModel.loginDataChanged(
+//                    username.text.toString(),
+//                    password.text.toString()
+//                )
+//                username.requestFocus()
+//            }
+//            setOnEditorActionListener { _, actionId, _ ->
+//                when (actionId) {
+//                    EditorInfo.IME_ACTION_DONE ->
+//                        login(
+//                            username.text.toString(),
+//                            password.text.toString()
+//                        )
+//                }
+//                false
+//            }
+//
+//            login.setOnClickListener {
+//                //   loading.visibility = View.VISIBLE
+//                login(username.text.toString(), password.text.toString())
+//            } //       }
+
+
+        login.setOnClickListener {
+            //   loading.visibility = View.VISIBLE
+            login(username.text.toString(), password.text.toString())
+        }
+        username.requestFocus()
     }
 
 

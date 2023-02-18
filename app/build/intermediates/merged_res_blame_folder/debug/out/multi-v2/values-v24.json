@@ -4,7 +4,17 @@
             "outputFile": "com.bos.wms.mlkit.app-mergeDebugResources-52:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\a.haydar\\.gradle\\caches\\transforms-3\\e3ea1f9cf2d2d5ba7009d4fb5880ef89\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-3\\6d166b95bb8540df22d8c1df04765546\\transformed\\appcompat-1.5.0\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-3\\e3ea1f9cf2d2d5ba7009d4fb5880ef89\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,17 +31,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\a.haydar\\.gradle\\caches\\transforms-3\\6d166b95bb8540df22d8c1df04765546\\transformed\\appcompat-1.5.0\\res\\values-v24\\values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\a.haydar\\.gradle\\caches\\transforms-3\\df9b48493701655e3dc9295004ec28ad\\transformed\\material-1.6.1\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-3\\df9b48493701655e3dc9295004ec28ad\\transformed\\material-1.6.1\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",

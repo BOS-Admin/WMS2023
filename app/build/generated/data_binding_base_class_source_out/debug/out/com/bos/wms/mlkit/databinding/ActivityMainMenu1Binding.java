@@ -22,7 +22,7 @@ public final class ActivityMainMenu1Binding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final Button btnDestination;
+  public final Button btnCount;
 
   @NonNull
   public final EditText textBranch;
@@ -33,11 +33,10 @@ public final class ActivityMainMenu1Binding implements ViewBinding {
   @NonNull
   public final Toolbar toolbar;
 
-  private ActivityMainMenu1Binding(@NonNull CoordinatorLayout rootView,
-      @NonNull Button btnDestination, @NonNull EditText textBranch, @NonNull EditText textUser,
-      @NonNull Toolbar toolbar) {
+  private ActivityMainMenu1Binding(@NonNull CoordinatorLayout rootView, @NonNull Button btnCount,
+      @NonNull EditText textBranch, @NonNull EditText textUser, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
-    this.btnDestination = btnDestination;
+    this.btnCount = btnCount;
     this.textBranch = textBranch;
     this.textUser = textUser;
     this.toolbar = toolbar;
@@ -70,9 +69,9 @@ public final class ActivityMainMenu1Binding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnDestination;
-      Button btnDestination = ViewBindings.findChildViewById(rootView, id);
-      if (btnDestination == null) {
+      id = R.id.btnCount;
+      Button btnCount = ViewBindings.findChildViewById(rootView, id);
+      if (btnCount == null) {
         break missingId;
       }
 
@@ -94,7 +93,7 @@ public final class ActivityMainMenu1Binding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainMenu1Binding((CoordinatorLayout) rootView, btnDestination, textBranch,
+      return new ActivityMainMenu1Binding((CoordinatorLayout) rootView, btnCount, textBranch,
           textUser, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);

@@ -1,48 +1,23 @@
 package com.bos.wms.mlkit.app.bosApp
 
-import Remote.APIClient
-import Remote.BasicApi
-import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.Color
-import android.media.AudioManager
-import android.media.ToneGenerator
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.view.View
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.bos.wms.mlkit.CustomListAdapter
 import com.bos.wms.mlkit.General
-import com.bos.wms.mlkit.General.hideSoftKeyboard
 import com.bos.wms.mlkit.R
 import com.bos.wms.mlkit.storage.Storage
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_packing.*
-import kotlinx.android.synthetic.main.content_item_pricing.*
-import kotlinx.android.synthetic.main.content_upc_pricing.*
-import kotlinx.android.synthetic.main.content_upc_pricing.lblError
-import kotlinx.android.synthetic.main.content_upc_pricing.recyclerView
-import kotlinx.android.synthetic.main.fragment_dashboard.view.*
-import retrofit2.HttpException
-import java.io.IOException
+
+
 
 
 class PackingActivity : AppCompatActivity() {
-    private lateinit var linearLayoutManager: LinearLayoutManager
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var TextChangeEvent:TextWatcher
-    private lateinit var ItemSerials:ArrayList<String>
-    private lateinit var ItemUPCs:ArrayList<String>
-    private lateinit var adp:CustomListAdapter
     private lateinit var PricingLineCode:String
-    private var testingUPCAlwaysValid:Boolean =false
-
+    private lateinit var textPrintSection: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,21 +26,35 @@ class PackingActivity : AppCompatActivity() {
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82")
         PricingLineCode = mStorage.getDataString("PricingLineCode", "PL001")
 
-
+        val textUser=findViewById<EditText>(R.id.textUser)
+        val textBranch=findViewById<EditText>(R.id.textBranch)
         mStorage= Storage(applicationContext)
-        var FloorID: Int= General.getGeneral(applicationContext).FloorID
-        var UserId = General.getGeneral(applicationContext).UserID
-        textBranch.setText(General.getGeneral(applicationContext).LocationString);
-        textUser.setText(""+ General.getGeneral(applicationContext).UserID + " " + General.getGeneral(applicationContext).UserName);
+        textBranch.setText(General.getGeneral(applicationContext).fullLocation);
+        textUser.setText(General.getGeneral(applicationContext).userFullName);
         textBranch.isEnabled=false;
-        textBranch.isEnabled=false;
+        textPrintSection=findViewById(R.id.textPrintSection)
+        textPrintSection.text="Print Section:"+General.getGeneral(applicationContext).printerStationCode
 
 
-        btnDestination.setOnClickListener{
-            val intent = Intent (applicationContext, PackingReasonActivity::class.java)
+        findViewById<Button>(R.id.btnDestination).setOnClickListener{
+            General.getGeneral(applicationContext).packType="Destination"
+            General.getGeneral(applicationContext).saveGeneral(applicationContext)
+            val intent = Intent (applicationContext, ScanContainerActivity::class.java)
             startActivity(intent)
         }
-        btnChange.setOnClickListener {
+        findViewById<Button>(R.id.btnCount).setOnClickListener{
+            General.getGeneral(applicationContext).packType="Count"
+            General.getGeneral(applicationContext).saveGeneral(applicationContext)
+            val intent = Intent (applicationContext, ScanBinForCountActivity::class.java)
+            startActivity(intent)
+        }
+        findViewById<Button>(R.id.btnChecking).setOnClickListener{
+            General.getGeneral(applicationContext).packType="Checking"
+            General.getGeneral(applicationContext).saveGeneral(applicationContext)
+            val intent = Intent (applicationContext, ScanBinForCheckingActivity::class.java)
+            startActivity(intent)
+        }
+        findViewById<Button>(R.id.btnChange).setOnClickListener {
             val intent = Intent (applicationContext, PrinterSelectionActivity::class.java)
             startActivity(intent)
         }

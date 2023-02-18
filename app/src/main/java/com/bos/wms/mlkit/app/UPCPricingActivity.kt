@@ -268,8 +268,8 @@ class UPCPricingActivity : AppCompatActivity() {
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
                         {s->
-                             var ErrorMsg = ""
-                                try {
+                            var ErrorMsg = ""
+                            try {
                                     ErrorMsg = s.string()
                                 } catch (e: IOException) {
                                     e.printStackTrace()

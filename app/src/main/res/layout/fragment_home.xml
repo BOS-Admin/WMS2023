@@ -8,7 +8,7 @@
     <TableLayout
         android:id="@+id/tblMainMenu"
         android:layout_width="414dp"
-        android:layout_height="544dp"
+        android:layout_height="560dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
@@ -78,6 +78,7 @@
                 android:text="PG     Pricing"
                 android:textColor="@android:color/white"
                 android:textSize="24sp" />
+
             <Button
                 android:id="@+id/btnMenuPutAwayPallete"
                 style="button"
@@ -112,14 +113,14 @@
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp">
 
-        >
+            >
 
             <Button
                 android:id="@+id/btnMenuNextReceivingStatus"
                 style="button"
                 android:layout_width="150sp"
                 android:layout_height="70sp"
-                android:background="@android:color/holo_blue_light"
+                android:background="@android:color/darker_gray"
                 android:ellipsize="end"
                 android:shadowColor="@color/colorPrimary"
                 android:singleLine="false"
@@ -131,6 +132,7 @@
             <Space
                 android:layout_width="20sp"
                 android:layout_height="wrap_content" />
+
             <Button
                 android:id="@+id/btnSerialMissing"
                 style="button"
@@ -159,6 +161,7 @@
                 android:textColor="@android:color/white"
                 android:textSize="22sp" />
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -175,14 +178,14 @@
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp">
 
-        >
+            >
 
             <Button
                 android:id="@+id/btnMenuFillPallete"
                 style="button"
                 android:layout_width="150dp"
                 android:layout_height="70dp"
-                android:background="@android:color/holo_blue_light"
+                android:background="@android:color/darker_gray"
                 android:ellipsize="end"
                 android:shadowColor="@color/colorPrimary"
                 android:singleLine="false"
@@ -233,8 +236,9 @@
                 style="button"
                 android:layout_width="150dp"
                 android:layout_height="90dp"
-                android:background="@android:color/holo_blue_light"
+                android:background="@android:color/darker_gray"
                 android:ellipsize="end"
+                android:enabled="false"
                 android:shadowColor="@color/colorPrimary"
                 android:singleLine="false"
                 android:soundEffectsEnabled="false"
@@ -251,8 +255,9 @@
                 style="button"
                 android:layout_width="150dp"
                 android:layout_height="90dp"
-                android:background="@android:color/holo_blue_light"
+                android:background="@android:color/darker_gray"
                 android:ellipsize="end"
+                android:enabled="false"
                 android:shadowColor="@color/colorPrimary"
                 android:singleLine="false"
                 android:soundEffectsEnabled="false"
@@ -280,13 +285,15 @@
 
             >
 
+
             <Button
                 android:id="@+id/btnMenuShipmentReceivingPalleteCount"
                 style="button"
                 android:layout_width="150dp"
-                android:layout_height="90dp"
-                android:background="@android:color/holo_blue_light"
+                android:layout_height="100dp"
+                android:background="@android:color/darker_gray"
                 android:ellipsize="end"
+                android:enabled="false"
                 android:shadowColor="@color/colorPrimary"
                 android:singleLine="false"
                 android:soundEffectsEnabled="false"
@@ -298,19 +305,39 @@
                 android:layout_width="20sp"
                 android:layout_height="wrap_content" />
 
-            <Button
-                android:id="@+id/btnMenuItemPricing"
-                style="button"
-                android:layout_width="150dp"
-                android:layout_height="90dp"
-                android:background="@android:color/holo_blue_light"
-                android:ellipsize="end"
-                android:shadowColor="@color/colorPrimary"
-                android:singleLine="false"
-                android:soundEffectsEnabled="false"
-                android:text="Item    Pricing"
-                android:textColor="@android:color/white"
-                android:textSize="22sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnMenuShipmentCartonReceivingV2"
+                    style="button"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/holo_blue_light"
+                    android:ellipsize="end"
+                    android:shadowColor="@color/colorPrimary"
+                    android:singleLine="false"
+                    android:soundEffectsEnabled="false"
+                    android:text="Carton Receiving V2"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btnMenuItemPricing"
+                    style="button"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:background="@android:color/holo_blue_light"
+                    android:ellipsize="end"
+                    android:shadowColor="@color/colorPrimary"
+                    android:singleLine="false"
+                    android:soundEffectsEnabled="false"
+                    android:text="Item    Pricing"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
 
 
         </TableRow>

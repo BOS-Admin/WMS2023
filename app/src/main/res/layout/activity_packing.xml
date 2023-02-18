@@ -52,7 +52,8 @@
                 android:id="@+id/textBranch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:enabled="false" />
         </LinearLayout>
 
         <LinearLayout
@@ -65,13 +66,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="User"
+
                 android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/textUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:enabled="false"/>
         </LinearLayout>
 
         <LinearLayout
@@ -126,6 +129,34 @@
                 android:text="Destination"
                 android:textColor="#F6F0F0"
                 android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnCount"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="?attr/colorPrimary"
+                android:text="Count"
+                android:textColor="#F6F0F0"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btnChecking"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="?attr/colorPrimary"
+                android:text="Checking"
+                android:textColor="#F6F0F0"
+                android:textSize="20sp" />
+
+
         </LinearLayout>
 
     </LinearLayout>

@@ -74,7 +74,7 @@
             android:padding="10dp">
 
             <Button
-                android:id="@+id/btnDestination"
+                android:id="@+id/btnCount"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:background="?attr/colorPrimary"

@@ -23,11 +23,7 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
 
-    <permission
-        android:name="com.bos.wms.mlkit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-        android:protectionLevel="signature" />
-
-    <uses-permission android:name="com.bos.wms.mlkit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
     <!-- <uses-sdk android:minSdkVersion="14"/> -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -40,7 +36,6 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <provider
@@ -53,10 +48,70 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferReceivingDCActivity"
+            android:label="Transfer Receiving DC"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferReceivingActivity"
+            android:label="Transfer Receiving"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.ScanTransferReceivingActivity"
+            android:label="Scan Transfer Receiving"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferActivity"
+            android:label="Transfer Type"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.ShipmentActivity"
+            android:label="Transfer Shipment"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name="com.bos.wms.mlkit.app.NextReceivingStatusActivity" />
         <activity
             android:name="com.bos.wms.mlkit.app.bosApp.PackingDCActivity"
             android:label="@string/title_activity_packing_dc"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeCountActivity"
+            android:label="@string/title_activity_stock_count"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.ScanForCountStockTakeActivity"
+            android:label="@string/title_activity_scan_count_stock_ake"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.ScanRackStockTakeActivity"
+            android:label="@string/title_activity_scan_rack_count_stock_ake"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.CheckingActivity"
+            android:label="@string/title_activity_checking_dc"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.ScanBinForCheckingActivity"
+            android:label="@string/title_activity_scan_checking"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeDCActivity"
+            android:label="@string/title_activity_stock_take_dc"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.CountActivity"
+            android:label="Count"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.ScanBoxForStockTakeActivity"
+            android:label="@string/title_activity_scan_box_stock_dc"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeActivity"
+            android:label="@string/title_activity_stock_take"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.ScanBinForCountActivity"
+            android:label="@string/title_activity_scan_count"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="com.bos.wms.mlkit.app.bosApp.ScanContainerActivity"
@@ -73,6 +128,11 @@
         <activity
             android:name="com.bos.wms.mlkit.app.bosApp.PackingActivity"
             android:label="@string/title_activity_packing_dc"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeRackDCActivity"
+            android:label="Stock Take Rack DC"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
@@ -98,6 +158,11 @@
         <activity
             android:name="com.bos.wms.mlkit.app.ShipmentCartonReceivingActivity"
             android:label="Shipment Carton Receiving"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.ShipmentCartonReceivingV2Activity"
+            android:label="Shipment Carton Receiving V2"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
@@ -188,17 +253,6 @@
         </service>
 
         <provider
-            android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.bos.wms.mlkit.androidx-startup"
-            android:exported="false" >
-            <meta-data
-                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-                android:value="androidx.startup" />
-            <meta-data
-                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-                android:value="androidx.startup" />
-        </provider>
-        <provider
             android:name="com.google.mlkit.common.internal.MlKitInitProvider"
             android:authorities="com.bos.wms.mlkit.mlkitinitprovider"
             android:exported="false"
@@ -212,6 +266,18 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.bos.wms.mlkit.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
 
         <uses-library
             android:name="androidx.window.extensions"

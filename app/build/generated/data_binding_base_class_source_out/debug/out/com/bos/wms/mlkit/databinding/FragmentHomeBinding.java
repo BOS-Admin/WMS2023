@@ -50,6 +50,9 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final Button btnMenuShipmentCartonReceiving;
 
   @NonNull
+  public final Button btnMenuShipmentCartonReceivingV2;
+
+  @NonNull
   public final Button btnMenuShipmentPalleteReceiving;
 
   @NonNull
@@ -75,6 +78,7 @@ public final class FragmentHomeBinding implements ViewBinding {
       @NonNull Button btnMenuItemPricing, @NonNull Button btnMenuNextReceivingStatus,
       @NonNull Button btnMenuPGPricing, @NonNull Button btnMenuPicking,
       @NonNull Button btnMenuPutAwayPallete, @NonNull Button btnMenuShipmentCartonReceiving,
+      @NonNull Button btnMenuShipmentCartonReceivingV2,
       @NonNull Button btnMenuShipmentPalleteReceiving,
       @NonNull Button btnMenuShipmentReceivingPalleteCount, @NonNull Button btnSerialMissing,
       @NonNull Button btnUPCPricing, @NonNull Space space, @NonNull TableLayout tblMainMenu,
@@ -89,6 +93,7 @@ public final class FragmentHomeBinding implements ViewBinding {
     this.btnMenuPicking = btnMenuPicking;
     this.btnMenuPutAwayPallete = btnMenuPutAwayPallete;
     this.btnMenuShipmentCartonReceiving = btnMenuShipmentCartonReceiving;
+    this.btnMenuShipmentCartonReceivingV2 = btnMenuShipmentCartonReceivingV2;
     this.btnMenuShipmentPalleteReceiving = btnMenuShipmentPalleteReceiving;
     this.btnMenuShipmentReceivingPalleteCount = btnMenuShipmentReceivingPalleteCount;
     this.btnSerialMissing = btnSerialMissing;
@@ -179,6 +184,12 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnMenuShipmentCartonReceivingV2;
+      Button btnMenuShipmentCartonReceivingV2 = ViewBindings.findChildViewById(rootView, id);
+      if (btnMenuShipmentCartonReceivingV2 == null) {
+        break missingId;
+      }
+
       id = R.id.btnMenuShipmentPalleteReceiving;
       Button btnMenuShipmentPalleteReceiving = ViewBindings.findChildViewById(rootView, id);
       if (btnMenuShipmentPalleteReceiving == null) {
@@ -224,8 +235,9 @@ public final class FragmentHomeBinding implements ViewBinding {
       return new FragmentHomeBinding((ConstraintLayout) rootView, btnFoldingScan, btnLocationCheck,
           btnMenuFillPallete, btnMenuItemPricing, btnMenuNextReceivingStatus, btnMenuPGPricing,
           btnMenuPicking, btnMenuPutAwayPallete, btnMenuShipmentCartonReceiving,
-          btnMenuShipmentPalleteReceiving, btnMenuShipmentReceivingPalleteCount, btnSerialMissing,
-          btnUPCPricing, space, tblMainMenu, txtStatus);
+          btnMenuShipmentCartonReceivingV2, btnMenuShipmentPalleteReceiving,
+          btnMenuShipmentReceivingPalleteCount, btnSerialMissing, btnUPCPricing, space, tblMainMenu,
+          txtStatus);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

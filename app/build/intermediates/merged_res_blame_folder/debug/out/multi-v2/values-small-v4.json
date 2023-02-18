@@ -4,7 +4,7 @@
             "outputFile": "com.bos.wms.mlkit.app-mergeDebugResources-52:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\a.haydar\\.gradle\\caches\\transforms-3\\df9b48493701655e3dc9295004ec28ad\\transformed\\material-1.6.1\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-3\\df9b48493701655e3dc9295004ec28ad\\transformed\\material-1.6.1\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
