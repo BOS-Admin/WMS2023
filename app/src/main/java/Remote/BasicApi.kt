@@ -5,13 +5,38 @@ import Model.BosApp.*
 import Model.BosApp.Checking.CheckingDCModel
 import Model.BosApp.Packing.FillBinDCModel
 import Model.BosApp.StockTake.FillRackStockTakeDCModel
+import Model.BosApp.Transfer.PutAwayModel
 import Model.BosApp.Transfer.TransferDCModel
+import Model.BosApp.Transfer.TransferShipmentItemModel
+import Model.BosApp.Transfer.TransferShipmentModel
 import io.reactivex.Observable
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
 
 interface BasicApi {
+
+    @GET("api/Login/GetRole")
+    fun GetUserRole(
+        @Query("Id") UserId: Int): Observable<ResponseBody>
+    @POST("api/Transfer/TransferShipment")
+    fun TransferShipment(
+      @Body model: TransferShipmentModel
+    ): Observable<ResponseBody>
+
+    @GET("api/StockTake/ValidateRackPutAway")
+    fun ValidateRackPutAway(
+        @Query("rackCode") ItemCode: String): Observable<RackModelItem>
+
+    @GET("api/StockTake/ValidateBinForPutAway")
+    fun ValidateBinForPutAway(
+        @Query("binBarcode") ItemCode: String
+    ): Observable<ResponseBody>
+
+
+    @POST("api/StockTake/RackPutAway")
+    fun RackPutAway(@Body model:PutAwayModel):Observable<ResponseBody>
+
 
     @POST("api/Transfer/EndProcess")
     fun EndTransferReceivingProcess(
@@ -64,13 +89,6 @@ interface BasicApi {
         @Query("ToLocationBarcode") ToLocation: String,
     ): Observable<ResponseBody>
 
-    @GET("api/Transfer/TransferShipment")
-    fun TransferShipment(
-        @Query("UserID") UserID: Int,
-        @Query("FromLocationCode") FromLocationCode: String,
-        @Query("ToLocationCode") ToLocationCode: String,
-        @Query("BinBarcodes") BinBarcodes: String
-    ): Observable<ResponseBody>
 
 
     @GET("/api/Transfer/ValidateReceiving")
@@ -204,9 +222,9 @@ interface BasicApi {
     @GET("api/StockTake/ValidateRackCount")
     fun ValidateRackCountStockTake(
         @Query("UserID") UserID: Int,
-        @Query("Count") ItemSerials: Int,
         @Query("RackBarcode") RackBarcode: String,
-        @Query("LocationId") LocationId:Int
+        @Query("LocationId") LocationId:Int,
+        @Query("Count") ItemSerials: Int
     ): Observable<ResponseBody>
 
     @GET("api/StockTake/ValidateBinCount")

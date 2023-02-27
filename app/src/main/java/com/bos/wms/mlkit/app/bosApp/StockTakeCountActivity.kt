@@ -158,7 +158,7 @@ class StockTakeCountActivity : AppCompatActivity() {
             Log.i("Ah-log",""+count);
             api= APIClient.getInstance(IPAddress,false).create(BasicApi::class.java)
             compositeDisposable.addAll(
-                api.ValidateRackCountStockTake(general.UserID,count,textBoxNb.text.toString(),locationId)
+                api.ValidateRackCountStockTake(general.UserID,textBoxNb.text.toString(),locationId,count)
                     .subscribeOn(Schedulers.io())
                     //  .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(

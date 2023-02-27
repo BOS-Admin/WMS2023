@@ -10,6 +10,7 @@ val DateAdded:String,
 val BinBarcode:String,
 val TransferStatus:Int,
 val TransferNextStatus:String,
-val CurrentTransferCode:String
+val CurrentTransferCode:String,
+val Received:Int
 
     )

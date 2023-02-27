@@ -1,5 +1,7 @@
 package com.bos.wms.mlkit.app.bosApp.Transfer
 
+import Model.BosApp.Transfer.TransferShipmentItemModel
+import Model.BosApp.Transfer.TransferShipmentModel
 import Remote.APIClient
 import Remote.BasicApi
 import android.app.AlertDialog
@@ -172,9 +174,18 @@ class ShipmentActivity : AppCompatActivity() {
             var bins:String=boxes.values.joinToString(",")
             //Log.i("Ah-log",itemsStr);
             textBoxScanned.isEnabled=false
+
+            var modelItems:ArrayList<TransferShipmentItemModel>  = arrayListOf()
+            for(it in boxes)
+                modelItems.add(TransferShipmentItemModel(it.value))
+
+            var model=
+                TransferShipmentModel (general.mainLocation,toLocation,general.UserID,modelItems)
+
+
             api= APIClient.getInstance(IPAddress,false).create(BasicApi::class.java)
             compositeDisposable.addAll(
-                api.TransferShipment(general.UserID,general.mainLocation,toLocation,bins)
+                api.TransferShipment(model)
                     .subscribeOn(Schedulers.io())
                     // .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
