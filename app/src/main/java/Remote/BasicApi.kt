@@ -16,6 +16,17 @@ import retrofit2.http.*
 
 interface BasicApi {
 
+    @GET("api/SystemControl/GetValue")
+    fun GetSystemControlValue(
+        @Query("code") code: String,
+    ): Observable<Int>
+
+    @POST("api/LotLines/ValidateBol")
+    fun ValidateBol(@Query("userId") userId:Int, @Body model: List<String>): Observable<ResponseBody>
+
+    @POST("api/LotLines/GetBolByUPCs")
+    fun GetBolByUPCs(@Query("UserID") UserID:Int, @Body model: List<String>): Observable<ResponseBody>
+
     @GET("api/Login/GetRole")
     fun GetUserRole(
         @Query("Id") UserId: Int): Observable<ResponseBody>

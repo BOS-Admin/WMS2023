@@ -23,6 +23,9 @@ public final class FragmentHomeBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button btnBolRecognition;
+
+  @NonNull
   public final Button btnFoldingScan;
 
   @NonNull
@@ -33,9 +36,6 @@ public final class FragmentHomeBinding implements ViewBinding {
 
   @NonNull
   public final Button btnMenuItemPricing;
-
-  @NonNull
-  public final Button btnMenuNextReceivingStatus;
 
   @NonNull
   public final Button btnMenuPGPricing;
@@ -73,9 +73,9 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final EditText txtStatus;
 
-  private FragmentHomeBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnFoldingScan,
-      @NonNull Button btnLocationCheck, @NonNull Button btnMenuFillPallete,
-      @NonNull Button btnMenuItemPricing, @NonNull Button btnMenuNextReceivingStatus,
+  private FragmentHomeBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnBolRecognition,
+      @NonNull Button btnFoldingScan, @NonNull Button btnLocationCheck,
+      @NonNull Button btnMenuFillPallete, @NonNull Button btnMenuItemPricing,
       @NonNull Button btnMenuPGPricing, @NonNull Button btnMenuPicking,
       @NonNull Button btnMenuPutAwayPallete, @NonNull Button btnMenuShipmentCartonReceiving,
       @NonNull Button btnMenuShipmentCartonReceivingV2,
@@ -84,11 +84,11 @@ public final class FragmentHomeBinding implements ViewBinding {
       @NonNull Button btnUPCPricing, @NonNull Space space, @NonNull TableLayout tblMainMenu,
       @NonNull EditText txtStatus) {
     this.rootView = rootView;
+    this.btnBolRecognition = btnBolRecognition;
     this.btnFoldingScan = btnFoldingScan;
     this.btnLocationCheck = btnLocationCheck;
     this.btnMenuFillPallete = btnMenuFillPallete;
     this.btnMenuItemPricing = btnMenuItemPricing;
-    this.btnMenuNextReceivingStatus = btnMenuNextReceivingStatus;
     this.btnMenuPGPricing = btnMenuPGPricing;
     this.btnMenuPicking = btnMenuPicking;
     this.btnMenuPutAwayPallete = btnMenuPutAwayPallete;
@@ -130,6 +130,12 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnBolRecognition;
+      Button btnBolRecognition = ViewBindings.findChildViewById(rootView, id);
+      if (btnBolRecognition == null) {
+        break missingId;
+      }
+
       id = R.id.btnFoldingScan;
       Button btnFoldingScan = ViewBindings.findChildViewById(rootView, id);
       if (btnFoldingScan == null) {
@@ -151,12 +157,6 @@ public final class FragmentHomeBinding implements ViewBinding {
       id = R.id.btnMenuItemPricing;
       Button btnMenuItemPricing = ViewBindings.findChildViewById(rootView, id);
       if (btnMenuItemPricing == null) {
-        break missingId;
-      }
-
-      id = R.id.btnMenuNextReceivingStatus;
-      Button btnMenuNextReceivingStatus = ViewBindings.findChildViewById(rootView, id);
-      if (btnMenuNextReceivingStatus == null) {
         break missingId;
       }
 
@@ -232,8 +232,8 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((ConstraintLayout) rootView, btnFoldingScan, btnLocationCheck,
-          btnMenuFillPallete, btnMenuItemPricing, btnMenuNextReceivingStatus, btnMenuPGPricing,
+      return new FragmentHomeBinding((ConstraintLayout) rootView, btnBolRecognition, btnFoldingScan,
+          btnLocationCheck, btnMenuFillPallete, btnMenuItemPricing, btnMenuPGPricing,
           btnMenuPicking, btnMenuPutAwayPallete, btnMenuShipmentCartonReceiving,
           btnMenuShipmentCartonReceivingV2, btnMenuShipmentPalleteReceiving,
           btnMenuShipmentReceivingPalleteCount, btnSerialMissing, btnUPCPricing, space, tblMainMenu,

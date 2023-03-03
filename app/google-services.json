@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "191168618912",
+    "project_id": "ocrapp-9a9f0",
+    "storage_bucket": "ocrapp-9a9f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191168618912:android:b4887a8ab720558d96c4c5",
+        "android_client_info": {
+          "package_name": "com.bos.wms.mlkit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "191168618912-gulrv5i1gfpor3pd17u4sfhmeh6mhgsq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB21YSwvsX8oc_1S0ZHDZrdZk72-xdckAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "191168618912-gulrv5i1gfpor3pd17u4sfhmeh6mhgsq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

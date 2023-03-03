@@ -1,190 +1,202 @@
 [
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_shipment_pallete_carton_count.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_shipment_pallete_carton_count.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\fragment_dashboard.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\fragment_dashboard.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_main_menu1.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_main_menu1.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_transfer.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_transfer.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_shipment_pallete_carton.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_shipment_pallete_carton.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_picking.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_picking.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\content_serial_generator.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_serial_generator.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\scan_upcs_item.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\scan_upcs_item.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\content_picking.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_picking.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_next_receiving_status.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_next_receiving_status.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_packing.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_packing.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\content_fillpallete.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\content_fillpallete.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\content_item_pricing.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_item_pricing.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\content_foldingscan.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\content_foldingscan.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_locationcheck.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_locationcheck.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_foldingscan.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_foldingscan.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_packing_dc.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_packing_dc.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_scan_container.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_scan_container.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_foldingscan.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_foldingscan.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_itemserial_missing.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_itemserial_missing.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_itemserial_missing.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_itemserial_missing.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_put_away.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_put_away.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_item_pricing.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_item_pricing.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_item_pricing.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_item_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\content_pg_pricing.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_pg_pricing.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_packing.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_packing.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_serial_generator.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_serial_generator.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_transfer_receiving.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_transfer_receiving.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_count.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_count.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\content_fillpallete.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_fillpallete.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_shipment_pallete_carton.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_shipment_pallete_carton.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\item_list.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\item_list.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\content_picking.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\content_picking.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_upc_pricing.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_upc_pricing.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\content_upc_pricing.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\content_upc_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_stock_take.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_stock_take.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_serial_generator.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_serial_generator.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\pop_window_main.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\pop_window_main.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\fragment_dashboard.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\fragment_dashboard.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_main_menu1.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_main_menu1.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_next_receiving_status.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_next_receiving_status.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_printer_selection.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_printer_selection.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_put_away.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_put_away.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_packing_dc.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_packing_dc.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\content_itemserial_missing.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_itemserial_missing.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_main_menu.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_main_menu.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_shipment_pallete_receiving.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_shipment_pallete_receiving.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_shipment.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_shipment.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\fragment_notifications.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\fragment_notifications.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_fillpallete.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_fillpallete.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\content_putawaypallete.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_putawaypallete.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_bol_recognition.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_bol_recognition.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_scan_container.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_scan_container.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_stock_take.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_stock_take.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\content_upc_pricing.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_upc_pricing.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\content_item_pricing.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\content_item_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_pg_pricing.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_pg_pricing.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\pop_window_main.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\pop_window_main.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\content_putawaypallete.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\content_putawaypallete.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\content_pg_pricing.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\content_pg_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_printer_selection.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_printer_selection.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\content_itemserial_missing.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\content_itemserial_missing.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_fillpallete.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_fillpallete.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\content_locationcheck.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\content_locationcheck.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_itemserial_upc_missing.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_itemserial_upc_missing.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-58:/layout/activity_scan_upcs_for_bol.xml",
+        "source": "com.bos.wms.mlkit.app-main-61:/layout/activity_scan_upcs_for_bol.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_putawaypallete.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_putawaypallete.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\item_list.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\item_list.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\content_itemserial_upc_missing.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_itemserial_upc_missing.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_scan_upcs_for_bol.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_scan_upcs_for_bol.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\fragment_home.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\fragment_home.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_upc_pricing.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_upc_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_main_menu.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_main_menu.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_shipment_pallete_receiving.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_shipment_pallete_receiving.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_packing_reason.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_packing_reason.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_transfer_receiving.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_transfer_receiving.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-53:/layout/activity_login.xml",
-        "source": "com.bos.wms.mlkit.app-main-56:/layout/activity_login.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\content_locationcheck.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_locationcheck.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_itemserial_upc_missing.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_itemserial_upc_missing.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_shipment.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_shipment.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\content_serial_generator.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\content_serial_generator.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_picking.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_picking.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\fragment_notifications.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\fragment_notifications.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_count.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_count.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_shipment_pallete_carton_count.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_shipment_pallete_carton_count.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\content_foldingscan.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_foldingscan.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\content_itemserial_upc_missing.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\content_itemserial_upc_missing.xml"
     },
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_transfer.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_transfer.xml"
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_packing_reason.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_packing_reason.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_pg_pricing.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_pg_pricing.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_locationcheck.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_locationcheck.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_putawaypallete.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_putawaypallete.xml"
     }
 ]

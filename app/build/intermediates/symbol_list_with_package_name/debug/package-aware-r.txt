@@ -27,6 +27,7 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim down_from_top
 anim fragment_fast_out_extra_slow_in
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
@@ -37,6 +38,7 @@ anim nav_default_pop_enter_anim
 anim nav_default_pop_exit_anim
 anim pop_enter_anim
 anim pop_exit_anim
+anim up_from_bottom
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -1267,6 +1269,10 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color browser_actions_bg_grey
+color browser_actions_divider_color
+color browser_actions_text_color
+color browser_actions_title_color
 color button_material_dark
 color button_material_light
 color cardview_dark_background
@@ -1924,6 +1930,8 @@ dimen action_bar_size
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
+dimen browser_actions_context_menu_max_width
+dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -2554,6 +2562,8 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_baseline_camera_capture_icon
+drawable ic_baseline_qr_code_scanner_icon
 drawable ic_clock_black_24dp
 drawable ic_dashboard_black_24dp
 drawable ic_home_black_24dp
@@ -2613,6 +2623,7 @@ drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable upc_item_delete_icon
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -2723,11 +2734,18 @@ id beginOnFirstDraw
 id beginning
 id bestChoice
 id blocking
+id bolHelpText
+id bolRecognitionActiviyLayout
 id bottom
 id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id browser_actions_header_text
+id browser_actions_menu_item_icon
+id browser_actions_menu_item_text
+id browser_actions_menu_items
+id browser_actions_menu_view
 id btn17
 id btn20
 id btn25
@@ -2742,6 +2760,7 @@ id btn75
 id btn80
 id btnA
 id btnB
+id btnBolRecognition
 id btnC
 id btnCapture
 id btnChange
@@ -2763,7 +2782,6 @@ id btnLocationCheck
 id btnLogin
 id btnMenuFillPallete
 id btnMenuItemPricing
-id btnMenuNextReceivingStatus
 id btnMenuPGPricing
 id btnMenuPicking
 id btnMenuPutAwayPallete
@@ -2797,8 +2815,11 @@ id btnputawaypalleteDone
 id buttonPanel
 id cache_measures
 id callMeasure
+id cameraPreview
+id cameraPreviewImageView
 id cancel_action
 id cancel_button
+id captureImageButton
 id carryVelocity
 id center
 id centerCrop
@@ -2817,6 +2838,7 @@ id chip3
 id chip_group
 id chronometer
 id circle_center
+id clearUPCSButton
 id clear_text
 id clip_horizontal
 id clip_vertical
@@ -2935,6 +2957,7 @@ id imageView
 id immediateStop
 id included
 id info
+id insertUPCEditText
 id invisible
 id inward
 id italic
@@ -3143,6 +3166,10 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scanUPCSButton
+id scanUPCSHelpText
+id scanUPCsForBolActivityLayout
+id scannedUPCsList
 id screen
 id scroll
 id scrollIndicatorDown
@@ -3315,7 +3342,10 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id upcDeleteImage
+id upcText
 id useLogo
+id vertical_center_line
 id vertical_only
 id viewFinder
 id view_offset_helper
@@ -3430,6 +3460,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_bol_recognition
 layout activity_count
 layout activity_fillpallete
 layout activity_foldingscan
@@ -3451,6 +3482,7 @@ layout activity_printer_selection
 layout activity_put_away
 layout activity_putawaypallete
 layout activity_scan_container
+layout activity_scan_upcs_for_bol
 layout activity_serial_generator
 layout activity_shipment
 layout activity_shipment_pallete_carton
@@ -3460,6 +3492,8 @@ layout activity_stock_take
 layout activity_transfer
 layout activity_transfer_receiving
 layout activity_upc_pricing
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
 layout content_fillpallete
 layout content_foldingscan
 layout content_item_pricing
@@ -3555,6 +3589,7 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout pop_window_main
+layout scan_upcs_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -3582,6 +3617,7 @@ navigation mobile_navigation
 navigation nav_graph
 navigation nav_graph2
 plurals mtrl_badge_content_description
+raw keep
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3614,6 +3650,7 @@ string action_sign_in_short
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
+string bol_recognition
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
 string character_counter_content_description
@@ -3639,15 +3676,25 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string copy_toast_msg
+string default_web_client_id
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fallback_menu_item_copy_link
+string fallback_menu_item_open_in_browser
+string fallback_menu_item_share_link
 string find_face_contour_button
 string find_objects_button
 string find_text_button
 string find_text_cloud_button
 string first_fragment_label
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string hello_first_fragment
 string hello_second_fragment
 string hide_bottom_view_on_scroll_behavior
@@ -3737,6 +3784,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string previous
+string project_id
 string prompt_email
 string prompt_password
 string search_menu_title
@@ -5004,6 +5052,7 @@ styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
 xml file_paths
+xml image_share_filepaths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

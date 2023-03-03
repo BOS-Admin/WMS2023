@@ -115,7 +115,7 @@
 
             >
 
-            <Button
+            <!--<Button
                 android:id="@+id/btnMenuNextReceivingStatus"
                 style="button"
                 android:layout_width="150sp"
@@ -126,6 +126,19 @@
                 android:singleLine="false"
                 android:soundEffectsEnabled="false"
                 android:text="Item Receiving Station"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />-->
+            <Button
+                android:id="@+id/btnBolRecognition"
+                style="button"
+                android:layout_width="150sp"
+                android:layout_height="70sp"
+                android:background="@android:color/holo_blue_light"
+                android:ellipsize="end"
+                android:shadowColor="@color/colorPrimary"
+                android:singleLine="false"
+                android:soundEffectsEnabled="false"
+                android:text="@string/bol_recognition"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
@@ -249,7 +262,6 @@
             <Space
                 android:layout_width="20sp"
                 android:layout_height="wrap_content" />
-
             <Button
                 android:id="@+id/btnMenuShipmentCartonReceiving"
                 style="button"
@@ -264,6 +276,7 @@
                 android:text="@string/shipment_carton_receiving"
                 android:textColor="@android:color/white"
                 android:textSize="20sp" />
+
         </TableRow>
 
 

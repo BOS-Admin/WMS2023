@@ -53,8 +53,12 @@ class HomeFragment : Fragment() {
             ProceedPickingClick()
         }
 
-        root.btnMenuNextReceivingStatus.setOnClickListener {
+        /*root.btnMenuNextReceivingStatus.setOnClickListener {
             ProceedNextReceivingStatus()
+        }*/
+
+        root.btnBolRecognition.setOnClickListener {
+            ProceedBolRecognition()
         }
         root.btnLocationCheck.setOnClickListener {
             ProceedLocationCheckClick()
@@ -184,6 +188,12 @@ class HomeFragment : Fragment() {
         }
         finally {
         }
+    }
+
+    fun ProceedBolRecognition() {
+        val intent = Intent (getActivity(), BolRecognitionActivity::class.java)
+        startActivity(intent)
+        txtStatus.setText("")
     }
 
     fun ProceedNextReceivingStatus() {

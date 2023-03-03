@@ -64,5 +64,25 @@ object APIClient {
         return instance!!
     }
 
+    @JvmStatic
+    fun getInstanceStatic(IPAddress:String,ForceInit:Boolean):Retrofit {
+        isFake=false;
+        if (instance == null || ForceInit) {
+            //instance = Retrofit.Builder().baseUrl("http://10.188.30.110/BOS_WMS_API/")
+            val gson = GsonBuilder()
+                .setLenient()
+                .create()
+            var IP:String=IPAddress;
+            if(!IP.endsWith("/"))
+                IP=IP+"/";
+            instance = Retrofit.Builder().baseUrl("http://" + IP)
+                //instance = Retrofit.Builder().baseUrl("http://192.168.10.82:5000/")
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .addConverterFactory(ScalarsConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .build()
+        }
+        return instance!!
+    }
 
 }

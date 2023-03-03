@@ -39,6 +39,9 @@ class MainMenu : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        Logger.Initialize(applicationContext)
+
     }
 
     override fun onBackPressed() {

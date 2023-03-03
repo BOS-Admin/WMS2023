@@ -11,8 +11,10 @@
         android:maxSdkVersion="18" />
 
     <uses-feature android:name="android.hardware.camera.any" />
-    <uses-feature android:name="android.hardware.camera"
+    <uses-feature
+        android:name="android.hardware.camera"
         android:required="true" />
+
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -22,245 +24,201 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-
         android:usesCleartextTraffic="true">
-        <provider android:authorities="${applicationId}.fileprovider" android:name="androidx.core.content.FileProvider" android:exported="false" android:grantUriPermissions="true">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        <activity
+            android:name=".app.ScanUPCsForBolActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".app.BolRecognitionActivity"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
         </provider>
 
         <activity
             android:name=".app.bosApp.PutAwayActivity"
             android:label="Put Away"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.ScanRackPutAwayActivity"
             android:label="Scan Rack Put Away"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.Transfer.TransferReceivingDCActivity"
             android:label="Transfer Receiving DC"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.Transfer.TransferReceivingActivity"
             android:label="Transfer Receiving"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.Transfer.ScanTransferReceivingActivity"
             android:label="Scan Transfer Receiving"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.Transfer.TransferActivity"
             android:label="Transfer Type"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.Transfer.ShipmentActivity"
             android:label="Transfer Shipment"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
-        <activity android:name=".app.NextReceivingStatusActivity"></activity>
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".app.NextReceivingStatusActivity" />
         <activity
             android:name=".app.bosApp.PackingDCActivity"
             android:label="@string/title_activity_packing_dc"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.StockTakeCountActivity"
             android:label="@string/title_activity_stock_count"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.ScanForCountStockTakeActivity"
             android:label="@string/title_activity_scan_count_stock_ake"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.ScanRackStockTakeActivity"
             android:label="@string/title_activity_scan_rack_count_stock_ake"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.CheckingActivity"
             android:label="@string/title_activity_checking_dc"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.ScanBinForCheckingActivity"
             android:label="@string/title_activity_scan_checking"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.StockTakeDCActivity"
             android:label="@string/title_activity_stock_take_dc"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.CountActivity"
             android:label="Count"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.ScanBoxForStockTakeActivity"
             android:label="@string/title_activity_scan_box_stock_dc"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.StockTakeActivity"
             android:label="@string/title_activity_stock_take"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.ScanBinForCountActivity"
             android:label="@string/title_activity_scan_count"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.ScanContainerActivity"
             android:label="@string/title_activity_scan_container"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.PrinterSelectionActivity"
             android:label="@string/title_activity_printer_selection"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.PackingReasonActivity"
             android:label="@string/title_activity_packing_reason"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.PackingActivity"
             android:label="@string/title_activity_packing_dc"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
-
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.StockTakeRackDCActivity"
             android:label="Stock Take Rack DC"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-
-
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.PickingActivity"
             android:label="@string/title_activity_picking"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.LocationCheckActivity"
             android:label="Location Check"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.PutAwayPalleteActivity"
             android:label="Put Away Pallete"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
-
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.ShipmentPalleteReceivingActivity"
             android:label="Shipment Pallete Receiving"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.ShipmentCartonReceivingActivity"
             android:label="Shipment Carton Receiving"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.ShipmentCartonReceivingV2Activity"
             android:label="Shipment Carton Receiving V2"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.ShipmentCartonCountReceivingActivity"
             android:label="Shipment Receiving Carton Count"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
-
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.FoldingScanActivity"
             android:label="Folding Scan"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
-
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.UPCPricingActivity"
             android:label="UPC Pricing"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
-
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.PGPricingActivity"
             android:label="PG Pricing"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
-
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.ItemSerialMissingActivity"
             android:label="Missing Item"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.ItemSerialUPCMissingActivity"
             android:label="Missing Item"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
-
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.SerialGeneratorActivity"
             android:label="Serial Generator"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".app.ItemPricingActivity"
             android:label="Item Pricing"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.FillPalleteActivity"
             android:label="Fill Pallete Activity"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.MainMenu"
             android:label="@string/title_activity_main_menu" />
         <activity
             android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login"
-            android:exported="true">
-
+            android:exported="true"
+            android:label="@string/title_activity_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
