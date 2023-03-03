@@ -49,6 +49,14 @@
         </provider>
 
         <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.PutAwayActivity"
+            android:label="Put Away"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.ScanRackPutAwayActivity"
+            android:label="Scan Rack Put Away"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
             android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferReceivingDCActivity"
             android:label="Transfer Receiving DC"
             android:windowSoftInputMode="stateAlwaysHidden" />

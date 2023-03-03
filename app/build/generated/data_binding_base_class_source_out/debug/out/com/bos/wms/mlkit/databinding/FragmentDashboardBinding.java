@@ -25,6 +25,9 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final Button btnCount;
 
   @NonNull
+  public final Button btnPutAway;
+
+  @NonNull
   public final Button btnStockTake;
 
   @NonNull
@@ -40,11 +43,12 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final EditText textUser;
 
   private FragmentDashboardBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnCount,
-      @NonNull Button btnStockTake, @NonNull Button btnTransfer,
+      @NonNull Button btnPutAway, @NonNull Button btnStockTake, @NonNull Button btnTransfer,
       @NonNull LinearLayout layoutDashboard, @NonNull EditText textBranch,
       @NonNull EditText textUser) {
     this.rootView = rootView;
     this.btnCount = btnCount;
+    this.btnPutAway = btnPutAway;
     this.btnStockTake = btnStockTake;
     this.btnTransfer = btnTransfer;
     this.layoutDashboard = layoutDashboard;
@@ -85,6 +89,12 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnPutAway;
+      Button btnPutAway = ViewBindings.findChildViewById(rootView, id);
+      if (btnPutAway == null) {
+        break missingId;
+      }
+
       id = R.id.btnStockTake;
       Button btnStockTake = ViewBindings.findChildViewById(rootView, id);
       if (btnStockTake == null) {
@@ -115,8 +125,8 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentDashboardBinding((ConstraintLayout) rootView, btnCount, btnStockTake,
-          btnTransfer, layoutDashboard, textBranch, textUser);
+      return new FragmentDashboardBinding((ConstraintLayout) rootView, btnCount, btnPutAway,
+          btnStockTake, btnTransfer, layoutDashboard, textBranch, textUser);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

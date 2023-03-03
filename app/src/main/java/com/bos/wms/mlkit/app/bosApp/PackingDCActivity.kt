@@ -33,8 +33,6 @@ import java.io.IOException
 
 class PackingDCActivity : AppCompatActivity() {
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_packing_dc)

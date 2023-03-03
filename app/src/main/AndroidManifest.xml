@@ -29,6 +29,18 @@
         </provider>
 
         <activity
+            android:name=".app.bosApp.PutAwayActivity"
+            android:label="Put Away"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <activity
+            android:name=".app.bosApp.ScanRackPutAwayActivity"
+            android:label="Scan Rack Put Away"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
+
+        <activity
             android:name=".app.bosApp.Transfer.TransferReceivingDCActivity"
             android:label="Transfer Receiving DC"
             android:windowSoftInputMode="stateAlwaysHidden"

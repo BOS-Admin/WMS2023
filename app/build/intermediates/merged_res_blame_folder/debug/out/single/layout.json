@@ -1,15 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_main_menu1.xml",
-        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_main_menu1.xml"
-    },
-    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_shipment_pallete_carton_count.xml",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_shipment_pallete_carton_count.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-53:/layout/activity_transfer_receiving.xml",
-        "source": "com.bos.wms.mlkit.app-main-56:/layout/activity_transfer_receiving.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_main_menu1.xml",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_main_menu1.xml"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_shipment_pallete_carton.xml",
@@ -92,6 +88,10 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_next_receiving_status.xml"
     },
     {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_put_away.xml",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_put_away.xml"
+    },
+    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\content_itemserial_missing.xml",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\content_itemserial_missing.xml"
     },
@@ -158,6 +158,10 @@
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\activity_packing_reason.xml",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-56:\\layout\\activity_packing_reason.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-53:/layout/activity_login.xml",
+        "source": "com.bos.wms.mlkit.app-main-56:/layout/activity_login.xml"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-53:\\layout\\content_locationcheck.xml",
