@@ -19,7 +19,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.bos.wms.mlkit.General
 import com.bos.wms.mlkit.R
+import com.bos.wms.mlkit.app.Logger
 import com.bos.wms.mlkit.app.MainMenu
+import com.bos.wms.mlkit.app.ZebraPrinter
 import com.bos.wms.mlkit.customView.PopWindowMain
 import com.bos.wms.mlkit.databinding.ActivityLoginBinding
 import com.bos.wms.mlkit.storage.Storage
@@ -273,6 +275,11 @@ class LoginActivity : AppCompatActivity() {
             login(username.text.toString(), password.text.toString())
         }
         username.requestFocus()
+
+        //Initialize classes
+        Logger.Initialize(applicationContext)
+        ZebraPrinter.establishFirstConnection(mStorage.getDataString("PrinterMacAddress", "00"))
+
     }
 
 

@@ -21,14 +21,25 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
+import android.text.InputType;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkResponse;
+import com.android.volley.NoConnectionError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.TimeoutError;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.Volley;
 import com.bos.wms.mlkit.R;
 import com.bos.wms.mlkit.storage.Storage;
 import com.google.android.gms.tasks.Continuation;
@@ -46,6 +57,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
@@ -53,13 +65,16 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import Remote.APIClient;
 import Remote.BasicApi;
+import Remote.VolleyMultipartRequest;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
@@ -67,11 +82,11 @@ import retrofit2.HttpException;
 
 public class BolRecognitionActivity extends AppCompatActivity {
 
-    private static final int CAMERA_PERMISSION_REQUEST_CODE = 1000;
+    private static final int CAMERA_PERMISSION_REQUEST_CODE = 1000, BLUETOOTH_PERMISSION_REQUEST_CODE = 1001;
 
     private PreviewView cameraPreview;
     private ImageView cameraPreviewImageView;
-    private ImageButton captureImageButton, scanUPCSButton;
+    private ImageButton captureImageButton, scanUPCSButton, printerImageButton;
 
     private FirebaseAuth firebaseAuh;
     private FirebaseFunctions firebaseFunctions;
@@ -85,6 +100,10 @@ public class BolRecognitionActivity extends AppCompatActivity {
 
     public TextView bolHelpText;
 
+    public ZebraPrinter printer;
+
+    public String[] currentPrintData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,7 +111,9 @@ public class BolRecognitionActivity extends AppCompatActivity {
 
         Storage mStorage = new Storage(getApplicationContext());
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82");
+        printer = new ZebraPrinter(mStorage.getDataString("PrinterMacAddress", "00"));
 
+        //Initialize firebase and the the firebase authenticator
         FirebaseApp.initializeApp(this);
         firebaseAuh = FirebaseAuth.getInstance();
         CloudLogin();
@@ -101,6 +122,119 @@ public class BolRecognitionActivity extends AppCompatActivity {
 
         captureImageButton = findViewById(R.id.captureImageButton);
         captureImageButton.setEnabled(false);
+
+        printerImageButton = findViewById(R.id.printerImageButton);
+        printerImageButton.setImageResource(R.drawable.baseline_print_disabled_icon);
+
+        //This will allow us to enable the printer in the UI first, then we can double check if it is still connecting after the first connection
+        if(ZebraPrinter.isFirstConnectionEstablished()){
+            printerImageButton.setImageResource(R.drawable.baseline_print_icon);
+        }else {
+            printerImageButton.setImageResource(R.drawable.baseline_print_disabled_icon);
+        }
+
+        printer.AttemptConnection((result) -> {
+            if(result){ //Connection Established
+                printerImageButton.setImageResource(R.drawable.baseline_print_icon);
+                ZebraPrinter.setFirstConnectionEstablished(true);
+            }else {
+                printerImageButton.setImageResource(R.drawable.baseline_print_disabled_icon);
+                ZebraPrinter.setFirstConnectionEstablished(false);
+            }
+        });
+
+        printer.setOnPrinterConnectionFailListener((result) -> {
+            if(!result){ //Connection Failed
+                printerImageButton.setImageResource(R.drawable.baseline_print_disabled_icon);
+                ZebraPrinter.setFirstConnectionEstablished(false);
+            }
+        });
+
+        //Open the mac dialog to change the mac address
+        printerImageButton.setOnLongClickListener((click) -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Please scan or type the printer's mac address");
+
+            final EditText input = new EditText(this);
+
+            input.setInputType(InputType.TYPE_CLASS_TEXT);
+            builder.setView(input);
+            builder.setPositiveButton("Pair", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    ZebraPrinter.AttemptConnection(input.getText().toString(), (result) -> {
+                        if(result){ //Connection Established
+                            printerImageButton.setImageResource(R.drawable.baseline_print_icon);
+                            ZebraPrinter.setFirstConnectionEstablished(true);
+                            mStorage.saveData("PrinterMacAddress", input.getText().toString());
+                            printer.setMacAddress(input.getText().toString());
+                            Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "Printer Paired Successfully", Snackbar.LENGTH_LONG)
+                                    .setAction("No action", null).show();
+                        }else {
+                            //printerImageButton.setImageResource(R.drawable.baseline_print_disabled_icon);
+                            //printerEnabled = false; This isnt needed because if the old printer was enabled we need to be able to reprint to it
+                            Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "Printer Failed To Pair", Snackbar.LENGTH_LONG)
+                                    .setAction("No action", null).show();
+                        }
+                    });
+                }
+            });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+
+            builder.show();
+            input.requestFocus();
+            return false;
+        });
+
+        printerImageButton.setOnClickListener((click) -> {
+            if(ZebraPrinter.isFirstConnectionEstablished()){
+                if(currentPrintData != null && currentPrintData.length == 2){
+                    printer.printBolData(currentPrintData[0], currentPrintData[1]);
+                }
+            }else {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Please scan or type the printer's mac address");
+
+                final EditText input = new EditText(this);
+
+                input.setInputType(InputType.TYPE_CLASS_TEXT);
+                builder.setView(input);
+                builder.setPositiveButton("Pair", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        ZebraPrinter.AttemptConnection(input.getText().toString(), (result) -> {
+                            if(result){ //Connection Established
+                                printerImageButton.setImageResource(R.drawable.baseline_print_icon);
+                                ZebraPrinter.setFirstConnectionEstablished(true);
+                                mStorage.saveData("PrinterMacAddress", input.getText().toString());
+                                printer.setMacAddress(input.getText().toString());
+                                Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "Printer Paired Successfully", Snackbar.LENGTH_LONG)
+                                        .setAction("No action", null).show();
+                            }else {
+                                printerImageButton.setImageResource(R.drawable.baseline_print_disabled_icon);
+                                ZebraPrinter.setFirstConnectionEstablished(false);
+                                Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "Printer Failed To Pair", Snackbar.LENGTH_LONG)
+                                        .setAction("No action", null).show();
+                            }
+                        });
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+
+                builder.show();
+                input.requestFocus();
+            }
+        });
 
         cameraPreviewImageView = findViewById(R.id.cameraPreviewImageView);
         cameraPreviewImageView.setVisibility(View.INVISIBLE);
@@ -127,40 +261,38 @@ public class BolRecognitionActivity extends AppCompatActivity {
             requestCameraPermissions();
         }
 
+        if(!bluetoothPermissionsGranted()){
+            requestBluetoothPermissions();
+        }
+
         APICheck();
 
     }
 
     /* OCR Processing */
 
-    public String[] possibleBOLAliases = {
-            "BOL", "OL", "BL", "BO"
-    };
-
-    public void processOCRData(String text){
-        String[] lines = text.split("\n");
-        for(String line : lines){
-            for(String alias : possibleBOLAliases){
-                if(line.contains(alias)){
-                    String toCheck = line.replaceAll("[^0-9]", "");
-                    if(toCheck.length() == 8){
-                        processBOLNumber(toCheck);
-                        return;
-                    }
-                }
-            }
-        }
-    }
-
+    /**
+     * Process the text to gather the bol number by splitting the text to lines
+     * Splitting the lines by spaces
+     * In some cases the spaces might be \r so to be safe we split the result of the spaces split by \r
+     * then we clear any unwanted characters like text that might be read along the line
+     * then we add the bol to an array after checking that its 8 numbers to send to the respective api and check its validity
+     *
+     * Note: Since we are splitting the line by spaces and we are looping through all the chunks of letter/numbers left
+     * We can skip the part for the text filtering (removing unwanted characters and leaving numbers) and check if the chunk of characters we have
+     * are only numbers for better number accuracy. But in some cases we might not know what the Google Vision OCR might return. So for that reason this is
+     * going to stay for better results accuracy.
+     * @param text The actual text received from the google vision api
+     */
     public void processMultipleOCRData(String text){
         String[] lines = text.split("\n");
         ArrayList<String> bols = new ArrayList<String>();
-        for(String line : lines){
+        for(String line : lines){//Bot/3812321
             String[] args = line.split(" ");
             for(String arg : args){
                 String[] args2 = arg.split("\r");
                 for(String  arg2 : args2){
-                    arg2 = arg2.replaceAll("[^0-9]", "");
+                    arg2 = arg2.replaceAll("/", "1").replaceAll("[^0-9]", "");
                     if(arg2.length() == 8 && !bols.contains(arg2)){
                         bols.add(arg2);
                     }
@@ -170,6 +302,15 @@ public class BolRecognitionActivity extends AppCompatActivity {
         processBOLNumber(bols.toArray(new String[0]));
     }
 
+    /**
+     * Process a list of bol numbers or single bol number by sending the numbers to the ValidateBol api and verifying that the bol
+     * number is valid.
+     *
+     * If The number is invalid the API will return a BadRequest result and we can show the error message to the user
+     *
+     * The Api returns the Box Serial as well, and the bol number + the box serial will automatically be printed via the agent's portable printer
+     * @param bols A Single Bol, Or An Array Of Bols To Process
+     */
     public void processBOLNumber(String... bols){
         Logger.Debug("OCR", "ProcessBOLNumber - Detected BOLS " + Arrays.toString(bols));
 
@@ -203,8 +344,14 @@ public class BolRecognitionActivity extends AppCompatActivity {
                                                 .setIcon(android.R.drawable.ic_dialog_alert)
                                                 .show();*/
 
-
-                                        //Print Bol Number And Serial
+                                        currentPrintData = new String[]{
+                                                json.getString("bol"),
+                                                json.getString("boxSerial")
+                                        };
+                                        if(ZebraPrinter.isFirstConnectionEstablished()) {
+                                            //Print Bol Number And Serial
+                                            printer.printBolData(json.getString("bol"), json.getString("boxSerial"));
+                                        }
                                         Logger.Debug("API", "ProcessBOLNumber - Analyzed Data " + formattedResult);
                                         bolHelpText.setText(formattedResult);
 
@@ -221,13 +368,14 @@ public class BolRecognitionActivity extends AppCompatActivity {
                                                 })
                                                 .setIcon(android.R.drawable.ic_dialog_alert)
                                                 .show();*/
-
+                                        currentPrintData = null;
                                         bolHelpText.setText(s.string());
                                         Logger.Debug("API", "ProcessBOLNumber - Returned Error " + s.string());
                                     }
 
                                 }
                             }, (throwable) -> {
+                                currentPrintData = null;
                                 if(throwable instanceof HttpException){
                                     HttpException ex = (HttpException) throwable;
                                     /*new AlertDialog.Builder(this)
@@ -252,6 +400,7 @@ public class BolRecognitionActivity extends AppCompatActivity {
                             }));
 
         } catch (Throwable e) {
+            currentPrintData = null;
             bolHelpText.setText("Press one of the options below to start");
             Logger.Error("API", "ProcessBOLNumber - Error Connecting: " + e.getMessage());
             Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "Connection To Server Failed!", Snackbar.LENGTH_LONG)
@@ -286,6 +435,9 @@ public class BolRecognitionActivity extends AppCompatActivity {
         }
     }*/
 
+    /**
+     * Start the back camera, and build the preview for the user to see
+     */
     public void startCamera(){
         captureImageButton.setEnabled(true);
         ListenableFuture<ProcessCameraProvider> cameraProviderFuture = ProcessCameraProvider.getInstance(this);
@@ -318,6 +470,10 @@ public class BolRecognitionActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Get the LotIdentificationMinUpcs from the SystemControl table by using the GetSystemControlValue api
+     * After the value is receiving we update the MinScannedItemsUPC value to match that of the SystemControl table
+     */
     public void APICheck(){
         try {
             BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
@@ -343,6 +499,9 @@ public class BolRecognitionActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Capture an image and upload it to the Google Vision api
+     */
     public void captureImage() {
 
         captureImageButton.setEnabled(false);
@@ -374,6 +533,7 @@ public class BolRecognitionActivity extends AppCompatActivity {
                     public void onImageSaved(ImageCapture.OutputFileResults outputFileResults) {
                         Bitmap image = BitmapFactory.decodeFile(photoFile.getAbsolutePath());
                         uploadImage(image);
+                        //uploadDebugImage(image, photoFile, 0);
                         boolean delete = photoFile.delete();
                         Logger.Debug("CAMERA", "CaptureImage - Image Saved And Uploaded, Deleted Image File? " + delete);
                     }
@@ -387,20 +547,46 @@ public class BolRecognitionActivity extends AppCompatActivity {
                     }
                 }
         );
+
     }
 
+    /**
+     * Clean up the camera when the activity is destroyed
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();
         cameraExecutor.shutdown();
     }
 
+    /**
+     * Check if the camera permissions are granted for the camera preview and capture
+     * @return
+     */
     public boolean cameraPermissionsGranted(){
         return ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
     }
 
+    /**
+     * Request the camera permissions from the user
+     */
     public void requestCameraPermissions(){
         ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.CAMERA}, CAMERA_PERMISSION_REQUEST_CODE);
+    }
+
+    /**
+     * Check if the bluetooth permissions are granted for the portable printer
+     * @return
+     */
+    public boolean bluetoothPermissionsGranted(){
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    /**
+     * Request the camera permissions from the user
+     */
+    public void requestBluetoothPermissions(){
+        ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.BLUETOOTH_ADMIN}, BLUETOOTH_PERMISSION_REQUEST_CODE);
     }
 
     @Override
@@ -408,15 +594,28 @@ public class BolRecognitionActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == CAMERA_PERMISSION_REQUEST_CODE && grantResults.length > 0) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Logger.Error("CAMERA", "OnRequestPermissionsResult - Camera Started, User Granted Permissions");
+                Logger.Debug("CAMERA", "OnRequestPermissionsResult - Camera Started, User Granted Permissions");
                 startCamera();
             } else {
                 Toast.makeText(this, "Can't use camera scan", Toast.LENGTH_LONG).show();
                 Logger.Error("CAMERA", "OnRequestPermissionsResult - User Failed To Grant Camera Permissions");
             }
         }
+        if (requestCode == BLUETOOTH_PERMISSION_REQUEST_CODE && grantResults.length > 0) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Logger.Debug("BLUETOOTH", "OnRequestPermissionsResult - Bluetooth Can Pair, User Granted Permissions");
+                startCamera();
+            } else {
+                Toast.makeText(this, "Can't use portable printer", Toast.LENGTH_LONG).show();
+                Logger.Error("BLUETOOTH", "OnRequestPermissionsResult - User Failed To Grant Bluetooth Permissions");
+            }
+        }
     }
 
+    /**
+     * This is used to get the output directory of the application were we can save a temp image of the camera capture
+     * @return File path
+     */
     private File getOutputDirectory() {
         File[] allMediaDirs = getExternalMediaDirs();
         File mediaDir = allMediaDirs.length > 0 ? allMediaDirs[0] : null;
@@ -427,23 +626,17 @@ public class BolRecognitionActivity extends AppCompatActivity {
         return (mediaDir != null && mediaDir.exists()) ? mediaDir : getFilesDir();
     }
 
-    /*public void uploadImage(Bitmap bitmap, File fileName, int trails){
+    public void uploadDebugImage(Bitmap bitmap, File fileName, int trails){
 
         if(trails>1000){
+            Log.e("ERROR", "Trails Reached 1000");
             return;
         }
 
-        VolleyMultipartRequest multipartRequest = new VolleyMultipartRequest(Request.Method.POST, "http://192.168.50.20:5000/FileUpload", new Response.Listener<NetworkResponse>() {
+        VolleyMultipartRequest multipartRequest = new VolleyMultipartRequest(Request.Method.POST, "http://192.168.50.20:5001/api/BolRecognition/UploadImage", new Response.Listener<JSONObject>() {
             @Override
-            public void onResponse(NetworkResponse response) {
-                String resultResponse = new String(response.data);
-                try {
-                    JSONObject result = new JSONObject(resultResponse);
-                    String status = result.getString("status");
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+            public void onResponse(JSONObject response) {
+                Log.e("Response", "Got response " + response.toString());
             }
         }, new Response.ErrorListener() {
             @Override
@@ -456,6 +649,7 @@ public class BolRecognitionActivity extends AppCompatActivity {
                     } else if (error.getClass().equals(NoConnectionError.class)) {
                         errorMessage = "Failed to connect server";
                     }
+                    uploadDebugImage(bitmap, fileName, trails + 1);
                 } else {
                     String result = new String(networkResponse.data);
                     try {
@@ -485,14 +679,25 @@ public class BolRecognitionActivity extends AppCompatActivity {
         }) {
 
             @Override
-            protected Map<String, DataPart> getByteData() {
+            public Map<String, DataPart> getByteData() {
                 Map<String, DataPart> params = new HashMap<>();
-                params.put("image", new DataPart(fileName.getAbsolutePath(), getFileDataFromBitmap(bitmap)));
+                params.put("image", new DataPart(fileName.getAbsolutePath(), getFileDataFromBitmap(bitmap), null));
                 return params;
             }
         };
         multipartRequest.setRetryPolicy(new DefaultRetryPolicy(15000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
+        this.runOnUiThread(new Runnable() {
+            public void run() {
+                final Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Volley.newRequestQueue(getApplicationContext()).add(multipartRequest);
+                    }
+                }, 1000L * Math.min(trails,100));
+            }
+        });
     }
 
     public static byte[] getFileDataFromBitmap(Bitmap bitmap) {
@@ -501,32 +706,11 @@ public class BolRecognitionActivity extends AppCompatActivity {
         return byteArrayOutputStream.toByteArray();
     }
 
-    private Bitmap scaleBitmapDown(Bitmap bitmap, int maxDimension) {
-        int originalWidth = bitmap.getWidth();
-        int originalHeight = bitmap.getHeight();
-        int resizedWidth = maxDimension;
-        int resizedHeight = maxDimension;
-
-        if (originalHeight > originalWidth) {
-            resizedHeight = maxDimension;
-            resizedWidth = (int) (resizedHeight * (float) originalWidth / (float) originalHeight);
-        } else if (originalWidth > originalHeight) {
-            resizedWidth = maxDimension;
-            resizedHeight = (int) (resizedWidth * (float) originalHeight / (float) originalWidth);
-        } else if (originalHeight == originalWidth) {
-            resizedHeight = maxDimension;
-            resizedWidth = maxDimension;
-        }
-        return Bitmap.createScaledBitmap(bitmap, resizedWidth, resizedHeight, false);
-    }
-
-    public Task<JsonElement> annotateImage(String jsonRequest){
-        return firebaseFunctions.getHttpsCallable("annotateImage").call(jsonRequest).continueWith((task) -> JsonParser.parseString(new Gson().toJson(task.getResult().getData())));
-    }
-    */
-
     /* Firebase Processing */
 
+    /**
+     * Sign in to firebase using a username and password. This is needed to be able to call the Google Vision API
+     */
     public void CloudLogin(){
         firebaseAuh.signInWithEmailAndPassword("ocr@katayagroup.com","Feras@!@#123").addOnCompleteListener(this, (result) -> {
             if(result.isSuccessful()){
@@ -545,6 +729,11 @@ public class BolRecognitionActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Sends the image to the Google Vision API (Uses FireBase Functions - annotateImage Function)
+     * @param requestJson The json string of the request including the image encoded in Base64 and some variables for the google vision api to use
+     * @return Returns a result from the Google Vision API as a JsonElement
+     */
     private Task<JsonElement> annotateImage(String requestJson) {
         return firebaseFunctions
                 .getHttpsCallable("annotateImage")
@@ -560,6 +749,14 @@ public class BolRecognitionActivity extends AppCompatActivity {
                 });
     }
 
+    /**
+     * Uploads a bitmap image to the Google Vision API using the annotateImage function and waits for the result
+     * The image is first resized to the set maxDimension of 640
+     * Then the image is encoded into a Base64 string
+     * A json object is then created that holds the info of the request and the variables required by the Google Vision API
+     * After the image is analyzed and the Google Vision API returns a result we process the result using the processMultipleOCRData function
+     * @param originalBitmap The capture of the camera as a bitmap
+     */
     public void uploadImage(Bitmap originalBitmap){
         Bitmap bitmap = scaleBitmapDown(originalBitmap, 640);
 
@@ -591,43 +788,52 @@ public class BolRecognitionActivity extends AppCompatActivity {
 
         request.add("imageContext", imageContext);
 
-        annotateImage(request.toString()).addOnCompleteListener((task) -> {
-            if(task.isSuccessful()){
-                cameraPreviewImageView.setVisibility(View.INVISIBLE);
-                captureImageButton.setEnabled(true);
-                try {
-                    if(task.getResult() != null && task.getResult().getAsJsonArray() != null){
-                        String resultText = task.getResult().getAsJsonArray().get(0).getAsJsonObject().get("fullTextAnnotation").getAsJsonObject()
-                                .get("text").getAsString();
-                        Logger.Debug("OCR", "UploadImage - Analyzed Image Data, Processing The OCR For BOL");
-                        processMultipleOCRData(resultText);
+        if(firebaseFunctions != null){
+            annotateImage(request.toString()).addOnCompleteListener((task) -> {
+                if(task.isSuccessful()){
+                    cameraPreviewImageView.setVisibility(View.INVISIBLE);
+                    captureImageButton.setEnabled(true);
+                    try {
+                        if(task.getResult() != null && task.getResult().getAsJsonArray() != null){
+                            String resultText = task.getResult().getAsJsonArray().get(0).getAsJsonObject().get("fullTextAnnotation").getAsJsonObject()
+                                    .get("text").getAsString();
+                            Logger.Debug("OCR", "UploadImage - Analyzed Image Data, Processing The OCR For BOL");
+                            processMultipleOCRData(resultText);
 
-                    }else {
-                        Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "Failed analyzing the data", Snackbar.LENGTH_LONG)
+                        }else {
+                            Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "Failed analyzing the data", Snackbar.LENGTH_LONG)
+                                    .setAction("No action", null).show();
+                            Logger.Debug("OCR", "UploadImage - Failed analyzing the data");
+                        }
+                    }catch (Exception ex){
+                        Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "An internal error occurred", Snackbar.LENGTH_LONG)
                                 .setAction("No action", null).show();
-                        Logger.Debug("OCR", "UploadImage - Failed analyzing the data");
+                        Logger.Error("OCR", "UploadImage - Returned Error: " + ex.getMessage());
                     }
-                }catch (Exception ex){
-                    Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "An internal error occurred", Snackbar.LENGTH_LONG)
+                }else {
+                    cameraPreviewImageView.setVisibility(View.INVISIBLE);
+                    captureImageButton.setEnabled(true);
+                    Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "A cloud error occurred", Snackbar.LENGTH_LONG)
                             .setAction("No action", null).show();
-                    Logger.Error("OCR", "UploadImage - Returned Error: " + ex.getMessage());
+                    Logger.Error("OCR", "UploadImage - Error: " + task.getException().getMessage());
                 }
-            }else {
-                cameraPreviewImageView.setVisibility(View.INVISIBLE);
-                captureImageButton.setEnabled(true);
-                Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "A cloud error occurred", Snackbar.LENGTH_LONG)
-                        .setAction("No action", null).show();
-                Logger.Debug("OCR", "Error: " + task.getException().getMessage());
-            }
-        });
-
-
-        Logger.Debug("OCR", "UploadImage - Sent Request To Google Vision, Bytes Size: " + imageBytes.length);
-
-
-
+            });
+            Logger.Debug("OCR", "UploadImage - Sent Request To Google Vision, Bytes Size: " + imageBytes.length);
+        }else {
+            cameraPreviewImageView.setVisibility(View.INVISIBLE);
+            captureImageButton.setEnabled(true);
+            Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "An Internal Error Occurred", Snackbar.LENGTH_LONG)
+                    .setAction("No action", null).show();
+            Logger.Error("FIREBASE", "UploadImage - Error, FireBase Functions Not Initiated");
+        }
     }
 
+    /**
+     * This functions resizes a bitmap to a given dimension
+     * @param bitmap
+     * @param maxDimension
+     * @return
+     */
     private Bitmap scaleBitmapDown(Bitmap bitmap, int maxDimension) {
         int originalWidth = bitmap.getWidth();
         int originalHeight = bitmap.getHeight();

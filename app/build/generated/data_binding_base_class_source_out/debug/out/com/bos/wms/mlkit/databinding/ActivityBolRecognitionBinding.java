@@ -42,6 +42,9 @@ public final class ActivityBolRecognitionBinding implements ViewBinding {
   public final Guideline guideline;
 
   @NonNull
+  public final ImageButton printerImageButton;
+
+  @NonNull
   public final ImageButton scanUPCSButton;
 
   @NonNull
@@ -51,7 +54,8 @@ public final class ActivityBolRecognitionBinding implements ViewBinding {
       @NonNull TextView bolHelpText, @NonNull ConstraintLayout bolRecognitionActiviyLayout,
       @NonNull PreviewView cameraPreview, @NonNull ImageView cameraPreviewImageView,
       @NonNull ImageButton captureImageButton, @NonNull Guideline guideline,
-      @NonNull ImageButton scanUPCSButton, @NonNull Guideline verticalCenterLine) {
+      @NonNull ImageButton printerImageButton, @NonNull ImageButton scanUPCSButton,
+      @NonNull Guideline verticalCenterLine) {
     this.rootView = rootView;
     this.bolHelpText = bolHelpText;
     this.bolRecognitionActiviyLayout = bolRecognitionActiviyLayout;
@@ -59,6 +63,7 @@ public final class ActivityBolRecognitionBinding implements ViewBinding {
     this.cameraPreviewImageView = cameraPreviewImageView;
     this.captureImageButton = captureImageButton;
     this.guideline = guideline;
+    this.printerImageButton = printerImageButton;
     this.scanUPCSButton = scanUPCSButton;
     this.verticalCenterLine = verticalCenterLine;
   }
@@ -122,6 +127,12 @@ public final class ActivityBolRecognitionBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.printerImageButton;
+      ImageButton printerImageButton = ViewBindings.findChildViewById(rootView, id);
+      if (printerImageButton == null) {
+        break missingId;
+      }
+
       id = R.id.scanUPCSButton;
       ImageButton scanUPCSButton = ViewBindings.findChildViewById(rootView, id);
       if (scanUPCSButton == null) {
@@ -136,7 +147,7 @@ public final class ActivityBolRecognitionBinding implements ViewBinding {
 
       return new ActivityBolRecognitionBinding((ConstraintLayout) rootView, bolHelpText,
           bolRecognitionActiviyLayout, cameraPreview, cameraPreviewImageView, captureImageButton,
-          guideline, scanUPCSButton, verticalCenterLine);
+          guideline, printerImageButton, scanUPCSButton, verticalCenterLine);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -16,6 +16,9 @@ import com.bos.wms.mlkit.app.ScanUPCsForBolActivity;
 
 import java.util.ArrayList;
 
+/**
+ * This class should be self explanatory
+ */
 public class UPCScannedAdapter extends ArrayAdapter<UPCScannedItemDataModel> implements View.OnClickListener{
 
     private ArrayList<UPCScannedItemDataModel> dataSet;
@@ -42,6 +45,11 @@ public class UPCScannedAdapter extends ArrayAdapter<UPCScannedItemDataModel> imp
 
     }
 
+    /**
+     * When the delete icon is pressed for each item, the item is removed from the dataModels list and the CheckMinUPCForChanges function in the main activity
+     * is triggered
+     * @param v
+     */
     @Override
     public void onClick(View v) {
 

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\fragment_dashboard.xml",
-        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\fragment_dashboard.xml"
-    },
-    {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_transfer.xml",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_transfer.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\fragment_dashboard.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\fragment_dashboard.xml"
     },
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_picking.xml",
@@ -100,12 +100,12 @@
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_shipment.xml"
     },
     {
-        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_fillpallete.xml",
-        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_fillpallete.xml"
-    },
-    {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_bol_recognition.xml",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_bol_recognition.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_fillpallete.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-61:\\layout\\activity_fillpallete.xml"
     },
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-58:\\layout\\activity_stock_take.xml",

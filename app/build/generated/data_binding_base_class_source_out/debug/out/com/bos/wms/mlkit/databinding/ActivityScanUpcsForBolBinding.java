@@ -4,8 +4,8 @@ package com.bos.wms.mlkit.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -24,13 +24,16 @@ public final class ActivityScanUpcsForBolBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button clearUPCSButton;
+  public final ImageButton clearUSPCSImageButton;
 
   @NonNull
   public final Guideline guideline;
 
   @NonNull
   public final EditText insertUPCEditText;
+
+  @NonNull
+  public final ImageButton printerImageButton;
 
   @NonNull
   public final TextView scanUPCSHelpText;
@@ -45,14 +48,15 @@ public final class ActivityScanUpcsForBolBinding implements ViewBinding {
   public final Guideline verticalCenterLine;
 
   private ActivityScanUpcsForBolBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button clearUPCSButton, @NonNull Guideline guideline,
-      @NonNull EditText insertUPCEditText, @NonNull TextView scanUPCSHelpText,
-      @NonNull ConstraintLayout scanUPCsForBolActivityLayout, @NonNull ListView scannedUPCsList,
-      @NonNull Guideline verticalCenterLine) {
+      @NonNull ImageButton clearUSPCSImageButton, @NonNull Guideline guideline,
+      @NonNull EditText insertUPCEditText, @NonNull ImageButton printerImageButton,
+      @NonNull TextView scanUPCSHelpText, @NonNull ConstraintLayout scanUPCsForBolActivityLayout,
+      @NonNull ListView scannedUPCsList, @NonNull Guideline verticalCenterLine) {
     this.rootView = rootView;
-    this.clearUPCSButton = clearUPCSButton;
+    this.clearUSPCSImageButton = clearUSPCSImageButton;
     this.guideline = guideline;
     this.insertUPCEditText = insertUPCEditText;
+    this.printerImageButton = printerImageButton;
     this.scanUPCSHelpText = scanUPCSHelpText;
     this.scanUPCsForBolActivityLayout = scanUPCsForBolActivityLayout;
     this.scannedUPCsList = scannedUPCsList;
@@ -86,9 +90,9 @@ public final class ActivityScanUpcsForBolBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.clearUPCSButton;
-      Button clearUPCSButton = ViewBindings.findChildViewById(rootView, id);
-      if (clearUPCSButton == null) {
+      id = R.id.clearUSPCSImageButton;
+      ImageButton clearUSPCSImageButton = ViewBindings.findChildViewById(rootView, id);
+      if (clearUSPCSImageButton == null) {
         break missingId;
       }
 
@@ -101,6 +105,12 @@ public final class ActivityScanUpcsForBolBinding implements ViewBinding {
       id = R.id.insertUPCEditText;
       EditText insertUPCEditText = ViewBindings.findChildViewById(rootView, id);
       if (insertUPCEditText == null) {
+        break missingId;
+      }
+
+      id = R.id.printerImageButton;
+      ImageButton printerImageButton = ViewBindings.findChildViewById(rootView, id);
+      if (printerImageButton == null) {
         break missingId;
       }
 
@@ -124,9 +134,9 @@ public final class ActivityScanUpcsForBolBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityScanUpcsForBolBinding((ConstraintLayout) rootView, clearUPCSButton,
-          guideline, insertUPCEditText, scanUPCSHelpText, scanUPCsForBolActivityLayout,
-          scannedUPCsList, verticalCenterLine);
+      return new ActivityScanUpcsForBolBinding((ConstraintLayout) rootView, clearUSPCSImageButton,
+          guideline, insertUPCEditText, printerImageButton, scanUPCSHelpText,
+          scanUPCsForBolActivityLayout, scannedUPCsList, verticalCenterLine);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

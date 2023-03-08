@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.83" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
@@ -67,24 +67,39 @@
             android:elevation="2dp"
             android:inputType="textVisiblePassword|textNoSuggestions"
             android:text=" "
+            android:cursorVisible="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/vertical_center_line"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/scanUPCSHelpText" />
 
-        <Button
-            android:id="@+id/clearUPCSButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_blue_light"
+        <ImageButton
+            android:id="@+id/clearUSPCSImageButton"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@android:color/transparent"
             android:elevation="2dp"
-            android:shadowColor="@color/colorPrimary"
-            android:text="Clear"
-            android:textColor="@android:color/white"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            android:src="@drawable/baseline_delete_all_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/vertical_center_line"
             app:layout_constraintTop_toBottomOf="@+id/scanUPCSHelpText" />
+
+        <ImageButton
+            android:id="@+id/printerImageButton"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@android:color/transparent"
+            android:elevation="2dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/baseline_print_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_center_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scanUPCSHelpText" />
+
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/vertical_center_line"

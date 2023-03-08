@@ -25,6 +25,11 @@ android {
     }
     packagingOptions {
         exclude 'META-INF/androidx.exifinterface_exifinterface.version'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
     }
     buildFeatures {
         viewBinding true
@@ -48,6 +53,21 @@ dependencies {
     implementation 'id.zelory:compressor:3.0.1'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.1'
+    implementation files('lib\\commons-io-2.2.jar')
+    implementation files('lib\\commons-lang3-3.4.jar')
+    implementation files('lib\\commons-net-3.1.jar')
+    implementation files('lib\\commons-validator-1.4.0.jar')
+    implementation files('lib\\core-1.53.0.0.jar')
+    implementation files('lib\\httpmime-4.3.2.jar')
+    implementation files('lib\\httpcore-4.3.1.jar')
+    implementation files('lib\\jackson-annotations-2.2.3.jar')
+    implementation files('lib\\jackson-core-2.2.3.jar')
+    implementation files('lib\\jackson-databind-2.2.3.jar')
+    implementation files('lib\\opencsv-2.2.jar')
+    implementation files('lib\\pkix-1.53.0.0.jar')
+    implementation files('lib\\prov-1.53.0.0.jar')
+    implementation files('lib\\snmp6_1z.jar')
+    implementation files('lib\\ZSDK_ANDROID_API.jar')
 
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

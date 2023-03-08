@@ -2526,6 +2526,9 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable background
+drawable baseline_delete_all_icon
+drawable baseline_print_disabled_icon
+drawable baseline_print_icon
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2838,7 +2841,7 @@ id chip3
 id chip_group
 id chronometer
 id circle_center
-id clearUPCSButton
+id clearUSPCSImageButton
 id clear_text
 id clip_horizontal
 id clip_vertical
@@ -3148,6 +3151,7 @@ id pin
 id pop_main_filter
 id position
 id postLayout
+id printerImageButton
 id progress_circular
 id progress_horizontal
 id radio
