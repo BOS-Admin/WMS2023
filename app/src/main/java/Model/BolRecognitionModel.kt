@@ -4,17 +4,19 @@ class BolRecognitionModel {
     var DetectedText: String? = null
     var UserID: Int? = null
     var FileName: String? = null
-    lateinit var DetectedBols: Array<String?>
-
+    var DetectedBols: String? = null
+    var Error: String? = null
     constructor()
     constructor(
-        DetectedText: String?,
-        UserID: Int?,
         FileName: String?,
-        DetectedBols: Array<String?>
+        DetectedText: String?,
+        DetectedBols: String?,
+        Error: String?,
+        UserID: Int?,
     ) {
         this.DetectedText = DetectedText
         this.UserID = UserID
+        this.Error = Error
         this.DetectedBols = DetectedBols
         this.FileName = FileName
     }

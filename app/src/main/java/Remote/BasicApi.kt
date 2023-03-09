@@ -22,10 +22,7 @@ interface BasicApi {
     ): Observable<Int>
 
     @POST("api/BolRecognition")
-    fun ProceedBolOCR(@Body ocr: BolRecognitionModel): Observable<ResponseBody>
-
-    @GET("api/BolRecognition/Test")
-    fun Test(): Observable<String>
+    fun ProceedBolFailedUpload(@Body ocr: BolRecognitionModel): Observable<String>
 
     @POST("api/LotLines/ValidateBol")
     fun ValidateBol(@Query("userId") userId:Int, @Body model: List<String>): Observable<ResponseBody>

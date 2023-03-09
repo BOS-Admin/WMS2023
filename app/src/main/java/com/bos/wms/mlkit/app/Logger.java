@@ -40,32 +40,6 @@ public class Logger {
         }else {
             Debug("LOGGER", "Logger Already Has Been Initialized, Initialize Not Successful");
         }
-        APITest();
-    }
-
-    public static void APITest(){
-        try {
-            BasicApi api = APIClient.getNewInstanceStatic("192.168.50.16:5002").create(BasicApi.class);
-            CompositeDisposable compositeDisposable = new CompositeDisposable();
-            compositeDisposable.addAll(
-                    api.Test()
-                            .subscribeOn(Schedulers.io())
-                            .observeOn(AndroidSchedulers.mainThread())
-                            .subscribe((s) -> {
-                                if(s != null){
-                                    try{
-                                        Logger.Debug("API", "APITest - TestBolRecognitionAPI Returned Value: " + s);
-                                    }catch(Exception ex){
-                                        Logger.Error("API", "APITest - TestBolRecognitionAPI Returned Error: " + ex.getMessage());
-                                    }
-
-                                }
-                            }, (throwable) -> {
-                                Logger.Error("API", "APITest - Error In Response: " + throwable.getMessage());
-                            }));
-        } catch (Throwable e) {
-            Logger.Error("API", "APITest - Error Connecting: " + e.getMessage());
-        }
     }
 
     /**

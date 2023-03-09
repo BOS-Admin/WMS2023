@@ -40,6 +40,7 @@ import com.android.volley.Response;
 import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
+import com.bos.wms.mlkit.General;
 import com.bos.wms.mlkit.R;
 import com.bos.wms.mlkit.storage.Storage;
 import com.google.android.gms.tasks.Continuation;
@@ -72,6 +73,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import Model.BolRecognitionModel;
 import Remote.APIClient;
 import Remote.BasicApi;
 import Remote.VolleyMultipartRequest;
@@ -283,8 +285,9 @@ public class BolRecognitionActivity extends AppCompatActivity {
      * are only numbers for better number accuracy. But in some cases we might not know what the Google Vision OCR might return. So for that reason this is
      * going to stay for better results accuracy.
      * @param text The actual text received from the google vision api
+     * @param fileName This is just an identifier to know which image belongs to which item in the database
      */
-    public void processMultipleOCRData(String text){
+    public void processMultipleOCRData(File fileName, String text){
         String[] lines = text.split("\n");
         ArrayList<String> bols = new ArrayList<String>();
         for(String line : lines){//Bot/3812321
@@ -299,7 +302,7 @@ public class BolRecognitionActivity extends AppCompatActivity {
                 }
             }
         }
-        processBOLNumber(bols.toArray(new String[0]));
+        processBOLNumber(fileName, text, bols.toArray(new String[0]));
     }
 
     /**
@@ -310,8 +313,10 @@ public class BolRecognitionActivity extends AppCompatActivity {
      *
      * The Api returns the Box Serial as well, and the bol number + the box serial will automatically be printed via the agent's portable printer
      * @param bols A Single Bol, Or An Array Of Bols To Process
+     * @param text The original text is needed in case the orc failed to analyze any bols we can upload to the database
+     * @param fileName The original image file to upload incase the analysis fails
      */
-    public void processBOLNumber(String... bols){
+    public void processBOLNumber(File fileName, String text, String... bols){
         Logger.Debug("OCR", "ProcessBOLNumber - Detected BOLS " + Arrays.toString(bols));
 
         try {
@@ -328,21 +333,6 @@ public class BolRecognitionActivity extends AppCompatActivity {
                                     try{
                                         JSONObject json = new JSONObject(s.string());
                                         String formattedResult = "BOL: " + json.getString("bol") + " Box Serial: " + json.getString("boxSerial");
-                                        /*new AlertDialog.Builder(this)
-                                                .setTitle("BOL Number")
-                                                .setMessage(formattedResult)
-                                                .setPositiveButton("Print", new DialogInterface.OnClickListener() {
-                                                    public void onClick(DialogInterface dialog, int which) {
-                                                        //Send API Request To Print Data
-                                                    }
-                                                })
-                                                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                                                    public void onClick(DialogInterface dialog, int which) {
-                                                        //Do Nothing
-                                                    }
-                                                })
-                                                .setIcon(android.R.drawable.ic_dialog_alert)
-                                                .show();*/
 
                                         currentPrintData = new String[]{
                                                 json.getString("bol"),
@@ -370,6 +360,12 @@ public class BolRecognitionActivity extends AppCompatActivity {
                                                 .show();*/
                                         currentPrintData = null;
                                         bolHelpText.setText(s.string());
+
+                                        Bitmap image = BitmapFactory.decodeFile(fileName.getAbsolutePath());
+                                        uploadDebugImage(text, Arrays.toString(bols), s.string(), image, fileName, 0);
+                                        boolean delete = fileName.delete();
+                                        Logger.Debug("IMAGE", "processBOLNumber - Image Of Failed Bol Recognition Uploaded, Deleted Image File? " + delete);
+
                                         Logger.Debug("API", "ProcessBOLNumber - Returned Error " + s.string());
                                     }
 
@@ -390,7 +386,12 @@ public class BolRecognitionActivity extends AppCompatActivity {
                                             .show();*/
                                     String response = ex.response().errorBody().string();
                                     Logger.Debug("API", "ProcessBOLNumber - Returned HTTP Error " + response);
+
                                     bolHelpText.setText(response);
+                                    Bitmap image = BitmapFactory.decodeFile(fileName.getAbsolutePath());
+                                    uploadDebugImage(text, Arrays.toString(bols), response, image, fileName, 0);
+                                    boolean delete = fileName.delete();
+                                    Logger.Debug("IMAGE", "processBOLNumber - Image Of Failed Bol Recognition Uploaded, Deleted Image File? " + delete);
                                 }else {
                                     bolHelpText.setText("Press one of the options below to start");
                                     Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "Internal Error Occurred", Snackbar.LENGTH_LONG)
@@ -532,10 +533,8 @@ public class BolRecognitionActivity extends AppCompatActivity {
                     @Override
                     public void onImageSaved(ImageCapture.OutputFileResults outputFileResults) {
                         Bitmap image = BitmapFactory.decodeFile(photoFile.getAbsolutePath());
-                        uploadImage(image);
-                        //uploadDebugImage(image, photoFile, 0);
-                        boolean delete = photoFile.delete();
-                        Logger.Debug("CAMERA", "CaptureImage - Image Saved And Uploaded, Deleted Image File? " + delete);
+                        uploadImage(photoFile, image);
+                        Logger.Debug("CAMERA", "CaptureImage - Image Saved And Uploaded");
                     }
                     @Override
                     public void onError(ImageCaptureException error) {
@@ -626,17 +625,45 @@ public class BolRecognitionActivity extends AppCompatActivity {
         return (mediaDir != null && mediaDir.exists()) ? mediaDir : getFilesDir();
     }
 
-    public void uploadDebugImage(Bitmap bitmap, File fileName, int trails){
-
+    public void uploadDebugImage(String text, String detectedBols, String errorText, Bitmap bitmap, File fileName, int trails){
+        if(trails == 0){
+            Logger.Debug("IMAGE", "uploadDebugImage - Starting Upload For: " + fileName.getAbsolutePath());
+        }
         if(trails>1000){
-            Log.e("ERROR", "Trails Reached 1000");
+            Logger.Error("IMAGE", "uploadDebugImage - Trails reached 1000");;
             return;
         }
 
-        VolleyMultipartRequest multipartRequest = new VolleyMultipartRequest(Request.Method.POST, "http://192.168.50.20:5001/api/BolRecognition/UploadImage", new Response.Listener<JSONObject>() {
+        String ipAddress = "http://" + IPAddress + (IPAddress.endsWith("/") ? "" : "/");
+
+        VolleyMultipartRequest multipartRequest = new VolleyMultipartRequest(Request.Method.POST, ipAddress + "api/BolRecognition/UploadImage", new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                Log.e("Response", "Got response " + response.toString());
+                if(response.toString().contains("Success")){
+                    try {
+                        BasicApi api = APIClient.getInstanceStatic(IPAddress, false).create(BasicApi.class);
+                        CompositeDisposable compositeDisposable = new CompositeDisposable();
+                        compositeDisposable.addAll(
+                                api.ProceedBolFailedUpload(new BolRecognitionModel(fileName.getName(), text, detectedBols, errorText, General.getGeneral(getApplicationContext()).UserID))
+                                        .subscribeOn(Schedulers.io())
+                                        .observeOn(AndroidSchedulers.mainThread())
+                                        .subscribe((s) -> {
+                                            if(s != null){
+                                                try{
+                                                    Logger.Debug("API", "uploadDebugImage - ProceedBolFailedUpload Returned Value: " + s);
+                                                }catch(Exception ex){
+                                                    Logger.Error("API", "uploadDebugImage - Returned Error: " + ex.getMessage());
+                                                }
+                                            }
+                                        }, (throwable) -> {
+                                            Logger.Error("API", "uploadDebugImage - Error In Response: " + throwable.getMessage());
+                                        }));
+                    } catch (Throwable e) {
+                        Logger.Error("API", "APITest - Error Connecting: " + e.getMessage());
+                    }
+                }else {
+                    Logger.Error("IMAGE", "uploadDebugImage - Got Image Upload Response: " + response.toString());
+                }
             }
         }, new Response.ErrorListener() {
             @Override
@@ -649,31 +676,16 @@ public class BolRecognitionActivity extends AppCompatActivity {
                     } else if (error.getClass().equals(NoConnectionError.class)) {
                         errorMessage = "Failed to connect server";
                     }
-                    uploadDebugImage(bitmap, fileName, trails + 1);
+                    uploadDebugImage(text, detectedBols, errorText, bitmap, fileName, trails + 1);
                 } else {
                     String result = new String(networkResponse.data);
                     try {
-                        JSONObject response = new JSONObject(result);
-                        String status = response.getString("status");
-                        String message = response.getString("message");
-
-                        Log.e("Error Status", status);
-                        Log.e("Error Message", message);
-
-                        if (networkResponse.statusCode == 404) {
-                            errorMessage = "Resource not found";
-                        } else if (networkResponse.statusCode == 401) {
-                            errorMessage = message+" Please login again";
-                        } else if (networkResponse.statusCode == 400) {
-                            errorMessage = message+ " Check your inputs";
-                        } else if (networkResponse.statusCode == 500) {
-                            errorMessage = message+" Something is getting wrong";
-                        }
-                    } catch (JSONException e) {
+                        errorMessage = result;
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
-                Log.i("Error", errorMessage);
+                Logger.Error("IMAGE", "uploadDebugImage - Response Error: " + errorMessage);
                 error.printStackTrace();
             }
         }) {
@@ -756,8 +768,9 @@ public class BolRecognitionActivity extends AppCompatActivity {
      * A json object is then created that holds the info of the request and the variables required by the Google Vision API
      * After the image is analyzed and the Google Vision API returns a result we process the result using the processMultipleOCRData function
      * @param originalBitmap The capture of the camera as a bitmap
+     * @param fileName This is used just as an identifier to know which text is for which image on the database
      */
-    public void uploadImage(Bitmap originalBitmap){
+    public void uploadImage(File fileName, Bitmap originalBitmap){
         Bitmap bitmap = scaleBitmapDown(originalBitmap, 640);
 
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -798,7 +811,7 @@ public class BolRecognitionActivity extends AppCompatActivity {
                             String resultText = task.getResult().getAsJsonArray().get(0).getAsJsonObject().get("fullTextAnnotation").getAsJsonObject()
                                     .get("text").getAsString();
                             Logger.Debug("OCR", "UploadImage - Analyzed Image Data, Processing The OCR For BOL");
-                            processMultipleOCRData(resultText);
+                            processMultipleOCRData(fileName, resultText);
 
                         }else {
                             Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "Failed analyzing the data", Snackbar.LENGTH_LONG)
