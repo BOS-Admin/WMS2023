@@ -1,12 +1,18 @@
 package com.bos.wms.mlkit.app;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.camera.core.Camera;
+import androidx.camera.core.CameraInfoUnavailableException;
 import androidx.camera.core.CameraSelector;
+import androidx.camera.core.DisplayOrientedMeteringPointFactory;
+import androidx.camera.core.FocusMeteringAction;
 import androidx.camera.core.ImageCapture;
 import androidx.camera.core.ImageCaptureException;
+import androidx.camera.core.MeteringPoint;
 import androidx.camera.core.Preview;
+import androidx.camera.core.SurfaceOrientedMeteringPointFactory;
 import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.camera.view.PreviewView;
 import androidx.core.app.ActivityCompat;
@@ -20,11 +26,14 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Rect;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.InputType;
 import android.util.Base64;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -325,7 +334,7 @@ public class BolRecognitionActivity extends AppCompatActivity {
 
 
             compositeDisposable.addAll(
-                    api.ValidateBol(20, Arrays.asList(bols))
+                    api.ValidateBol(General.getGeneral(getApplicationContext()).UserID, Arrays.asList(bols))
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe((s) -> {
@@ -385,8 +394,10 @@ public class BolRecognitionActivity extends AppCompatActivity {
                                             .setIcon(android.R.drawable.ic_dialog_alert)
                                             .show();*/
                                     String response = ex.response().errorBody().string();
+                                    if(response.isEmpty()){
+                                        response = "API Error Occurred";
+                                    }
                                     Logger.Debug("API", "ProcessBOLNumber - Returned HTTP Error " + response);
-
                                     bolHelpText.setText(response);
                                     Bitmap image = BitmapFactory.decodeFile(fileName.getAbsolutePath());
                                     uploadDebugImage(text, Arrays.toString(bols), response, image, fileName, 0);
@@ -462,6 +473,31 @@ public class BolRecognitionActivity extends AppCompatActivity {
                                 .build();
 
                 Camera camera = cameraProvider.bindToLifecycle((LifecycleOwner) this, cameraSelector, imageCapture, preview);
+                /**
+                 * This code helps the camera focus on click
+                 */
+                cameraPreview.setOnTouchListener(new View.OnTouchListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.R)
+                    @Override
+                    public boolean onTouch(View view, MotionEvent motionEvent) {
+                        if (motionEvent.getAction() == MotionEvent.ACTION_UP)
+                        {
+                            try {
+                                DisplayOrientedMeteringPointFactory factory = new DisplayOrientedMeteringPointFactory(getDisplay(), camera.getCameraInfo(), (float)cameraPreviewImageView.getWidth(), (float)cameraPreviewImageView.getHeight());
+                                MeteringPoint autoFocusPoint = factory.createPoint(motionEvent.getX(), motionEvent.getY());
+
+                                camera.getCameraControl().startFocusAndMetering(
+                                        new FocusMeteringAction.Builder(
+                                                autoFocusPoint,
+                                                FocusMeteringAction.FLAG_AF
+                                        ).disableAutoCancel().build());
+                            } catch (Exception e) {
+                                Logger.Error("Camera", "cameraFocus - " + e.getMessage());
+                            }
+                        }
+                        return true;
+                    }
+                });
 
             } catch (ExecutionException | InterruptedException e) {
                 // No errors need to be handled for this Future.
@@ -470,6 +506,7 @@ public class BolRecognitionActivity extends AppCompatActivity {
         }, ContextCompat.getMainExecutor(this));
 
     }
+
 
     /**
      * Get the LotIdentificationMinUpcs from the SystemControl table by using the GetSystemControlValue api
@@ -684,6 +721,9 @@ public class BolRecognitionActivity extends AppCompatActivity {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
+                }
+                if(errorMessage.isEmpty()){
+                    errorMessage = error.getMessage();
                 }
                 Logger.Error("IMAGE", "uploadDebugImage - Response Error: " + errorMessage);
                 error.printStackTrace();

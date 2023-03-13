@@ -18,6 +18,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.bos.wms.mlkit.General;
 import com.bos.wms.mlkit.R;
 import com.bos.wms.mlkit.app.adapters.UPCScannedAdapter;
 import com.bos.wms.mlkit.app.adapters.UPCScannedItemDataModel;
@@ -309,7 +310,7 @@ public class ScanUPCsForBolActivity extends AppCompatActivity {
                 List<String> upcs = getAllUPCs();
 
                 compositeDisposable.addAll(
-                        api.GetBolByUPCs(20, upcs)
+                        api.GetBolByUPCs(General.getGeneral(getApplicationContext()).UserID, upcs)
                                 .subscribeOn(Schedulers.io())
                                 .observeOn(AndroidSchedulers.mainThread())
                                 .subscribe((s) -> {
@@ -429,7 +430,7 @@ public class ScanUPCsForBolActivity extends AppCompatActivity {
                 List<String> upcs = getAllUPCs();
 
                 compositeDisposable.addAll(
-                        api.GetBolByUPCs(20, upcs)
+                        api.GetBolByUPCs(General.getGeneral(getApplicationContext()).UserID, upcs)
                                 .subscribeOn(Schedulers.io())
                                 .observeOn(AndroidSchedulers.mainThread())
                                 .subscribe((s) -> {
