@@ -315,7 +315,7 @@ class StockTakeDCActivity : AppCompatActivity() {
                                 showMessage(response,Color.GREEN)
                             }
                             else{
-                                showMessage(response,Color.RED)
+                                showMessage(""+response?.toString(),Color.RED)
                             }
                             runOnUiThread{
                                 items.clear()
