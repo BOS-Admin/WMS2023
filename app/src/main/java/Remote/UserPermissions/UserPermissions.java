@@ -65,7 +65,7 @@ public class UserPermissions {
 
             Storage mStorage = new Storage(applicationContext);
             String IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82");
-            BasicApi api = APIClient.getNewInstanceStatic("192.168.50.16:5002").create(BasicApi.class);
+            BasicApi api = APIClient.getNewInstanceStatic(IPAddress).create(BasicApi.class);
             CompositeDisposable compositeDisposable = new CompositeDisposable();
             compositeDisposable.addAll(
                     api.GetPermissions(AppName, AppVersion, userID)
