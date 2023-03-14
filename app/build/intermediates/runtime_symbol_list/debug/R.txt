@@ -120,6 +120,8 @@ int attr alertDialogButtonGroupStyle 0x7f03002a
 int attr alertDialogCenterButtons 0x7f03002b
 int attr alertDialogStyle 0x7f03002c
 int attr alertDialogTheme 0x7f03002d
+int attr alignContent 0x7f030480
+int attr alignItems 0x7f030481
 int attr allowStacking 0x7f03002e
 int attr alpha 0x7f03002f
 int attr alphabeticModifiers 0x7f030030
@@ -417,6 +419,9 @@ int attr dialogTheme 0x7f030153
 int attr displayOptions 0x7f030154
 int attr divider 0x7f030155
 int attr dividerColor 0x7f030156
+int attr dividerDrawable 0x7f030482
+int attr dividerDrawableHorizontal 0x7f030483
+int attr dividerDrawableVertical 0x7f030484
 int attr dividerHorizontal 0x7f030157
 int attr dividerInsetEnd 0x7f030158
 int attr dividerInsetStart 0x7f030159
@@ -503,6 +508,8 @@ int attr fastScrollVerticalTrackDrawable 0x7f0301a9
 int attr finishPrimaryWithSecondary 0x7f0301aa
 int attr finishSecondaryWithPrimary 0x7f0301ab
 int attr firstBaselineToTopHeight 0x7f0301ac
+int attr flexDirection 0x7f030485
+int attr flexWrap 0x7f030486
 int attr floatingActionButtonLargePrimaryStyle 0x7f0301ad
 int attr floatingActionButtonLargeSecondaryStyle 0x7f0301ae
 int attr floatingActionButtonLargeStyle 0x7f0301af
@@ -633,6 +640,7 @@ int attr itemTextAppearanceActive 0x7f03022b
 int attr itemTextAppearanceInactive 0x7f03022c
 int attr itemTextColor 0x7f03022d
 int attr itemVerticalPadding 0x7f03022e
+int attr justifyContent 0x7f030487
 int attr keyPositionType 0x7f03022f
 int attr keyboardIcon 0x7f030230
 int attr keylines 0x7f030231
@@ -647,6 +655,7 @@ int attr layout 0x7f030239
 int attr layoutDescription 0x7f03023a
 int attr layoutDuringTransition 0x7f03023b
 int attr layoutManager 0x7f03023c
+int attr layout_alignSelf 0x7f030488
 int attr layout_anchor 0x7f03023d
 int attr layout_anchorGravity 0x7f03023e
 int attr layout_behavior 0x7f03023f
@@ -701,6 +710,9 @@ int attr layout_constraintWidth_percent 0x7f03026f
 int attr layout_dodgeInsetEdges 0x7f030270
 int attr layout_editor_absoluteX 0x7f030271
 int attr layout_editor_absoluteY 0x7f030272
+int attr layout_flexBasisPercent 0x7f030489
+int attr layout_flexGrow 0x7f03048a
+int attr layout_flexShrink 0x7f03048b
 int attr layout_goneMarginBaseline 0x7f030273
 int attr layout_goneMarginBottom 0x7f030274
 int attr layout_goneMarginEnd 0x7f030275
@@ -711,10 +723,16 @@ int attr layout_goneMarginTop 0x7f030279
 int attr layout_insetEdge 0x7f03027a
 int attr layout_keyline 0x7f03027b
 int attr layout_marginBaseline 0x7f03027c
+int attr layout_maxHeight 0x7f03048c
+int attr layout_maxWidth 0x7f03048d
+int attr layout_minHeight 0x7f03048e
+int attr layout_minWidth 0x7f03048f
 int attr layout_optimizationLevel 0x7f03027d
+int attr layout_order 0x7f030490
 int attr layout_scrollEffect 0x7f03027e
 int attr layout_scrollFlags 0x7f03027f
 int attr layout_scrollInterpolator 0x7f030280
+int attr layout_wrapBefore 0x7f030491
 int attr layout_wrapBehaviorInParent 0x7f030281
 int attr liftOnScroll 0x7f030282
 int attr liftOnScrollTargetViewId 0x7f030283
@@ -788,6 +806,7 @@ int attr maxButtonHeight 0x7f0302c6
 int attr maxCharacterCount 0x7f0302c7
 int attr maxHeight 0x7f0302c8
 int attr maxImageSize 0x7f0302c9
+int attr maxLine 0x7f030492
 int attr maxLines 0x7f0302ca
 int attr maxVelocity 0x7f0302cb
 int attr maxWidth 0x7f0302cc
@@ -960,6 +979,9 @@ int attr shortcutMatchRequired 0x7f030372
 int attr showAnimationBehavior 0x7f030373
 int attr showAsAction 0x7f030374
 int attr showDelay 0x7f030375
+int attr showDivider 0x7f030493
+int attr showDividerHorizontal 0x7f030494
+int attr showDividerVertical 0x7f030495
 int attr showDividers 0x7f030376
 int attr showMotionSpec 0x7f030377
 int attr showPaths 0x7f030378
@@ -2778,7 +2800,6 @@ int id btnDone 0x7f080094
 int id btnE 0x7f080095
 int id btnEnd 0x7f080096
 int id btnF 0x7f080097
-int id btnFoldingScan 0x7f080098
 int id btnFoldingScanDone 0x7f080099
 int id btnLocationCheck 0x7f08009a
 int id btnLogin 0x7f08009b
@@ -2802,6 +2823,7 @@ int id btnPutAway 0x7f0800ac
 int id btnRackCount 0x7f0800ad
 int id btnReceiving 0x7f0800ae
 int id btnSave 0x7f0800af
+int id btnSerialGenerator 0x7f0802e7
 int id btnSerialMissing 0x7f0800b0
 int id btnSettings 0x7f0800b1
 int id btnShipPallReciDone 0x7f0800b2
@@ -2847,6 +2869,8 @@ int id clip_vertical 0x7f0800d9
 int id clockwise 0x7f0800da
 int id closest 0x7f0800db
 int id collapseActionView 0x7f0800dc
+int id column 0x7f0802e8
+int id column_reverse 0x7f0802e9
 int id compatible 0x7f0800dd
 int id compress 0x7f0800de
 int id confirm_button 0x7f0800df
@@ -2926,6 +2950,8 @@ int id fitStart 0x7f080128
 int id fitToContents 0x7f080129
 int id fitXY 0x7f08012a
 int id fixed 0x7f08012b
+int id flex_end 0x7f0802ea
+int id flex_start 0x7f0802eb
 int id flip 0x7f08012c
 int id floating 0x7f08012d
 int id forever 0x7f08012e
@@ -3128,6 +3154,7 @@ int id north 0x7f0801f2
 int id notification_background 0x7f0801f3
 int id notification_main_column 0x7f0801f4
 int id notification_main_column_container 0x7f0801f5
+int id nowrap 0x7f0802ec
 int id off 0x7f0801f6
 int id on 0x7f0801f7
 int id onInterceptTouchReturnSwipe 0x7f0801f8
@@ -3163,7 +3190,9 @@ int id rightToLeft 0x7f080215
 int id right_icon 0x7f080216
 int id right_side 0x7f080217
 int id rounded 0x7f080218
+int id row 0x7f0802ed
 int id row_index_key 0x7f080219
+int id row_reverse 0x7f0802ee
 int id rtl 0x7f08021a
 int id save_non_transition_alpha 0x7f08021b
 int id save_overlay_view 0x7f08021c
@@ -3209,7 +3238,9 @@ int id snackbar_text 0x7f080243
 int id snap 0x7f080244
 int id snapMargins 0x7f080245
 int id south 0x7f080246
-int id space 0x7f080247
+int id space_around 0x7f0802ef
+int id space_between 0x7f0802f0
+int id space_evenly 0x7f0802f1
 int id spacer 0x7f080248
 int id special_effects_controller_view_tag 0x7f080249
 int id spinner 0x7f08024a
@@ -3249,7 +3280,6 @@ int id tag_transition_group 0x7f08026b
 int id tag_unhandled_key_event_manager 0x7f08026c
 int id tag_unhandled_key_listeners 0x7f08026d
 int id tag_window_insets_animation_callback 0x7f08026e
-int id tblMainMenu 0x7f08026f
 int id test_checkbox_android_button_tint 0x7f080270
 int id test_checkbox_app_button_tint 0x7f080271
 int id test_radiobutton_android_button_tint 0x7f080272
@@ -3366,6 +3396,7 @@ int id withinBounds 0x7f0802e0
 int id wrap 0x7f0802e1
 int id wrap_content 0x7f0802e2
 int id wrap_content_constrained 0x7f0802e3
+int id wrap_reverse 0x7f0802f2
 int id x_left 0x7f0802e4
 int id x_right 0x7f0802e5
 int id zero_corner_chip 0x7f0802e6
@@ -5878,6 +5909,30 @@ int styleable ExtendedFloatingActionButton_shrinkMotionSpec 5
 int[] styleable ExtendedFloatingActionButton_Behavior_Layout { 0x7f03005a, 0x7f03005b }
 int styleable ExtendedFloatingActionButton_Behavior_Layout_behavior_autoHide 0
 int styleable ExtendedFloatingActionButton_Behavior_Layout_behavior_autoShrink 1
+int[] styleable FlexboxLayout { 0x7f030480, 0x7f030481, 0x7f030482, 0x7f030483, 0x7f030484, 0x7f030485, 0x7f030486, 0x7f030487, 0x7f030492, 0x7f030493, 0x7f030494, 0x7f030495 }
+int styleable FlexboxLayout_alignContent 0
+int styleable FlexboxLayout_alignItems 1
+int styleable FlexboxLayout_dividerDrawable 2
+int styleable FlexboxLayout_dividerDrawableHorizontal 3
+int styleable FlexboxLayout_dividerDrawableVertical 4
+int styleable FlexboxLayout_flexDirection 5
+int styleable FlexboxLayout_flexWrap 6
+int styleable FlexboxLayout_justifyContent 7
+int styleable FlexboxLayout_maxLine 8
+int styleable FlexboxLayout_showDivider 9
+int styleable FlexboxLayout_showDividerHorizontal 10
+int styleable FlexboxLayout_showDividerVertical 11
+int[] styleable FlexboxLayout_Layout { 0x7f030488, 0x7f030489, 0x7f03048a, 0x7f03048b, 0x7f03048c, 0x7f03048d, 0x7f03048e, 0x7f03048f, 0x7f030490, 0x7f030491 }
+int styleable FlexboxLayout_Layout_layout_alignSelf 0
+int styleable FlexboxLayout_Layout_layout_flexBasisPercent 1
+int styleable FlexboxLayout_Layout_layout_flexGrow 2
+int styleable FlexboxLayout_Layout_layout_flexShrink 3
+int styleable FlexboxLayout_Layout_layout_maxHeight 4
+int styleable FlexboxLayout_Layout_layout_maxWidth 5
+int styleable FlexboxLayout_Layout_layout_minHeight 6
+int styleable FlexboxLayout_Layout_layout_minWidth 7
+int styleable FlexboxLayout_Layout_layout_order 8
+int styleable FlexboxLayout_Layout_layout_wrapBefore 9
 int[] styleable FloatingActionButton { 0x0101000e, 0x7f03004e, 0x7f03004f, 0x7f030068, 0x7f030174, 0x7f030182, 0x7f0301a3, 0x7f0301a4, 0x7f0301e7, 0x7f0301f2, 0x7f0302c9, 0x7f03033c, 0x7f030356, 0x7f03036d, 0x7f030370, 0x7f030377, 0x7f030460 }
 int styleable FloatingActionButton_android_enabled 0
 int styleable FloatingActionButton_backgroundTint 1

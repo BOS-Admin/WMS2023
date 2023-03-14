@@ -6,11 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Space;
-import android.widget.TableLayout;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
@@ -20,13 +18,10 @@ import java.lang.String;
 
 public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final Button btnBolRecognition;
-
-  @NonNull
-  public final Button btnFoldingScan;
 
   @NonNull
   public final Button btnLocationCheck;
@@ -59,33 +54,29 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final Button btnMenuShipmentReceivingPalleteCount;
 
   @NonNull
+  public final Button btnSerialGenerator;
+
+  @NonNull
   public final Button btnSerialMissing;
 
   @NonNull
   public final Button btnUPCPricing;
 
   @NonNull
-  public final Space space;
-
-  @NonNull
-  public final TableLayout tblMainMenu;
-
-  @NonNull
   public final EditText txtStatus;
 
-  private FragmentHomeBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnBolRecognition,
-      @NonNull Button btnFoldingScan, @NonNull Button btnLocationCheck,
-      @NonNull Button btnMenuFillPallete, @NonNull Button btnMenuItemPricing,
-      @NonNull Button btnMenuPGPricing, @NonNull Button btnMenuPicking,
-      @NonNull Button btnMenuPutAwayPallete, @NonNull Button btnMenuShipmentCartonReceiving,
+  private FragmentHomeBinding(@NonNull LinearLayout rootView, @NonNull Button btnBolRecognition,
+      @NonNull Button btnLocationCheck, @NonNull Button btnMenuFillPallete,
+      @NonNull Button btnMenuItemPricing, @NonNull Button btnMenuPGPricing,
+      @NonNull Button btnMenuPicking, @NonNull Button btnMenuPutAwayPallete,
+      @NonNull Button btnMenuShipmentCartonReceiving,
       @NonNull Button btnMenuShipmentCartonReceivingV2,
       @NonNull Button btnMenuShipmentPalleteReceiving,
-      @NonNull Button btnMenuShipmentReceivingPalleteCount, @NonNull Button btnSerialMissing,
-      @NonNull Button btnUPCPricing, @NonNull Space space, @NonNull TableLayout tblMainMenu,
+      @NonNull Button btnMenuShipmentReceivingPalleteCount, @NonNull Button btnSerialGenerator,
+      @NonNull Button btnSerialMissing, @NonNull Button btnUPCPricing,
       @NonNull EditText txtStatus) {
     this.rootView = rootView;
     this.btnBolRecognition = btnBolRecognition;
-    this.btnFoldingScan = btnFoldingScan;
     this.btnLocationCheck = btnLocationCheck;
     this.btnMenuFillPallete = btnMenuFillPallete;
     this.btnMenuItemPricing = btnMenuItemPricing;
@@ -96,16 +87,15 @@ public final class FragmentHomeBinding implements ViewBinding {
     this.btnMenuShipmentCartonReceivingV2 = btnMenuShipmentCartonReceivingV2;
     this.btnMenuShipmentPalleteReceiving = btnMenuShipmentPalleteReceiving;
     this.btnMenuShipmentReceivingPalleteCount = btnMenuShipmentReceivingPalleteCount;
+    this.btnSerialGenerator = btnSerialGenerator;
     this.btnSerialMissing = btnSerialMissing;
     this.btnUPCPricing = btnUPCPricing;
-    this.space = space;
-    this.tblMainMenu = tblMainMenu;
     this.txtStatus = txtStatus;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -133,12 +123,6 @@ public final class FragmentHomeBinding implements ViewBinding {
       id = R.id.btnBolRecognition;
       Button btnBolRecognition = ViewBindings.findChildViewById(rootView, id);
       if (btnBolRecognition == null) {
-        break missingId;
-      }
-
-      id = R.id.btnFoldingScan;
-      Button btnFoldingScan = ViewBindings.findChildViewById(rootView, id);
-      if (btnFoldingScan == null) {
         break missingId;
       }
 
@@ -202,6 +186,12 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnSerialGenerator;
+      Button btnSerialGenerator = ViewBindings.findChildViewById(rootView, id);
+      if (btnSerialGenerator == null) {
+        break missingId;
+      }
+
       id = R.id.btnSerialMissing;
       Button btnSerialMissing = ViewBindings.findChildViewById(rootView, id);
       if (btnSerialMissing == null) {
@@ -214,30 +204,17 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.space;
-      Space space = ViewBindings.findChildViewById(rootView, id);
-      if (space == null) {
-        break missingId;
-      }
-
-      id = R.id.tblMainMenu;
-      TableLayout tblMainMenu = ViewBindings.findChildViewById(rootView, id);
-      if (tblMainMenu == null) {
-        break missingId;
-      }
-
       id = R.id.txtStatus;
       EditText txtStatus = ViewBindings.findChildViewById(rootView, id);
       if (txtStatus == null) {
         break missingId;
       }
 
-      return new FragmentHomeBinding((ConstraintLayout) rootView, btnBolRecognition, btnFoldingScan,
-          btnLocationCheck, btnMenuFillPallete, btnMenuItemPricing, btnMenuPGPricing,
-          btnMenuPicking, btnMenuPutAwayPallete, btnMenuShipmentCartonReceiving,
-          btnMenuShipmentCartonReceivingV2, btnMenuShipmentPalleteReceiving,
-          btnMenuShipmentReceivingPalleteCount, btnSerialMissing, btnUPCPricing, space, tblMainMenu,
-          txtStatus);
+      return new FragmentHomeBinding((LinearLayout) rootView, btnBolRecognition, btnLocationCheck,
+          btnMenuFillPallete, btnMenuItemPricing, btnMenuPGPricing, btnMenuPicking,
+          btnMenuPutAwayPallete, btnMenuShipmentCartonReceiving, btnMenuShipmentCartonReceivingV2,
+          btnMenuShipmentPalleteReceiving, btnMenuShipmentReceivingPalleteCount, btnSerialGenerator,
+          btnSerialMissing, btnUPCPricing, txtStatus);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

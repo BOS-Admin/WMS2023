@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.bos.wms.mlkit.app-mergeDebugResources-57:/values-km/values-km.xml",
+            "outputFile": "com.bos.wms.mlkit.app-mergeDebugResources-58:/values-km/values-km.xml",
             "map": [
                 {
                     "source": "C:\\Users\\m.serhan\\.gradle\\caches\\transforms-3\\e8c89364a434709f22fb1990ae5ef6c4\\transformed\\jetified-play-services-base-18.0.1\\res\\values-km\\values.xml",

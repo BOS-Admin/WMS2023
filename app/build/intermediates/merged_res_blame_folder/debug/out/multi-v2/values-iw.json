@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.bos.wms.mlkit.app-mergeDebugResources-57:/values-iw/values-iw.xml",
+            "outputFile": "com.bos.wms.mlkit.app-mergeDebugResources-58:/values-iw/values-iw.xml",
             "map": [
                 {
                     "source": "C:\\Users\\m.serhan\\.gradle\\caches\\transforms-3\\96c3f746f2b74021ac44b8f339a6584e\\transformed\\navigation-ui-2.5.1\\res\\values-iw\\values-iw.xml",

@@ -134,6 +134,7 @@ MERGED from [id.zelory:compressor:3.0.1] C:\Users\m.serhan\.gradle\caches\transf
 MERGED from [com.android.volley:volley:1.2.0] C:\Users\m.serhan\.gradle\caches\transforms-3\8d90ef6d8615b110895c1d10ce5a6e7c\transformed\jetified-volley-1.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\m.serhan\.gradle\caches\transforms-3\e879a128c13e3262d2a65e8b53e15495\transformed\jetified-rxandroid-2.0.1\AndroidManifest.xml:15:1-21:12
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\m.serhan\.gradle\caches\transforms-3\3fa7b6330682c0b145d0ee6328c7a036\transformed\jetified-grpc-android-1.44.1\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.flexbox:flexbox:3.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\8cfe105a264ee839d752df7d39b9246d\transformed\jetified-flexbox-3.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\e69680151a1996d02cc1cf8759a8bc78\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\m.serhan\.gradle\caches\transforms-3\58cbad5e76e5c1e654e95d1362407828\transformed\jetified-image-1.0.0-beta1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\7c3f583301d96899adcd86c33a3faf28\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
@@ -954,6 +955,8 @@ MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\m.serhan\.gradle\cac
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\m.serhan\.gradle\caches\transforms-3\e879a128c13e3262d2a65e8b53e15495\transformed\jetified-rxandroid-2.0.1\AndroidManifest.xml:19:5-43
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\m.serhan\.gradle\caches\transforms-3\3fa7b6330682c0b145d0ee6328c7a036\transformed\jetified-grpc-android-1.44.1\AndroidManifest.xml:5:5-7:41
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\m.serhan\.gradle\caches\transforms-3\3fa7b6330682c0b145d0ee6328c7a036\transformed\jetified-grpc-android-1.44.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.flexbox:flexbox:3.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\8cfe105a264ee839d752df7d39b9246d\transformed\jetified-flexbox-3.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.flexbox:flexbox:3.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\8cfe105a264ee839d752df7d39b9246d\transformed\jetified-flexbox-3.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\e69680151a1996d02cc1cf8759a8bc78\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\e69680151a1996d02cc1cf8759a8bc78\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\m.serhan\.gradle\caches\transforms-3\58cbad5e76e5c1e654e95d1362407828\transformed\jetified-image-1.0.0-beta1\AndroidManifest.xml:5:5-44

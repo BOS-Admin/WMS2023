@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.bos.wms.mlkit.app-mergeDebugResources-57:/values-mr/values-mr.xml",
+            "outputFile": "com.bos.wms.mlkit.app-mergeDebugResources-58:/values-mr/values-mr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\m.serhan\\.gradle\\caches\\transforms-3\\c1a551cc35c87b756fbb29792a7b008b\\transformed\\core-1.8.0\\res\\values-mr\\values-mr.xml",
