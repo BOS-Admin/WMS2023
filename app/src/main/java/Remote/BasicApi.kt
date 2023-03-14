@@ -16,6 +16,9 @@ import retrofit2.http.*
 
 interface BasicApi {
 
+    @GET("api/UserPermissions/GetPermissions")
+    fun GetPermissions(@Query("appName") appName:String, @Query("appVersion") appVersion:String, @Query("userID") userID:Int): Observable<List<String>>
+
     @GET("api/SystemControl/GetValue")
     fun GetSystemControlValue(
         @Query("code") code: String,

@@ -6,6 +6,7 @@ import Model.UserLoginModel
 import Model.UserLoginResultModel
 import Remote.APIClient
 import Remote.BasicApi
+import Remote.UserPermissions.UserPermissions
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -299,6 +300,10 @@ class LoginActivity : AppCompatActivity() {
             "$welcome $displayName",
             Toast.LENGTH_LONG
         ).show()
+
+        //Initialize the user permissions with the corresponding user id
+        UserPermissions.Initialize(applicationContext, General.getGeneral(applicationContext).UserID)
+
         startActivity(Intent(this, MainMenu::class.java))
         finish()
     }

@@ -2,6 +2,8 @@ package com.bos.wms.mlkit.app.ui.dashboard
 
 import Remote.APIClient
 import Remote.BasicApi
+import Remote.UserPermissions.UserPermissions
+import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -24,6 +26,8 @@ import com.bos.wms.mlkit.storage.Storage
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_dashboard.view.*
+import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_home.view.*
 import retrofit2.HttpException
 import java.io.IOException
 
@@ -57,6 +61,29 @@ class DashboardFragment : Fragment() {
         root.textBranch.setText(General.getGeneral(context).fullLocation);
         root.textUser.setText(General.getGeneral(context).userFullName);
 
+        if(UserPermissions.PermissionsReceived()){
+            UserPermissions.ValidatePermission("WMSApp.Dashboard.Packing", root.btnCount);
+            UserPermissions.ValidatePermission("WMSApp.Dashboard.StockTake", root.btnStockTake);
+            UserPermissions.ValidatePermission("WMSApp.Dashboard.Transfer", root.btnTransfer);
+            UserPermissions.ValidatePermission("WMSApp.Dashboard.PutAway", root.btnPutAway);
+
+        }else {
+            UserPermissions.AddOnReceiveListener {
+                UserPermissions.ValidatePermission("WMSApp.Dashboard.Packing", root.btnCount);
+                UserPermissions.ValidatePermission("WMSApp.Dashboard.StockTake", root.btnStockTake);
+                UserPermissions.ValidatePermission("WMSApp.Dashboard.Transfer", root.btnTransfer);
+                UserPermissions.ValidatePermission("WMSApp.Dashboard.PutAway", root.btnPutAway);
+            }
+        }
+
+        UserPermissions.AddOnErrorListener {
+            AlertDialog.Builder(root.context)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("An Error Occurred")
+                .setMessage(it)
+                .setNegativeButton("Close", null)
+                .show()
+        }
 
         root.btnCount.setOnClickListener {
             general.operationType = 100

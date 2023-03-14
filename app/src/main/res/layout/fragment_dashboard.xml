@@ -66,7 +66,8 @@
                 android:background="?attr/colorPrimary"
                 android:text="Packing"
                 android:textColor="#F6F0F0"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:visibility="gone"/>
 
             <Button
                 android:id="@+id/btnStockTake"
@@ -76,7 +77,8 @@
                 android:background="?attr/colorPrimary"
                 android:text="Stock Take"
                 android:textColor="#F6F0F0"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:visibility="gone"/>
         </LinearLayout>
 
         <LinearLayout
@@ -92,7 +94,8 @@
                 android:text="Transfer"
                 android:textColor="#F6F0F0"
                 android:background="@color/colorPrimary"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:visibility="gone"/>
 
             <Button
                 android:id="@+id/btnPutAway"
@@ -102,7 +105,8 @@
                 android:background="@color/colorPrimary"
                 android:text="Put Away"
                 android:textColor="#F6F0F0"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:visibility="gone"/>
 
 
         </LinearLayout>

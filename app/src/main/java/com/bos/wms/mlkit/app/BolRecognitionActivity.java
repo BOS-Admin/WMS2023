@@ -696,7 +696,7 @@ public class BolRecognitionActivity extends AppCompatActivity {
                                             Logger.Error("API", "uploadDebugImage - Error In Response: " + throwable.getMessage());
                                         }));
                     } catch (Throwable e) {
-                        Logger.Error("API", "APITest - Error Connecting: " + e.getMessage());
+                        Logger.Error("API", "uploadDebugImage - Error Connecting: " + e.getMessage());
                     }
                 }else {
                     Logger.Error("IMAGE", "uploadDebugImage - Got Image Upload Response: " + response.toString());

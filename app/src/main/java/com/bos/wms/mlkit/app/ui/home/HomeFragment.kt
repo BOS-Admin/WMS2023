@@ -3,7 +3,9 @@ package com.bos.wms.mlkit.app.ui.home
 import Model.UserLoginModel
 import Remote.APIClient
 import Remote.BasicApi
+import Remote.UserPermissions.UserPermissions
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -49,13 +51,53 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        if(UserPermissions.PermissionsReceived()){
+            UserPermissions.ValidatePermission("WMSApp.UPCPricing", root.btnUPCPricing);
+            UserPermissions.ValidatePermission("WMSApp.PGPricing", root.btnMenuPGPricing);
+            UserPermissions.ValidatePermission("WMSApp.PutAwayPallete", root.btnMenuPutAwayPallete);
+            UserPermissions.ValidatePermission("WMSApp.MissingItem", root.btnSerialMissing);
+            UserPermissions.ValidatePermission("WMSApp.BolRecognition", root.btnBolRecognition);
+            UserPermissions.ValidatePermission("WMSApp.LocationCheck", root.btnLocationCheck);
+            UserPermissions.ValidatePermission("WMSApp.FillPallete", root.btnMenuFillPallete);
+            UserPermissions.ValidatePermission("WMSApp.SerialGenerator", root.btnSerialGenerator);
+            UserPermissions.ValidatePermission("WMSApp.ShipmentPalleteReceiving", root.btnMenuShipmentPalleteReceiving);
+            UserPermissions.ValidatePermission("WMSApp.ShipmentCartonReceiving", root.btnMenuShipmentCartonReceiving);
+            UserPermissions.ValidatePermission("WMSApp.ShipmentPalleteCount", root.btnMenuShipmentReceivingPalleteCount);
+            UserPermissions.ValidatePermission("WMSApp.CartonReceivingV2", root.btnMenuShipmentCartonReceivingV2);
+            UserPermissions.ValidatePermission("WMSApp.ItemPricing", root.btnMenuItemPricing);
+            UserPermissions.ValidatePermission("WMSApp.PickingOrder", btnMenuPicking);
+
+        }else {
+            UserPermissions.AddOnReceiveListener {
+                UserPermissions.ValidatePermission("WMSApp.UPCPricing", root.btnUPCPricing);
+                UserPermissions.ValidatePermission("WMSApp.PGPricing", root.btnMenuPGPricing);
+                UserPermissions.ValidatePermission("WMSApp.PutAwayPallete", root.btnMenuPutAwayPallete);
+                UserPermissions.ValidatePermission("WMSApp.MissingItem", root.btnSerialMissing);
+                UserPermissions.ValidatePermission("WMSApp.BolRecognition", root.btnBolRecognition);
+                UserPermissions.ValidatePermission("WMSApp.LocationCheck", root.btnLocationCheck);
+                UserPermissions.ValidatePermission("WMSApp.FillPallete", root.btnMenuFillPallete);
+                UserPermissions.ValidatePermission("WMSApp.SerialGenerator", root.btnSerialGenerator);
+                UserPermissions.ValidatePermission("WMSApp.ShipmentPalleteReceiving", root.btnMenuShipmentPalleteReceiving);
+                UserPermissions.ValidatePermission("WMSApp.ShipmentCartonReceiving", root.btnMenuShipmentCartonReceiving);
+                UserPermissions.ValidatePermission("WMSApp.ShipmentPalleteCount", root.btnMenuShipmentReceivingPalleteCount);
+                UserPermissions.ValidatePermission("WMSApp.CartonReceivingV2", root.btnMenuShipmentCartonReceivingV2);
+                UserPermissions.ValidatePermission("WMSApp.ItemPricing", root.btnMenuItemPricing);
+                UserPermissions.ValidatePermission("WMSApp.PickingOrder", btnMenuPicking);
+            }
+        }
+
+        UserPermissions.AddOnErrorListener {
+            AlertDialog.Builder(root.context)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("An Error Occurred")
+                .setMessage(it)
+                .setNegativeButton("Close", null)
+                .show()
+        }
+
         root.btnMenuPicking.setOnClickListener {
             ProceedPickingClick()
         }
-
-        /*root.btnMenuNextReceivingStatus.setOnClickListener {
-            ProceedNextReceivingStatus()
-        }*/
 
         root.btnBolRecognition.setOnClickListener {
             ProceedBolRecognition()
@@ -69,8 +111,7 @@ class HomeFragment : Fragment() {
         root.btnMenuPutAwayPallete.setOnClickListener {
             ProceedPutAwayPallete()
         }
-        root.btnFoldingScan.setText("Serial Generator")
-        root.btnFoldingScan.setOnClickListener {
+        root.btnSerialGenerator.setOnClickListener {
             ProceedFoldingScan()
         }
         root.btnUPCPricing.setOnClickListener {
