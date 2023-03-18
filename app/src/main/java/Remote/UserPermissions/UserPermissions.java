@@ -99,9 +99,7 @@ public class UserPermissions {
                                     if(response.isEmpty()){
                                         response = "API Error Occurred";
                                     }
-                                    for (UserPermissionErrorListener listener : errorListeners) {
-                                        SendError(response);
-                                    }
+                                    SendError(response);
                                     Logger.Debug("API", "RequestUserPermissions - Error In HTTP Response: " + response);
                                 }else {
                                     SendError(throwable.getMessage());
@@ -110,9 +108,7 @@ public class UserPermissions {
                             }));
         } catch (Throwable e) {
             permissionsAvailable = false;
-            for(UserPermissionErrorListener listener : errorListeners){
-                listener.onPermissionsErrorReceived(e.getMessage());
-            }
+            SendError(e.getMessage());
             Logger.Error("API", "RequestUserPermissions - Error Connecting: " + e.getMessage());
         }
     }
