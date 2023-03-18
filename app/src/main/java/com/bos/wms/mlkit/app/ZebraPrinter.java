@@ -4,6 +4,7 @@ import android.os.Looper;
 import android.util.Log;
 import android.util.Printer;
 
+import com.bos.wms.mlkit.General;
 import com.bos.wms.mlkit.app.interfaces.PrinterListener;
 import com.google.android.gms.tasks.Task;
 import com.zebra.sdk.comm.BluetoothConnectionInsecure;
@@ -22,6 +23,8 @@ public class ZebraPrinter {
 
     private static boolean firstConnectionEstablished = false;
 
+    public static Context applicationContext = null;
+
     private PrinterListener onPrinterConnectionFail;
 
     public ZebraPrinter(String theBtMacAddress)
@@ -35,19 +38,35 @@ public class ZebraPrinter {
     }
 
     /**
-     * Opens a connection via bluetooth to the portable printer and prints the bol number and serial
+     * Opens a connection via bluetooth to the portable printer and prints the bol number and serial, also the UserCode of the
+     * user that printed the paper, to help in printer sharing
      * @param bol
      * @param serial
      */
     public void printBolData(String bol, String serial) {
-        String zplData = "^XA\n" +
-                "^BY3\n" +
-                "^BUN,100,Y, N, Y\n" +
-                "^CF0,40\n" +
-                "^FO50,10^FD" + serial + "^FS\n" +
-                "^FO70,160^FDBOL# " + bol + "^FS\n" +
-                "^LL50\n" +
-                "^XZ\n";
+        String zplData = "";
+        if(applicationContext == null){
+            zplData = "^XA\n" +
+                    "^BY3\n" +
+                    "^BUN,100,Y, N, Y\n" +
+                    "^CF0,40\n" +
+                    "^FO50,10^FD" + serial + "^FS\n" +
+                    "^FO70,160^FDBOL# " + bol + "^FS\n" +
+                    "^LL50\n" +
+                    "^XZ\n";
+        }else {
+            String userCode = General.getGeneral(applicationContext).UserCode;
+            zplData = "^XA\n" +
+                    "^BY3\n" +
+                    "^BUN,100,Y, N, Y\n" +
+                    "^CF0,40\n" +
+                    "^FO50,10^FD" + serial + "^FS\n" +
+                    "^CF0,30\n" +
+                    "^FO20,160^FDBOL# " + bol + "^FS\n" +
+                    "^FO250,160^FD" + userCode + "^FS\n" +
+                    "^LL50\n" +
+                    "^XZ\n";
+        }
         printQueue.add(zplData);
 
         if(!isCurrentlyPrinting){

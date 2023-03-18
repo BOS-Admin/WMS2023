@@ -42,6 +42,10 @@ public class UserPermissions {
 
     private static boolean permissionsAvailable = false, permissionsReceived = false;
 
+    public static boolean GotPermissionError = false;
+
+    private static String latestPermissionError = "";
+
     /**
      * Initializes the user permissions and creates a new list for the listeners to know when permissions are received
      * @param userID the users id using the application
@@ -83,9 +87,7 @@ public class UserPermissions {
                                         Logger.Debug("API", "RequestUserPermissions - Got User[" + userID + "] Permissions: " + Arrays.toString(s.toArray()));
                                     }catch(Exception ex){
                                         permissionsAvailable = false;
-                                        for(UserPermissionErrorListener listener : errorListeners){
-                                            listener.onPermissionsErrorReceived(ex.getMessage());
-                                        }
+                                        SendError(ex.getMessage());
                                         Logger.Error("API", "RequestUserPermissions - Returned Error: " + ex.getMessage());
                                     }
                                 }
@@ -98,13 +100,11 @@ public class UserPermissions {
                                         response = "API Error Occurred";
                                     }
                                     for (UserPermissionErrorListener listener : errorListeners) {
-                                        listener.onPermissionsErrorReceived(response);
+                                        SendError(response);
                                     }
                                     Logger.Debug("API", "RequestUserPermissions - Error In HTTP Response: " + response);
                                 }else {
-                                    for (UserPermissionErrorListener listener : errorListeners) {
-                                        listener.onPermissionsErrorReceived(throwable.getMessage());
-                                    }
+                                    SendError(throwable.getMessage());
                                     Logger.Error("API", "RequestUserPermissions - Error In Response: " + throwable.getMessage());
                                 }
                             }));
@@ -122,6 +122,29 @@ public class UserPermissions {
      */
     public static boolean PermissionsAvailable(){
         return permissionsAvailable;
+    }
+
+    /**
+     * Sends an error message tro all the error listeners and saves the last error message for GetLatestError()
+     * @param message
+     */
+    public static void SendError(String message){
+        GotPermissionError = true;
+        latestPermissionError = message;
+        if(errorListeners != null) {
+            for (UserPermissionErrorListener listener : errorListeners) {
+                listener.onPermissionsErrorReceived(message);
+            }
+        }
+    }
+
+    /**
+     * Gets the latest error
+     * @return
+     */
+    public static String GetLatestError(){
+        GotPermissionError = false;
+        return latestPermissionError;
     }
 
     /**

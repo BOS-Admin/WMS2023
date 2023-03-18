@@ -10,6 +10,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.provider.AlarmClock
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -86,13 +87,22 @@ class HomeFragment : Fragment() {
             }
         }
 
-        UserPermissions.AddOnErrorListener {
+        if(UserPermissions.GotPermissionError){
             AlertDialog.Builder(root.context)
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setTitle("An Error Occurred")
-                .setMessage(it)
+                .setMessage(UserPermissions.GetLatestError())
                 .setNegativeButton("Close", null)
                 .show()
+        }else {
+            UserPermissions.AddOnErrorListener {
+                AlertDialog.Builder(root.context)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setTitle("An Error Occurred")
+                    .setMessage(it)
+                    .setNegativeButton("Close", null)
+                    .show()
+            }
         }
 
         root.btnMenuPicking.setOnClickListener {

@@ -1,10 +1,12 @@
 package com.bos.wms.mlkit.app
 
+import Remote.UserPermissions.UserPermissions
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.provider.AlarmClock.EXTRA_MESSAGE
+import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -39,6 +41,8 @@ class MainMenu : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        ZebraPrinter.applicationContext = applicationContext;
 
     }
 

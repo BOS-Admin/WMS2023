@@ -17,6 +17,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bos.wms.mlkit.General
+import com.bos.wms.mlkit.app.ZebraPrinter
 import com.bos.wms.mlkit.app.bosApp.PackingActivity
 import com.bos.wms.mlkit.app.bosApp.ScanRackPutAwayActivity
 import com.bos.wms.mlkit.app.bosApp.StockTakeActivity
@@ -74,15 +75,6 @@ class DashboardFragment : Fragment() {
                 UserPermissions.ValidatePermission("WMSApp.Dashboard.Transfer", root.btnTransfer);
                 UserPermissions.ValidatePermission("WMSApp.Dashboard.PutAway", root.btnPutAway);
             }
-        }
-
-        UserPermissions.AddOnErrorListener {
-            AlertDialog.Builder(root.context)
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .setTitle("An Error Occurred")
-                .setMessage(it)
-                .setNegativeButton("Close", null)
-                .show()
         }
 
         root.btnCount.setOnClickListener {
