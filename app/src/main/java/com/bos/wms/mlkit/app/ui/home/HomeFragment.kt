@@ -88,6 +88,7 @@ class HomeFragment : Fragment() {
         }
 
         if(UserPermissions.GotPermissionError){
+            Log.e("GotError", " Got Error 1");
             AlertDialog.Builder(root.context)
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setTitle("An Error Occurred")
@@ -95,6 +96,7 @@ class HomeFragment : Fragment() {
                 .setNegativeButton("Close", null)
                 .show()
         }else {
+            Log.e("GotError", " Got Error 2");
             UserPermissions.AddOnErrorListener {
                 AlertDialog.Builder(root.context)
                     .setIcon(android.R.drawable.ic_dialog_alert)
