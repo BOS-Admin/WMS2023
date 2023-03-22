@@ -66,7 +66,8 @@ class HomeFragment : Fragment() {
             UserPermissions.ValidatePermission("WMSApp.ShipmentPalleteCount", root.btnMenuShipmentReceivingPalleteCount);
             UserPermissions.ValidatePermission("WMSApp.CartonReceivingV2", root.btnMenuShipmentCartonReceivingV2);
             UserPermissions.ValidatePermission("WMSApp.ItemPricing", root.btnMenuItemPricing);
-            UserPermissions.ValidatePermission("WMSApp.PickingOrder", btnMenuPicking);
+            UserPermissions.ValidatePermission("WMSApp.PickingOrder", root.btnMenuPicking);
+            UserPermissions.ValidatePermission("WMSApp.EmptyBox", root.btnEmptyBox);
 
         }else {
             UserPermissions.AddOnReceiveListener {
@@ -83,7 +84,8 @@ class HomeFragment : Fragment() {
                 UserPermissions.ValidatePermission("WMSApp.ShipmentPalleteCount", root.btnMenuShipmentReceivingPalleteCount);
                 UserPermissions.ValidatePermission("WMSApp.CartonReceivingV2", root.btnMenuShipmentCartonReceivingV2);
                 UserPermissions.ValidatePermission("WMSApp.ItemPricing", root.btnMenuItemPricing);
-                UserPermissions.ValidatePermission("WMSApp.PickingOrder", btnMenuPicking);
+                UserPermissions.ValidatePermission("WMSApp.PickingOrder", root.btnMenuPicking);
+                UserPermissions.ValidatePermission("WMSApp.EmptyBox", root.btnEmptyBox);
             }
         }
 
@@ -148,6 +150,10 @@ class HomeFragment : Fragment() {
 
         root.btnMenuShipmentCartonReceivingV2.setOnClickListener {
             ProceedShipmentCartonReceivingV2()
+        }
+
+        root.btnEmptyBox.setOnClickListener {
+            ProceedEmptyBox()
         }
 
 
@@ -239,6 +245,12 @@ class HomeFragment : Fragment() {
         }
         finally {
         }
+    }
+
+    fun ProceedEmptyBox() {
+        val intent = Intent (getActivity(), EmptyBoxActivity::class.java)
+        startActivity(intent)
+        txtStatus.setText("")
     }
 
     fun ProceedBolRecognition() {

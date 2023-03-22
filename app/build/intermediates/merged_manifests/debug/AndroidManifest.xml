@@ -53,6 +53,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.bos.wms.mlkit.app.EmptyBoxActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
             android:name="com.bos.wms.mlkit.app.ScanUPCsForBolActivity"
             android:exported="false"
             android:windowSoftInputMode="stateHidden" />

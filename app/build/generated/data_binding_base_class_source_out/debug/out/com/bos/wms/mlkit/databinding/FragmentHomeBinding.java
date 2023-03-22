@@ -24,6 +24,9 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final Button btnBolRecognition;
 
   @NonNull
+  public final Button btnEmptyBox;
+
+  @NonNull
   public final Button btnLocationCheck;
 
   @NonNull
@@ -66,10 +69,10 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final EditText txtStatus;
 
   private FragmentHomeBinding(@NonNull LinearLayout rootView, @NonNull Button btnBolRecognition,
-      @NonNull Button btnLocationCheck, @NonNull Button btnMenuFillPallete,
-      @NonNull Button btnMenuItemPricing, @NonNull Button btnMenuPGPricing,
-      @NonNull Button btnMenuPicking, @NonNull Button btnMenuPutAwayPallete,
-      @NonNull Button btnMenuShipmentCartonReceiving,
+      @NonNull Button btnEmptyBox, @NonNull Button btnLocationCheck,
+      @NonNull Button btnMenuFillPallete, @NonNull Button btnMenuItemPricing,
+      @NonNull Button btnMenuPGPricing, @NonNull Button btnMenuPicking,
+      @NonNull Button btnMenuPutAwayPallete, @NonNull Button btnMenuShipmentCartonReceiving,
       @NonNull Button btnMenuShipmentCartonReceivingV2,
       @NonNull Button btnMenuShipmentPalleteReceiving,
       @NonNull Button btnMenuShipmentReceivingPalleteCount, @NonNull Button btnSerialGenerator,
@@ -77,6 +80,7 @@ public final class FragmentHomeBinding implements ViewBinding {
       @NonNull EditText txtStatus) {
     this.rootView = rootView;
     this.btnBolRecognition = btnBolRecognition;
+    this.btnEmptyBox = btnEmptyBox;
     this.btnLocationCheck = btnLocationCheck;
     this.btnMenuFillPallete = btnMenuFillPallete;
     this.btnMenuItemPricing = btnMenuItemPricing;
@@ -123,6 +127,12 @@ public final class FragmentHomeBinding implements ViewBinding {
       id = R.id.btnBolRecognition;
       Button btnBolRecognition = ViewBindings.findChildViewById(rootView, id);
       if (btnBolRecognition == null) {
+        break missingId;
+      }
+
+      id = R.id.btnEmptyBox;
+      Button btnEmptyBox = ViewBindings.findChildViewById(rootView, id);
+      if (btnEmptyBox == null) {
         break missingId;
       }
 
@@ -210,11 +220,12 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((LinearLayout) rootView, btnBolRecognition, btnLocationCheck,
-          btnMenuFillPallete, btnMenuItemPricing, btnMenuPGPricing, btnMenuPicking,
-          btnMenuPutAwayPallete, btnMenuShipmentCartonReceiving, btnMenuShipmentCartonReceivingV2,
-          btnMenuShipmentPalleteReceiving, btnMenuShipmentReceivingPalleteCount, btnSerialGenerator,
-          btnSerialMissing, btnUPCPricing, txtStatus);
+      return new FragmentHomeBinding((LinearLayout) rootView, btnBolRecognition, btnEmptyBox,
+          btnLocationCheck, btnMenuFillPallete, btnMenuItemPricing, btnMenuPGPricing,
+          btnMenuPicking, btnMenuPutAwayPallete, btnMenuShipmentCartonReceiving,
+          btnMenuShipmentCartonReceivingV2, btnMenuShipmentPalleteReceiving,
+          btnMenuShipmentReceivingPalleteCount, btnSerialGenerator, btnSerialMissing, btnUPCPricing,
+          txtStatus);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -304,6 +304,10 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/content_foldingscan.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_empty_box.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_empty_box.xml"
+    },
+    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_baseline_delete_all_icon.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/drawable/baseline_delete_all_icon.xml"
     },

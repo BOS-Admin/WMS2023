@@ -2799,6 +2799,7 @@ id btnDelete
 id btnDestination
 id btnDone
 id btnE
+id btnEmptyBox
 id btnEnd
 id btnF
 id btnFoldingScanDone
@@ -2875,6 +2876,11 @@ id column_reverse
 id compatible
 id compress
 id confirm_button
+id confirmationButtons
+id confirmationLayout
+id confirmationMessage
+id confirmationNo
+id confirmationYes
 id constraint
 id container
 id content
@@ -2929,6 +2935,7 @@ id edit_query
 id edittext_dropdown_editable
 id edittext_dropdown_noneditable
 id elastic
+id emptyBoxActivityLayout
 id end
 id endToStart
 id end_padder
@@ -2953,6 +2960,7 @@ id fitXY
 id fixed
 id flex_end
 id flex_start
+id flexboxLayout2
 id flip
 id floating
 id forever
@@ -2986,6 +2994,7 @@ id imageView
 id immediateStop
 id included
 id info
+id insertBinBoxBarcode
 id insertUPCEditText
 id invisible
 id inward
@@ -3199,9 +3208,11 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scanBinsHelpText
 id scanUPCSButton
 id scanUPCSHelpText
 id scanUPCsForBolActivityLayout
+id scannedItemsCount
 id scannedUPCsList
 id screen
 id scroll
@@ -3497,6 +3508,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_bol_recognition
 layout activity_count
+layout activity_empty_box
 layout activity_fillpallete
 layout activity_foldingscan
 layout activity_item_pricing
