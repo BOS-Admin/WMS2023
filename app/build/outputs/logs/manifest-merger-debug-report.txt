@@ -630,11 +630,11 @@ ADDED from C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest
 	android:name
 		ADDED from C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:186:13-52
 activity#com.bos.wms.mlkit.app.UPCPricingActivity
-ADDED from C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:190:9-194:63
+ADDED from C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:190:9-194:57
 	android:label
 		ADDED from C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:192:13-40
 	android:windowSoftInputMode
-		ADDED from C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:194:13-60
+		ADDED from C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:194:13-54
 	android:theme
 		ADDED from C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:193:13-56
 	android:name

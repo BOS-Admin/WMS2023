@@ -8,6 +8,10 @@
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_fillpallete.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/upc_pricing_item.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/upc_pricing_item.xml"
+    },
+    {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_foldingscan.xml",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_foldingscan.xml"
     },
@@ -158,10 +162,6 @@
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_locationcheck.xml",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_locationcheck.xml"
-    },
-    {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/fragment_home.xml",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/fragment_home.xml"
     },
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_upc_pricing.xml",

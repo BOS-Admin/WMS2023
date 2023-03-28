@@ -414,15 +414,15 @@
 211            android:windowSoftInputMode="stateAlwaysHidden" />
 211-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:189:13-60
 212        <activity
-212-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:190:9-194:63
+212-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:190:9-194:57
 213            android:name="com.bos.wms.mlkit.app.UPCPricingActivity"
 213-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:191:13-51
 214            android:label="UPC Pricing"
 214-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:192:13-40
 215            android:theme="@style/AppTheme.NoActionBar"
 215-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:193:13-56
-216            android:windowSoftInputMode="stateAlwaysHidden" />
-216-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:194:13-60
+216            android:windowSoftInputMode="stateHidden" />
+216-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:194:13-54
 217        <activity
 217-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:195:9-199:63
 218            android:name="com.bos.wms.mlkit.app.PGPricingActivity"

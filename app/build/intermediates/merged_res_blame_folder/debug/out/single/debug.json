@@ -84,16 +84,16 @@
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\navigation\\nav_graph2.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_fragment_home.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/fragment_home.xml"
-    },
-    {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_activity_shipment.xml.flat",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_shipment.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable_baseline_image_not_supported.xml.flat",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable\\baseline_image_not_supported.xml"
     },
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_activity_itemserial_missing.xml.flat",
@@ -114,6 +114,14 @@
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable_ic_dashboard_black_24dp.xml.flat",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable\\ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable_baseline_close_icon.xml.flat",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable\\baseline_close_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable_edittext_rounded_corners.xml.flat",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable\\edittext_rounded_corners.xml"
     },
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_activity_shipment_pallete_carton.xml.flat",
@@ -276,12 +284,24 @@
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_upc_pricing_item.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/upc_pricing_item.xml"
+    },
+    {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable_baseline_delete_all_icon.xml.flat",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable\\baseline_delete_all_icon.xml"
     },
     {
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable_mainmenu_divider.xml.flat",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable\\mainmenu_divider.xml"
+    },
+    {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\anim_pop_enter_anim.xml.flat",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\anim\\pop_enter_anim.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable_baseline_settings_icon.xml.flat",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable\\baseline_settings_icon.xml"
     },
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\navigation_nav_graph.xml.flat",

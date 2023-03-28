@@ -191,7 +191,7 @@
             android:name=".app.UPCPricingActivity"
             android:label="UPC Pricing"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden" />
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".app.PGPricingActivity"
             android:label="PG Pricing"

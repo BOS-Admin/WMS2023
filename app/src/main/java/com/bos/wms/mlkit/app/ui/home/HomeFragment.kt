@@ -1,34 +1,24 @@
 package com.bos.wms.mlkit.app.ui.home
 
-import Model.UserLoginModel
 import Remote.APIClient
 import Remote.BasicApi
 import Remote.UserPermissions.UserPermissions
-import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
-import android.provider.AlarmClock
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bos.wms.mlkit.General
-import com.bos.wms.mlkit.R
 import com.bos.wms.mlkit.app.*
 import com.bos.wms.mlkit.databinding.FragmentHomeBinding
 import com.bos.wms.mlkit.storage.Storage
+import com.google.android.material.snackbar.Snackbar
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.content_locationcheck.*
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 import java.io.IOException
 
@@ -181,14 +171,19 @@ class HomeFragment : Fragment() {
                     .subscribe(
                         {s->
                         if(s){
-                            txtStatus.setText("")
                             val intent = Intent (getActivity(), PickingActivity::class.java)
                             startActivity(intent)
                         }
                         },
                         {t:Throwable?->
                             run {
-                                txtStatus.setText(t!!.message)
+
+                                Snackbar.make(
+                                    binding.root.homeFragmentLayout,
+                                    t!!.message.toString(),
+                                    Snackbar.LENGTH_LONG
+                                )
+                                    .setAction("No action", null).show()
                             }
                         }
                     )
@@ -223,19 +218,27 @@ class HomeFragment : Fragment() {
                             if (ErrorMsg.isEmpty()) {
                                 val intent = Intent (getActivity(), LocationCheckActivity::class.java)
                                 startActivity(intent)
-                                txtStatus.setText("")
                             } else if (!ErrorMsg.isEmpty()) {
-                                txtStatus.setTextColor(Color.RED)
-                                txtStatus.setText(ErrorMsg)
-                                //(ErrorMsg)
+                                run {
+                                    Snackbar.make(
+                                        binding.root.homeFragmentLayout,
+                                        ErrorMsg,
+                                        Snackbar.LENGTH_LONG
+                                    )
+                                        .setAction("No action", null).show()
+                                }
                             }
 
 
                         },
                         {t:Throwable?->
                             run {
-                                txtStatus.setTextColor(Color.RED)
-                                txtStatus.setText(t!!.message.toString())
+                                Snackbar.make(
+                                    binding.root.homeFragmentLayout,
+                                    t!!.message.toString(),
+                                    Snackbar.LENGTH_LONG
+                                )
+                                    .setAction("No action", null).show()
                             }
                         }
                     )
@@ -250,79 +253,65 @@ class HomeFragment : Fragment() {
     fun ProceedEmptyBox() {
         val intent = Intent (getActivity(), EmptyBoxActivity::class.java)
         startActivity(intent)
-        txtStatus.setText("")
     }
 
     fun ProceedBolRecognition() {
         val intent = Intent (getActivity(), BolRecognitionActivity::class.java)
         startActivity(intent)
-        txtStatus.setText("")
     }
 
     fun ProceedNextReceivingStatus() {
         val intent = Intent (getActivity(), NextReceivingStatusActivity::class.java)
         startActivity(intent)
-        txtStatus.setText("")
     }
 
     fun ProceedUPCPricing() {
         val intent = Intent (getActivity(), UPCPricingActivity::class.java)
         startActivity(intent)
-        txtStatus.setText("")
     }
     fun ProceedFoldingScan() {
         val intent = Intent (getActivity(), SerialGeneratorActivity::class.java)
         startActivity(intent)
-        txtStatus.setText("")
     }
     fun ProceedShipmentPalleteReceiving() {
         val intent = Intent (getActivity(), ShipmentPalleteReceivingActivity::class.java)
         startActivity(intent)
-        txtStatus.setText("")
     }
     fun ProceedShipmentCartonReceiving() {
         val intent = Intent (getActivity(), ShipmentCartonReceivingActivity::class.java)
         startActivity(intent)
-        txtStatus.setText("")
     }
 
     fun ProceedShipmentCartonReceivingV2() {
         val intent = Intent (getActivity(), ShipmentCartonReceivingV2Activity::class.java)
         startActivity(intent)
-        txtStatus.setText("")
     }
     fun ProceedShipmentReceivingPalleteCount() {
         val intent = Intent (getActivity(), ShipmentCartonCountReceivingActivity::class.java)
         startActivity(intent)
-        txtStatus.setText("")
     }
 
     fun ProceedItemPricingActivity() {
         val intent = Intent (getActivity(), ItemPricingActivity::class.java)
         startActivity(intent)
-        txtStatus.setText("")
     }
     fun ProceedPGPricingActivity() {
         val intent = Intent (getActivity(), PGPricingActivity::class.java)
         startActivity(intent)
-        txtStatus.setText("")
     }
 
     fun ProceedMissingItem() {
         val intent = Intent (getActivity(), ItemSerialUPCMissingActivity::class.java)
         startActivity(intent)
-        txtStatus.setText("")
     }
     fun ProceedPutAwayPallete() {
         val intent = Intent (getActivity(), PutAwayPalleteActivity::class.java)
         startActivity(intent)
-        txtStatus.setText("")
     }
 
     fun ProceedFillPallete() {
         val intent = Intent (getActivity(), FillPalleteActivity::class.java)
         startActivity(intent)
-        txtStatus.setText("")
     }
     override fun onDestroyView() {
         super.onDestroyView()

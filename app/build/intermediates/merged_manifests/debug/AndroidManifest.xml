@@ -213,7 +213,7 @@
             android:name="com.bos.wms.mlkit.app.UPCPricingActivity"
             android:label="UPC Pricing"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden" />
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="com.bos.wms.mlkit.app.PGPricingActivity"
             android:label="PG Pricing"

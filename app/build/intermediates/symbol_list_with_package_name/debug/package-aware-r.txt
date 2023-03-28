@@ -2548,9 +2548,12 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable background
+drawable baseline_close_icon
 drawable baseline_delete_all_icon
+drawable baseline_image_not_supported
 drawable baseline_print_disabled_icon
 drawable baseline_print_icon
+drawable baseline_settings_icon
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2585,6 +2588,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edittext_rounded_corners
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_baseline_camera_capture_icon
@@ -2611,6 +2615,7 @@ drawable m3_tabs_background
 drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
+drawable mainmenu_divider
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2875,6 +2880,7 @@ id column
 id column_reverse
 id compatible
 id compress
+id confirmBtn
 id confirm_button
 id confirmationButtons
 id confirmationLayout
@@ -2882,6 +2888,7 @@ id confirmationMessage
 id confirmationNo
 id confirmationYes
 id constraint
+id constraintLayout
 id container
 id content
 id contentPanel
@@ -2981,7 +2988,9 @@ id header_title
 id hideable
 id home
 id homeAsUp
+id homeFragmentLayout
 id honorRequest
+id horizontalGuideLineTwo
 id horizontal_only
 id icon
 id icon_group
@@ -2994,6 +3003,7 @@ id imageView
 id immediateStop
 id included
 id info
+id insertBarcode
 id insertBinBoxBarcode
 id insertUPCEditText
 id invisible
@@ -3073,7 +3083,6 @@ id linearLayout7
 id listMode
 id listView
 id list_item
-id loading
 id locale
 id ltr
 id mImageView
@@ -3212,7 +3221,10 @@ id scanBinsHelpText
 id scanUPCSButton
 id scanUPCSHelpText
 id scanUPCsForBolActivityLayout
+id scannedItemSerial
+id scannedItemUPC
 id scannedItemsCount
+id scannedItemsListView
 id scannedUPCsList
 id screen
 id scroll
@@ -3376,7 +3388,6 @@ id txtShipPallReciAppointmentNb
 id txtShipPallReciBolNb
 id txtShipPallReciNbOfCartons
 id txtShipPallReciPalleteNb
-id txtStatus
 id txtUPC
 id txtfillpalleteBinBarcode
 id txtlocationcheckBinBarcode
@@ -3388,6 +3399,7 @@ id uniform
 id unlabeled
 id up
 id upcDeleteImage
+id upcPricingActivityLayout
 id upcText
 id useLogo
 id vertical_center_line
@@ -3657,6 +3669,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout upc_pricing_item
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -4929,6 +4942,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style button_main_menu_style
 style pop_window_anim
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity

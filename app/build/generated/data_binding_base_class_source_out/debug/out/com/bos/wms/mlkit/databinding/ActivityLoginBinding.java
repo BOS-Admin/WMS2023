@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -37,9 +36,6 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final Spinner ddlFloor;
 
   @NonNull
-  public final ProgressBar loading;
-
-  @NonNull
   public final TextView txtAppVersion;
 
   @NonNull
@@ -50,14 +46,13 @@ public final class ActivityLoginBinding implements ViewBinding {
 
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnLogin,
       @NonNull ImageView btnSettings, @NonNull ConstraintLayout container,
-      @NonNull Spinner ddlFloor, @NonNull ProgressBar loading, @NonNull TextView txtAppVersion,
-      @NonNull EditText txtpassword, @NonNull EditText txtusername) {
+      @NonNull Spinner ddlFloor, @NonNull TextView txtAppVersion, @NonNull EditText txtpassword,
+      @NonNull EditText txtusername) {
     this.rootView = rootView;
     this.btnLogin = btnLogin;
     this.btnSettings = btnSettings;
     this.container = container;
     this.ddlFloor = ddlFloor;
-    this.loading = loading;
     this.txtAppVersion = txtAppVersion;
     this.txtpassword = txtpassword;
     this.txtusername = txtusername;
@@ -110,12 +105,6 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.loading;
-      ProgressBar loading = ViewBindings.findChildViewById(rootView, id);
-      if (loading == null) {
-        break missingId;
-      }
-
       id = R.id.txtAppVersion;
       TextView txtAppVersion = ViewBindings.findChildViewById(rootView, id);
       if (txtAppVersion == null) {
@@ -135,7 +124,7 @@ public final class ActivityLoginBinding implements ViewBinding {
       }
 
       return new ActivityLoginBinding((ConstraintLayout) rootView, btnLogin, btnSettings, container,
-          ddlFloor, loading, txtAppVersion, txtpassword, txtusername);
+          ddlFloor, txtAppVersion, txtpassword, txtusername);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

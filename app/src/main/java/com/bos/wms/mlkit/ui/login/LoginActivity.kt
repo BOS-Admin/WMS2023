@@ -18,6 +18,7 @@ import android.view.inputmethod.EditorInfo
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.bos.wms.mlkit.Extensions
 import com.bos.wms.mlkit.General
 import com.bos.wms.mlkit.R
 import com.bos.wms.mlkit.app.Logger
@@ -179,11 +180,13 @@ class LoginActivity : AppCompatActivity() {
         }
     }
     private fun setPopWindow(v: View) {
+        Extensions.setImageDrawableWithAnimation(btnSettings, getDrawable(R.drawable.baseline_close_icon), 300);
         PopWindowMain(
             v, this@LoginActivity
         ) {
             IPAddress= mStorage.getDataString("IPAddress", "192.168.10.82")
             getLocations(2)
+            Extensions.setImageDrawableWithAnimation(btnSettings, getDrawable(R.drawable.baseline_settings_icon), 300);
         }
     }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -199,7 +202,6 @@ class LoginActivity : AppCompatActivity() {
             setPopWindow(it)
         }
         txtAppVersion.setText(txtAppVersion.text.toString() + " " + General.getGeneral(this).AppVersion)
-        val loading: ProgressBar = findViewById(R.id.loading)
 
         var btnLogin: Button = findViewById(R.id.btnLogin)
 
