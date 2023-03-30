@@ -299,7 +299,10 @@ interface BasicApi {
     @GET("api/UPCPricing")
     fun ValidateUPCPricing(@Query("ItemSerial") ItemSerial:String,@Query("ItemUPC") ItemUPC:String): Observable<String>
     @POST("api/UPCPricing")
-    fun PostUPCPricing(@Query("UserID") UserID:Int,@Query("ItemSerials") ItemSerials:String,@Query("ItemUPCs") ItemUPCs:String,@Query("PricingLineCode") PricingLineCode:String): Observable<ResponseBody>
+    fun PostUPCPricing(@Query("UserID") UserID:Int,
+                       @Query("ItemSerials") ItemSerials:String,
+                       @Query("ItemUPCs") ItemUPCs:String,
+                       @Query("PricingLineCode") PricingLineCode:String): Observable<ResponseBody>
 
 
     @GET("api/PGPricing")

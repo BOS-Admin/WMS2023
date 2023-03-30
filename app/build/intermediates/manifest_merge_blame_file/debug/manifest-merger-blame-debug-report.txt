@@ -62,538 +62,539 @@
 37-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:22:9-54
 38        android:supportsRtl="true"
 38-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:23:9-35
-39        android:theme="@style/AppTheme"
-39-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:24:9-40
-40        android:usesCleartextTraffic="true" >
-40-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:26:9-44
-41        <provider
-42            android:name="androidx.core.content.FileProvider"
-42-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:27:71-120
-43            android:authorities="com.bos.wms.mlkit.fileprovider"
-43-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:27:19-70
-44            android:exported="false"
-44-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:27:121-145
-45            android:grantUriPermissions="true" >
-45-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:27:146-180
-46            <meta-data
-46-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:28:13-111
-47                android:name="android.support.FILE_PROVIDER_PATHS"
-47-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:28:24-74
-48                android:resource="@xml/file_paths" />
-48-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:28:75-109
-49        </provider>
-50
-51        <activity
-51-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:31:9-35:15
-52            android:name="com.bos.wms.mlkit.app.bosApp.PutAwayActivity"
-52-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:32:13-55
-53            android:label="Put Away"
-53-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:33:13-37
-54            android:windowSoftInputMode="stateAlwaysHidden" />
-54-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:34:13-60
-55        <activity
-55-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:36:9-40:15
-56            android:name="com.bos.wms.mlkit.app.bosApp.ScanRackPutAwayActivity"
-56-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:37:13-63
-57            android:label="Scan Rack Put Away"
-57-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:38:13-47
-58            android:windowSoftInputMode="stateAlwaysHidden" />
-58-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:39:13-60
-59        <activity
-59-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:43:9-47:15
-60            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferReceivingDCActivity"
-60-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:44:13-76
-61            android:label="Transfer Receiving DC"
-61-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:45:13-50
-62            android:windowSoftInputMode="stateAlwaysHidden" />
-62-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:46:13-60
-63        <activity
-63-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:49:9-53:15
-64            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferReceivingActivity"
-64-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:50:13-74
-65            android:label="Transfer Receiving"
-65-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:51:13-47
-66            android:windowSoftInputMode="stateAlwaysHidden" />
-66-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:52:13-60
-67        <activity
-67-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:54:9-58:15
-68            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.ScanTransferReceivingActivity"
-68-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:55:13-78
-69            android:label="Scan Transfer Receiving"
-69-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:56:13-52
-70            android:windowSoftInputMode="stateAlwaysHidden" />
-70-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:57:13-60
-71        <activity
-71-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:61:9-65:15
-72            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferActivity"
-72-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:62:13-65
-73            android:label="Transfer Type"
-73-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:63:13-42
-74            android:windowSoftInputMode="stateAlwaysHidden" />
-74-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:64:13-60
-75        <activity
-75-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:67:9-71:15
-76            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.ShipmentActivity"
-76-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:68:13-65
-77            android:label="Transfer Shipment"
-77-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:69:13-46
-78            android:windowSoftInputMode="stateAlwaysHidden" />
-78-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:70:13-60
-79        <activity android:name="com.bos.wms.mlkit.app.NextReceivingStatusActivity" />
-79-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:73:9-78
-79-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:73:19-66
-80        <activity
-80-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:75:9-79:15
-81            android:name="com.bos.wms.mlkit.app.bosApp.PackingDCActivity"
-81-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:76:13-57
-82            android:label="@string/title_activity_packing_dc"
-82-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:77:13-62
-83            android:windowSoftInputMode="stateAlwaysHidden" />
-83-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:78:13-60
-84        <activity
-84-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:82:9-86:15
-85            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeCountActivity"
-85-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:83:13-62
-86            android:label="@string/title_activity_stock_count"
-86-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:84:13-63
-87            android:windowSoftInputMode="stateAlwaysHidden" />
-87-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:85:13-60
-88        <activity
-88-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:88:9-92:15
-89            android:name="com.bos.wms.mlkit.app.bosApp.ScanForCountStockTakeActivity"
-89-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:89:13-69
-90            android:label="@string/title_activity_scan_count_stock_ake"
-90-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:90:13-72
-91            android:windowSoftInputMode="stateAlwaysHidden" />
-91-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:91:13-60
-92        <activity
-92-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:94:9-98:15
-93            android:name="com.bos.wms.mlkit.app.bosApp.ScanRackStockTakeActivity"
-93-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:95:13-65
-94            android:label="@string/title_activity_scan_rack_count_stock_ake"
-94-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:96:13-77
-95            android:windowSoftInputMode="stateAlwaysHidden" />
-95-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:97:13-60
-96        <activity
-96-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:101:9-105:15
-97            android:name="com.bos.wms.mlkit.app.bosApp.CheckingActivity"
-97-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:102:13-56
-98            android:label="@string/title_activity_checking_dc"
-98-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:103:13-63
-99            android:windowSoftInputMode="stateAlwaysHidden" />
-99-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:104:13-60
-100        <activity
-100-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:107:9-111:15
-101            android:name="com.bos.wms.mlkit.app.bosApp.ScanBinForCheckingActivity"
-101-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:108:13-66
-102            android:label="@string/title_activity_scan_checking"
-102-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:109:13-65
-103            android:windowSoftInputMode="stateAlwaysHidden" />
-103-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:110:13-60
-104        <activity
-104-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:113:9-117:15
-105            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeDCActivity"
-105-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:114:13-59
-106            android:label="@string/title_activity_stock_take_dc"
-106-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:115:13-65
-107            android:windowSoftInputMode="stateAlwaysHidden" />
-107-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:116:13-60
-108        <activity
-108-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:118:9-122:15
-109            android:name="com.bos.wms.mlkit.app.bosApp.CountActivity"
-109-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:119:13-53
-110            android:label="Count"
-110-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:120:13-34
-111            android:windowSoftInputMode="stateAlwaysHidden" />
-111-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:121:13-60
-112        <activity
-112-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:125:9-129:15
-113            android:name="com.bos.wms.mlkit.app.bosApp.ScanBoxForStockTakeActivity"
-113-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:126:13-67
-114            android:label="@string/title_activity_scan_box_stock_dc"
-114-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:127:13-69
-115            android:windowSoftInputMode="stateAlwaysHidden" />
-115-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:128:13-60
-116        <activity
-116-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:131:9-135:15
-117            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeActivity"
-117-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:132:13-57
-118            android:label="@string/title_activity_stock_take"
-118-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:133:13-62
-119            android:windowSoftInputMode="stateAlwaysHidden" />
-119-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:134:13-60
-120        <activity
-120-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:136:9-140:15
-121            android:name="com.bos.wms.mlkit.app.bosApp.ScanBinForCountActivity"
-121-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:137:13-63
-122            android:label="@string/title_activity_scan_count"
-122-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:138:13-62
-123            android:windowSoftInputMode="stateAlwaysHidden" />
-123-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:139:13-60
-124        <activity
-124-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:142:9-146:15
-125            android:name="com.bos.wms.mlkit.app.bosApp.ScanContainerActivity"
-125-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:143:13-61
-126            android:label="@string/title_activity_scan_container"
-126-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:144:13-66
-127            android:windowSoftInputMode="stateAlwaysHidden" />
-127-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:145:13-60
-128        <activity
-128-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:148:9-152:15
-129            android:name="com.bos.wms.mlkit.app.bosApp.PrinterSelectionActivity"
-129-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:149:13-64
-130            android:label="@string/title_activity_printer_selection"
-130-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:150:13-69
-131            android:windowSoftInputMode="stateAlwaysHidden" />
-131-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:151:13-60
-132        <activity
-132-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:155:9-159:15
-133            android:name="com.bos.wms.mlkit.app.bosApp.PackingReasonActivity"
-133-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:156:13-61
-134            android:label="@string/title_activity_packing_reason"
-134-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:157:13-66
-135            android:windowSoftInputMode="stateAlwaysHidden" />
-135-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:158:13-60
-136        <activity
-136-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:161:9-165:59
-137            android:name="com.bos.wms.mlkit.app.bosApp.PackingActivity"
-137-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:162:13-55
-138            android:label="@string/title_activity_packing_dc"
-138-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:163:13-62
-139            android:theme="@style/AppTheme.NoActionBar"
-139-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:165:13-56
-140            android:windowSoftInputMode="stateAlwaysHidden" />
-140-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:164:13-60
-141        <activity
-141-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:167:9-171:59
-142            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeRackDCActivity"
-142-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:168:13-63
-143            android:label="Stock Take Rack DC"
-143-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:169:13-47
-144            android:theme="@style/AppTheme.NoActionBar"
-144-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:171:13-56
-145            android:windowSoftInputMode="stateAlwaysHidden" />
-145-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:170:13-60
-146        <activity
-146-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:175:9-179:59
-147            android:name="com.bos.wms.mlkit.app.PickingActivity"
-147-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:176:13-48
-148            android:label="@string/title_activity_picking"
-148-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:177:13-59
-149            android:theme="@style/AppTheme.NoActionBar"
-149-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:179:13-56
-150            android:windowSoftInputMode="stateAlwaysHidden" />
-150-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:178:13-60
-151        <activity
-151-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:180:9-184:59
-152            android:name="com.bos.wms.mlkit.app.LocationCheckActivity"
-152-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:181:13-54
-153            android:label="Location Check"
-153-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:182:13-43
-154            android:theme="@style/AppTheme.NoActionBar"
-154-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:184:13-56
-155            android:windowSoftInputMode="stateAlwaysHidden" />
-155-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:183:13-60
-156        <activity
-156-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:185:9-189:59
-157            android:name="com.bos.wms.mlkit.app.PutAwayPalleteActivity"
-157-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:186:13-55
-158            android:label="Put Away Pallete"
-158-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:187:13-45
-159            android:theme="@style/AppTheme.NoActionBar"
-159-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:189:13-56
-160            android:windowSoftInputMode="stateAlwaysHidden" />
-160-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:188:13-60
-161        <activity
-161-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:191:9-195:59
-162            android:name="com.bos.wms.mlkit.app.ShipmentPalleteReceivingActivity"
-162-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:192:13-65
-163            android:label="Shipment Pallete Receiving"
-163-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:193:13-55
-164            android:theme="@style/AppTheme.NoActionBar"
-164-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:195:13-56
-165            android:windowSoftInputMode="stateAlwaysHidden" />
-165-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:194:13-60
-166        <activity
-166-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:196:9-200:59
-167            android:name="com.bos.wms.mlkit.app.ShipmentCartonReceivingActivity"
-167-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:197:13-64
-168            android:label="Shipment Carton Receiving"
-168-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:198:13-54
-169            android:theme="@style/AppTheme.NoActionBar"
-169-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:200:13-56
-170            android:windowSoftInputMode="stateAlwaysHidden" />
-170-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:199:13-60
-171        <activity
-171-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:201:9-205:59
-172            android:name="com.bos.wms.mlkit.app.ShipmentCartonReceivingV2Activity"
-172-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:202:13-66
-173            android:label="Shipment Carton Receiving V2"
-173-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:203:13-57
-174            android:theme="@style/AppTheme.NoActionBar"
-174-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:205:13-56
-175            android:windowSoftInputMode="stateAlwaysHidden" />
-175-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:204:13-60
-176        <activity
-176-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:206:9-210:59
-177            android:name="com.bos.wms.mlkit.app.ShipmentCartonCountReceivingActivity"
-177-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:207:13-69
-178            android:label="Shipment Receiving Carton Count"
-178-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:208:13-60
-179            android:theme="@style/AppTheme.NoActionBar"
-179-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:210:13-56
-180            android:windowSoftInputMode="stateAlwaysHidden" />
-180-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:209:13-60
-181        <activity
-181-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:212:9-216:59
-182            android:name="com.bos.wms.mlkit.app.FoldingScanActivity"
-182-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:213:13-52
-183            android:label="Folding Scan"
-183-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:214:13-41
-184            android:theme="@style/AppTheme.NoActionBar"
-184-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:216:13-56
-185            android:windowSoftInputMode="stateAlwaysHidden" />
-185-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:215:13-60
-186        <activity
-186-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:218:9-222:59
-187            android:name="com.bos.wms.mlkit.app.UPCPricingActivity"
-187-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:219:13-51
-188            android:label="UPC Pricing"
-188-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:220:13-40
-189            android:theme="@style/AppTheme.NoActionBar"
-189-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:222:13-56
-190            android:windowSoftInputMode="stateAlwaysHidden" />
-190-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:221:13-60
-191        <activity
-191-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:224:9-228:59
-192            android:name="com.bos.wms.mlkit.app.PGPricingActivity"
-192-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:225:13-50
-193            android:label="PG Pricing"
-193-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:226:13-39
-194            android:theme="@style/AppTheme.NoActionBar"
-194-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:228:13-56
-195            android:windowSoftInputMode="stateAlwaysHidden" />
-195-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:227:13-60
-196        <activity
-196-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:230:9-234:59
-197            android:name="com.bos.wms.mlkit.app.ItemSerialMissingActivity"
-197-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:231:13-58
-198            android:label="Missing Item"
-198-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:232:13-41
-199            android:theme="@style/AppTheme.NoActionBar"
-199-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:234:13-56
-200            android:windowSoftInputMode="stateAlwaysHidden" />
-200-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:233:13-60
-201        <activity
-201-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:235:9-239:59
-202            android:name="com.bos.wms.mlkit.app.ItemSerialUPCMissingActivity"
-202-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:236:13-61
-203            android:label="Missing Item"
-203-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:237:13-41
-204            android:theme="@style/AppTheme.NoActionBar"
-204-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:239:13-56
-205            android:windowSoftInputMode="stateAlwaysHidden" />
-205-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:238:13-60
-206        <activity
-206-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:241:9-244:59
-207            android:name="com.bos.wms.mlkit.app.SerialGeneratorActivity"
-207-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:242:13-56
-208            android:label="Serial Generator"
-208-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:243:13-45
-209            android:theme="@style/AppTheme.NoActionBar" />
-209-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:244:13-56
-210        <activity
-210-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:246:9-250:59
-211            android:name="com.bos.wms.mlkit.app.ItemPricingActivity"
-211-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:247:13-52
-212            android:label="Item Pricing"
-212-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:248:13-41
-213            android:theme="@style/AppTheme.NoActionBar"
-213-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:250:13-56
-214            android:windowSoftInputMode="stateAlwaysHidden" />
-214-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:249:13-60
-215        <activity
-215-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:251:9-255:59
-216            android:name="com.bos.wms.mlkit.app.FillPalleteActivity"
-216-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:252:13-52
-217            android:label="Fill Pallete Activity"
-217-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:253:13-50
-218            android:theme="@style/AppTheme.NoActionBar"
-218-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:255:13-56
-219            android:windowSoftInputMode="stateAlwaysHidden" />
-219-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:254:13-60
-220        <activity
-220-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:256:9-258:64
-221            android:name="com.bos.wms.mlkit.app.MainMenu"
-221-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:257:13-41
-222            android:label="@string/title_activity_main_menu" />
-222-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:258:13-61
-223        <activity
-223-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:259:9-269:20
-224            android:name="com.bos.wms.mlkit.ui.login.LoginActivity"
-224-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:260:13-51
-225            android:exported="true"
-225-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:262:13-36
-226            android:label="@string/title_activity_login" >
-226-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:261:13-57
-227            <intent-filter>
-227-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:264:13-268:29
-228                <action android:name="android.intent.action.MAIN" />
-228-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:265:17-69
-228-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:265:25-66
-229
-230                <category android:name="android.intent.category.LAUNCHER" />
-230-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:267:17-77
-230-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:267:27-74
-231            </intent-filter>
-232        </activity>
-233
-234        <service
-234-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\Dell\.gradle\caches\transforms-3\8ab18490179ddeff2f399ce052333e63\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:24:9-33:19
-235            android:name="androidx.camera.core.impl.MetadataHolderService"
-235-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\Dell\.gradle\caches\transforms-3\8ab18490179ddeff2f399ce052333e63\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:25:13-75
-236            android:enabled="false"
-236-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\Dell\.gradle\caches\transforms-3\8ab18490179ddeff2f399ce052333e63\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:26:13-36
-237            android:exported="false" >
-237-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\Dell\.gradle\caches\transforms-3\8ab18490179ddeff2f399ce052333e63\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:27:13-37
-238            <meta-data
-238-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\Dell\.gradle\caches\transforms-3\8ab18490179ddeff2f399ce052333e63\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:30:13-32:89
-239                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
-239-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\Dell\.gradle\caches\transforms-3\8ab18490179ddeff2f399ce052333e63\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:31:17-103
-240                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
-240-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\Dell\.gradle\caches\transforms-3\8ab18490179ddeff2f399ce052333e63\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:32:17-86
-241        </service>
-242        <service
-242-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\9910e51eb69d264eb47c6945fe8165d9\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:9:9-15:19
-243            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
-243-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\9910e51eb69d264eb47c6945fe8165d9\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:10:13-91
-244            android:directBootAware="true"
-244-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:17:13-43
-245            android:exported="false" >
-245-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\9910e51eb69d264eb47c6945fe8165d9\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:11:13-37
-246            <meta-data
-246-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\9910e51eb69d264eb47c6945fe8165d9\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:12:13-14:85
-247                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
-247-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\9910e51eb69d264eb47c6945fe8165d9\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:13:17-120
-248                android:value="com.google.firebase.components.ComponentRegistrar" />
-248-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\9910e51eb69d264eb47c6945fe8165d9\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:14:17-82
-249            <meta-data
-249-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\Dell\.gradle\caches\transforms-3\43a5427b702d4972c39ba74c8ab0e1dd\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:12:13-14:85
-250                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
-250-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\Dell\.gradle\caches\transforms-3\43a5427b702d4972c39ba74c8ab0e1dd\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:13:17-114
-251                android:value="com.google.firebase.components.ComponentRegistrar" />
-251-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\Dell\.gradle\caches\transforms-3\43a5427b702d4972c39ba74c8ab0e1dd\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:14:17-82
-252            <meta-data
-252-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.0.0] C:\Users\Dell\.gradle\caches\transforms-3\66bbd2c992b582d0084bdac0a80d4603\transformed\jetified-play-services-mlkit-text-recognition-common-17.0.0\AndroidManifest.xml:12:13-14:85
-253                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
-253-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.0.0] C:\Users\Dell\.gradle\caches\transforms-3\66bbd2c992b582d0084bdac0a80d4603\transformed\jetified-play-services-mlkit-text-recognition-common-17.0.0\AndroidManifest.xml:13:17-114
-254                android:value="com.google.firebase.components.ComponentRegistrar" />
-254-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.0.0] C:\Users\Dell\.gradle\caches\transforms-3\66bbd2c992b582d0084bdac0a80d4603\transformed\jetified-play-services-mlkit-text-recognition-common-17.0.0\AndroidManifest.xml:14:17-82
-255            <meta-data
-255-->[com.google.mlkit:vision-common:17.1.0] C:\Users\Dell\.gradle\caches\transforms-3\79786270d7a8e6eaecfa2f6ef68d1adb\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:12:13-14:85
-256                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
-256-->[com.google.mlkit:vision-common:17.1.0] C:\Users\Dell\.gradle\caches\transforms-3\79786270d7a8e6eaecfa2f6ef68d1adb\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:13:17-124
-257                android:value="com.google.firebase.components.ComponentRegistrar" />
-257-->[com.google.mlkit:vision-common:17.1.0] C:\Users\Dell\.gradle\caches\transforms-3\79786270d7a8e6eaecfa2f6ef68d1adb\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:14:17-82
-258            <meta-data
-258-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:20:13-22:85
-259                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
-259-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:21:17-120
-260                android:value="com.google.firebase.components.ComponentRegistrar" />
-260-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:22:17-82
-261        </service>
-262
-263        <provider
-263-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:9:9-13:38
-264            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
-264-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:10:13-78
-265            android:authorities="com.bos.wms.mlkit.mlkitinitprovider"
-265-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:11:13-69
-266            android:exported="false"
-266-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:12:13-37
-267            android:initOrder="99" />
-267-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:13:13-35
-268
-269        <activity
-269-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dell\.gradle\caches\transforms-3\835be3b16a9e79ff6174e3107dd58eb5\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-270            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-270-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dell\.gradle\caches\transforms-3\835be3b16a9e79ff6174e3107dd58eb5\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-271            android:exported="false"
-271-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dell\.gradle\caches\transforms-3\835be3b16a9e79ff6174e3107dd58eb5\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-272            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-272-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dell\.gradle\caches\transforms-3\835be3b16a9e79ff6174e3107dd58eb5\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-273
-274        <meta-data
-274-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\bb3146b01a611e817992f5720eda60d8\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
-275            android:name="com.google.android.gms.version"
-275-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\bb3146b01a611e817992f5720eda60d8\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
-276            android:value="@integer/google_play_services_version" />
-276-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\bb3146b01a611e817992f5720eda60d8\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
-277
-278        <provider
-278-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\transforms-3\c888f97d236876ad9091d15b907c7474\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-279            android:name="androidx.startup.InitializationProvider"
-279-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\transforms-3\c888f97d236876ad9091d15b907c7474\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-280            android:authorities="com.bos.wms.mlkit.androidx-startup"
-280-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\transforms-3\c888f97d236876ad9091d15b907c7474\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-281            android:exported="false" >
-281-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\transforms-3\c888f97d236876ad9091d15b907c7474\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-282            <meta-data
-282-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\transforms-3\c888f97d236876ad9091d15b907c7474\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-283                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-283-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\transforms-3\c888f97d236876ad9091d15b907c7474\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-284                android:value="androidx.startup" />
-284-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\transforms-3\c888f97d236876ad9091d15b907c7474\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-285            <meta-data
-285-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Dell\.gradle\caches\transforms-3\30b7cdd17176ab46b283b8c125a14772\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-286                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-286-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Dell\.gradle\caches\transforms-3\30b7cdd17176ab46b283b8c125a14772\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-287                android:value="androidx.startup" />
-287-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Dell\.gradle\caches\transforms-3\30b7cdd17176ab46b283b8c125a14772\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-288        </provider>
-289
-290        <uses-library
-290-->[androidx.window:window:1.0.0] C:\Users\Dell\.gradle\caches\transforms-3\ca9fbc98e082866c977ad9840852c1d5\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
-291            android:name="androidx.window.extensions"
-291-->[androidx.window:window:1.0.0] C:\Users\Dell\.gradle\caches\transforms-3\ca9fbc98e082866c977ad9840852c1d5\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
-292            android:required="false" />
-292-->[androidx.window:window:1.0.0] C:\Users\Dell\.gradle\caches\transforms-3\ca9fbc98e082866c977ad9840852c1d5\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
-293        <uses-library
-293-->[androidx.window:window:1.0.0] C:\Users\Dell\.gradle\caches\transforms-3\ca9fbc98e082866c977ad9840852c1d5\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
-294            android:name="androidx.window.sidecar"
-294-->[androidx.window:window:1.0.0] C:\Users\Dell\.gradle\caches\transforms-3\ca9fbc98e082866c977ad9840852c1d5\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
-295            android:required="false" />
-295-->[androidx.window:window:1.0.0] C:\Users\Dell\.gradle\caches\transforms-3\ca9fbc98e082866c977ad9840852c1d5\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
-296
-297        <service
-297-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Dell\.gradle\caches\transforms-3\63bef771c6060f17808532f229aae905\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
-298            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-298-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Dell\.gradle\caches\transforms-3\63bef771c6060f17808532f229aae905\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
-299            android:exported="false" >
-299-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Dell\.gradle\caches\transforms-3\63bef771c6060f17808532f229aae905\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
-300            <meta-data
-300-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Dell\.gradle\caches\transforms-3\63bef771c6060f17808532f229aae905\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
-301                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-301-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Dell\.gradle\caches\transforms-3\63bef771c6060f17808532f229aae905\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
-302                android:value="cct" />
-302-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Dell\.gradle\caches\transforms-3\63bef771c6060f17808532f229aae905\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
-303        </service>
-304        <service
-304-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Dell\.gradle\caches\transforms-3\3f715cbe1c240bdd7a60454916fba23d\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
-305            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-305-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Dell\.gradle\caches\transforms-3\3f715cbe1c240bdd7a60454916fba23d\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
-306            android:exported="false"
-306-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Dell\.gradle\caches\transforms-3\3f715cbe1c240bdd7a60454916fba23d\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
-307            android:permission="android.permission.BIND_JOB_SERVICE" >
-307-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Dell\.gradle\caches\transforms-3\3f715cbe1c240bdd7a60454916fba23d\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
-308        </service>
-309
-310        <receiver
-310-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Dell\.gradle\caches\transforms-3\3f715cbe1c240bdd7a60454916fba23d\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
-311            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-311-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Dell\.gradle\caches\transforms-3\3f715cbe1c240bdd7a60454916fba23d\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
-312            android:exported="false" />
-312-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Dell\.gradle\caches\transforms-3\3f715cbe1c240bdd7a60454916fba23d\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
-313    </application>
-314
-315</manifest>
+39        android:testOnly="true"
+40        android:theme="@style/AppTheme"
+40-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:24:9-40
+41        android:usesCleartextTraffic="true" >
+41-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:26:9-44
+42        <provider
+43            android:name="androidx.core.content.FileProvider"
+43-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:27:71-120
+44            android:authorities="com.bos.wms.mlkit.fileprovider"
+44-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:27:19-70
+45            android:exported="false"
+45-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:27:121-145
+46            android:grantUriPermissions="true" >
+46-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:27:146-180
+47            <meta-data
+47-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:28:13-111
+48                android:name="android.support.FILE_PROVIDER_PATHS"
+48-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:28:24-74
+49                android:resource="@xml/file_paths" />
+49-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:28:75-109
+50        </provider>
+51
+52        <activity
+52-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:31:9-35:15
+53            android:name="com.bos.wms.mlkit.app.bosApp.PutAwayActivity"
+53-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:32:13-55
+54            android:label="Put Away"
+54-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:33:13-37
+55            android:windowSoftInputMode="stateAlwaysHidden" />
+55-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:34:13-60
+56        <activity
+56-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:36:9-40:15
+57            android:name="com.bos.wms.mlkit.app.bosApp.ScanRackPutAwayActivity"
+57-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:37:13-63
+58            android:label="Scan Rack Put Away"
+58-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:38:13-47
+59            android:windowSoftInputMode="stateAlwaysHidden" />
+59-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:39:13-60
+60        <activity
+60-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:43:9-47:15
+61            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferReceivingDCActivity"
+61-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:44:13-76
+62            android:label="Transfer Receiving DC"
+62-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:45:13-50
+63            android:windowSoftInputMode="stateAlwaysHidden" />
+63-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:46:13-60
+64        <activity
+64-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:49:9-53:15
+65            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferReceivingActivity"
+65-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:50:13-74
+66            android:label="Transfer Receiving"
+66-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:51:13-47
+67            android:windowSoftInputMode="stateAlwaysHidden" />
+67-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:52:13-60
+68        <activity
+68-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:54:9-58:15
+69            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.ScanTransferReceivingActivity"
+69-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:55:13-78
+70            android:label="Scan Transfer Receiving"
+70-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:56:13-52
+71            android:windowSoftInputMode="stateAlwaysHidden" />
+71-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:57:13-60
+72        <activity
+72-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:61:9-65:15
+73            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferActivity"
+73-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:62:13-65
+74            android:label="Transfer Type"
+74-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:63:13-42
+75            android:windowSoftInputMode="stateAlwaysHidden" />
+75-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:64:13-60
+76        <activity
+76-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:67:9-71:15
+77            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.ShipmentActivity"
+77-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:68:13-65
+78            android:label="Transfer Shipment"
+78-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:69:13-46
+79            android:windowSoftInputMode="stateAlwaysHidden" />
+79-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:70:13-60
+80        <activity android:name="com.bos.wms.mlkit.app.NextReceivingStatusActivity" />
+80-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:73:9-78
+80-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:73:19-66
+81        <activity
+81-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:75:9-79:15
+82            android:name="com.bos.wms.mlkit.app.bosApp.PackingDCActivity"
+82-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:76:13-57
+83            android:label="@string/title_activity_packing_dc"
+83-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:77:13-62
+84            android:windowSoftInputMode="stateAlwaysHidden" />
+84-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:78:13-60
+85        <activity
+85-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:82:9-86:15
+86            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeCountActivity"
+86-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:83:13-62
+87            android:label="@string/title_activity_stock_count"
+87-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:84:13-63
+88            android:windowSoftInputMode="stateAlwaysHidden" />
+88-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:85:13-60
+89        <activity
+89-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:88:9-92:15
+90            android:name="com.bos.wms.mlkit.app.bosApp.ScanForCountStockTakeActivity"
+90-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:89:13-69
+91            android:label="@string/title_activity_scan_count_stock_ake"
+91-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:90:13-72
+92            android:windowSoftInputMode="stateAlwaysHidden" />
+92-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:91:13-60
+93        <activity
+93-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:94:9-98:15
+94            android:name="com.bos.wms.mlkit.app.bosApp.ScanRackStockTakeActivity"
+94-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:95:13-65
+95            android:label="@string/title_activity_scan_rack_count_stock_ake"
+95-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:96:13-77
+96            android:windowSoftInputMode="stateAlwaysHidden" />
+96-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:97:13-60
+97        <activity
+97-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:101:9-105:15
+98            android:name="com.bos.wms.mlkit.app.bosApp.CheckingActivity"
+98-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:102:13-56
+99            android:label="@string/title_activity_checking_dc"
+99-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:103:13-63
+100            android:windowSoftInputMode="stateAlwaysHidden" />
+100-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:104:13-60
+101        <activity
+101-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:107:9-111:15
+102            android:name="com.bos.wms.mlkit.app.bosApp.ScanBinForCheckingActivity"
+102-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:108:13-66
+103            android:label="@string/title_activity_scan_checking"
+103-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:109:13-65
+104            android:windowSoftInputMode="stateAlwaysHidden" />
+104-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:110:13-60
+105        <activity
+105-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:113:9-117:15
+106            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeDCActivity"
+106-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:114:13-59
+107            android:label="@string/title_activity_stock_take_dc"
+107-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:115:13-65
+108            android:windowSoftInputMode="stateAlwaysHidden" />
+108-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:116:13-60
+109        <activity
+109-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:118:9-122:15
+110            android:name="com.bos.wms.mlkit.app.bosApp.CountActivity"
+110-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:119:13-53
+111            android:label="Count"
+111-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:120:13-34
+112            android:windowSoftInputMode="stateAlwaysHidden" />
+112-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:121:13-60
+113        <activity
+113-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:125:9-129:15
+114            android:name="com.bos.wms.mlkit.app.bosApp.ScanBoxForStockTakeActivity"
+114-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:126:13-67
+115            android:label="@string/title_activity_scan_box_stock_dc"
+115-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:127:13-69
+116            android:windowSoftInputMode="stateAlwaysHidden" />
+116-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:128:13-60
+117        <activity
+117-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:131:9-135:15
+118            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeActivity"
+118-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:132:13-57
+119            android:label="@string/title_activity_stock_take"
+119-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:133:13-62
+120            android:windowSoftInputMode="stateAlwaysHidden" />
+120-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:134:13-60
+121        <activity
+121-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:136:9-140:15
+122            android:name="com.bos.wms.mlkit.app.bosApp.ScanBinForCountActivity"
+122-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:137:13-63
+123            android:label="@string/title_activity_scan_count"
+123-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:138:13-62
+124            android:windowSoftInputMode="stateAlwaysHidden" />
+124-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:139:13-60
+125        <activity
+125-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:142:9-146:15
+126            android:name="com.bos.wms.mlkit.app.bosApp.ScanContainerActivity"
+126-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:143:13-61
+127            android:label="@string/title_activity_scan_container"
+127-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:144:13-66
+128            android:windowSoftInputMode="stateAlwaysHidden" />
+128-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:145:13-60
+129        <activity
+129-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:148:9-152:15
+130            android:name="com.bos.wms.mlkit.app.bosApp.PrinterSelectionActivity"
+130-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:149:13-64
+131            android:label="@string/title_activity_printer_selection"
+131-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:150:13-69
+132            android:windowSoftInputMode="stateAlwaysHidden" />
+132-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:151:13-60
+133        <activity
+133-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:155:9-159:15
+134            android:name="com.bos.wms.mlkit.app.bosApp.PackingReasonActivity"
+134-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:156:13-61
+135            android:label="@string/title_activity_packing_reason"
+135-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:157:13-66
+136            android:windowSoftInputMode="stateAlwaysHidden" />
+136-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:158:13-60
+137        <activity
+137-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:161:9-165:59
+138            android:name="com.bos.wms.mlkit.app.bosApp.PackingActivity"
+138-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:162:13-55
+139            android:label="@string/title_activity_packing_dc"
+139-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:163:13-62
+140            android:theme="@style/AppTheme.NoActionBar"
+140-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:165:13-56
+141            android:windowSoftInputMode="stateAlwaysHidden" />
+141-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:164:13-60
+142        <activity
+142-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:167:9-171:59
+143            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeRackDCActivity"
+143-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:168:13-63
+144            android:label="Stock Take Rack DC"
+144-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:169:13-47
+145            android:theme="@style/AppTheme.NoActionBar"
+145-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:171:13-56
+146            android:windowSoftInputMode="stateAlwaysHidden" />
+146-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:170:13-60
+147        <activity
+147-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:175:9-179:59
+148            android:name="com.bos.wms.mlkit.app.PickingActivity"
+148-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:176:13-48
+149            android:label="@string/title_activity_picking"
+149-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:177:13-59
+150            android:theme="@style/AppTheme.NoActionBar"
+150-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:179:13-56
+151            android:windowSoftInputMode="stateAlwaysHidden" />
+151-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:178:13-60
+152        <activity
+152-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:180:9-184:59
+153            android:name="com.bos.wms.mlkit.app.LocationCheckActivity"
+153-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:181:13-54
+154            android:label="Location Check"
+154-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:182:13-43
+155            android:theme="@style/AppTheme.NoActionBar"
+155-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:184:13-56
+156            android:windowSoftInputMode="stateAlwaysHidden" />
+156-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:183:13-60
+157        <activity
+157-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:185:9-189:59
+158            android:name="com.bos.wms.mlkit.app.PutAwayPalleteActivity"
+158-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:186:13-55
+159            android:label="Put Away Pallete"
+159-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:187:13-45
+160            android:theme="@style/AppTheme.NoActionBar"
+160-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:189:13-56
+161            android:windowSoftInputMode="stateAlwaysHidden" />
+161-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:188:13-60
+162        <activity
+162-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:191:9-195:59
+163            android:name="com.bos.wms.mlkit.app.ShipmentPalleteReceivingActivity"
+163-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:192:13-65
+164            android:label="Shipment Pallete Receiving"
+164-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:193:13-55
+165            android:theme="@style/AppTheme.NoActionBar"
+165-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:195:13-56
+166            android:windowSoftInputMode="stateAlwaysHidden" />
+166-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:194:13-60
+167        <activity
+167-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:196:9-200:59
+168            android:name="com.bos.wms.mlkit.app.ShipmentCartonReceivingActivity"
+168-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:197:13-64
+169            android:label="Shipment Carton Receiving"
+169-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:198:13-54
+170            android:theme="@style/AppTheme.NoActionBar"
+170-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:200:13-56
+171            android:windowSoftInputMode="stateAlwaysHidden" />
+171-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:199:13-60
+172        <activity
+172-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:201:9-205:59
+173            android:name="com.bos.wms.mlkit.app.ShipmentCartonReceivingV2Activity"
+173-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:202:13-66
+174            android:label="Shipment Carton Receiving V2"
+174-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:203:13-57
+175            android:theme="@style/AppTheme.NoActionBar"
+175-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:205:13-56
+176            android:windowSoftInputMode="stateAlwaysHidden" />
+176-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:204:13-60
+177        <activity
+177-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:206:9-210:59
+178            android:name="com.bos.wms.mlkit.app.ShipmentCartonCountReceivingActivity"
+178-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:207:13-69
+179            android:label="Shipment Receiving Carton Count"
+179-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:208:13-60
+180            android:theme="@style/AppTheme.NoActionBar"
+180-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:210:13-56
+181            android:windowSoftInputMode="stateAlwaysHidden" />
+181-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:209:13-60
+182        <activity
+182-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:212:9-216:59
+183            android:name="com.bos.wms.mlkit.app.FoldingScanActivity"
+183-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:213:13-52
+184            android:label="Folding Scan"
+184-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:214:13-41
+185            android:theme="@style/AppTheme.NoActionBar"
+185-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:216:13-56
+186            android:windowSoftInputMode="stateAlwaysHidden" />
+186-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:215:13-60
+187        <activity
+187-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:218:9-222:59
+188            android:name="com.bos.wms.mlkit.app.UPCPricingActivity"
+188-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:219:13-51
+189            android:label="UPC Pricing"
+189-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:220:13-40
+190            android:theme="@style/AppTheme.NoActionBar"
+190-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:222:13-56
+191            android:windowSoftInputMode="stateAlwaysHidden" />
+191-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:221:13-60
+192        <activity
+192-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:224:9-228:59
+193            android:name="com.bos.wms.mlkit.app.PGPricingActivity"
+193-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:225:13-50
+194            android:label="PG Pricing"
+194-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:226:13-39
+195            android:theme="@style/AppTheme.NoActionBar"
+195-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:228:13-56
+196            android:windowSoftInputMode="stateAlwaysHidden" />
+196-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:227:13-60
+197        <activity
+197-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:230:9-234:59
+198            android:name="com.bos.wms.mlkit.app.ItemSerialMissingActivity"
+198-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:231:13-58
+199            android:label="Missing Item"
+199-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:232:13-41
+200            android:theme="@style/AppTheme.NoActionBar"
+200-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:234:13-56
+201            android:windowSoftInputMode="stateAlwaysHidden" />
+201-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:233:13-60
+202        <activity
+202-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:235:9-239:59
+203            android:name="com.bos.wms.mlkit.app.ItemSerialUPCMissingActivity"
+203-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:236:13-61
+204            android:label="Missing Item"
+204-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:237:13-41
+205            android:theme="@style/AppTheme.NoActionBar"
+205-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:239:13-56
+206            android:windowSoftInputMode="stateAlwaysHidden" />
+206-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:238:13-60
+207        <activity
+207-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:241:9-244:59
+208            android:name="com.bos.wms.mlkit.app.SerialGeneratorActivity"
+208-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:242:13-56
+209            android:label="Serial Generator"
+209-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:243:13-45
+210            android:theme="@style/AppTheme.NoActionBar" />
+210-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:244:13-56
+211        <activity
+211-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:246:9-250:59
+212            android:name="com.bos.wms.mlkit.app.ItemPricingActivity"
+212-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:247:13-52
+213            android:label="Item Pricing"
+213-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:248:13-41
+214            android:theme="@style/AppTheme.NoActionBar"
+214-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:250:13-56
+215            android:windowSoftInputMode="stateAlwaysHidden" />
+215-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:249:13-60
+216        <activity
+216-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:251:9-255:59
+217            android:name="com.bos.wms.mlkit.app.FillPalleteActivity"
+217-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:252:13-52
+218            android:label="Fill Pallete Activity"
+218-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:253:13-50
+219            android:theme="@style/AppTheme.NoActionBar"
+219-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:255:13-56
+220            android:windowSoftInputMode="stateAlwaysHidden" />
+220-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:254:13-60
+221        <activity
+221-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:256:9-258:64
+222            android:name="com.bos.wms.mlkit.app.MainMenu"
+222-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:257:13-41
+223            android:label="@string/title_activity_main_menu" />
+223-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:258:13-61
+224        <activity
+224-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:259:9-269:20
+225            android:name="com.bos.wms.mlkit.ui.login.LoginActivity"
+225-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:260:13-51
+226            android:exported="true"
+226-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:262:13-36
+227            android:label="@string/title_activity_login" >
+227-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:261:13-57
+228            <intent-filter>
+228-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:264:13-268:29
+229                <action android:name="android.intent.action.MAIN" />
+229-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:265:17-69
+229-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:265:25-66
+230
+231                <category android:name="android.intent.category.LAUNCHER" />
+231-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:267:17-77
+231-->C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\main\AndroidManifest.xml:267:27-74
+232            </intent-filter>
+233        </activity>
+234
+235        <service
+235-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\Dell\.gradle\caches\transforms-3\8ab18490179ddeff2f399ce052333e63\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:24:9-33:19
+236            android:name="androidx.camera.core.impl.MetadataHolderService"
+236-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\Dell\.gradle\caches\transforms-3\8ab18490179ddeff2f399ce052333e63\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:25:13-75
+237            android:enabled="false"
+237-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\Dell\.gradle\caches\transforms-3\8ab18490179ddeff2f399ce052333e63\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:26:13-36
+238            android:exported="false" >
+238-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\Dell\.gradle\caches\transforms-3\8ab18490179ddeff2f399ce052333e63\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:27:13-37
+239            <meta-data
+239-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\Dell\.gradle\caches\transforms-3\8ab18490179ddeff2f399ce052333e63\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:30:13-32:89
+240                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+240-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\Dell\.gradle\caches\transforms-3\8ab18490179ddeff2f399ce052333e63\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:31:17-103
+241                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+241-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\Dell\.gradle\caches\transforms-3\8ab18490179ddeff2f399ce052333e63\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:32:17-86
+242        </service>
+243        <service
+243-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\9910e51eb69d264eb47c6945fe8165d9\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:9:9-15:19
+244            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+244-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\9910e51eb69d264eb47c6945fe8165d9\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:10:13-91
+245            android:directBootAware="true"
+245-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:17:13-43
+246            android:exported="false" >
+246-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\9910e51eb69d264eb47c6945fe8165d9\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:11:13-37
+247            <meta-data
+247-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\9910e51eb69d264eb47c6945fe8165d9\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:12:13-14:85
+248                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+248-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\9910e51eb69d264eb47c6945fe8165d9\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:13:17-120
+249                android:value="com.google.firebase.components.ComponentRegistrar" />
+249-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\9910e51eb69d264eb47c6945fe8165d9\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:14:17-82
+250            <meta-data
+250-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\Dell\.gradle\caches\transforms-3\43a5427b702d4972c39ba74c8ab0e1dd\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:12:13-14:85
+251                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
+251-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\Dell\.gradle\caches\transforms-3\43a5427b702d4972c39ba74c8ab0e1dd\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:13:17-114
+252                android:value="com.google.firebase.components.ComponentRegistrar" />
+252-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\Dell\.gradle\caches\transforms-3\43a5427b702d4972c39ba74c8ab0e1dd\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:14:17-82
+253            <meta-data
+253-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.0.0] C:\Users\Dell\.gradle\caches\transforms-3\66bbd2c992b582d0084bdac0a80d4603\transformed\jetified-play-services-mlkit-text-recognition-common-17.0.0\AndroidManifest.xml:12:13-14:85
+254                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
+254-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.0.0] C:\Users\Dell\.gradle\caches\transforms-3\66bbd2c992b582d0084bdac0a80d4603\transformed\jetified-play-services-mlkit-text-recognition-common-17.0.0\AndroidManifest.xml:13:17-114
+255                android:value="com.google.firebase.components.ComponentRegistrar" />
+255-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.0.0] C:\Users\Dell\.gradle\caches\transforms-3\66bbd2c992b582d0084bdac0a80d4603\transformed\jetified-play-services-mlkit-text-recognition-common-17.0.0\AndroidManifest.xml:14:17-82
+256            <meta-data
+256-->[com.google.mlkit:vision-common:17.1.0] C:\Users\Dell\.gradle\caches\transforms-3\79786270d7a8e6eaecfa2f6ef68d1adb\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:12:13-14:85
+257                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+257-->[com.google.mlkit:vision-common:17.1.0] C:\Users\Dell\.gradle\caches\transforms-3\79786270d7a8e6eaecfa2f6ef68d1adb\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:13:17-124
+258                android:value="com.google.firebase.components.ComponentRegistrar" />
+258-->[com.google.mlkit:vision-common:17.1.0] C:\Users\Dell\.gradle\caches\transforms-3\79786270d7a8e6eaecfa2f6ef68d1adb\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:14:17-82
+259            <meta-data
+259-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:20:13-22:85
+260                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+260-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:21:17-120
+261                android:value="com.google.firebase.components.ComponentRegistrar" />
+261-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:22:17-82
+262        </service>
+263
+264        <provider
+264-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:9:9-13:38
+265            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+265-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:10:13-78
+266            android:authorities="com.bos.wms.mlkit.mlkitinitprovider"
+266-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:11:13-69
+267            android:exported="false"
+267-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:12:13-37
+268            android:initOrder="99" />
+268-->[com.google.mlkit:common:18.1.0] C:\Users\Dell\.gradle\caches\transforms-3\8ee77ce8fef052fd9d622d480a635fc1\transformed\jetified-common-18.1.0\AndroidManifest.xml:13:13-35
+269
+270        <activity
+270-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dell\.gradle\caches\transforms-3\835be3b16a9e79ff6174e3107dd58eb5\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+271            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+271-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dell\.gradle\caches\transforms-3\835be3b16a9e79ff6174e3107dd58eb5\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+272            android:exported="false"
+272-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dell\.gradle\caches\transforms-3\835be3b16a9e79ff6174e3107dd58eb5\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+273            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+273-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dell\.gradle\caches\transforms-3\835be3b16a9e79ff6174e3107dd58eb5\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+274
+275        <meta-data
+275-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\bb3146b01a611e817992f5720eda60d8\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+276            android:name="com.google.android.gms.version"
+276-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\bb3146b01a611e817992f5720eda60d8\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+277            android:value="@integer/google_play_services_version" />
+277-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Dell\.gradle\caches\transforms-3\bb3146b01a611e817992f5720eda60d8\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+278
+279        <provider
+279-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\transforms-3\c888f97d236876ad9091d15b907c7474\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+280            android:name="androidx.startup.InitializationProvider"
+280-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\transforms-3\c888f97d236876ad9091d15b907c7474\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+281            android:authorities="com.bos.wms.mlkit.androidx-startup"
+281-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\transforms-3\c888f97d236876ad9091d15b907c7474\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+282            android:exported="false" >
+282-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\transforms-3\c888f97d236876ad9091d15b907c7474\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+283            <meta-data
+283-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\transforms-3\c888f97d236876ad9091d15b907c7474\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+284                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+284-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\transforms-3\c888f97d236876ad9091d15b907c7474\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+285                android:value="androidx.startup" />
+285-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Dell\.gradle\caches\transforms-3\c888f97d236876ad9091d15b907c7474\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+286            <meta-data
+286-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Dell\.gradle\caches\transforms-3\30b7cdd17176ab46b283b8c125a14772\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+287                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+287-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Dell\.gradle\caches\transforms-3\30b7cdd17176ab46b283b8c125a14772\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+288                android:value="androidx.startup" />
+288-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Dell\.gradle\caches\transforms-3\30b7cdd17176ab46b283b8c125a14772\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+289        </provider>
+290
+291        <uses-library
+291-->[androidx.window:window:1.0.0] C:\Users\Dell\.gradle\caches\transforms-3\ca9fbc98e082866c977ad9840852c1d5\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+292            android:name="androidx.window.extensions"
+292-->[androidx.window:window:1.0.0] C:\Users\Dell\.gradle\caches\transforms-3\ca9fbc98e082866c977ad9840852c1d5\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+293            android:required="false" />
+293-->[androidx.window:window:1.0.0] C:\Users\Dell\.gradle\caches\transforms-3\ca9fbc98e082866c977ad9840852c1d5\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+294        <uses-library
+294-->[androidx.window:window:1.0.0] C:\Users\Dell\.gradle\caches\transforms-3\ca9fbc98e082866c977ad9840852c1d5\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+295            android:name="androidx.window.sidecar"
+295-->[androidx.window:window:1.0.0] C:\Users\Dell\.gradle\caches\transforms-3\ca9fbc98e082866c977ad9840852c1d5\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+296            android:required="false" />
+296-->[androidx.window:window:1.0.0] C:\Users\Dell\.gradle\caches\transforms-3\ca9fbc98e082866c977ad9840852c1d5\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+297
+298        <service
+298-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Dell\.gradle\caches\transforms-3\63bef771c6060f17808532f229aae905\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+299            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+299-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Dell\.gradle\caches\transforms-3\63bef771c6060f17808532f229aae905\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+300            android:exported="false" >
+300-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Dell\.gradle\caches\transforms-3\63bef771c6060f17808532f229aae905\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+301            <meta-data
+301-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Dell\.gradle\caches\transforms-3\63bef771c6060f17808532f229aae905\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+302                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+302-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Dell\.gradle\caches\transforms-3\63bef771c6060f17808532f229aae905\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+303                android:value="cct" />
+303-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Dell\.gradle\caches\transforms-3\63bef771c6060f17808532f229aae905\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+304        </service>
+305        <service
+305-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Dell\.gradle\caches\transforms-3\3f715cbe1c240bdd7a60454916fba23d\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
+306            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+306-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Dell\.gradle\caches\transforms-3\3f715cbe1c240bdd7a60454916fba23d\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
+307            android:exported="false"
+307-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Dell\.gradle\caches\transforms-3\3f715cbe1c240bdd7a60454916fba23d\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
+308            android:permission="android.permission.BIND_JOB_SERVICE" >
+308-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Dell\.gradle\caches\transforms-3\3f715cbe1c240bdd7a60454916fba23d\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
+309        </service>
+310
+311        <receiver
+311-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Dell\.gradle\caches\transforms-3\3f715cbe1c240bdd7a60454916fba23d\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
+312            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+312-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Dell\.gradle\caches\transforms-3\3f715cbe1c240bdd7a60454916fba23d\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
+313            android:exported="false" />
+313-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Dell\.gradle\caches\transforms-3\3f715cbe1c240bdd7a60454916fba23d\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
+314    </application>
+315
+316</manifest>

@@ -92,6 +92,7 @@ public class PopWindowMain {
                         storage.saveData("WeightMac",txtScaleMac.getText().toString());
                         storage.saveData("IPAddress",txtIP.getText().toString());
                         storage.saveData("PricingLineCode",txtPricingLineCode.getText().toString());
+
                         break;
                 }
             }
