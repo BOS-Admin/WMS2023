@@ -1,5 +1,6 @@
 package com.bos.wms.mlkit.app
 
+import Model.UPCPricingModel
 import Remote.APIClient
 import Remote.BasicApi
 import android.annotation.SuppressLint
@@ -262,8 +263,9 @@ class UPCPricingActivity : AppCompatActivity() {
             var UserID: Int=General.getGeneral(applicationContext).UserID
             txtUPC.isEnabled=false
             api= APIClient.getInstance(IPAddress,false).create(BasicApi::class.java)
+
             compositeDisposable.addAll(
-                api.PostUPCPricing(UserID,StrItemSerials,StrItemUPCs,PricingLineCode)
+                api.PostUPCPricing(UPCPricingModel(UserID,StrItemSerials,StrItemUPCs,PricingLineCode))
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
