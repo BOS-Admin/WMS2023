@@ -16,6 +16,10 @@ import retrofit2.http.*
 
 interface BasicApi {
 
+
+    @GET("api/ItemSerial/GetRFIDItemSerial")
+    fun GetRFIDItemSerial(@Query("rfid") rfid: String): Observable<String>
+
     @GET("api/UserPermissions/GetPermissions")
     fun GetPermissions(@Query("appName") appName:String, @Query("appVersion") appVersion:String, @Query("userID") userID:Int): Observable<List<String>>
 

@@ -131,6 +131,20 @@
                 android:text="Empty Box"
                 android:visibility="gone"/>
 
+            <Button
+                android:id="@+id/btnBrandOCR"
+                style="@style/button_main_menu_style"
+                android:drawableLeft="@drawable/baseline_image_not_supported"
+                android:text="Brand OCR"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnPASBrandOCR"
+                style="@style/button_main_menu_style"
+                android:drawableLeft="@drawable/baseline_image_not_supported"
+                android:text="PAS Brand OCR"
+                android:visibility="gone"/>
+
         </com.google.android.flexbox.FlexboxLayout>
     </ScrollView>
 

@@ -2550,7 +2550,10 @@ drawable avd_show_password
 drawable background
 drawable baseline_close_icon
 drawable baseline_delete_all_icon
+drawable baseline_done_icon
 drawable baseline_image_not_supported
+drawable baseline_pause_icon
+drawable baseline_play_arrow_icon
 drawable baseline_print_disabled_icon
 drawable baseline_print_icon
 drawable baseline_settings_icon
@@ -2771,6 +2774,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id brandOCRActiviyLayout
 id browser_actions_header_text
 id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
@@ -2791,6 +2795,7 @@ id btn80
 id btnA
 id btnB
 id btnBolRecognition
+id btnBrandOCR
 id btnC
 id btnCapture
 id btnChange
@@ -2822,6 +2827,7 @@ id btnMenuShipmentReceivingPalleteCount
 id btnMissingLetter1
 id btnMissingLetter2
 id btnNext
+id btnPASBrandOCR
 id btnPackingReasonDone
 id btnPause
 id btnPickingDone
@@ -2881,6 +2887,7 @@ id column_reverse
 id compatible
 id compress
 id confirmBtn
+id confirmButton
 id confirm_button
 id confirmationButtons
 id confirmationLayout
@@ -3174,6 +3181,7 @@ id notification_background
 id notification_main_column
 id notification_main_column_container
 id nowrap
+id ocrHelpText
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3186,9 +3194,11 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id pasBrandOCRActiviyLayout
 id password_toggle
 id path
 id pathRelative
+id pauseCaptureButton
 id peekHeight
 id percent
 id performance
@@ -3519,6 +3529,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_bol_recognition
+layout activity_brand_ocractivity
 layout activity_count
 layout activity_empty_box
 layout activity_fillpallete
@@ -3535,6 +3546,7 @@ layout activity_next_receiving_status
 layout activity_packing
 layout activity_packing_dc
 layout activity_packing_reason
+layout activity_pas_brand_ocractivity
 layout activity_pg_pricing
 layout activity_picking
 layout activity_printer_selection

@@ -31,6 +31,12 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".app.PasBrandOCRActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.BrandOCRActivity"
+            android:exported="false" />
+        <activity
             android:name=".app.EmptyBoxActivity"
             android:exported="false"
             android:windowSoftInputMode="stateHidden" />

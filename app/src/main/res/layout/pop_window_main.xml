@@ -88,7 +88,7 @@
         android:orientation="horizontal"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:visibility="invisible">
+        android:visibility="visible">
 
         <TextView
             android:layout_width="85dp"

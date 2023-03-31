@@ -1,7 +1,6 @@
 package com.bos.wms.mlkit.ui.login
 
 import Model.LocationModel
-import Model.SystemControlModelItem
 import Model.UserLoginModel
 import Model.UserLoginResultModel
 import Remote.APIClient
@@ -14,7 +13,6 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -23,6 +21,7 @@ import com.bos.wms.mlkit.General
 import com.bos.wms.mlkit.R
 import com.bos.wms.mlkit.app.Logger
 import com.bos.wms.mlkit.app.MainMenu
+import com.bos.wms.mlkit.app.OCRBackgroundThread
 import com.bos.wms.mlkit.app.ZebraPrinter
 import com.bos.wms.mlkit.customView.PopWindowMain
 import com.bos.wms.mlkit.databinding.ActivityLoginBinding
@@ -282,6 +281,7 @@ class LoginActivity : AppCompatActivity() {
         //Initialize classes
         Logger.Initialize(applicationContext)
         ZebraPrinter.establishFirstConnection(mStorage.getDataString("PrinterMacAddress", "00"))
+        OCRBackgroundThread.Initialize(this);
 
     }
 

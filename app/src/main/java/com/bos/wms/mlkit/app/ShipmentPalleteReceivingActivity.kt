@@ -213,7 +213,8 @@ class ShipmentPalleteReceivingActivity : AppCompatActivity() {
                     //
 
                     lifecycleScope.launch {
-                        val compressedImageFile = Compressor.compress(applicationContext, mFilePath!!)
+                        //val compressedImageFile = Compressor.compress(applicationContext, mFilePath!!)
+                        val compressedImageFile = Compressor(applicationContext).compressToFile(mFilePath!!)
                         CompressedBitmap = BitmapFactory.decodeFile(compressedImageFile.path)
                         UploadBitmap=CompressedBitmap!!
                         UploadPath=mFilePath!!
@@ -538,7 +539,8 @@ class ShipmentPalleteReceivingActivity : AppCompatActivity() {
             if (filePath != null) {
                 try {
                     lifecycleScope.launch {
-                        val compressedImageFile = Compressor.compress(applicationContext, filePath)
+                        //val compressedImageFile = Compressor.compress(applicationContext, filePath)
+                        val compressedImageFile = Compressor(applicationContext).compressToFile(filePath)
                         val bitmap = BitmapFactory.decodeFile(compressedImageFile.path)
                         uploadBitmap(bitmap, filePath)
                     }

@@ -58,6 +58,8 @@ class HomeFragment : Fragment() {
             UserPermissions.ValidatePermission("WMSApp.ItemPricing", root.btnMenuItemPricing);
             UserPermissions.ValidatePermission("WMSApp.PickingOrder", root.btnMenuPicking);
             UserPermissions.ValidatePermission("WMSApp.EmptyBox", root.btnEmptyBox);
+            UserPermissions.ValidatePermission("WMSApp.BrandOCR", root.btnBrandOCR);
+            UserPermissions.ValidatePermission("WMSApp.PASBrandOCR", root.btnPASBrandOCR);
 
         }else {
             UserPermissions.AddOnReceiveListener {
@@ -76,6 +78,8 @@ class HomeFragment : Fragment() {
                 UserPermissions.ValidatePermission("WMSApp.ItemPricing", root.btnMenuItemPricing);
                 UserPermissions.ValidatePermission("WMSApp.PickingOrder", root.btnMenuPicking);
                 UserPermissions.ValidatePermission("WMSApp.EmptyBox", root.btnEmptyBox);
+                UserPermissions.ValidatePermission("WMSApp.BrandOCR", root.btnBrandOCR);
+                UserPermissions.ValidatePermission("WMSApp.PASBrandOCR", root.btnPASBrandOCR);
             }
         }
 
@@ -146,7 +150,13 @@ class HomeFragment : Fragment() {
             ProceedEmptyBox()
         }
 
+        root.btnBrandOCR.setOnClickListener {
+            ProceedBrandOCR()
+        }
 
+        root.btnPASBrandOCR.setOnClickListener {
+            ProceedPASBrandOCR()
+        }
 
         mStorage= Storage(context?.applicationContext) //sp存储
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82")
@@ -257,6 +267,16 @@ class HomeFragment : Fragment() {
 
     fun ProceedBolRecognition() {
         val intent = Intent (getActivity(), BolRecognitionActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun ProceedBrandOCR() {
+        val intent = Intent (getActivity(), BrandOCRActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun ProceedPASBrandOCR() {
+        val intent = Intent (getActivity(), PasBrandOCRActivity::class.java)
         startActivity(intent)
     }
 

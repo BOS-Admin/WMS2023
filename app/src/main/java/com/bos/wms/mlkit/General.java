@@ -17,6 +17,9 @@ import Model.SystemControlModelItem;
 
 
 public class General {
+
+    public static String _IsCommand6Cor6B = "6C";
+
     private static volatile General instance = null;
     public Integer UserID=0;
     public Integer FloorID=0;
