@@ -125,12 +125,7 @@ public class BrandOCRActivity extends AppCompatActivity {
 
     Camera currentCamera;
 
-    /**
-     * Configurations
-     */
-
-    //In Seconds
-    public int ImageAutoCaptureCountDownTime = 10;
+    int ImageAutoCaptureCountDownTime = 10;
 
 
     @Override
@@ -140,6 +135,14 @@ public class BrandOCRActivity extends AppCompatActivity {
 
         Storage mStorage = new Storage(getApplicationContext());
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82");
+
+        try{
+            int ocrAutoCaptureTime = Integer.parseInt(General.getGeneral(this).getSetting(this,"OCRAutoCaptureTime"));
+            ImageAutoCaptureCountDownTime = ocrAutoCaptureTime;
+            Logger.Debug("SystemControl", "Read Field OCRAutoCaptureTime From System Control, Value: " + ImageAutoCaptureCountDownTime);
+        }catch(Exception ex){
+            Logger.Error("SystemControl", "Error Getting Value For OCRAutoCaptureTime, " + ex.getMessage());
+        }
 
         ocrHelpText = findViewById(R.id.ocrHelpText);
 
@@ -411,8 +414,17 @@ public class BrandOCRActivity extends AppCompatActivity {
                 captureImage(false, 0);
             }
         }else {
-            cameraPreviewImageView.setImageBitmap(cameraPreview.getBitmap());
-            cameraPreviewImageView.setVisibility(View.VISIBLE);
+            try{
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        cameraPreviewImageView.setImageBitmap(cameraPreview.getBitmap());
+                        cameraPreviewImageView.setVisibility(View.VISIBLE);
+                    }
+                });
+            }catch(Exception ex){
+                Logger.Error("CAMERA", "Error Showing Camera Preview: " + ex.getMessage());
+            }
 
             ImageCapture.OutputFileOptions outputFileOptions =
                     new ImageCapture.OutputFileOptions.Builder(photoFile).build();
@@ -442,6 +454,46 @@ public class BrandOCRActivity extends AppCompatActivity {
         }
     }
 
+
+    /**
+     * This function forces the camera to focus
+     */
+    public void cameraForceFocus(int trail) {
+            try {
+                SurfaceOrientedMeteringPointFactory factory = new SurfaceOrientedMeteringPointFactory(1f, 1f);
+                MeteringPoint autoFocusPoint = factory.createPoint(0.5f, 0.5f);
+
+                ListenableFuture<FocusMeteringResult>future = currentCamera.getCameraControl().startFocusAndMetering(
+                        new FocusMeteringAction.Builder(
+                                autoFocusPoint,
+                                FocusMeteringAction.FLAG_AF
+                        ).build());
+
+                future.addListener(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            FocusMeteringResult result = future.get();
+                            if(result.isFocusSuccessful()){
+
+                            }else {
+                                if(trail < 2){
+                                    cameraForceFocus(trail + 1);
+                                    Logger.Debug("Camera", "cameraForceFocus - Couldn't Force Focus Camera, Retrying");
+                                }else {
+                                    Logger.Debug("Camera", "cameraForceFocus - Couldn't Force Focus Camera");
+                                }
+                            }
+                        } catch (Exception ex) {
+                            Logger.Error("Camera", "cameraForceFocus - cameraFocusListener - " + ex.getMessage());
+                        }
+                    }
+                }, cameraExecutor);
+
+            } catch (Exception e) {
+                Logger.Error("Camera", "cameraForceFocus - " + e.getMessage());
+            }
+    }
 
     /**
      * Barcode recognition system
@@ -529,7 +581,7 @@ public class BrandOCRActivity extends AppCompatActivity {
                                 if(s != null){
                                     if(s){
                                         //Ocr was already done for this item, ask the user to pick a new item
-                                        ShowAlertDialog("Error", "OCR Already Done For This Item: " + barcode);
+                                        ShowAlertDialog("Error", "Error CheckBarcodeOCRDone For Item: " + barcode);
                                         CurrentBarcode = null;
                                     }else {
                                         //The item was not passed through the ocr process before so we start capturing images
@@ -578,17 +630,20 @@ public class BrandOCRActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         cameraCaptureCountDownCurrentTime--;
-                        ocrHelpText.setText("Capturing Image Automatically In " + cameraCaptureCountDownCurrentTime + " Seconds...");
-                        if(cameraCaptureCountDownCurrentTime == 0){
+                        if(cameraCaptureCountDownCurrentTime == 1){
                             ocrHelpText.setText("Capturing Image Automatically Now");
+                        }else if(cameraCaptureCountDownCurrentTime > 1){
+                            ocrHelpText.setText("Capturing Image Automatically In " + cameraCaptureCountDownCurrentTime + " Seconds...");
                         }
                     }
                 });
+                if(cameraCaptureCountDownCurrentTime == 1){
+                    captureImage(true, 0);
+                }
             }
 
             @Override
             public void onFinish() {
-                captureImage(true, 0);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {

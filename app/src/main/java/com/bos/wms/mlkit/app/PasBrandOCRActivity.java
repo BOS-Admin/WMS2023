@@ -103,12 +103,8 @@ public class PasBrandOCRActivity extends AppCompatActivity {
 
     Camera currentCamera;
 
-    /**
-     * Configurations
-     */
-
     //In Seconds
-    public int ImageAutoCaptureCountDownTime = 10;
+    int ImageAutoCaptureCountDownTime = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +113,14 @@ public class PasBrandOCRActivity extends AppCompatActivity {
 
         Storage mStorage = new Storage(getApplicationContext());
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82");
+
+        try{
+            int ocrAutoCaptureTime = Integer.parseInt(General.getGeneral(this).getSetting(this,"OCRAutoCaptureTime"));
+            ImageAutoCaptureCountDownTime = ocrAutoCaptureTime;
+            Logger.Debug("SystemControl", "Read Field OCRAutoCaptureTime From System Control, Value: " + ImageAutoCaptureCountDownTime);
+        }catch(Exception ex){
+            Logger.Error("SystemControl", "Error Getting Value For OCRAutoCaptureTime, " + ex.getMessage());
+        }
 
         ocrHelpText = findViewById(R.id.ocrHelpText);
 
@@ -391,8 +395,17 @@ public class PasBrandOCRActivity extends AppCompatActivity {
                 captureImage(false, 0);
             }
         }else {
-            cameraPreviewImageView.setImageBitmap(cameraPreview.getBitmap());
-            cameraPreviewImageView.setVisibility(View.VISIBLE);
+            try{
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        cameraPreviewImageView.setImageBitmap(cameraPreview.getBitmap());
+                        cameraPreviewImageView.setVisibility(View.VISIBLE);
+                    }
+                });
+            }catch(Exception ex){
+                Logger.Error("CAMERA", "Error Showing Camera Preview: " + ex.getMessage());
+            }
 
             ImageCapture.OutputFileOptions outputFileOptions =
                     new ImageCapture.OutputFileOptions.Builder(photoFile).build();
@@ -439,7 +452,7 @@ public class PasBrandOCRActivity extends AppCompatActivity {
                                 if(s != null){
                                     if(s){
                                         //Ocr was already done for this item, ask the user to pick a new item
-                                        ShowAlertDialog("Error", "OCR Already Done For This Item: " + barcode);
+                                        ShowAlertDialog("Error", "Error CheckBarcodeOCRDone For Item: " + barcode);
                                         CurrentBarcode = null;
                                     }else {
                                         //The item was not passed through the ocr process before so we start capturing images
@@ -464,7 +477,12 @@ public class PasBrandOCRActivity extends AppCompatActivity {
     public void CheckDetectedRFIDTag(String rfid){
         Logger.Debug("API", "CheckBarcodePreviousOCR - Detected RFID: " + rfid + " Checking IS Now");
         RFIDStopRead();
-        ocrHelpText.setText("Reading The IS Please Wait...");
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                ocrHelpText.setText("Reading The IS Please Wait...");
+            }
+        });
         try {
             BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
             CompositeDisposable compositeDisposable = new CompositeDisposable();
@@ -474,13 +492,23 @@ public class PasBrandOCRActivity extends AppCompatActivity {
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe((s) -> {
                                 if(s != null){
-                                    ocrHelpText.setText("Check The IS OCR Status");
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            ocrHelpText.setText("Check The IS OCR Status");
+                                        }
+                                    });
                                     CheckBarcodePreviousOCR(s);
                                     CurrentBarcode = s;
                                 }
                             }, (throwable) -> {
                                 RFIDStartRead();
-                                ocrHelpText.setText("Scan An Item's RFID To Start");
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        ocrHelpText.setText("Scan An Item's RFID To Start");
+                                    }
+                                });
                                 Logger.Error("API", "CheckDetectedRFIDTag - Error In Response: " + throwable.getMessage());
                                 ShowSnackBar("Server Error: " + throwable.getMessage(), Snackbar.LENGTH_LONG);
                             }));
@@ -489,7 +517,12 @@ public class PasBrandOCRActivity extends AppCompatActivity {
             CurrentBarcode = null;
             ShowSnackBar("Connection Error Occurred", Snackbar.LENGTH_LONG);
             RFIDStartRead();
-            ocrHelpText.setText("Scan An Item's RFID To Start");
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    ocrHelpText.setText("Scan An Item's RFID To Start");
+                }
+            });
         }
     }
 
@@ -524,17 +557,20 @@ public class PasBrandOCRActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         cameraCaptureCountDownCurrentTime--;
-                        ocrHelpText.setText("Capturing Image Automatically In " + cameraCaptureCountDownCurrentTime + " Seconds...");
-                        if(cameraCaptureCountDownCurrentTime == 0){
+                        if(cameraCaptureCountDownCurrentTime == 1){
                             ocrHelpText.setText("Capturing Image Automatically Now");
+                        }else if(cameraCaptureCountDownCurrentTime > 1){
+                            ocrHelpText.setText("Capturing Image Automatically In " + cameraCaptureCountDownCurrentTime + " Seconds...");
                         }
                     }
                 });
+                if(cameraCaptureCountDownCurrentTime == 1){
+                    captureImage(true, 0);
+                }
             }
 
             @Override
             public void onFinish() {
-                captureImage(true, 0);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {

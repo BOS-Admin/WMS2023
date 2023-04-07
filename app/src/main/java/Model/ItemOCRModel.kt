@@ -6,13 +6,15 @@ class ItemOCRModel {
     var UserID: Int? =null
     lateinit var OCRs: Array<String?>
     lateinit var OCRFileNames: Array<String?>
+    lateinit var DetectedLogos: Array<String?>
 
     constructor()
-    constructor(ItemNo: String?, UPC: String?, UserID: Int?,OCRs: Array<String?>,OCRFileNames: Array<String?>) {
+    constructor(ItemNo: String?, UPC: String?, UserID: Int?,OCRs: Array<String?>,OCRFileNames: Array<String?>, DetectedLogos: Array<String?>) {
         this.ItemNo = ItemNo
         this.UPC = UPC
         this.UserID = UserID
         this.OCRs=OCRs
         this.OCRFileNames=OCRFileNames
+        this.DetectedLogos = DetectedLogos
     }
 }

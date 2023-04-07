@@ -4,10 +4,13 @@ package com.bos.wms.mlkit.app;
 import androidx.annotation.NonNull;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
+import android.util.Log;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkResponse;
@@ -22,6 +25,7 @@ import com.bos.wms.mlkit.R;
 import com.bos.wms.mlkit.storage.Storage;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.functions.FirebaseFunctions;
@@ -180,6 +184,7 @@ public class OCRBackgroundThread {
 
             ArrayList<String> allOCRS = new ArrayList<>();
             ArrayList<String> allFileNames = new ArrayList<>();
+            ArrayList<String> allLogos = new ArrayList<>();
 
             boolean foundImage = false;
 
@@ -203,6 +208,10 @@ public class OCRBackgroundThread {
                     allFileNames.add(fileName);
 
                 }
+
+                if(extension.equalsIgnoreCase(".ini")){
+                    allLogos.add(readFileString(currentFile));
+                }
             }
 
             if(foundImage) return;
@@ -214,7 +223,7 @@ public class OCRBackgroundThread {
 
                 int userID = General.getGeneral(currentContext).UserID;
 
-                ItemOCRModel model = new ItemOCRModel(currentItemSerial, "", userID, allOCRS.toArray(new String[0]), allFileNames.toArray(new String[0]));
+                ItemOCRModel model = new ItemOCRModel(currentItemSerial, "", userID, allOCRS.toArray(new String[0]), allFileNames.toArray(new String[0]), allLogos.toArray(new String[0]));
 
                 //Send the items to the api
                 try {
@@ -314,8 +323,11 @@ public class OCRBackgroundThread {
         //Add features to the request
         JsonObject feature = new JsonObject();
         feature.add("type", new JsonPrimitive("TEXT_DETECTION"));
+        JsonObject feature2 = new JsonObject();
+        feature2.add("type", new JsonPrimitive("LOGO_DETECTION"));
         JsonArray features = new JsonArray();
         features.add(feature);
+        features.add(feature2);
 
         request.add("features", features);
 
@@ -332,11 +344,53 @@ public class OCRBackgroundThread {
                     try {
                         if(task.getResult() != null && task.getResult().getAsJsonArray() != null){
                             //Receive the text from google ocr and save them into the file
-                            String resultText = task.getResult().getAsJsonArray().get(0).getAsJsonObject().get("fullTextAnnotation").getAsJsonObject()
-                                    .get("text").getAsString();
+                            String resultText = "";
+
+                            try {
+                                resultText = task.getResult().getAsJsonArray().get(0).getAsJsonObject().get("fullTextAnnotation").getAsJsonObject()
+                                        .get("text").getAsString();
+                            }catch(Exception ex){
+                                Logger.Debug("OCR-THREAD", "UploadImage - Trying To Get OCR Text Error: " + ex.getMessage());
+                            }
+
+                            Logger.Debug("OCR-THREAD", "UploadImage - OCR Detected Text: " + resultText);
+
+                            String logoName = "No Logo";
+                            float currentScore = 0;
+
+                            try {
+                                JsonElement obj = task.getResult().getAsJsonArray().get(0).getAsJsonObject().get("logoAnnotations");
+
+                                if(obj.getAsJsonArray().size() > 0){
+
+                                    for(int i = 0; i < obj.getAsJsonArray().size(); i++){
+                                        JsonElement detectedLogo = obj.getAsJsonArray().get(i);
+                                        String _logoName = detectedLogo.getAsJsonObject().get("description").getAsString();
+                                        float accuracy = detectedLogo.getAsJsonObject().get("score").getAsFloat() * 100;
+                                        Logger.Debug("OCR-THREAD", "UploadImage - OCR Detected Logo " + _logoName + " | " + String.format("%.2f", accuracy) + "%");
+
+                                        if(accuracy > currentScore){
+                                            currentScore = accuracy;
+                                            logoName = _logoName;
+                                        }
+
+                                    }
+
+                                    Logger.Debug("OCR-THREAD", "UploadImage - Calculated Logo With Highest Accuracy " + logoName + " | " + String.format("%.2f", currentScore) + "%");
+
+                                }else {
+                                    Logger.Debug("OCR-THREAD", "UploadImage - No Logos Were Detected");
+                                }
+                            }catch(Exception ex){
+                                Logger.Error("OCR-THREAD", "UploadImage - Error While Trying To Read OCR Detected Logos, " + ex.getMessage());
+                            }
+
                             Logger.Debug("OCR-THREAD", "UploadImage - Analyzed Image Data, Saving OCR Data To File " + fileName + ".txt" + " For Item " + currentFolder.getName());
                             File saveFile = new File(currentFolder, "/" + fileName + ".txt");
                             WriteToFile(saveFile, resultText);
+
+                            File logosSaveFile = new File(currentFolder, "/" + fileName + ".ini");
+                            WriteToFile(logosSaveFile, logoName + "|" + currentScore);
 
                             //Attempt to process the image file again this time to upload it to the server
                             ProcessImageFile(currentFile, currentFolder);
