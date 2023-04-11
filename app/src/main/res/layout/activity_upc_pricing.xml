@@ -111,19 +111,41 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <Button
-            android:id="@+id/confirmBtn"
-            style="@style/Widget.Material3.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:backgroundTint="@android:color/holo_blue_light"
-            android:text="Confirm"
-            android:textSize="20dp"
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/horizontalGuideLineTwo" />
+            app:alignContent="center"
+            app:flexWrap="wrap"
+            app:justifyContent="center"
+            app:layout_constraintTop_toTopOf="@+id/horizontalGuideLineTwo">
 
+            <Button
+                android:id="@+id/clipBoardBtn"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:text="Clipboard"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/confirmBtn"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:text="Confirm"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+        </com.google.android.flexbox.FlexboxLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -135,7 +157,7 @@
         android:background="@null"
         android:cursorVisible="false"
         android:elevation="2dp"
-        android:inputType="textVisiblePassword|textNoSuggestions"
+        
         android:text=" "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

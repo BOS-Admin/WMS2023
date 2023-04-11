@@ -495,7 +495,7 @@ public class PasBrandOCRActivity extends AppCompatActivity {
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            ocrHelpText.setText("Check The IS OCR Status");
+                                            ocrHelpText.setText("Checking The IS OCR Status");
                                         }
                                     });
                                     CheckBarcodePreviousOCR(s);

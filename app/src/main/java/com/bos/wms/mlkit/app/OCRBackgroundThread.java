@@ -97,6 +97,15 @@ public class OCRBackgroundThread {
         if(!FolderPath.exists()){
             FolderPath.mkdirs();
         }
+
+        try{
+            int ocrThreadDelay = Integer.parseInt(General.getGeneral(context).getSetting(context,"OCRThreadDelay"));
+            Delay = ocrThreadDelay * 1000;
+            Logger.Debug("OCR-THREAD", "Read Field OCRThreadDelay From System Control, Value: " + ocrThreadDelay);
+        }catch(Exception ex){
+            Logger.Error("OCR-THREAD", "Error Getting Value For OCRThreadDelay, " + ex.getMessage());
+        }
+
     }
 
     /**
@@ -249,7 +258,8 @@ public class OCRBackgroundThread {
                     Logger.Error("API", "StartFolderRevision - Error Connecting: " + e.getMessage());
                 }
             }else {
-                Logger.Debug("OCR-THREAD", "Couldn't Find Any OCR Text Files For Item " + currentItemSerial);
+                Logger.Debug("OCR-THREAD", "Couldn't Find Any OCR Text Files For Item " + currentItemSerial + ", Deleting Folder.");
+                DeleteFolderRecursive(currentFolder);
             }
         }
     }
@@ -260,16 +270,16 @@ public class OCRBackgroundThread {
     public static void CloudLogin(){
         firebaseAuh.signInWithEmailAndPassword("ocr@katayagroup.com","Feras@!@#123").addOnCompleteListener((Activity) currentContext, (result) -> {
             if(result.isSuccessful()){
-                Logger.Debug("FIREBASE", "CloudLogin - Logged In Successfully");
+                Logger.Debug("OCR-THREAD", "CloudLogin - Logged In Successfully");
                 firebaseFunctions = FirebaseFunctions.getInstance(firebaseAuh.getApp());
-                Logger.Debug("FIREBASE", "CloudLogin - Created Functions Instance " + firebaseAuh.getCurrentUser().getUid());
+                Logger.Debug("OCR-THREAD", "CloudLogin - Created Functions Instance " + firebaseAuh.getCurrentUser().getUid());
 
                 RunBackgroundThread();
 
             }else {
-                Logger.Debug("FIREBASE", "CloudLogin - Firebase Login Failed");
+                Logger.Debug("OCR-THREAD", "CloudLogin - Firebase Login Failed, OCR Thread Won't Start");
                 if(result.getException() !=null && result.getException().getMessage() !=null) {
-                    Logger.Error("FIREBASE", "CloudLogin- " + result.getException().getMessage());
+                    Logger.Error("OCR-THREAD", "CloudLogin - " + result.getException().getMessage());
                 }
             }
 
@@ -542,7 +552,12 @@ public class OCRBackgroundThread {
         };
         multipartRequest.setRetryPolicy(new DefaultRetryPolicy(15000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
-        Volley.newRequestQueue(currentContext).add(multipartRequest);
+        try{
+            Volley.newRequestQueue(currentContext).add(multipartRequest);
+        }catch(Exception ex){
+            Logger.Error("OCR-THREAD", "uploadBitmap - Volley Error: " + ex.getMessage());
+        }
+
     }
 
     public static byte[] getFileDataFromBitmap(Bitmap bitmap) {

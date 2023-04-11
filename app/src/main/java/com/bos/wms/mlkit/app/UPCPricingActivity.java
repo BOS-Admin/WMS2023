@@ -7,11 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,6 +39,7 @@ import java.util.List;
 
 import Remote.APIClient;
 import Remote.BasicApi;
+import Remote.UserPermissions.UserPermissions;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
@@ -64,7 +67,7 @@ public class UPCPricingActivity extends AppCompatActivity {
 
     boolean isBusy = false;
 
-    Button confirmBtn;
+    Button confirmBtn, clipBoardBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +106,8 @@ public class UPCPricingActivity extends AppCompatActivity {
 
         confirmBtn = findViewById(R.id.confirmBtn);
         confirmBtn.setEnabled(false);
+
+        clipBoardBtn = findViewById(R.id.clipBoardBtn);
 
         confirmBtn.setOnClickListener(view -> {
             ProcessAllItems();
@@ -174,6 +179,18 @@ public class UPCPricingActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //Checks if the user has permission to see clipboard and displays the button for it
+        UserPermissions.ValidatePermission("WMSApp.Clipboard", clipBoardBtn);
+
+        //Show The Keyboard When The Button Is Clicked
+        clipBoardBtn.setOnClickListener(view -> {
+            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING);
+            InputMethodManager imm = (InputMethodManager)   getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+        });
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING);
+
 
         insertBarcode.requestFocus();
 
@@ -273,6 +290,9 @@ public class UPCPricingActivity extends AppCompatActivity {
     public void ProcessItem(){
         try {
             isBusy = true;
+
+            Logger.Debug("API", "UPCPricing-ProcessItem Processing ItemSerial: " + currentItemSerial + " UPC: " + currentItemUPC);
+
             BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
             CompositeDisposable compositeDisposable = new CompositeDisposable();
 
@@ -284,7 +304,7 @@ public class UPCPricingActivity extends AppCompatActivity {
                                 if(s != null){
                                     if(!s.isEmpty() && s.toLowerCase().startsWith("success")){
 
-                                        Logger.Debug("API", "UPCPricing-ProcessItem Returned Result: " + s);
+                                        Logger.Debug("API", "UPCPricing-ProcessItem Returned Result: " + s + " ItemSerial: " + currentItemSerial + " UPC: " + currentItemUPC);
 
                                         General.playSuccess();
 
@@ -306,7 +326,7 @@ public class UPCPricingActivity extends AppCompatActivity {
                                     }
                                     else{
 
-                                        Logger.Error("API", "UPCPricing-ProcessItem - Received Error: " + s);
+                                        Logger.Error("API", "UPCPricing-ProcessItem - Received Error: " + s + " ItemSerial: " + currentItemSerial + " UPC: " + currentItemUPC);
 
                                         General.playError();
 
@@ -320,7 +340,7 @@ public class UPCPricingActivity extends AppCompatActivity {
 
                                         if(s.toLowerCase().contains("upc")){
                                             SetScannedItemText(scannedItemUPC, "Scan An Item To Start");
-                                            currentSelectedButton = scannedItemSerial;
+                                            currentSelectedButton = scannedItemUPC;
                                         }
                                         else{
                                             SetScannedItemText(scannedItemUPC, "Scan An Item To Start");
@@ -371,6 +391,9 @@ public class UPCPricingActivity extends AppCompatActivity {
                 allUPCs.add(model.getUPC());
             }
 
+            Logger.Debug("API", "UPCPricing-ProcessAllItems - Start Process Set ItemSerials: " + String.join(",", allItemSerials));
+            Logger.Debug("API", "UPCPricing-ProcessAllItems - Start Process Set UPCS: " + String.join(",", allUPCs));
+            Logger.Debug("API", "UPCPricing-ProcessAllItems - Start Process Set Pricing Line Code: " + PricingLineCode);
 
             compositeDisposable.addAll(
                     api.PostUPCPricing(UserID, String.join(",", allItemSerials), String.join(",", allUPCs), PricingLineCode)
@@ -388,6 +411,7 @@ public class UPCPricingActivity extends AppCompatActivity {
 
                                     if(message.isEmpty()){
                                         General.playSuccess();
+                                        Logger.Debug("API", "UPCPricing-ProcessAllItems - Response Empty, Pricing Done Successfully");
                                         runOnUiThread(new Runnable() {
                                             @Override
                                             public void run() {

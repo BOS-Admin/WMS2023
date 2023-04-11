@@ -172,7 +172,7 @@ public class UserPermissions {
      * @return true if the permission is granted, false if the permission in not granted
      */
     public static boolean HasPermission(String permission){
-        return allPermissions.contains(permission) || allPermissions.contains("ADMIN.EVERYTHING");
+        return allPermissions != null ? allPermissions.contains(permission) || allPermissions.contains("ADMIN.EVERYTHING") : false;
     }
 
     /**
