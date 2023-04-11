@@ -24,6 +24,9 @@ public final class ActivityUpcPricingBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button clipBoardBtn;
+
+  @NonNull
   public final Button confirmBtn;
 
   @NonNull
@@ -56,13 +59,15 @@ public final class ActivityUpcPricingBinding implements ViewBinding {
   @NonNull
   public final ConstraintLayout upcPricingActivityLayout;
 
-  private ActivityUpcPricingBinding(@NonNull ConstraintLayout rootView, @NonNull Button confirmBtn,
+  private ActivityUpcPricingBinding(@NonNull ConstraintLayout rootView,
+      @NonNull Button clipBoardBtn, @NonNull Button confirmBtn,
       @NonNull ConstraintLayout constraintLayout, @NonNull Guideline guideline,
       @NonNull Guideline horizontalGuideLineTwo, @NonNull EditText insertBarcode,
       @NonNull TextView lblItemSerial, @NonNull TextView lblUPC, @NonNull Button scannedItemSerial,
       @NonNull Button scannedItemUPC, @NonNull ListView scannedItemsListView,
       @NonNull ConstraintLayout upcPricingActivityLayout) {
     this.rootView = rootView;
+    this.clipBoardBtn = clipBoardBtn;
     this.confirmBtn = confirmBtn;
     this.constraintLayout = constraintLayout;
     this.guideline = guideline;
@@ -103,6 +108,12 @@ public final class ActivityUpcPricingBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.clipBoardBtn;
+      Button clipBoardBtn = ViewBindings.findChildViewById(rootView, id);
+      if (clipBoardBtn == null) {
+        break missingId;
+      }
+
       id = R.id.confirmBtn;
       Button confirmBtn = ViewBindings.findChildViewById(rootView, id);
       if (confirmBtn == null) {
@@ -165,7 +176,7 @@ public final class ActivityUpcPricingBinding implements ViewBinding {
 
       ConstraintLayout upcPricingActivityLayout = (ConstraintLayout) rootView;
 
-      return new ActivityUpcPricingBinding((ConstraintLayout) rootView, confirmBtn,
+      return new ActivityUpcPricingBinding((ConstraintLayout) rootView, clipBoardBtn, confirmBtn,
           constraintLayout, guideline, horizontalGuideLineTwo, insertBarcode, lblItemSerial, lblUPC,
           scannedItemSerial, scannedItemUPC, scannedItemsListView, upcPricingActivityLayout);
     }
