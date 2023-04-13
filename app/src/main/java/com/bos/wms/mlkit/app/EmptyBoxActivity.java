@@ -53,6 +53,8 @@ public class EmptyBoxActivity extends AppCompatActivity {
 
     public String IPAddress = "";
 
+    int UserID = -1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +62,8 @@ public class EmptyBoxActivity extends AppCompatActivity {
 
         Storage mStorage = new Storage(getApplicationContext());
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82");
+
+        UserID = General.getGeneral(this).UserID;
 
         insertBinBoxBarcode = findViewById(R.id.insertBinBoxBarcode);
         scannedItemsCount = findViewById(R.id.scannedItemsCount);
@@ -142,7 +146,7 @@ public class EmptyBoxActivity extends AppCompatActivity {
             CompositeDisposable compositeDisposable = new CompositeDisposable();
 
             compositeDisposable.addAll(
-                    api.CheckBinEmpty(barcode)
+                    api.CheckBinEmpty(UserID, barcode)
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe((s) -> {
@@ -214,7 +218,7 @@ public class EmptyBoxActivity extends AppCompatActivity {
             CompositeDisposable compositeDisposable = new CompositeDisposable();
 
             compositeDisposable.addAll(
-                    api.EmptyBin(barcode)
+                    api.EmptyBin(UserID, barcode)
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe((s) -> {

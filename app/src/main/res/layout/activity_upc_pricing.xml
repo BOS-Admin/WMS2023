@@ -157,7 +157,6 @@
         android:background="@null"
         android:cursorVisible="false"
         android:elevation="2dp"
-        
         android:text=" "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

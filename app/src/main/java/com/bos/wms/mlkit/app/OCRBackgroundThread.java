@@ -64,6 +64,8 @@ public class OCRBackgroundThread {
 
     public static int Delay = 5000;
 
+    public static int CloudLoginRetryDelay = 10000;
+
     private static FirebaseAuth firebaseAuh;
     private static FirebaseFunctions firebaseFunctions;
 
@@ -88,7 +90,7 @@ public class OCRBackgroundThread {
         //Initialize firebase and the the firebase authenticator
         FirebaseApp.initializeApp(currentContext);
         firebaseAuh = FirebaseAuth.getInstance();
-        CloudLogin();
+        CloudLogin(true);
 
         File FolderPath = new File(
                 getOutputDirectory(),
@@ -144,6 +146,20 @@ public class OCRBackgroundThread {
             try {
                 Thread.sleep(Delay);
                 RunBackgroundThread();
+            } catch (InterruptedException e) {
+
+            }
+        } } ).start();
+    }
+
+    /**
+     * This function will retry the cloud login connection every 10 seconds
+     */
+    private static void RetryCloudLogin(){
+        new Thread( new Runnable() { @Override public void run() {
+            try {
+                Thread.sleep(CloudLoginRetryDelay);
+                CloudLogin(false);
             } catch (InterruptedException e) {
 
             }
@@ -267,7 +283,7 @@ public class OCRBackgroundThread {
     /**
      * Sign in to firebase using a username and password. This is needed to be able to call the Google Vision API
      */
-    public static void CloudLogin(){
+    public static void CloudLogin(boolean firstTime){
         firebaseAuh.signInWithEmailAndPassword("ocr@katayagroup.com","Feras@!@#123").addOnCompleteListener((Activity) currentContext, (result) -> {
             if(result.isSuccessful()){
                 Logger.Debug("OCR-THREAD", "CloudLogin - Logged In Successfully");
@@ -281,6 +297,24 @@ public class OCRBackgroundThread {
                 if(result.getException() !=null && result.getException().getMessage() !=null) {
                     Logger.Error("OCR-THREAD", "CloudLogin - " + result.getException().getMessage());
                 }
+                if(firstTime) {
+                    try {
+                        new AlertDialog.Builder(currentContext)
+                                .setTitle("OCR Error")
+                                .setMessage("Fire Base Connection Failed, OCR Processing Will Not Be Possible. Check your internet while we try connecting.")
+                                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+
+                                    }
+                                })
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .show();
+                        Logger.Debug("OCR-THREAD", "CloudLogin - Error Dialog Displayed To User.");
+                    }catch(Exception ex){
+                        Logger.Error("OCR-THREAD", "CloudLogin - Error Dialog Failed To Display: " + ex.getMessage());
+                    }
+                }
+                RetryCloudLogin();
             }
 
         });

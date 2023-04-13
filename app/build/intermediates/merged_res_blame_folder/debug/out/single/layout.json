@@ -32,12 +32,12 @@
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_count.xml"
     },
     {
-        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_itemserial_upc_missing.xml",
-        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_itemserial_upc_missing.xml"
-    },
-    {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_brand_ocractivity.xml",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_brand_ocractivity.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_itemserial_upc_missing.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_itemserial_upc_missing.xml"
     },
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\fragment_home.xml",
@@ -72,12 +72,12 @@
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\item_list.xml"
     },
     {
-        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_foldingscan.xml",
-        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_foldingscan.xml"
-    },
-    {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_transfer.xml",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_transfer.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_foldingscan.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_foldingscan.xml"
     },
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_shipment.xml",

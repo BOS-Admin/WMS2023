@@ -29,10 +29,10 @@ interface BasicApi {
     ): Observable<Int>
 
     @POST("api/EmptyBin")
-    fun EmptyBin(@Query("binBarcode") binBarcode: String): Observable<String>
+    fun EmptyBin(@Query("UserID") UserID: Int, @Query("binBarcode") binBarcode: String): Observable<String>
 
     @GET("api/EmptyBin/CheckBin")
-    fun CheckBinEmpty(@Query("binBarcode") binBarcode: String): Observable<EmptyBinModel>
+    fun CheckBinEmpty(@Query("UserID") UserID: Int, @Query("binBarcode") binBarcode: String): Observable<EmptyBinModel>
 
     @POST("api/BolRecognition")
     fun ProceedBolFailedUpload(@Body ocr: BolRecognitionModel): Observable<String>
