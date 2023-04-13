@@ -118,7 +118,7 @@ public class EmptyBoxActivity extends AppCompatActivity {
                     insertBinBoxBarcode.setText(" ");
                     insertBinBoxBarcode.addTextChangedListener(this);
 
-                    ProcessBinBarCode(s.toString());
+                    ProcessBinBarCode(s.toString().replaceAll(" ", ""));
                 }else if(s.length() != 0 && !s.toString().isEmpty()){;
                     insertBinBoxBarcode.setText(" ");
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -138,6 +138,8 @@ public class EmptyBoxActivity extends AppCompatActivity {
     public void ProcessBinBarCode(String barcode){
         try {
 
+            Logger.Debug("API", "ProcessBinBarCode - Start Process For Bin, Barcode '" + barcode + "'");
+
             confirmationButtons.setVisibility(View.GONE);
             confirmationMessage.setText("");
             confirmationLayout.setVisibility(View.GONE);
@@ -155,11 +157,14 @@ public class EmptyBoxActivity extends AppCompatActivity {
                                         confirmationButtons.setVisibility(View.GONE);
                                         confirmationMessage.setText(s.getMessage());
                                         confirmationLayout.setVisibility(View.VISIBLE);
+                                        Logger.Debug("API", "ProcessBinBarCode - Bin Emptied Successfully, Barcode '" + barcode + "'");
                                         AddScannedItem();
                                     }else {
                                         confirmationButtons.setVisibility(View.VISIBLE);
                                         confirmationMessage.setText(s.getMessage() + ", Are You Sure You Want To Empty This Bin (" + barcode + ") ?");
                                         confirmationLayout.setVisibility(View.VISIBLE);
+
+                                        Logger.Debug("API", "ProcessBinBarCode - Requesting Confirmation '" + s.getMessage() + "'");
 
                                         confirmationYes.setOnClickListener(new View.OnClickListener() {
                                             @Override
@@ -210,6 +215,8 @@ public class EmptyBoxActivity extends AppCompatActivity {
     public void EmptyBin(String barcode){
         try {
 
+            Logger.Debug("API", "ProcessBinBarCode - Bin Empty Start, Barcode '" + barcode + "'");
+
             confirmationButtons.setVisibility(View.GONE);
             confirmationMessage.setText("Please Wait, Emptying Bin");
             confirmationLayout.setVisibility(View.VISIBLE);
@@ -224,11 +231,13 @@ public class EmptyBoxActivity extends AppCompatActivity {
                             .subscribe((s) -> {
                                 if(s != null){
                                     if(s.contains("Success")){
+                                        Logger.Debug("API", "ProcessBinBarCode - Bin Emptied Successfully, Barcode '" + barcode + "'");
                                         confirmationButtons.setVisibility(View.GONE);
                                         confirmationMessage.setText("Bin Emptied Successfully");
                                         confirmationLayout.setVisibility(View.VISIBLE);
                                         AddScannedItem();
                                     }else {
+                                        Logger.Error("API", "ProcessBinBarCode - Occured While Trying To Empty Bin, Barcode '" + barcode + "'");
                                         confirmationButtons.setVisibility(View.GONE);
                                         confirmationMessage.setText("An Unknown Error Occured While Trying To Empty Bin (" + barcode + ").");
                                         confirmationLayout.setVisibility(View.VISIBLE);
