@@ -2,13 +2,11 @@ package Remote
 
 import Model.*
 import Model.BosApp.*
+import Model.BosApp.BinModelItem
 import Model.BosApp.Checking.CheckingDCModel
 import Model.BosApp.Packing.FillBinDCModel
 import Model.BosApp.StockTake.FillRackStockTakeDCModel
-import Model.BosApp.Transfer.PutAwayModel
-import Model.BosApp.Transfer.TransferDCModel
-import Model.BosApp.Transfer.TransferShipmentItemModel
-import Model.BosApp.Transfer.TransferShipmentModel
+import Model.BosApp.Transfer.*
 import io.reactivex.Observable
 import okhttp3.ResponseBody
 import retrofit2.Call
@@ -326,7 +324,7 @@ interface BasicApi {
     @GET("api/UPCPricing")
     fun ValidateUPCPricing(@Query("ItemSerial") ItemSerial:String,@Query("ItemUPC") ItemUPC:String): Observable<String>
     @POST("api/UPCPricing")
-    fun PostUPCPricing(@Query("UserID") UserID:Int,@Query("ItemSerials") ItemSerials:String,@Query("ItemUPCs") ItemUPCs:String,@Query("PricingLineCode") PricingLineCode:String): Observable<ResponseBody>
+    fun PostUPCPricing(@Body model:UPCPricingModel): Observable<ResponseBody>
 
 
     @GET("api/PGPricing")

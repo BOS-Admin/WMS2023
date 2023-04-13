@@ -37,6 +37,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import Model.BosApp.Transfer.UPCPricingModel;
 import Remote.APIClient;
 import Remote.BasicApi;
 import Remote.UserPermissions.UserPermissions;
@@ -391,12 +392,16 @@ public class UPCPricingActivity extends AppCompatActivity {
                 allUPCs.add(model.getUPC());
             }
 
-            Logger.Debug("API", "UPCPricing-ProcessAllItems - Start Process Set ItemSerials: " + String.join(",", allItemSerials));
-            Logger.Debug("API", "UPCPricing-ProcessAllItems - Start Process Set UPCS: " + String.join(",", allUPCs));
-            Logger.Debug("API", "UPCPricing-ProcessAllItems - Start Process Set Pricing Line Code: " + PricingLineCode);
+            try{
+                Logger.Debug("API", "UPCPricing-ProcessAllItems - Start Process Set ItemSerials: " + String.join(",", allItemSerials));
+                Logger.Debug("API", "UPCPricing-ProcessAllItems - Start Process Set UPCS: " + String.join(",", allUPCs));
+                Logger.Debug("API", "UPCPricing-ProcessAllItems - Start Process Set Pricing Line Code: " + PricingLineCode);
+            }catch(Exception ex){
+                Logger.Debug("API", "UPCPricing-ProcessAllItems - Starting Process For All Items, Error: " + ex.getMessage());
+            }
 
             compositeDisposable.addAll(
-                    api.PostUPCPricing(UserID, String.join(",", allItemSerials), String.join(",", allUPCs), PricingLineCode)
+                    api.PostUPCPricing(new UPCPricingModel(UserID, allItemSerials, allUPCs, PricingLineCode))
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe((s) -> {
