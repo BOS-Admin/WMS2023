@@ -23,12 +23,13 @@
             app:dividerDrawable="@drawable/mainmenu_divider"
             android:padding="20dp">
 
+
             <Button
                 android:id="@+id/btnUPCPricing"
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/upcpricing"
                 android:text="UPC Pricing"
-                android:visibility="gone"/>
+                android:visibility="visible"/>
 
             <Button
                 android:id="@+id/btnMenuPGPricing"

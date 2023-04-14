@@ -2557,6 +2557,8 @@ drawable baseline_play_arrow_icon
 drawable baseline_print_disabled_icon
 drawable baseline_print_icon
 drawable baseline_settings_icon
+drawable bolrecognition
+drawable brandocr
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2592,6 +2594,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable edittext_rounded_corners
+drawable emptybox
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_baseline_camera_capture_icon
@@ -2610,6 +2613,8 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
+drawable itempricing
+drawable locationcheck
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -2629,6 +2634,7 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable missingitem
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -2652,11 +2658,18 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable pasbrandocr
+drawable pgpricing
+drawable putawaypallet
+drawable serialgenerator
+drawable shippingboxreceiving
+drawable shippingpalletreceiving
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable upc_item_delete_icon
+drawable upcpricing
 id ALT
 id BOTTOM_END
 id BOTTOM_START
