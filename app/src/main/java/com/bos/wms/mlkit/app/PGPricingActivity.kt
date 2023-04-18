@@ -285,11 +285,11 @@ class PGPricingActivity : AppCompatActivity() {
                     .subscribe(
                         {s->
                             var ErrorMsg = ""
-                                try {
-                                    ErrorMsg = s.string()
-                                } catch (e: IOException) {
-                                    e.printStackTrace()
-                                }
+                             try {
+                                 ErrorMsg = s.string()
+                             } catch (e: IOException) {
+                                 e.printStackTrace()
+                             }
                             if (ErrorMsg.isEmpty()) {
                                 General.playSuccess()
                                 lblError.setTextColor(ColorGreen)

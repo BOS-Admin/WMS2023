@@ -57,6 +57,9 @@ public final class ActivityUpcPricingBinding implements ViewBinding {
   public final ListView scannedItemsListView;
 
   @NonNull
+  public final TextView txtStandId;
+
+  @NonNull
   public final ConstraintLayout upcPricingActivityLayout;
 
   private ActivityUpcPricingBinding(@NonNull ConstraintLayout rootView,
@@ -65,7 +68,7 @@ public final class ActivityUpcPricingBinding implements ViewBinding {
       @NonNull Guideline horizontalGuideLineTwo, @NonNull EditText insertBarcode,
       @NonNull TextView lblItemSerial, @NonNull TextView lblUPC, @NonNull Button scannedItemSerial,
       @NonNull Button scannedItemUPC, @NonNull ListView scannedItemsListView,
-      @NonNull ConstraintLayout upcPricingActivityLayout) {
+      @NonNull TextView txtStandId, @NonNull ConstraintLayout upcPricingActivityLayout) {
     this.rootView = rootView;
     this.clipBoardBtn = clipBoardBtn;
     this.confirmBtn = confirmBtn;
@@ -78,6 +81,7 @@ public final class ActivityUpcPricingBinding implements ViewBinding {
     this.scannedItemSerial = scannedItemSerial;
     this.scannedItemUPC = scannedItemUPC;
     this.scannedItemsListView = scannedItemsListView;
+    this.txtStandId = txtStandId;
     this.upcPricingActivityLayout = upcPricingActivityLayout;
   }
 
@@ -174,11 +178,18 @@ public final class ActivityUpcPricingBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txtStandId;
+      TextView txtStandId = ViewBindings.findChildViewById(rootView, id);
+      if (txtStandId == null) {
+        break missingId;
+      }
+
       ConstraintLayout upcPricingActivityLayout = (ConstraintLayout) rootView;
 
       return new ActivityUpcPricingBinding((ConstraintLayout) rootView, clipBoardBtn, confirmBtn,
           constraintLayout, guideline, horizontalGuideLineTwo, insertBarcode, lblItemSerial, lblUPC,
-          scannedItemSerial, scannedItemUPC, scannedItemsListView, upcPricingActivityLayout);
+          scannedItemSerial, scannedItemUPC, scannedItemsListView, txtStandId,
+          upcPricingActivityLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

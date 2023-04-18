@@ -3411,6 +3411,7 @@ int id txtShipPallReciAppointmentNb 0x7f0802e2
 int id txtShipPallReciBolNb 0x7f0802e3
 int id txtShipPallReciNbOfCartons 0x7f0802e4
 int id txtShipPallReciPalleteNb 0x7f0802e5
+int id txtStandId 0x7f08030a
 int id txtUPC 0x7f0802e6
 int id txtfillpalleteBinBarcode 0x7f0802e7
 int id txtlocationcheckBinBarcode 0x7f0802e8

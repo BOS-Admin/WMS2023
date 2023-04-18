@@ -7,12 +7,22 @@ import Model.BosApp.Checking.CheckingDCModel
 import Model.BosApp.Packing.FillBinDCModel
 import Model.BosApp.StockTake.FillRackStockTakeDCModel
 import Model.BosApp.Transfer.*
+import Model.Pricing.PricingItemResponseModel
+import Model.Pricing.PricingStandModel
+import Model.Pricing.UPCPricingItemModel
 import io.reactivex.Observable
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
 
 interface BasicApi {
+
+    @GET("api/wms/pricing/upc/item")
+    fun PriceItem(@Body model: UPCPricingItemModel): Observable<PricingItemResponseModel>
+    @GET("api/wms/pricing/stand/create?userId=20&PricingLineCode=PL003")
+    fun CreatePricingStand(@Query("UserId") UserId: Int, @Query("PricingLineCode") PricingLineCode: String): Observable<PricingStandModel>
+
+
 
 
     @GET("api/ItemSerial/GetRFIDItemSerial")

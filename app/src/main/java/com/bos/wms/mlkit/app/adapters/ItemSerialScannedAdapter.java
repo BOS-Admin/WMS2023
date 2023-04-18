@@ -90,7 +90,6 @@ public class ItemSerialScannedAdapter extends ArrayAdapter<ItemSerialScannedData
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.upc_pricing_item, parent, false);
             viewHolder.upcText = (TextView) convertView.findViewById(R.id.upcText);
-
             result=convertView;
 
             convertView.setTag(viewHolder);
@@ -104,8 +103,6 @@ public class ItemSerialScannedAdapter extends ArrayAdapter<ItemSerialScannedData
         lastPosition = position;
 
         viewHolder.upcText.setText(dataModel.getItemSerial());
-        //viewHolder.deleteImage.setOnClickListener(this);
-        //viewHolder.deleteImage.setTag(position);
         // Return the completed view to render on screen
         return convertView;
     }

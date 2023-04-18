@@ -108,7 +108,7 @@
                 android:id="@+id/btnMenuShipmentCartonReceivingV2"
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/shippingboxreceiving"
-                android:text="Carton Receiving"
+                android:text="Carton Receiving V2"
                 android:visibility="gone"/>
 
             <Button
