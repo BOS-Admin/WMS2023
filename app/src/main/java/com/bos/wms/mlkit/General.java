@@ -60,8 +60,6 @@ public class General {
     public String transferNavNo="" ;
 
 
-
-
     /**
      * Re-read all preferences (you never need to call this explicitly)
      */

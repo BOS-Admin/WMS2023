@@ -32,6 +32,11 @@ public class UserPermissions {
      */
     public static String AppName = "WMSApp";
 
+    /**
+     * This Will Be Used In Authorizing APIS Later On
+     */
+    public static String AuthToken = "EMPTY_TOKEN";
+
     private static List<UserPermissionListener> listeners = null;
 
     private static List<UserPermissionErrorListener> errorListeners = null;

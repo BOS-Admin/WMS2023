@@ -7,6 +7,7 @@ import Remote.APIClient
 import Remote.BasicApi
 import Remote.UserPermissions.UserPermissions
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -30,6 +31,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_login.*
+import retrofit2.HttpException
 import java.io.IOException
 
 
@@ -156,7 +158,7 @@ class LoginActivity : AppCompatActivity() {
             General.getGeneral(applicationContext).saveGeneral(applicationContext)
 
             Log.println(Log.DEBUG,"Location",location+ " - " + locationID.toString())
-            var usr: UserLoginModel =  UserLoginModel(username,password)
+            var usr: UserLoginModel =  UserLoginModel(username,password, UserPermissions.AppName, UserPermissions.AppVersion)
             api= APIClient.getInstance(IPAddress,true).create(BasicApi::class.java)
             compositeDisposable.addAll(
                 api.Login(usr)
@@ -164,10 +166,31 @@ class LoginActivity : AppCompatActivity() {
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
                         {s->
+
+                            try {
+                                if(s.AuthToken != null){
+                                    UserPermissions.AuthToken = s.AuthToken
+                                    Logger.Debug("LOGIN", "Received A Valid Authorization Token");
+                                }else {
+                                    Logger.Debug("LOGIN", "Received An Empty Authorization Token");
+                                }
+
+                            }catch(e: Throwable){
+                                Logger.Debug("LOGIN", "Failed Receiving Authorization Token");
+                            }
+
                             updateUiWithUser(s) },
                         {t:Throwable?->
+                            if(t is HttpException){
+                                var ex: HttpException =t as HttpException
+                                showLoginFailed( ex.response().errorBody()!!.string()+ " (Http Error)")
+                            }
+                            else{
+                                if(t?.message!=null)
+                                    showLoginFailed(t.message.toString()+ " (API Error )")
+                            }
                             run {
-                                showLoginFailed(t.toString())
+
                             }
                         }
                     )
