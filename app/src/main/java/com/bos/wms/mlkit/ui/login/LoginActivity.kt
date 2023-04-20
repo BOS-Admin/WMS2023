@@ -183,14 +183,17 @@ class LoginActivity : AppCompatActivity() {
                         {t:Throwable?->
                             if(t is HttpException){
                                 var ex: HttpException =t as HttpException
-                                showLoginFailed( ex.response().errorBody()!!.string()+ " (Http Error)")
+                                run {
+                                    showLoginFailed( ex.response().errorBody()!!.string()+ " (Http Error)")
+                                }
                             }
                             else{
                                 if(t?.message!=null)
-                                    showLoginFailed(t.message.toString()+ " (API Error )")
-                            }
-                            run {
-
+                                {
+                                    run {
+                                        showLoginFailed(t.message.toString()+ " (API Error )")
+                                    }
+                                }
                             }
                         }
                     )
