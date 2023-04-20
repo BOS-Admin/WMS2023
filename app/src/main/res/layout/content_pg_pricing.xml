@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/activity_horizontal_margin"
     android:paddingStart="@dimen/activity_horizontal_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_horizontal_margin"
     android:paddingEnd="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_horizontal_margin"
@@ -15,11 +13,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="373dp"
+        android:layout_width="350dp"
         android:layout_height="677dp"
         android:layout_marginBottom="2dp"
         android:orientation="vertical"
-        android:paddingTop="@dimen/activity_horizontal_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.342"
@@ -38,10 +35,10 @@
 
             <TextView
                 android:id="@+id/lblPG"
-                android:layout_width="100dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="PG"
-                android:textAlignment="textEnd"
+                android:text="Product Group"
+
                 android:textSize="18sp" />
 
             <EditText
@@ -62,10 +59,10 @@
 
             <TextView
                 android:id="@+id/lblSeason"
-                android:layout_width="100dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="Season"
-                android:textAlignment="textEnd"
+
                 android:textSize="18sp" />
 
             <EditText
@@ -86,10 +83,10 @@
 
             <TextView
                 android:id="@+id/lblItemSerial"
-                android:layout_width="100dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="Item Serial:"
-                android:textAlignment="textEnd"
+
                 android:textSize="18sp" />
 
             <EditText

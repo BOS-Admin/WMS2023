@@ -152,7 +152,7 @@ class ScanBinForCountActivity : AppCompatActivity() {
                             var ErrorMsg = ""
                             try {
                                 ErrorMsg = s.string()
-                            } catch (e: IOException) {
+                            } catch (e: Exception) {
                                 e.printStackTrace()
                             }
                            // Log.i("AH-Log","response  "+s.string())

@@ -110,7 +110,7 @@ class StockTakeCountActivity : AppCompatActivity() {
                             {s->
                                 var response = try {
                                     s.string()
-                                } catch (e: IOException) {
+                                } catch (e: Exception) {
                                     e.message.toString()
                                 }
                                 if (response!=null && (response.lowercase().startsWith("success") || response.lowercase().startsWith("released"))) {
@@ -127,7 +127,7 @@ class StockTakeCountActivity : AppCompatActivity() {
                                 run {
                                     if(t is HttpException){
                                         var ex: HttpException =t as HttpException
-                                        showMessage("Http Error: "+ ex.response().errorBody()!!.string(),Color.RED)
+                                        showMessage(""+ ex.response().errorBody()!!.string(),Color.RED)
                                     }
                                     else{
                                         if(t?.message!=null)
@@ -165,7 +165,7 @@ class StockTakeCountActivity : AppCompatActivity() {
                         {s->
                             var response = try {
                                 s.string()
-                            } catch (e: IOException) {
+                            } catch (e: Exception) {
                                 e.message.toString()
                             }
                             if (response!=null && (response.lowercase().startsWith("success") || response.lowercase().startsWith("released"))) {

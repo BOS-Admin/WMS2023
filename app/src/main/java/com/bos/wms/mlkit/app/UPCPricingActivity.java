@@ -3,47 +3,30 @@ package com.bos.wms.mlkit.app;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
-import android.content.ClipboardManager;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import com.bos.wms.mlkit.CustomListAdapter;
 import com.bos.wms.mlkit.General;
 import com.bos.wms.mlkit.R;
 import com.bos.wms.mlkit.app.adapters.ItemSerialScannedAdapter;
 import com.bos.wms.mlkit.app.adapters.ItemSerialScannedDataModel;
-import com.bos.wms.mlkit.app.adapters.UPCScannedAdapter;
-import com.bos.wms.mlkit.app.adapters.UPCScannedItemDataModel;
 import com.bos.wms.mlkit.storage.Storage;
-import com.google.android.flexbox.FlexboxLayout;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.auth.User;
-
-import org.json.JSONObject;
-
 import java.util.ArrayList;
-import java.util.List;
 
-import Model.BosApp.Transfer.UPCPricingModel;
 import Model.Pricing.PricingStandModel;
+import Model.Pricing.UPCPricingItemModel;
 import Remote.APIClient;
 import Remote.BasicApi;
 import Remote.UserPermissions.UserPermissions;
@@ -56,34 +39,20 @@ public class UPCPricingActivity extends AppCompatActivity {
 
     EditText insertBarcode;
     TextView txtStandId;
-
-
     String IPAddress = "", PricingLineCode = "";
-
     Button scannedItemUPC, scannedItemSerial;
-
     Button currentSelectedButton;
-
     String currentItemSerial = "", currentItemUPC = "";
-
     ArrayList<String> scannedItemSerials;
-
     ArrayList<ItemSerialScannedDataModel> dataModels;
-
     ItemSerialScannedAdapter scannedItemsAdapter;
-
     ListView scannedItemsListView;
-
     boolean isBusy = false;
-
     Button confirmBtn, clipBoardBtn;
-
     PricingStandModel stand;
     int UserId = -1;
 
-    /**
-     * This function is called once we have an item serial and item upc scanned and ready to validate
-     */
+
     public void CreateStand() {
         try {
             Logger.Debug("API", "UPCPricing-Creating Stand");
@@ -99,6 +68,8 @@ public class UPCPricingActivity extends AppCompatActivity {
                                             stand = s;
                                             runOnUiThread(() -> {
                                                 txtStandId.setText("(UPC Pricing) Stand Id: " + s.getId());
+                                                insertBarcode.setEnabled(true);
+                                                insertBarcode.requestFocus();
                                             });
                                         } else {
                                             Logger.Error("API", "UPCPricing-Create Stand - retuned null:  Userid: " + UserId + " PricingLineCode: " + PricingLineCode);
@@ -144,39 +115,22 @@ public class UPCPricingActivity extends AppCompatActivity {
         scannedItemsListView = findViewById(R.id.scannedItemsListView);
         dataModels = new ArrayList<>();
         scannedItemsAdapter = new ItemSerialScannedAdapter(dataModels, this, scannedItemsListView);
-
-        /**
-         * This event handler listens for when the user manually removes an item to remove it from the local list
-         */
-        scannedItemsAdapter.setItemSerialScannedListener((itemSerial, itemUPC) -> {
-            if (scannedItemSerials.contains(itemSerial)) {
-                scannedItemSerials.remove(itemSerial);
-            }
-            if (scannedItemSerials.size() == 0) {
-                confirmBtn.setEnabled(false);
-            }
-        });
-
         scannedItemsListView.setAdapter(scannedItemsAdapter);
         confirmBtn = findViewById(R.id.confirmBtn);
         confirmBtn.setEnabled(false);
-
         clipBoardBtn = findViewById(R.id.clipBoardBtn);
-
         confirmBtn.setOnClickListener(view -> {
-            ProcessAllItems();
+           SendPrintOrder();
         });
 
         /**
          * This part helps identify which selection to paste the barcode scan to
          */
         currentSelectedButton = scannedItemSerial;
-
         scannedItemSerial.setOnClickListener(view -> {
             currentSelectedButton = scannedItemSerial;
             scannedItemSerial.setText("Scan An Item To Start");
         });
-
         scannedItemUPC.setOnClickListener(view -> {
             currentSelectedButton = scannedItemUPC;
             scannedItemUPC.setText("Scan An Item To Start");
@@ -277,16 +231,17 @@ public class UPCPricingActivity extends AppCompatActivity {
                      */
                     if (scannedItemSerials.contains(code)) {
 
-                        currentItemSerial = "";
-                        scannedItemSerials.clear();
-                        confirmBtn.setEnabled(false);
-                        currentSelectedButton = scannedItemSerial;
-                        SetScannedItemText(scannedItemUPC, "Scan An Item To Start");
-                        SetScannedItemText(scannedItemSerial, "Scan An Item To Start");
-                        dataModels.clear();
-                        scannedItemsAdapter.notifyDataSetChanged();
-                        Snackbar.make(findViewById(R.id.upcPricingActivityLayout), "Item Serial Already Added, Please Retry", Snackbar.LENGTH_SHORT)
-                                .setAction("No action", null).show();
+                        showMessageAndExit("XXXXXXX Failure XXXXXXX","ItemSerial Scanned Twice !!!!!",Color.RED);
+//                        currentItemSerial = "";
+//                        scannedItemSerials.clear();
+//                        confirmBtn.setEnabled(false);
+//                        currentSelectedButton = scannedItemSerial;
+//                        SetScannedItemText(scannedItemUPC, "Scan An Item To Start");
+//                        SetScannedItemText(scannedItemSerial, "Scan An Item To Start");
+//                        dataModels.clear();
+//                        scannedItemsAdapter.notifyDataSetChanged();
+//                        Snackbar.make(findViewById(R.id.upcPricingActivityLayout), "Item Serial Already Added, Please Retry", Snackbar.LENGTH_SHORT)
+//                                .setAction("No action", null).show();
                         return;
                     }
 
@@ -337,7 +292,6 @@ public class UPCPricingActivity extends AppCompatActivity {
         }
     }
 
-
     /**
      * This function is called once we have an item serial and item upc scanned and ready to validate
      */
@@ -346,60 +300,32 @@ public class UPCPricingActivity extends AppCompatActivity {
             isBusy = true;
 
             Logger.Debug("API", "UPCPricing-ProcessItem Processing ItemSerial: " + currentItemSerial + " UPC: " + currentItemUPC);
-
             BasicApi api = APIClient.getInstanceStatic(IPAddress, false).create(BasicApi.class);
             CompositeDisposable compositeDisposable = new CompositeDisposable();
-
+            UPCPricingItemModel model=new UPCPricingItemModel(UserId,currentItemSerial,currentItemUPC,stand.getId());
             compositeDisposable.addAll(
-                    api.ValidateUPCPricing(currentItemSerial, currentItemUPC)
+                    api.PriceItem(model)
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe((s) -> {
                                 if (s != null) {
-                                    if (!s.isEmpty() && s.toLowerCase().startsWith("success")) {
-
-                                        Logger.Debug("API", "UPCPricing-ProcessItem Returned Result: " + s + " ItemSerial: " + currentItemSerial + " UPC: " + currentItemUPC);
-
+                                        Logger.Debug("API", "UPCPricing-ProcessItem Returned Result: " + s + " ItemSerial: " + s.getItemSerial() + " Price: " + s.getUSDPrice());
                                         General.playSuccess();
-
                                         SetScannedItemText(scannedItemUPC, "Scan An Item To Start");
                                         SetScannedItemText(scannedItemSerial, "Scan An Item To Start");
-
                                         currentSelectedButton = scannedItemSerial;
+                                        runOnUiThread(() -> {
+                                            confirmBtn.setEnabled(true);
+                                            scannedItemSerials.add(currentItemSerial);
+                                            dataModels.add(0,new ItemSerialScannedDataModel(s.getItemSerial(), currentItemUPC,s.getUSDPrice()+" USD"));
+                                            scannedItemsAdapter.notifyDataSetChanged();
 
-                                        runOnUiThread(new Runnable() {
-                                            @Override
-                                            public void run() {
-                                                confirmBtn.setEnabled(true);
-                                                scannedItemSerials.add(currentItemSerial);
-                                                dataModels.add(new ItemSerialScannedDataModel(currentItemSerial, currentItemUPC));
-                                                scannedItemsAdapter.notifyDataSetChanged();
-                                            }
-                                        });
-
-                                    } else {
-
-                                        Logger.Error("API", "UPCPricing-ProcessItem - Received Error: " + s + " ItemSerial: " + currentItemSerial + " UPC: " + currentItemUPC);
-
-                                        General.playError();
-
-                                        runOnUiThread(new Runnable() {
-                                            @Override
-                                            public void run() {
-                                                Snackbar.make(findViewById(R.id.upcPricingActivityLayout), s, Snackbar.LENGTH_LONG)
-                                                        .setAction("No action", null).show();
-                                            }
-                                        });
-
-                                        if (s.toLowerCase().contains("upc")) {
-                                            SetScannedItemText(scannedItemUPC, "Scan An Item To Start");
-                                            currentSelectedButton = scannedItemUPC;
-                                        } else {
                                             SetScannedItemText(scannedItemUPC, "Scan An Item To Start");
                                             SetScannedItemText(scannedItemSerial, "Scan An Item To Start");
                                             currentSelectedButton = scannedItemSerial;
-                                        }
-                                    }
+
+                                        });
+
                                     isBusy = false;
                                 }
                             }, (throwable) -> {
@@ -409,115 +335,80 @@ public class UPCPricingActivity extends AppCompatActivity {
                                     error = ex.response().errorBody().string();
                                     if (error.isEmpty()) error = throwable.getMessage();
                                     Logger.Debug("API", "UPCPricing-ProcessItem - Error In HTTP Response: " + error);
+                                    showMessage("Scan Error", error + " (API Http Error)", Color.RED);
                                 } else {
                                     Logger.Error("API", "UPCPricing-ProcessItem - Error In API Response: " + throwable.getMessage());
+                                    showMessage("Scan Error", throwable.getMessage() + " (API Error)", Color.RED);
                                 }
-
                                 isBusy = false;
+                                runOnUiThread(() -> {
+                                    SetScannedItemText(scannedItemUPC, "Scan An Item To Start");
+                                    SetScannedItemText(scannedItemSerial, "Scan An Item To Start");
+                                    currentSelectedButton = scannedItemSerial;
+
+                                });
+
 
                             }));
 
         } catch (Throwable e) {
             isBusy = false;
             Logger.Error("API", "UPCPricing-ProcessItem - Error Connecting: " + e.getMessage());
-            Snackbar.make(findViewById(R.id.upcPricingActivityLayout), "Connection To Server Failed!", Snackbar.LENGTH_LONG)
-                    .setAction("No action", null).show();
+            showMessage("Web Service Error: " , e.getMessage() , Color.RED);
         }
     }
 
-    /**
-     * This function processes all items
-     */
-    public void ProcessAllItems() {
+
+    public void SendPrintOrder(){
         try {
-            isBusy = true;
+            Logger.Debug("API", "UPCPricing-SendPrintOrder");
             BasicApi api = APIClient.getInstanceStatic(IPAddress, false).create(BasicApi.class);
             CompositeDisposable compositeDisposable = new CompositeDisposable();
-
-            UserId = General.getGeneral(getApplicationContext()).UserID;
-
-            ArrayList<String> allItemSerials = new ArrayList<>(), allUPCs = new ArrayList<>();
-
-            for (ItemSerialScannedDataModel model : dataModels) {
-                allItemSerials.add(model.getItemSerial());
-                allUPCs.add(model.getUPC());
-            }
-
-            try {
-                Logger.Debug("API", "UPCPricing-ProcessAllItems - Start Process Set ItemSerials: " + String.join(",", allItemSerials));
-                Logger.Debug("API", "UPCPricing-ProcessAllItems - Start Process Set UPCS: " + String.join(",", allUPCs));
-                Logger.Debug("API", "UPCPricing-ProcessAllItems - Start Process Set Pricing Line Code: " + PricingLineCode);
-            } catch (Exception ex) {
-                Logger.Debug("API", "UPCPricing-ProcessAllItems - Starting Process For All Items, Error: " + ex.getMessage());
-            }
-
             compositeDisposable.addAll(
-                    api.PostUPCPricing(new UPCPricingModel(UserId, allItemSerials, allUPCs, PricingLineCode))
+                    api.SendPrintingStand(stand)
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe((s) -> {
-                                if (s != null) {
-                                    String message = "";
-                                    try {
-                                        message = s.string();
-                                        Logger.Debug("API", "UPCPricing-ProcessAllItems - Returned Response: " + message);
-                                    } catch (Exception ex) {
-                                        Logger.Error("API", "UPCPricing-ProcessAllItems - Error In Inner Response: " + ex.getMessage());
+                                        if (s != null) {
+                                  String message = "";
+                                  try {
+                                      message = s.string();
+                                      Logger.Debug("API", "UUPCPricing-SendPrintOrder - Returned Response: " + message);
+                                  } catch (Exception ex) {
+                                      Logger.Error("API", "UPCPricing-SendPrintOrder - Error In Inner Response: " + ex.getMessage());
+                                      message="Error "+ex.getMessage();
+                                  }
+                                          if(message.startsWith("Success")){
+                                            showMessageAndExit("✓✓✓✓✓✓ Success ✓✓✓✓✓",message,Color.GREEN);
+                                          }
+                                            else{
+                                              showMessageAndExit("XXXXXX Failure XXXXXX",message,Color.RED);
+                                          }
+
+
+                                        } else {
+                                            Logger.Error("API", "UPCPricing-SendPrintOrder - retuned null");
+                                            showMessageAndExit("XXXXXX Failure XXXXXX", "Web Service Returned Null", Color.RED);
+                                        }
                                     }
+                                    , (throwable) -> {
+                                        String error = "";
+                                        if (throwable instanceof HttpException) {
+                                            HttpException ex = (HttpException) throwable;
+                                            error = ex.response().errorBody().string();
+                                            if (error.isEmpty()) error = throwable.getMessage();
+                                            Logger.Debug("API", "UPCPricing-SendPrintOrder - Error In HTTP Response: " + error);
+                                            showMessageAndExit("XXXXXX Failure XXXXXX", error + "\n(API Http Error)", Color.RED);
+                                        } else {
+                                            Logger.Error("API", "UPCPricing-SendPrintOrder - Error In API Response: " + throwable.getMessage());
+                                            showMessageAndExit("XXXXXX Failure XXXXXX", throwable.getMessage() + "/n(API Error)", Color.RED);
+                                        }
 
-                                    if (message.isEmpty()) {
-                                        General.playSuccess();
-                                        Logger.Debug("API", "UPCPricing-ProcessAllItems - Response Empty, Pricing Done Successfully");
-                                        runOnUiThread(new Runnable() {
-                                            @Override
-                                            public void run() {
-
-                                                currentItemSerial = "";
-
-                                                scannedItemSerials.clear();
-                                                confirmBtn.setEnabled(false);
-
-                                                currentSelectedButton = scannedItemSerial;
-                                                SetScannedItemText(scannedItemUPC, "Scan An Item To Start");
-                                                SetScannedItemText(scannedItemSerial, "Scan An Item To Start");
-
-                                                dataModels.clear();
-                                                scannedItemsAdapter.notifyDataSetChanged();
-
-                                                Snackbar.make(findViewById(R.id.upcPricingActivityLayout), "Pricing Done Successfully", Snackbar.LENGTH_LONG)
-                                                        .setAction("No action", null).show();
-
-                                            }
-                                        });
-
-                                    } else {
-                                        General.playError();
-                                        Snackbar.make(findViewById(R.id.upcPricingActivityLayout), message, Snackbar.LENGTH_LONG)
-                                                .setAction("No action", null).show();
-                                    }
-
-                                    isBusy = false;
-                                }
-                            }, (throwable) -> {
-                                String error = throwable.toString();
-                                if (throwable instanceof HttpException) {
-                                    HttpException ex = (HttpException) throwable;
-                                    error = ex.response().errorBody().string();
-                                    if (error.isEmpty()) error = throwable.getMessage();
-                                    Logger.Debug("API", "UPCPricing-ProcessAllItems - Error In HTTP Response: " + error);
-                                } else {
-                                    Logger.Error("API", "UPCPricing-ProcessAllItems - Error In API Response: " + throwable.getMessage());
-                                }
-
-                                isBusy = false;
-
-                            }));
+                                    }));
 
         } catch (Throwable e) {
-            isBusy = false;
-            Logger.Error("API", "UPCPricing-ProcessAllItems - Error Connecting: " + e.getMessage());
-            Snackbar.make(findViewById(R.id.upcPricingActivityLayout), "Connection To Server Failed!", Snackbar.LENGTH_LONG)
-                    .setAction("No action", null).show();
+            Logger.Error("API", "UPCPricing-SendPrintOrder  Error" + e.getMessage());
+            showMessageAndExit("XXXXXX Failure XXXXXX", e.getMessage() + " (Exception)", Color.RED);
         }
     }
 
@@ -605,5 +496,99 @@ public class UPCPricingActivity extends AppCompatActivity {
         });
     }
 
-
+    /**
+     * This function processes all items
+     */
+//    public void ProcessAllItems() {
+//        try {
+//            isBusy = true;
+//            BasicApi api = APIClient.getInstanceStatic(IPAddress, false).create(BasicApi.class);
+//            CompositeDisposable compositeDisposable = new CompositeDisposable();
+//
+//            UserId = General.getGeneral(getApplicationContext()).UserID;
+//
+//            ArrayList<String> allItemSerials = new ArrayList<>(), allUPCs = new ArrayList<>();
+//
+//            for (ItemSerialScannedDataModel model : dataModels) {
+//                allItemSerials.add(model.getItemSerial());
+//                allUPCs.add(model.getUPC());
+//            }
+//
+//            try {
+//                Logger.Debug("API", "UPCPricing-ProcessAllItems - Start Process Set ItemSerials: " + String.join(",", allItemSerials));
+//                Logger.Debug("API", "UPCPricing-ProcessAllItems - Start Process Set UPCS: " + String.join(",", allUPCs));
+//                Logger.Debug("API", "UPCPricing-ProcessAllItems - Start Process Set Pricing Line Code: " + PricingLineCode);
+//            } catch (Exception ex) {
+//                Logger.Debug("API", "UPCPricing-ProcessAllItems - Starting Process For All Items, Error: " + ex.getMessage());
+//            }
+//
+//            compositeDisposable.addAll(
+//                    api.PostUPCPricing(new UPCPricingModel(UserId, allItemSerials, allUPCs, PricingLineCode))
+//                            .subscribeOn(Schedulers.io())
+//                            .observeOn(AndroidSchedulers.mainThread())
+//                            .subscribe((s) -> {
+//                                if (s != null) {
+//                                    String message = "";
+//                                    try {
+//                                        message = s.string();
+//                                        Logger.Debug("API", "UPCPricing-ProcessAllItems - Returned Response: " + message);
+//                                    } catch (Exception ex) {
+//                                        Logger.Error("API", "UPCPricing-ProcessAllItems - Error In Inner Response: " + ex.getMessage());
+//                                    }
+//
+//                                    if (message.isEmpty()) {
+//                                        General.playSuccess();
+//                                        Logger.Debug("API", "UPCPricing-ProcessAllItems - Response Empty, Pricing Done Successfully");
+//                                        runOnUiThread(new Runnable() {
+//                                            @Override
+//                                            public void run() {
+//
+//                                                currentItemSerial = "";
+//
+//                                                scannedItemSerials.clear();
+//                                                confirmBtn.setEnabled(false);
+//
+//                                                currentSelectedButton = scannedItemSerial;
+//                                                SetScannedItemText(scannedItemUPC, "Scan An Item To Start");
+//                                                SetScannedItemText(scannedItemSerial, "Scan An Item To Start");
+//
+//                                                dataModels.clear();
+//                                                scannedItemsAdapter.notifyDataSetChanged();
+//
+//                                                Snackbar.make(findViewById(R.id.upcPricingActivityLayout), "Pricing Done Successfully", Snackbar.LENGTH_LONG)
+//                                                        .setAction("No action", null).show();
+//
+//                                            }
+//                                        });
+//
+//                                    } else {
+//                                        General.playError();
+//                                        Snackbar.make(findViewById(R.id.upcPricingActivityLayout), message, Snackbar.LENGTH_LONG)
+//                                                .setAction("No action", null).show();
+//                                    }
+//
+//                                    isBusy = false;
+//                                }
+//                            }, (throwable) -> {
+//                                String error = throwable.toString();
+//                                if (throwable instanceof HttpException) {
+//                                    HttpException ex = (HttpException) throwable;
+//                                    error = ex.response().errorBody().string();
+//                                    if (error.isEmpty()) error = throwable.getMessage();
+//                                    Logger.Debug("API", "UPCPricing-ProcessAllItems - Error In HTTP Response: " + error);
+//                                } else {
+//                                    Logger.Error("API", "UPCPricing-ProcessAllItems - Error In API Response: " + throwable.getMessage());
+//                                }
+//
+//                                isBusy = false;
+//
+//                            }));
+//
+//        } catch (Throwable e) {
+//            isBusy = false;
+//            Logger.Error("API", "UPCPricing-ProcessAllItems - Error Connecting: " + e.getMessage());
+//            Snackbar.make(findViewById(R.id.upcPricingActivityLayout), "Connection To Server Failed!", Snackbar.LENGTH_LONG)
+//                    .setAction("No action", null).show();
+//        }
+//    }
 }

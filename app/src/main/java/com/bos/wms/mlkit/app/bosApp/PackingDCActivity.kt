@@ -182,7 +182,7 @@ class PackingDCActivity : AppCompatActivity() {
                         {s->
                             var response = try {
                                 s.string()
-                            } catch (e: IOException) {
+                            } catch (e: Exception) {
                                 e.message.toString()
                             }
                             runOnUiThread{
@@ -230,7 +230,7 @@ class PackingDCActivity : AppCompatActivity() {
 
                                 if(t is HttpException){
                                     var ex: HttpException =t as HttpException
-                                    showScanMessage( ex.response().errorBody()!!.string()+" (API Http Error)",Color.RED)
+                                    showScanMessage( ex.response().errorBody()!!.string()+"",Color.RED)
 
                                 }
                                 else{
@@ -289,7 +289,7 @@ class PackingDCActivity : AppCompatActivity() {
                         {s->
                             var response = try {
                                 s.string()
-                            } catch (e: IOException) {
+                            } catch (e: Exception) {
                                 e.message.toString()
                             }
                             if (response!=null &&(response.lowercase().startsWith("released") || response.lowercase().startsWith("success") )) {
@@ -312,7 +312,7 @@ class PackingDCActivity : AppCompatActivity() {
                             run {
                                 if(t is HttpException){
                                     var ex: HttpException =t as HttpException
-                                    showMessage( ex.response().errorBody()!!.string()+" (Http Error)",Color.RED)
+                                    showMessage( ex.response().errorBody()!!.string()+"",Color.RED)
                                 }
                                 else{
                                     if(t?.message!=null)

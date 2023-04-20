@@ -2,11 +2,12 @@ package com.bos.wms.mlkit.app.adapters;
 
 public class ItemSerialScannedDataModel {
 
-    private String itemSerial, upc;
+    private String itemSerial, upc,price;
 
-    public ItemSerialScannedDataModel(String itemSerial, String upc){
+    public ItemSerialScannedDataModel(String itemSerial, String upc,String price){
         this.itemSerial = itemSerial;
         this.upc = upc;
+        this.price=price;
     }
 
     public String getItemSerial(){
@@ -25,4 +26,11 @@ public class ItemSerialScannedDataModel {
         this.upc = upc;
     }
 
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
 }

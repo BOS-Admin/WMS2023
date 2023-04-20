@@ -204,7 +204,7 @@ class StockTakeRackDCActivity : AppCompatActivity() {
                         {s->
                             var response = try {
                                 s.string()
-                            } catch (e: IOException) {
+                            } catch (e: Exception) {
                                 e.message.toString()
                             }
                             runOnUiThread{
@@ -340,7 +340,7 @@ class StockTakeRackDCActivity : AppCompatActivity() {
 
                                 if(t is HttpException){
                                     var ex: HttpException =t as HttpException
-                                    showMessage( ex.response().errorBody()!!.string()+" (Http Error)",Color.RED)
+                                    showMessage( ex.response().errorBody()!!.string()+"",Color.RED)
                                 }
                                 else{
                                     if(t?.message!=null)

@@ -102,7 +102,7 @@ public class ItemSerialScannedAdapter extends ArrayAdapter<ItemSerialScannedData
         result.startAnimation(animation);
         lastPosition = position;
 
-        viewHolder.upcText.setText(dataModel.getItemSerial());
+        viewHolder.upcText.setText(dataModel.getItemSerial()+" ("+dataModel.getPrice()+")");
         // Return the completed view to render on screen
         return convertView;
     }

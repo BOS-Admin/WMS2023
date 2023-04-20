@@ -35,7 +35,7 @@
                 android:id="@+id/btnMenuPGPricing"
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/pgpricing"
-                android:text="Product Group Pricing"
+                android:text="Quatro Pricing"
                 android:visibility="gone"/>
 
             <Button

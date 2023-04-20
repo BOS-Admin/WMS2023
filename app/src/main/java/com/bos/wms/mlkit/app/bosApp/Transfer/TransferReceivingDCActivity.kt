@@ -70,7 +70,7 @@ class TransferReceivingDCActivity : AppCompatActivity() {
                         {s->
                             var response = try {
                                 s.string()
-                            } catch (e: IOException) {
+                            } catch (e: Exception) {
                                 e.message.toString()
                             }
                             runOnUiThread{
@@ -174,7 +174,7 @@ class TransferReceivingDCActivity : AppCompatActivity() {
                         {s->
                             var response = try {
                                 s.string()
-                            } catch (e: IOException) {
+                            } catch (e: Exception) {
                                 e.message.toString()
                             }
                             if (response!=null && (response.lowercase().startsWith("released") || response.lowercase().startsWith("success")) ) {

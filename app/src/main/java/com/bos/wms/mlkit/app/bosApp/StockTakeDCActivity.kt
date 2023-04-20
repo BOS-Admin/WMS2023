@@ -26,7 +26,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_scan_container.*
 import retrofit2.HttpException
-import java.io.IOException
+
 
 
 class StockTakeDCActivity : AppCompatActivity() {
@@ -204,7 +204,7 @@ class StockTakeDCActivity : AppCompatActivity() {
                         {s->
                             var response = try {
                                 s.string()
-                            } catch (e: IOException) {
+                            } catch (e: Exception) {
                                 e.message.toString()
                             }
                             runOnUiThread{
@@ -252,7 +252,7 @@ class StockTakeDCActivity : AppCompatActivity() {
 
                                 if(t is HttpException){
                                     var ex: HttpException =t as HttpException
-                                    showScanMessage( ex.response().errorBody()!!.string()+" (API Http Error)",Color.RED)
+                                    showScanMessage( ex.response().errorBody()!!.string()+"",Color.RED)
 
                                 }
                                 else{
@@ -308,7 +308,7 @@ class StockTakeDCActivity : AppCompatActivity() {
                         {s->
                             var response = try {
                                 s.string()
-                            } catch (e: IOException) {
+                            } catch (e: Exception) {
                                 e.message.toString()
                             }
                             if (response!=null && (response.lowercase().startsWith("released") || response.lowercase().startsWith("success")) ) {
@@ -332,7 +332,7 @@ class StockTakeDCActivity : AppCompatActivity() {
 
                                 if(t is HttpException){
                                     var ex: HttpException =t as HttpException
-                                    showMessage( ex.response().errorBody()!!.string()+" (Http Error)",Color.RED)
+                                    showMessage( ex.response().errorBody()!!.string()+"",Color.RED)
                                 }
                                 else{
                                     if(t?.message!=null)

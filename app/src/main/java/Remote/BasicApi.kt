@@ -9,6 +9,7 @@ import Model.BosApp.StockTake.FillRackStockTakeDCModel
 import Model.BosApp.Transfer.*
 import Model.Pricing.PricingItemResponseModel
 import Model.Pricing.PricingStandModel
+import Model.Pricing.QuatroPricingItemModel
 import Model.Pricing.UPCPricingItemModel
 import io.reactivex.Observable
 import okhttp3.ResponseBody
@@ -17,13 +18,14 @@ import retrofit2.http.*
 
 interface BasicApi {
 
-    @GET("api/wms/pricing/upc/item")
+    @POST("api/wms/pricing/quatro/item")
+    fun PriceItem(@Body model: QuatroPricingItemModel): Observable<PricingItemResponseModel>
+    @POST("api/wms/pricing/upc/item")
     fun PriceItem(@Body model: UPCPricingItemModel): Observable<PricingItemResponseModel>
-    @GET("api/wms/pricing/stand/create?userId=20&PricingLineCode=PL003")
+    @POST("api/wms/pricing/stand/create")
     fun CreatePricingStand(@Query("UserId") UserId: Int, @Query("PricingLineCode") PricingLineCode: String): Observable<PricingStandModel>
-
-
-
+    @POST("api/wms/pricing/printing/order/stand")
+    fun SendPrintingStand(@Body model: PricingStandModel): Observable<ResponseBody>
 
     @GET("api/ItemSerial/GetRFIDItemSerial")
     fun GetRFIDItemSerial(@Query("rfid") rfid: String): Observable<String>

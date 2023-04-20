@@ -40,10 +40,6 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\fragment_notifications.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_upc_pricing.xml",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_upc_pricing.xml"
-    },
-    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_serial_generator.xml",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_serial_generator.xml"
     },
@@ -178,6 +174,10 @@
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_printer_selection.xml",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_printer_selection.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/fragment_home.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/fragment_home.xml"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_packing_reason.xml",
