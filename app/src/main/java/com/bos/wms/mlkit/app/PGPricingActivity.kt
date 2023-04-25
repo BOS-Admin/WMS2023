@@ -334,11 +334,9 @@ class PGPricingActivity : AppCompatActivity() {
                                  e.printStackTrace()
                              }
 
-
                             if (errmsg.isNotEmpty() && errmsg.lowercase().startsWith("success")) {
                                 General.playSuccess()
                                 showMessageAndExit("✓✓✓✓✓✓ Success ✓✓✓✓✓", errmsg, Color.GREEN)
-
 
                             }
                             else{
