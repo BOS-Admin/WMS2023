@@ -29,7 +29,7 @@
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/upcpricing"
                 android:text="UPC Pricing"
-                android:visibility="visible"/>
+                android:visibility="gone"/>
 
             <Button
                 android:id="@+id/btnMenuPGPricing"

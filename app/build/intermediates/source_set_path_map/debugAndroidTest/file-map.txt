@@ -1,7 +1,7 @@
-com.bos.wms.mlkit.test.app-androidTest-0 C:\Users\m.serhan\StudioProjects\WMS2023\app\build\generated\res\resValues\androidTest\debug
-com.bos.wms.mlkit.test.app-androidTest-1 C:\Users\m.serhan\StudioProjects\WMS2023\app\build\generated\res\rs\androidTest\debug
-com.bos.wms.mlkit.test.app-mergeDebugAndroidTestResources-2 C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.bos.wms.mlkit.test.app-mergeDebugAndroidTestResources-3 C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.bos.wms.mlkit.test.app-merged_res-4 C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\merged_res\debugAndroidTest
-com.bos.wms.mlkit.test.app-androidTest-5 C:\Users\m.serhan\StudioProjects\WMS2023\app\src\androidTest\res
-com.bos.wms.mlkit.test.app-androidTestDebug-6 C:\Users\m.serhan\StudioProjects\WMS2023\app\src\androidTestDebug\res
+com.bos.wms.mlkit.test.app-androidTest-0 C:\Users\Dell\AndroidStudioProjects\WMS2023\app\build\generated\res\resValues\androidTest\debug
+com.bos.wms.mlkit.test.app-androidTest-1 C:\Users\Dell\AndroidStudioProjects\WMS2023\app\build\generated\res\rs\androidTest\debug
+com.bos.wms.mlkit.test.app-mergeDebugAndroidTestResources-2 C:\Users\Dell\AndroidStudioProjects\WMS2023\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.bos.wms.mlkit.test.app-mergeDebugAndroidTestResources-3 C:\Users\Dell\AndroidStudioProjects\WMS2023\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.bos.wms.mlkit.test.app-merged_res-4 C:\Users\Dell\AndroidStudioProjects\WMS2023\app\build\intermediates\merged_res\debugAndroidTest
+com.bos.wms.mlkit.test.app-androidTest-5 C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\androidTest\res
+com.bos.wms.mlkit.test.app-androidTestDebug-6 C:\Users\Dell\AndroidStudioProjects\WMS2023\app\src\androidTestDebug\res
