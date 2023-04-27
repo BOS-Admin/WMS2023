@@ -316,6 +316,10 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_scan_upcs_for_bol.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_upcpricing_override.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_upcpricing_override.xml"
+    },
+    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_shippingpalletreceiving.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/drawable/shippingpalletreceiving.xml"
     },
