@@ -4,7 +4,7 @@
             "outputFile": "com.bos.wms.mlkit.app-mergeDebugResources-58:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\m.serhan\\.gradle\\caches\\transforms-3\\66c9f899bb35b560cbe361956da59749\\transformed\\material-1.6.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "source": "C:\\Users\\m.othman\\.gradle\\caches\\transforms-3\\66c9f899bb35b560cbe361956da59749\\transformed\\material-1.6.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
