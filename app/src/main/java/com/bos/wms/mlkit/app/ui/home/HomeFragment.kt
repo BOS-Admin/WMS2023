@@ -44,6 +44,7 @@ class HomeFragment : Fragment() {
 
         if(UserPermissions.PermissionsReceived()){
             UserPermissions.ValidatePermission("WMSApp.UPCPricing", root.btnUPCPricing);
+            UserPermissions.ValidatePermission("WMSApp.UPCPricingOverride", root.btnUPCPricingOverride);
             UserPermissions.ValidatePermission("WMSApp.PGPricing", root.btnMenuPGPricing);
             UserPermissions.ValidatePermission("WMSApp.PutAwayPallete", root.btnMenuPutAwayPallete);
             UserPermissions.ValidatePermission("WMSApp.MissingItem", root.btnSerialMissing);
@@ -64,6 +65,7 @@ class HomeFragment : Fragment() {
         }else {
             UserPermissions.AddOnReceiveListener {
                 UserPermissions.ValidatePermission("WMSApp.UPCPricing", root.btnUPCPricing);
+                UserPermissions.ValidatePermission("WMSApp.UPCPricingOverride", root.btnUPCPricingOverride);
                 UserPermissions.ValidatePermission("WMSApp.PGPricing", root.btnMenuPGPricing);
                 UserPermissions.ValidatePermission("WMSApp.PutAwayPallete", root.btnMenuPutAwayPallete);
                 UserPermissions.ValidatePermission("WMSApp.MissingItem", root.btnSerialMissing);
@@ -123,6 +125,11 @@ class HomeFragment : Fragment() {
         root.btnUPCPricing.setOnClickListener {
             ProceedUPCPricing()
         }
+
+        root.btnUPCPricingOverride.setOnClickListener {
+            ProceedUPCPricingOverride()
+        }
+
         root.btnMenuShipmentPalleteReceiving.setOnClickListener {
             ProceedShipmentPalleteReceiving()
         }
@@ -289,6 +296,12 @@ class HomeFragment : Fragment() {
         val intent = Intent (getActivity(), UPCPricingActivity::class.java)
         startActivity(intent)
     }
+
+    fun ProceedUPCPricingOverride() {
+        val intent = Intent (getActivity(), UPCPricingOverrideActivity::class.java)
+        startActivity(intent)
+    }
+
     fun ProceedFoldingScan() {
         val intent = Intent (getActivity(), SerialGeneratorActivity::class.java)
         startActivity(intent)

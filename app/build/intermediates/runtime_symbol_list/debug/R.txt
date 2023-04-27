@@ -2858,6 +2858,7 @@ int id btnSubmit 0x7f0800b9
 int id btnTransfer 0x7f0800ba
 int id btnUPCPricing 0x7f0800bb
 int id btnUPCPricingDone 0x7f0800bc
+int id btnUPCPricingOverride 0x7f08030b
 int id btnfillpalleteDone 0x7f0800bd
 int id btnlocationcheckDone 0x7f0800be
 int id btnputawaypalleteDone 0x7f0800bf
@@ -3424,6 +3425,7 @@ int id unlabeled 0x7f0802ef
 int id up 0x7f0802f0
 int id upcDeleteImage 0x7f0802f1
 int id upcPricingActivityLayout 0x7f0802f2
+int id upcPricingOverrideActivityLayout 0x7f08030c
 int id upcText 0x7f0802f3
 int id useLogo 0x7f0802f4
 int id vertical_center_line 0x7f0802f5
@@ -3577,6 +3579,7 @@ int layout activity_stock_take 0x7f0b003b
 int layout activity_transfer 0x7f0b003c
 int layout activity_transfer_receiving 0x7f0b003d
 int layout activity_upc_pricing 0x7f0b003e
+int layout activity_upcpricing_override 0x7f0b00b6
 int layout browser_actions_context_menu_page 0x7f0b003f
 int layout browser_actions_context_menu_row 0x7f0b0040
 int layout content_fillpallete 0x7f0b0041

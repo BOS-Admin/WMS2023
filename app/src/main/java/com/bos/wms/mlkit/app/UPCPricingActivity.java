@@ -317,7 +317,7 @@ public class UPCPricingActivity extends AppCompatActivity {
                                         runOnUiThread(() -> {
                                             confirmBtn.setEnabled(true);
                                             scannedItemSerials.add(currentItemSerial);
-                                            dataModels.add(0,new ItemSerialScannedDataModel(s.getItemSerial(), currentItemUPC,s.getUSDPrice()+" USD"));
+                                            dataModels.add(0,new ItemSerialScannedDataModel(s.getItemSerial(), currentItemUPC,s.getUSDPrice()));
                                             scannedItemsAdapter.notifyDataSetChanged();
 
                                             SetScannedItemText(scannedItemUPC, "Scan An Item To Start");

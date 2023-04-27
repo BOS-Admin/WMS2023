@@ -22,6 +22,8 @@ interface BasicApi {
     fun PriceItem(@Body model: QuatroPricingItemModel): Observable<PricingItemResponseModel>
     @POST("api/wms/pricing/upc/item")
     fun PriceItem(@Body model: UPCPricingItemModel): Observable<PricingItemResponseModel>
+    @POST("api/wms/pricing/upc/overrideItem")
+    fun OverrideItemPrice(@Body model: UPCPricingItemModel): Observable<PricingItemResponseModel>
     @POST("api/wms/pricing/stand/create")
     fun CreatePricingStand(@Query("UserId") UserId: Int, @Query("PricingLineCode") PricingLineCode: String): Observable<PricingStandModel>
     @POST("api/wms/pricing/printing/order/stand")

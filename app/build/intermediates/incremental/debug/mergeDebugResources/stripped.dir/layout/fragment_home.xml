@@ -32,6 +32,13 @@
                 android:visibility="gone"/>
 
             <Button
+                android:id="@+id/btnUPCPricingOverride"
+                style="@style/button_main_menu_style"
+                android:drawableLeft="@drawable/upcpricing"
+                android:text="UPC Pricing Overi"
+                android:visibility="gone"/>
+
+            <Button
                 android:id="@+id/btnMenuPGPricing"
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/pgpricing"
