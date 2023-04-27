@@ -37,7 +37,9 @@ import android.os.Handler;
 import android.text.InputType;
 import android.util.Base64;
 import android.view.MotionEvent;
+import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -89,6 +91,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 
 import Model.BolRecognitionModel;
 import Remote.APIClient;
@@ -239,6 +242,16 @@ public class BrandOCRActivity extends AppCompatActivity {
             }
             CurrentBarcode = null;
 
+            try{
+                float minZoomRatio = currentCamera.getCameraInfo().getZoomState().getValue().getMinZoomRatio();
+                float maxZoomRatio = currentCamera.getCameraInfo().getZoomState().getValue().getMaxZoomRatio();
+                float zoomRatio = (minZoomRatio + maxZoomRatio) / 4;
+                currentCamera.getCameraControl().setZoomRatio(zoomRatio);
+                Logger.Debug("CAMERA", "Got Zoom Ratios: Min:" + minZoomRatio + " Max:" + maxZoomRatio + " Calculated:" + zoomRatio);
+            }catch(Exception ex){
+                Logger.Error("CAMERA", "ProceedToImageCaptures - Error Removing The Camera Zoom " + ex.getMessage());
+            }
+
             pauseCaptureButton.setImageResource(R.drawable.baseline_pause_icon);
             captureImageButton.setEnabled(false);
             pauseCaptureButton.setEnabled(false);
@@ -257,6 +270,12 @@ public class BrandOCRActivity extends AppCompatActivity {
         cameraProviderFuture.addListener(() -> {
             try {
                 ProcessCameraProvider cameraProvider = cameraProviderFuture.get();
+
+                try {
+                    cameraProvider.unbindAll();
+                }catch(Exception ex){
+                    Logger.Error("CAMERA", "Failed Unbinding All Use Cases");
+                }
 
                 //Create Preview And Bind It
                 Preview preview = new Preview.Builder()
@@ -305,6 +324,61 @@ public class BrandOCRActivity extends AppCompatActivity {
                             }
                         }
                         return true;
+                    }
+                });
+
+                //Zoom The Camera So It Can Detect Better Barcodes
+
+                float minZoomRatio = currentCamera.getCameraInfo().getZoomState().getValue().getMinZoomRatio();
+                float maxZoomRatio = currentCamera.getCameraInfo().getZoomState().getValue().getMaxZoomRatio();
+                float zoomRatio = (minZoomRatio + maxZoomRatio) / 4;
+                Logger.Debug("CAMERA", "Got Zoom Ratios: Min:" + minZoomRatio + " Max:" + maxZoomRatio + " Calculated:" + zoomRatio);
+
+                currentCamera.getCameraControl().setZoomRatio(zoomRatio);
+
+                /*ScaleGestureDetector scaleGestureDetector = new ScaleGestureDetector(getApplicationContext(), new ScaleGestureDetector.OnScaleGestureListener() {
+                    @Override
+                    public boolean onScale(@NonNull ScaleGestureDetector detector) {
+
+                        float scale = currentCamera.getCameraInfo().getZoomState().getValue().getZoomRatio() * detector.getScaleFactor();
+                        currentCamera.getCameraControl().setZoomRatio(scale);
+                        return true;
+                    }
+
+                    @Override
+                    public boolean onScaleBegin(@NonNull ScaleGestureDetector scaleGestureDetector) {
+                        return false;
+                    }
+
+                    @Override
+                    public void onScaleEnd(@NonNull ScaleGestureDetector scaleGestureDetector) {
+
+                    }
+                });*/
+
+                /** This Will Be Triggered Once The Camera Preview Is Visible And Laid Out **/
+                cameraPreview.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                    @Override
+                    public void onGlobalLayout() {
+                        if(cameraPreview.getMeasuredWidth() > 0 && cameraPreview.getMeasuredHeight() > 0){
+                            /**
+                                This Code Will Be Used To Auto Focus The Camera
+                            **/
+                            try{
+                                FocusMeteringAction.Builder autoFocusActionBuilder = new FocusMeteringAction.Builder(new SurfaceOrientedMeteringPointFactory(1f, 1f).createPoint(0.5f, 0.5f),
+                                        FocusMeteringAction.FLAG_AF);
+
+                                FocusMeteringAction autoFocusAction = autoFocusActionBuilder.setAutoCancelDuration(2500, TimeUnit.MILLISECONDS).build();
+
+                                currentCamera.getCameraControl().startFocusAndMetering(autoFocusAction);
+
+                                Logger.Debug("CAMERA", "Camera AutoFocus Feature Started Successfully");
+
+                            }catch (Exception ex){
+                                Logger.Error("CAMERA", "Failed Starting Camera AutoFocus Feature: " + ex.getMessage());
+                            }
+
+                        }
                     }
                 });
 
@@ -604,6 +678,13 @@ public class BrandOCRActivity extends AppCompatActivity {
      * @param barcode
      */
     public void ProceedToImageCaptures(String barcode){
+
+        try{
+            currentCamera.getCameraControl().setZoomRatio(currentCamera.getCameraInfo().getZoomState().getValue().getMinZoomRatio());
+        }catch(Exception ex){
+            Logger.Error("CAMERA", "ProceedToImageCaptures - Error Removing The Camera Zoom " + ex.getMessage());
+        }
+
         Logger.Debug("CAMERA", "ProceedToImageCaptures - Starting Image Captures For Barcode: " + barcode);
         ocrHelpText.setText("Starting Image Capture For " + barcode);
         captureImageButton.setEnabled(true);
