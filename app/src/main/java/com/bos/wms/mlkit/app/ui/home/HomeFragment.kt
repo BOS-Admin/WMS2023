@@ -312,7 +312,7 @@ class HomeFragment : Fragment() {
     }
 
     fun ProceedItemPricingActivity() {
-        val intent = Intent (getActivity(), ItemPricingActivity::class.java)
+        val intent = Intent (getActivity(), NewItemPricingActivity::class.java)
         startActivity(intent)
     }
     fun ProceedPGPricingActivity() {

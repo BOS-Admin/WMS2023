@@ -1,7 +1,7 @@
 package com.bos.wms.mlkit.app
 
 import Model.Pricing.PricingStandModel
-import Model.Pricing.QuatroPricingItemModel
+import Model.Pricing.UPCPricingItemModel
 import Remote.APIClient
 import Remote.APIClient.getInstanceStatic
 import Remote.BasicApi
@@ -26,18 +26,18 @@ import com.bos.wms.mlkit.storage.Storage
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_pg_pricing.*
+import kotlinx.android.synthetic.main.activity_new_item_pricing.*
+import kotlinx.android.synthetic.main.content_new_item_pricing.*
+import kotlinx.android.synthetic.main.content_new_item_pricing.btnUPCPricingDone
+import kotlinx.android.synthetic.main.content_new_item_pricing.lblError
+import kotlinx.android.synthetic.main.content_new_item_pricing.recyclerView
+import kotlinx.android.synthetic.main.content_new_item_pricing.txtItemSerial
 import kotlinx.android.synthetic.main.content_pg_pricing.*
-import kotlinx.android.synthetic.main.content_pg_pricing.btnUPCPricingDone
-import kotlinx.android.synthetic.main.content_pg_pricing.lblError
-import kotlinx.android.synthetic.main.content_pg_pricing.recyclerView
-import kotlinx.android.synthetic.main.content_pg_pricing.txtItemSerial
-import kotlinx.android.synthetic.main.content_upc_pricing.*
 import retrofit2.HttpException
 import java.io.IOException
 
 
-class PGPricingActivity : AppCompatActivity() {
+class NewItemPricingActivity : AppCompatActivity() {
     private lateinit var linearLayoutManager: LinearLayoutManager
 
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -52,7 +52,7 @@ class PGPricingActivity : AppCompatActivity() {
 
     fun CreateStand() {
         try {
-            Logger.Debug("API", "QuatroPricingCreating Stand")
+            Logger.Debug("API", "ItemPricingCreating Stand")
             val api = getInstanceStatic(IPAddress, false).create(
                 BasicApi::class.java
             )
@@ -66,20 +66,19 @@ class PGPricingActivity : AppCompatActivity() {
                             if (s != null) {
                                 Logger.Debug(
                                     "API",
-                                    "QuatroPricingCreate Stand Returned Result: $s Userid: $userId PricingLineCode: $PricingLineCode"
+                                    "ItemPricingCreate Stand Returned Result: $s Userid: $userId PricingLineCode: $PricingLineCode"
                                 )
                                 stand = s
                                 runOnUiThread {
-                                   txtPG.isEnabled=true;
-                                   txtSeason.isEnabled=true;
                                    txtItemSerial.isEnabled=true;
-                                    txtPG.requestFocus()
-                                    toolbar.setTitle("(Quatro Pricing) Stand Id: "+s.id)
+
+                                    txtItemSerial.requestFocus()
+                                    toolbar.title = "(Item Pricing) Stand Id: "+s.id
                                 }
                             } else {
                                 Logger.Error(
                                     "API",
-                                    "QuatroPricingCreate Stand - retuned null:  Userid: $userId PricingLineCode: $PricingLineCode"
+                                    "ItemPricingCreate Stand - retuned null:  Userid: $userId PricingLineCode: $PricingLineCode"
                                 )
                                 General.playError()
                                 showMessageAndExit(
@@ -95,7 +94,7 @@ class PGPricingActivity : AppCompatActivity() {
                             if (error.isEmpty()) error = throwable.message
                             Logger.Debug(
                                 "API",
-                                "QuatroPricingCreating Stand - Error In HTTP Response: $error"
+                                "ItemPricingCreating Stand - Error In HTTP Response: $error"
                             )
                             showMessageAndExit(
                                 "Failed To Create Stand",
@@ -105,7 +104,7 @@ class PGPricingActivity : AppCompatActivity() {
                         } else {
                             Logger.Error(
                                 "API",
-                                "QuatroPricingCreating Stand - Error In API Response: " + throwable.message
+                                "ItemPricingCreating Stand - Error In API Response: " + throwable.message
                             )
                             showMessageAndExit(
                                 "Failed To Create Stand",
@@ -115,13 +114,13 @@ class PGPricingActivity : AppCompatActivity() {
                         }
                     })
         } catch (e: Throwable) {
-            Logger.Error("API", "QuatroPricingCreating Stand: Error" + e.message)
+            Logger.Error("API", "ItemPricingCreating Stand: Error" + e.message)
             showMessageAndExit("Failed To Create Stand", e.message + " (Exception)", Color.RED)
         }
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pg_pricing)
+        setContentView(R.layout.activity_new_item_pricing)
         ItemSerials= arrayListOf<String>()
         ItemSerialsList= arrayListOf<String>()
         mStorage = Storage(applicationContext) //sp存储
@@ -137,17 +136,13 @@ class PGPricingActivity : AppCompatActivity() {
         items.addAll( ItemSerials.reversed())
         adp= CustomListAdapter(applicationContext,ItemSerialsList)
         recyclerView.setAdapter(adp)
-        txtPG.setShowSoftInputOnFocus(false);
-        txtSeason.setShowSoftInputOnFocus(false);
+
         txtItemSerial.setShowSoftInputOnFocus(false);
 
-        toolbar.setTitle("(Quatro Pricing) Stand Id:")
+        toolbar.setTitle("(Item Pricing) Stand Id:")
 
-        txtPG.requestFocus()
-        txtItemSerial.setShowSoftInputOnFocus(false);
-        txtPG.setShowSoftInputOnFocus(false);
-        txtSeason.setShowSoftInputOnFocus(false);
-
+        txtItemSerial.requestFocus()
+        txtItemSerial.showSoftInputOnFocus = false;
         TextChangeEvent=object : TextWatcher {
 
             @SuppressLint("ResourceAsColor")
@@ -155,33 +150,9 @@ class PGPricingActivity : AppCompatActivity() {
                 if(UpdatingText)
                     return;
                 UpdatingText=true;
-                var seqVal:Int=0
                 var itemSerialStr:String=txtItemSerial.text.toString()
-                var PGStr:String=txtPG.text.toString()
-                var SeasonStr:String=txtSeason.text.toString()
-                lblError.setText("")
+                lblError.text = ""
 
-                if(!General.ValidatePG(PGStr)){
-                    txtPG.setText("")
-                    txtPG.requestFocus()
-                    UpdatingText=false;
-                    RefreshLabels()
-                    return
-                }else{
-                    txtPG.isEnabled=false;
-                    txtSeason.requestFocus()
-                }
-                if(!General.ValidateSeason(SeasonStr)){
-                    txtSeason.setText("")
-                    txtSeason.requestFocus()
-                    UpdatingText=false;
-                    RefreshLabels()
-                    return
-                }
-                else{
-                    txtSeason.isEnabled=false;
-                    txtItemSerial.requestFocus()
-                }
                 if(!General.ValidateItemSerialCode(itemSerialStr)){
                     txtItemSerial.setText("")
                     txtItemSerial.requestFocus()
@@ -190,8 +161,6 @@ class PGPricingActivity : AppCompatActivity() {
                     return
                 }
 
-
-
                 if(ItemSerials!=null && ItemSerials.contains(txtItemSerial.text.toString().trim())) {
                     //Cancel();
                     showMessageAndExit("XXXXXX Failure XXXXXX","XXXXXX ItemSerial Scanned Twice XXXXXXXXX",Color.RED)
@@ -199,12 +168,8 @@ class PGPricingActivity : AppCompatActivity() {
                     return
                 }
 
-
-                var UserID: Int=General.getGeneral(applicationContext).UserID
-                ValidateScan(itemSerialStr,PGStr,SeasonStr)
+                ValidateScan(itemSerialStr)
                 txtItemSerial.setShowSoftInputOnFocus(false);
-                txtPG.setShowSoftInputOnFocus(false);
-                txtSeason.setShowSoftInputOnFocus(false);
 
             }
 
@@ -219,12 +184,10 @@ class PGPricingActivity : AppCompatActivity() {
         }
         hideSoftKeyboard(this)
         txtItemSerial.addTextChangedListener(TextChangeEvent);
-        txtPG.addTextChangedListener(TextChangeEvent);
-        txtSeason.addTextChangedListener(TextChangeEvent);
 
 
-        txtPG.isEnabled=false
-        txtSeason.isEnabled=false
+
+
         txtItemSerial.isEnabled=false
         CreateStand()
     }
@@ -237,13 +200,13 @@ class PGPricingActivity : AppCompatActivity() {
     private fun Beep(){
         ToneGenerator(AudioManager.STREAM_MUSIC, ToneGenerator.MAX_VOLUME).startTone(ToneGenerator.TONE_SUP_ERROR, 300)
     }
-    fun ValidateScan(ItemSerial:String,PG:String,Season:String) {
+    fun ValidateScan(ItemSerial:String) {
 
         try {
             stand.let{
                 api= APIClient.getInstance(IPAddress ,false).create(BasicApi::class.java)
                 compositeDisposable.addAll(
-                    api.PriceQuatroItem(QuatroPricingItemModel(userId, ItemSerial,PG,Season,stand!!.id ))
+                    api.PriceItem(UPCPricingItemModel(userId, ItemSerial,"",stand!!.id ))
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe(
@@ -306,7 +269,7 @@ class PGPricingActivity : AppCompatActivity() {
       if(ItemSerials.size>0){
             btnUPCPricingDone.visibility= View.VISIBLE
           btnUPCPricingDone.setOnClickListener {
-              PostStand(ItemSerials.joinToString())
+              PostStand()
           }
         }
         hideSoftKeyboard(this)
@@ -315,7 +278,7 @@ class PGPricingActivity : AppCompatActivity() {
     var ColorRed = Color.parseColor("#ef2112")
     var ColorWhite = Color.parseColor("#ffffff")
     @SuppressLint("ResourceAsColor")
-    fun PostStand(StrItemSerials:String) {
+    fun PostStand() {
 
         try {
             btnUPCPricingDone.isEnabled = false
@@ -417,50 +380,5 @@ class PGPricingActivity : AppCompatActivity() {
         }
     }
 
-    fun Cancel(){
-        lblError.text = "Item Scanned Twice !!"
-        txtItemSerial.isEnabled=false;
-        txtPG.isEnabled=false;
-        txtSeason.isEnabled=false;
-        recyclerView.setLayoutManager(LinearLayoutManager(this))
-        if(ItemSerials==null)
-            ItemSerials=  arrayListOf<String>()
-        if(ItemSerialsList==null)
-            ItemSerialsList=  arrayListOf<String>()
-        var items= arrayListOf<String>()
-        items.addAll( ItemSerials.reversed())
-        adp = CustomListAdapter(this, items)
-        recyclerView.setAdapter(adp)
-
-        btnUPCPricingDone.visibility= View.VISIBLE
-        btnUPCPricingDone.text="Start Over"
-        btnUPCPricingDone.setOnClickListener {
-            if(btnUPCPricingDone.text.equals("Start Over")) {
-                txtItemSerial.setText("")
-                txtSeason.setText("")
-                txtPG.setText("")
-                txtItemSerial.requestFocus()
-                ItemSerials.clear()
-                adp = CustomListAdapter(this, ItemSerials)
-                recyclerView.setAdapter(adp)
-                lblError.text = ""
-                btnUPCPricingDone.setText("Done")
-
-                txtItemSerial.isEnabled = true
-                startActivity(getIntent());
-                finish();
-                overridePendingTransition(0, 0);
-                RefreshLabels()
-
-
-                adp.notifyDataSetChanged()
-                //val stringResponse = s.string()
-                lblError.setText("")
-            }
-
-        }
-
-        hideSoftKeyboard(this)
-    }
 
 }

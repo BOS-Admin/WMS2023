@@ -304,7 +304,7 @@ public class UPCPricingActivity extends AppCompatActivity {
             CompositeDisposable compositeDisposable = new CompositeDisposable();
             UPCPricingItemModel model=new UPCPricingItemModel(UserId,currentItemSerial,currentItemUPC,stand.getId());
             compositeDisposable.addAll(
-                    api.PriceItem(model)
+                    api.PriceUPCItem(model)
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe((s) -> {

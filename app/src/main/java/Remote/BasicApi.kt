@@ -13,15 +13,17 @@ import Model.Pricing.QuatroPricingItemModel
 import Model.Pricing.UPCPricingItemModel
 import io.reactivex.Observable
 import okhttp3.ResponseBody
-import retrofit2.Call
 import retrofit2.http.*
 
 interface BasicApi {
 
-    @POST("api/wms/pricing/quatro/item")
-    fun PriceItem(@Body model: QuatroPricingItemModel): Observable<PricingItemResponseModel>
-    @POST("api/wms/pricing/upc/item")
+    @POST("api/wms/pricing/itempricing/item")
     fun PriceItem(@Body model: UPCPricingItemModel): Observable<PricingItemResponseModel>
+
+    @POST("api/wms/pricing/quatro/item")
+    fun PriceQuatroItem(@Body model: QuatroPricingItemModel): Observable<PricingItemResponseModel>
+    @POST("api/wms/pricing/upc/item")
+    fun PriceUPCItem(@Body model: UPCPricingItemModel): Observable<PricingItemResponseModel>
     @POST("api/wms/pricing/stand/create")
     fun CreatePricingStand(@Query("UserId") UserId: Int, @Query("PricingLineCode") PricingLineCode: String): Observable<PricingStandModel>
     @POST("api/wms/pricing/printing/order/stand")
