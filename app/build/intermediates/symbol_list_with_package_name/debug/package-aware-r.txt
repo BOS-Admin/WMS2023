@@ -2859,6 +2859,7 @@ id btnSubmit
 id btnTransfer
 id btnUPCPricing
 id btnUPCPricingDone
+id btnUPCPricingOverride
 id btnfillpalleteDone
 id btnlocationcheckDone
 id btnputawaypalleteDone
@@ -3425,6 +3426,7 @@ id unlabeled
 id up
 id upcDeleteImage
 id upcPricingActivityLayout
+id upcPricingOverrideActivityLayout
 id upcText
 id useLogo
 id vertical_center_line
@@ -3579,6 +3581,7 @@ layout activity_stock_take
 layout activity_transfer
 layout activity_transfer_receiving
 layout activity_upc_pricing
+layout activity_upcpricing_override
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout content_fillpallete
