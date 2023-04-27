@@ -186,7 +186,7 @@ class NewItemPricingActivity : AppCompatActivity() {
         txtItemSerial.addTextChangedListener(TextChangeEvent);
 
 
-
+        userId = General.getGeneral(applicationContext).UserID;
 
         txtItemSerial.isEnabled=false
         CreateStand()

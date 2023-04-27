@@ -1,5 +1,6 @@
 package com.bos.wms.mlkit.app
 
+import Model.BosApp.Transfer.ItemPricingModel
 import Remote.APIClient
 import Remote.BasicApi
 import android.annotation.SuppressLint
@@ -169,13 +170,13 @@ class ItemPricingActivity : AppCompatActivity() {
         adp = CustomListAdapter(this, Items)
         recyclerView.setAdapter(adp)
         var UserID: Int = General.getGeneral(applicationContext).UserID
+        Log.e("CurrentUserID", "UserID: " + UserID)
 
 
         btnSubmit.visibility = View.VISIBLE
         btnSubmit.setOnClickListener {
             try {
-                var ItemsStr = Items.joinToString()
-                PostItemPricing(UserID, PricingLineCode, ItemsStr)
+                PostItemPricing(UserID, PricingLineCode, Items)
             } catch (ex: Exception) {
                 lblError.setText(ex.message)
 
@@ -184,11 +185,13 @@ class ItemPricingActivity : AppCompatActivity() {
         }
     }
     @SuppressLint("ResourceAsColor")
-    fun PostItemPricing(UserID:Int,PricingLineCode:String,ItemsStr:String) {
+    fun PostItemPricing(UserID:Int,PricingLineCode:String,Items:ArrayList<String>) {
         try {
+            Log.e("CurrentUserID2", "UserID: " + UserID)
             api= APIClient.getInstance(IPAddress,false).create(BasicApi::class.java)
+            var itemPricingModel = ItemPricingModel(UserID, PricingLineCode, Items)
             compositeDisposable.addAll(
-                api.PostItemPricing(UserID,PricingLineCode,ItemsStr)
+                api.PostItemPricing(itemPricingModel)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(

@@ -363,7 +363,7 @@ interface BasicApi {
     @GET("api/ItemPricing")
     fun InitItemPricing(@Query("ItemCode") ItemCode:String): Observable<String>
     @POST("api/ItemPricing")
-    fun PostItemPricing(@Query("UserID") UserID:Int,@Query("PricingLineCode") PricingLineCode:String,@Query("ItemSerials") ItemSerials:String): Observable<ResponseBody>
+    fun PostItemPricing(@Body model: ItemPricingModel): Observable<ResponseBody>
 
 
     @GET("api/ShipmentReceivingPallete")
