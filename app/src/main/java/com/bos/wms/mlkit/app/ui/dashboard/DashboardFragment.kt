@@ -91,83 +91,8 @@ class DashboardFragment : Fragment() {
         }
 
         root.btnTransfer.setOnClickListener {
-            try {
-                root.btnTransfer.isEnabled = false
-                api = APIClient.getInstance(general.ipAddress, false).create(BasicApi::class.java)
-                compositeDisposable.addAll(
-                    api.GetUserRole(general.UserID)
-                        .subscribeOn(Schedulers.io())
-                        // .observeOn(AndroidSchedulers.mainThread())
-                        .subscribe(
-                            { s ->
-                                var response = try {
-                                    s.string()
-                                } catch (e: IOException) {
-                                    e.message.toString()
-                                }
-
-                                if (response != null && response.lowercase().contains("transfer")) {
-                                    activity?.runOnUiThread {
-                                        root.btnTransfer.isEnabled = true
-                                        val intent = Intent(activity, TransferActivity::class.java)
-                                        startActivity(intent)
-                                    }
-                                } else {
-                                    activity?.runOnUiThread {
-                                        root.btnTransfer.isEnabled = true
-                                        Toast.makeText(
-                                            activity?.applicationContext,
-                                            "Not Allowed\nUser Role Type($response)",
-                                            Toast.LENGTH_SHORT
-                                        ).show()
-                                    }
-                                    Log.i("Checking", response)
-
-
-                                }
-
-                            },
-                            { t: Throwable? ->
-                                run {
-
-                                    var msg = "Error"
-                                    if (t is HttpException) {
-                                        var ex: HttpException = t as HttpException
-
-                                        msg = ex.response().errorBody()!!
-                                            .string() + " (API Http Error) "
-
-
-                                    } else {
-                                        msg = t?.message + " (API Error)"
-                                    }
-                                    activity?.runOnUiThread {
-                                        root.btnTransfer.isEnabled = true
-                                        Toast.makeText(
-                                            activity?.applicationContext,
-                                            msg, Toast.LENGTH_LONG
-                                        ).show()
-                                    }
-
-                                }
-                            }
-                        )
-                )
-            } catch (e: Throwable) {
-                activity?.runOnUiThread {
-                    root.btnTransfer.isEnabled = true
-                    Toast.makeText(
-                        activity?.applicationContext,
-                        e.message, Toast.LENGTH_LONG
-                    ).show()
-                }
-
-            } finally {
-
-
-            }
-
-
+            val intent = Intent(activity, TransferActivity::class.java)
+            startActivity(intent)
         }
         root.btnPutAway.setOnClickListener {
             val intent = Intent(activity, ScanRackPutAwayActivity::class.java)

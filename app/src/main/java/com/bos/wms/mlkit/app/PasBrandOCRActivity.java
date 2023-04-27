@@ -35,6 +35,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -69,6 +70,7 @@ import java.util.Set;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import Remote.APIClient;
 import Remote.BasicApi;
@@ -286,6 +288,32 @@ public class PasBrandOCRActivity extends AppCompatActivity {
                             }
                         }
                         return true;
+                    }
+                });
+
+                /** This Will Be Triggered Once The Camera Preview Is Visible And Laid Out **/
+                cameraPreview.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                    @Override
+                    public void onGlobalLayout() {
+                        if(cameraPreview.getMeasuredWidth() > 0 && cameraPreview.getMeasuredHeight() > 0){
+                            /**
+                             This Code Will Be Used To Auto Focus The Camera
+                             **/
+                            try{
+                                FocusMeteringAction.Builder autoFocusActionBuilder = new FocusMeteringAction.Builder(new SurfaceOrientedMeteringPointFactory(1f, 1f).createPoint(0.5f, 0.5f),
+                                        FocusMeteringAction.FLAG_AF);
+
+                                FocusMeteringAction autoFocusAction = autoFocusActionBuilder.setAutoCancelDuration(2500, TimeUnit.MILLISECONDS).build();
+
+                                currentCamera.getCameraControl().startFocusAndMetering(autoFocusAction);
+
+                                Logger.Debug("CAMERA", "Camera AutoFocus Feature Started Successfully");
+
+                            }catch (Exception ex){
+                                Logger.Error("CAMERA", "Failed Starting Camera AutoFocus Feature: " + ex.getMessage());
+                            }
+
+                        }
                     }
                 });
 
