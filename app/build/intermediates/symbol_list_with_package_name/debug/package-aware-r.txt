@@ -3557,6 +3557,7 @@ layout activity_login
 layout activity_main
 layout activity_main_menu
 layout activity_main_menu1
+layout activity_new_item_pricing
 layout activity_next_receiving_status
 layout activity_packing
 layout activity_packing_dc
@@ -3586,6 +3587,7 @@ layout content_item_pricing
 layout content_itemserial_missing
 layout content_itemserial_upc_missing
 layout content_locationcheck
+layout content_new_item_pricing
 layout content_pg_pricing
 layout content_picking
 layout content_putawaypallete

@@ -140,6 +140,10 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/item_list.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/content_new_item_pricing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_new_item_pricing.xml"
+    },
+    {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/fragment_dashboard.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/fragment_dashboard.xml"
     },
@@ -198,6 +202,10 @@
     {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_pg_pricing.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_pg_pricing.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_new_item_pricing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_new_item_pricing.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_stock_take.xml",

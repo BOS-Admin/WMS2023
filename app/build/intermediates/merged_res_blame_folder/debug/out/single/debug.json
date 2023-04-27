@@ -188,6 +188,10 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_pas_brand_ocractivity.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_new_item_pricing.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_new_item_pricing.xml"
+    },
+    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_empty_box.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_empty_box.xml"
     },
@@ -252,12 +256,12 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_count.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_baseline_play_arrow_icon.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/drawable/baseline_play_arrow_icon.xml"
-    },
-    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_ic_baseline_qr_code_scanner_icon.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/drawable/ic_baseline_qr_code_scanner_icon.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_baseline_play_arrow_icon.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/drawable/baseline_play_arrow_icon.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_content_pg_pricing.xml.flat",
@@ -434,6 +438,10 @@
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_itempricing.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/drawable/itempricing.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_content_new_item_pricing.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_new_item_pricing.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
