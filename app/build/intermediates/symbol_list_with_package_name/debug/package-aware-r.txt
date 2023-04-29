@@ -2552,11 +2552,13 @@ drawable baseline_close_icon
 drawable baseline_delete_all_icon
 drawable baseline_done_icon
 drawable baseline_image_not_supported
+drawable baseline_local_shipping_icon
 drawable baseline_pause_icon
 drawable baseline_play_arrow_icon
 drawable baseline_print_disabled_icon
 drawable baseline_print_icon
 drawable baseline_settings_icon
+drawable baseline_shipment_arrow_forward
 drawable bolrecognition
 drawable brandocr
 drawable btn_checkbox_checked_mtrl
@@ -2814,6 +2816,7 @@ id btnCapture
 id btnChange
 id btnChecking
 id btnCount
+id btnCreateNewTPO
 id btnD
 id btnDCBox
 id btnDCRack
@@ -2839,6 +2842,7 @@ id btnMenuShipmentPalleteReceiving
 id btnMenuShipmentReceivingPalleteCount
 id btnMissingLetter1
 id btnMissingLetter2
+id btnModifyTPOBins
 id btnNext
 id btnPASBrandOCR
 id btnPackingReasonDone
@@ -2856,6 +2860,10 @@ id btnShipPallReciDone
 id btnShipment
 id btnStockTake
 id btnSubmit
+id btnTPOMainActivity
+id btnTPOReady
+id btnTPOReceive
+id btnTPOShipment
 id btnTransfer
 id btnUPCPricing
 id btnUPCPricingDone
@@ -3032,6 +3040,7 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id itemsListView
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3106,6 +3115,7 @@ id listMode
 id listView
 id list_item
 id locale
+id locationText
 id ltr
 id mImageView
 id masked
@@ -3377,6 +3387,8 @@ id toolbar
 id top
 id topPanel
 id touch_outside
+id tpoMainActivityLayout
+id tpoMenuTitle
 id transitionToEnd
 id transitionToStart
 id transition_current_scene
@@ -3385,6 +3397,8 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id truckArrowIcon
+id truckIcon
 id tv_label
 id txtAppVersion
 id txtFoldingScanItem
@@ -3578,6 +3592,7 @@ layout activity_shipment_pallete_carton
 layout activity_shipment_pallete_carton_count
 layout activity_shipment_pallete_receiving
 layout activity_stock_take
+layout activity_tpomain
 layout activity_transfer
 layout activity_transfer_receiving
 layout activity_upc_pricing
@@ -3701,6 +3716,8 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout tpo_location_item
+layout tpo_locations_dialog
 layout upc_pricing_item
 menu bottom_nav_menu
 mipmap ic_launcher
@@ -4976,6 +4993,7 @@ style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
 style button_main_menu_style
 style pop_window_anim
+style tpoDialogAnimation
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

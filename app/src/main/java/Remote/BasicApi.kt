@@ -17,6 +17,15 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface BasicApi {
+
+    /* Transfer Preparation Order */
+
+    @GET("api/TPO/GetAllTransferLocations")
+    fun GetAllTransferLocations(@Query("CurrentLocation") CurrentLocation: String): Observable<ResponseBody>
+
+    @POST("api/TPO/GetAllAvailableSendingTPOS")
+    fun GetAllAvailableSendingTPOS(@Query("CurrentLocation") binBarcode: String): Observable<ResponseBody>
+
     @POST("api/wms/pricing/upc/overrideItem")
     fun OverrideItemPrice(@Body model: UPCPricingItemModel): Observable<PricingItemResponseModel>
     @POST("api/wms/pricing/itempricing/item")

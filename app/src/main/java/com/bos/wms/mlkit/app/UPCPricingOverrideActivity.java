@@ -179,10 +179,15 @@ public class UPCPricingOverrideActivity extends AppCompatActivity {
 
                     ProcessBarCode(s.toString());
                 } else if (s.length() != 0 && !s.toString().isEmpty()) {
-                    ;
-                    insertBarcode.setText(" ");
-                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                    imm.hideSoftInputFromWindow(insertBarcode.getWindowToken(), 0);
+                    try {
+                        insertBarcode.removeTextChangedListener(this);
+                        insertBarcode.setText(" ");
+                        insertBarcode.addTextChangedListener(this);
+                        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                        imm.hideSoftInputFromWindow(insertBarcode.getWindowToken(), 0);
+                    }catch(Exception ex){
+                        Logger.Error("KEYBOARD", "UPCPricingOverrideActivity - Failed Hiding Keyboard: " + ex.getMessage());
+                    }
                 }
             }
         });

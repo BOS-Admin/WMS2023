@@ -62,6 +62,9 @@ class HomeFragment : Fragment() {
             UserPermissions.ValidatePermission("WMSApp.BrandOCR", root.btnBrandOCR);
             UserPermissions.ValidatePermission("WMSApp.PASBrandOCR", root.btnPASBrandOCR);
 
+            /* Transfer Preparation Order */
+            UserPermissions.ValidatePermission("WMSApp.TPO.MainMenu", root.btnTPOMainActivity);
+
         }else {
             UserPermissions.AddOnReceiveListener {
                 UserPermissions.ValidatePermission("WMSApp.UPCPricing", root.btnUPCPricing);
@@ -82,6 +85,9 @@ class HomeFragment : Fragment() {
                 UserPermissions.ValidatePermission("WMSApp.EmptyBox", root.btnEmptyBox);
                 UserPermissions.ValidatePermission("WMSApp.BrandOCR", root.btnBrandOCR);
                 UserPermissions.ValidatePermission("WMSApp.PASBrandOCR", root.btnPASBrandOCR);
+
+                /* Transfer Preparation Order */
+                UserPermissions.ValidatePermission("WMSApp.TPO.MainMenu", root.btnTPOMainActivity);
             }
         }
 
@@ -101,6 +107,10 @@ class HomeFragment : Fragment() {
                     .setNegativeButton("Close", null)
                     .show()
             }
+        }
+
+        root.btnTPOMainActivity.setOnClickListener {
+            ProceedTPOMainActivity()
         }
 
         root.btnMenuPicking.setOnClickListener {
@@ -269,6 +279,11 @@ class HomeFragment : Fragment() {
 
     fun ProceedEmptyBox() {
         val intent = Intent (getActivity(), EmptyBoxActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun ProceedTPOMainActivity() {
+        val intent = Intent (getActivity(), TPOMainActivity::class.java)
         startActivity(intent)
     }
 

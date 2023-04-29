@@ -67,6 +67,13 @@
                 android:visibility="gone"/>
 
             <Button
+                android:id="@+id/btnTPOMainActivity"
+                style="@style/button_main_menu_style"
+                android:drawableLeft="@drawable/baseline_image_not_supported"
+                android:text="Transfer Preparation Order"
+                android:visibility="gone"/>
+
+            <Button
                 android:id="@+id/btnLocationCheck"
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/locationcheck"

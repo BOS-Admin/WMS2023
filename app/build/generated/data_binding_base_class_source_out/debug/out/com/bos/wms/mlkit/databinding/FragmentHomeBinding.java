@@ -68,6 +68,9 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final Button btnSerialMissing;
 
   @NonNull
+  public final Button btnTPOMainActivity;
+
+  @NonNull
   public final Button btnUPCPricing;
 
   @NonNull
@@ -85,8 +88,8 @@ public final class FragmentHomeBinding implements ViewBinding {
       @NonNull Button btnMenuShipmentPalleteReceiving,
       @NonNull Button btnMenuShipmentReceivingPalleteCount, @NonNull Button btnPASBrandOCR,
       @NonNull Button btnSerialGenerator, @NonNull Button btnSerialMissing,
-      @NonNull Button btnUPCPricing, @NonNull Button btnUPCPricingOverride,
-      @NonNull LinearLayout homeFragmentLayout) {
+      @NonNull Button btnTPOMainActivity, @NonNull Button btnUPCPricing,
+      @NonNull Button btnUPCPricingOverride, @NonNull LinearLayout homeFragmentLayout) {
     this.rootView = rootView;
     this.btnBolRecognition = btnBolRecognition;
     this.btnBrandOCR = btnBrandOCR;
@@ -104,6 +107,7 @@ public final class FragmentHomeBinding implements ViewBinding {
     this.btnPASBrandOCR = btnPASBrandOCR;
     this.btnSerialGenerator = btnSerialGenerator;
     this.btnSerialMissing = btnSerialMissing;
+    this.btnTPOMainActivity = btnTPOMainActivity;
     this.btnUPCPricing = btnUPCPricing;
     this.btnUPCPricingOverride = btnUPCPricingOverride;
     this.homeFragmentLayout = homeFragmentLayout;
@@ -232,6 +236,12 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnTPOMainActivity;
+      Button btnTPOMainActivity = ViewBindings.findChildViewById(rootView, id);
+      if (btnTPOMainActivity == null) {
+        break missingId;
+      }
+
       id = R.id.btnUPCPricing;
       Button btnUPCPricing = ViewBindings.findChildViewById(rootView, id);
       if (btnUPCPricing == null) {
@@ -251,7 +261,8 @@ public final class FragmentHomeBinding implements ViewBinding {
           btnMenuPicking, btnMenuPutAwayPallete, btnMenuShipmentCartonReceiving,
           btnMenuShipmentCartonReceivingV2, btnMenuShipmentPalleteReceiving,
           btnMenuShipmentReceivingPalleteCount, btnPASBrandOCR, btnSerialGenerator,
-          btnSerialMissing, btnUPCPricing, btnUPCPricingOverride, homeFragmentLayout);
+          btnSerialMissing, btnTPOMainActivity, btnUPCPricing, btnUPCPricingOverride,
+          homeFragmentLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
