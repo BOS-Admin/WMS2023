@@ -99,7 +99,7 @@ public class TPOItemsDialogAdapter extends ArrayAdapter<TPOItemsDialogDataModel>
         result.startAnimation(animation);
         lastPosition = position;
 
-        viewHolder.locationText.setText(dataModel.getLocation());
+        viewHolder.locationText.setText(dataModel.getMessage());
         // Return the completed view to render on screen
         return convertView;
     }

@@ -8,6 +8,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ import com.bos.wms.mlkit.app.adapters.ItemSerialScannedAdapter;
 import com.bos.wms.mlkit.app.adapters.ItemSerialScannedDataModel;
 import com.bos.wms.mlkit.app.adapters.TPOItemsDialogAdapter;
 import com.bos.wms.mlkit.app.adapters.TPOItemsDialogDataModel;
+import com.bos.wms.mlkit.app.adapters.TPOItemsDialogTPOInfoDataModel;
 import com.bos.wms.mlkit.storage.Storage;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
@@ -36,6 +38,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import Model.TPO.TPOModel;
 import Model.TPO.TPOTransferLocation;
 import Remote.APIClient;
 import Remote.BasicApi;
@@ -49,6 +52,8 @@ public class TPOMainActivity extends AppCompatActivity {
 
     String currentLocation = "";
     String IPAddress = "";
+
+    int UserID = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +82,7 @@ public class TPOMainActivity extends AppCompatActivity {
 
         Storage mStorage = new Storage(getApplicationContext());
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82");
+        UserID = General.getGeneral(getApplicationContext()).UserID;
 
         tpoMenuTitle.setText("Current Location " + currentLocation);
 
@@ -85,9 +91,20 @@ public class TPOMainActivity extends AppCompatActivity {
             OpenCreateTPODialog();
         });
 
+        btnModifyTPOBins.setOnClickListener(v -> {
+
+            OpenSelectTPODialogForBins();
+        });
+
+        ValidateAuthToken();
+
     }
 
+    /**
+     * This Function Will Get All The Available Receiving Locations To Select From And Create A New TPO To
+     */
     public void OpenCreateTPODialog(){
+        //Create A Progress Dialog
         ProgressDialog mainProgressDialog = ProgressDialog.show(this, "",
                 "Retrieving Locations, Please wait...", true);
         mainProgressDialog.show();
@@ -111,25 +128,30 @@ public class TPOMainActivity extends AppCompatActivity {
 
                                         Logger.Debug("TPO", "OpenCreateTPODialog - Received Transfer Locations: " + result);
 
-                                        /* We Will Get The Array And Place It Into A List */
+                                        /* We Will Get The Array As Json And Convert It To An Array List */
                                         TPOTransferLocation[] locations = new Gson().fromJson(result, TPOTransferLocation[].class);
 
                                         mainProgressDialog.cancel();
 
-
+                                        /* We Will Then Show A Dialog With A Custom Layout To Show The Available Locations */
                                         Dialog dialog = new Dialog(TPOMainActivity.this);
                                         dialog.setContentView(R.layout.tpo_locations_dialog);
                                         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                                         dialog.getWindow().getAttributes().windowAnimations = R.style.tpoDialogAnimation;
 
+                                        /* Transfer The Location Response Models To Layout Data Models */
                                         ArrayList<TPOItemsDialogDataModel> dataModels = new ArrayList<>();
-
                                         for(TPOTransferLocation location : locations){
                                             dataModels.add(new TPOItemsDialogDataModel(location.getLocationCode()));
                                         }
 
                                         ListView itemsListView = dialog.findViewById(R.id.itemsListView);
 
+                                        TextView itemsDialogTitle = dialog.findViewById(R.id.itemsMenuTitle);
+
+                                        itemsDialogTitle.setText("TPO Heading To");
+
+                                        /* Create A Custom Adapter For The Location Items */
                                         TPOItemsDialogAdapter itemsAdapter = new TPOItemsDialogAdapter(dataModels, this, itemsListView);
                                         itemsListView.setAdapter(itemsAdapter);
 
@@ -137,8 +159,9 @@ public class TPOMainActivity extends AppCompatActivity {
                                             @Override
                                             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                                                /* Once A Location Is Clicked Attempt To Create A New TPO Heading To That Location */
                                                 TPOItemsDialogDataModel dataModel= dataModels.get(position);
-                                                CreateNewTPO(dataModel.getLocation());
+                                                CreateNewTPO(dataModel.getMessage());
                                                 dialog.cancel();
                                             }
                                         });
@@ -149,6 +172,7 @@ public class TPOMainActivity extends AppCompatActivity {
                                     }
                                 }
                             }, (throwable) -> {
+                                //This Will Translate The Error Response And Get The Error Body If Available
                                 String response = "";
                                 if(throwable instanceof HttpException){
                                     HttpException ex = (HttpException) throwable;
@@ -161,31 +185,257 @@ public class TPOMainActivity extends AppCompatActivity {
                                     response = throwable.getMessage();
                                     Logger.Error("API", "OpenCreateTPODialog - Error In API Response: " + throwable.getMessage() + " " + throwable.toString());
                                 }
-                                mainProgressDialog.cancel();
-                                new AlertDialog.Builder(this)
-                                        .setTitle("Error")
-                                        .setMessage(response)
-                                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                                            public void onClick(DialogInterface dialog, int which) {
 
-                                            }
-                                        })
-                                        .setIcon(android.R.drawable.ic_dialog_alert)
-                                        .show();
+                                mainProgressDialog.cancel();
+
+                                ShowErrorDialog(response);
 
                             }));
 
         } catch (Throwable e) {
             mainProgressDialog.cancel();
             Logger.Error("API", "OpenCreateTPODialog - Error Connecting: " + e.getMessage());
-            Snackbar.make(findViewById(R.id.tpoMainActivityLayout), "Connection To Server Failed!", Snackbar.LENGTH_LONG)
-                    .setAction("No action", null).show();
+            ShowSnackbar("Connection To Server Failed!");
         }
 
     }
 
+    /**
+     * This Function Will Attempt To Create A TPO From The Current Location Heading To The Location Specified By The User
+     * @param location
+     */
     public void CreateNewTPO(String location){
         Logger.Debug("TPO", "CreateNewTPO - Attempting To Create A New TPO Heading From: " + currentLocation + " To: " + location);
+
+        //Show A Progress Dialog
+        ProgressDialog mainProgressDialog = ProgressDialog.show(this, "",
+                "Creating TPO Heading To " + location + ", Please wait...", true);
+        mainProgressDialog.show();
+
+        try {
+            BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
+            CompositeDisposable compositeDisposable = new CompositeDisposable();
+
+
+            compositeDisposable.addAll(
+                    api.CreateTPO(currentLocation, location, UserID)
+                            .subscribeOn(Schedulers.io())
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe((s) -> {
+                                if(s != null){
+                                    String result = s.string();
+
+                                    mainProgressDialog.cancel();
+
+                                    Logger.Debug("TPO", "CreateNewTPO - Received Result: " + result);
+
+                                    ShowSnackbar(result == null ? "API Returned Success, But Empty Result" : result);
+                                }
+                            }, (throwable) -> {
+                                //This Will Translate The Error Response And Get The Error Body If Available
+                                String response = "";
+                                if(throwable instanceof HttpException){
+                                    HttpException ex = (HttpException) throwable;
+                                    response = ex.response().errorBody().string();
+                                    if(response.isEmpty()){
+                                        response = throwable.getMessage();
+                                    }
+                                    Logger.Debug("TPO", "CreateNewTPO - Returned Error: " + response);
+                                }else {
+                                    response = throwable.getMessage();
+                                    Logger.Error("API", "CreateNewTPO - Error In API Response: " + throwable.getMessage() + " " + throwable.toString());
+                                }
+
+                                mainProgressDialog.cancel();
+
+                                ShowErrorDialog(response);
+
+                            }));
+
+        } catch (Throwable e) {
+            mainProgressDialog.cancel();
+
+            Logger.Error("API", "OpenCreateTPODialog - Error Connecting: " + e.getMessage());
+            ShowSnackbar("Connection To Server Failed!");
+        }
+    }
+
+    /**
+     * This Function Will Get All The Available Sending TPOS That We Can Currently Modify The Bins Of
+     */
+    public void OpenSelectTPODialogForBins(){
+        ProgressDialog mainProgressDialog = ProgressDialog.show(this, "",
+                "Retrieving TPOS, Please wait...", true);
+        mainProgressDialog.show();
+
+        Logger.Debug("TPO", "OpenSelectTPODialogForBins - Retrieving Sending TPOS From: " + currentLocation);
+
+        try {
+            BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
+            CompositeDisposable compositeDisposable = new CompositeDisposable();
+
+
+            compositeDisposable.addAll(
+                    api.GetAllAvailableSendingTPOS(currentLocation)
+                            .subscribeOn(Schedulers.io())
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe((s) -> {
+                                if(s != null){
+                                    try {
+
+                                        String result = s.string();
+
+                                        Logger.Debug("TPO", "OpenSelectTPODialogForBins - Received Sending TPOS: " + result);
+
+                                        /* We Will Get The Array As Json And Convert It To An Array List */
+                                        TPOModel[] locations = new Gson().fromJson(result, TPOModel[].class);
+
+                                        mainProgressDialog.cancel();
+
+                                        /* We Will Then Show A Dialog With A Custom Layout To Show The Available Locations */
+                                        Dialog dialog = new Dialog(TPOMainActivity.this);
+                                        dialog.setContentView(R.layout.tpo_locations_dialog);
+                                        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                                        dialog.getWindow().getAttributes().windowAnimations = R.style.tpoDialogAnimation;
+
+                                        /* Transfer The Location Response Models To Layout Data Models */
+                                        ArrayList<TPOItemsDialogDataModel> dataModels = new ArrayList<>();
+                                        for(TPOModel location : locations){
+                                            dataModels.add(new TPOItemsDialogTPOInfoDataModel(location.getId(), location.getToLocation(), "ID: " + location.getId() + ", " + location.getToLocation()));
+                                        }
+
+                                        ListView itemsListView = dialog.findViewById(R.id.itemsListView);
+
+                                        TextView itemsDialogTitle = dialog.findViewById(R.id.itemsMenuTitle);
+
+                                        itemsDialogTitle.setText("Select TPO");
+
+                                        /* Create A Custom Adapter For The Location Items */
+                                        TPOItemsDialogAdapter itemsAdapter = new TPOItemsDialogAdapter(dataModels, this, itemsListView);
+                                        itemsListView.setAdapter(itemsAdapter);
+
+                                        itemsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                            @Override
+                                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                                                /* Once A Location Is Clicked Attempt To Create A New TPO Heading To That Location */
+                                                TPOItemsDialogTPOInfoDataModel dataModel = (TPOItemsDialogTPOInfoDataModel)dataModels.get(position);
+                                                OpenModifyTPOBinsActivity(dataModel.getId(), dataModel.getToLocation());
+                                                dialog.cancel();
+                                            }
+                                        });
+
+                                        dialog.show();
+                                    }catch(Exception ex){
+                                        Logger.Error("JSON", "OpenSelectTPODialogForBins - Error: " + ex.getMessage());
+                                    }
+                                }
+                            }, (throwable) -> {
+                                //This Will Translate The Error Response And Get The Error Body If Available
+                                String response = "";
+                                if(throwable instanceof HttpException){
+                                    HttpException ex = (HttpException) throwable;
+                                    response = ex.response().errorBody().string();
+                                    if(response.isEmpty()){
+                                        response = throwable.getMessage();
+                                    }
+                                    Logger.Debug("TPO", "OpenSelectTPODialogForBins - Returned Error: " + response);
+                                }else {
+                                    response = throwable.getMessage();
+                                    Logger.Error("API", "OpenSelectTPODialogForBins - Error In API Response: " + throwable.getMessage() + " " + throwable.toString());
+                                }
+
+                                mainProgressDialog.cancel();
+
+                                ShowErrorDialog(response);
+
+                            }));
+
+        } catch (Throwable e) {
+            mainProgressDialog.cancel();
+            Logger.Error("API", "OpenSelectTPODialogForBins - Error Connecting: " + e.getMessage());
+            ShowSnackbar("Connection To Server Failed!");
+        }
+    }
+
+    /**
+     * This Functions Opens The TPO Bins Modifications Activity
+     * @param id
+     * @param location
+     */
+    public void OpenModifyTPOBinsActivity(int id, String location){
+        Logger.Debug("TPO", "OpenModifyTPOBinsActivity - Opening Activity For TPO ID: " + id + " ToLocation: " + location);
+    }
+
+    /**
+     * This Functions Sends A Request With The User's Authentication Token In The Header And Validates It
+     */
+    public void ValidateAuthToken(){
+        try {
+            BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
+            CompositeDisposable compositeDisposable = new CompositeDisposable();
+            compositeDisposable.addAll(
+                    api.ValidateAuthToken()
+                            .subscribeOn(Schedulers.io())
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe((s) -> {
+                                if(s != null){
+                                    Logger.Debug("API", "ValidateAuthToken - " + s.string());
+
+                                }
+                            }, (throwable) -> {
+                                String response = "";
+                                if(throwable instanceof HttpException){
+                                    HttpException ex = (HttpException) throwable;
+                                    response = ex.response().errorBody().string();
+                                    if(response.isEmpty()){
+                                        response = throwable.getMessage();
+                                    }
+                                }else {
+                                    response = throwable.getMessage();
+                                }
+                                Logger.Error("API", "ValidateAuthToken - Error In Response: " + response);
+                            }));
+        } catch (Throwable e) {
+            Logger.Error("API", "ValidateAuthToken - Error Connecting: " + e.getMessage());
+        }
+    }
+
+    /**
+     * This Function Is A Shortcut For Displaying Alert Dialogs
+     * @param title
+     * @param message
+     * @param icon
+     */
+    public void ShowAlertDialog(String title, String message, int icon){
+        new AlertDialog.Builder(this)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                })
+                .setIcon(icon)
+                .show();
+
+    }
+
+    /**
+     * This Function Is A Shortcut For Displaying The Error Dialog
+     * @param message
+     */
+    public void ShowErrorDialog(String message){
+        ShowAlertDialog("Error", message, android.R.drawable.ic_dialog_alert);
+    }
+
+    /**
+     * This Functions Will Help Remove Replicate Code For Showing The SnackBar
+     * @param message
+     */
+    public void ShowSnackbar(String message){
+        Snackbar.make(findViewById(R.id.tpoMainActivityLayout), message, Snackbar.LENGTH_LONG)
+                .setAction("No action", null).show();
     }
 
 }

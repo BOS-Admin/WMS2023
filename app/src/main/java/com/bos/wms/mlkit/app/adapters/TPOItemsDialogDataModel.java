@@ -2,18 +2,18 @@ package com.bos.wms.mlkit.app.adapters;
 
 public class TPOItemsDialogDataModel {
 
-    private String location;
+    private String message;
 
-    public TPOItemsDialogDataModel(String location){
-        this.location = location;
+    public TPOItemsDialogDataModel(String message){
+        this.message = message;
     }
 
-    public String getLocation(){
-        return location;
+    public String getMessage(){
+        return message;
     }
 
-    public void setUPC(String location){
-        this.location = location;
+    public void setMessage(String message){
+        this.message = message;
     }
 
 }
