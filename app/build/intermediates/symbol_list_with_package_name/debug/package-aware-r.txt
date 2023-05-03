@@ -2548,6 +2548,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable background
+drawable baseline_add_24
 drawable baseline_close_icon
 drawable baseline_delete_all_icon
 drawable baseline_done_icon
@@ -2781,6 +2782,7 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id bestChoice
+id binItemsList
 id blocking
 id bolHelpText
 id bolRecognitionActiviyLayout
@@ -2928,6 +2930,7 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
+id currentModifyMode
 id currentState
 id custom
 id customPanel
@@ -3035,6 +3038,7 @@ id immediateStop
 id included
 id info
 id insertBarcode
+id insertBarcodeEditText
 id insertBinBoxBarcode
 id insertUPCEditText
 id invisible
@@ -3254,6 +3258,7 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scanBarcodeHelpText
 id scanBinsHelpText
 id scanUPCSButton
 id scanUPCSHelpText
@@ -3284,6 +3289,7 @@ id selected
 id selection_type
 id sharedValueSet
 id sharedValueUnset
+id shipTPOBinsIcon
 id shortcut
 id showCustom
 id showHome
@@ -3389,6 +3395,7 @@ id toolbar
 id top
 id topPanel
 id touch_outside
+id tpoBinsActivityLayout
 id tpoMainActivityLayout
 id tpoMenuTitle
 id transitionToEnd
@@ -3594,6 +3601,7 @@ layout activity_shipment_pallete_carton
 layout activity_shipment_pallete_carton_count
 layout activity_shipment_pallete_receiving
 layout activity_stock_take
+layout activity_tpobins
 layout activity_tpomain
 layout activity_transfer
 layout activity_transfer_receiving

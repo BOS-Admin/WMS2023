@@ -53,9 +53,14 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.bos.wms.mlkit.app.TPOMainActivity"
+            android:name="com.bos.wms.mlkit.app.tpo.TPOMainActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.tpo.TPOBinsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="com.bos.wms.mlkit.app.UPCPricingOverrideActivity"
             android:exported="false"

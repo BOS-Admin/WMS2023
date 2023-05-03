@@ -26,11 +26,25 @@ interface BasicApi {
     @GET("api/TPO/GetAllAvailableSendingTPOS")
     fun GetAllAvailableSendingTPOS(@Query("CurrentLocation") CurrentLocation: String): Observable<ResponseBody>
 
+    @GET("api/TPO/GetAvailableTPOBins")
+    fun GetAvailableTPOBins(@Query("TPOID") TPOID: Int): Observable<ResponseBody>
+
+    @GET("api/TPO/VerifyTPOBinAdd")
+    fun VerifyTPOBinAdd(@Query("TPOID") TPOID: Int, @Query("BinBarcode") BinBarcode: String, @Query("UserID") UserID: Int): Observable<ResponseBody>
+
+    @GET("api/TPO/RemoveBinFromTPO")
+    fun RemoveBinFromTPO(@Query("TPOID") TPOID: Int, @Query("BinBarcode") BinBarcode: String): Observable<ResponseBody>
+
+    @POST("api/TPO/ReadyTPOBins")
+    fun ReadyTPOBins(@Query("TPOID") TPOID: Int, @Query("UserID") UserID: Int): Observable<ResponseBody>
+
     @GET("api/TPO/CreateTPO")
     fun CreateTPO(@Query("FromLocation") FromLocation: String, @Query("ToLocation") ToLocation: String, @Query("UserID") UserID: Int): Observable<ResponseBody>
 
     @GET("api/OverridePasswords/ValidateAuthToken")
     fun ValidateAuthToken(): Observable<ResponseBody>
+
+
 
     @POST("api/wms/pricing/upc/overrideItem")
     fun OverrideItemPrice(@Body model: UPCPricingItemModel): Observable<PricingItemResponseModel>
