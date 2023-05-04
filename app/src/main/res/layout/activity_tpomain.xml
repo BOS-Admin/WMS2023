@@ -51,24 +51,38 @@
                 android:visibility="gone"/>
 
             <Button
-                android:id="@+id/btnTPOReady"
+                android:id="@+id/btnLoadTPOBins"
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/baseline_image_not_supported"
-                android:text="Ready TPO For Transfer"
+                android:text="Load TPO Bins"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnCountTPOBins"
+                style="@style/button_main_menu_style"
+                android:drawableLeft="@drawable/baseline_image_not_supported"
+                android:text="Count TPO Bins"
                 android:visibility="gone"/>
 
             <Button
                 android:id="@+id/btnTPOShipment"
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/baseline_image_not_supported"
-                android:text="Modify TPO Shipment"
+                android:text="Create TPO Shipment"
                 android:visibility="gone"/>
 
             <Button
                 android:id="@+id/btnTPOReceive"
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/baseline_image_not_supported"
-                android:text="Receive TPO"
+                android:text="Receive TPO Shipment"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnResetTruckCountMode"
+                style="@style/button_main_menu_style"
+                android:drawableLeft="@drawable/baseline_image_not_supported"
+                android:text="Reset Truck Count Mode"
                 android:visibility="gone"/>
 
         </com.google.android.flexbox.FlexboxLayout>

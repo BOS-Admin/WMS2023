@@ -27,9 +27,6 @@ public final class ActivityTpomainBinding implements ViewBinding {
   public final Button btnModifyTPOBins;
 
   @NonNull
-  public final Button btnTPOReady;
-
-  @NonNull
   public final Button btnTPOReceive;
 
   @NonNull
@@ -42,13 +39,12 @@ public final class ActivityTpomainBinding implements ViewBinding {
   public final TextView tpoMenuTitle;
 
   private ActivityTpomainBinding(@NonNull LinearLayout rootView, @NonNull Button btnCreateNewTPO,
-      @NonNull Button btnModifyTPOBins, @NonNull Button btnTPOReady, @NonNull Button btnTPOReceive,
+      @NonNull Button btnModifyTPOBins, @NonNull Button btnTPOReceive,
       @NonNull Button btnTPOShipment, @NonNull LinearLayout tpoMainActivityLayout,
       @NonNull TextView tpoMenuTitle) {
     this.rootView = rootView;
     this.btnCreateNewTPO = btnCreateNewTPO;
     this.btnModifyTPOBins = btnModifyTPOBins;
-    this.btnTPOReady = btnTPOReady;
     this.btnTPOReceive = btnTPOReceive;
     this.btnTPOShipment = btnTPOShipment;
     this.tpoMainActivityLayout = tpoMainActivityLayout;
@@ -94,12 +90,6 @@ public final class ActivityTpomainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnTPOReady;
-      Button btnTPOReady = ViewBindings.findChildViewById(rootView, id);
-      if (btnTPOReady == null) {
-        break missingId;
-      }
-
       id = R.id.btnTPOReceive;
       Button btnTPOReceive = ViewBindings.findChildViewById(rootView, id);
       if (btnTPOReceive == null) {
@@ -121,7 +111,7 @@ public final class ActivityTpomainBinding implements ViewBinding {
       }
 
       return new ActivityTpomainBinding((LinearLayout) rootView, btnCreateNewTPO, btnModifyTPOBins,
-          btnTPOReady, btnTPOReceive, btnTPOShipment, tpoMainActivityLayout, tpoMenuTitle);
+          btnTPOReceive, btnTPOShipment, tpoMainActivityLayout, tpoMenuTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

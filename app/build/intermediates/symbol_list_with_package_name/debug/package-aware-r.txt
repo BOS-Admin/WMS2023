@@ -2863,7 +2863,6 @@ id btnShipment
 id btnStockTake
 id btnSubmit
 id btnTPOMainActivity
-id btnTPOReady
 id btnTPOReceive
 id btnTPOShipment
 id btnTransfer

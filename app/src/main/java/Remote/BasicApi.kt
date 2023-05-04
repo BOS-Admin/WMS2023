@@ -44,6 +44,24 @@ interface BasicApi {
     @GET("api/OverridePasswords/ValidateAuthToken")
     fun ValidateAuthToken(): Observable<ResponseBody>
 
+    @GET("api/TPO/VerifyTPOTruckForShipment")//Checks If We Can Add Boxes To The Truck Or Count The Trucks Boxes
+    fun VerifyTPOTruckForShipment(@Query("TruckBarcode") TruckBarcode: String, @Query("Count") Count: Boolean): Observable<ResponseBody>
+
+    @GET("api/TPO/StartTruckBinCount")//Sets The Truck In Box Counting Mode
+    fun StartTruckBinCount(@Query("TPOID") TPOID: Int, @Query("TruckBarcode") TruckBarcode: String): Observable<ResponseBody>
+
+    @GET("api/TPO/ResetTruckBinCount")//Reset The Trucks Count Mode, Either Stop The Count Or Stop The Adding
+    fun ResetTruckBinCount(@Query("TruckBarcode") TruckBarcode: String, @Query("Count") Count: Boolean): Observable<ResponseBody>
+
+    @GET("api/TPO/VerifyTPOBinShipment")//Adds The Box To A Truck And Sets The Truck In Adding Mode
+    fun VerifyTPOBinShipment(@Query("TPOID") TPOID: Int, @Query("TruckBarcode") TruckBarcode: String,@Query("BinBarcode") BinBarcode: String, @Query("UserID") UserID: Int): Observable<ResponseBody>
+
+    @GET("api/TPO/VerifyTPOBinShipmentCount")//Submits The Truck Count Number
+    fun VerifyTPOBinShipmentCount(@Query("TPOID") TPOID: Int, @Query("TruckBarcode") TruckBarcode: String,@Query("Count") Count: Int, @Query("UserID") UserID: Int): Observable<ResponseBody>
+
+    @GET("api/TPO/AttemptTPOShipmentPrepared")//Submits The Truck Bins And Checks If The Count Matches
+    fun AttemptTPOShipmentPrepared(@Query("TPOID") TPOID: Int, @Query("TruckBarcode") TruckBarcode: String, @Query("UserID") UserID: Int): Observable<ResponseBody>
+
 
 
     @POST("api/wms/pricing/upc/overrideItem")

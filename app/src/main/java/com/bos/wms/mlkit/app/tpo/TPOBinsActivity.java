@@ -42,6 +42,7 @@ import Model.TPO.TPOAvailableBinModel;
 import Model.TPO.TPOModel;
 import Remote.APIClient;
 import Remote.BasicApi;
+import Remote.UserPermissions.UserPermissions;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
@@ -91,6 +92,9 @@ public class TPOBinsActivity extends AppCompatActivity {
         currentModifyMode = findViewById(R.id.currentModifyMode);
         tpoMenuTitle = findViewById(R.id.tpoMenuTitle);
 
+        //Verify The Permission For Shipment
+        UserPermissions.ValidatePermission("WMSApp.TPO.ReadyTPO", shipTPOBinsIcon);
+
         dataModels = new ArrayList<>();
 
         adapter = new BinBarcodeScannedAdapter(dataModels, getApplicationContext(), listView, new BinBarcodeRemovedListener() {
@@ -115,6 +119,14 @@ public class TPOBinsActivity extends AppCompatActivity {
                     tpoMenuTitle.setBackgroundColor(Color.parseColor("#D10000"));//Green Color
                 }
 
+            }
+        });
+
+
+        shipTPOBinsIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ReadyTPOBins();
             }
         });
 
@@ -245,6 +257,7 @@ public class TPOBinsActivity extends AppCompatActivity {
 
                                     mainProgressDialog.cancel();
                                     ShowErrorDialog(response);
+                                    General.playError();
                                 }
                             }));
 
@@ -252,6 +265,7 @@ public class TPOBinsActivity extends AppCompatActivity {
             mainProgressDialog.cancel();
             Logger.Error("API", "GetPreviousBinsForThisTPO - Error Connecting: " + e.getMessage());
             ShowSnackbar("Connection To Server Failed!");
+            General.playError();
         }
     }
 
@@ -265,6 +279,7 @@ public class TPOBinsActivity extends AppCompatActivity {
 
         if(DoesBinBarcodeExists(barcode)){
             ShowSnackbar("Barcode Already Exists!");
+            General.playError();
             return;
         }
 
@@ -301,6 +316,7 @@ public class TPOBinsActivity extends AppCompatActivity {
                                         adapter.notifyDataSetChanged();
 
                                         ShowSnackbar(result);
+                                        General.playSuccess();
 
                                     }catch(Exception ex){
                                         mainProgressDialog.cancel();
@@ -321,6 +337,7 @@ public class TPOBinsActivity extends AppCompatActivity {
                                     Logger.Debug("TPO", "AddBinItem - Returned Error: " + response);
                                     mainProgressDialog.cancel();
                                     ShowSnackbar(response);
+                                    General.playError();
                                 }else {
                                     response = throwable.getMessage();
                                     Logger.Error("API", "AddBinItem - Error In API Response: " + throwable.getMessage() + " " + throwable.toString());
@@ -333,7 +350,7 @@ public class TPOBinsActivity extends AppCompatActivity {
         } catch (Throwable e) {
             mainProgressDialog.cancel();
             Logger.Error("API", "AddBinItem - Error Connecting: " + e.getMessage());
-            ShowSnackbar("Connection To Server Failed!");
+            ShowErrorDialog("Connection To Server Failed!");
             isBusy = false;
         }
     }
@@ -348,6 +365,7 @@ public class TPOBinsActivity extends AppCompatActivity {
 
         if(!DoesBinBarcodeExists(barcode)){
             ShowSnackbar("Barcode Doesn't Exists!");
+            General.playError();
             return;
         }
 
@@ -388,6 +406,7 @@ public class TPOBinsActivity extends AppCompatActivity {
                                         adapter.notifyDataSetChanged();
 
                                         ShowSnackbar(result);
+                                        General.playSuccess();
 
                                     }catch(Exception ex){
                                         mainProgressDialog.cancel();
@@ -408,6 +427,7 @@ public class TPOBinsActivity extends AppCompatActivity {
                                     Logger.Debug("TPO", "RemoveBinItem - Returned Error: " + response);
                                     mainProgressDialog.cancel();
                                     ShowSnackbar(response);
+                                    General.playError();
                                 }else {
                                     response = throwable.getMessage();
                                     Logger.Error("API", "RemoveBinItem - Error In API Response: " + throwable.getMessage() + " " + throwable.toString());
@@ -420,7 +440,88 @@ public class TPOBinsActivity extends AppCompatActivity {
         } catch (Throwable e) {
             mainProgressDialog.cancel();
             Logger.Error("API", "RemoveBinItem - Error Connecting: " + e.getMessage());
-            ShowSnackbar("Connection To Server Failed!");
+            ShowErrorDialog("Connection To Server Failed!");
+            isBusy = false;
+        }
+    }
+
+    /**
+     * This Functions verifies all the boxes and their item count then allows them for shipment
+     */
+    public void ReadyTPOBins(){
+        if(isBusy)
+            return;
+
+        if(dataModels.isEmpty()){
+            ShowSnackbar("This TPO Contains No Bins, You Can't Start The Shipment Yet!");
+            General.playError();
+            return;
+        }
+
+        isBusy = true;
+
+        ProgressDialog mainProgressDialog = ProgressDialog.show(this, "",
+                "Verifying All The TPO Bins, Please wait...", true);
+        mainProgressDialog.show();
+
+        Logger.Debug("TPO", "ReadyTPOBins - Verifying TPO Bins For TPO ID: " + TPOID);
+
+        try {
+            BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
+            CompositeDisposable compositeDisposable = new CompositeDisposable();
+
+
+            compositeDisposable.addAll(
+                    api.ReadyTPOBins(TPOID, UserID)
+                            .subscribeOn(Schedulers.io())
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe((s) -> {
+                                if(s != null){
+                                    try {
+
+                                        String result = s.string();
+
+                                        Logger.Debug("TPO", "ReadyTPOBins - Received Result: " + result);
+
+
+                                        mainProgressDialog.cancel();
+
+                                        ShowSnackbar(result);
+                                        General.playSuccess();
+
+                                    }catch(Exception ex){
+                                        mainProgressDialog.cancel();
+                                        Logger.Error("JSON", "ReadyTPOBins - Error: " + ex.getMessage());
+                                        ShowErrorDialog(ex.getMessage());
+                                    }
+                                    isBusy = false;
+                                }
+                            }, (throwable) -> {
+                                //This Will Translate The Error Response And Get The Error Body If Available
+                                String response = "";
+                                if(throwable instanceof HttpException){
+                                    HttpException ex = (HttpException) throwable;
+                                    response = ex.response().errorBody().string();
+                                    if(response.isEmpty()){
+                                        response = throwable.getMessage();
+                                    }
+                                    Logger.Debug("TPO", "ReadyTPOBins - Returned Error: " + response);
+                                    mainProgressDialog.cancel();
+                                    ShowSnackbar(response);
+                                    General.playError();
+                                }else {
+                                    response = throwable.getMessage();
+                                    Logger.Error("API", "ReadyTPOBins - Error In API Response: " + throwable.getMessage() + " " + throwable.toString());
+                                    mainProgressDialog.cancel();
+                                    ShowErrorDialog(response);
+                                }
+                                isBusy = false;
+                            }));
+
+        } catch (Throwable e) {
+            mainProgressDialog.cancel();
+            Logger.Error("API", "ReadyTPOBins - Error Connecting: " + e.getMessage());
+            ShowErrorDialog("Connection To Server Failed!");
             isBusy = false;
         }
     }
@@ -465,6 +566,7 @@ public class TPOBinsActivity extends AppCompatActivity {
      */
     public void ShowErrorDialog(String message){
         ShowAlertDialog("Error", message, android.R.drawable.ic_dialog_alert);
+        General.playError();
     }
 
     /**

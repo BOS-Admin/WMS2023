@@ -2862,7 +2862,6 @@ int id btnShipment 0x7f0800ba
 int id btnStockTake 0x7f0800bb
 int id btnSubmit 0x7f0800bc
 int id btnTPOMainActivity 0x7f0800bd
-int id btnTPOReady 0x7f0800be
 int id btnTPOReceive 0x7f0800bf
 int id btnTPOShipment 0x7f0800c0
 int id btnTransfer 0x7f0800c1

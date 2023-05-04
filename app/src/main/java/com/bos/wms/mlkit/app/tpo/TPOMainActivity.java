@@ -49,22 +49,26 @@ public class TPOMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tpomain);
 
-        Button btnCreateNewTPO, btnModifyTPOBins, btnTPOReady, btnTPOShipment, btnTPOReceive;
+        Button btnCreateNewTPO, btnModifyTPOBins, btnTPOShipment, btnTPOReceive, btnLoadTPOBins, btnCountTPOBins, btnResetTruckCountMode;
 
         TextView tpoMenuTitle = findViewById(R.id.tpoMenuTitle);
 
         btnCreateNewTPO = findViewById(R.id.btnCreateNewTPO);
         btnModifyTPOBins = findViewById(R.id.btnModifyTPOBins);
-        btnTPOReady = findViewById(R.id.btnTPOReady);
         btnTPOShipment = findViewById(R.id.btnTPOShipment);
         btnTPOReceive = findViewById(R.id.btnTPOReceive);
+        btnLoadTPOBins = findViewById(R.id.btnLoadTPOBins);
+        btnCountTPOBins = findViewById(R.id.btnCountTPOBins);
+        btnResetTruckCountMode = findViewById(R.id.btnResetTruckCountMode);
 
         /* Verify The Menu Permissions */
         UserPermissions.ValidatePermission("WMSApp.TPO.CreateTPO", btnCreateNewTPO);
         UserPermissions.ValidatePermission("WMSApp.TPO.ModifyBins", btnModifyTPOBins);
-        UserPermissions.ValidatePermission("WMSApp.TPO.ReadyTPO", btnTPOReady);
         UserPermissions.ValidatePermission("WMSApp.TPO.CreateShipment", btnTPOShipment);
         UserPermissions.ValidatePermission("WMSApp.TPO.ReceiveShipment", btnTPOReceive);
+        UserPermissions.ValidatePermission("WMSApp.TPO.LoadBins", btnLoadTPOBins);
+        UserPermissions.ValidatePermission("WMSApp.TPO.CountBins", btnCountTPOBins);
+        UserPermissions.ValidatePermission("WMSApp.TPO.ResetTruckCount", btnResetTruckCountMode);
 
         //Get The Current Location The Device
         currentLocation = General.getGeneral(getApplicationContext()).mainLocation;
@@ -82,6 +86,10 @@ public class TPOMainActivity extends AppCompatActivity {
 
         btnModifyTPOBins.setOnClickListener(v -> {
 
+            OpenSelectTPODialogForBins();
+        });
+
+        btnLoadTPOBins.setOnClickListener(v -> {
             OpenSelectTPODialogForBins();
         });
 
@@ -158,6 +166,7 @@ public class TPOMainActivity extends AppCompatActivity {
                                         dialog.show();
                                     }catch(Exception ex){
                                         Logger.Error("JSON", "OpenCreateTPODialog - Error: " + ex.getMessage());
+                                        ShowErrorDialog(ex.getMessage());
                                     }
                                 }
                             }, (throwable) -> {
@@ -185,6 +194,7 @@ public class TPOMainActivity extends AppCompatActivity {
             mainProgressDialog.cancel();
             Logger.Error("API", "OpenCreateTPODialog - Error Connecting: " + e.getMessage());
             ShowSnackbar("Connection To Server Failed!");
+            General.playError();
         }
 
     }
@@ -219,6 +229,7 @@ public class TPOMainActivity extends AppCompatActivity {
                                     Logger.Debug("TPO", "CreateNewTPO - Received Result: " + result);
 
                                     ShowSnackbar(result == null ? "API Returned Success, But Empty Result" : result);
+                                    General.playSuccess();
                                 }
                             }, (throwable) -> {
                                 //This Will Translate The Error Response And Get The Error Body If Available
@@ -245,7 +256,7 @@ public class TPOMainActivity extends AppCompatActivity {
             mainProgressDialog.cancel();
 
             Logger.Error("API", "OpenCreateTPODialog - Error Connecting: " + e.getMessage());
-            ShowSnackbar("Connection To Server Failed!");
+            ShowErrorDialog("Connection To Server Failed!");
         }
     }
 
@@ -345,7 +356,7 @@ public class TPOMainActivity extends AppCompatActivity {
         } catch (Throwable e) {
             mainProgressDialog.cancel();
             Logger.Error("API", "OpenSelectTPODialogForBins - Error Connecting: " + e.getMessage());
-            ShowSnackbar("Connection To Server Failed!");
+            ShowErrorDialog("Connection To Server Failed!");
         }
     }
 
@@ -422,6 +433,7 @@ public class TPOMainActivity extends AppCompatActivity {
      */
     public void ShowErrorDialog(String message){
         ShowAlertDialog("Error", message, android.R.drawable.ic_dialog_alert);
+        General.playError();
     }
 
     /**
