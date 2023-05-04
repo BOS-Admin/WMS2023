@@ -127,6 +127,7 @@ class PGPricingActivity : AppCompatActivity() {
         mStorage = Storage(applicationContext) //sp存储
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82")
         PricingLineCode = mStorage.getDataString("PricingLineCode", "PL001")
+        userId = General.getGeneral(applicationContext).UserID
 
 
         if(ItemSerials==null)
@@ -200,7 +201,6 @@ class PGPricingActivity : AppCompatActivity() {
                 }
 
 
-                var UserID: Int=General.getGeneral(applicationContext).UserID
                 ValidateScan(itemSerialStr,PGStr,SeasonStr)
                 txtItemSerial.setShowSoftInputOnFocus(false);
                 txtPG.setShowSoftInputOnFocus(false);
