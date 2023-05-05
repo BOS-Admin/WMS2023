@@ -21,10 +21,19 @@ public final class ActivityTpomainBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final Button btnCountTPOBins;
+
+  @NonNull
   public final Button btnCreateNewTPO;
 
   @NonNull
+  public final Button btnLoadTPOBins;
+
+  @NonNull
   public final Button btnModifyTPOBins;
+
+  @NonNull
+  public final Button btnResetTruckCountMode;
 
   @NonNull
   public final Button btnTPOReceive;
@@ -38,13 +47,17 @@ public final class ActivityTpomainBinding implements ViewBinding {
   @NonNull
   public final TextView tpoMenuTitle;
 
-  private ActivityTpomainBinding(@NonNull LinearLayout rootView, @NonNull Button btnCreateNewTPO,
-      @NonNull Button btnModifyTPOBins, @NonNull Button btnTPOReceive,
-      @NonNull Button btnTPOShipment, @NonNull LinearLayout tpoMainActivityLayout,
-      @NonNull TextView tpoMenuTitle) {
+  private ActivityTpomainBinding(@NonNull LinearLayout rootView, @NonNull Button btnCountTPOBins,
+      @NonNull Button btnCreateNewTPO, @NonNull Button btnLoadTPOBins,
+      @NonNull Button btnModifyTPOBins, @NonNull Button btnResetTruckCountMode,
+      @NonNull Button btnTPOReceive, @NonNull Button btnTPOShipment,
+      @NonNull LinearLayout tpoMainActivityLayout, @NonNull TextView tpoMenuTitle) {
     this.rootView = rootView;
+    this.btnCountTPOBins = btnCountTPOBins;
     this.btnCreateNewTPO = btnCreateNewTPO;
+    this.btnLoadTPOBins = btnLoadTPOBins;
     this.btnModifyTPOBins = btnModifyTPOBins;
+    this.btnResetTruckCountMode = btnResetTruckCountMode;
     this.btnTPOReceive = btnTPOReceive;
     this.btnTPOShipment = btnTPOShipment;
     this.tpoMainActivityLayout = tpoMainActivityLayout;
@@ -78,15 +91,33 @@ public final class ActivityTpomainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnCountTPOBins;
+      Button btnCountTPOBins = ViewBindings.findChildViewById(rootView, id);
+      if (btnCountTPOBins == null) {
+        break missingId;
+      }
+
       id = R.id.btnCreateNewTPO;
       Button btnCreateNewTPO = ViewBindings.findChildViewById(rootView, id);
       if (btnCreateNewTPO == null) {
         break missingId;
       }
 
+      id = R.id.btnLoadTPOBins;
+      Button btnLoadTPOBins = ViewBindings.findChildViewById(rootView, id);
+      if (btnLoadTPOBins == null) {
+        break missingId;
+      }
+
       id = R.id.btnModifyTPOBins;
       Button btnModifyTPOBins = ViewBindings.findChildViewById(rootView, id);
       if (btnModifyTPOBins == null) {
+        break missingId;
+      }
+
+      id = R.id.btnResetTruckCountMode;
+      Button btnResetTruckCountMode = ViewBindings.findChildViewById(rootView, id);
+      if (btnResetTruckCountMode == null) {
         break missingId;
       }
 
@@ -110,8 +141,9 @@ public final class ActivityTpomainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityTpomainBinding((LinearLayout) rootView, btnCreateNewTPO, btnModifyTPOBins,
-          btnTPOReceive, btnTPOShipment, tpoMainActivityLayout, tpoMenuTitle);
+      return new ActivityTpomainBinding((LinearLayout) rootView, btnCountTPOBins, btnCreateNewTPO,
+          btnLoadTPOBins, btnModifyTPOBins, btnResetTruckCountMode, btnTPOReceive, btnTPOShipment,
+          tpoMainActivityLayout, tpoMenuTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

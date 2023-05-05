@@ -116,7 +116,7 @@ public class TPOBinsActivity extends AppCompatActivity {
                 }else {
                     Extensions.setImageDrawableWithAnimation(currentModifyMode, getDrawable(R.drawable.upc_item_delete_icon), 300);
                     tpoMenuTitle.setText("Removing Bins");
-                    tpoMenuTitle.setBackgroundColor(Color.parseColor("#D10000"));//Green Color
+                    tpoMenuTitle.setBackgroundColor(Color.parseColor("#D10000"));//Red Color
                 }
 
             }
@@ -178,7 +178,9 @@ public class TPOBinsActivity extends AppCompatActivity {
                         RemoveBinItem(s.toString().replaceAll(" ", ""));
                     }
                 }else if(s.length() != 0 && !s.toString().isEmpty()){;
+                    insertBarcodeEditText.removeTextChangedListener(this);
                     insertBarcodeEditText.setText(" ");
+                    insertBarcodeEditText.addTextChangedListener(this);
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(insertBarcodeEditText.getWindowToken(), 0);
                 }
@@ -257,7 +259,6 @@ public class TPOBinsActivity extends AppCompatActivity {
 
                                     mainProgressDialog.cancel();
                                     ShowErrorDialog(response);
-                                    General.playError();
                                 }
                             }));
 

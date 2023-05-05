@@ -2818,6 +2818,7 @@ id btnCapture
 id btnChange
 id btnChecking
 id btnCount
+id btnCountTPOBins
 id btnCreateNewTPO
 id btnD
 id btnDCBox
@@ -2831,6 +2832,7 @@ id btnEmptyBox
 id btnEnd
 id btnF
 id btnFoldingScanDone
+id btnLoadTPOBins
 id btnLocationCheck
 id btnLogin
 id btnMenuFillPallete
@@ -2854,6 +2856,7 @@ id btnPrev
 id btnPutAway
 id btnRackCount
 id btnReceiving
+id btnResetTruckCountMode
 id btnSave
 id btnSerialGenerator
 id btnSerialMissing
@@ -2931,6 +2934,7 @@ id cos
 id counterclockwise
 id currentModifyMode
 id currentState
+id currentTPOInfoTxt
 id custom
 id customPanel
 id cut
@@ -3259,6 +3263,7 @@ id sawtooth
 id scale
 id scanBarcodeHelpText
 id scanBinsHelpText
+id scanBoxesTxt
 id scanUPCSButton
 id scanUPCSHelpText
 id scanUPCsForBolActivityLayout
@@ -3395,6 +3400,9 @@ id top
 id topPanel
 id touch_outside
 id tpoBinsActivityLayout
+id tpoCountBinsActivityLayout
+id tpoInfoBtn
+id tpoLoadBinsActivityLayout
 id tpoMainActivityLayout
 id tpoMenuTitle
 id transitionToEnd
@@ -3407,6 +3415,7 @@ id transition_transform
 id triangle
 id truckArrowIcon
 id truckIcon
+id truckInfoBtn
 id tv_label
 id txtAppVersion
 id txtFoldingScanItem
@@ -3601,6 +3610,8 @@ layout activity_shipment_pallete_carton_count
 layout activity_shipment_pallete_receiving
 layout activity_stock_take
 layout activity_tpobins
+layout activity_tpocount_bins
+layout activity_tpoload_bins
 layout activity_tpomain
 layout activity_transfer
 layout activity_transfer_receiving

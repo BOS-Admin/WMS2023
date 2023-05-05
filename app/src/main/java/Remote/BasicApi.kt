@@ -26,6 +26,9 @@ interface BasicApi {
     @GET("api/TPO/GetAllAvailableSendingTPOS")
     fun GetAllAvailableSendingTPOS(@Query("CurrentLocation") CurrentLocation: String): Observable<ResponseBody>
 
+    @GET("api/TPO/GetAllTruckSendingTPOS")
+    fun GetAllTruckSendingTPOS(@Query("CurrentLocation") CurrentLocation: String): Observable<ResponseBody>
+
     @GET("api/TPO/GetAvailableTPOBins")
     fun GetAvailableTPOBins(@Query("TPOID") TPOID: Int): Observable<ResponseBody>
 
@@ -48,7 +51,7 @@ interface BasicApi {
     fun VerifyTPOTruckForShipment(@Query("TruckBarcode") TruckBarcode: String, @Query("Count") Count: Boolean): Observable<ResponseBody>
 
     @GET("api/TPO/StartTruckBinCount")//Sets The Truck In Box Counting Mode
-    fun StartTruckBinCount(@Query("TPOID") TPOID: Int, @Query("TruckBarcode") TruckBarcode: String): Observable<ResponseBody>
+    fun StartTruckBinCount(@Query("TruckBarcode") TruckBarcode: String): Observable<ResponseBody>
 
     @GET("api/TPO/ResetTruckBinCount")//Reset The Trucks Count Mode, Either Stop The Count Or Stop The Adding
     fun ResetTruckBinCount(@Query("TruckBarcode") TruckBarcode: String, @Query("Count") Count: Boolean): Observable<ResponseBody>
@@ -61,8 +64,6 @@ interface BasicApi {
 
     @GET("api/TPO/AttemptTPOShipmentPrepared")//Submits The Truck Bins And Checks If The Count Matches
     fun AttemptTPOShipmentPrepared(@Query("TPOID") TPOID: Int, @Query("TruckBarcode") TruckBarcode: String, @Query("UserID") UserID: Int): Observable<ResponseBody>
-
-
 
     @POST("api/wms/pricing/upc/overrideItem")
     fun OverrideItemPrice(@Body model: UPCPricingItemModel): Observable<PricingItemResponseModel>

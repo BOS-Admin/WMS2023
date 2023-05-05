@@ -249,7 +249,9 @@ public class ScanUPCsForBolActivity extends AppCompatActivity {
                         }
                     }
                 }else if(s.length() != 0 && !s.toString().isBlank()){;
+                    insertUPCEditText.removeTextChangedListener(this);
                     insertUPCEditText.setText(" ");
+                    insertUPCEditText.addTextChangedListener(this);
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(insertUPCEditText.getWindowToken(), 0);
                 }

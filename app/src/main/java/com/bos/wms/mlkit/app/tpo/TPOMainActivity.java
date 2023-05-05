@@ -90,7 +90,11 @@ public class TPOMainActivity extends AppCompatActivity {
         });
 
         btnLoadTPOBins.setOnClickListener(v -> {
-            OpenSelectTPODialogForBins();
+            OpenSelectTPODialogForLoadBins();
+        });
+
+        btnCountTPOBins.setOnClickListener(v -> {
+            OpenSelectTPODialogForCountBins();
         });
 
         ValidateAuthToken();
@@ -358,6 +362,240 @@ public class TPOMainActivity extends AppCompatActivity {
             Logger.Error("API", "OpenSelectTPODialogForBins - Error Connecting: " + e.getMessage());
             ShowErrorDialog("Connection To Server Failed!");
         }
+    }
+
+    /**
+     * This Function Will Get All The Available Sending TPOS That We Can Currently Modify The Bins Of
+     */
+    public void OpenSelectTPODialogForLoadBins(){
+        ProgressDialog mainProgressDialog = ProgressDialog.show(this, "",
+                "Retrieving TPOS, Please wait...", true);
+        mainProgressDialog.show();
+
+        Logger.Debug("TPO", "OpenSelectTPODialogForLoadBins - Retrieving Sending TPOS From: " + currentLocation);
+
+        try {
+            BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
+            CompositeDisposable compositeDisposable = new CompositeDisposable();
+
+
+            compositeDisposable.addAll(
+                    api.GetAllTruckSendingTPOS(currentLocation)
+                            .subscribeOn(Schedulers.io())
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe((s) -> {
+                                if(s != null){
+                                    try {
+
+                                        String result = s.string();
+
+                                        Logger.Debug("TPO", "OpenSelectTPODialogForLoadBins - Received Sending TPOS: " + result);
+
+                                        /* We Will Get The Array As Json And Convert It To An Array List */
+                                        TPOModel[] locations = new Gson().fromJson(result, TPOModel[].class);
+
+                                        mainProgressDialog.cancel();
+
+                                        /* We Will Then Show A Dialog With A Custom Layout To Show The Available Locations */
+                                        Dialog dialog = new Dialog(TPOMainActivity.this);
+                                        dialog.setContentView(R.layout.tpo_locations_dialog);
+                                        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                                        dialog.getWindow().getAttributes().windowAnimations = R.style.tpoDialogAnimation;
+
+                                        /* Transfer The Location Response Models To Layout Data Models */
+                                        ArrayList<TPOItemsDialogDataModel> dataModels = new ArrayList<>();
+                                        for(TPOModel location : locations){
+                                            TPOItemsDialogTPOInfoDataModel model = new TPOItemsDialogTPOInfoDataModel(location.getId(), location.getToLocation(), "ID: " + location.getId() + ", " + location.getToLocation());
+                                            model.setDateCreated(location.getDateCreated());
+                                            dataModels.add(model);
+                                        }
+
+                                        ListView itemsListView = dialog.findViewById(R.id.itemsListView);
+
+                                        TextView itemsDialogTitle = dialog.findViewById(R.id.itemsMenuTitle);
+
+                                        itemsDialogTitle.setText("Select TPO");
+
+                                        /* Create A Custom Adapter For The Location Items */
+                                        TPOItemsDialogAdapter itemsAdapter = new TPOItemsDialogAdapter(dataModels, this, itemsListView);
+                                        itemsListView.setAdapter(itemsAdapter);
+
+                                        itemsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                            @Override
+                                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                                                /* Once A Location Is Clicked Attempt To Create A New TPO Heading To That Location */
+                                                TPOItemsDialogTPOInfoDataModel dataModel = (TPOItemsDialogTPOInfoDataModel)dataModels.get(position);
+                                                OpenLoadTPOBinsActivity(dataModel.getId(), dataModel.getToLocation(), dataModel.getDateCreated());
+                                                dialog.cancel();
+                                            }
+                                        });
+
+                                        dialog.show();
+                                    }catch(Exception ex){
+                                        mainProgressDialog.cancel();
+                                        Logger.Error("JSON", "OpenSelectTPODialogForLoadBins - Error: " + ex.getMessage());
+                                        ShowErrorDialog(ex.getMessage());
+                                    }
+                                }
+                            }, (throwable) -> {
+                                //This Will Translate The Error Response And Get The Error Body If Available
+                                String response = "";
+                                if(throwable instanceof HttpException){
+                                    HttpException ex = (HttpException) throwable;
+                                    response = ex.response().errorBody().string();
+                                    if(response.isEmpty()){
+                                        response = throwable.getMessage();
+                                    }
+                                    Logger.Debug("TPO", "OpenSelectTPODialogForLoadBins - Returned Error: " + response);
+                                }else {
+                                    response = throwable.getMessage();
+                                    Logger.Error("API", "OpenSelectTPODialogForLoadBins - Error In API Response: " + throwable.getMessage() + " " + throwable.toString());
+                                }
+
+                                mainProgressDialog.cancel();
+
+                                ShowErrorDialog(response);
+
+                            }));
+
+        } catch (Throwable e) {
+            mainProgressDialog.cancel();
+            Logger.Error("API", "OpenSelectTPODialogForBins - Error Connecting: " + e.getMessage());
+            ShowErrorDialog("Connection To Server Failed!");
+        }
+    }
+
+    /**
+     * This Function Will Get All The Available Sending TPOS That We Can Currently Modify The Bins Of
+     */
+    public void OpenSelectTPODialogForCountBins(){
+        ProgressDialog mainProgressDialog = ProgressDialog.show(this, "",
+                "Retrieving TPOS, Please wait...", true);
+        mainProgressDialog.show();
+
+        Logger.Debug("TPO", "OpenSelectTPODialogForCountBins - Retrieving Sending TPOS From: " + currentLocation);
+
+        try {
+            BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
+            CompositeDisposable compositeDisposable = new CompositeDisposable();
+
+
+            compositeDisposable.addAll(
+                    api.GetAllTruckSendingTPOS(currentLocation)
+                            .subscribeOn(Schedulers.io())
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe((s) -> {
+                                if(s != null){
+                                    try {
+
+                                        String result = s.string();
+
+                                        Logger.Debug("TPO", "OpenSelectTPODialogForCountBins - Received Sending TPOS: " + result);
+
+                                        /* We Will Get The Array As Json And Convert It To An Array List */
+                                        TPOModel[] locations = new Gson().fromJson(result, TPOModel[].class);
+
+                                        mainProgressDialog.cancel();
+
+                                        /* We Will Then Show A Dialog With A Custom Layout To Show The Available Locations */
+                                        Dialog dialog = new Dialog(TPOMainActivity.this);
+                                        dialog.setContentView(R.layout.tpo_locations_dialog);
+                                        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                                        dialog.getWindow().getAttributes().windowAnimations = R.style.tpoDialogAnimation;
+
+                                        /* Transfer The Location Response Models To Layout Data Models */
+                                        ArrayList<TPOItemsDialogDataModel> dataModels = new ArrayList<>();
+                                        for(TPOModel location : locations){
+                                            TPOItemsDialogTPOInfoDataModel model = new TPOItemsDialogTPOInfoDataModel(location.getId(), location.getToLocation(), "ID: " + location.getId() + ", " + location.getToLocation());
+                                            model.setDateCreated(location.getDateCreated());
+                                            dataModels.add(model);
+                                        }
+
+                                        ListView itemsListView = dialog.findViewById(R.id.itemsListView);
+
+                                        TextView itemsDialogTitle = dialog.findViewById(R.id.itemsMenuTitle);
+
+                                        itemsDialogTitle.setText("Select TPO");
+
+                                        /* Create A Custom Adapter For The Location Items */
+                                        TPOItemsDialogAdapter itemsAdapter = new TPOItemsDialogAdapter(dataModels, this, itemsListView);
+                                        itemsListView.setAdapter(itemsAdapter);
+
+                                        itemsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                            @Override
+                                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                                                /* Once A Location Is Clicked Attempt To Create A New TPO Heading To That Location */
+                                                TPOItemsDialogTPOInfoDataModel dataModel = (TPOItemsDialogTPOInfoDataModel)dataModels.get(position);
+                                                OpenCountTPOBinsActivity(dataModel.getId(), dataModel.getToLocation(), dataModel.getDateCreated());
+                                                dialog.cancel();
+                                            }
+                                        });
+
+                                        dialog.show();
+                                    }catch(Exception ex){
+                                        mainProgressDialog.cancel();
+                                        Logger.Error("JSON", "OpenSelectTPODialogForCountBins - Error: " + ex.getMessage());
+                                        ShowErrorDialog(ex.getMessage());
+                                    }
+                                }
+                            }, (throwable) -> {
+                                //This Will Translate The Error Response And Get The Error Body If Available
+                                String response = "";
+                                if(throwable instanceof HttpException){
+                                    HttpException ex = (HttpException) throwable;
+                                    response = ex.response().errorBody().string();
+                                    if(response.isEmpty()){
+                                        response = throwable.getMessage();
+                                    }
+                                    Logger.Debug("TPO", "OpenSelectTPODialogForCountBins - Returned Error: " + response);
+                                }else {
+                                    response = throwable.getMessage();
+                                    Logger.Error("API", "OpenSelectTPODialogForCountBins - Error In API Response: " + throwable.getMessage() + " " + throwable.toString());
+                                }
+
+                                mainProgressDialog.cancel();
+
+                                ShowErrorDialog(response);
+
+                            }));
+
+        } catch (Throwable e) {
+            mainProgressDialog.cancel();
+            Logger.Error("API", "OpenSelectTPODialogForCountBins - Error Connecting: " + e.getMessage());
+            ShowErrorDialog("Connection To Server Failed!");
+        }
+    }
+
+    /**
+     * This Functions Opens The TPO Loading Bins Activity
+     * @param id
+     * @param location
+     */
+    public void OpenLoadTPOBinsActivity(int id, String location, String dateCreated){
+        Logger.Debug("TPO", "OpenLoadTPOBinsActivity - Opening Activity For TPO ID: " + id + " ToLocation: " + location);
+
+        Intent i = new Intent(this, TPOLoadBinsActivity.class);
+        i.putExtra("TPOID", id);
+        i.putExtra("ToLocation", location);
+        i.putExtra("DateCreated", dateCreated);
+        startActivity(i);
+    }
+
+    /**
+     * This Functions Opens The TPO Counting Bins Activity
+     * @param id
+     * @param location
+     */
+    public void OpenCountTPOBinsActivity(int id, String location, String dateCreated){
+        Logger.Debug("TPO", "OpenCountTPOBinsActivity - Opening Activity For TPO ID: " + id + " ToLocation: " + location);
+
+        Intent i = new Intent(this, TPOCountBinsActivity.class);
+        i.putExtra("TPOID", id);
+        i.putExtra("ToLocation", location);
+        i.putExtra("DateCreated", dateCreated);
+        startActivity(i);
     }
 
     /**

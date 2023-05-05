@@ -184,8 +184,8 @@ public class General {
     }
     public static ToneGenerator toneGenerator;
     public static  void playSuccess(){
-        new ToneGenerator(AudioManager.STREAM_MUSIC, ToneGenerator.MAX_VOLUME).startTone(ToneGenerator.TONE_SUP_PIP, 150);
-        //playTone(SUCESS_TONE,500);
+        //new ToneGenerator(AudioManager.STREAM_MUSIC, ToneGenerator.MAX_VOLUME).startTone(ToneGenerator.TONE_SUP_PIP, 150);
+        playTone(ToneGenerator.TONE_SUP_PIP,5000);
     }
     public static   void playError(){
         playTone(ToneGenerator.TONE_SUP_ERROR,4000);
