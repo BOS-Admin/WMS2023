@@ -33,21 +33,18 @@ import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.HttpException;
 
-public class TPOLoadBinsActivity extends AppCompatActivity {
+public class TPOReceiveBinsActivity extends AppCompatActivity {
 
 
     EditText insertBarcodeEditText;
     TextView tpoMenuTitle;
 
-    Button tpoInfoBtn, truckInfoBtn, scanBoxesTxt, confirmBtn;
+    Button estimateInfoBtn, receivedInfoBtn, scanBoxesTxt, confirmBtn;
 
     String CurrentTruckBarcode = "";
 
     String IPAddress = "";
     int UserID = -1;
-    int TPOID = -1;
-    String ToLocation = "";
-    String DateCreated = "";
 
     boolean isBusy = false;
 
@@ -58,7 +55,7 @@ public class TPOLoadBinsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tpoload_bins);
+        setContentView(R.layout.activity_tporeceive_bins);
 
         Storage mStorage = new Storage(getApplicationContext());
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82");
@@ -67,21 +64,9 @@ public class TPOLoadBinsActivity extends AppCompatActivity {
         //Get The Current Location The Device
         currentLocation = General.getGeneral(getApplicationContext()).mainLocation;
 
-        try{
-            Bundle extras = getIntent().getExtras();
-            if (extras != null) {
-                TPOID = extras.getInt("TPOID");
-                ToLocation = extras.getString("ToLocation");
-                DateCreated = extras.getString("DateCreated");
-            }
-        }catch(Exception ex){
-            Logger.Error("Activity", "TPOLoadBinsActivity - Failed Getting TPO Info From TPO Main Activity");
-            finish();
-        }
-
         tpoMenuTitle = findViewById(R.id.tpoMenuTitle);
-        tpoInfoBtn = findViewById(R.id.tpoInfoBtn);
-        truckInfoBtn = findViewById(R.id.truckInfoBtn);
+        estimateInfoBtn = findViewById(R.id.estimateInfoBtn);
+        receivedInfoBtn = findViewById(R.id.receivedInfoBtn);
         scanBoxesTxt = findViewById(R.id.scanBoxesTxt);
         confirmBtn = findViewById(R.id.confirmBtn);
 
@@ -149,7 +134,7 @@ public class TPOLoadBinsActivity extends AppCompatActivity {
 
         insertBarcodeEditText.requestFocus();
 
-        tpoInfoBtn.setText("TPO ID: " + TPOID + "\nHeading To " + ToLocation + "\nCreated At " + DateCreated.replaceAll("T", " "));
+        //tpoInfoBtn.setText("TPO ID: " + TPOID + "\nHeading To " + ToLocation + "\nCreated At " + DateCreated.replaceAll("T", " "));
 
         scanBoxesTxt.setText("Please Scan A Truck Barcode To Begin!");
         scanBoxesTxt.setBackgroundColor(Color.parseColor("#D10000"));
@@ -157,15 +142,8 @@ public class TPOLoadBinsActivity extends AppCompatActivity {
         confirmBtn.setEnabled(false);
 
         confirmBtn.setOnClickListener(view -> {
-            AttemptTPOShipmentPrepared();
+            AttemptReceiveShipment();
         });
-
-        /**
-         * These Are For Testing
-         */
-        CurrentTruckBarcode = "Truck";//For Testing
-        confirmBtn.setEnabled(true);
-
     }
 
     /**
@@ -173,84 +151,7 @@ public class TPOLoadBinsActivity extends AppCompatActivity {
      * @param barcode
      */
     public void ValidateTruckBarcode(String barcode){
-        ProgressDialog mainProgressDialog = ProgressDialog.show(this, "",
-                "Getting Truck Info For: " + barcode + ", Please wait...", true);
-        mainProgressDialog.show();
 
-        Logger.Debug("TPO", "ValidateTruckBarcode - Getting Truck Info For Truck: " + barcode);
-
-        try {
-            BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
-            CompositeDisposable compositeDisposable = new CompositeDisposable();
-
-
-            compositeDisposable.addAll(
-                    api.VerifyTPOTruckForShipment(barcode, false)
-                            .subscribeOn(Schedulers.io())
-                            .observeOn(AndroidSchedulers.mainThread())
-                            .subscribe((s) -> {
-                                if(s != null){
-                                    try {
-
-                                        String result = s.string();
-
-                                        Logger.Debug("TPO", "ValidateTruckBarcode - Received Truck Info For Truck: " + barcode + " " + result);
-
-                                        /* We Will Get The Truck Info As Json And Convert It To TPOTruckInfoModel */
-                                        TPOTruckInfoModel model = new Gson().fromJson(result, TPOTruckInfoModel.class);
-
-                                        mainProgressDialog.cancel();
-                                        CurrentTruckBarcode = barcode;
-                                        isTruckValid = true;
-
-                                        General.playSuccess();
-
-                                        runOnUiThread(new Runnable() {
-                                            @Override
-                                            public void run() {
-                                                scanBoxesTxt.setText("Please Scan The Bin Barcode Before Loading!");
-                                                scanBoxesTxt.setBackgroundColor(Color.parseColor("#00A300"));
-
-                                                truckInfoBtn.setText("Truck Name: " + model.getTruckName() + "\nTruck Barcode: " +
-                                                        model.getTruckBarcode() + "\nTruck Plate: " + model.getTruckPlate());
-
-                                            }
-                                        });
-
-                                    }catch(Exception ex){
-                                        mainProgressDialog.cancel();
-                                        Logger.Error("JSON", "ValidateTruckBarcode - Error: " + ex.getMessage());
-                                        ShowErrorDialog(ex.getMessage());
-                                    }
-                                }
-                            }, (throwable) -> {
-                                //This Will Translate The Error Response And Get The Error Body If Available
-                                String response = "";
-                                if(throwable instanceof HttpException){
-                                    HttpException ex = (HttpException) throwable;
-                                    response = ex.response().errorBody().string();
-                                    if(response.isEmpty()){
-                                        response = throwable.getMessage();
-                                    }
-                                    Logger.Debug("TPO", "ValidateTruckBarcode - Returned Error: " + response);
-                                    mainProgressDialog.cancel();
-                                    ShowSnackbar(response);
-                                    General.playError();
-                                }else {
-                                    response = throwable.getMessage();
-                                    Logger.Error("API", "ValidateTruckBarcode - Error In API Response: " + throwable.getMessage() + " " + throwable.toString());
-
-                                    mainProgressDialog.cancel();
-                                    ShowErrorDialog(response);
-                                }
-                            }));
-
-        } catch (Throwable e) {
-            mainProgressDialog.cancel();
-            Logger.Error("API", "ValidateTruckBarcode - Error Connecting: " + e.getMessage());
-            ShowSnackbar("Connection To Server Failed!");
-            General.playError();
-        }
     }
 
     /**
@@ -258,89 +159,14 @@ public class TPOLoadBinsActivity extends AppCompatActivity {
      * @param barcode
      */
     public void LoadBinItem(String barcode){
-        if(isBusy)
-            return;
 
-        isBusy = true;
-
-        ProgressDialog mainProgressDialog = ProgressDialog.show(this, "",
-                "Loading Bin #" + barcode + " To The Truck, Please wait...", true);
-        mainProgressDialog.show();
-
-        Logger.Debug("TPO", "LoadBinItem - Adding Bin #" + barcode + " To TPO ID: " + TPOID);
-
-        try {
-            BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
-            CompositeDisposable compositeDisposable = new CompositeDisposable();
-
-
-            compositeDisposable.addAll(
-                    api.VerifyTPOBinShipment(TPOID, CurrentTruckBarcode, barcode, UserID)
-                            .subscribeOn(Schedulers.io())
-                            .observeOn(AndroidSchedulers.mainThread())
-                            .subscribe((s) -> {
-                                if(s != null){
-                                    try {
-
-                                        String result = s.string();
-
-                                        Logger.Debug("TPO", "LoadBinItem - Received Result: " + result);
-
-
-                                        mainProgressDialog.cancel();
-
-                                        runOnUiThread(new Runnable() {
-                                            @Override
-                                            public void run() {
-                                                confirmBtn.setEnabled(true);
-                                            }
-                                        });
-
-                                        ShowSnackbar(result);
-                                        General.playSuccess();
-
-                                    }catch(Exception ex){
-                                        mainProgressDialog.cancel();
-                                        Logger.Error("JSON", "LoadBinItem - Error: " + ex.getMessage());
-                                        ShowErrorDialog(ex.getMessage());
-                                    }
-                                    isBusy = false;
-                                }
-                            }, (throwable) -> {
-                                //This Will Translate The Error Response And Get The Error Body If Available
-                                String response = "";
-                                if(throwable instanceof HttpException){
-                                    HttpException ex = (HttpException) throwable;
-                                    response = ex.response().errorBody().string();
-                                    if(response.isEmpty()){
-                                        response = throwable.getMessage();
-                                    }
-                                    Logger.Debug("TPO", "LoadBinItem - Returned Error: " + response);
-                                    mainProgressDialog.cancel();
-                                    ShowSnackbar(response);
-                                    General.playError();
-                                }else {
-                                    response = throwable.getMessage();
-                                    Logger.Error("API", "LoadBinItem - Error In API Response: " + throwable.getMessage() + " " + throwable.toString());
-                                    mainProgressDialog.cancel();
-                                    ShowErrorDialog(response);
-                                }
-                                isBusy = false;
-                            }));
-
-        } catch (Throwable e) {
-            mainProgressDialog.cancel();
-            Logger.Error("API", "LoadBinItem - Error Connecting: " + e.getMessage());
-            ShowErrorDialog("Connection To Server Failed!");
-            isBusy = false;
-        }
     }
 
     /**
      * This Is Called When The Bins Are All Scanned And We Need To Send The Truck To The Destination
      */
-    public void AttemptTPOShipmentPrepared(){
-        if(isBusy)
+    public void AttemptReceiveShipment(){
+        /*if(isBusy)
             return;
 
         isBusy = true;
@@ -408,7 +234,7 @@ public class TPOLoadBinsActivity extends AppCompatActivity {
             Logger.Error("API", "AttemptTPOShipmentPrepared - Error Connecting: " + e.getMessage());
             ShowErrorDialog("Connection To Server Failed!");
             isBusy = false;
-        }
+        }*/
     }
 
     /**
@@ -416,7 +242,7 @@ public class TPOLoadBinsActivity extends AppCompatActivity {
      */
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        //Wait
     }
 
     /**
@@ -453,7 +279,7 @@ public class TPOLoadBinsActivity extends AppCompatActivity {
      * @param message
      */
     public void ShowSnackbar(String message){
-        Snackbar.make(findViewById(R.id.tpoLoadBinsActivityLayout), message, Snackbar.LENGTH_LONG)
+        Snackbar.make(findViewById(R.id.tpoReceiveBinsActivityLayout), message, Snackbar.LENGTH_LONG)
                 .setAction("No action", null).show();
     }
 

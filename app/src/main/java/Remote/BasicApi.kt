@@ -65,6 +65,12 @@ interface BasicApi {
     @GET("api/TPO/AttemptTPOShipmentPrepared")//Submits The Truck Bins And Checks If The Count Matches
     fun AttemptTPOShipmentPrepared(@Query("TPOID") TPOID: Int, @Query("TruckBarcode") TruckBarcode: String, @Query("UserID") UserID: Int): Observable<ResponseBody>
 
+    @GET("api/TPO/GetAllAvailableReceivingTPOSData")//Gets All The Bins That Are Supposed To Be Received
+    fun GetAllAvailableReceivingTPOSData(@Query("CurrentLocation") CurrentLocation: String): Observable<ResponseBody>
+
+    @POST("api/TPO/AddReceivedTPOBins")
+    fun AddReceivedTPOBins(@Query("CurrentLocation") CurrentLocation: String): Observable<ResponseBody>
+
     @POST("api/wms/pricing/upc/overrideItem")
     fun OverrideItemPrice(@Body model: UPCPricingItemModel): Observable<PricingItemResponseModel>
     @POST("api/wms/pricing/itempricing/item")

@@ -32,9 +32,13 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".app.tpo.TPOCountBinsActivity"
+            android:name=".app.tpo.TPOReceiveBinsActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".app.tpo.TPOCountBinsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".app.tpo.TPOLoadBinsActivity"
             android:exported="false"

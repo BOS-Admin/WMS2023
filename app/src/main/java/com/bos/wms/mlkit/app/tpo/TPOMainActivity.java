@@ -28,6 +28,7 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 
 import Model.TPO.TPOModel;
+import Model.TPO.TPOReceivedBinModel;
 import Model.TPO.TPOTransferLocation;
 import Remote.APIClient;
 import Remote.BasicApi;
@@ -95,6 +96,10 @@ public class TPOMainActivity extends AppCompatActivity {
 
         btnCountTPOBins.setOnClickListener(v -> {
             OpenSelectTPODialogForCountBins();
+        });
+
+        btnTPOReceive.setOnClickListener(v -> {
+            AttemptTPOReceiveGetInfo();
         });
 
         ValidateAuthToken();
@@ -566,6 +571,91 @@ public class TPOMainActivity extends AppCompatActivity {
             Logger.Error("API", "OpenSelectTPODialogForCountBins - Error Connecting: " + e.getMessage());
             ShowErrorDialog("Connection To Server Failed!");
         }
+    }
+
+    /**
+     * This function downloads all the available receiving tpos and their data
+     */
+    public void AttemptTPOReceiveGetInfo(){
+        ProgressDialog mainProgressDialog = ProgressDialog.show(this, "",
+                "Retrieving TPO Info, Please wait...", true);
+        mainProgressDialog.show();
+
+        Logger.Debug("TPO", "AttemptTPOReceiveGetInfo - Retrieving Receiving TPOS From: " + currentLocation);
+
+        try {
+            BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
+            CompositeDisposable compositeDisposable = new CompositeDisposable();
+
+
+            compositeDisposable.addAll(
+                    api.GetAllAvailableReceivingTPOSData(currentLocation)
+                            .subscribeOn(Schedulers.io())
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe((s) -> {
+                                if(s != null){
+                                    try {
+
+                                        String result = s.string();
+
+                                        Logger.Debug("TPO", "AttemptTPOReceiveGetInfo - Received TPO Data: " + result);
+
+                                        /* We Will Get The Array As Json And Convert It To An Array List */
+                                        TPOReceivedBinModel[] bins = new Gson().fromJson(result, TPOReceivedBinModel[].class);
+
+                                        TPOReceivedInfo.ReceivedItems = new ArrayList<>();
+
+                                        for(TPOReceivedBinModel model : bins){
+                                            TPOReceivedInfo.ReceivedItems.add(model);
+                                        }
+
+                                        mainProgressDialog.cancel();
+
+                                        OpenReceiveTPOActivity();
+
+
+                                    }catch(Exception ex){
+                                        mainProgressDialog.cancel();
+                                        Logger.Error("JSON", "AttemptTPOReceiveGetInfo - Error: " + ex.getMessage());
+                                        ShowErrorDialog(ex.getMessage());
+                                    }
+                                }
+                            }, (throwable) -> {
+                                //This Will Translate The Error Response And Get The Error Body If Available
+                                String response = "";
+                                if(throwable instanceof HttpException){
+                                    HttpException ex = (HttpException) throwable;
+                                    response = ex.response().errorBody().string();
+                                    if(response.isEmpty()){
+                                        response = throwable.getMessage();
+                                    }
+                                    Logger.Debug("TPO", "AttemptTPOReceiveGetInfo - Returned Error: " + response);
+                                }else {
+                                    response = throwable.getMessage();
+                                    Logger.Error("API", "AttemptTPOReceiveGetInfo - Error In API Response: " + throwable.getMessage() + " " + throwable.toString());
+                                }
+
+                                mainProgressDialog.cancel();
+
+                                ShowErrorDialog(response);
+
+                            }));
+
+        } catch (Throwable e) {
+            mainProgressDialog.cancel();
+            Logger.Error("API", "AttemptTPOReceiveGetInfo - Error Connecting: " + e.getMessage());
+            ShowErrorDialog("Connection To Server Failed!");
+        }
+    }
+
+    /**
+     *
+     */
+    public void OpenReceiveTPOActivity(){
+        Logger.Debug("TPO", "OpenReceiveTPOActivity - Opening Activity");
+
+        Intent i = new Intent(this, TPOReceiveBinsActivity.class);
+        startActivity(i);
     }
 
     /**
