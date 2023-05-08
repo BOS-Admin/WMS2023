@@ -2985,6 +2985,7 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id estimateInfoBtn
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3245,6 +3246,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id receivedInfoBtn
 id rectangles
 id recyclerView
 id reverseSawtooth
@@ -3405,6 +3407,7 @@ id tpoInfoBtn
 id tpoLoadBinsActivityLayout
 id tpoMainActivityLayout
 id tpoMenuTitle
+id tpoReceiveBinsActivityLayout
 id transitionToEnd
 id transitionToStart
 id transition_current_scene
@@ -3613,6 +3616,7 @@ layout activity_tpobins
 layout activity_tpocount_bins
 layout activity_tpoload_bins
 layout activity_tpomain
+layout activity_tporeceive_bins
 layout activity_transfer
 layout activity_transfer_receiving
 layout activity_upc_pricing

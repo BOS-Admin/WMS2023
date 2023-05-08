@@ -11,6 +11,7 @@ import Model.Pricing.PricingItemResponseModel
 import Model.Pricing.PricingStandModel
 import Model.Pricing.QuatroPricingItemModel
 import Model.Pricing.UPCPricingItemModel
+import Model.TPO.ReceivedTPOBinsModel
 import io.reactivex.Observable
 import okhttp3.ResponseBody
 import retrofit2.Call
@@ -69,7 +70,10 @@ interface BasicApi {
     fun GetAllAvailableReceivingTPOSData(@Query("CurrentLocation") CurrentLocation: String): Observable<ResponseBody>
 
     @POST("api/TPO/AddReceivedTPOBins")
-    fun AddReceivedTPOBins(@Query("CurrentLocation") CurrentLocation: String): Observable<ResponseBody>
+    fun AddReceivedTPOBins(@Body model: ReceivedTPOBinsModel): Observable<ResponseBody>
+
+    @GET("api/OverridePasswords/GetAvailablePasswords")
+    fun GetAllOverridePasswords(@Query("CurrentLocation") CurrentLocation: String): Observable<List<String>>
 
     @POST("api/wms/pricing/upc/overrideItem")
     fun OverrideItemPrice(@Body model: UPCPricingItemModel): Observable<PricingItemResponseModel>
