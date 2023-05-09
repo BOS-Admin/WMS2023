@@ -26,6 +26,7 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
+import Model.TPO.ReceivedTPOBinsModel;
 import Model.TPO.TPOAvailableBinModel;
 import Model.TPO.TPOReceivedBinModel;
 import Model.TPO.TPOTruckInfoModel;
@@ -77,8 +78,9 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
 
         tpoMenuTitle.setText("Current Location " + currentLocation);
 
-        TPOReceivedInfo.ValidTPOS = new ArrayList<>();
+        TPOReceivedInfo.OverrideBinBarcodes = new ArrayList<>();
         TPOReceivedInfo.BinIDS = new ArrayList<>();
+        TPOReceivedInfo.UsedOverridePasswords = new ArrayList<>();
 
         try{
             String barcode = General.getGeneral(this).getSetting(this,"TPOTruckBarcodeStartsWith");
@@ -166,6 +168,9 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
         confirmBtn.setOnClickListener(view -> {
             AttemptReceiveShipment();
         });
+
+        GetOverridePasswords();
+
     }
 
     /**
@@ -196,24 +201,41 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
         boolean binNeedsOverride = true;
         for (TPOReceivedBinModel model : TPOReceivedInfo.ReceivedItems) {
             if(model.getBinBarcode().equalsIgnoreCase(barcode)){
+
+                binNeedsOverride = false;//The Bin Is Valid And Doesn't Need Override
+
                 if(model.getTruckBarcode().equalsIgnoreCase(CurrentTruckBarcode)){
 
                     //Process The Bin Here
+                    if(TPOReceivedInfo.BinIDS == null){
+                        TPOReceivedInfo.BinIDS = new ArrayList<>();
+                    }
 
-                    binNeedsOverride = false;
+                    if(TPOReceivedInfo.BinIDS.contains(model.getID())){
+                        ShowSnackbar("The Bin Barcode You Scanned: " + barcode + " Was Already Scanned And Received!");
+                        General.playError();
+                    }else {
+                        Logger.Debug("TPO-RECEIVE", "ProcessBinBarcode - Scanned A Bin Barcode To Be Received. " +
+                                "CurrentTruck: " + CurrentTruckBarcode + " BinBarcode: " + barcode + " BinTruckBarcode: " + model.getTruckBarcode() +
+                                " BinTPOID: " + model.getTPOID() + " BinID: " + model.getID());
+                        TPOReceivedInfo.BinIDS.add(model.getID());
+                        ShowSnackbar("The Bin Barcode You Scanned: " + barcode + " Is Received Successfully!");
+                        General.playSuccess();
+                    }
+
                     break;
                 }else {
                     Logger.Debug("TPO-RECEIVE", "ProcessBinBarcode - Scanned A Bin Barcode That Isn't In The Current Truck. " +
                             "CurrentTruck: " + CurrentTruckBarcode + " BinBarcode: " + barcode + " BinTruckBarcode: " + model.getTruckBarcode() +
                             " BinTPOID: " + model.getTPOID());
                     ShowErrorDialog("The Bin Barcode You Scanned: " + barcode + " Does Not Belong To This Truck, Please Scan The New Truck Barcode!");
-                    binNeedsOverride = false;
                     break;
                 }
             }
         }
         if(binNeedsOverride){
             //Bin Needs To Be Overriden
+
         }
     }
 
