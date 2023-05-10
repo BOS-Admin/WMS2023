@@ -120,7 +120,9 @@ public class EmptyBoxActivity extends AppCompatActivity {
 
                     ProcessBinBarCode(s.toString().replaceAll(" ", ""));
                 }else if(s.length() != 0 && !s.toString().isEmpty()){;
+                    insertBinBoxBarcode.removeTextChangedListener(this);
                     insertBinBoxBarcode.setText(" ");
+                    insertBinBoxBarcode.addTextChangedListener(this);
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(insertBinBoxBarcode.getWindowToken(), 0);
                 }

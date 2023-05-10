@@ -36,6 +36,11 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden"/>
         <activity
+            android:name=".app.UPCRecognitionPricingActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
             android:name=".app.PasBrandOCRActivity"
             android:exported="false" />
         <activity

@@ -39,6 +39,13 @@
                 android:visibility="gone"/>
 
             <Button
+                android:id="@+id/btnUPCRecognitionPricing"
+                style="@style/button_main_menu_style"
+                android:drawableLeft="@drawable/upcpricing"
+                android:text="UPC Recognition Pricing"
+                android:visibility="gone"/>
+
+            <Button
                 android:id="@+id/btnMenuPGPricing"
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/pgpricing"

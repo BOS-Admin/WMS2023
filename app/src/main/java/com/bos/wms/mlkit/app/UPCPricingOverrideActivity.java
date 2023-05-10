@@ -179,8 +179,9 @@ public class UPCPricingOverrideActivity extends AppCompatActivity {
 
                     ProcessBarCode(s.toString());
                 } else if (s.length() != 0 && !s.toString().isEmpty()) {
-                    ;
+                    insertBarcode.removeTextChangedListener(this);
                     insertBarcode.setText(" ");
+                    insertBarcode.addTextChangedListener(this);
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(insertBarcode.getWindowToken(), 0);
                 }

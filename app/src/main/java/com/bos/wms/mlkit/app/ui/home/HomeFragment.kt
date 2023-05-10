@@ -45,6 +45,7 @@ class HomeFragment : Fragment() {
         if(UserPermissions.PermissionsReceived()){
             UserPermissions.ValidatePermission("WMSApp.UPCPricing", root.btnUPCPricing);
             UserPermissions.ValidatePermission("WMSApp.UPCPricingOverride", root.btnUPCPricingOverride);
+            UserPermissions.ValidatePermission("WMSApp.UPCRecognitionPricing", root.btnUPCRecognitionPricing);
             UserPermissions.ValidatePermission("WMSApp.PGPricing", root.btnMenuPGPricing);
             UserPermissions.ValidatePermission("WMSApp.PutAwayPallete", root.btnMenuPutAwayPallete);
             UserPermissions.ValidatePermission("WMSApp.MissingItem", root.btnSerialMissing);
@@ -66,6 +67,7 @@ class HomeFragment : Fragment() {
             UserPermissions.AddOnReceiveListener {
                 UserPermissions.ValidatePermission("WMSApp.UPCPricing", root.btnUPCPricing);
                 UserPermissions.ValidatePermission("WMSApp.UPCPricingOverride", root.btnUPCPricingOverride);
+                UserPermissions.ValidatePermission("WMSApp.UPCRecognitionPricing", root.btnUPCRecognitionPricing);
                 UserPermissions.ValidatePermission("WMSApp.PGPricing", root.btnMenuPGPricing);
                 UserPermissions.ValidatePermission("WMSApp.PutAwayPallete", root.btnMenuPutAwayPallete);
                 UserPermissions.ValidatePermission("WMSApp.MissingItem", root.btnSerialMissing);
@@ -128,6 +130,10 @@ class HomeFragment : Fragment() {
 
         root.btnUPCPricingOverride.setOnClickListener {
             ProceedUPCPricingOverride()
+        }
+
+        root.btnUPCRecognitionPricing.setOnClickListener {
+            ProceedUPCRecognitionPricing()
         }
 
         root.btnMenuShipmentPalleteReceiving.setOnClickListener {
@@ -294,6 +300,11 @@ class HomeFragment : Fragment() {
 
     fun ProceedUPCPricing() {
         val intent = Intent (getActivity(), UPCPricingActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun ProceedUPCRecognitionPricing() {
+        val intent = Intent (getActivity(), UPCRecognitionPricingActivity::class.java)
         startActivity(intent)
     }
 
