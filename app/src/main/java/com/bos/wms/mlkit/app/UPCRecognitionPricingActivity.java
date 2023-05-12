@@ -783,13 +783,13 @@ public class UPCRecognitionPricingActivity extends AppCompatActivity {
                         }else {
                             mainProgressDialog.cancel();
                             cameraPreviewImageView.setVisibility(View.INVISIBLE);
-                            showMessage("OCR Error", "Failed analyzing the data", Color.RED);
+                            showMessage("OCR Error", "Failed analyzing the data, please try again!", Color.RED);
                             Logger.Debug("OCR", "UploadImage - Failed analyzing the data");
                         }
                     }catch (Exception ex){
                         mainProgressDialog.cancel();
                         cameraPreviewImageView.setVisibility(View.INVISIBLE);
-                        showMessage("OCR Error", "An Internal Error Occurred: " + ex.getMessage(), Color.RED);
+                        showMessage("OCR Error", "Failed analyzing the data, please try again!\nError : " + ex.getMessage(), Color.RED);
                         Logger.Error("OCR", "UploadImage - Returned Error: " + ex.getMessage());
                     }
                 }else {
@@ -877,11 +877,17 @@ public class UPCRecognitionPricingActivity extends AppCompatActivity {
                 for(String  arg2 : args2){
                     arg2 = arg2.replaceAll("/", "1").replaceAll("[^0-9]", "");
                     if(arg2.length() >= 12){
-                        arg2 = arg2.replaceFirst("^0+(?!$)", "");
-                        Logger.Error("TEST", "UPC: " + arg2);
-                        if((arg2.length() == 12 || arg2.length() == 13) && !upcs.contains(arg2)){
-                            upcs.add(arg2);
-                            GotUPCFromCamera(arg2);
+                        String currentUPC = "";
+                        for(int i = 0; i < arg2.length(); i++){
+                            if(arg2.length() - i == 12){
+                                currentUPC = arg2.substring(i);
+                                break;
+                            }
+                        }
+                        Logger.Debug("OCR", "Got Original UPC Text: " + arg2 + " Removed Leading Zeros: " + currentUPC);
+                        if(currentUPC.length() == 12  && !upcs.contains(currentUPC)){
+                            upcs.add(currentUPC);
+                            GotUPCFromCamera(currentUPC);
                         }
                     }
                 }
