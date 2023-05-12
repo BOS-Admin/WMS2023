@@ -3,24 +3,24 @@
 3    package="com.bos.wms.mlkit.test" >
 4
 5    <uses-sdk
-5-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest468659595764726737.xml:5:5-74
+5-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11815394892763587732.xml:5:5-74
 6        android:minSdkVersion="24"
-6-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest468659595764726737.xml:5:15-41
+6-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11815394892763587732.xml:5:15-41
 7        android:targetSdkVersion="33" />
-7-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest468659595764726737.xml:5:42-71
+7-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11815394892763587732.xml:5:42-71
 8
 9    <instrumentation
-9-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest468659595764726737.xml:11:5-15:67
+9-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11815394892763587732.xml:11:5-15:67
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest468659595764726737.xml:11:22-76
+10-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11815394892763587732.xml:11:22-76
 11        android:functionalTest="false"
-11-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest468659595764726737.xml:14:22-52
+11-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11815394892763587732.xml:14:22-52
 12        android:handleProfiling="false"
-12-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest468659595764726737.xml:13:22-53
+12-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11815394892763587732.xml:13:22-53
 13        android:label="Tests for com.bos.wms.mlkit"
-13-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest468659595764726737.xml:15:22-65
+13-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11815394892763587732.xml:15:22-65
 14        android:targetPackage="com.bos.wms.mlkit" />
-14-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest468659595764726737.xml:12:22-63
+14-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11815394892763587732.xml:12:22-63
 15
 16    <uses-permission android:name="android.permission.REORDER_TASKS" />
 16-->[androidx.test:core:1.4.0] C:\Users\m.serhan\.gradle\caches\transforms-3\0a451afedd3937fcc5c097f3444f6ae6\transformed\jetified-core-1.4.0\AndroidManifest.xml:24:5-72
@@ -40,12 +40,12 @@
 22    </queries>
 23
 24    <application
-24-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest468659595764726737.xml:7:5-9:19
+24-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11815394892763587732.xml:7:5-9:19
 25        android:debuggable="true"
 26        android:extractNativeLibs="false" >
 27        <uses-library android:name="android.test.runner" />
-27-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest468659595764726737.xml:8:9-60
-27-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest468659595764726737.xml:8:23-57
+27-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11815394892763587732.xml:8:9-60
+27-->C:\Users\m.serhan\StudioProjects\WMS2023\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11815394892763587732.xml:8:23-57
 28
 29        <activity
 29-->[androidx.test:core:1.4.0] C:\Users\m.serhan\.gradle\caches\transforms-3\0a451afedd3937fcc5c097f3444f6ae6\transformed\jetified-core-1.4.0\AndroidManifest.xml:27:9-34:20

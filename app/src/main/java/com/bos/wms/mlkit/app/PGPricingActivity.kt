@@ -200,6 +200,7 @@ class PGPricingActivity : AppCompatActivity() {
                     return
                 }
 
+
                 ValidateScan(itemSerialStr,PGStr,SeasonStr)
                 txtItemSerial.setShowSoftInputOnFocus(false);
                 txtPG.setShowSoftInputOnFocus(false);

@@ -25,7 +25,7 @@ public class General {
     public Integer FloorID=0;
 
     public String UserName="";
-    public String AppVersion="2.1.2 27/04/2023";
+    public String AppVersion="2.1.3 10/05/2023";
     int interval = 3600;    // when there's no activity
 
     public String ipAddress="";

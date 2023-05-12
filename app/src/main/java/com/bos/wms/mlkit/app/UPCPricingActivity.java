@@ -176,15 +176,11 @@ public class UPCPricingActivity extends AppCompatActivity {
 
                     ProcessBarCode(s.toString());
                 } else if (s.length() != 0 && !s.toString().isEmpty()) {
-                    try {
-                        insertBarcode.removeTextChangedListener(this);
-                        insertBarcode.setText(" ");
-                        insertBarcode.addTextChangedListener(this);
-                        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                        imm.hideSoftInputFromWindow(insertBarcode.getWindowToken(), 0);
-                    }catch(Exception ex){
-                        Logger.Error("KEYBOARD", "UPCPricingActivity - Failed Hiding Keyboard: " + ex.getMessage());
-                    }
+                    insertBarcode.removeTextChangedListener(this);
+                    insertBarcode.setText(" ");
+                    insertBarcode.addTextChangedListener(this);
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(insertBarcode.getWindowToken(), 0);
                 }
             }
         });
