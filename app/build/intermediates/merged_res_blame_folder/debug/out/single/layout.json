@@ -80,10 +80,6 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/content_item_pricing.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_tpobins.xml",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tpobins.xml"
-    },
-    {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_main_menu1.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_main_menu1.xml"
     },
@@ -116,10 +112,6 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_packing.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_tporeceive_bins.xml",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tporeceive_bins.xml"
-    },
-    {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_shipment_pallete_carton_count.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_shipment_pallete_carton_count.xml"
     },
@@ -140,10 +132,6 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_upcpricing_override.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_tpomain.xml",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tpomain.xml"
-    },
-    {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/content_fillpallete.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/content_fillpallete.xml"
     },
@@ -160,10 +148,6 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/content_new_item_pricing.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_tpocount_bins.xml",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tpocount_bins.xml"
-    },
-    {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/fragment_dashboard.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/fragment_dashboard.xml"
     },
@@ -172,16 +156,8 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_put_away.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/tpo_location_item.xml",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/tpo_location_item.xml"
-    },
-    {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_login.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_login.xml"
-    },
-    {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_tpoload_bins.xml",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tpoload_bins.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_upcrecognition_pricing.xml",
@@ -234,10 +210,6 @@
     {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_pg_pricing.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_pg_pricing.xml"
-    },
-    {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/tpo_locations_dialog.xml",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/tpo_locations_dialog.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_new_item_pricing.xml",

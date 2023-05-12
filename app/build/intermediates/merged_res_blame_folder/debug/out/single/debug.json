@@ -28,14 +28,6 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_upcrecognition_pricing.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_tpomain.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tpomain.xml"
-    },
-    {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_tpo_locations_dialog.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/tpo_locations_dialog.xml"
-    },
-    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_baseline_done_icon.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/drawable/baseline_done_icon.xml"
     },
@@ -88,10 +80,6 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/content_itemserial_upc_missing.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_baseline_shipment_arrow_forward.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/drawable/baseline_shipment_arrow_forward.xml"
-    },
-    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/mipmap-hdpi_ic_launcher.png.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/mipmap-hdpi/ic_launcher.png"
     },
@@ -102,10 +90,6 @@
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_customborder.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/drawable/customborder.xml"
-    },
-    {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_tpoload_bins.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tpoload_bins.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_scan_upcs_item.xml.flat",
@@ -216,10 +200,6 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_empty_box.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_tpobins.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tpobins.xml"
-    },
-    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_baseline_delete_all_icon.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/drawable/baseline_delete_all_icon.xml"
     },
@@ -276,10 +256,6 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_fillpallete.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_tpo_location_item.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/tpo_location_item.xml"
-    },
-    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_count.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_count.xml"
     },
@@ -308,10 +284,6 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_transfer.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_tporeceive_bins.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tporeceive_bins.xml"
-    },
-    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_a9.png.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/drawable/a9.png"
     },
@@ -324,20 +296,12 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_main_menu1.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_baseline_add_24.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/drawable/baseline_add_24.xml"
-    },
-    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_ic_home_black_24dp.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/drawable/ic_home_black_24dp.xml"
-    },
-    {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_tpocount_bins.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tpocount_bins.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -438,10 +402,6 @@
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_content_serial_generator.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/content_serial_generator.xml"
-    },
-    {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_baseline_local_shipping_icon.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/drawable/baseline_local_shipping_icon.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_upc_item_delete_icon.xml.flat",
