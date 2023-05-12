@@ -878,7 +878,6 @@ public class UPCRecognitionPricingActivity extends AppCompatActivity {
                     arg2 = arg2.replaceAll("/", "1").replaceAll("[^0-9]", "");
                     if(arg2.length() >= 12){
                         arg2 = arg2.replaceFirst("^0+(?!$)", "");
-                        Logger.Error("TEST", "UPC: " + arg2);
                         if((arg2.length() == 12 || arg2.length() == 13) && !upcs.contains(arg2)){
                             upcs.add(arg2);
                             GotUPCFromCamera(arg2);

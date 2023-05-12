@@ -1,0 +1,1699 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]" date="1683880630367" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 5/12/2023 1:36 AM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityTpoloadBinsBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityTpoloadBinsBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/layout_tpo_locations_dialog.xml.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/layout_tpo_locations_dialog.xml.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPickingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPickingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPickingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentItemPricingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentItemPricingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentItemPricingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOBinsActivity$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOBinsActivity$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOBinsActivity$5.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOBinsActivity$5.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentSerialGeneratorBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentSerialGeneratorBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentSerialGeneratorBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOMainActivity$5.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOMainActivity$5.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPutawaypalleteBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPutawaypalleteBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPutawaypalleteBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOMainActivity$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOMainActivity$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOMainActivity$3.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOMainActivity$3.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.values.at" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/class-attributes.tab.values.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityScanUpcsForBolBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityScanUpcsForBolBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityScanUpcsForBolBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/class-attributes.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/class-attributes.tab.values1.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPackingReasonBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPackingReasonBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPackingReasonBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$3$1.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$3$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/adapters/TPOItemsDialogAdapter.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOItemsDialogAdapter.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOReceiveBinsActivity$1.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOReceiveBinsActivity$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOBinsActivity.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOBinsActivity.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityShipmentPalleteCartonBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityShipmentPalleteCartonBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityShipmentPalleteCartonBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/adapters/BinBarcodeScannedAdapter$ViewHolder.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BinBarcodeScannedAdapter$ViewHolder.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/file-to-id.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/adapters/TPOItemsDialogDataModel.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOItemsDialogDataModel.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/PasBrandOCRActivity$5.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/PasBrandOCRActivity$5.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/PasBrandOCRActivity$5.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/adapters/UPCScannedAdapter.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/adapters/UPCScannedAdapter.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/UPCScannedAdapter.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPutAwayBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPutAwayBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPutAwayBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPackingDcBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPackingDcBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPackingDcBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/androidResources" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/androidResources" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/executionHistory.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/executionHistory.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/internal-name-to-source.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.s" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.s" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/proto.tab.values.s" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/layout_activity_tporeceive_bins.xml.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/layout_activity_tporeceive_bins.xml.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/internal-name-to-source.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/classes.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentItemPricingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentItemPricingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentItemPricingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$2.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$2.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentSerialGeneratorBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentSerialGeneratorBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentSerialGeneratorBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityStockTakeBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityStockTakeBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityStockTakeBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/adapters/UPCScannedAdapter.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/adapters/UPCScannedAdapter.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/UPCScannedAdapter.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/Model/TPO/TPOAvailableBinModel.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOAvailableBinModel.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/tmp/kotlin-classes/debug/com/bos/wms/mlkit/app/bosApp/CountActivity.class" />
+    <option name="AFTER_PATH" value="app/build/tmp/kotlin-classes/debug/com/bos/wms/mlkit/app/bosApp/CountActivity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/CountActivity.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOLoadBinsActivity$5.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOLoadBinsActivity$5.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/tmp/kotlin-classes/debug/Remote/APIClient.class" />
+    <option name="AFTER_PATH" value="app/build/tmp/kotlin-classes/debug/Remote/APIClient.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/APIClient.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/BolRecognitionActivity.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/BolRecognitionActivity.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BolRecognitionActivity.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOLoadBinsActivity$4.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOLoadBinsActivity$4.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityItemserialMissingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityItemserialMissingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityItemserialMissingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/tmp/kotlin-classes/debug/com/bos/wms/mlkit/CustomListAdapter.class" />
+    <option name="AFTER_PATH" value="app/build/tmp/kotlin-classes/debug/com/bos/wms/mlkit/CustomListAdapter.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/CustomListAdapter.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPrinterSelectionBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPrinterSelectionBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPrinterSelectionBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/file-to-id.tab.values.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/drawable_baseline_add_24.xml.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/drawable_baseline_add_24.xml.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_8_2023_5_25_AM_[Changes]/sha1-checksums.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/sha1-checksums.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityTporeceiveBinsBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityTporeceiveBinsBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentItemserialUpcMissingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentItemserialUpcMissingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentItemserialUpcMissingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/layout_activity_tpomain.xml.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/layout_activity_tpomain.xml.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOReceiveBinsActivity$3.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOReceiveBinsActivity$3.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/previous-compilation-data.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/previous-compilation-data.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/TpoLocationsDialogBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TpoLocationsDialogBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentItemserialMissingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentItemserialMissingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentItemserialMissingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOBinsActivity$6.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOBinsActivity$6.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/proto.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityTransferBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityTransferBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityTransferBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/5440d92fd44257a49409bd3ef0103e63ffb7ca56ad231a48da91f4e4981128fd_0.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/5440d92fd44257a49409bd3ef0103e63ffb7ca56ad231a48da91f4e4981128fd_0.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/proto.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/proto.tab.values.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityMainMenuBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityMainMenuBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityMainMenuBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$2.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$6.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$6.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/executionHistory.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/executionHistory.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/BolRecognitionActivity$6.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/BolRecognitionActivity$6.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BolRecognitionActivity$6.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_8_2023_5_25_AM_[Changes]/buildOutputCleanup.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/buildOutputCleanup.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/tmp/kotlin-classes/debug/Model/TPO/TPOAvailableBinModel.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOAvailableBinModel.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/5440d92fd44257a49409bd3ef0103e63ffb7ca56ad231a48da91f4e4981128fd_1.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/5440d92fd44257a49409bd3ef0103e63ffb7ca56ad231a48da91f4e4981128fd_1.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values_values.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values_values.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/values_values.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/class-fq-name-to-source.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/BrandOCRActivity$5.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/BrandOCRActivity$5.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BrandOCRActivity$5.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOLoadBinsActivity$5.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOLoadBinsActivity$5.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityLocationcheckBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityLocationcheckBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityLocationcheckBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityLoginBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityLoginBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityLoginBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/layout_tpo_location_item.xml.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/layout_tpo_location_item.xml.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/CustomListAdapter$ViewHolder.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/CustomListAdapter$ViewHolder.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/CustomListAdapter$ViewHolder.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/adapters/TPOItemsDialogAdapter$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOItemsDialogAdapter$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityShipmentPalleteCartonCountBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityShipmentPalleteCartonCountBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityShipmentPalleteCartonCountBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/BolRecognitionActivity$3.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/BolRecognitionActivity$3.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BolRecognitionActivity$3.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/build-history.bin" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/build-history.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/build-history.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOBinsActivity$4.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOBinsActivity$4.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityFillpalleteBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityFillpalleteBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityFillpalleteBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$3.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$3.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentFillpalleteBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentFillpalleteBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentFillpalleteBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/proto.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityTransferBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityTransferBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityTransferBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOMainActivity$4.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOMainActivity$4.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOMainActivity$2.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOMainActivity$2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityTpoloadBinsBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityTpoloadBinsBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityFoldingscanBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityFoldingscanBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityFoldingscanBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentUpcPricingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentUpcPricingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentUpcPricingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/drawable_baseline_local_shipping_icon.xml.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/drawable_baseline_local_shipping_icon.xml.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/build-history.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/build-history1.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/Remote/BasicApi.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/Remote/BasicApi.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BasicApi.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/customView/PopWindowMain$1.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/customView/PopWindowMain$1.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/PopWindowMain$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$1.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityMainMenu1Binding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityMainMenu1Binding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityMainMenu1Binding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityTpobinsBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityTpobinsBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/bosApp/CountActivity.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/bosApp/CountActivity.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/CountActivity.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/Model/TPO/TPOTruckInfoModel.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOTruckInfoModel.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$5.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$5.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentFoldingscanBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentFoldingscanBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentFoldingscanBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPackingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPackingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPackingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/TpoLocationItemBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TpoLocationItemBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityScanContainerBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityScanContainerBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityScanContainerBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOReceivedInfo.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOReceivedInfo.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.len" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/file-to-id.tab.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/classes1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentNewItemPricingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentNewItemPricingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentNewItemPricingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityTransferReceivingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityTransferReceivingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityTransferReceivingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/adapters/TPOItemsDialogAdapter.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOItemsDialogAdapter.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentNewItemPricingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentNewItemPricingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentNewItemPricingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/adapters/BinBarcodeScannedAdapter$1.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BinBarcodeScannedAdapter$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/layout_activity_tpobins.xml.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/layout_activity_tpobins.xml.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$5.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$5.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/adapters/BinBarcodeRemovedListener.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BinBarcodeRemovedListener.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.keystream" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/class-attributes.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityTpocountBinsBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityTpocountBinsBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityFoldingscanBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityFoldingscanBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityFoldingscanBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityShipmentBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityShipmentBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityShipmentBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/BrandOCRActivity$3$2.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/BrandOCRActivity$3$2.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BrandOCRActivity$3$2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityNewItemPricingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityNewItemPricingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityNewItemPricingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentUpcPricingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentUpcPricingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentUpcPricingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOBinsActivity$2.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOBinsActivity$2.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentPutawaypalleteBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentPutawaypalleteBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentPutawaypalleteBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/source-to-output.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_8_2023_5_25_AM_[Changes]/checksums.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/checksums.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/tmp/kotlin-classes/debug/Remote/BasicApi.class" />
+    <option name="AFTER_PATH" value="app/build/tmp/kotlin-classes/debug/Remote/BasicApi.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BasicApi.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/buildOutputCleanup/outputFiles.bin" />
+    <option name="AFTER_PATH" value=".gradle/buildOutputCleanup/outputFiles.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/outputFiles.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPackingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPackingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPackingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOBinsActivity$4.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOBinsActivity$4.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPutAwayBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPutAwayBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPutAwayBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/adapters/BinBarcodeScannedAdapter$ViewHolder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BinBarcodeScannedAdapter$ViewHolder.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/BrandOCRActivity.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/BrandOCRActivity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BrandOCRActivity.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/tmp/kotlin-classes/debug/Model/TPO/TPOTruckInfoModel.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOTruckInfoModel.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/internal-name-to-source.tab.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/java-sources-proto-map.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/java-sources-proto-map.tab.values.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/BolRecognitionActivity.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/BolRecognitionActivity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BolRecognitionActivity.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugAndroidTestKotlin/build-history.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/build-history2.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOReceiveBinsActivity.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOReceiveBinsActivity.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/customView/PopWindowMain$1.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/customView/PopWindowMain$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/PopWindowMain$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/fileHashes.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/fileHashes.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/last-build.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/last-build.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" />
+    <option name="AFTER_PATH" value="app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/androidResources1" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentFillpalleteBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentFillpalleteBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentFillpalleteBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/drawable_baseline_shipment_arrow_forward.xml.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/drawable_baseline_shipment_arrow_forward.xml.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/resources-debug.ap_" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/resources-debug.ap_" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOLoadBinsActivity$2.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOLoadBinsActivity$2.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/BolRecognitionActivity$6.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/BolRecognitionActivity$6.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BolRecognitionActivity$6.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/proto.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/proto.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/adapters/TPOItemsDialogTPOInfoDataModel.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOItemsDialogTPOInfoDataModel.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/fileHashes.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/fileHashes.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$6.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$6.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPickingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPickingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPickingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityEmptyBoxBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityEmptyBoxBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityEmptyBoxBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOLoadBinsActivity$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOLoadBinsActivity$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityUpcPricingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityUpcPricingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityUpcPricingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/7.3.3/executionHistory/executionHistory.bin" />
+    <option name="AFTER_PATH" value=".gradle/7.3.3/executionHistory/executionHistory.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/executionHistory1.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/BolRecognitionActivity$1.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/BolRecognitionActivity$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BolRecognitionActivity$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/classes.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/classes2.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/7.3.3/fileHashes/fileHashes.lock" />
+    <option name="AFTER_PATH" value=".gradle/7.3.3/fileHashes/fileHashes.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/fileHashes1.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$4$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$4$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOMainActivity.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOMainActivity.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityNextReceivingStatusBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityNextReceivingStatusBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityNextReceivingStatusBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOReceiveBinsActivity$2.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOReceiveBinsActivity$2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityStockTakeBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityStockTakeBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityStockTakeBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/classes3.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOLoadBinsActivity.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOLoadBinsActivity.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOMainActivity$5.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOMainActivity$5.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOReceiveBinsActivity$2.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOReceiveBinsActivity$2.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/TpoLocationsDialogBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TpoLocationsDialogBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPackingReasonBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPackingReasonBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPackingReasonBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/Model/TPO/TPOReceivedBinModel.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOReceivedBinModel.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPrinterSelectionBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPrinterSelectionBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPrinterSelectionBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityTporeceiveBinsBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityTporeceiveBinsBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$4.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$4.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/CustomListAdapter.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/CustomListAdapter.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/CustomListAdapter.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOBinsActivity$3.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOBinsActivity$3.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivitySerialGeneratorBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivitySerialGeneratorBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivitySerialGeneratorBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOMainActivity$3.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOMainActivity$3.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityItemserialMissingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityItemserialMissingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityItemserialMissingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOReceiveBinsActivity$3.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOReceiveBinsActivity$3.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityFillpalleteBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityFillpalleteBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityFillpalleteBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityTransferReceivingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityTransferReceivingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityTransferReceivingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/class-fq-name-to-source.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOMainActivity$1.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOMainActivity$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityMainBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityMainBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityMainBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/classes4.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/file-to-id.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-attributes.tab_i" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-attributes.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/class-attributes.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" />
+    <option name="AFTER_PATH" value="app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/merge-state" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/BrandOCRActivity$5.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/BrandOCRActivity$5.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BrandOCRActivity$5.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_8_2023_5_25_AM_[Changes]/md5-checksums.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/md5-checksums.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$4.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$4.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/7.3.3/executionHistory/executionHistory.lock" />
+    <option name="AFTER_PATH" value=".gradle/7.3.3/executionHistory/executionHistory.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/executionHistory1.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/BolRecognitionActivity$1.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/BolRecognitionActivity$1.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BolRecognitionActivity$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityMainBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityMainBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityMainBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/source-to-classes.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/source-to-classes.tab.values.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/General.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/General.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityItemserialUpcMissingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityItemserialUpcMissingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityItemserialUpcMissingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/TpoLocationItemBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TpoLocationItemBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/tmp/kotlin-classes/debug/Model/TPO/TPOTransferLocation.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOTransferLocation.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityUpcpricingOverrideBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityUpcpricingOverrideBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityUpcpricingOverrideBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/Remote/BasicApi$DefaultImpls.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/Remote/BasicApi$DefaultImpls.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BasicApi$DefaultImpls.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityLoginBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityLoginBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityLoginBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOLoadBinsActivity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOLoadBinsActivity.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentLocationcheckBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentLocationcheckBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentLocationcheckBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/file-to-id.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/adapters/TPOItemsDialogDataModel.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOItemsDialogDataModel.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityTpomainBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityTpomainBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityShipmentPalleteReceivingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityShipmentPalleteReceivingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityShipmentPalleteReceivingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream.len" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/source-to-output.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOReceivedInfo.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOReceivedInfo.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$3$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$3$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOLoadBinsActivity$3.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOLoadBinsActivity$3.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/class-fq-name-to-source.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/Model/TPO/TPOModel.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOModel.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOReceiveBinsActivity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOReceiveBinsActivity.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/General.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/General.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/7.3.3/fileHashes/fileHashes.bin" />
+    <option name="AFTER_PATH" value=".gradle/7.3.3/fileHashes/fileHashes.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/fileHashes1.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/class-attributes.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream.len" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/file-to-id.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/5440d92fd44257a49409bd3ef0103e63ffb7ca56ad231a48da91f4e4981128fd_2.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/5440d92fd44257a49409bd3ef0103e63ffb7ca56ad231a48da91f4e4981128fd_2.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOMainActivity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOMainActivity.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPackingDcBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPackingDcBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPackingDcBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOLoadBinsActivity$2.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOLoadBinsActivity$2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOReceiveBinsActivity$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOReceiveBinsActivity$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/class-attributes.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/class-attributes.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/tmp/kotlin-classes/debug/com/bos/wms/mlkit/CustomListAdapter$ViewHolder.class" />
+    <option name="AFTER_PATH" value="app/build/tmp/kotlin-classes/debug/com/bos/wms/mlkit/CustomListAdapter$ViewHolder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/CustomListAdapter$ViewHolder.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityTpomainBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityTpomainBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityNextReceivingStatusBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityNextReceivingStatusBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityNextReceivingStatusBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentItemserialUpcMissingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentItemserialUpcMissingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentItemserialUpcMissingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivitySerialGeneratorBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivitySerialGeneratorBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivitySerialGeneratorBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityItemPricingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityItemPricingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityItemPricingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/PasBrandOCRActivity$3$2.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/PasBrandOCRActivity$3$2.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/PasBrandOCRActivity$3$2.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentPutawaypalleteBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentPutawaypalleteBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentPutawaypalleteBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOBinsActivity$1.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOBinsActivity$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$7.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$7.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/proto.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/adapters/TPOItemsDialogTPOInfoDataModel.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOItemsDialogTPOInfoDataModel.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityCountBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityCountBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityCountBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentPgPricingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentPgPricingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentPgPricingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$7.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$7.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityItemPricingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityItemPricingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityItemPricingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/resourceHashesCache.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/resourceHashesCache.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_8_2023_5_25_AM_[Changes]/outputFiles.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/outputFiles1.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="AFTER_PATH" value=".gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/buildOutputCleanup1.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/PasBrandOCRActivity$5.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/PasBrandOCRActivity$5.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/PasBrandOCRActivity$5.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/BrandOCRActivity.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/BrandOCRActivity.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BrandOCRActivity.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityTpocountBinsBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityTpocountBinsBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/class-fq-name-to-source.tab.values.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/adapters/BinBarcodeScannedAdapter.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BinBarcodeScannedAdapter.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOMainActivity$2.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOMainActivity$2.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/compile_app_classes_jar/debug/classes.jar" />
+    <option name="AFTER_PATH" value="app/build/intermediates/compile_app_classes_jar/debug/classes.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/classes.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.len" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/proto.tab.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/adapters/TPOItemsDialogAdapter$1.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOItemsDialogAdapter$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentPickingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentPickingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentPickingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityUpcPricingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityUpcPricingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityUpcPricingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/adapters/BinBarcodeScannedAdapter.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BinBarcodeScannedAdapter.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentLocationcheckBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentLocationcheckBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentLocationcheckBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/bosApp/CheckingActivity.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/bosApp/CheckingActivity.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/CheckingActivity.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOBinsActivity$2.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOBinsActivity$2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOBinsActivity$6.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOBinsActivity$6.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityLocationcheckBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityLocationcheckBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityLocationcheckBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/adapters/BinBarcodeScannedAdapter$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BinBarcodeScannedAdapter$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/layout_activity_tpocount_bins.xml.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/layout_activity_tpocount_bins.xml.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOMainActivity$4.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOMainActivity$4.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_8_2023_5_25_AM_[Changes]/fileHashes.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/fileHashes2.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/file-system.probe" />
+    <option name="AFTER_PATH" value=".gradle/file-system.probe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/file-system.probe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityShipmentPalleteCartonCountBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityShipmentPalleteCartonCountBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityShipmentPalleteCartonCountBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/buildOutputCleanup.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/buildOutputCleanup2.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPutawaypalleteBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPutawaypalleteBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPutawaypalleteBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/tmp/kotlin-classes/debug/Remote/BasicApi$DefaultImpls.class" />
+    <option name="AFTER_PATH" value="app/build/tmp/kotlin-classes/debug/Remote/BasicApi$DefaultImpls.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BasicApi$DefaultImpls.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/adapters/BinBarcodeRemovedListener.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BinBarcodeRemovedListener.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/7.3.3/checksums/checksums.lock" />
+    <option name="AFTER_PATH" value=".gradle/7.3.3/checksums/checksums.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/checksums1.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityShipmentBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityShipmentBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityShipmentBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOBinsActivity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOBinsActivity.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPgPricingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPgPricingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPgPricingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/BrandOCRActivity$3$2.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/BrandOCRActivity$3$2.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BrandOCRActivity$3$2.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/UPCPricingOverrideActivity.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/UPCPricingOverrideActivity.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/UPCPricingOverrideActivity.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityShipmentPalleteCartonBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityShipmentPalleteCartonBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityShipmentPalleteCartonBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/classes5.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityScanUpcsForBolBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityScanUpcsForBolBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityScanUpcsForBolBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_8_2023_5_25_AM_[Changes]/fileHashes.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/fileHashes2.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/layout_activity_tpoload_bins.xml.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/layout_activity_tpoload_bins.xml.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityItemserialUpcMissingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityItemserialUpcMissingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityItemserialUpcMissingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityMainMenuBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityMainMenuBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityMainMenuBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOLoadBinsActivity$3.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOLoadBinsActivity$3.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$4$1.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$4$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOBinsActivity$5.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOBinsActivity$5.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/classes.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/classes1.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPasBrandOcractivityBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPasBrandOcractivityBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPasBrandOcractivityBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityNewItemPricingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityNewItemPricingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityNewItemPricingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityMainMenu1Binding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityMainMenu1Binding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityMainMenu1Binding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentPickingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentPickingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentPickingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityShipmentPalleteReceivingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityShipmentPalleteReceivingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityShipmentPalleteReceivingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/class-fq-name-to-source.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/class-fq-name-to-source.tab.values1.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/tmp/kotlin-classes/debug/Model/TPO/TPOReceivedBinModel.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOReceivedBinModel.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/tmp/kotlin-classes/debug/Model/TPO/TPOModel.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOModel.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/classes6.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentItemserialMissingBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentItemserialMissingBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentItemserialMissingBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityEmptyBoxBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityEmptyBoxBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityEmptyBoxBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/5440d92fd44257a49409bd3ef0103e63ffb7ca56ad231a48da91f4e4981128fd_3.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/5440d92fd44257a49409bd3ef0103e63ffb7ca56ad231a48da91f4e4981128fd_3.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityTpobinsBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityTpobinsBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/Remote/APIClient.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/Remote/APIClient.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/APIClient.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOBinsActivity$3.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOBinsActivity$3.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/PasBrandOCRActivity$3$2.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/PasBrandOCRActivity$3$2.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/PasBrandOCRActivity$3$2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOLoadBinsActivity$4.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOLoadBinsActivity$4.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/classes7.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/proto.tab.values" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/class-fq-name-to-source.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/class-fq-name-to-source1.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityUpcpricingOverrideBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityUpcpricingOverrideBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityUpcpricingOverrideBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/tpo/TPOCountBinsActivity$3.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOCountBinsActivity$3.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/adapters/TPOItemsDialogAdapter$ViewHolder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOItemsDialogAdapter$ViewHolder.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPasBrandOcractivityBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ActivityPasBrandOcractivityBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPasBrandOcractivityBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-attributes.tab" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-attributes.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/class-attributes1.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/internal-name-to-source.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/class-fq-name-to-source.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentFoldingscanBinding.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/databinding/ContentFoldingscanBinding.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentFoldingscanBinding.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/Model/TPO/TPOTransferLocation.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOTransferLocation.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/source-to-output.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/source-to-classes.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/source-to-classes.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/tpo/TPOLoadBinsActivity$1.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOLoadBinsActivity$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPgPricingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityPgPricingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityPgPricingBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/app/adapters/TPOItemsDialogAdapter$ViewHolder.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/TPOItemsDialogAdapter$ViewHolder.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/BolRecognitionActivity$3.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/bos/wms/mlkit/app/BolRecognitionActivity$3.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/BolRecognitionActivity$3.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/tmp/kotlin-classes/debug/com/bos/wms/mlkit/app/bosApp/CheckingActivity.class" />
+    <option name="AFTER_PATH" value="app/build/tmp/kotlin-classes/debug/com/bos/wms/mlkit/app/bosApp/CheckingActivity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/CheckingActivity.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.len" />
+    <option name="AFTER_PATH" value="app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/source-to-output.tab.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/build/intermediates/apk/debug/app-debug.apk" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/app-debug.apk" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityScanContainerBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ActivityScanContainerBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ActivityScanContainerBinding.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/Uncommitted_changes_before_Checkout_at_5_3_2023_6_11_PM_[Changes]/java-sources-proto-map.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/java-sources-proto-map.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/classes8.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentPgPricingBinding.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/bos/wms/mlkit/databinding/ContentPgPricingBinding.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_1_36_AM_[Changes]/ContentPgPricingBinding.dex" />
+  </binary>
+</changelist>
