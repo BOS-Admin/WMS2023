@@ -65,13 +65,6 @@
                 android:visibility="gone"/>
 
             <Button
-                android:id="@+id/btnTPOShipment"
-                style="@style/button_main_menu_style"
-                android:drawableLeft="@drawable/baseline_image_not_supported"
-                android:text="Create TPO Shipment"
-                android:visibility="gone"/>
-
-            <Button
                 android:id="@+id/btnTPOReceive"
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/baseline_image_not_supported"

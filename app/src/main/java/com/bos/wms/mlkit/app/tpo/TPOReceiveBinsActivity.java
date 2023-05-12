@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 import com.bos.wms.mlkit.General;
 import com.bos.wms.mlkit.R;
 import com.bos.wms.mlkit.app.Logger;
+import com.bos.wms.mlkit.app.ZebraPrinter;
 import com.bos.wms.mlkit.app.adapters.TPOItemsDialogDataModel;
 import com.bos.wms.mlkit.storage.Storage;
 import com.google.android.material.snackbar.Snackbar;
@@ -26,6 +28,7 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
+import Model.TPO.OverrideBinModel;
 import Model.TPO.ReceivedTPOBinsModel;
 import Model.TPO.TPOAvailableBinModel;
 import Model.TPO.TPOReceivedBinModel;
@@ -66,7 +69,9 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
         UserID = General.getGeneral(getApplicationContext()).UserID;
 
         //Get The Current Location The Device
-        currentLocation = General.getGeneral(getApplicationContext()).mainLocation;
+        //currentLocation = General.getGeneral(getApplicationContext()).mainLocation;
+        currentLocation = "W1005";
+
 
         tpoMenuTitle = findViewById(R.id.tpoMenuTitle);
         estimateInfoBtn = findViewById(R.id.estimateInfoBtn);
@@ -78,7 +83,7 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
 
         tpoMenuTitle.setText("Current Location " + currentLocation);
 
-        TPOReceivedInfo.OverrideBinBarcodes = new ArrayList<>();
+        TPOReceivedInfo.OverrideBins = new ArrayList<>();
         TPOReceivedInfo.BinIDS = new ArrayList<>();
         TPOReceivedInfo.UsedOverridePasswords = new ArrayList<>();
 
@@ -158,15 +163,68 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
 
         insertBarcodeEditText.requestFocus();
 
-        //tpoInfoBtn.setText("TPO ID: " + TPOID + "\nHeading To " + ToLocation + "\nCreated At " + DateCreated.replaceAll("T", " "));
-
         scanBoxesTxt.setText("Please Scan A Truck Barcode To Begin!");
         scanBoxesTxt.setBackgroundColor(Color.parseColor("#D10000"));
 
-        confirmBtn.setEnabled(false);
+        confirmBtn.setEnabled(true);
 
         confirmBtn.setOnClickListener(view -> {
-            AttemptReceiveShipment();
+
+            int totalBins = 0;
+            int receivedBins = 0;
+
+            for(TPOReceivedBinModel model : TPOReceivedInfo.ReceivedItems){
+                if(model.getTruckBarcode().equalsIgnoreCase(CurrentTruckBarcode)){
+                    totalBins++;
+                    if(TPOReceivedInfo.BinIDS.contains(model.getId())){
+                        receivedBins++;
+                    }
+                }
+            }
+
+            //Check If The User Received All The Bins They Were Supposed To Receive
+            if(totalBins > receivedBins){
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Enter The Override Password To Leave " + (totalBins - receivedBins) + " Behind!");
+
+                final EditText input = new EditText(this);
+
+                input.setInputType(InputType.TYPE_CLASS_TEXT);
+                builder.setView(input);
+
+                builder.setPositiveButton("Override", null);
+
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+
+                AlertDialog openedDialog = builder.show();
+
+                int finalTotalBins = totalBins;
+                int finalReceivedBins = receivedBins;
+                openedDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {
+                    String password = input.getText().toString();
+                    if(TPOReceivedInfo.OverridePasswords.contains(password)){
+                        Logger.Debug("TPO", "User Entered An Override Password: " + password + " For TruckOverride: " + currentLocation +
+                                " TotalOverridePasswords: " + TPOReceivedInfo.OverridePasswords.size() + " TotalBins: " + finalTotalBins + " ReceivedBins: " + finalReceivedBins);
+                        TPOReceivedInfo.UsedOverridePasswords.add(password);
+
+                        AttemptReceiveShipment();
+
+                        General.playSuccess();
+                        openedDialog.cancel();
+                    }else {
+                        builder.setTitle("Invalid Override Password!");
+                        Logger.Debug("TPO", "User Entered An Invalid Override Password: " + password + " For TruckOverride: " + currentLocation +
+                                " TotalOverridePasswords: " + TPOReceivedInfo.OverridePasswords.size());
+                    }
+                });
+            }else {
+                AttemptReceiveShipment();
+            }
         });
 
         GetOverridePasswords();
@@ -182,6 +240,13 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
             if(IsTruckValid(barcode)){
                 isTruckValid = true;
                 CurrentTruckBarcode = barcode;
+
+                scanBoxesTxt.setText("Please Scan The Bin Barcode, Or A New Truck's Barcode!");
+                scanBoxesTxt.setBackgroundColor(Color.parseColor("#00A300"));
+
+                UpdateUIForTruck();
+
+
             }else {
                 Logger.Debug("TPO-RECEIVE", "ValidateTruckBarcode - Scanned A Truck Barcode That Wasn't Supposed To Be Received: " + barcode);
                 ShowErrorDialog("The Truck Barcode You Scanned: " + barcode + " Is Not Supposed To Be Received, Or Invalid!");
@@ -211,14 +276,14 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
                         TPOReceivedInfo.BinIDS = new ArrayList<>();
                     }
 
-                    if(TPOReceivedInfo.BinIDS.contains(model.getID())){
+                    if(TPOReceivedInfo.BinIDS.contains(model.getId())){
                         ShowSnackbar("The Bin Barcode You Scanned: " + barcode + " Was Already Scanned And Received!");
                         General.playError();
                     }else {
                         Logger.Debug("TPO-RECEIVE", "ProcessBinBarcode - Scanned A Bin Barcode To Be Received. " +
                                 "CurrentTruck: " + CurrentTruckBarcode + " BinBarcode: " + barcode + " BinTruckBarcode: " + model.getTruckBarcode() +
-                                " BinTPOID: " + model.getTPOID() + " BinID: " + model.getID());
-                        TPOReceivedInfo.BinIDS.add(model.getID());
+                                " BinTPOID: " + model.getTpoID() + " BinID: " + model.getId());
+                        TPOReceivedInfo.BinIDS.add(model.getId());
                         ShowSnackbar("The Bin Barcode You Scanned: " + barcode + " Is Received Successfully!");
                         General.playSuccess();
                     }
@@ -227,7 +292,7 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
                 }else {
                     Logger.Debug("TPO-RECEIVE", "ProcessBinBarcode - Scanned A Bin Barcode That Isn't In The Current Truck. " +
                             "CurrentTruck: " + CurrentTruckBarcode + " BinBarcode: " + barcode + " BinTruckBarcode: " + model.getTruckBarcode() +
-                            " BinTPOID: " + model.getTPOID());
+                            " BinTPOID: " + model.getTpoID());
                     ShowErrorDialog("The Bin Barcode You Scanned: " + barcode + " Does Not Belong To This Truck, Please Scan The New Truck Barcode!");
                     break;
                 }
@@ -235,24 +300,59 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
         }
         if(binNeedsOverride){
             //Bin Needs To Be Overriden
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Please Type The Override Password");
+
+            final EditText input = new EditText(this);
+
+            input.setInputType(InputType.TYPE_CLASS_TEXT);
+            builder.setView(input);
+
+            builder.setPositiveButton("Override", null);
+
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+
+            AlertDialog openedDialog = builder.show();
+
+            openedDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {
+                String password = input.getText().toString();
+                if(TPOReceivedInfo.OverridePasswords.contains(password)){
+                    Logger.Debug("TPO-RECEIVE", "ProcessBinBarcode - Scanned A Bin Barcode To Be Received. " +
+                            "CurrentTruck: " + CurrentTruckBarcode + " BinBarcode: " + barcode + " No Extra Data (Bin Was Overrided With Password: " + password + ")");
+                    TPOReceivedInfo.OverrideBins.add(new OverrideBinModel(barcode, CurrentTruckBarcode, password));
+                    TPOReceivedInfo.UsedOverridePasswords.add(password);
+                    ShowSnackbar("The Bin Barcode You Scanned: " + barcode + " Is Received Successfully!");
+                    General.playSuccess();
+                    openedDialog.cancel();
+                    UpdateUIForTruck();
+                }else {
+                    builder.setMessage("Invalid Override Password!");
+                    Logger.Debug("TPO", "User Entered An Invalid Override Password: " + password + " For Bin: " + barcode +
+                            " TotalOverridePasswords: " + TPOReceivedInfo.OverridePasswords.size());
+                }
+            });
 
         }
+
+        UpdateUIForTruck();
+
     }
 
     /**
      * This Is Called When The Bins Are All Scanned And We Need To Send The Truck To The Destination
      */
     public void AttemptReceiveShipment(){
-        /*if(isBusy)
-            return;
-
-        isBusy = true;
 
         ProgressDialog mainProgressDialog = ProgressDialog.show(this, "",
                 "Finalizing TPO Shipment, Please wait...", true);
         mainProgressDialog.show();
 
-        Logger.Debug("TPO", "AttemptTPOShipmentPrepared - Finalizing TPO Shipment For TPO ID: " + TPOID);
+        Logger.Debug("TPO", "AttemptReceiveShipment - Finalizing TPO Shipment Total Received Bins: " + (TPOReceivedInfo.BinIDS.size() + TPOReceivedInfo.OverrideBins.size()));
 
         try {
             BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
@@ -260,7 +360,8 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
 
 
             compositeDisposable.addAll(
-                    api.AttemptTPOShipmentPrepared(TPOID, CurrentTruckBarcode, UserID)
+                    api.AddReceivedTPOBins(new ReceivedTPOBinsModel(TPOReceivedInfo.BinIDS, TPOReceivedInfo.OverrideBins, TPOReceivedInfo.UsedOverridePasswords,
+                                    currentLocation, UserID))
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe((s) -> {
@@ -269,21 +370,20 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
 
                                         String result = s.string();
 
-                                        Logger.Debug("TPO", "AttemptTPOShipmentPrepared - Received Result: " + result);
+                                        Logger.Debug("TPO", "AttemptReceiveShipment - Received Result: " + result);
 
 
                                         mainProgressDialog.cancel();
 
+                                        ShowAlertDialog("TPO Shipment Done", result, android.R.drawable.ic_dialog_alert, true);
 
-                                        ShowSnackbar(result);
                                         General.playSuccess();
 
                                     }catch(Exception ex){
                                         mainProgressDialog.cancel();
-                                        Logger.Error("JSON", "AttemptTPOShipmentPrepared - Error: " + ex.getMessage());
+                                        Logger.Error("JSON", "AttemptReceiveShipment - Error: " + ex.getMessage());
                                         ShowErrorDialog(ex.getMessage());
                                     }
-                                    isBusy = false;
                                 }
                             }, (throwable) -> {
                                 //This Will Translate The Error Response And Get The Error Body If Available
@@ -294,24 +394,22 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
                                     if(response.isEmpty()){
                                         response = throwable.getMessage();
                                     }
-                                    Logger.Debug("TPO", "AttemptTPOShipmentPrepared - Returned Error: " + response);
+                                    Logger.Debug("TPO", "AttemptReceiveShipment - Returned Error: " + response);
                                     mainProgressDialog.cancel();
                                     ShowErrorDialog(response);
                                 }else {
                                     response = throwable.getMessage();
-                                    Logger.Error("API", "AttemptTPOShipmentPrepared - Error In API Response: " + throwable.getMessage() + " " + throwable.toString());
+                                    Logger.Error("API", "AttemptReceiveShipment - Error In API Response: " + throwable.getMessage() + " " + throwable.toString());
                                     mainProgressDialog.cancel();
                                     ShowErrorDialog(response);
                                 }
-                                isBusy = false;
                             }));
 
         } catch (Throwable e) {
             mainProgressDialog.cancel();
-            Logger.Error("API", "AttemptTPOShipmentPrepared - Error Connecting: " + e.getMessage());
+            Logger.Error("API", "AttemptReceiveShipment - Error Connecting: " + e.getMessage());
             ShowErrorDialog("Connection To Server Failed!");
-            isBusy = false;
-        }*/
+        }
     }
 
     /**
@@ -319,7 +417,7 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
      */
     @Override
     public void onBackPressed() {
-        //Wait
+        return;
     }
 
     /**
@@ -402,6 +500,38 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
             Logger.Error("API", "GetOverridePasswords - Error Connecting: " + e.getMessage());
             ShowErrorDialog("Connection To Server Failed!", true);
         }
+    }
+
+    /**
+     * This functions updates the truck received and estimated bins
+     */
+    public void UpdateUIForTruck(){
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                int totalBins = 0;
+                int receivedBins = 0;
+                int overridedBins = 0;
+
+                for(TPOReceivedBinModel model : TPOReceivedInfo.ReceivedItems){
+                    if(model.getTruckBarcode().equalsIgnoreCase(CurrentTruckBarcode)){
+                        totalBins++;
+                        if(TPOReceivedInfo.BinIDS.contains(model.getId())){
+                            receivedBins++;
+                        }
+                    }
+                }
+
+                for(OverrideBinModel model : TPOReceivedInfo.OverrideBins){
+                    if(model.getTruckBarcode().equalsIgnoreCase(CurrentTruckBarcode)){
+                        overridedBins++;
+                    }
+                }
+
+                estimateInfoBtn.setText(CurrentTruckBarcode + " Estimated Bin Amount Is " + totalBins);
+                receivedInfoBtn.setText(CurrentTruckBarcode + " Received Bin Amount Is " + receivedBins + (overridedBins > 0 ? " Overrided " + overridedBins + " Bins" : ""));
+            }
+        });
     }
 
     /**

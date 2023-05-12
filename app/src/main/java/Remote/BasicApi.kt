@@ -73,7 +73,7 @@ interface BasicApi {
     fun AddReceivedTPOBins(@Body model: ReceivedTPOBinsModel): Observable<ResponseBody>
 
     @GET("api/OverridePasswords/GetAvailablePasswords")
-    fun GetAllOverridePasswords(@Query("CurrentLocation") CurrentLocation: String): Observable<List<String>>
+    fun GetAllOverridePasswords(@Query("PasswordCategory") PasswordCategory: String): Observable<List<String>>
 
     @POST("api/wms/pricing/upc/overrideItem")
     fun OverrideItemPrice(@Body model: UPCPricingItemModel): Observable<PricingItemResponseModel>

@@ -39,9 +39,6 @@ public final class ActivityTpomainBinding implements ViewBinding {
   public final Button btnTPOReceive;
 
   @NonNull
-  public final Button btnTPOShipment;
-
-  @NonNull
   public final LinearLayout tpoMainActivityLayout;
 
   @NonNull
@@ -50,8 +47,8 @@ public final class ActivityTpomainBinding implements ViewBinding {
   private ActivityTpomainBinding(@NonNull LinearLayout rootView, @NonNull Button btnCountTPOBins,
       @NonNull Button btnCreateNewTPO, @NonNull Button btnLoadTPOBins,
       @NonNull Button btnModifyTPOBins, @NonNull Button btnResetTruckCountMode,
-      @NonNull Button btnTPOReceive, @NonNull Button btnTPOShipment,
-      @NonNull LinearLayout tpoMainActivityLayout, @NonNull TextView tpoMenuTitle) {
+      @NonNull Button btnTPOReceive, @NonNull LinearLayout tpoMainActivityLayout,
+      @NonNull TextView tpoMenuTitle) {
     this.rootView = rootView;
     this.btnCountTPOBins = btnCountTPOBins;
     this.btnCreateNewTPO = btnCreateNewTPO;
@@ -59,7 +56,6 @@ public final class ActivityTpomainBinding implements ViewBinding {
     this.btnModifyTPOBins = btnModifyTPOBins;
     this.btnResetTruckCountMode = btnResetTruckCountMode;
     this.btnTPOReceive = btnTPOReceive;
-    this.btnTPOShipment = btnTPOShipment;
     this.tpoMainActivityLayout = tpoMainActivityLayout;
     this.tpoMenuTitle = tpoMenuTitle;
   }
@@ -127,12 +123,6 @@ public final class ActivityTpomainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnTPOShipment;
-      Button btnTPOShipment = ViewBindings.findChildViewById(rootView, id);
-      if (btnTPOShipment == null) {
-        break missingId;
-      }
-
       LinearLayout tpoMainActivityLayout = (LinearLayout) rootView;
 
       id = R.id.tpoMenuTitle;
@@ -142,7 +132,7 @@ public final class ActivityTpomainBinding implements ViewBinding {
       }
 
       return new ActivityTpomainBinding((LinearLayout) rootView, btnCountTPOBins, btnCreateNewTPO,
-          btnLoadTPOBins, btnModifyTPOBins, btnResetTruckCountMode, btnTPOReceive, btnTPOShipment,
+          btnLoadTPOBins, btnModifyTPOBins, btnResetTruckCountMode, btnTPOReceive,
           tpoMainActivityLayout, tpoMenuTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);

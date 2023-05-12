@@ -2866,7 +2866,6 @@ int id btnStockTake 0x7f0800be
 int id btnSubmit 0x7f0800bf
 int id btnTPOMainActivity 0x7f0800c0
 int id btnTPOReceive 0x7f0800c1
-int id btnTPOShipment 0x7f0800c2
 int id btnTransfer 0x7f0800c3
 int id btnUPCPricing 0x7f0800c4
 int id btnUPCPricingDone 0x7f0800c5

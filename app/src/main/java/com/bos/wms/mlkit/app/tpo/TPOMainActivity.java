@@ -50,13 +50,12 @@ public class TPOMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tpomain);
 
-        Button btnCreateNewTPO, btnModifyTPOBins, btnTPOShipment, btnTPOReceive, btnLoadTPOBins, btnCountTPOBins, btnResetTruckCountMode;
+        Button btnCreateNewTPO, btnModifyTPOBins, btnTPOReceive, btnLoadTPOBins, btnCountTPOBins, btnResetTruckCountMode;
 
         TextView tpoMenuTitle = findViewById(R.id.tpoMenuTitle);
 
         btnCreateNewTPO = findViewById(R.id.btnCreateNewTPO);
         btnModifyTPOBins = findViewById(R.id.btnModifyTPOBins);
-        btnTPOShipment = findViewById(R.id.btnTPOShipment);
         btnTPOReceive = findViewById(R.id.btnTPOReceive);
         btnLoadTPOBins = findViewById(R.id.btnLoadTPOBins);
         btnCountTPOBins = findViewById(R.id.btnCountTPOBins);
@@ -65,7 +64,6 @@ public class TPOMainActivity extends AppCompatActivity {
         /* Verify The Menu Permissions */
         UserPermissions.ValidatePermission("WMSApp.TPO.CreateTPO", btnCreateNewTPO);
         UserPermissions.ValidatePermission("WMSApp.TPO.ModifyBins", btnModifyTPOBins);
-        UserPermissions.ValidatePermission("WMSApp.TPO.CreateShipment", btnTPOShipment);
         UserPermissions.ValidatePermission("WMSApp.TPO.ReceiveShipment", btnTPOReceive);
         UserPermissions.ValidatePermission("WMSApp.TPO.LoadBins", btnLoadTPOBins);
         UserPermissions.ValidatePermission("WMSApp.TPO.CountBins", btnCountTPOBins);
@@ -73,6 +71,7 @@ public class TPOMainActivity extends AppCompatActivity {
 
         //Get The Current Location The Device
         currentLocation = General.getGeneral(getApplicationContext()).mainLocation;
+        //currentLocation = "W1005";
 
         Storage mStorage = new Storage(getApplicationContext());
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82");

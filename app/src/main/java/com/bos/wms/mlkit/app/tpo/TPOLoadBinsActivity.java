@@ -416,7 +416,70 @@ public class TPOLoadBinsActivity extends AppCompatActivity {
      */
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+
+        if(isTruckValid) {
+            ProgressDialog mainProgressDialog = ProgressDialog.show(this, "",
+                    "Resetting Truck Count Mode, Please wait...", true);
+            mainProgressDialog.show();
+
+            Logger.Debug("TPO", "TPOLoadBinsActivity-OnBackPressed - Resetting Truck Count Mode For Truck: " + CurrentTruckBarcode);
+
+            try {
+                BasicApi api = APIClient.getInstanceStatic(IPAddress, false).create(BasicApi.class);
+                CompositeDisposable compositeDisposable = new CompositeDisposable();
+
+
+                compositeDisposable.addAll(
+                        api.ResetTruckBinCount(CurrentTruckBarcode, true)
+                                .subscribeOn(Schedulers.io())
+                                .observeOn(AndroidSchedulers.mainThread())
+                                .subscribe((s) -> {
+                                    if (s != null) {
+                                        try {
+
+                                            String result = s.string();
+
+                                            Logger.Debug("TPO", "TPOLoadBinsActivity-onBackPressed - Received Truck Count Reset For Truck: " + CurrentTruckBarcode + " " + result);
+
+                                            mainProgressDialog.cancel();
+                                            super.onBackPressed();
+
+                                        } catch (Exception ex) {
+                                            Logger.Error("JSON", "TPOLoadBinsActivity-onBackPressed - Error: " + ex.getMessage());
+                                            mainProgressDialog.cancel();
+                                            General.playError();
+                                            super.onBackPressed();
+                                        }
+                                    }
+                                }, (throwable) -> {
+                                    //This Will Translate The Error Response And Get The Error Body If Available
+                                    String response = "";
+                                    if (throwable instanceof HttpException) {
+                                        HttpException ex = (HttpException) throwable;
+                                        response = ex.response().errorBody().string();
+                                        if (response.isEmpty()) {
+                                            response = throwable.getMessage();
+                                        }
+                                        Logger.Debug("TPO", "TPOLoadBinsActivity-onBackPressed - Returned Error: " + response);
+
+                                    } else {
+                                        response = throwable.getMessage();
+                                        Logger.Error("API", "TPOLoadBinsActivity-onBackPressed - Error In API Response: " + throwable.getMessage() + " " + throwable.toString());
+                                    }
+                                    mainProgressDialog.cancel();
+                                    General.playError();
+                                    super.onBackPressed();
+                                }));
+
+            } catch (Throwable e) {
+                mainProgressDialog.cancel();
+                Logger.Error("API", "TPOLoadBinsActivity-onBackPressed - Error Connecting: " + e.getMessage());
+                General.playError();
+                super.onBackPressed();
+            }
+        }else {
+            super.onBackPressed();
+        }
     }
 
     /**
