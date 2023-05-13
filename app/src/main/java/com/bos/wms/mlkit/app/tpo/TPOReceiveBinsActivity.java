@@ -69,8 +69,8 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
         UserID = General.getGeneral(getApplicationContext()).UserID;
 
         //Get The Current Location The Device
-        //currentLocation = General.getGeneral(getApplicationContext()).mainLocation;
-        currentLocation = "W1005";
+        currentLocation = General.getGeneral(getApplicationContext()).mainLocation;
+        //currentLocation = "W1005";
 
 
         tpoMenuTitle = findViewById(R.id.tpoMenuTitle);

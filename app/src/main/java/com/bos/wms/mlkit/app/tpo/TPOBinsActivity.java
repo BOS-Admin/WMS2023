@@ -508,7 +508,7 @@ public class TPOBinsActivity extends AppCompatActivity {
                                     }
                                     Logger.Debug("TPO", "ReadyTPOBins - Returned Error: " + response);
                                     mainProgressDialog.cancel();
-                                    ShowSnackbar(response);
+                                    ShowErrorDialog(response);
                                     General.playError();
                                 }else {
                                     response = throwable.getMessage();

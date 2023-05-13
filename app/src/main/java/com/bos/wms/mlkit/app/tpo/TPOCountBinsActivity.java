@@ -473,6 +473,8 @@ public class TPOCountBinsActivity extends AppCompatActivity {
                                         ShowSnackbar(result);
                                         General.playSuccess();
 
+                                        finish();
+
                                     }catch(Exception ex){
                                         mainProgressDialog.cancel();
                                         Logger.Error("JSON", "VerifyTPOBinShipmentCount - Error: " + ex.getMessage());

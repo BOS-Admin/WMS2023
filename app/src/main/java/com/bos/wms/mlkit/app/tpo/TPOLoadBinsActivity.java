@@ -163,8 +163,8 @@ public class TPOLoadBinsActivity extends AppCompatActivity {
         /**
          * These Are For Testing
          */
-        CurrentTruckBarcode = "Truck";//For Testing
-        confirmBtn.setEnabled(true);
+        //CurrentTruckBarcode = "Truck";//For Testing
+        //confirmBtn.setEnabled(true);
 
     }
 
@@ -374,6 +374,8 @@ public class TPOLoadBinsActivity extends AppCompatActivity {
 
                                         ShowSnackbar(result);
                                         General.playSuccess();
+
+                                        finish();
 
                                     }catch(Exception ex){
                                         mainProgressDialog.cancel();
