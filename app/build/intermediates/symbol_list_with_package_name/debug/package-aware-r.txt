@@ -2771,6 +2771,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id appBarLayout
 id arc
 id asConfigured
 id async
@@ -3112,6 +3113,7 @@ id line3
 id linear
 id linearLayout
 id linearLayout1
+id linearLayout10
 id linearLayout2
 id linearLayout3
 id linearLayout33
@@ -3123,6 +3125,8 @@ id linearLayout444c
 id linearLayout5
 id linearLayout6
 id linearLayout7
+id linearLayout8
+id linearLayout9
 id listMode
 id listView
 id list_item
@@ -3640,7 +3644,6 @@ layout content_new_item_pricing
 layout content_pg_pricing
 layout content_picking
 layout content_putawaypallete
-layout content_serial_generator
 layout content_upc_pricing
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -5024,6 +5027,7 @@ style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
 style button_main_menu_style
 style pop_window_anim
+style printTypeSpinnerStyle
 style tpoDialogAnimation
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity

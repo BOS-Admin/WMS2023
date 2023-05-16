@@ -4,33 +4,98 @@ package com.bos.wms.mlkit.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
+import com.google.android.material.appbar.AppBarLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivitySerialGeneratorBinding implements ViewBinding {
   @NonNull
-  private final CoordinatorLayout rootView;
+  private final ConstraintLayout rootView;
+
+  @NonNull
+  public final AppBarLayout appBarLayout;
+
+  @NonNull
+  public final Button btnSubmit;
+
+  @NonNull
+  public final TextView lblError;
+
+  @NonNull
+  public final TextView lblFoldingScanItem;
+
+  @NonNull
+  public final TextView lblFoldingScanStation;
+
+  @NonNull
+  public final TextView lblPrintTypeItem;
+
+  @NonNull
+  public final LinearLayout linearLayout10;
+
+  @NonNull
+  public final LinearLayout linearLayout8;
+
+  @NonNull
+  public final LinearLayout linearLayout9;
+
+  @NonNull
+  public final EditText nbFoldingScanItem;
+
+  @NonNull
+  public final Spinner nbPrintTypeItem;
+
+  @NonNull
+  public final RecyclerView recyclerView;
 
   @NonNull
   public final Toolbar toolbar;
 
-  private ActivitySerialGeneratorBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull Toolbar toolbar) {
+  @NonNull
+  public final EditText txtFoldingScanStation;
+
+  private ActivitySerialGeneratorBinding(@NonNull ConstraintLayout rootView,
+      @NonNull AppBarLayout appBarLayout, @NonNull Button btnSubmit, @NonNull TextView lblError,
+      @NonNull TextView lblFoldingScanItem, @NonNull TextView lblFoldingScanStation,
+      @NonNull TextView lblPrintTypeItem, @NonNull LinearLayout linearLayout10,
+      @NonNull LinearLayout linearLayout8, @NonNull LinearLayout linearLayout9,
+      @NonNull EditText nbFoldingScanItem, @NonNull Spinner nbPrintTypeItem,
+      @NonNull RecyclerView recyclerView, @NonNull Toolbar toolbar,
+      @NonNull EditText txtFoldingScanStation) {
     this.rootView = rootView;
+    this.appBarLayout = appBarLayout;
+    this.btnSubmit = btnSubmit;
+    this.lblError = lblError;
+    this.lblFoldingScanItem = lblFoldingScanItem;
+    this.lblFoldingScanStation = lblFoldingScanStation;
+    this.lblPrintTypeItem = lblPrintTypeItem;
+    this.linearLayout10 = linearLayout10;
+    this.linearLayout8 = linearLayout8;
+    this.linearLayout9 = linearLayout9;
+    this.nbFoldingScanItem = nbFoldingScanItem;
+    this.nbPrintTypeItem = nbPrintTypeItem;
+    this.recyclerView = recyclerView;
     this.toolbar = toolbar;
+    this.txtFoldingScanStation = txtFoldingScanStation;
   }
 
   @Override
   @NonNull
-  public CoordinatorLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -55,13 +120,94 @@ public final class ActivitySerialGeneratorBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.appBarLayout;
+      AppBarLayout appBarLayout = ViewBindings.findChildViewById(rootView, id);
+      if (appBarLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.btnSubmit;
+      Button btnSubmit = ViewBindings.findChildViewById(rootView, id);
+      if (btnSubmit == null) {
+        break missingId;
+      }
+
+      id = R.id.lblError;
+      TextView lblError = ViewBindings.findChildViewById(rootView, id);
+      if (lblError == null) {
+        break missingId;
+      }
+
+      id = R.id.lblFoldingScanItem;
+      TextView lblFoldingScanItem = ViewBindings.findChildViewById(rootView, id);
+      if (lblFoldingScanItem == null) {
+        break missingId;
+      }
+
+      id = R.id.lblFoldingScanStation;
+      TextView lblFoldingScanStation = ViewBindings.findChildViewById(rootView, id);
+      if (lblFoldingScanStation == null) {
+        break missingId;
+      }
+
+      id = R.id.lblPrintTypeItem;
+      TextView lblPrintTypeItem = ViewBindings.findChildViewById(rootView, id);
+      if (lblPrintTypeItem == null) {
+        break missingId;
+      }
+
+      id = R.id.linearLayout10;
+      LinearLayout linearLayout10 = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout10 == null) {
+        break missingId;
+      }
+
+      id = R.id.linearLayout8;
+      LinearLayout linearLayout8 = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout8 == null) {
+        break missingId;
+      }
+
+      id = R.id.linearLayout9;
+      LinearLayout linearLayout9 = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout9 == null) {
+        break missingId;
+      }
+
+      id = R.id.nbFoldingScanItem;
+      EditText nbFoldingScanItem = ViewBindings.findChildViewById(rootView, id);
+      if (nbFoldingScanItem == null) {
+        break missingId;
+      }
+
+      id = R.id.nbPrintTypeItem;
+      Spinner nbPrintTypeItem = ViewBindings.findChildViewById(rootView, id);
+      if (nbPrintTypeItem == null) {
+        break missingId;
+      }
+
+      id = R.id.recyclerView;
+      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerView == null) {
+        break missingId;
+      }
+
       id = R.id.toolbar;
       Toolbar toolbar = ViewBindings.findChildViewById(rootView, id);
       if (toolbar == null) {
         break missingId;
       }
 
-      return new ActivitySerialGeneratorBinding((CoordinatorLayout) rootView, toolbar);
+      id = R.id.txtFoldingScanStation;
+      EditText txtFoldingScanStation = ViewBindings.findChildViewById(rootView, id);
+      if (txtFoldingScanStation == null) {
+        break missingId;
+      }
+
+      return new ActivitySerialGeneratorBinding((ConstraintLayout) rootView, appBarLayout,
+          btnSubmit, lblError, lblFoldingScanItem, lblFoldingScanStation, lblPrintTypeItem,
+          linearLayout10, linearLayout8, linearLayout9, nbFoldingScanItem, nbPrintTypeItem,
+          recyclerView, toolbar, txtFoldingScanStation);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

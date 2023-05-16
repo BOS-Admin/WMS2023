@@ -31,7 +31,6 @@ import kotlinx.android.synthetic.main.content_item_pricing.*
 import kotlinx.android.synthetic.main.content_item_pricing.btnSubmit
 import kotlinx.android.synthetic.main.content_item_pricing.lblError
 import kotlinx.android.synthetic.main.content_item_pricing.recyclerView
-import kotlinx.android.synthetic.main.content_serial_generator.*
 import java.io.IOException
 import java.lang.Exception
 import java.util.logging.Logger

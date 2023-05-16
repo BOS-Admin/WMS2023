@@ -2770,6 +2770,7 @@ int id animateToEnd 0x7f08005d
 int id animateToStart 0x7f08005e
 int id antiClockwise 0x7f08005f
 int id anticipate 0x7f080060
+int id appBarLayout 0x7f080331
 int id arc 0x7f080061
 int id asConfigured 0x7f080062
 int id async 0x7f080063
@@ -3111,6 +3112,7 @@ int id line3 0x7f0801b2
 int id linear 0x7f0801b3
 int id linearLayout 0x7f0801b4
 int id linearLayout1 0x7f0801b5
+int id linearLayout10 0x7f080332
 int id linearLayout2 0x7f0801b6
 int id linearLayout3 0x7f0801b7
 int id linearLayout33 0x7f0801b8
@@ -3122,6 +3124,8 @@ int id linearLayout444c 0x7f0801bd
 int id linearLayout5 0x7f0801be
 int id linearLayout6 0x7f0801bf
 int id linearLayout7 0x7f0801c0
+int id linearLayout8 0x7f080333
+int id linearLayout9 0x7f080334
 int id listMode 0x7f0801c1
 int id listView 0x7f0801c2
 int id list_item 0x7f0801c3
@@ -3639,7 +3643,6 @@ int layout content_new_item_pricing 0x7f0b004f
 int layout content_pg_pricing 0x7f0b0050
 int layout content_picking 0x7f0b0051
 int layout content_putawaypallete 0x7f0b0052
-int layout content_serial_generator 0x7f0b0053
 int layout content_upc_pricing 0x7f0b0054
 int layout custom_dialog 0x7f0b0055
 int layout design_bottom_navigation_item 0x7f0b0056
@@ -5023,6 +5026,7 @@ int style Widget_MaterialComponents_Tooltip 0x7f120424
 int style Widget_Support_CoordinatorLayout 0x7f120425
 int style button_main_menu_style 0x7f120426
 int style pop_window_anim 0x7f120427
+int style printTypeSpinnerStyle 0x7f120429
 int style tpoDialogAnimation 0x7f120428
 int[] styleable ActionBar { 0x7f030047, 0x7f03004e, 0x7f03004f, 0x7f030116, 0x7f030117, 0x7f030118, 0x7f030119, 0x7f03011a, 0x7f03011b, 0x7f030141, 0x7f030156, 0x7f030157, 0x7f030179, 0x7f0301e8, 0x7f0301ef, 0x7f0301f5, 0x7f0301f6, 0x7f0301fa, 0x7f03020e, 0x7f030223, 0x7f0302a9, 0x7f030312, 0x7f030349, 0x7f030351, 0x7f030352, 0x7f0303c4, 0x7f0303c8, 0x7f030447, 0x7f030454 }
 int styleable ActionBar_background 0

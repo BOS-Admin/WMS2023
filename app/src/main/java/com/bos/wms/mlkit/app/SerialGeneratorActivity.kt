@@ -25,7 +25,7 @@ import com.google.protobuf.Int32Value
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.content_serial_generator.*
+import kotlinx.android.synthetic.main.activity_serial_generator.*
 import retrofit2.HttpException
 import java.io.IOException
 

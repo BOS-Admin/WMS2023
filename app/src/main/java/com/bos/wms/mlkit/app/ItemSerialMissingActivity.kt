@@ -31,7 +31,6 @@ import kotlinx.android.synthetic.main.content_item_pricing.lblError
 import kotlinx.android.synthetic.main.content_item_pricing.recyclerView
 import kotlinx.android.synthetic.main.content_item_pricing.txtItemCode
 import kotlinx.android.synthetic.main.content_itemserial_missing.*
-import kotlinx.android.synthetic.main.content_serial_generator.*
 import java.io.IOException
 
 
