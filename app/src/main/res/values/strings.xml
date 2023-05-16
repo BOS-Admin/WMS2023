@@ -51,4 +51,9 @@
     <string name="title_activity_scan_count_stock_ake">Stock Take Count</string>
     <string name="title_activity_scan_rack_count_stock_ake">Scan Rack </string>
 
+    <string-array name="ItemSerialPrintType">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
 </resources>

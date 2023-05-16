@@ -217,7 +217,8 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
                         General.playSuccess();
                         openedDialog.cancel();
                     }else {
-                        builder.setTitle("Invalid Override Password!");
+                        //builder.setTitle("Invalid Override Password!");
+                        ShowErrorDialog("Invalid Override Password!");
                         Logger.Debug("TPO", "User Entered An Invalid Override Password: " + password + " For TruckOverride: " + currentLocation +
                                 " TotalOverridePasswords: " + TPOReceivedInfo.OverridePasswords.size());
                     }
@@ -331,7 +332,8 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
                     openedDialog.cancel();
                     UpdateUIForTruck();
                 }else {
-                    builder.setMessage("Invalid Override Password!");
+                    //builder.setMessage("Invalid Override Password!");
+                    ShowErrorDialog("Invalid Override Password!");
                     Logger.Debug("TPO", "User Entered An Invalid Override Password: " + password + " For Bin: " + barcode +
                             " TotalOverridePasswords: " + TPOReceivedInfo.OverridePasswords.size());
                 }
@@ -355,7 +357,7 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
         Logger.Debug("TPO", "AttemptReceiveShipment - Finalizing TPO Shipment Total Received Bins: " + (TPOReceivedInfo.BinIDS.size() + TPOReceivedInfo.OverrideBins.size()));
 
         try {
-            BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
+            BasicApi api = APIClient.getNewInstanceStatic(IPAddress,120).create(BasicApi.class);//120 Seconds For Timeout
             CompositeDisposable compositeDisposable = new CompositeDisposable();
 
 

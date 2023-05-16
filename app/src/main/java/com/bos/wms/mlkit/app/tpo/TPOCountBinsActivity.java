@@ -470,10 +470,8 @@ public class TPOCountBinsActivity extends AppCompatActivity {
                                         mainProgressDialog.cancel();
 
 
-                                        ShowSnackbar(result);
                                         General.playSuccess();
-
-                                        finish();
+                                        ShowAlertDialog("Success", result, true);
 
                                     }catch(Exception ex){
                                         mainProgressDialog.cancel();
@@ -598,6 +596,27 @@ public class TPOCountBinsActivity extends AppCompatActivity {
                     }
                 })
                 .setIcon(icon)
+                .show();
+
+    }
+
+    /**
+     * This Function Is A Shortcut For Displaying Alert Dialogs
+     * @param title
+     * @param message
+     * @param finishOnClose
+     */
+    public void ShowAlertDialog(String title, String message, boolean finishOnClose){
+        new AlertDialog.Builder(this)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        if(finishOnClose)
+                            finish();
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
 
     }

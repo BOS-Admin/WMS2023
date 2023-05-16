@@ -64,10 +64,6 @@
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_main_menu.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_tpomain.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tpomain.xml"
-    },
-    {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable_missingitem.xml.flat",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable\\missingitem.xml"
     },
@@ -90,6 +86,10 @@
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_content_serial_generator.xml.flat",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_serial_generator.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_activity_tporeset_truck.xml.flat",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_tporeset_truck.xml"
     },
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable_pgpricing.xml.flat",
@@ -450,6 +450,10 @@
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\anim_pop_enter_anim.xml.flat",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\anim\\pop_enter_anim.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_content_serial_generator.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_serial_generator.xml"
     },
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\navigation_nav_graph.xml.flat",

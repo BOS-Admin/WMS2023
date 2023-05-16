@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,6 +40,9 @@ public final class ContentSerialGeneratorBinding implements ViewBinding {
   public final TextView lblFoldingScanStation;
 
   @NonNull
+  public final TextView lblPrintTypeItem;
+
+  @NonNull
   public final TextView lblputawaypalleteListView;
 
   @NonNull
@@ -46,6 +50,9 @@ public final class ContentSerialGeneratorBinding implements ViewBinding {
 
   @NonNull
   public final EditText nbFoldingScanItem;
+
+  @NonNull
+  public final Spinner nbPrintTypeItem;
 
   @NonNull
   public final RecyclerView recyclerView;
@@ -59,8 +66,9 @@ public final class ContentSerialGeneratorBinding implements ViewBinding {
   private ContentSerialGeneratorBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button btnFoldingScanDone, @NonNull Button btnSubmit, @NonNull TextView lblError,
       @NonNull TextView lblFoldingScanItem, @NonNull TextView lblFoldingScanStation,
-      @NonNull TextView lblputawaypalleteListView, @NonNull LinearLayout linearLayout,
-      @NonNull EditText nbFoldingScanItem, @NonNull RecyclerView recyclerView,
+      @NonNull TextView lblPrintTypeItem, @NonNull TextView lblputawaypalleteListView,
+      @NonNull LinearLayout linearLayout, @NonNull EditText nbFoldingScanItem,
+      @NonNull Spinner nbPrintTypeItem, @NonNull RecyclerView recyclerView,
       @NonNull TextView textView, @NonNull EditText txtFoldingScanStation) {
     this.rootView = rootView;
     this.btnFoldingScanDone = btnFoldingScanDone;
@@ -68,9 +76,11 @@ public final class ContentSerialGeneratorBinding implements ViewBinding {
     this.lblError = lblError;
     this.lblFoldingScanItem = lblFoldingScanItem;
     this.lblFoldingScanStation = lblFoldingScanStation;
+    this.lblPrintTypeItem = lblPrintTypeItem;
     this.lblputawaypalleteListView = lblputawaypalleteListView;
     this.linearLayout = linearLayout;
     this.nbFoldingScanItem = nbFoldingScanItem;
+    this.nbPrintTypeItem = nbPrintTypeItem;
     this.recyclerView = recyclerView;
     this.textView = textView;
     this.txtFoldingScanStation = txtFoldingScanStation;
@@ -133,6 +143,12 @@ public final class ContentSerialGeneratorBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.lblPrintTypeItem;
+      TextView lblPrintTypeItem = ViewBindings.findChildViewById(rootView, id);
+      if (lblPrintTypeItem == null) {
+        break missingId;
+      }
+
       id = R.id.lblputawaypalleteListView;
       TextView lblputawaypalleteListView = ViewBindings.findChildViewById(rootView, id);
       if (lblputawaypalleteListView == null) {
@@ -148,6 +164,12 @@ public final class ContentSerialGeneratorBinding implements ViewBinding {
       id = R.id.nbFoldingScanItem;
       EditText nbFoldingScanItem = ViewBindings.findChildViewById(rootView, id);
       if (nbFoldingScanItem == null) {
+        break missingId;
+      }
+
+      id = R.id.nbPrintTypeItem;
+      Spinner nbPrintTypeItem = ViewBindings.findChildViewById(rootView, id);
+      if (nbPrintTypeItem == null) {
         break missingId;
       }
 
@@ -170,8 +192,9 @@ public final class ContentSerialGeneratorBinding implements ViewBinding {
       }
 
       return new ContentSerialGeneratorBinding((ConstraintLayout) rootView, btnFoldingScanDone,
-          btnSubmit, lblError, lblFoldingScanItem, lblFoldingScanStation, lblputawaypalleteListView,
-          linearLayout, nbFoldingScanItem, recyclerView, textView, txtFoldingScanStation);
+          btnSubmit, lblError, lblFoldingScanItem, lblFoldingScanStation, lblPrintTypeItem,
+          lblputawaypalleteListView, linearLayout, nbFoldingScanItem, nbPrintTypeItem, recyclerView,
+          textView, txtFoldingScanStation);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

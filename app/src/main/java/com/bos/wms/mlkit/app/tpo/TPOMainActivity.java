@@ -101,7 +101,11 @@ public class TPOMainActivity extends AppCompatActivity {
             AttemptTPOReceiveGetInfo();
         });
 
-        ValidateAuthToken();
+        btnResetTruckCountMode.setOnClickListener(v -> {
+            TPOResetTruckMode();
+        });
+
+        //ValidateAuthToken();
 
     }
 
@@ -697,6 +701,16 @@ public class TPOMainActivity extends AppCompatActivity {
 
         Intent i = new Intent(this, TPOBinsActivity.class);
         i.putExtra("TPOID", id);
+        startActivity(i);
+    }
+
+    /**
+     * This Functions Opens The TPO Reset Truck Mode Activity
+     */
+    public void TPOResetTruckMode(){
+        Logger.Debug("TPO", "TPOResetTruckMode - Opening Activity");
+
+        Intent i = new Intent(this, TPOResetTruckActivity.class);
         startActivity(i);
     }
 

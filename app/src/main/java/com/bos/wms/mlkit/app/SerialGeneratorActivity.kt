@@ -2,6 +2,7 @@ package com.bos.wms.mlkit.app
 
 import Model.FoldingItem
 import Model.FoldingItemModel
+import Model.GenerateItemSerialModel
 import Remote.APIClient
 import Remote.BasicApi
 import android.annotation.SuppressLint
@@ -11,6 +12,7 @@ import android.media.ToneGenerator
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,6 +21,7 @@ import com.bos.wms.mlkit.General
 import com.bos.wms.mlkit.General.hideSoftKeyboard
 import com.bos.wms.mlkit.R
 import com.bos.wms.mlkit.storage.Storage
+import com.google.protobuf.Int32Value
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -107,6 +110,15 @@ class SerialGeneratorActivity : AppCompatActivity() {
         hideSoftKeyboard(this)
         txtFoldingScanStation.addTextChangedListener(TextChangeEvent);
         nbFoldingScanItem.addTextChangedListener(TextChangeEvent);
+
+        var adapter : ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this, R.array.ItemSerialPrintType, android.R.layout.simple_spinner_item)
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+
+        nbPrintTypeItem.adapter = adapter;
+
+        nbPrintTypeItem.setSelection(0);
+
     }
     lateinit var api: BasicApi
     var compositeDisposable= CompositeDisposable()
@@ -190,8 +202,13 @@ class SerialGeneratorActivity : AppCompatActivity() {
 
             nbFoldingScanItem.isEnabled=false
             api= APIClient.getInstance(IPAddress,false).create(BasicApi::class.java)
+
+            var currentModel = GenerateItemSerialModel(Model, nbPrintTypeItem.selectedItem.toString().toIntOrNull() ?: 1);
+
+
+
             compositeDisposable.addAll(
-                api.PostGenerateSerials(Model)
+                api.PostGenerateSerials(currentModel)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(

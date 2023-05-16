@@ -74,6 +74,7 @@ int animator nav_default_enter_anim 0x7f020020
 int animator nav_default_exit_anim 0x7f020021
 int animator nav_default_pop_enter_anim 0x7f020022
 int animator nav_default_pop_exit_anim 0x7f020023
+int array ItemSerialPrintType 0x7f150000
 int attr SharedValue 0x7f030000
 int attr SharedValueId 0x7f030001
 int attr action 0x7f030002
@@ -3076,6 +3077,7 @@ int id lblPickingRackRange 0x7f080191
 int id lblPickingReminaingBins 0x7f080192
 int id lblPickingReminaingItems 0x7f080193
 int id lblPickingWave 0x7f080194
+int id lblPrintTypeItem 0x7f08032f
 int id lblScanError 0x7f080195
 int id lblSeason 0x7f080196
 int id lblShipCartonReciBolNb 0x7f080197
@@ -3203,6 +3205,7 @@ int id navigation_header_container 0x7f080210
 int id navigation_home 0x7f080211
 int id navigation_notifications 0x7f080212
 int id nbFoldingScanItem 0x7f080213
+int id nbPrintTypeItem 0x7f080330
 int id never 0x7f080214
 int id neverCompleteToEnd 0x7f080215
 int id neverCompleteToStart 0x7f080216
@@ -3407,6 +3410,7 @@ int id tpoLoadBinsActivityLayout 0x7f0802dc
 int id tpoMainActivityLayout 0x7f0802dd
 int id tpoMenuTitle 0x7f0802de
 int id tpoReceiveBinsActivityLayout 0x7f0802df
+int id tpoResetTruckModeLayout 0x7f08032e
 int id transitionToEnd 0x7f0802e0
 int id transitionToStart 0x7f0802e1
 int id transition_current_scene 0x7f0802e2
@@ -3617,6 +3621,7 @@ int layout activity_tpocount_bins 0x7f0b003e
 int layout activity_tpoload_bins 0x7f0b003f
 int layout activity_tpomain 0x7f0b0040
 int layout activity_tporeceive_bins 0x7f0b0041
+int layout activity_tporeset_truck 0x7f0b00c1
 int layout activity_transfer 0x7f0b0042
 int layout activity_transfer_receiving 0x7f0b0043
 int layout activity_upc_pricing 0x7f0b0044

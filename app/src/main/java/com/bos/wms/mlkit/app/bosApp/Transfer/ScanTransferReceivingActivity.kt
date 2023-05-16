@@ -1,27 +1,42 @@
 package com.bos.wms.mlkit.app.bosApp.Transfer
 
+import Model.TPO.TPOReceiveTransfer
 import Remote.APIClient
+import Remote.APIClient.getInstanceStatic
 import Remote.BasicApi
 import android.annotation.SuppressLint
+import android.app.AlertDialog
+import android.app.Dialog
+import android.app.ProgressDialog
+import android.content.Intent
 import android.graphics.Color
+import android.media.AudioManager
+import android.media.ToneGenerator
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
+import android.view.ViewGroup
+import android.widget.AdapterView.OnItemClickListener
+import android.widget.EditText
+import android.widget.ListView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.bos.wms.mlkit.General
 import com.bos.wms.mlkit.General.hideSoftKeyboard
 import com.bos.wms.mlkit.R
+import com.bos.wms.mlkit.app.Logger
+import com.bos.wms.mlkit.app.adapters.TPOItemsDialogAdapter
+import com.bos.wms.mlkit.app.adapters.TPOItemsDialogDataModel
 import com.bos.wms.mlkit.storage.Storage
+import com.google.android.material.snackbar.Snackbar
+import com.google.gson.Gson
+import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
+import okhttp3.ResponseBody
 import retrofit2.HttpException
-import android.content.Intent
-import android.media.AudioManager
-import android.media.ToneGenerator
-import android.util.Log
-import android.widget.EditText
-import android.widget.TextView
-import androidx.core.view.isVisible
 import java.io.IOException
 
 class ScanTransferReceivingActivity : AppCompatActivity() {
@@ -200,26 +215,25 @@ class ScanTransferReceivingActivity : AppCompatActivity() {
                 }
 
                if(boxNb==null || boxNb=="") {
-                    txtScanBox.setText("")
+                    /*txtScanBox.setText("")
                     txtScanBox.requestFocus()
-                    UpdatingText=false;
+                    UpdatingText=false;*/
+                    GetNavNumbers();
                     return
                 }
-                if(boxNb.length < 2) {
+                /*if(boxNb.length < 2) {
                     lblError1.setTextColor(Color.RED)
                     lblError1.text = "Inavlid Transfer Number: " + boxNb
                     txtScanBox.setText("")
                     txtScanBox.requestFocus()
                     UpdatingText=false;
                     return
-                }
+                }*/
 
                 UpdatingText=false
                 txtScanUser.setShowSoftInputOnFocus(false);
                 txtScanBox.setShowSoftInputOnFocus(false);
                 txtScanDestination.setShowSoftInputOnFocus(false);
-                proceed(boxNb);
-
             }
 
             override fun beforeTextChanged(s: CharSequence, start: Int,
@@ -237,5 +251,107 @@ class ScanTransferReceivingActivity : AppCompatActivity() {
 
     }
 
+    fun GetNavNumbers() {
+        val mainProgressDialog = ProgressDialog.show(this, "",
+                "Retrieving Transfers, Please wait...", true)
+        mainProgressDialog.show()
+
+        Logger.Debug("TPO", "GetNavNumbers - Retrieving Receiving Transfer From: " + General.getGeneral(applicationContext).mainLocation)
+
+        try {
+            val api = getInstanceStatic(General.getGeneral(applicationContext).ipAddress, false).create<BasicApi>(BasicApi::class.java)
+            val compositeDisposable = CompositeDisposable()
+            compositeDisposable.addAll(
+                    api.GetReceivingTransfers(General.getGeneral(applicationContext).mainLocation)
+                            .subscribeOn(Schedulers.io())
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe({ s: ResponseBody? ->
+                                if (s != null) {
+                                    try {
+                                        val result = s.string()
+                                        Logger.Debug("TPO", "GetNavNumbers - Received Receiving Transfers: $result")
+
+                                        /* We Will Get The Array As Json And Convert It To An Array List */
+                                        val transfers = Gson().fromJson(result, Array<TPOReceiveTransfer>::class.java)
+                                        mainProgressDialog.cancel()
+
+                                        /* We Will Then Show A Dialog With A Custom Layout To Show The Available Locations */
+                                        val dialog = Dialog(this@ScanTransferReceivingActivity)
+                                        dialog.setContentView(R.layout.tpo_locations_dialog)
+                                        dialog.window!!.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+                                        dialog.window!!.attributes.windowAnimations = R.style.tpoDialogAnimation
+
+                                        /* Transfer The Location Response Models To Layout Data Models */
+                                        val dataModels = ArrayList<TPOItemsDialogDataModel>()
+                                        for (navTransfer in transfers) {
+                                            val model = TPOItemsDialogDataModel(navTransfer.navNo)
+                                            dataModels.add(model)
+                                        }
+                                        val itemsListView = dialog.findViewById<ListView>(R.id.itemsListView)
+                                        val itemsDialogTitle = dialog.findViewById<TextView>(R.id.itemsMenuTitle)
+                                        itemsDialogTitle.text = "Select NavNo"
+
+                                        /* Create A Custom Adapter For The Location Items */
+                                        val itemsAdapter = TPOItemsDialogAdapter(dataModels, this, itemsListView)
+                                        itemsListView.adapter = itemsAdapter
+                                        itemsListView.onItemClickListener = OnItemClickListener { parent, view, position, id -> /* Once A Location Is Clicked Attempt To Create A New TPO Heading To That Location */
+                                            val dataModel = dataModels[position] as TPOItemsDialogDataModel
+                                            proceed(dataModel.message)
+                                            dialog.cancel()
+                                        }
+                                        dialog.show()
+                                    } catch (ex: Exception) {
+                                        mainProgressDialog.cancel()
+                                        Logger.Error("JSON", "GetNavNumbers - Error: " + ex.message)
+                                        ShowErrorDialog(ex.message)
+                                    }
+                                }
+                            }) { throwable: Throwable ->
+                                //This Will Translate The Error Response And Get The Error Body If Available
+                                var response: String? = ""
+                                if (throwable is HttpException) {
+                                    val ex = throwable as HttpException
+                                    response = ex.response().errorBody()!!.string()
+                                    if (response.isEmpty()) {
+                                        response = throwable.message
+                                    }
+                                    Logger.Debug("TPO", "GetNavNumbers - Returned Error: $response")
+                                } else {
+                                    response = throwable.message
+                                    Logger.Error("API", "GetNavNumbers - Error In API Response: " + throwable.message + " " + throwable.toString())
+                                }
+                                mainProgressDialog.cancel()
+                                ShowErrorDialog(response)
+                            })
+        } catch (e: Throwable) {
+            mainProgressDialog.cancel()
+            Logger.Error("API", "GetNavNumbers - Error Connecting: " + e.message)
+            ShowErrorDialog("Connection To Server Failed!")
+        }
+    }
+
+    /**
+     * This Function Is A Shortcut For Displaying Alert Dialogs
+     * @param title
+     * @param message
+     * @param icon
+     */
+    fun ShowAlertDialog(title: String?, message: String?, icon: Int) {
+        AlertDialog.Builder(this)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("Ok") { dialog, which -> }
+                .setIcon(icon)
+                .show()
+    }
+
+    /**
+     * This Function Is A Shortcut For Displaying The Error Dialog
+     * @param message
+     */
+    fun ShowErrorDialog(message: String?) {
+        ShowAlertDialog("Error", message, android.R.drawable.ic_dialog_alert)
+        General.playError()
+    }
 
 }

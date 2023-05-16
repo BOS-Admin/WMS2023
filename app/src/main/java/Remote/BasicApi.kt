@@ -75,6 +75,15 @@ interface BasicApi {
     @GET("api/OverridePasswords/GetAvailablePasswords")
     fun GetAllOverridePasswords(@Query("PasswordCategory") PasswordCategory: String): Observable<List<String>>
 
+    @GET("api/TPO/ResetTruckBinCountMode")
+    fun ResetTruckBinCountMode(@Query("TruckBarcode") TruckBarcode: String): Observable<ResponseBody>
+
+    @GET("api/TPO/GetReceivingTransfers")
+    fun GetReceivingTransfers(@Query("CurrentLocation") CurrentLocation: String): Observable<ResponseBody>
+
+
+
+
     @POST("api/wms/pricing/upc/overrideItem")
     fun OverrideItemPrice(@Body model: UPCPricingItemModel): Observable<PricingItemResponseModel>
     @POST("api/wms/pricing/itempricing/item")
@@ -409,7 +418,7 @@ interface BasicApi {
     @GET("api/GenerateSerials")
     fun InitGenerateSerials(@Query("FoldingStationCode") FoldingStationCode:String): Observable<FoldingItem>
     @POST("api/GenerateSerials")
-    fun PostGenerateSerials(@Body model: FoldingItemModel): Observable<ResponseBody>
+    fun PostGenerateSerials(@Body model: GenerateItemSerialModel): Observable<ResponseBody>
 
     @GET("api/ItemSerialMissing")
     fun InitItemSerialMissing(@Query("UserID") UserID:Int,@Query("ItemSerialNo") ItemSerialNo:String): Observable<String>

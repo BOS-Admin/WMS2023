@@ -32,9 +32,12 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".app.tpo.TPOResetTruckActivity"
+            android:exported="false" />
+        <activity
             android:name=".app.tpo.TPOReceiveBinsActivity"
             android:exported="false"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".app.tpo.TPOCountBinsActivity"
             android:exported="false"
@@ -61,7 +64,7 @@
             android:name=".app.UPCRecognitionPricingActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".app.PasBrandOCRActivity"
             android:exported="false" />

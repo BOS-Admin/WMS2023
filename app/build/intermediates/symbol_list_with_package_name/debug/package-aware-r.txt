@@ -75,6 +75,7 @@ animator nav_default_enter_anim
 animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
+array ItemSerialPrintType
 attr SharedValue
 attr SharedValueId
 attr action
@@ -3077,6 +3078,7 @@ id lblPickingRackRange
 id lblPickingReminaingBins
 id lblPickingReminaingItems
 id lblPickingWave
+id lblPrintTypeItem
 id lblScanError
 id lblSeason
 id lblShipCartonReciBolNb
@@ -3204,6 +3206,7 @@ id navigation_header_container
 id navigation_home
 id navigation_notifications
 id nbFoldingScanItem
+id nbPrintTypeItem
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
@@ -3408,6 +3411,7 @@ id tpoLoadBinsActivityLayout
 id tpoMainActivityLayout
 id tpoMenuTitle
 id tpoReceiveBinsActivityLayout
+id tpoResetTruckModeLayout
 id transitionToEnd
 id transitionToStart
 id transition_current_scene
@@ -3618,6 +3622,7 @@ layout activity_tpocount_bins
 layout activity_tpoload_bins
 layout activity_tpomain
 layout activity_tporeceive_bins
+layout activity_tporeset_truck
 layout activity_transfer
 layout activity_transfer_receiving
 layout activity_upc_pricing

@@ -468,7 +468,7 @@ public class TPOBinsActivity extends AppCompatActivity {
         Logger.Debug("TPO", "ReadyTPOBins - Verifying TPO Bins For TPO ID: " + TPOID);
 
         try {
-            BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
+            BasicApi api = APIClient.getNewInstanceStatic(IPAddress,120).create(BasicApi.class);//Create A Timeout Instance Of 60 Seconds
             CompositeDisposable compositeDisposable = new CompositeDisposable();
 
 
