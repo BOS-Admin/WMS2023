@@ -879,7 +879,7 @@ public class UPCRecognitionPricingActivity extends AppCompatActivity {
                     if(arg2.length() >= 12){
                         String currentUPC = "";
                         for(int i = 0; i < arg2.length(); i++){
-                            if(arg2.length() - i == 12){
+                            if(arg2.length() - i == 12 || arg2.charAt(i) != '0'){
                                 currentUPC = arg2.substring(i);
                                 break;
                             }
@@ -887,14 +887,29 @@ public class UPCRecognitionPricingActivity extends AppCompatActivity {
                         Logger.Debug("OCR", "Got Original UPC Text: " + arg2 + " Removed Leading Zeros: " + currentUPC);
                         if(currentUPC.length() == 12  && !upcs.contains(currentUPC)){
                             upcs.add(currentUPC);
-                            GotUPCFromCamera(currentUPC);
                         }
                     }
+                }
+            }
+            String line2 = line.replaceAll("/", "1").replaceAll("[^0-9]", "").replaceAll(" ", "");
+            if(line2.length() >= 12){
+                String currentUPC = "";
+                for(int i = 0; i < line2.length(); i++){
+                    if(line2.length() - i == 12 || line2.charAt(i) != '0'){
+                        currentUPC = line2.substring(i);
+                        break;
+                    }
+                }
+                Logger.Debug("OCR", "Got Original UPC Text: " + line2 + " Removed Leading Zeros: " + currentUPC);
+                if(currentUPC.length() == 12  && !upcs.contains(currentUPC)){
+                    upcs.add(currentUPC);
                 }
             }
         }
         if(upcs.size() == 0){
             FailedUPCCamera();
+        }else {
+            GotUPCFromCamera(upcs.get(0));
         }
     }
 
