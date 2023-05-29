@@ -59,7 +59,8 @@
         <activity
             android:name="com.bos.wms.mlkit.app.tpo.TPOReceiveBinsActivity"
             android:exported="false"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="com.bos.wms.mlkit.app.tpo.TPOCountBinsActivity"
             android:exported="false"

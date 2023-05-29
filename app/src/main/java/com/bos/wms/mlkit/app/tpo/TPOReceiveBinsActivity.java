@@ -15,12 +15,15 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.bos.wms.mlkit.General;
 import com.bos.wms.mlkit.R;
 import com.bos.wms.mlkit.app.Logger;
 import com.bos.wms.mlkit.app.ZebraPrinter;
+import com.bos.wms.mlkit.app.adapters.BinBarcodeRemovedListener;
+import com.bos.wms.mlkit.app.adapters.BinBarcodeScannedAdapter;
 import com.bos.wms.mlkit.app.adapters.TPOItemsDialogDataModel;
 import com.bos.wms.mlkit.storage.Storage;
 import com.google.android.material.snackbar.Snackbar;
@@ -59,6 +62,12 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
 
     String TruckBarcodeStartsWith = "NULL";
 
+    ArrayList<TPOItemsDialogDataModel> dataModels;
+
+    BinBarcodeScannedAdapter adapter;
+
+    ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,6 +91,20 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
         insertBarcodeEditText = findViewById(R.id.insertBarcodeEditText);
 
         tpoMenuTitle.setText("Current Location " + currentLocation);
+
+
+        listView = findViewById(R.id.tpoReceiveBins);
+
+        dataModels = new ArrayList<>();
+
+        adapter = new BinBarcodeScannedAdapter(dataModels, getApplicationContext(), listView, new BinBarcodeRemovedListener() {
+            @Override
+            public void onItemRemoved(TPOItemsDialogDataModel dataModel) {
+
+            }
+        });
+
+        listView.setAdapter(adapter);
 
         TPOReceivedInfo.OverrideBins = new ArrayList<>();
         TPOReceivedInfo.BinIDS = new ArrayList<>();
@@ -285,6 +308,7 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
                                 "CurrentTruck: " + CurrentTruckBarcode + " BinBarcode: " + barcode + " BinTruckBarcode: " + model.getTruckBarcode() +
                                 " BinTPOID: " + model.getTpoID() + " BinID: " + model.getId());
                         TPOReceivedInfo.BinIDS.add(model.getId());
+                        UpdateUIForBins();
                         ShowSnackbar("The Bin Barcode You Scanned: " + barcode + " Is Received Successfully!");
                         General.playSuccess();
                     }
@@ -505,6 +529,26 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
     }
 
     /**
+     * This Updates The UI To View The Remaining Bins To Scan
+     */
+    public void UpdateUIForBins(){
+        //dataModels.clear();
+        //adapter.notifyDataSetChanged();
+        for(TPOReceivedBinModel model : TPOReceivedInfo.ReceivedItems){
+            if(model.getTruckBarcode().equalsIgnoreCase(CurrentTruckBarcode)){
+                if(TPOReceivedInfo.BinIDS.contains(model.getId())){
+                    for(TPOItemsDialogDataModel item : dataModels.toArray(new TPOItemsDialogDataModel[] {})){
+                        if(item.getMessage().equalsIgnoreCase(model.getBinBarcode())){
+                            dataModels.remove(item);
+                        }
+                    }
+                }
+            }
+        }
+        adapter.notifyDataSetChanged();
+    }
+
+    /**
      * This functions updates the truck received and estimated bins
      */
     public void UpdateUIForTruck(){
@@ -515,11 +559,18 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
                 int receivedBins = 0;
                 int overridedBins = 0;
 
+                dataModels.clear();
+                adapter.notifyDataSetChanged();
+
                 for(TPOReceivedBinModel model : TPOReceivedInfo.ReceivedItems){
                     if(model.getTruckBarcode().equalsIgnoreCase(CurrentTruckBarcode)){
                         totalBins++;
                         if(TPOReceivedInfo.BinIDS.contains(model.getId())){
                             receivedBins++;
+                        }else {
+                            dataModels.add(new TPOItemsDialogDataModel(model.getBinBarcode()));
+
+                            adapter.notifyDataSetChanged();
                         }
                     }
                 }

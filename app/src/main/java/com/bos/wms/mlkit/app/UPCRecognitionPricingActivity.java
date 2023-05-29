@@ -885,7 +885,7 @@ public class UPCRecognitionPricingActivity extends AppCompatActivity {
                             }
                         }
                         Logger.Debug("OCR", "Got Original UPC Text: " + arg2 + " Removed Leading Zeros: " + currentUPC);
-                        if(currentUPC.length() == 12  && !upcs.contains(currentUPC)){
+                        if((currentUPC.length() == 12 || currentUPC.length() == 13)  && !upcs.contains(currentUPC)){
                             upcs.add(currentUPC);
                         }
                     }

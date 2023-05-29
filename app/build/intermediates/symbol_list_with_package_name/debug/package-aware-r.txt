@@ -3414,6 +3414,7 @@ id tpoInfoBtn
 id tpoLoadBinsActivityLayout
 id tpoMainActivityLayout
 id tpoMenuTitle
+id tpoReceiveBins
 id tpoReceiveBinsActivityLayout
 id tpoResetTruckModeLayout
 id transitionToEnd

@@ -24,10 +24,6 @@
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_fillpallete.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_serial_generator.xml",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_serial_generator.xml"
-    },
-    {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_new_item_pricing.xml",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_new_item_pricing.xml"
     },
@@ -40,12 +36,12 @@
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_count.xml"
     },
     {
-        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_itemserial_upc_missing.xml",
-        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_itemserial_upc_missing.xml"
-    },
-    {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_brand_ocractivity.xml",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_brand_ocractivity.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_itemserial_upc_missing.xml",
+        "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_itemserial_upc_missing.xml"
     },
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\fragment_home.xml",
@@ -90,6 +86,10 @@
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_transfer.xml",
         "source": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_transfer.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_tporeceive_bins.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tporeceive_bins.xml"
     },
     {
         "merged": "C:\\Users\\m.serhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_shipment.xml",
