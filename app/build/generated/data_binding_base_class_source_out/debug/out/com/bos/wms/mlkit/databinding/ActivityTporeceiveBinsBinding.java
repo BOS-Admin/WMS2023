@@ -7,9 +7,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.Guideline;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
@@ -31,6 +33,9 @@ public final class ActivityTporeceiveBinsBinding implements ViewBinding {
   public final Button estimateInfoBtn;
 
   @NonNull
+  public final Guideline guideline;
+
+  @NonNull
   public final EditText insertBarcodeEditText;
 
   @NonNull
@@ -43,21 +48,26 @@ public final class ActivityTporeceiveBinsBinding implements ViewBinding {
   public final TextView tpoMenuTitle;
 
   @NonNull
+  public final ListView tpoReceiveBins;
+
+  @NonNull
   public final LinearLayout tpoReceiveBinsActivityLayout;
 
   private ActivityTporeceiveBinsBinding(@NonNull LinearLayout rootView, @NonNull Button confirmBtn,
       @NonNull TextView currentTPOInfoTxt, @NonNull Button estimateInfoBtn,
-      @NonNull EditText insertBarcodeEditText, @NonNull Button receivedInfoBtn,
-      @NonNull Button scanBoxesTxt, @NonNull TextView tpoMenuTitle,
-      @NonNull LinearLayout tpoReceiveBinsActivityLayout) {
+      @NonNull Guideline guideline, @NonNull EditText insertBarcodeEditText,
+      @NonNull Button receivedInfoBtn, @NonNull Button scanBoxesTxt, @NonNull TextView tpoMenuTitle,
+      @NonNull ListView tpoReceiveBins, @NonNull LinearLayout tpoReceiveBinsActivityLayout) {
     this.rootView = rootView;
     this.confirmBtn = confirmBtn;
     this.currentTPOInfoTxt = currentTPOInfoTxt;
     this.estimateInfoBtn = estimateInfoBtn;
+    this.guideline = guideline;
     this.insertBarcodeEditText = insertBarcodeEditText;
     this.receivedInfoBtn = receivedInfoBtn;
     this.scanBoxesTxt = scanBoxesTxt;
     this.tpoMenuTitle = tpoMenuTitle;
+    this.tpoReceiveBins = tpoReceiveBins;
     this.tpoReceiveBinsActivityLayout = tpoReceiveBinsActivityLayout;
   }
 
@@ -106,6 +116,12 @@ public final class ActivityTporeceiveBinsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.guideline;
+      Guideline guideline = ViewBindings.findChildViewById(rootView, id);
+      if (guideline == null) {
+        break missingId;
+      }
+
       id = R.id.insertBarcodeEditText;
       EditText insertBarcodeEditText = ViewBindings.findChildViewById(rootView, id);
       if (insertBarcodeEditText == null) {
@@ -130,11 +146,17 @@ public final class ActivityTporeceiveBinsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tpoReceiveBins;
+      ListView tpoReceiveBins = ViewBindings.findChildViewById(rootView, id);
+      if (tpoReceiveBins == null) {
+        break missingId;
+      }
+
       LinearLayout tpoReceiveBinsActivityLayout = (LinearLayout) rootView;
 
       return new ActivityTporeceiveBinsBinding((LinearLayout) rootView, confirmBtn,
-          currentTPOInfoTxt, estimateInfoBtn, insertBarcodeEditText, receivedInfoBtn, scanBoxesTxt,
-          tpoMenuTitle, tpoReceiveBinsActivityLayout);
+          currentTPOInfoTxt, estimateInfoBtn, guideline, insertBarcodeEditText, receivedInfoBtn,
+          scanBoxesTxt, tpoMenuTitle, tpoReceiveBins, tpoReceiveBinsActivityLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
