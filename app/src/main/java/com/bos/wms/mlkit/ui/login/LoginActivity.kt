@@ -75,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
                     )
             )
         } catch (e: Throwable) {
-            throw(IOException("Error logging in", e))
+            showLoginFailed(e.toString())
         }
         finally {
         }
@@ -106,7 +106,7 @@ class LoginActivity : AppCompatActivity() {
                     )
             )
         } catch (e: Throwable) {
-            throw(IOException("Error logging in", e))
+            showLoginFailed(e.toString())
         }
         finally {
         }
