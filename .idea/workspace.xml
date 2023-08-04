@@ -81,7 +81,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="WMSAppV2.1.5" />
+        <entry key="$PROJECT_DIR$" value="WMSAppV2.1.6" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -406,7 +406,8 @@
     <MESSAGE value="Fixed TPO Boxes" />
     <MESSAGE value="New Branch" />
     <MESSAGE value="Fix Login Crash" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Login Crash" />
+    <MESSAGE value="UPCA fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPCA fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -437,11 +438,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/bos/wms/mlkit/app/bosApp/PackingDCActivity.kt</url>
-          <line>109</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
