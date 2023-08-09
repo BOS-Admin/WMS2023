@@ -74,6 +74,9 @@ class ItemPricingActivity : AppCompatActivity() {
                 UpdatingText=true;
                 var ItemStr:String=txtItemCode.text.toString()
 
+                if(isValidUPCA(ItemStr))
+                   ItemStr = convertToIS(ItemStr)
+
                 lblError.setText("")
 
                 if(Items.contains(ItemStr)){
@@ -120,6 +123,32 @@ class ItemPricingActivity : AppCompatActivity() {
     private fun Beep(){
         ToneGenerator(AudioManager.STREAM_MUSIC, ToneGenerator.MAX_VOLUME).startTone(ToneGenerator.TONE_SUP_ERROR, 300)
     }
+
+    //region UPCA
+    fun calculateUPCAChecksum(barcodeWithoutChecksum: String): Int {
+        val reversed = barcodeWithoutChecksum.reversed().toCharArray()
+        val sum = (0 until reversed.size).sumOf { i ->
+            Character.getNumericValue(reversed[i]) * if (i % 2 == 0) 3 else 1
+        }
+        return (10 - sum % 10) % 10
+    }
+
+
+    fun convertToIS(upca: String): String {
+        return "IS00" + upca.substring(2, upca.length - 1)
+    }
+    fun isValidUPCA(barcode: String): Boolean {
+        if (barcode.length != 12 || !barcode.startsWith("22")) {
+            return false
+        }
+
+        val checksumDigit = Character.getNumericValue(barcode[11])
+        val barcodeWithoutChecksum = barcode.substring(0, 11)
+        val expectedChecksum = calculateUPCAChecksum(barcodeWithoutChecksum)
+
+        return checksumDigit == expectedChecksum
+    }
+    //endregion
     fun ValidateItemSerial(ItemStr:String) {
         try {
             // TODO: handle loggedInUser authentication
@@ -183,7 +212,7 @@ class ItemPricingActivity : AppCompatActivity() {
             hideSoftKeyboard(this)
         }
     }
-    @SuppressLint("ResourceAsColor")
+    @SuppressLint("ResourceAsColor", "SuspiciousIndentation")
     fun PostItemPricing(UserID:Int,PricingLineCode:String,Items:ArrayList<String>) {
         try {
             Log.e("CurrentUserID2", "UserID: " + UserID)

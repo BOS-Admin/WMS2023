@@ -154,7 +154,7 @@ class PackingDCActivity : AppCompatActivity() {
         } else textLastItem.text = items[index]
     }
 
-
+//region UPCA
     fun calculateUPCAChecksum(barcodeWithoutChecksum: String): Int {
         val reversed = barcodeWithoutChecksum.reversed().toCharArray()
         val sum = (0 until reversed.size).sumOf { i ->
@@ -163,6 +163,10 @@ class PackingDCActivity : AppCompatActivity() {
         return (10 - sum % 10) % 10
     }
 
+
+    fun convertToIS(upca: String): String {
+        return "IS00" + upca.substring(2, upca.length - 1)
+    }
     fun isValidUPCA(barcode: String): Boolean {
         if (barcode.length != 12 || !barcode.startsWith("22")) {
             return false
@@ -174,6 +178,8 @@ class PackingDCActivity : AppCompatActivity() {
 
         return checksumDigit == expectedChecksum
     }
+//endregion
+
 
 
     fun ValidateScan(ItemSerial: String) {
@@ -185,9 +191,12 @@ class PackingDCActivity : AppCompatActivity() {
 
             var itemCode = ItemSerial
 
-            if(!isValidUPCA(itemCode))
-            if (!itemCode.startsWith("IS"))
-                itemCode = "IN$itemCode"
+            if(isValidUPCA(itemCode))
+               itemCode = convertToIS(itemCode)
+            else
+                if (!itemCode.startsWith("IS"))
+                    itemCode = "IN$itemCode"
+
 
             Log.i("Ah-Log", "Packing Reason Id " + general.packReasonId)
             api = APIClient.getInstance(IPAddress, false).create(BasicApi::class.java)
