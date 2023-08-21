@@ -67,7 +67,7 @@ class PackingDCActivity : AppCompatActivity() {
                     return;
                 updatingText = true;
                 lblScanError.text = "";
-                val item = textItemScanned.text.toString()
+                var item = textItemScanned.text.toString()
                 if (item.length < 5) {
                     Beep()
                     lblScanError.text = "Invalid ItemCode"
@@ -75,6 +75,8 @@ class PackingDCActivity : AppCompatActivity() {
                     updatingText = false;
                     return;
                 }
+                if(isValidUPCA(item))
+                    item = convertToIS(item)
 
                 if (items.containsValue(item)) {
                     Beep()
