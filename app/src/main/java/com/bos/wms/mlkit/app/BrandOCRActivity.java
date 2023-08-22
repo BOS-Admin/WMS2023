@@ -603,7 +603,7 @@ public class BrandOCRActivity extends AppCompatActivity {
         barcodeScanner.process(image).addOnSuccessListener(barcodes -> {
             if(CurrentBarcode == null && barcodes.size() == 1){
                 String barcode = barcodes.get(0).getRawValue().toUpperCase(Locale.getDefault());
-                if(barcode.length() == 13 && barcode.startsWith("IS")){
+                if(barcode.length() >= 12 && (barcode.startsWith("IS") || barcode.startsWith("22"))){
 
                     //This means that the current detected barcode is the same as the last one detected
                     if(barcode.equals(lastDetectedBarcode)){
@@ -621,6 +621,9 @@ public class BrandOCRActivity extends AppCompatActivity {
                         if(CurrentBarcode == null || CurrentBarcode.isEmpty()){
                             CheckBarcodePreviousOCR(barcode);
                             CurrentBarcode = barcodes.get(0).getRawValue();
+                            CurrentBarcode = CurrentBarcode.substring(2);
+                            CurrentBarcode = "IS00" + CurrentBarcode.substring(0, CurrentBarcode.length() - 1);
+                            Logger.Debug("BARCODE", "Detected Barcode For OCR: " + CurrentBarcode);
                         }
                     }
 

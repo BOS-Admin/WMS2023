@@ -242,7 +242,7 @@ public class General {
     }
 
     public static Boolean ValidateItemSerialCode(String str){
-        return !str.isEmpty() && str.length()>10 && str.toUpperCase().startsWith("IS");
+        return !str.isEmpty() && str.length()>10 && (str.toUpperCase().startsWith("IS") || str.startsWith("22"));
     }
 
     public static Boolean ValidateAppointmentNoFormat(String str){
