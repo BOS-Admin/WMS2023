@@ -26,6 +26,7 @@ public class TPOItemsDialogAdapter extends ArrayAdapter<TPOItemsDialogDataModel>
 
     private ListView listView;
 
+
     // View lookup cache
     private static class ViewHolder {
         TextView locationText;

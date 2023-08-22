@@ -575,8 +575,14 @@ public class BolRecognitionActivity extends AppCompatActivity {
                     }
                     @Override
                     public void onError(ImageCaptureException error) {
-                        cameraPreviewImageView.setVisibility(View.INVISIBLE);
-                        captureImageButton.setEnabled(true);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                cameraPreviewImageView.setVisibility(View.INVISIBLE);
+                                captureImageButton.setEnabled(true);
+                            }
+                        });
+
                         Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "Failed Capturing Image", Snackbar.LENGTH_LONG)
                                 .setAction("No action", null).show();
                         Logger.Error("CAMERA", "CaptureImage - Image Failed To Saved: " + error.getMessage());
@@ -873,8 +879,14 @@ public class BolRecognitionActivity extends AppCompatActivity {
             });
             Logger.Debug("OCR", "UploadImage - Sent Request To Google Vision, Bytes Size: " + imageBytes.length);
         }else {
-            cameraPreviewImageView.setVisibility(View.INVISIBLE);
-            captureImageButton.setEnabled(true);
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    cameraPreviewImageView.setVisibility(View.INVISIBLE);
+                    captureImageButton.setEnabled(true);
+                }
+            });
+
             Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "An Internal Error Occurred", Snackbar.LENGTH_LONG)
                     .setAction("No action", null).show();
             Logger.Error("FIREBASE", "UploadImage - Error, FireBase Functions Not Initiated");
