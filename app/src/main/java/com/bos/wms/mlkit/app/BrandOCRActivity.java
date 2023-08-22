@@ -620,8 +620,10 @@ public class BrandOCRActivity extends AppCompatActivity {
 
                         if(CurrentBarcode == null || CurrentBarcode.isEmpty()){
                             CurrentBarcode = barcodes.get(0).getRawValue();
-                            CurrentBarcode = CurrentBarcode.substring(2);
-                            CurrentBarcode = "IS00" + CurrentBarcode.substring(0, CurrentBarcode.length() - 1);
+                            if(barcode.startsWith("22")) {
+                                CurrentBarcode = CurrentBarcode.substring(2);
+                                CurrentBarcode = "IS00" + CurrentBarcode.substring(0, CurrentBarcode.length() - 1);
+                            }
                             CheckBarcodePreviousOCR(CurrentBarcode);
                             Logger.Debug("BARCODE", "Detected Barcode For OCR: " + CurrentBarcode);
                         }
