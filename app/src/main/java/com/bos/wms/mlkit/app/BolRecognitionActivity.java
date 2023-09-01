@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.camera.core.Camera;
 import androidx.camera.core.CameraInfoUnavailableException;
 import androidx.camera.core.CameraSelector;
+import androidx.camera.core.CameraX;
 import androidx.camera.core.DisplayOrientedMeteringPointFactory;
 import androidx.camera.core.FocusMeteringAction;
 import androidx.camera.core.ImageCapture;
@@ -114,6 +115,8 @@ public class BolRecognitionActivity extends AppCompatActivity {
     public ZebraPrinter printer;
 
     public String[] currentPrintData;
+
+    ProcessCameraProvider cameraProvider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -457,7 +460,14 @@ public class BolRecognitionActivity extends AppCompatActivity {
 
         cameraProviderFuture.addListener(() -> {
             try {
-                ProcessCameraProvider cameraProvider = cameraProviderFuture.get();
+                cameraProvider = cameraProviderFuture.get();
+
+                try{
+                    cameraProvider.unbindAll();
+                    Logger.Debug("CAMERA", "Unbind All Usecases");
+                }catch (Exception ex){
+
+                }
 
                 //Create Preview And Bind It
                 Preview preview = new Preview.Builder()
@@ -477,6 +487,7 @@ public class BolRecognitionActivity extends AppCompatActivity {
                 /**
                  * This code helps the camera focus on click
                  */
+                Logger.Debug("CAMERA", "Camera Loaded Successfully!");
                 cameraPreview.setOnTouchListener(new View.OnTouchListener() {
                     @RequiresApi(api = Build.VERSION_CODES.R)
                     @Override
@@ -503,6 +514,7 @@ public class BolRecognitionActivity extends AppCompatActivity {
             } catch (Exception ex) {
                 // No errors need to be handled for this Future.
                 // This should never be reached.
+                Logger.Error("CAMERA-ERROR", "Error Starting Camera: " + ex.toString());
             }
         }, ContextCompat.getMainExecutor(this));
 
@@ -576,13 +588,17 @@ public class BolRecognitionActivity extends AppCompatActivity {
                     }
                     @Override
                     public void onError(ImageCaptureException error) {
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                cameraPreviewImageView.setVisibility(View.INVISIBLE);
-                                captureImageButton.setEnabled(true);
-                            }
-                        });
+                        try {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    cameraPreviewImageView.setVisibility(View.INVISIBLE);
+                                    captureImageButton.setEnabled(true);
+                                }
+                            });
+                        }catch (Exception ex){
+
+                        }
 
                         Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "Failed Capturing Image", Snackbar.LENGTH_LONG)
                                 .setAction("No action", null).show();
