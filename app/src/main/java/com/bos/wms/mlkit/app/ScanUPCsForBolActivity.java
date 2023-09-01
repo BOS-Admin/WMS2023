@@ -139,8 +139,8 @@ public class ScanUPCsForBolActivity extends AppCompatActivity {
 
         printerImageButton.setOnClickListener((click) -> {
             if(ZebraPrinter.isFirstConnectionEstablished()){
-                if(currentPrintData != null && currentPrintData.length == 2){
-                    printer.printBolData(currentPrintData[0], currentPrintData[1]);
+                if(currentPrintData != null && currentPrintData.length == 3){
+                    printer.printBolData(currentPrintData[0], currentPrintData[1], currentPrintData[3]);
                 }
             }else {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -346,11 +346,12 @@ public class ScanUPCsForBolActivity extends AppCompatActivity {
                                             scanUPCSHelpText.setText(formattedResult);
                                             currentPrintData = new String[]{
                                                     json.getString("bol"),
-                                                    json.getString("boxSerial")
+                                                    json.getString("boxSerial"),
+                                                    json.getString("vendorCategory")
                                             };
                                             if(ZebraPrinter.isFirstConnectionEstablished()) {
                                                 //Print Bol Number And Serial
-                                                printer.printBolData(json.getString("bol"), json.getString("boxSerial"));
+                                                printer.printBolData(json.getString("bol"), json.getString("boxSerial"), json.getString("vendorCategory"));
                                             }
                                             Logger.Debug("UPC", "SubmitUPCS - Detected " + formattedResult);
                                         }catch(Exception ex){
@@ -467,11 +468,12 @@ public class ScanUPCsForBolActivity extends AppCompatActivity {
                                             scanUPCSHelpText.setText(formattedResult);
                                             currentPrintData = new String[]{
                                                     json.getString("bol"),
-                                                    json.getString("boxSerial")
+                                                    json.getString("boxSerial"),
+                                                    json.getString("vendorCategory")
                                             };
                                             if(ZebraPrinter.isFirstConnectionEstablished()) {
                                                 //Print Bol Number And Serial
-                                                printer.printBolData(json.getString("bol"), json.getString("boxSerial"));
+                                                printer.printBolData(json.getString("bol"), json.getString("boxSerial"), json.getString("vendorCategory"));
                                             }
                                             Logger.Debug("UPC", "SubmitUPCS - Detected " + formattedResult);
                                         }catch(Exception ex){

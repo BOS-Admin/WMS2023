@@ -43,30 +43,26 @@ public class ZebraPrinter {
      * @param bol
      * @param serial
      */
-    public void printBolData(String bol, String serial) {
-        String zplData = "";
-        if(applicationContext == null){
-            zplData = "^XA\n" +
-                    "^BY3\n" +
-                    "^BUN,100,Y, N, Y\n" +
-                    "^CF0,40\n" +
-                    "^FO50,10^FD" + serial + "^FS\n" +
-                    "^FO70,160^FDBOL# " + bol + "^FS\n" +
-                    "^LL50\n" +
-                    "^XZ\n";
-        }else {
-            String userCode = General.getGeneral(applicationContext).UserCode;
-            zplData = "^XA\n" +
-                    "^BY3\n" +
-                    "^BUN,100,Y, N, Y\n" +
-                    "^CF0,40\n" +
-                    "^FO50,10^FD" + serial + "^FS\n" +
-                    "^CF0,30\n" +
-                    "^FO20,160^FDBOL# " + bol + "^FS\n" +
-                    "^FO250,160^FD" + userCode + "^FS\n" +
-                    "^LL50\n" +
-                    "^XZ\n";
+    public void printBolData(String bol, String serial, String vendorCategory) {
+        String userCode = "0000";
+        if(applicationContext != null){
+            userCode = General.getGeneral(applicationContext).UserCode;
         }
+        String zplTemplate = "^XA\n" +
+                "^BY3\n" +
+                "^BUN,80,Y, N, Y\n" +
+                "^CF0,40\n" +
+                "^FO50,15^FD#Serial#^FS\n" +
+                "^CF0,30\n" +
+                "^FO20,135^FD#BolNumber#^FS\n" +
+                "^FO250,135^FD#UserID#^FS\n" +
+                "^FO20,170^FD#VendorCategory#^FS\n" +
+                "^LL50\n" +
+                "^XZ";
+
+        String zplData = zplTemplate.replace("#Serial#", serial).replace("#BolNumber#", bol)
+                .replace("#VendorCategory#", vendorCategory).replace("#UserID#", userCode);
+
         printQueue.add(zplData);
 
         if(!isCurrentlyPrinting){

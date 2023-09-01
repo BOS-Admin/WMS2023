@@ -204,8 +204,8 @@ public class BolRecognitionActivity extends AppCompatActivity {
 
         printerImageButton.setOnClickListener((click) -> {
             if(ZebraPrinter.isFirstConnectionEstablished()){
-                if(currentPrintData != null && currentPrintData.length == 2){
-                    printer.printBolData(currentPrintData[0], currentPrintData[1]);
+                if(currentPrintData != null && currentPrintData.length == 3){
+                    printer.printBolData(currentPrintData[0], currentPrintData[1], currentPrintData[2]);
                 }
             }else {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -345,11 +345,12 @@ public class BolRecognitionActivity extends AppCompatActivity {
 
                                         currentPrintData = new String[]{
                                                 json.getString("bol"),
-                                                json.getString("boxSerial")
+                                                json.getString("boxSerial"),
+                                                json.getString("vendorCategory")
                                         };
                                         if(ZebraPrinter.isFirstConnectionEstablished()) {
                                             //Print Bol Number And Serial
-                                            printer.printBolData(json.getString("bol"), json.getString("boxSerial"));
+                                            printer.printBolData(json.getString("bol"), json.getString("boxSerial"), json.getString("vendorCategory"));
                                         }
                                         Logger.Debug("API", "ProcessBOLNumber - Analyzed Data " + formattedResult);
                                         bolHelpText.setText(formattedResult);
@@ -499,7 +500,7 @@ public class BolRecognitionActivity extends AppCompatActivity {
                     }
                 });
 
-            } catch (ExecutionException | InterruptedException e) {
+            } catch (Exception ex) {
                 // No errors need to be handled for this Future.
                 // This should never be reached.
             }
@@ -575,8 +576,14 @@ public class BolRecognitionActivity extends AppCompatActivity {
                     }
                     @Override
                     public void onError(ImageCaptureException error) {
-                        cameraPreviewImageView.setVisibility(View.INVISIBLE);
-                        captureImageButton.setEnabled(true);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                cameraPreviewImageView.setVisibility(View.INVISIBLE);
+                                captureImageButton.setEnabled(true);
+                            }
+                        });
+
                         Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "Failed Capturing Image", Snackbar.LENGTH_LONG)
                                 .setAction("No action", null).show();
                         Logger.Error("CAMERA", "CaptureImage - Image Failed To Saved: " + error.getMessage());
@@ -615,14 +622,17 @@ public class BolRecognitionActivity extends AppCompatActivity {
      * @return
      */
     public boolean bluetoothPermissionsGranted(){
-        return ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_GRANTED;
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_GRANTED
+                && ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_SCAN) == PackageManager.PERMISSION_GRANTED
+                && ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED;
     }
 
     /**
      * Request the camera permissions from the user
      */
     public void requestBluetoothPermissions(){
-        ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.BLUETOOTH_ADMIN}, BLUETOOTH_PERMISSION_REQUEST_CODE);
+        ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.BLUETOOTH_ADMIN, Manifest.permission.BLUETOOTH_SCAN,
+                Manifest.permission.BLUETOOTH_CONNECT}, BLUETOOTH_PERMISSION_REQUEST_CODE);
     }
 
     @Override
@@ -873,8 +883,14 @@ public class BolRecognitionActivity extends AppCompatActivity {
             });
             Logger.Debug("OCR", "UploadImage - Sent Request To Google Vision, Bytes Size: " + imageBytes.length);
         }else {
-            cameraPreviewImageView.setVisibility(View.INVISIBLE);
-            captureImageButton.setEnabled(true);
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    cameraPreviewImageView.setVisibility(View.INVISIBLE);
+                    captureImageButton.setEnabled(true);
+                }
+            });
+
             Snackbar.make(findViewById(R.id.bolRecognitionActiviyLayout), "An Internal Error Occurred", Snackbar.LENGTH_LONG)
                     .setAction("No action", null).show();
             Logger.Error("FIREBASE", "UploadImage - Error, FireBase Functions Not Initiated");
