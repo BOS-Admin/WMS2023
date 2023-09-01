@@ -121,26 +121,32 @@ public class OCRBackgroundThread {
                     "/OCR/"
             );
 
-            //Get all the files from the OCR folder
-            File[] allFolders = FolerPath.listFiles();
-            for(File currentFolder : allFolders){
-                //Verify that the current folder actually is an ocr item folder
-                if(currentFolder.isDirectory() && currentFolder.getName().startsWith("IS")){
-                    Logger.Debug("OCR-THREAD", "Starting OCR Process For Folder " + currentFolder.getAbsolutePath());
-                    File[] allFiles = currentFolder.listFiles();
-                    for(File currentFile : allFiles){
-                        ProcessImageFile(currentFile, currentFolder);
-                    }
+            try {
+                //Get all the files from the OCR folder
+                File[] allFolders = FolerPath.listFiles();
+                for (File currentFolder : allFolders) {
+                    //Verify that the current folder actually is an ocr item folder
+                    if (currentFolder.isDirectory() && currentFolder.getName().startsWith("IS")) {
+                        Logger.Debug("OCR-THREAD", "Starting OCR Process For Folder " + currentFolder.getAbsolutePath());
+                        File[] allFiles = currentFolder.listFiles();
+                        for (File currentFile : allFiles) {
+                            ProcessImageFile(currentFile, currentFolder);
+                        }
 
-                    //This is used here to make sure that the folder didnt remain from the last application instance
-                    StartFolderRevision(currentFolder);
+                        //This is used here to make sure that the folder didnt remain from the last application instance
+                        StartFolderRevision(currentFolder);
 
-                    try {
-                        Thread.sleep(Delay);
-                    } catch (InterruptedException e) {
+                        try {
+                            Thread.sleep(Delay);
+                        } catch (InterruptedException e) {
 
+                        }
                     }
                 }
+
+
+            }catch (Exception ex){
+
             }
 
             try {
@@ -149,6 +155,7 @@ public class OCRBackgroundThread {
             } catch (InterruptedException e) {
 
             }
+
         } } ).start();
     }
 
