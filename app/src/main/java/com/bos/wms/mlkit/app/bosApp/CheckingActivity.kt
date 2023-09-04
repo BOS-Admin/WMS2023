@@ -86,7 +86,7 @@ class CheckingActivity : AppCompatActivity() {
                     return;
                 updatingText = true;
                 lblScanError.text = "";
-                val item = textItemScanned.text.toString()
+                var item = textItemScanned.text.toString()
                 if (item.length < 5) {
                     Beep()
                     lblScanError.text = "Invalid ItemSerial"
@@ -94,6 +94,8 @@ class CheckingActivity : AppCompatActivity() {
                     updatingText = false;
                     return;
                 }
+                if(isValidUPCA(item))
+                    item = convertToIS(item)
 
                 if (items.containsValue(item)) {
                     Beep()
@@ -209,9 +211,6 @@ class CheckingActivity : AppCompatActivity() {
 
             var itemCode = ItemSerial
 
-            if(isValidUPCA(itemCode))
-                itemCode = convertToIS(itemCode)
-            else
                 if (!itemCode.startsWith("IS"))
                     itemCode = "IN$itemCode"
 

@@ -4,7 +4,7 @@
             "outputFile": "com.bos.wms.mlkit.app-mergeDebugResources-58:/values-v25/values-v25.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\m.serhan\\.gradle\\caches\\transforms-3\\460bbeb8ea307ab6c5abc35f94e0627c\\transformed\\appcompat-1.5.0\\res\\values-v25\\values-v25.xml",
+                    "source": "C:\\Users\\m.othman\\.gradle\\caches\\transforms-3\\460bbeb8ea307ab6c5abc35f94e0627c\\transformed\\appcompat-1.5.0\\res\\values-v25\\values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",
