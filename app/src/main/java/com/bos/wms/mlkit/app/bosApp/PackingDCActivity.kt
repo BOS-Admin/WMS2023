@@ -20,10 +20,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.bos.wms.mlkit.General
 import com.bos.wms.mlkit.R
+import com.bos.wms.mlkit.app.Logger
 import com.bos.wms.mlkit.storage.Storage
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import retrofit2.HttpException
+import java.io.IOException
 
 
 class PackingDCActivity : AppCompatActivity() {
@@ -183,6 +185,27 @@ class PackingDCActivity : AppCompatActivity() {
 //endregion
 
 
+    private fun executeCommand(): Boolean {
+        Log.i("AH-Log-Packing", " executeCommand")
+        val runtime = Runtime.getRuntime()
+        try {
+            val mIpAddrProcess = runtime.exec("/system/bin/ping -c 1 192.168.50.20")
+            val mExitValue = mIpAddrProcess.waitFor()
+            Log.i("AH-Log-Packing", " mExitValue $mExitValue")
+            return mExitValue == 0
+        } catch (ignore: InterruptedException) {
+            ignore.printStackTrace()
+            Log.i("AH-Log-Packing", "Exception:$ignore")
+        } catch (e: IOException) {
+            e.printStackTrace()
+            Log.i("AH-Log-Packing", "Exception:$e")
+        }
+        return false
+    }
+
+
+
+
 
     fun ValidateScan(ItemSerial: String) {
 
@@ -200,7 +223,22 @@ class PackingDCActivity : AppCompatActivity() {
                     itemCode = "IN$itemCode"
 
 
+
             Log.i("Ah-Log", "Packing Reason Id " + general.packReasonId)
+            Logger.Debug("PackingDC","Ping" ,"Packing Reason Id " + general.packReasonId)
+            api = APIClient.getInstance(IPAddress, false).create(BasicApi::class.java)
+
+
+
+            Log.i("AH-Log-Packing", "Start Ping")
+            Logger.Debug("PackingDC.log","Ping" ,"Start Ping ($ItemSerial)")
+            val x=executeCommand()
+            Logger.Debug("PackingDC.log","Ping" ,"End Ping: ($ItemSerial) => $x")
+            Log.i("AH-Log-Packing", "End Ping: $x")
+
+
+            Log.i("Ah-Log", "Packing Reason Id " + general.packReasonId)
+
             api = APIClient.getInstance(IPAddress, false).create(BasicApi::class.java)
             compositeDisposable.addAll(
                 api.ValidateFillBinItem(
@@ -266,7 +304,13 @@ class PackingDCActivity : AppCompatActivity() {
                                     )
 
                                 } else {
+
                                     showScanMessage(t?.message + " (API Error)", Color.RED)
+
+                                    val error=t?.message + " (API Error)"
+                                    Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n Start Ping ($ItemSerial)")
+                                    val x=executeCommand()
+                                    Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n End Ping ($ItemSerial): => $x")
                                 }
 
                                 runOnUiThread {
