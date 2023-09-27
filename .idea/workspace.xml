@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ae77340-5efb-46bd-99d6-8632db512b26" name="Changes" comment="Edit Bol Recognition">
+    <list default="true" id="8ae77340-5efb-46bd-99d6-8632db512b26" name="Changes" comment="Transfer Fix Issues 1">
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
@@ -792,7 +792,6 @@
     <MESSAGE value="Remove Unused Models" />
     <MESSAGE value="Transfer" />
     <MESSAGE value="Transfer Fix Issues" />
-    <MESSAGE value="Transfer Fix Issues 1" />
     <MESSAGE value="Added TPO Receveived Menu" />
     <MESSAGE value="Created UPC Pricing From UPC Image" />
     <MESSAGE value="TPO Editions" />
@@ -807,7 +806,8 @@
     <MESSAGE value="fix permission and version" />
     <MESSAGE value="Fix Login Crash" />
     <MESSAGE value="Edit Bol Recognition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit Bol Recognition" />
+    <MESSAGE value="Transfer Fix Issues 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Transfer Fix Issues 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
