@@ -193,6 +193,9 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
 
         confirmBtn.setOnClickListener(view -> {
 
+            confirmBtn.setEnabled(false);
+            confirmBtn.setVisibility(View.GONE);
+
             int totalBins = 0;
             int receivedBins = 0;
 
@@ -407,10 +410,13 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
 
                                     }catch(Exception ex){
                                         mainProgressDialog.cancel();
+                                        confirmBtn.setEnabled(true);
+                                        confirmBtn.setVisibility(View.VISIBLE);
                                         Logger.Error("JSON", "AttemptReceiveShipment - Error: " + ex.getMessage());
                                         ShowErrorDialog(ex.getMessage());
                                     }
                                 }
+
                             }, (throwable) -> {
                                 //This Will Translate The Error Response And Get The Error Body If Available
                                 String response = "";
@@ -429,12 +435,18 @@ public class TPOReceiveBinsActivity extends AppCompatActivity {
                                     mainProgressDialog.cancel();
                                     ShowErrorDialog(response);
                                 }
+
+                                confirmBtn.setEnabled(true);
+                                confirmBtn.setVisibility(View.VISIBLE);
+
                             }));
 
         } catch (Throwable e) {
             mainProgressDialog.cancel();
             Logger.Error("API", "AttemptReceiveShipment - Error Connecting: " + e.getMessage());
             ShowErrorDialog("Connection To Server Failed!");
+            confirmBtn.setEnabled(true);
+            confirmBtn.setVisibility(View.VISIBLE);
         }
     }
 

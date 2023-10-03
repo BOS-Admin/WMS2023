@@ -208,7 +208,7 @@ class PackingDCActivity : AppCompatActivity() {
 
 
     fun ValidateScan(ItemSerial: String) {
-
+//        var start:Long=System.currentTimeMillis();
         try {
             textItemScanned.isEnabled = false
             btnNext.isEnabled = false
@@ -225,19 +225,24 @@ class PackingDCActivity : AppCompatActivity() {
 
 
             Log.i("Ah-Log", "Packing Reason Id " + general.packReasonId)
-            Logger.Debug("PackingDC","Ping" ,"Packing Reason Id " + general.packReasonId)
+            //Logger.Debug("PackingDC","Ping" ,"Packing Reason Id " + general.packReasonId)
             api = APIClient.getInstance(IPAddress, false).create(BasicApi::class.java)
 
 
-
-            Log.i("AH-Log-Packing", "Start Ping")
-            Logger.Debug("PackingDC.log","Ping" ,"Start Ping ($ItemSerial)")
-            val x=executeCommand()
-            Logger.Debug("PackingDC.log","Ping" ,"End Ping: ($ItemSerial) => $x")
-            Log.i("AH-Log-Packing", "End Ping: $x")
+//
+//            Log.i("AH-Log-Packing", "Start Ping")
+//            Logger.Debug("PackingDC.log","Ping" ,"Start Ping ($ItemSerial)")
+//            start = System.currentTimeMillis()
+//            val x=executeCommand()
+//            Logger.Debug("PackingDC.log","Ping" ,"End Ping: ($ItemSerial) => $x : => (${System.currentTimeMillis()-start}) ")
+//            Log.i("AH-Log-Packing", "End Ping: $x")
 
 
             Log.i("Ah-Log", "Packing Reason Id " + general.packReasonId)
+
+            Logger.Debug("PackingDC.log","API Start" ,"ItemSerial: ($ItemSerial) ")
+//            start = System.currentTimeMillis()
+
 
             api = APIClient.getInstance(IPAddress, false).create(BasicApi::class.java)
             compositeDisposable.addAll(
@@ -261,6 +266,7 @@ class PackingDCActivity : AppCompatActivity() {
                                 btnPrev.isEnabled = true
                             }
 
+//                            Logger.Debug("PackingDC.log","API Done" ,"ItemSerial: ($ItemSerial) => (${System.currentTimeMillis()-start})")
 
                             if (response != null && response == "success") {
                                 runOnUiThread {
@@ -296,6 +302,8 @@ class PackingDCActivity : AppCompatActivity() {
                                     btnPrev.isEnabled = true
                                 }
 
+                               // Logger.Debug("PackingDC.log","API Done" ,"ItemSerial: ($ItemSerial) => (${System.currentTimeMillis()-start})")
+
                                 if (t is HttpException) {
                                     var ex: HttpException = t as HttpException
                                     showScanMessage(
@@ -308,9 +316,10 @@ class PackingDCActivity : AppCompatActivity() {
                                     showScanMessage(t?.message + " (API Error)", Color.RED)
 
                                     val error=t?.message + " (API Error)"
+                                    var start:Long=System.currentTimeMillis();
                                     Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n Start Ping ($ItemSerial)")
                                     val x=executeCommand()
-                                    Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n End Ping ($ItemSerial): => $x")
+                                    Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n End Ping ($ItemSerial): => $x => (${System.currentTimeMillis()-start})")
                                 }
 
                                 runOnUiThread {
@@ -326,7 +335,7 @@ class PackingDCActivity : AppCompatActivity() {
             )
         } catch (e: Throwable) {
             showScanMessage("Error:" + e?.message, Color.RED)
-
+//            Logger.Debug("PackingDC.log","API Done" ,"ItemSerial: ($ItemSerial) => (${System.currentTimeMillis()-start})")
             //throw(IOException("UPC Pricing Activity - ValidateScan", e))
         } finally {
 
