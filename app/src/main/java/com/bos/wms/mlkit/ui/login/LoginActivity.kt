@@ -6,8 +6,10 @@ import Model.UserLoginResultModel
 import Remote.APIClient
 import Remote.BasicApi
 import Remote.UserPermissions.UserPermissions
+import android.Manifest
+import android.app.ProgressDialog
 import android.content.Intent
-import android.graphics.Color
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -16,7 +18,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import androidx.lifecycle.ViewModelProvider
+import com.bos.wms.mlkit.BuildConfig
 import com.bos.wms.mlkit.Extensions
 import com.bos.wms.mlkit.General
 import com.bos.wms.mlkit.R
@@ -32,7 +38,12 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.HttpException
+import java.io.File
+import java.io.FileOutputStream
 import java.io.IOException
+import java.io.OutputStream
+import java.net.HttpURLConnection
+import java.net.URL
 
 
 class LoginActivity : AppCompatActivity() {
@@ -41,6 +52,9 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     lateinit var api: BasicApi
     var compositeDisposable= CompositeDisposable()
+    val REQUEST_CODE = 0x0000c0de
+    private var apkFilePath = ""
+    private var progressDialog: ProgressDialog? = null
 
     override fun onStop() {
         compositeDisposable.clear()
@@ -97,6 +111,7 @@ class LoginActivity : AppCompatActivity() {
                     .subscribe(
                         {s->
                             updateUiWithLocations(s)
+
                         },
                         {t:Throwable?->
                             run {
@@ -111,6 +126,113 @@ class LoginActivity : AppCompatActivity() {
         finally {
         }
     }
+
+
+    //region Version
+     fun getHighestAppVersion() {
+        try {
+            checkPermission()
+            val currentAppVersion: String = UserPermissions.AppVersion
+            Logger.Debug( "Version API", "Getting max App Version.., current App Version: $currentAppVersion")
+            val api: BasicApi = APIClient.getInstance(IPAddress,true).create<BasicApi>(BasicApi::class.java)
+            val compositeDisposable = CompositeDisposable()
+            compositeDisposable.addAll(
+                    api.GetAppVersion()
+                            .subscribeOn(Schedulers.io())
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe { s ->
+                                if (s != null) {
+                                    Logger.Debug("Version API", "Got Highest Version: " + s.version)
+                                    val highestVersion: String = s.version
+                                    if (toUpdateApp(currentAppVersion, highestVersion)) {
+                                        Logger.Debug("Version API", "App Version isn't up to date, curr ent App Version: $currentAppVersion highest App Version: $highestVersion")
+                                        val fileName = "WMSAppV" + s.version + ".apk"
+                                        //String url = "http://192.168.50.17:5012/api/locations/DownloadFile?apkFileName=fileName";
+                                        //String downloadFileUrl = General.GetSystemControlValue("DownloadUpdates", "http://192.168.50.20:5004/api/locations/DownloadFile");
+                                        var downloadFileUrl: String = s.apiPath
+                                        downloadFileUrl = "$downloadFileUrl?apkFileName=$fileName"
+                                        saveFile(downloadFileUrl, fileName)
+                                    }
+                                }
+                            })
+        } catch (e: Throwable) {
+            Logger.Debug("Login", "Version API", "Error Connecting: " + e.message)
+        }
+    }
+
+    private fun checkPermission() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), REQUEST_CODE)
+        }
+    }
+
+    private fun toUpdateApp(currentVersion: String, highestVersion: String): Boolean {
+        var currentVersion = currentVersion
+        var highestVersion = highestVersion
+        currentVersion = currentVersion.replace(".", "")
+        highestVersion = highestVersion.replace(".", "")
+        val currVersion = currentVersion.toInt()
+        val highVersion = highestVersion.toInt()
+        return currVersion < highVersion
+    }
+
+
+    private fun saveFile(url: String, fileName: String) {
+        progressDialog = ProgressDialog.show(this, "", " Please Wait Checking for updates...", true)
+        Thread {
+            try {
+                val dir: File = File(getOutputDirectory(), "/Downloads/") // Choose the directory to save to
+                if (!dir.exists()) {
+                    dir.mkdirs()
+                }
+                val file = File(dir, fileName) // Create a new file in the directory
+                val apkURL = URL(url)
+                val connection = apkURL.openConnection() as HttpURLConnection
+                connection.connect()
+                if (connection.responseCode == HttpURLConnection.HTTP_OK) {
+                    val inputStream = connection.inputStream
+                    val os: OutputStream = FileOutputStream(file)
+                    val buffer = ByteArray(1024)
+                    var len: Int
+                    while (inputStream.read(buffer).also { len = it } != -1) {
+                        os.write(buffer, 0, len)
+                    }
+                    os.close()
+                    inputStream.close()
+                    apkFilePath = file.absolutePath
+                }
+                connection.disconnect()
+                if (apkFilePath != "") installAndOpenUpdatedApp()
+                if (progressDialog != null) {
+                    progressDialog!!.cancel()
+                    finish()
+                }
+            } catch (e: Exception) {
+                Logger.Debug("Getting Version", "Error Saving File, error: " + e.message)
+                progressDialog?.cancel()
+            }
+        }.start()
+    }
+
+    private fun getOutputDirectory(): File? {
+        val allMediaDirs = externalMediaDirs
+        val mediaDir = if (allMediaDirs.size > 0) allMediaDirs[0] else null
+        if (mediaDir == null) {
+            File(resources.getString(R.string.app_name)).mkdirs()
+        }
+        return if (mediaDir != null && mediaDir.exists()) mediaDir else filesDir
+    }
+
+    fun installAndOpenUpdatedApp() {
+        val intent = Intent(Intent.ACTION_INSTALL_PACKAGE)
+        val apkUri = FileProvider.getUriForFile(this, BuildConfig.APPLICATION_ID + ".provider", File(apkFilePath))
+        intent.data = apkUri
+        intent.flags = Intent.FLAG_GRANT_READ_URI_PERMISSION
+        this.startActivity(intent)
+    }
+
+//end region
+
     var locationModel: LocationModel?=null
     private fun updateUiWithLocations(model: LocationModel) {
         locationModel=model
@@ -134,6 +256,7 @@ class LoginActivity : AppCompatActivity() {
         adapter.notifyDataSetChanged()
         val ddlLogin: Spinner = findViewById(R.id.ddlFloor)
         ddlLogin.setAdapter(adapter)
+        getHighestAppVersion()
     }
     fun login(username: String, password: String) {
 
@@ -251,6 +374,8 @@ class LoginActivity : AppCompatActivity() {
 
         getLocations(2)
 
+        //version stuff
+       // getHighestAppVersion()
         username.afterTextChanged {
  //           loginViewModel.loginDataChanged(
  //               username.text.toString(),
