@@ -373,7 +373,7 @@ interface BasicApi {
     @GET("api/Location")
     fun GetLocation(@Query("IPAddress") IPAddress:String,@Query("LocationTypeID") LocationTypeID: Int, @Query("UserID") UserID: Int): Observable<LocationModel>
 
-    @GET("api/Location/GetAppVersion")
+    @GET("api/locations/GetAppVersion")
     fun GetAppVersion(): Observable<AppVersionModel>
 
     @POST("api/AssignLocationCheck")
