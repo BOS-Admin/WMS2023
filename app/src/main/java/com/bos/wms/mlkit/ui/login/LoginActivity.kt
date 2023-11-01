@@ -38,11 +38,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.HttpException
-import java.io.File
-import java.io.FileOutputStream
-import java.io.IOException
-import java.io.OutputStream
-import java.net.HttpURLConnection
+import java.io.*
 import java.net.URL
 
 
@@ -130,6 +126,7 @@ class LoginActivity : AppCompatActivity() {
 
     //region Version
      fun getHighestAppVersion() {
+        progressDialog = ProgressDialog.show(this, "", " Please Wait Checking for updates...", true)
         try {
             checkPermission()
             val currentAppVersion: String = UserPermissions.AppVersion
@@ -140,22 +137,26 @@ class LoginActivity : AppCompatActivity() {
                     api.GetAppVersion()
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
-                            .subscribe { s ->
+                            .subscribe ({ s ->
                                 if (s != null) {
                                     Logger.Debug("Version API", "Got Highest Version: " + s.version)
                                     val highestVersion: String = s.version
                                     if (toUpdateApp(currentAppVersion, highestVersion)) {
                                         Logger.Debug("Version API", "App Version isn't up to date, curr ent App Version: $currentAppVersion highest App Version: $highestVersion")
                                         val fileName = "WMSAppV" + s.version + ".apk"
-                                        //String url = "http://192.168.50.17:5012/api/locations/DownloadFile?apkFileName=fileName";
-                                        //String downloadFileUrl = General.GetSystemControlValue("DownloadUpdates", "http://192.168.50.20:5004/api/locations/DownloadFile");
-                                        var downloadFileUrl: String = s.apiPath
-                                        downloadFileUrl = "$downloadFileUrl?apkFileName=$fileName"
+                                        var downloadFileUrl: String = s.apiPath + fileName
                                         saveFile(downloadFileUrl, fileName)
+
+                                    }else {
+                                        progressDialog!!.cancel()
                                     }
                                 }
-                            })
+                            }, {t:Throwable?->
+                                progressDialog!!.cancel()
+                                Logger.Debug("Login", "Version API", "Error: " + t!!.message)
+                            }))
         } catch (e: Throwable) {
+            progressDialog!!.cancel()
             Logger.Debug("Login", "Version API", "Error Connecting: " + e.message)
         }
     }
@@ -178,38 +179,51 @@ class LoginActivity : AppCompatActivity() {
 
 
     private fun saveFile(url: String, fileName: String) {
-        progressDialog = ProgressDialog.show(this, "", " Please Wait Checking for updates...", true)
+        progressDialog = ProgressDialog(this)
+        progressDialog!!.setMessage("Downloading $fileName Please Wait...")
+        progressDialog!!.isIndeterminate = false
+        progressDialog!!.setCancelable(false)
+        progressDialog!!.max = 100
+        progressDialog!!.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL)
+        progressDialog!!.show()
         Thread {
             try {
-                val dir: File = File(getOutputDirectory(), "/Downloads/") // Choose the directory to save to
+                val dir = File(getOutputDirectory(), "/Downloads/") // Choose the directory to save to
                 if (!dir.exists()) {
                     dir.mkdirs()
                 }
                 val file = File(dir, fileName) // Create a new file in the directory
-                val apkURL = URL(url)
-                val connection = apkURL.openConnection() as HttpURLConnection
-                connection.connect()
-                if (connection.responseCode == HttpURLConnection.HTTP_OK) {
-                    val inputStream = connection.inputStream
-                    val os: OutputStream = FileOutputStream(file)
-                    val buffer = ByteArray(1024)
-                    var len: Int
-                    while (inputStream.read(buffer).also { len = it } != -1) {
-                        os.write(buffer, 0, len)
-                    }
-                    os.close()
-                    inputStream.close()
-                    apkFilePath = file.absolutePath
+                Logger.Debug("AutoUpdate", "Creating File For Download: " + file.absolutePath)
+                if (!file.exists()) {
+                    file.createNewFile()
                 }
-                connection.disconnect()
+                val webURL = URL(url)
+                val connection = webURL.openConnection()
+                connection.connect()
+                val lengthOfFile = connection.contentLength
+                val input: InputStream = BufferedInputStream(webURL.openStream(), 8192)
+                val output: OutputStream = FileOutputStream(file)
+                val data = ByteArray(1024)
+                var total: Long = 0
+                var count: Int
+                while (input.read(data).also { count = it } != -1) {
+                    total += count.toLong()
+                    progressDialog!!.progress = (total * 100 / lengthOfFile).toInt()
+                    output.write(data, 0, count)
+                }
+                Logger.Debug("AutoUpdate", "Auto Update Done Received: " + Extensions.HumanReadableByteCountBin(total))
+                output.flush()
+                output.close()
+                input.close()
+                apkFilePath = file.absolutePath
                 if (apkFilePath != "") installAndOpenUpdatedApp()
                 if (progressDialog != null) {
                     progressDialog!!.cancel()
-                    finish()
                 }
+                finish()
             } catch (e: Exception) {
-                Logger.Debug("Getting Version", "Error Saving File, error: " + e.message)
-                progressDialog?.cancel()
+                Logger.Error("AutoUpdate", "Error Downloading File, $e")
+                if (progressDialog != null) progressDialog!!.cancel()
             }
         }.start()
     }
@@ -334,6 +348,7 @@ class LoginActivity : AppCompatActivity() {
         ) {
             IPAddress= mStorage.getDataString("IPAddress", "192.168.10.82")
             getLocations(2)
+            getHighestAppVersion()
             Extensions.setImageDrawableWithAnimation(btnSettings, getDrawable(R.drawable.baseline_settings_icon), 300);
         }
     }
