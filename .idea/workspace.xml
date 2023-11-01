@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ae77340-5efb-46bd-99d6-8632db512b26" name="Changes" comment="automation with api">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8ae77340-5efb-46bd-99d6-8632db512b26" name="Changes" comment="automation with api 3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -483,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698735579984</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="automation with api 2">
+      <created>1698841830442</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1698841830442</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -518,7 +523,9 @@
     <MESSAGE value="Edit Bol Recognition" />
     <MESSAGE value="Transfer Fix Issues 1" />
     <MESSAGE value="automation with api" />
-    <option name="LAST_COMMIT_MESSAGE" value="automation with api" />
+    <MESSAGE value="automation with api 2" />
+    <MESSAGE value="automation with api 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="automation with api 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
