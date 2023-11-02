@@ -142,12 +142,13 @@ class LoginActivity : AppCompatActivity() {
                                     Logger.Debug("Version API", "Got Highest Version: " + s.version)
                                     val highestVersion: String = s.version
                                     if (toUpdateApp(currentAppVersion, highestVersion)) {
-                                        Logger.Debug("Version API", "App Version isn't up to date, curr ent App Version: $currentAppVersion highest App Version: $highestVersion")
+                                        Logger.Debug("Version API", "App Version isn't up to date, current App Version: $currentAppVersion highest App Version: $highestVersion")
                                         val fileName = "WMSAppV" + s.version + ".apk"
                                         var downloadFileUrl: String = s.apiPath + fileName
                                         saveFile(downloadFileUrl, fileName)
 
                                     }else {
+                                        Logger.Debug("Version API", "This Device Is Using The Latest Version No Need For Update")
                                         progressDialog!!.cancel()
                                     }
                                 }
