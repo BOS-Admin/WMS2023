@@ -21,6 +21,20 @@ interface BasicApi {
 
     /* Transfer Preparation Order */
 
+    @POST("api/reprice/store/")
+    fun Reprice( @Query("UserId") UserId: Int,
+                 @Query("ItemCode") BoxBarcode:String,
+                 @Query("Store") Store:String
+    ): Observable<ClassBRepriceResponseModel>
+
+    @GET("api/reprice/store/getStoreRepriceCount")
+    fun GetRepriceCount(  @Query("Store") Store:String
+    ): Observable<ClassBRepriceCountResponse>
+
+
+
+
+
     @GET("api/TPO/GetAllTransferLocations")
     fun GetAllTransferLocations(@Query("CurrentLocation") CurrentLocation: String): Observable<ResponseBody>
 

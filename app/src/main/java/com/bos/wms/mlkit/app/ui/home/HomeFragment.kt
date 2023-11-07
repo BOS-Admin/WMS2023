@@ -44,6 +44,7 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
 
         if(UserPermissions.PermissionsReceived()){
+            UserPermissions.ValidatePermission("WMSApp.RepriceClassB", root.btnRepriceClassB);
             UserPermissions.ValidatePermission("WMSApp.UPCPricing", root.btnUPCPricing);
             UserPermissions.ValidatePermission("WMSApp.UPCPricingOverride", root.btnUPCPricingOverride);
             UserPermissions.ValidatePermission("WMSApp.UPCRecognitionPricing", root.btnUPCRecognitionPricing);
@@ -63,12 +64,14 @@ class HomeFragment : Fragment() {
             UserPermissions.ValidatePermission("WMSApp.EmptyBox", root.btnEmptyBox);
             UserPermissions.ValidatePermission("WMSApp.BrandOCR", root.btnBrandOCR);
             UserPermissions.ValidatePermission("WMSApp.PASBrandOCR", root.btnPASBrandOCR);
+            UserPermissions.ValidatePermission("WMSApp.StoreRepriceCount", root.btnStoreRepriceCount);
 
             /* Transfer Preparation Order */
             UserPermissions.ValidatePermission("WMSApp.TPO.MainMenu", root.btnTPOMainActivity);
 
         }else {
             UserPermissions.AddOnReceiveListener {
+                UserPermissions.ValidatePermission("WMSApp.RepriceClassB", root.btnRepriceClassB);
                 UserPermissions.ValidatePermission("WMSApp.UPCPricing", root.btnUPCPricing);
                 UserPermissions.ValidatePermission("WMSApp.UPCPricingOverride", root.btnUPCPricingOverride);
                 UserPermissions.ValidatePermission("WMSApp.UPCRecognitionPricing", root.btnUPCRecognitionPricing);
@@ -88,6 +91,7 @@ class HomeFragment : Fragment() {
                 UserPermissions.ValidatePermission("WMSApp.EmptyBox", root.btnEmptyBox);
                 UserPermissions.ValidatePermission("WMSApp.BrandOCR", root.btnBrandOCR);
                 UserPermissions.ValidatePermission("WMSApp.PASBrandOCR", root.btnPASBrandOCR);
+                UserPermissions.ValidatePermission("WMSApp.StoreRepriceCount", root.btnStoreRepriceCount);
 
                 /* Transfer Preparation Order */
                 UserPermissions.ValidatePermission("WMSApp.TPO.MainMenu", root.btnTPOMainActivity);
@@ -114,6 +118,12 @@ class HomeFragment : Fragment() {
 
         root.btnTPOMainActivity.setOnClickListener {
             ProceedTPOMainActivity()
+        }
+        root.btnStoreRepriceCount.setOnClickListener {
+            ProceedStoreRepriceCountActivity()
+        }
+        root.btnRepriceClassB.setOnClickListener {
+            ProceedClassBReprice()
         }
 
         root.btnMenuPicking.setOnClickListener {
@@ -291,6 +301,14 @@ class HomeFragment : Fragment() {
 
     fun ProceedTPOMainActivity() {
         val intent = Intent (getActivity(), TPOMainActivity::class.java)
+        startActivity(intent)
+    }
+    fun ProceedStoreRepriceCountActivity() {
+        val intent = Intent (getActivity(), StoreRepriceCountActivity::class.java)
+        startActivity(intent)
+    }
+  fun ProceedClassBReprice() {
+        val intent = Intent (getActivity(), RepriceActivity::class.java)
         startActivity(intent)
     }
 
