@@ -387,6 +387,9 @@ interface BasicApi {
     @GET("api/Location")
     fun GetLocation(@Query("IPAddress") IPAddress:String,@Query("LocationTypeID") LocationTypeID: Int, @Query("UserID") UserID: Int): Observable<LocationModel>
 
+    @GET("api/Location/GetAppVersion")
+    fun GetAppVersion(): Observable<AppVersionModel>
+
     @POST("api/AssignLocationCheck")
     fun AssignLocationCheck(@Query("UserID") UserID:Int, @Query("FloorID") FloorID: Int): Observable<ResponseBody>
 

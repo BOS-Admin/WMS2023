@@ -49,6 +49,7 @@ public class Logger {
     private static void CleanUpLogFiles(int days){
         CleanUpSingleLogFile(days, new File (getOutputDirectory(),"/Debug/"));
         CleanUpSingleLogFile(days, new File (getOutputDirectory(),"/Error/"));
+        CleanUpAPKS(days, new File(getOutputDirectory(), "/Downloads/"));//Cleaned up the downloaded files
         Debug("LOGGER", "CleanUpLogFiles - Done All Log Files Cleanups");
     }
 
@@ -80,6 +81,32 @@ public class Logger {
             }
         }
         Debug("LOGGER", "CleanUpSingleLogFile - Done Cleanup For " + file.getAbsolutePath());
+    }
+
+
+    /**
+     * Loops through the file and cleans up all apks older than the number of days
+     * @param days
+     * @param file
+     */
+    private static void CleanUpAPKS(int days, File file){
+        if(file.exists()){
+            File[] files = file.listFiles();
+            for (int i = 0; i < files.length; i++)
+            {
+                Date date = new Date(files[i].lastModified());
+                Date now = new Date();
+                long difference = now.getTime() - date.getTime();
+                long totalDays
+                        = (difference
+                        / (1000 * 60 * 60 * 24))
+                        % 365;
+                if(totalDays > days){
+                    files[i].delete();
+                }
+            }
+        }
+        Debug("LOGGER", "CleanUpAPKS - Done Cleanup For " + file.getAbsolutePath());
     }
 
     /**
