@@ -25,6 +25,19 @@
 
 
             <Button
+                android:id="@+id/btnRepriceClassB"
+                style="@style/button_main_menu_style"
+                android:drawableLeft="@drawable/upcpricing"
+                android:text="Reprice Class B"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnStoreRepriceCount"
+                style="@style/button_main_menu_style"
+                android:drawableLeft="@drawable/pasbrandocr"
+                android:text="Store Reprice Count"
+                android:visibility="gone"/>
+            <Button
                 android:id="@+id/btnUPCPricing"
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/upcpricing"

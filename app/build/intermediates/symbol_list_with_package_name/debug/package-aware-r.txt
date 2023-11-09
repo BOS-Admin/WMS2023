@@ -2555,6 +2555,7 @@ drawable baseline_delete_all_icon
 drawable baseline_done_icon
 drawable baseline_image_not_supported
 drawable baseline_local_shipping_icon
+drawable baseline_notes_icon
 drawable baseline_pause_icon
 drawable baseline_play_arrow_icon
 drawable baseline_print_disabled_icon
@@ -2598,6 +2599,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable edittext_rounded_corners
+drawable empty_tall_divider
 drawable emptybox
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
@@ -2665,6 +2667,12 @@ drawable notify_panel_notification_icon_bg
 drawable pasbrandocr
 drawable pgpricing
 drawable putawaypallet
+drawable rounded_corner
+drawable rounded_corner1
+drawable rounded_corner2
+drawable rounded_corner_blue
+drawable rounded_corner_green
+drawable rounded_corner_red
 drawable serialgenerator
 drawable shippingboxreceiving
 drawable shippingpalletreceiving
@@ -2854,10 +2862,12 @@ id btnPASBrandOCR
 id btnPackingReasonDone
 id btnPause
 id btnPickingDone
+id btnPopUp
 id btnPrev
 id btnPutAway
 id btnRackCount
 id btnReceiving
+id btnRepriceClassB
 id btnResetTruckCountMode
 id btnSave
 id btnSerialGenerator
@@ -2866,6 +2876,7 @@ id btnSettings
 id btnShipPallReciDone
 id btnShipment
 id btnStockTake
+id btnStoreRepriceCount
 id btnSubmit
 id btnTPOMainActivity
 id btnTPOReceive
@@ -3057,7 +3068,11 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutBtns
 id layoutDashboard
+id layoutNewPrice
+id layoutOldPrice
+id layoutUPCs
 id lblBox
 id lblCount
 id lblDescription
@@ -3080,6 +3095,7 @@ id lblPickingReminaingBins
 id lblPickingReminaingItems
 id lblPickingWave
 id lblPrintTypeItem
+id lblResult
 id lblScanError
 id lblSeason
 id lblShipCartonReciBolNb
@@ -3091,6 +3107,7 @@ id lblShipPallReciBolNb
 id lblShipPallReciNbOfCartons
 id lblShipPallReciPalleteNb
 id lblStatus
+id lblTitle
 id lblUPC
 id lblfillpalleteBarcode
 id lblfillpalleteBinBarcode
@@ -3372,13 +3389,21 @@ id textBoxScanned
 id textBranch
 id textCount
 id textDestination
+id textDone
 id textEnd
 id textItemScanned
 id textLastBox
 id textLastItem
 id textLastLocation
 id textLocationScanned
+id textNewLBPPrice
+id textNewLetter
+id textNewUSDPrice
+id textPrevLBPPrice
+id textPrevLetter
+id textPrevUSDPrice
 id textPrintSection
+id textRemaining
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -3386,9 +3411,12 @@ id textTop
 id textUser
 id textUserScan
 id textView
+id textView1
+id textView11
 id textView2
 id textView3
 id textView6
+id textViewTitle
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3433,6 +3461,7 @@ id txtAppVersion
 id txtFoldingScanItem
 id txtFoldingScanStation
 id txtIPAddress
+id txtItem
 id txtItemCode
 id txtItemSerial
 id txtNextReceivingItemBarcode
@@ -3445,6 +3474,7 @@ id txtPickingItemSerialBarcode
 id txtPricingLineCode
 id txtPutAwayPalleteBarcode
 id txtRFIDMac
+id txtRemaining
 id txtScaleMac
 id txtSeason
 id txtShelfBarcode
@@ -3457,6 +3487,7 @@ id txtShipPallReciBolNb
 id txtShipPallReciNbOfCartons
 id txtShipPallReciPalleteNb
 id txtStandId
+id txtStore
 id txtUPC
 id txtfillpalleteBinBarcode
 id txtlocationcheckBinBarcode
@@ -3614,6 +3645,8 @@ layout activity_picking
 layout activity_printer_selection
 layout activity_put_away
 layout activity_putawaypallete
+layout activity_reprice
+layout activity_reprice_count
 layout activity_scan_container
 layout activity_scan_upcs_for_bol
 layout activity_serial_generator

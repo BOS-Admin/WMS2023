@@ -56,10 +56,20 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.bos.wms.mlkit.app.StoreRepriceCountActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
             android:name="com.bos.wms.mlkit.app.tpo.TPOResetTruckActivity"
             android:exported="false" />
         <activity
             android:name="com.bos.wms.mlkit.app.tpo.TPOReceiveBinsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.RepriceActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
