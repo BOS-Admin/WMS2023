@@ -32,6 +32,11 @@ interface BasicApi {
     ): Observable<ClassBRepriceCountResponse>
 
 
+    @POST("api/reprice/store/printV2")
+    fun PrintV2(  @Query("Store") Store:String, @Query("Count")   Count:Int, @Query("Printer")  Printer :String
+    ): Observable<ResponseBody>
+
+
 
 
 

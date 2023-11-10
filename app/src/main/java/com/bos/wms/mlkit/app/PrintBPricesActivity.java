@@ -17,8 +17,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bos.wms.mlkit.General;
 import com.bos.wms.mlkit.R;
 import com.bos.wms.mlkit.storage.Storage;
-import com.bos.wms.mlkit.utils.UPCAHelper;
-
 
 import Model.ClassBRepriceResponseModel;
 import Remote.APIClient;
@@ -28,7 +26,7 @@ import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.HttpException;
 
-public class RepriceActivity extends AppCompatActivity {
+public class PrintBPricesActivity extends AppCompatActivity {
 
 
     public String IPAddress = "";
@@ -37,6 +35,7 @@ public class RepriceActivity extends AppCompatActivity {
 
 
     private Button btnPopUp;
+    private Button btnPrint;
 
 
     private EditText txtItem;
@@ -52,20 +51,13 @@ public class RepriceActivity extends AppCompatActivity {
     private String popUpMessages="";
     private String branch="";
 
-    private TextView textPrevLBPPrice;
-    private TextView textPrevLetter;
-    private TextView textPrevUSDPrice;
-
-    private TextView textNewLBPPrice;
-    private TextView textNewLetter;
-    private TextView textNewUSDPrice;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reprice);
+        setContentView(R.layout.activity_print_prices);
 
         Storage mStorage = new Storage(getApplicationContext());
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82");
@@ -74,16 +66,11 @@ public class RepriceActivity extends AppCompatActivity {
         branch= General.getGeneral(this).mainLocation;
 
         btnPopUp=findViewById(R.id.btnPopUp);
+        btnPrint=findViewById(R.id.btnPrint);
         txtItem=findViewById(R.id.txtItem);
         lblResult=findViewById(R.id.lblResult);
 
-        textPrevLBPPrice=findViewById(R.id.textPrevLBPPrice);
-        textPrevLetter=findViewById(R.id.textPrevLetter);
-        textPrevUSDPrice=findViewById(R.id.textPrevUSDPrice);
 
-        textNewLBPPrice=findViewById(R.id.textNewLBPPrice);
-        textNewLetter=findViewById(R.id.textNewLetter);
-        textNewUSDPrice=findViewById(R.id.textNewUSDPrice);
 
 
         btnPopUp.setOnClickListener(e -> {
@@ -94,11 +81,27 @@ public class RepriceActivity extends AppCompatActivity {
             showMessage("Info",popUpMessages);
         });
 
-        txtItem.setInputType(InputType.TYPE_NULL);
+
+
+        btnPrint.setOnClickListener(e->{
+            int x=0;
+            try{
+                String count=txtItem.getText().toString();
+                x=Integer.parseInt(count);
+            }catch (Exception ex){
+                showMessage("Invalid Count Input","Invalid Count Input");
+                return;
+            }
+
+            print(x);
+        });
+
+
+
 
         txtItem.requestFocus();
 
-        txtItem.addTextChangedListener(new ItemTextWatcher());
+
 
 lblResult.setText(branch);
 
@@ -126,90 +129,40 @@ lblResult.setText(branch);
 
 
 
-    class ItemTextWatcher implements TextWatcher {
+    private void print(int count) {
 
-        @Override
-        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-        }
+        btnPrint.setEnabled(false);
+        lblResult.setText("");
+        reset();
+        Storage mStorage = new Storage(getApplicationContext());
+        String PricingLineCode = mStorage.getDataString("PricingLineCode", "None");
 
-        @Override
-        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-        }
-
-        @Override
-        public void afterTextChanged(Editable editable) {
-            if (updatingText)
-                return;
-            updatingText = true;
-
-            reset();
-            String item = txtItem.getText().toString();
-            if (item.length() < 10 || item.length() >13) {
-                Beep();
-                showMessage("Error","Invalid Item Scanned ("+item+")");
-                txtItem.setText("");
-                updatingText = false;
-                return;
-            }
-
-            UPCAHelper helper =new UPCAHelper();
-            if(helper.isValidUPCA(item))
-                item = helper.convertToIS(item);
-
-            if(isNumeric(item)){
-                item="IN"+item;
-            }
-
-
-
-
-
-            txtItem.setEnabled(false);
-            Reprice(item);
-
-        }
-    }
-
-    public static boolean isNumeric(String str) {
-        try {
-            Double.parseDouble(str);
-            return true;
-        } catch(Exception e){
-            return false;
-        }
-    }
-
-
-
-
-
-    private void Reprice(String item
-    ) {
-
-        txtItem.setEnabled(false);
         try {
             //   String IPAddressWarehouseManager = mStorage.getDataString("IPAddressWarehouseManager", "192.168.10.82");
             BasicApi api = APIClient.getInstanceStatic(IPAddress, true).create(BasicApi.class);
             CompositeDisposable compositeDisposable = new CompositeDisposable();
             compositeDisposable.addAll(
-                    api.Reprice(UserID,item,branch)
+                    api.PrintV2(branch,count,PricingLineCode)
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe((s) -> {
-                                if (s != null) {
-                                    success("Success",s);
+                                String res="";
+                                try{
+                                    res=s.string();
+                                }catch (Exception e){
 
-                                    Logger.Debug("API", "Undo Assign Location : response " + s);
+                                }
+
+                                if (res != null && res.equalsIgnoreCase("Success") ) {
+                                    success("Success",res);
+
+                                    Logger.Debug("API", "Print Prices : response " + s);
                                 }
 
 
                                 runOnUiThread(() -> {
-                                    txtItem.setEnabled(true);
-                                    updatingText = true;
-                                    txtItem.setText("");
-                                    txtItem.requestFocus();
-                                    updatingText = false;
+                                    btnPrint.setEnabled(true);
+
 
                                 });
 
@@ -234,11 +187,7 @@ lblResult.setText(branch);
                                 fail("Failed",err);
 
                                 runOnUiThread(() -> {
-                                    txtItem.setEnabled(true);
-                                    updatingText = true;
-                                    txtItem.setText("");
-                                    txtItem.requestFocus();
-                                    updatingText = false;
+                                    btnPrint.setEnabled(true);
 
                                 });
 
@@ -246,18 +195,14 @@ lblResult.setText(branch);
                             }));
         } catch (Throwable e) {
             runOnUiThread(() -> {
-                txtItem.setEnabled(true);
-                updatingText = true;
-                txtItem.setText("");
-                txtItem.requestFocus();
-                updatingText = false;
+                btnPrint.setEnabled(true);
 
             });
 
 
             showMessage("Exception", e.getMessage());
             fail("Failed",e.getMessage());
-            Logger.Error("API", "Assign Box  Exception: " + e.getMessage());
+            Logger.Error("API", "Print Prices  Exception: " + e.getMessage());
             //showMessage(e.getMessage());
 
         }
@@ -270,34 +215,17 @@ lblResult.setText(branch);
         fullMessage = "";
         popUpMessages="";
 
-        textPrevLBPPrice.setText("");
-        textPrevLetter.setText("");
-        textPrevUSDPrice.setText("");
-
-
-        textNewLBPPrice.setText("");
-        textNewLetter.setText("");
-        textNewUSDPrice.setText("");
-
     }
 
     private void Beep() {
         new ToneGenerator(AudioManager.STREAM_MUSIC, ToneGenerator.MAX_VOLUME).startTone(ToneGenerator.TONE_SUP_ERROR, 300);
     }
-    private void success(String message, ClassBRepriceResponseModel res){
+    private void success(String message, String fullMessage){
         this.fullMessage = fullMessage;
         popUpMessages=message+"\n"+fullMessage;
         runOnUiThread(() -> {
-            textPrevLBPPrice.setText(""+res.getPrevSalesPrice());
-            textPrevLetter.setText(res.getPrevLetter());
-            textPrevUSDPrice.setText(res.getPrevUSDPrice());
 
-
-            textNewLBPPrice.setText(""+res.getNewSalesPrice());
-            textNewLetter.setText(res.getNewLetter());
-            textNewUSDPrice.setText(res.getNewUSDPrice());
-
-            lblResult.setText("Sucess");
+            lblResult.setText("Success");
             lblResult.setTextColor(Color.WHITE);
             lblResult.setBackgroundResource(R.drawable.rounded_corner_green);
         });
