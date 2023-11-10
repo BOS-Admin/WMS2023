@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bos.wms.mlkit.General;
 import com.bos.wms.mlkit.R;
 import com.bos.wms.mlkit.storage.Storage;
+import com.bos.wms.mlkit.utils.UPCAHelper;
 
 
 import Model.ClassBRepriceResponseModel;
@@ -152,11 +153,35 @@ lblResult.setText(branch);
                 return;
             }
 
+            UPCAHelper helper =new UPCAHelper();
+            if(helper.isValidUPCA(item))
+                item = helper.convertToIS(item);
+
+            if(isNumeric(item)){
+                item="IN"+item;
+            }
+
+
+
+
+
             txtItem.setEnabled(false);
             Reprice(item);
 
         }
     }
+
+    public static boolean isNumeric(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch(Exception e){
+            return false;
+        }
+    }
+
+
+
 
 
     private void Reprice(String item

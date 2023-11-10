@@ -134,7 +134,7 @@ class LoginActivity : AppCompatActivity() {
             val api: BasicApi = APIClient.getInstance(IPAddress,true).create<BasicApi>(BasicApi::class.java)
             val compositeDisposable = CompositeDisposable()
             compositeDisposable.addAll(
-                    api.GetAppVersion()
+                    api.GetAppVersion("WMSApp")
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe ({ s ->
@@ -143,7 +143,7 @@ class LoginActivity : AppCompatActivity() {
                                     val highestVersion: String = s.version
                                     if (toUpdateApp(currentAppVersion, highestVersion)) {
                                         Logger.Debug("Version API", "App Version isn't up to date, current App Version: $currentAppVersion highest App Version: $highestVersion")
-                                        val fileName = "WMSAppV" + s.version + ".apk"
+                                        val fileName = "WMSApp" + s.version + ".apk"
                                         var downloadFileUrl: String = s.apiPath + fileName
                                         saveFile(downloadFileUrl, fileName)
 

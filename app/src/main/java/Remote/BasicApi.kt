@@ -32,6 +32,11 @@ interface BasicApi {
     ): Observable<ClassBRepriceCountResponse>
 
 
+    @POST("api/reprice/store/printV2")
+    fun PrintV2(  @Query("Store") Store:String, @Query("Count")   Count:Int, @Query("Printer")  Printer :String
+    ): Observable<ResponseBody>
+
+
 
 
 
@@ -388,7 +393,7 @@ interface BasicApi {
     fun GetLocation(@Query("IPAddress") IPAddress:String,@Query("LocationTypeID") LocationTypeID: Int, @Query("UserID") UserID: Int): Observable<LocationModel>
 
     @GET("api/Location/GetAppVersion")
-    fun GetAppVersion(): Observable<AppVersionModel>
+    fun GetAppVersion(@Query("application") application:String): Observable<AppVersionModel>
 
     @POST("api/AssignLocationCheck")
     fun AssignLocationCheck(@Query("UserID") UserID:Int, @Query("FloorID") FloorID: Int): Observable<ResponseBody>
