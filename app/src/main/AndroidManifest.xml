@@ -203,6 +203,17 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
+            android:name=".app.bosApp.PaletteBinsMainActivity"
+            android:label="Palette Bins "
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".app.bosApp.PaletteBinsDCActivity"
+            android:label="Palette Bins DC"
+
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
             android:name=".app.bosApp.StockTakeRackDCActivity"
             android:label="Stock Take Rack DC"
             android:theme="@style/AppTheme.NoActionBar"

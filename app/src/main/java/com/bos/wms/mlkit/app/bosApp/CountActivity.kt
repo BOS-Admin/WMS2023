@@ -16,9 +16,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.bos.wms.mlkit.General
 import com.bos.wms.mlkit.R
+import com.bos.wms.mlkit.app.Logger
 import com.bos.wms.mlkit.storage.Storage
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
+import retrofit2.HttpException
 import java.io.IOException
 
 class CountActivity : AppCompatActivity() {
@@ -45,6 +47,8 @@ class CountActivity : AppCompatActivity() {
         btnDone=findViewById(R.id.btnDone)
         textBoxNb=findViewById(R.id.textBoxNb)
         textCount=findViewById(R.id.textCount)
+        val lblDescription:TextView=findViewById(R.id.lblDescription)
+        val lblBox:TextView=findViewById(R.id.textBox)
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82")
         general= General.getGeneral(applicationContext)
         var UserId =general.userFullName
@@ -56,6 +60,8 @@ class CountActivity : AppCompatActivity() {
         textUser.isEnabled=false;
         textBoxNb.isEnabled=false;
         textCount.requestFocus()
+        lblDescription.text="Enter the number of bins"
+        lblBox.text="Palette";
 
         btnDone.setOnClickListener {
             lblError.text = ""
@@ -69,7 +75,13 @@ class CountActivity : AppCompatActivity() {
                 Beep()
                 return@setOnClickListener
             }
-            proceed(count)
+
+            if( General.getGeneral(applicationContext).packType=="PaletteBinsCount")
+                proceedPalette(count)
+            else
+                proceed(count)
+
+
         }
 
     }
@@ -121,6 +133,105 @@ class CountActivity : AppCompatActivity() {
                 textCount.isEnabled=false
             }
         }
+
+    private fun proceedPalette(count: Int) {
+
+        try {
+            btnDone.isEnabled = false
+            btnDone.isVisible = false
+            textCount.isEnabled=false
+
+            lblError.text = "Wait ..."
+            lblError.setTextColor(Color.BLUE)
+            Log.i("2-13-2023","Count Location "+locationId);
+            api= APIClient.getInstance(IPAddress,false).create(BasicApi::class.java)
+            compositeDisposable.addAll(
+                api.FillPaletteBinsCount(general.UserID,count,textBoxNb.text.toString(),locationId)
+                    .subscribeOn(Schedulers.io())
+                    //  .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(
+                        {s->
+                            var response = try {
+                                s.string()
+                            } catch (e: IOException) {
+                                e.message.toString()
+                            }
+                            if (response!=null && (response.lowercase().startsWith("released") || response.lowercase().startsWith("success"))) {
+                                runOnUiThread {
+                                    lblError.text = response
+                                    lblError.setTextColor(Color.BLUE)
+                                }
+
+                                showMessage(response,Color.GREEN)
+                            }
+                            else{
+                                runOnUiThread {
+                                    lblError.text = response
+                                    lblError.setTextColor(Color.RED )
+                                }
+                                showMessage(response,Color.RED)
+
+                            }
+
+
+
+                        },
+                        {t:Throwable?->
+                            run {
+
+                                if (t is HttpException) {
+                                    var ex: HttpException = t as HttpException
+
+                                    runOnUiThread {
+                                        lblError.text = "Error: "+ex.response().errorBody()!!.string() + ""
+                                        lblError.setTextColor(Color.RED )
+                                    }
+
+                                    showMessage(
+                                        "Error: "+ex.response().errorBody()!!.string() + "",
+                                        Color.RED
+                                    )
+
+                                } else {
+
+                                    showMessage(t?.message + " (API Error)", Color.RED)
+
+                                    val error=t?.message + " (API Error)"
+
+                                    runOnUiThread {
+                                        lblError.text = error
+                                        lblError.setTextColor(Color.RED )
+                                    }
+
+                                    showMessage(
+                                        "Error: $error",
+                                        Color.RED
+                                    )
+//                                    val x=executeCommand()
+//                                    Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n End Ping ($ItemSerial): => $x => (${System.currentTimeMillis()-start})")
+                                }
+
+
+
+                            }
+                        }
+                    )
+            )
+        } catch (e: Throwable) {
+
+            runOnUiThread {
+                lblError.text = e.message
+                lblError.setTextColor(Color.RED )
+            }
+
+            lblError.setTextColor(Color.RED)
+            lblError.text = e?.message
+
+        }
+        finally {
+            textCount.isEnabled=false
+        }
+    }
 
     private fun Beep(){
         ToneGenerator(AudioManager.STREAM_MUSIC, ToneGenerator.MAX_VOLUME).startTone(ToneGenerator.TONE_SUP_ERROR, 300)

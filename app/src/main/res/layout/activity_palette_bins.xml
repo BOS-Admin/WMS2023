@@ -18,7 +18,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:title="Packing " />
+            app:title="Palette Bins" />
 
     </com.google.android.material.appbar.AppBarLayout>
     <TextView
@@ -111,7 +111,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Choose the packing type"
+            android:text="Choose the opertaion"
             android:textAlignment="center"
             android:textSize="20sp" />
 
@@ -125,8 +125,9 @@
                 android:id="@+id/btnDestination"
                 android:layout_width="250dp"
                 android:layout_height="70dp"
+                android:layout_marginTop="20dp"
                 android:background="?attr/colorPrimary"
-                android:text="Destination"
+                android:text="DC"
                 android:textColor="#F6F0F0"
                 android:textSize="20sp" />
 
@@ -141,26 +142,7 @@
                 android:textColor="#F6F0F0"
                 android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/btnChecking"
-                android:layout_width="250dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="20dp"
-                android:background="?attr/colorPrimary"
-                android:text="Checking"
-                android:textColor="#F6F0F0"
-                android:textSize="20sp" />
 
-
-            <Button
-                android:id="@+id/btnPaletteBins"
-                android:layout_width="250dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="20dp"
-                android:background="?attr/colorPrimary"
-                android:text="Palette Bins"
-                android:textColor="#F6F0F0"
-                android:textSize="20sp" />
         </LinearLayout>
 
     </LinearLayout>
