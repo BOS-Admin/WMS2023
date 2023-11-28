@@ -306,7 +306,7 @@ public class OCRBackgroundThread {
                 }
                 if(firstTime) {
                     try {
-                        new AlertDialog.Builder(currentContext)
+                        /*new AlertDialog.Builder(currentContext)
                                 .setTitle("OCR Error")
                                 .setMessage("Fire Base Connection Failed, OCR Processing Will Not Be Possible. Check your internet while we try connecting.")
                                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
@@ -315,7 +315,7 @@ public class OCRBackgroundThread {
                                     }
                                 })
                                 .setIcon(android.R.drawable.ic_dialog_alert)
-                                .show();
+                                .show();*/
                         Logger.Debug("OCR-THREAD", "CloudLogin - Error Dialog Displayed To User.");
                     }catch(Exception ex){
                         Logger.Error("OCR-THREAD", "CloudLogin - Error Dialog Failed To Display: " + ex.getMessage());
