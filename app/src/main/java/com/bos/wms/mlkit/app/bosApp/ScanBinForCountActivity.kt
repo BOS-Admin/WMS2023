@@ -48,6 +48,14 @@ class ScanBinForCountActivity : AppCompatActivity() {
         textBranch=findViewById(R.id.textBranch)
         lblError1=findViewById(R.id.lblError)
         lblScanDestination=findViewById(R.id.lblDestination)
+        val lblDescription:TextView =findViewById(R.id.lblDescription)
+        val lblBox:TextView =findViewById(R.id.lblBox)
+        if( General.getGeneral(applicationContext).packType=="PaletteBinsCount"){
+            title = "Scan Palette";
+            lblDescription.text="Please scan your barcode and the palette barcode"
+            lblBox.text="Palette"
+        }
+
 
 
         txtScanBox.setShowSoftInputOnFocus(false);
@@ -128,7 +136,11 @@ class ScanBinForCountActivity : AppCompatActivity() {
 
 
     private fun proceed(boxNb:String,destination:String){
-        ValidateBin(boxNb,102,General.getGeneral(applicationContext).UserID,General.getGeneral(applicationContext).mainLocationID,destination)
+        if( General.getGeneral(applicationContext).packType=="PaletteBinsCount")
+            ValidatePalette(boxNb,102,General.getGeneral(applicationContext).UserID,General.getGeneral(applicationContext).mainLocationID,destination)
+        else
+            ValidateBin(boxNb,102,General.getGeneral(applicationContext).UserID,General.getGeneral(applicationContext).mainLocationID,destination)
+
        // val intent = Intent (applicationContext, CountActivity::class.java)
        // startActivity(intent)
     }
@@ -175,6 +187,72 @@ class ScanBinForCountActivity : AppCompatActivity() {
                               txtScanBox.isEnabled=false
                               UpdatingText=false
                           }
+
+
+                        },
+                        {t:Throwable?->
+                            run {
+
+                                if(t is HttpException){
+                                    var ex: HttpException =t as HttpException
+                                    showMessage( ex.response().errorBody()!!.string()+ " (Http Error) ",Color.RED)
+
+                                }
+                                else{
+                                    if(t?.message!=null)
+                                        showMessage(t.message.toString()+ " (API Error) ",Color.RED)
+                                }
+
+                            }
+                        }
+                    )
+            )
+        } catch (e: Throwable) {
+            showMessage("Exception: "+e?.message,Color.RED)
+        }
+        finally {
+        }
+    }
+
+    fun ValidatePalette(binBarcode:String,packingTypeId:Int,userId:Int,locationId:Int,destination:String) {
+
+        try {
+            lblError1.text = "fetching data..."
+            Log.i("ScanPaletteForCountActivity","started api")
+            api= APIClient.getInstance(IPAddress ,true).create(
+                BasicApi::class.java)
+            compositeDisposable.addAll(
+                api.ValidatePaletteForCount(binBarcode,packingTypeId,userId,locationId)
+                    .subscribeOn(Schedulers.io())
+                    //.observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(
+                        {s->
+                            var ErrorMsg = ""
+                            try {
+                                ErrorMsg = s.string()
+                            } catch (e: Exception) {
+                                e.printStackTrace()
+                            }
+                            // Log.i("AH-Log","response  "+s.string())
+                            // Log.i("AH-Log","response  "+ErrorMsg.length)
+                            // Log.i("AH-Log","response  "+ErrorMsg.isEmpty())
+
+                            if (ErrorMsg.isEmpty() || ErrorMsg=="success" || ErrorMsg.lowercase().startsWith("released") ) {
+                                Log.i("AH-Log","response  "+s.string())
+                                General.getGeneral(applicationContext).boxNb=binBarcode
+                                General.getGeneral(applicationContext).saveGeneral(applicationContext)
+                                showMessage("",Color.GREEN)
+                                val intent = Intent (applicationContext, CountActivity::class.java)
+                                startActivity(intent)
+                                finish()
+
+                            } else {
+                                showMessage(ErrorMsg,Color.RED)
+                            }
+                            runOnUiThread{
+                                txtScanBox.isEnabled=false
+                                UpdatingText=false
+                            }
 
 
                         },

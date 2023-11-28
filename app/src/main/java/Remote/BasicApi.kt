@@ -176,6 +176,8 @@ interface BasicApi {
     fun CheckingDC(@Body model: CheckingDCModel): Observable<ResponseBody>
     @POST("api/FillBinBarcodes/FillBinDC")
     fun FillBinDC(@Body model: FillBinDCModel): Observable<ResponseBody>
+    @POST("api/palette/FillPaletteBinsDC")
+    fun FillPaletteBinsDC(@Body model: FillBinDCModel): Observable<ResponseBody>
     @POST("api/StockTake/FillBinStockTake1")
     fun FillBinStockTake1(@Body model: FillStockTakeDCModel): Observable<ResponseBody>
     @POST("api/Transfer/TransferDC")
@@ -239,6 +241,13 @@ interface BasicApi {
         @Query("userId") userId: Int,
         @Query("locationId") locationId: Int
     ): Observable<BinModelItem>
+    @GET("/api/palette/ValidatePalette")
+    fun ValidatePalette(
+        @Query("paletteBarcode") binBarcode: String,
+        @Query("packingTypeId") packingTypeId: Int,
+        @Query("userId") userId: Int,
+        @Query("locationId") locationId: Int
+    ): Observable<BinModelItem>
 
     @GET("/api/StockTake/ValidateBin")
     fun ValidateBinForStockTake(
@@ -257,6 +266,14 @@ interface BasicApi {
         @Query("locationId") locationId: Int
     ): Observable<ResponseBody>
 
+    @GET("api/palette/ValidatePaletteForCount")
+    fun ValidatePaletteForCount(
+        @Query("paletteBarcode") binBarcode: String,
+        @Query("packingTypeId") packingTypeId: Int,
+        @Query("userId") userId: Int,
+        @Query("locationId") locationId: Int
+    ): Observable<ResponseBody>
+
 
 
 
@@ -269,12 +286,27 @@ interface BasicApi {
     ): Observable<ResponseBody>
 
 
+    @GET("api/palette/FillPaletteBinsCount")
+    fun FillPaletteBinsCount(
+        @Query("UserID") UserID: Int,
+        @Query("Count") ItemSerials: Int,
+        @Query("PaletteBarcode") BinBarcode: String,
+        @Query("LocationId") LocationId:Int
+    ): Observable<ResponseBody>
+
+
     @GET("api/FillBinBarcodes/ValidateFillBinItem")
     fun ValidateFillBinItem(
         @Query("ItemCode") ItemCode: String,
         @Query("Location") Location: String,
         @Query("UserId") UserId: Int=-1,
         @Query("PackReasonId") PackReasonId: Int): Observable<ResponseBody>
+    @GET("api/palette/ValidatePaletteBin")
+    fun ValidatePaletteBin(
+        @Query("BinCode") ItemCode: String,
+        @Query("Location") Location: String,
+        @Query("UserId") UserId: Int=-1
+    ): Observable<ResponseBody>
 
 
     @GET("api/StockTake/ValidateItem")

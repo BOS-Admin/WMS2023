@@ -14,14 +14,14 @@ import io.reactivex.disposables.CompositeDisposable
 
 
 
-class PackingActivity : AppCompatActivity() {
+class PaletteBinsMainActivity : AppCompatActivity() {
 
     private lateinit var PricingLineCode:String
     private lateinit var textPrintSection: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_packing)
+        setContentView(R.layout.activity_palette_bins)
         mStorage = Storage(applicationContext) //sp存储
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82")
         PricingLineCode = mStorage.getDataString("PricingLineCode", "PL001")
@@ -37,29 +37,18 @@ class PackingActivity : AppCompatActivity() {
 
 
         findViewById<Button>(R.id.btnDestination).setOnClickListener{
-            General.getGeneral(applicationContext).packType="Destination"
+            General.getGeneral(applicationContext).packType="PaletteBinsDC"
             General.getGeneral(applicationContext).saveGeneral(applicationContext)
             val intent = Intent (applicationContext, ScanContainerActivity::class.java)
             startActivity(intent)
         }
         findViewById<Button>(R.id.btnCount).setOnClickListener{
-            General.getGeneral(applicationContext).packType="Count"
+            General.getGeneral(applicationContext).packType="PaletteBinsCount"
             General.getGeneral(applicationContext).saveGeneral(applicationContext)
             val intent = Intent (applicationContext, ScanBinForCountActivity::class.java)
             startActivity(intent)
         }
-        findViewById<Button>(R.id.btnChecking).setOnClickListener{
-            General.getGeneral(applicationContext).packType="Checking"
-            General.getGeneral(applicationContext).saveGeneral(applicationContext)
-            val intent = Intent (applicationContext, ScanBinForCheckingActivity::class.java)
-            startActivity(intent)
-        }
-        findViewById<Button>(R.id.btnPaletteBins).setOnClickListener{
-            General.getGeneral(applicationContext).packType="PaletteBins"
-            General.getGeneral(applicationContext).saveGeneral(applicationContext)
-            val intent = Intent (applicationContext, PaletteBinsMainActivity::class.java)
-            startActivity(intent)
-        }
+
         findViewById<Button>(R.id.btnChange).setOnClickListener {
             val intent = Intent (applicationContext, PrinterSelectionActivity::class.java)
             startActivity(intent)
