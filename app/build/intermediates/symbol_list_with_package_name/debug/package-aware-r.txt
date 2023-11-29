@@ -2864,6 +2864,8 @@ id btnPause
 id btnPickingDone
 id btnPopUp
 id btnPrev
+id btnPrint
+id btnPrintReprice
 id btnPutAway
 id btnRackCount
 id btnReceiving
@@ -3642,6 +3644,7 @@ layout activity_packing_reason
 layout activity_pas_brand_ocractivity
 layout activity_pg_pricing
 layout activity_picking
+layout activity_print_prices
 layout activity_printer_selection
 layout activity_put_away
 layout activity_putawaypallete

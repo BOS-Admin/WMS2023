@@ -62,6 +62,9 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final Button btnPASBrandOCR;
 
   @NonNull
+  public final Button btnPrintReprice;
+
+  @NonNull
   public final Button btnRepriceClassB;
 
   @NonNull
@@ -96,11 +99,11 @@ public final class FragmentHomeBinding implements ViewBinding {
       @NonNull Button btnMenuShipmentCartonReceivingV2,
       @NonNull Button btnMenuShipmentPalleteReceiving,
       @NonNull Button btnMenuShipmentReceivingPalleteCount, @NonNull Button btnPASBrandOCR,
-      @NonNull Button btnRepriceClassB, @NonNull Button btnSerialGenerator,
-      @NonNull Button btnSerialMissing, @NonNull Button btnStoreRepriceCount,
-      @NonNull Button btnTPOMainActivity, @NonNull Button btnUPCPricing,
-      @NonNull Button btnUPCPricingOverride, @NonNull Button btnUPCRecognitionPricing,
-      @NonNull LinearLayout homeFragmentLayout) {
+      @NonNull Button btnPrintReprice, @NonNull Button btnRepriceClassB,
+      @NonNull Button btnSerialGenerator, @NonNull Button btnSerialMissing,
+      @NonNull Button btnStoreRepriceCount, @NonNull Button btnTPOMainActivity,
+      @NonNull Button btnUPCPricing, @NonNull Button btnUPCPricingOverride,
+      @NonNull Button btnUPCRecognitionPricing, @NonNull LinearLayout homeFragmentLayout) {
     this.rootView = rootView;
     this.btnBolRecognition = btnBolRecognition;
     this.btnBrandOCR = btnBrandOCR;
@@ -116,6 +119,7 @@ public final class FragmentHomeBinding implements ViewBinding {
     this.btnMenuShipmentPalleteReceiving = btnMenuShipmentPalleteReceiving;
     this.btnMenuShipmentReceivingPalleteCount = btnMenuShipmentReceivingPalleteCount;
     this.btnPASBrandOCR = btnPASBrandOCR;
+    this.btnPrintReprice = btnPrintReprice;
     this.btnRepriceClassB = btnRepriceClassB;
     this.btnSerialGenerator = btnSerialGenerator;
     this.btnSerialMissing = btnSerialMissing;
@@ -238,6 +242,12 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnPrintReprice;
+      Button btnPrintReprice = ViewBindings.findChildViewById(rootView, id);
+      if (btnPrintReprice == null) {
+        break missingId;
+      }
+
       id = R.id.btnRepriceClassB;
       Button btnRepriceClassB = ViewBindings.findChildViewById(rootView, id);
       if (btnRepriceClassB == null) {
@@ -292,7 +302,7 @@ public final class FragmentHomeBinding implements ViewBinding {
           btnEmptyBox, btnLocationCheck, btnMenuFillPallete, btnMenuItemPricing, btnMenuPGPricing,
           btnMenuPicking, btnMenuPutAwayPallete, btnMenuShipmentCartonReceiving,
           btnMenuShipmentCartonReceivingV2, btnMenuShipmentPalleteReceiving,
-          btnMenuShipmentReceivingPalleteCount, btnPASBrandOCR, btnRepriceClassB,
+          btnMenuShipmentReceivingPalleteCount, btnPASBrandOCR, btnPrintReprice, btnRepriceClassB,
           btnSerialGenerator, btnSerialMissing, btnStoreRepriceCount, btnTPOMainActivity,
           btnUPCPricing, btnUPCPricingOverride, btnUPCRecognitionPricing, homeFragmentLayout);
     }
