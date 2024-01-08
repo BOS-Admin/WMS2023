@@ -172,7 +172,7 @@ class PackingDCActivity : AppCompatActivity() {
         return "IS00" + upca.substring(2, upca.length - 1)
     }
     fun isValidUPCA(barcode: String): Boolean {
-        if (barcode.length != 12 || !barcode.startsWith("22")) {
+        if (barcode.length != 12 || ( !barcode.startsWith("22") && !barcode.startsWith("23")) ){
             return false
         }
 
@@ -185,23 +185,31 @@ class PackingDCActivity : AppCompatActivity() {
 //endregion
 
 
-//    private fun executeCommand(): Boolean {
-//        Log.i("AH-Log-Packing", " executeCommand")
-//        val runtime = Runtime.getRuntime()
-//        try {
-//            val mIpAddrProcess = runtime.exec("/system/bin/ping -c 1 192.168.50.20")
-//            val mExitValue = mIpAddrProcess.waitFor()
-//            Log.i("AH-Log-Packing", " mExitValue $mExitValue")
-//            return mExitValue == 0
-//        } catch (ignore: InterruptedException) {
-//            ignore.printStackTrace()
-//            Log.i("AH-Log-Packing", "Exception:$ignore")
-//        } catch (e: IOException) {
-//            e.printStackTrace()
-//            Log.i("AH-Log-Packing", "Exception:$e")
-//        }
-//        return false
-//    }
+    companion object {
+        @JvmStatic
+        public fun executeCommand(ip:String): String {
+            Log.i("AH-Log-Packing", " executeCommand")
+            val runtime = Runtime.getRuntime()
+            try {
+                val mIpAddrProcess = runtime.exec("/system/bin/ping -c 1 $ip")
+                val mExitValue = mIpAddrProcess.waitFor()
+                Log.i("AH-Log-Packing", " mExitValue $mExitValue")
+                if(mExitValue==0)
+                    return "Success"
+                else
+                    return "Failed \nExitValue=$mExitValue "
+            } catch (ignore: InterruptedException) {
+                ignore.printStackTrace()
+                return "Failed\nException:\n$ignore"
+            } catch (e: IOException) {
+                e.printStackTrace()
+                return "Failed\nException:\n$e"
+            }
+            return "Failed"
+        }
+
+    }
+
 
 
 
@@ -382,6 +390,7 @@ class PackingDCActivity : AppCompatActivity() {
                             } catch (e: Exception) {
                                 e.message.toString()
                             }
+                           // Log.i("Ah-log", response);
                             if (response != null && (response.lowercase()
                                     .startsWith("released") || response.lowercase()
                                     .startsWith("success"))
@@ -389,7 +398,15 @@ class PackingDCActivity : AppCompatActivity() {
                                 showMessage(response, Color.GREEN)
                             } else {
 
+
+                                if (response != null && response.trim() == "Status: (103,Released)"){
+                                    showMessage("" + response?.toString(), Color.GREEN)
+                                }
+                                else
                                 showMessage("" + response?.toString(), Color.RED)
+
+
+
                             }
                             runOnUiThread {
                                 items.clear()
@@ -404,8 +421,14 @@ class PackingDCActivity : AppCompatActivity() {
                             run {
                                 if (t is HttpException) {
                                     var ex: HttpException = t as HttpException
+                                    var errMsg=ex.response().errorBody()!!.string() + ""
+                                    if (errMsg != null && errMsg.trim() == "Status :(101,DC)  NextStatus: (Count)"){
+                                        showMessage("" + errMsg?.toString(), Color.GREEN)
+                                    }
+
+                                    else
                                     showMessage(
-                                        ex.response().errorBody()!!.string() + "",
+                                        errMsg,
                                         Color.RED
                                     )
                                 } else {
@@ -463,6 +486,8 @@ class PackingDCActivity : AppCompatActivity() {
     private fun showMessage(msg: String, color: Int) {
         if (color == Color.RED)
             Beep()
+        Log.i("Ah-log", msg);
+
         runOnUiThread {
             AlertDialog.Builder(this)
                 .setTitle("Result")

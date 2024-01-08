@@ -272,7 +272,7 @@ class LoginActivity : AppCompatActivity() {
                             val welcome = "Welcome "
                             val displayName = model.FullName
                             // TODO : initiate successful logged in experience
-                            //Abdullah Changes
+
 
                             Toast.makeText(
                                 applicationContext,
@@ -297,9 +297,9 @@ class LoginActivity : AppCompatActivity() {
 //                            mStorage.saveData("AntennaConnectionNextStep", "AuditAntenna")
 //                            startActivity(Intent(this, DeviceActivity::class.java))
 
-                            startActivity(Intent(this, UndoBoxLocationAssignmentActivity::class.java))
-//                            startActivity(Intent(this, MainMenuActivity::class.java))
-//                            finish()
+//                            startActivity(Intent(this, UndoBoxLocationAssignmentActivity::class.java))
+                            startActivity(Intent(this, MainMenuActivity::class.java))
+                            finish()
                         },
                         {t:Throwable?->
                             run {
@@ -478,7 +478,7 @@ class LoginActivity : AppCompatActivity() {
                 //Abdullah Changes
 
                login("5555", "5555")
-               // login(username.text.toString(), password.text.toString())
+           //     login(username.text.toString(), password.text.toString())
             }
         }
 

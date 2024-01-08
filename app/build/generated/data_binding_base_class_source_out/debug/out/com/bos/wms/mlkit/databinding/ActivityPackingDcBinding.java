@@ -46,6 +46,9 @@ public final class ActivityPackingDcBinding implements ViewBinding {
   public final TextView lblError;
 
   @NonNull
+  public final TextView lblLastItem;
+
+  @NonNull
   public final TextView lblScanError;
 
   @NonNull
@@ -67,9 +70,9 @@ public final class ActivityPackingDcBinding implements ViewBinding {
       @NonNull ConstraintLayout activityScanRfid, @NonNull Button btnDelete,
       @NonNull Button btnDone, @NonNull Button btnNext, @NonNull Button btnPrev,
       @NonNull TextView lblBox, @NonNull TextView lblDescription, @NonNull TextView lblError,
-      @NonNull TextView lblScanError, @NonNull EditText textBox, @NonNull EditText textBranch,
-      @NonNull EditText textItemScanned, @NonNull EditText textLastItem,
-      @NonNull EditText textUser) {
+      @NonNull TextView lblLastItem, @NonNull TextView lblScanError, @NonNull EditText textBox,
+      @NonNull EditText textBranch, @NonNull EditText textItemScanned,
+      @NonNull EditText textLastItem, @NonNull EditText textUser) {
     this.rootView = rootView;
     this.activityScanRfid = activityScanRfid;
     this.btnDelete = btnDelete;
@@ -79,6 +82,7 @@ public final class ActivityPackingDcBinding implements ViewBinding {
     this.lblBox = lblBox;
     this.lblDescription = lblDescription;
     this.lblError = lblError;
+    this.lblLastItem = lblLastItem;
     this.lblScanError = lblScanError;
     this.textBox = textBox;
     this.textBranch = textBranch;
@@ -158,6 +162,12 @@ public final class ActivityPackingDcBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.lblLastItem;
+      TextView lblLastItem = ViewBindings.findChildViewById(rootView, id);
+      if (lblLastItem == null) {
+        break missingId;
+      }
+
       id = R.id.lblScanError;
       TextView lblScanError = ViewBindings.findChildViewById(rootView, id);
       if (lblScanError == null) {
@@ -195,8 +205,8 @@ public final class ActivityPackingDcBinding implements ViewBinding {
       }
 
       return new ActivityPackingDcBinding((ConstraintLayout) rootView, activityScanRfid, btnDelete,
-          btnDone, btnNext, btnPrev, lblBox, lblDescription, lblError, lblScanError, textBox,
-          textBranch, textItemScanned, textLastItem, textUser);
+          btnDone, btnNext, btnPrev, lblBox, lblDescription, lblError, lblLastItem, lblScanError,
+          textBox, textBranch, textItemScanned, textLastItem, textUser);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

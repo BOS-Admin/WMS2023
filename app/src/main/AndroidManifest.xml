@@ -44,6 +44,16 @@
         <activity
             android:name=".app.tpo.TPOResetTruckActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".app.BrandsInToIsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.PutAwayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.PingActivity"
+            android:exported="false" />
         <activity
             android:name=".app.PrintBPricesActivity"
             android:exported="false" />
@@ -185,6 +195,13 @@
             android:name=".app.bosApp.ScanBinForCountActivity"
             android:label="@string/title_activity_scan_count"
             android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name=".app.bosApp.PaletteBinsCheckingActivity"
+            android:label="Palette Checking Activity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+
         <activity
             android:name=".app.bosApp.ScanContainerActivity"
             android:label="@string/title_activity_scan_container"
@@ -202,6 +219,17 @@
             android:label="@string/title_activity_packing_dc"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".app.bosApp.PaletteBinsMainActivity"
+            android:label="Palette Bins "
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".app.bosApp.PaletteBinsDCActivity"
+            android:label="Palette Bins DC"
+
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
         <activity
             android:name=".app.bosApp.StockTakeRackDCActivity"
             android:label="Stock Take Rack DC"
@@ -281,6 +309,7 @@
             android:label="Fill Pallete Activity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
+
         <activity
             android:name=".app.MainMenu"
             android:label="@string/title_activity_main_menu" />

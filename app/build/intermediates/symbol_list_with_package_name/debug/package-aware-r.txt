@@ -2823,6 +2823,7 @@ id btnA
 id btnB
 id btnBolRecognition
 id btnBrandOCR
+id btnBrandsInToIs
 id btnC
 id btnCapture
 id btnChange
@@ -2860,10 +2861,15 @@ id btnModifyTPOBins
 id btnNext
 id btnPASBrandOCR
 id btnPackingReasonDone
+id btnPaletteBins
+id btnPaletteChecking
 id btnPause
 id btnPickingDone
+id btnPing
 id btnPopUp
 id btnPrev
+id btnPrint
+id btnPrintReprice
 id btnPutAway
 id btnRackCount
 id btnReceiving
@@ -3064,8 +3070,10 @@ id italic
 id item_touch_helper_previous_elevation
 id itemsListView
 id itemsMenuTitle
+id items_list
 id jumpToEnd
 id jumpToStart
+id label
 id labeled
 id layout
 id layoutBtns
@@ -3073,6 +3081,7 @@ id layoutDashboard
 id layoutNewPrice
 id layoutOldPrice
 id layoutUPCs
+id lblAssignedRack
 id lblBox
 id lblCount
 id lblDescription
@@ -3082,6 +3091,7 @@ id lblFoldingScanItem
 id lblFoldingScanStation
 id lblItemSerial
 id lblItemsCnt
+id lblLastItem
 id lblLocationCheckRemainingBins
 id lblLocationCheckRemainingShelfs
 id lblLocationScan
@@ -3095,6 +3105,7 @@ id lblPickingReminaingBins
 id lblPickingReminaingItems
 id lblPickingWave
 id lblPrintTypeItem
+id lblRack
 id lblResult
 id lblScanError
 id lblSeason
@@ -3108,6 +3119,7 @@ id lblShipPallReciNbOfCartons
 id lblShipPallReciPalleteNb
 id lblStatus
 id lblTitle
+id lblType
 id lblUPC
 id lblfillpalleteBarcode
 id lblfillpalleteBinBarcode
@@ -3144,6 +3156,7 @@ id linearLayout6
 id linearLayout7
 id linearLayout8
 id linearLayout9
+id linearLayoutUPCs
 id listMode
 id listView
 id list_item
@@ -3387,11 +3400,14 @@ id textBox
 id textBoxNb
 id textBoxScanned
 id textBranch
+id textCompany
 id textCount
 id textDestination
 id textDone
 id textEnd
+id textItemNo
 id textItemScanned
+id textItemSerial
 id textLastBox
 id textLastItem
 id textLastLocation
@@ -3458,6 +3474,7 @@ id truckIcon
 id truckInfoBtn
 id tv_label
 id txtAppVersion
+id txtBox
 id txtFoldingScanItem
 id txtFoldingScanStation
 id txtIPAddress
@@ -3474,6 +3491,7 @@ id txtPickingItemSerialBarcode
 id txtPricingLineCode
 id txtPutAwayPalleteBarcode
 id txtRFIDMac
+id txtRack
 id txtRemaining
 id txtScaleMac
 id txtSeason
@@ -3622,6 +3640,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_bol_recognition
 layout activity_brand_ocractivity
+layout activity_brands_in_to_is
 layout activity_count
 layout activity_empty_box
 layout activity_fillpallete
@@ -3629,6 +3648,7 @@ layout activity_foldingscan
 layout activity_item_pricing
 layout activity_itemserial_missing
 layout activity_itemserial_upc_missing
+layout activity_listview
 layout activity_locationcheck
 layout activity_login
 layout activity_main
@@ -3639,15 +3659,19 @@ layout activity_next_receiving_status
 layout activity_packing
 layout activity_packing_dc
 layout activity_packing_reason
+layout activity_palette_bins
 layout activity_pas_brand_ocractivity
 layout activity_pg_pricing
 layout activity_picking
+layout activity_ping
+layout activity_print_prices
 layout activity_printer_selection
 layout activity_put_away
 layout activity_putawaypallete
 layout activity_reprice
 layout activity_reprice_count
 layout activity_scan_container
+layout activity_scan_stand_in_to_is
 layout activity_scan_upcs_for_bol
 layout activity_serial_generator
 layout activity_shipment
@@ -3786,6 +3810,7 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout tpo_location_item
 layout tpo_locations_dialog
+layout upc_card_done
 layout upc_pricing_item
 menu bottom_nav_menu
 mipmap ic_launcher

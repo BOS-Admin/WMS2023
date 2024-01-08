@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_scan_rfid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".app.RepriceActivity"    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner2"
+        android:id="@+id/textViewTitle"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/lblTitle"
+
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:padding="10dp"
+            android:paddingLeft="10dp"
+            android:text="BRANDS IN To IS"
+            android:textColor="#00f"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+
+        <Button
+            android:id="@+id/btnPopUp"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:backgroundTint="#fff"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text=""
+            app:icon="@drawable/baseline_notes_icon"
+            app:iconSize="40dp"
+            app:iconTint="#00f"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner2"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/layoutUPCs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-thin"
+            android:paddingTop="3dp"
+            android:text="Scan UPC"
+            android:textColor="#00f"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/txtItem"
+            app:layout_constraintEnd_toEndOf="@+id/txtItem"
+            app:layout_constraintStart_toStartOf="@+id/txtItem" />
+
+        <EditText
+            android:id="@+id/txtItem"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:padding="10dp"
+            android:paddingLeft="10dp"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/lblResult"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblResult"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColor="#0C8E3C"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtItem" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layoutUPCs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:divider="@drawable/empty_tall_divider"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:showDividers="middle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutBtns">
+
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView1"-->
+        <!--            android:layout_width="250dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="5dp"-->
+        <!--            android:fontFamily="sans-serif-thin"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Previous Price"-->
+        <!--            android:textColor="#00f"-->
+        <!--            android:textSize="24sp"-->
+        <!--            android:textStyle="bold" />-->
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+            <LinearLayout
+                android:id="@+id/linearLayoutUPCs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:showDividers="middle"
+                android:divider="@drawable/empty_tall_divider"
+                > </LinearLayout>
+        </ScrollView>
+
+
+
+
+
+        <Button
+            android:id="@+id/btnDone"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="Done"
+            android:textSize="20dp" />
+
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/lblStand"-->
+        <!--            android:layout_width="250dp"-->
+        <!--            android:layout_height="40dp"-->
+        <!--            android:layout_marginTop="50dp"-->
+        <!--            android:fontFamily="sans-serif-medium"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Printing Id"-->
+        <!--            android:textColor="#0C8E3C"-->
+        <!--            android:textSize="24sp" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/txtStandId"-->
+        <!--            android:layout_width="250dp"-->
+        <!--            android:layout_height="40dp"-->
+        <!--            android:layout_marginTop="50dp"-->
+        <!--            android:fontFamily="sans-serif-medium"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text=""-->
+        <!--            android:textColor="#0C8E3C"-->
+        <!--            android:textSize="24sp" />-->
+
+
+    </LinearLayout>
+
+
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/btnDone"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        android:background="@drawable/rounded_corner_red"-->
+    <!--        android:paddingLeft="20dp"-->
+    <!--        android:paddingRight="20dp"-->
+    <!--        android:text="Done"-->
+    <!--        android:textColor="@android:color/white"-->
+    <!--        android:textSize="25sp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/layoutUPCScroll" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

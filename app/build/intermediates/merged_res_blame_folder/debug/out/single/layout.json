@@ -40,6 +40,10 @@
         "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_putawaypallete.xml"
     },
     {
+        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_listview.xml",
+        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_listview.xml"
+    },
+    {
         "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_bol_recognition.xml",
         "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_bol_recognition.xml"
     },
@@ -48,20 +52,24 @@
         "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_packing.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\item_list.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\item_list.xml"
+        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\fragment_notifications.xml",
+        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\fragment_notifications.xml"
     },
     {
         "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\scan_upcs_item.xml",
         "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\scan_upcs_item.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\fragment_notifications.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\fragment_notifications.xml"
+        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\item_list.xml",
+        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\item_list.xml"
     },
     {
         "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_transfer.xml",
         "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_transfer.xml"
+    },
+    {
+        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_brands_in_to_is.xml",
+        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_brands_in_to_is.xml"
     },
     {
         "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_itemserial_missing.xml",
@@ -148,6 +156,18 @@
         "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_shipment_pallete_carton.xml"
     },
     {
+        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_scan_stand_in_to_is.xml",
+        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_scan_stand_in_to_is.xml"
+    },
+    {
+        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\upc_card_done.xml",
+        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\upc_card_done.xml"
+    },
+    {
+        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_ping.xml",
+        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_ping.xml"
+    },
+    {
         "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_itemserial_missing.xml",
         "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_itemserial_missing.xml"
     },
@@ -158,6 +178,10 @@
     {
         "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\fragment_dashboard.xml",
         "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_put_away.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_put_away.xml"
     },
     {
         "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_brand_ocractivity.xml",
@@ -176,16 +200,20 @@
         "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_login.xml"
     },
     {
+        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_palette_bins.xml",
+        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_palette_bins.xml"
+    },
+    {
         "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\tpo_locations_dialog.xml",
         "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\tpo_locations_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_upc_pricing.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_upc_pricing.xml"
-    },
-    {
         "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_put_away.xml",
         "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_put_away.xml"
+    },
+    {
+        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_upc_pricing.xml",
+        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_upc_pricing.xml"
     },
     {
         "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_fillpallete.xml",
@@ -228,10 +256,6 @@
         "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_picking.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_reprice_count.xml",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_reprice_count.xml"
-    },
-    {
         "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_itemserial_upc_missing.xml",
         "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_itemserial_upc_missing.xml"
     },
@@ -242,6 +266,10 @@
     {
         "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_item_pricing.xml",
         "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_item_pricing.xml"
+    },
+    {
+        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_print_prices.xml",
+        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_print_prices.xml"
     },
     {
         "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_tporeset_truck.xml",
