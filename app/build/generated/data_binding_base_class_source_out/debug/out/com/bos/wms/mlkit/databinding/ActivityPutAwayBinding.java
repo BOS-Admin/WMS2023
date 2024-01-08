@@ -6,10 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.bos.wms.mlkit.R;
@@ -19,73 +20,63 @@ import java.lang.String;
 
 public final class ActivityPutAwayBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
-  public final ConstraintLayout activityScanRfid;
+  public final LinearLayout activityScanRfid;
 
   @NonNull
-  public final Button btnDelete;
+  public final Button btnPopUp;
 
   @NonNull
-  public final Button btnDone;
+  public final ListView itemsList;
+
+  @NonNull
+  public final TextView lblAssignedRack;
 
   @NonNull
   public final TextView lblBox;
 
   @NonNull
-  public final TextView lblError;
+  public final TextView lblRack;
 
   @NonNull
-  public final TextView lblLocationScan;
+  public final TextView lblResult;
 
   @NonNull
-  public final TextView lblScanError;
+  public final TextView lblTitle;
 
   @NonNull
-  public final EditText textBoxScanned;
+  public final TextView lblType;
 
   @NonNull
-  public final EditText textBranch;
+  public final EditText txtBox;
 
   @NonNull
-  public final EditText textLastBox;
+  public final EditText txtRack;
 
-  @NonNull
-  public final EditText textLastLocation;
-
-  @NonNull
-  public final EditText textLocationScanned;
-
-  @NonNull
-  public final EditText textUser;
-
-  private ActivityPutAwayBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout activityScanRfid, @NonNull Button btnDelete,
-      @NonNull Button btnDone, @NonNull TextView lblBox, @NonNull TextView lblError,
-      @NonNull TextView lblLocationScan, @NonNull TextView lblScanError,
-      @NonNull EditText textBoxScanned, @NonNull EditText textBranch, @NonNull EditText textLastBox,
-      @NonNull EditText textLastLocation, @NonNull EditText textLocationScanned,
-      @NonNull EditText textUser) {
+  private ActivityPutAwayBinding(@NonNull LinearLayout rootView,
+      @NonNull LinearLayout activityScanRfid, @NonNull Button btnPopUp, @NonNull ListView itemsList,
+      @NonNull TextView lblAssignedRack, @NonNull TextView lblBox, @NonNull TextView lblRack,
+      @NonNull TextView lblResult, @NonNull TextView lblTitle, @NonNull TextView lblType,
+      @NonNull EditText txtBox, @NonNull EditText txtRack) {
     this.rootView = rootView;
     this.activityScanRfid = activityScanRfid;
-    this.btnDelete = btnDelete;
-    this.btnDone = btnDone;
+    this.btnPopUp = btnPopUp;
+    this.itemsList = itemsList;
+    this.lblAssignedRack = lblAssignedRack;
     this.lblBox = lblBox;
-    this.lblError = lblError;
-    this.lblLocationScan = lblLocationScan;
-    this.lblScanError = lblScanError;
-    this.textBoxScanned = textBoxScanned;
-    this.textBranch = textBranch;
-    this.textLastBox = textLastBox;
-    this.textLastLocation = textLastLocation;
-    this.textLocationScanned = textLocationScanned;
-    this.textUser = textUser;
+    this.lblRack = lblRack;
+    this.lblResult = lblResult;
+    this.lblTitle = lblTitle;
+    this.lblType = lblType;
+    this.txtBox = txtBox;
+    this.txtRack = txtRack;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -110,17 +101,23 @@ public final class ActivityPutAwayBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      ConstraintLayout activityScanRfid = (ConstraintLayout) rootView;
+      LinearLayout activityScanRfid = (LinearLayout) rootView;
 
-      id = R.id.btnDelete;
-      Button btnDelete = ViewBindings.findChildViewById(rootView, id);
-      if (btnDelete == null) {
+      id = R.id.btnPopUp;
+      Button btnPopUp = ViewBindings.findChildViewById(rootView, id);
+      if (btnPopUp == null) {
         break missingId;
       }
 
-      id = R.id.btnDone;
-      Button btnDone = ViewBindings.findChildViewById(rootView, id);
-      if (btnDone == null) {
+      id = R.id.items_list;
+      ListView itemsList = ViewBindings.findChildViewById(rootView, id);
+      if (itemsList == null) {
+        break missingId;
+      }
+
+      id = R.id.lblAssignedRack;
+      TextView lblAssignedRack = ViewBindings.findChildViewById(rootView, id);
+      if (lblAssignedRack == null) {
         break missingId;
       }
 
@@ -130,63 +127,45 @@ public final class ActivityPutAwayBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.lblError;
-      TextView lblError = ViewBindings.findChildViewById(rootView, id);
-      if (lblError == null) {
+      id = R.id.lblRack;
+      TextView lblRack = ViewBindings.findChildViewById(rootView, id);
+      if (lblRack == null) {
         break missingId;
       }
 
-      id = R.id.lblLocationScan;
-      TextView lblLocationScan = ViewBindings.findChildViewById(rootView, id);
-      if (lblLocationScan == null) {
+      id = R.id.lblResult;
+      TextView lblResult = ViewBindings.findChildViewById(rootView, id);
+      if (lblResult == null) {
         break missingId;
       }
 
-      id = R.id.lblScanError;
-      TextView lblScanError = ViewBindings.findChildViewById(rootView, id);
-      if (lblScanError == null) {
+      id = R.id.lblTitle;
+      TextView lblTitle = ViewBindings.findChildViewById(rootView, id);
+      if (lblTitle == null) {
         break missingId;
       }
 
-      id = R.id.textBoxScanned;
-      EditText textBoxScanned = ViewBindings.findChildViewById(rootView, id);
-      if (textBoxScanned == null) {
+      id = R.id.lblType;
+      TextView lblType = ViewBindings.findChildViewById(rootView, id);
+      if (lblType == null) {
         break missingId;
       }
 
-      id = R.id.textBranch;
-      EditText textBranch = ViewBindings.findChildViewById(rootView, id);
-      if (textBranch == null) {
+      id = R.id.txtBox;
+      EditText txtBox = ViewBindings.findChildViewById(rootView, id);
+      if (txtBox == null) {
         break missingId;
       }
 
-      id = R.id.textLastBox;
-      EditText textLastBox = ViewBindings.findChildViewById(rootView, id);
-      if (textLastBox == null) {
+      id = R.id.txtRack;
+      EditText txtRack = ViewBindings.findChildViewById(rootView, id);
+      if (txtRack == null) {
         break missingId;
       }
 
-      id = R.id.textLastLocation;
-      EditText textLastLocation = ViewBindings.findChildViewById(rootView, id);
-      if (textLastLocation == null) {
-        break missingId;
-      }
-
-      id = R.id.textLocationScanned;
-      EditText textLocationScanned = ViewBindings.findChildViewById(rootView, id);
-      if (textLocationScanned == null) {
-        break missingId;
-      }
-
-      id = R.id.textUser;
-      EditText textUser = ViewBindings.findChildViewById(rootView, id);
-      if (textUser == null) {
-        break missingId;
-      }
-
-      return new ActivityPutAwayBinding((ConstraintLayout) rootView, activityScanRfid, btnDelete,
-          btnDone, lblBox, lblError, lblLocationScan, lblScanError, textBoxScanned, textBranch,
-          textLastBox, textLastLocation, textLocationScanned, textUser);
+      return new ActivityPutAwayBinding((LinearLayout) rootView, activityScanRfid, btnPopUp,
+          itemsList, lblAssignedRack, lblBox, lblRack, lblResult, lblTitle, lblType, txtBox,
+          txtRack);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

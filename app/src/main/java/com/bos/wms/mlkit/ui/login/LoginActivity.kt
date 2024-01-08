@@ -134,7 +134,7 @@ class LoginActivity : AppCompatActivity() {
             val api: BasicApi = APIClient.getInstance(IPAddress,true).create<BasicApi>(BasicApi::class.java)
             val compositeDisposable = CompositeDisposable()
             compositeDisposable.addAll(
-                    api.GetAppVersion()
+                    api.GetAppVersion("WMSApp")
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe ({ s ->
@@ -142,12 +142,13 @@ class LoginActivity : AppCompatActivity() {
                                     Logger.Debug("Version API", "Got Highest Version: " + s.version)
                                     val highestVersion: String = s.version
                                     if (toUpdateApp(currentAppVersion, highestVersion)) {
-                                        Logger.Debug("Version API", "App Version isn't up to date, curr ent App Version: $currentAppVersion highest App Version: $highestVersion")
-                                        val fileName = "WMSAppV" + s.version + ".apk"
+                                        Logger.Debug("Version API", "App Version isn't up to date, current App Version: $currentAppVersion highest App Version: $highestVersion")
+                                        val fileName = "WMSApp" + s.version + ".apk"
                                         var downloadFileUrl: String = s.apiPath + fileName
                                         saveFile(downloadFileUrl, fileName)
 
                                     }else {
+                                        Logger.Debug("Version API", "This Device Is Using The Latest Version No Need For Update")
                                         progressDialog!!.cancel()
                                     }
                                 }
@@ -437,10 +438,13 @@ class LoginActivity : AppCompatActivity() {
 //                login(username.text.toString(), password.text.toString())
 //            } //       }
 
-
+        //Abdullah Changes
+        login.isEnabled=true
         login.setOnClickListener {
             //   loading.visibility = View.VISIBLE
-            login(username.text.toString(), password.text.toString())
+            //Abdullah Changes
+           login(username.text.toString(), password.text.toString())
+          //  login("5555","5555")
         }
         username.requestFocus()
 

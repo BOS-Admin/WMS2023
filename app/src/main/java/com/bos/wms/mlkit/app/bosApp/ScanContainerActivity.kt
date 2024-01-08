@@ -43,6 +43,8 @@ class ScanContainerActivity : AppCompatActivity() {
         txtScanDestination=findViewById(R.id.textDestination)
         textUser=findViewById(R.id.textUser)
         textBranch=findViewById(R.id.textBranch)
+        val lblDescription:TextView =findViewById(R.id.lblDescription)
+        val lblBox:TextView =findViewById(R.id.lblBox)
         lblError1=findViewById(R.id.lblError)
         txtScanBox.setShowSoftInputOnFocus(false);
         txtScanUser.setShowSoftInputOnFocus(false);
@@ -56,6 +58,19 @@ class ScanContainerActivity : AppCompatActivity() {
         txtScanUser.setShowSoftInputOnFocus(false);
         txtScanBox.setShowSoftInputOnFocus(false);
         txtScanDestination.setShowSoftInputOnFocus(false);
+
+
+        if( General.getGeneral(applicationContext).packType=="PaletteBinsDC"){
+            title = "Scan Palette";
+            lblDescription.text="Please scan your barcode and the palette barcode"
+            lblBox.text="Palette"
+
+        }
+        else{
+            title = "Scan Box";
+            lblDescription.text="Please scan your barcode and the box barcode"
+            lblBox.text="Box"
+        }
 
         TextChangeEvent=object : TextWatcher {
 
@@ -132,7 +147,11 @@ class ScanContainerActivity : AppCompatActivity() {
     }
 
     private fun proceed(boxNb:String,destination:String){
-        ValidateBin(boxNb,102,General.getGeneral(applicationContext).UserID,General.getGeneral(applicationContext).mainLocationID,destination)
+
+       if( General.getGeneral(applicationContext).packType=="PaletteBinsDC")
+           ValidatePalette(boxNb,102,General.getGeneral(applicationContext).UserID,General.getGeneral(applicationContext).mainLocationID,destination)
+        else
+            ValidateBin(boxNb,102,General.getGeneral(applicationContext).UserID,General.getGeneral(applicationContext).mainLocationID,destination)
         // val intent = Intent (applicationContext, PackingReasonActivity::class.java)
         //  startActivity(intent)
     }
@@ -153,7 +172,7 @@ class ScanContainerActivity : AppCompatActivity() {
                     // .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
                         {s->
-                            if(s!==null ){
+                            if(s!=null ){
                                 Log.i("AH-Log-Pack","size "+s.binBarcode)
                                 General.getGeneral(applicationContext).boxNb=binBarcode
                                 General.getGeneral(applicationContext).destination=destination
@@ -167,6 +186,86 @@ class ScanContainerActivity : AppCompatActivity() {
                             }
                             else{
                                 showMessage("API Error: Bin Model is Empty",Color.RED)
+                            }
+
+                        },
+                        {t:Throwable?->
+                            run {
+
+
+
+                                    if (t is HttpException) {
+                                        var ex: HttpException = t as HttpException
+                                        var ss2 = "Error "
+                                        if (ex != null) {
+                                            var ss = ex.response()
+                                            if (ss != null) {
+                                                var ss1 = ss.errorBody()
+                                                if (ss1 != null) {
+                                                    ss2 = ss1.string()
+                                                }
+
+                                            }
+
+                                        }
+
+                                        showMessage("$ss2 (Http Error) ", Color.RED)
+                                }
+                                else{
+                                    if(t?.message!=null)
+                                        showMessage(t.message.toString()+ " (API Error) ",Color.RED)
+                                }
+
+                            }
+                        }
+                    )
+            )
+        } catch (e: Throwable) {
+            showMessage(""+e?.message+"(Exception)" ,Color.RED)
+        }
+        finally {
+        }
+    }
+
+    fun ValidatePalette(binBarcode:String,packingTypeId:Int,userId:Int,locationId:Int,destination:String) {
+
+        try {
+            lblError1.text = "fetching data..."
+            Log.i("ScanPaletteActivity","started api")
+            api= APIClient.getInstance(General.getGeneral(applicationContext).ipAddress ,true).create(
+                BasicApi::class.java)
+            compositeDisposable.addAll(
+                api.ValidatePalette(binBarcode,packingTypeId,userId,locationId)
+                    .subscribeOn(Schedulers.io())
+                    // .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(
+                        {s->
+                            if(s!=null ){
+                                var response = try {
+                                    s.string()
+                                } catch (e: Exception) {
+                                    e.message.toString()
+                                }
+                                if (response != null && response == "success") {
+                                    General.getGeneral(applicationContext).boxNb=binBarcode
+                                    General.getGeneral(applicationContext).destination=destination
+                                    General.getGeneral(applicationContext).saveGeneral(applicationContext)
+                                    lblError1.setTextColor(Color.GREEN)
+                                    lblError1.text = "Success"
+                                    val intent = Intent (applicationContext, PaletteBinsDCActivity::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                }
+                                else
+
+                                showMessage("Failed ",Color.RED)
+
+                               // Log.i("AH-Log-Pack","size "+s.id)
+
+
+                            }
+                            else{
+                                showMessage("API Error: Palette Model is Empty",Color.RED)
                             }
 
                         },

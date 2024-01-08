@@ -25,7 +25,7 @@ public class General {
     public Integer FloorID=0;
 
     public String UserName="";
-    public String AppVersion="2.2.3 31/10/2023";
+    public String AppVersion="2.2.16 3/1/2024";
     int interval = 3600;    // when there's no activity
 
     public String ipAddress="";
@@ -235,7 +235,7 @@ public class General {
 
 
     public static Boolean ValidateDestination(String str){
-        return !str.isEmpty() && str.length() >2;
+        return str!=null && !str.isEmpty() && str.length() >2;
     }
     public static Boolean ValidatePalleteCode(String str){
         return !str.isEmpty() && str.length()>1;
