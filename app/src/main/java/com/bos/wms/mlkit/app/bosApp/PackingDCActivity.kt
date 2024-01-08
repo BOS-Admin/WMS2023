@@ -185,23 +185,23 @@ class PackingDCActivity : AppCompatActivity() {
 //endregion
 
 
-    private fun executeCommand(): Boolean {
-        Log.i("AH-Log-Packing", " executeCommand")
-        val runtime = Runtime.getRuntime()
-        try {
-            val mIpAddrProcess = runtime.exec("/system/bin/ping -c 1 192.168.50.20")
-            val mExitValue = mIpAddrProcess.waitFor()
-            Log.i("AH-Log-Packing", " mExitValue $mExitValue")
-            return mExitValue == 0
-        } catch (ignore: InterruptedException) {
-            ignore.printStackTrace()
-            Log.i("AH-Log-Packing", "Exception:$ignore")
-        } catch (e: IOException) {
-            e.printStackTrace()
-            Log.i("AH-Log-Packing", "Exception:$e")
-        }
-        return false
-    }
+//    private fun executeCommand(): Boolean {
+//        Log.i("AH-Log-Packing", " executeCommand")
+//        val runtime = Runtime.getRuntime()
+//        try {
+//            val mIpAddrProcess = runtime.exec("/system/bin/ping -c 1 192.168.50.20")
+//            val mExitValue = mIpAddrProcess.waitFor()
+//            Log.i("AH-Log-Packing", " mExitValue $mExitValue")
+//            return mExitValue == 0
+//        } catch (ignore: InterruptedException) {
+//            ignore.printStackTrace()
+//            Log.i("AH-Log-Packing", "Exception:$ignore")
+//        } catch (e: IOException) {
+//            e.printStackTrace()
+//            Log.i("AH-Log-Packing", "Exception:$e")
+//        }
+//        return false
+//    }
 
 
 
@@ -318,8 +318,8 @@ class PackingDCActivity : AppCompatActivity() {
                                     val error=t?.message + " (API Error)"
                                     var start:Long=System.currentTimeMillis();
                                     Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n Start Ping ($ItemSerial)")
-                                    val x=executeCommand()
-                                    Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n End Ping ($ItemSerial): => $x => (${System.currentTimeMillis()-start})")
+//                                    val x=executeCommand()
+//                                    Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n End Ping ($ItemSerial): => $x => (${System.currentTimeMillis()-start})")
                                 }
 
                                 runOnUiThread {

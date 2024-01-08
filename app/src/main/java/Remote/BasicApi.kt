@@ -21,6 +21,25 @@ interface BasicApi {
 
     /* Transfer Preparation Order */
 
+    @POST("api/reprice/store/")
+    fun Reprice( @Query("UserId") UserId: Int,
+                 @Query("ItemCode") BoxBarcode:String,
+                 @Query("Store") Store:String
+    ): Observable<ClassBRepriceResponseModel>
+
+    @GET("api/reprice/store/getStoreRepriceCount")
+    fun GetRepriceCount(  @Query("Store") Store:String
+    ): Observable<ClassBRepriceCountResponse>
+
+
+    @POST("api/reprice/store/printV2")
+    fun PrintV2(  @Query("Store") Store:String, @Query("Count")   Count:Int, @Query("Printer")  Printer :String
+    ): Observable<ResponseBody>
+
+
+
+
+
     @GET("api/TPO/GetAllTransferLocations")
     fun GetAllTransferLocations(@Query("CurrentLocation") CurrentLocation: String): Observable<ResponseBody>
 
@@ -372,6 +391,9 @@ interface BasicApi {
 
     @GET("api/Location")
     fun GetLocation(@Query("IPAddress") IPAddress:String,@Query("LocationTypeID") LocationTypeID: Int, @Query("UserID") UserID: Int): Observable<LocationModel>
+
+    @GET("api/Location/GetAppVersion")
+    fun GetAppVersion(@Query("application") application:String): Observable<AppVersionModel>
 
     @POST("api/AssignLocationCheck")
     fun AssignLocationCheck(@Query("UserID") UserID:Int, @Query("FloorID") FloorID: Int): Observable<ResponseBody>
