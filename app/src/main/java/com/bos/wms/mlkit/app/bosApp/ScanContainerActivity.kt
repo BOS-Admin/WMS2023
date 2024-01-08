@@ -66,6 +66,11 @@ class ScanContainerActivity : AppCompatActivity() {
             lblBox.text="Palette"
 
         }
+        else{
+            title = "Scan Box";
+            lblDescription.text="Please scan your barcode and the box barcode"
+            lblBox.text="Box"
+        }
 
         TextChangeEvent=object : TextWatcher {
 
@@ -167,7 +172,7 @@ class ScanContainerActivity : AppCompatActivity() {
                     // .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
                         {s->
-                            if(s!==null ){
+                            if(s!=null ){
                                 Log.i("AH-Log-Pack","size "+s.binBarcode)
                                 General.getGeneral(applicationContext).boxNb=binBarcode
                                 General.getGeneral(applicationContext).destination=destination
@@ -187,9 +192,24 @@ class ScanContainerActivity : AppCompatActivity() {
                         {t:Throwable?->
                             run {
 
-                                if(t is HttpException){
-                                    var ex: HttpException =t as HttpException
-                                    showMessage( ex.response().errorBody()!!.string()+ " (Http Error) ",Color.RED)
+
+
+                                    if (t is HttpException) {
+                                        var ex: HttpException = t as HttpException
+                                        var ss2 = "Error "
+                                        if (ex != null) {
+                                            var ss = ex.response()
+                                            if (ss != null) {
+                                                var ss1 = ss.errorBody()
+                                                if (ss1 != null) {
+                                                    ss2 = ss1.string()
+                                                }
+
+                                            }
+
+                                        }
+
+                                        showMessage("$ss2 (Http Error) ", Color.RED)
                                 }
                                 else{
                                     if(t?.message!=null)
@@ -220,16 +240,28 @@ class ScanContainerActivity : AppCompatActivity() {
                     // .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
                         {s->
-                            if(s!==null ){
-                                Log.i("AH-Log-Pack","size "+s.binBarcode)
-                                General.getGeneral(applicationContext).boxNb=binBarcode
-                                General.getGeneral(applicationContext).destination=destination
-                                General.getGeneral(applicationContext).saveGeneral(applicationContext)
-                                lblError1.setTextColor(Color.GREEN)
-                                lblError1.text = "Success"
-                                val intent = Intent (applicationContext, PaletteBinsDCActivity::class.java)
-                                startActivity(intent)
-                                finish()
+                            if(s!=null ){
+                                var response = try {
+                                    s.string()
+                                } catch (e: Exception) {
+                                    e.message.toString()
+                                }
+                                if (response != null && response == "success") {
+                                    General.getGeneral(applicationContext).boxNb=binBarcode
+                                    General.getGeneral(applicationContext).destination=destination
+                                    General.getGeneral(applicationContext).saveGeneral(applicationContext)
+                                    lblError1.setTextColor(Color.GREEN)
+                                    lblError1.text = "Success"
+                                    val intent = Intent (applicationContext, PaletteBinsDCActivity::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                }
+                                else
+
+                                showMessage("Failed ",Color.RED)
+
+                               // Log.i("AH-Log-Pack","size "+s.id)
+
 
                             }
                             else{

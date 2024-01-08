@@ -66,14 +66,14 @@ class DashboardFragment : Fragment() {
             UserPermissions.ValidatePermission("WMSApp.Dashboard.Packing", root.btnCount);
             UserPermissions.ValidatePermission("WMSApp.Dashboard.StockTake", root.btnStockTake);
             UserPermissions.ValidatePermission("WMSApp.Dashboard.Transfer", root.btnTransfer);
-            UserPermissions.ValidatePermission("WMSApp.Dashboard.PutAway", root.btnPutAway);
+//            UserPermissions.ValidatePermission("WMSApp.Dashboard.PutAway", root.btnPutAway);
 
         }else {
             UserPermissions.AddOnReceiveListener {
                 UserPermissions.ValidatePermission("WMSApp.Dashboard.Packing", root.btnCount);
                 UserPermissions.ValidatePermission("WMSApp.Dashboard.StockTake", root.btnStockTake);
                 UserPermissions.ValidatePermission("WMSApp.Dashboard.Transfer", root.btnTransfer);
-                UserPermissions.ValidatePermission("WMSApp.Dashboard.PutAway", root.btnPutAway);
+//                UserPermissions.ValidatePermission("WMSApp.Dashboard.PutAway", root.btnPutAway);
             }
         }
 
@@ -94,10 +94,10 @@ class DashboardFragment : Fragment() {
             val intent = Intent(activity, TransferActivity::class.java)
             startActivity(intent)
         }
-        root.btnPutAway.setOnClickListener {
-            val intent = Intent(activity, ScanRackPutAwayActivity::class.java)
-            startActivity(intent)
-        }
+//        root.btnPutAway.setOnClickListener {
+//            val intent = Intent(activity, ScanRackPutAwayActivity::class.java)
+//            startActivity(intent)
+//        }
 
         root.textBranch.isEnabled = false;
         root.textBranch.isEnabled = false;

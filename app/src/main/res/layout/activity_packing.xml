@@ -161,6 +161,8 @@
                 android:text="Palette Bins"
                 android:textColor="#F6F0F0"
                 android:textSize="20sp" />
+
+
         </LinearLayout>
 
     </LinearLayout>

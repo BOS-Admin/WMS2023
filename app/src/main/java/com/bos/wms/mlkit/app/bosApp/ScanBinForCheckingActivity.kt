@@ -20,10 +20,10 @@ import com.bos.wms.mlkit.General
 import com.bos.wms.mlkit.General.hideSoftKeyboard
 import com.bos.wms.mlkit.R
 import com.bos.wms.mlkit.storage.Storage
+import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import retrofit2.HttpException
-import java.io.IOException
 
 class ScanBinForCheckingActivity : AppCompatActivity() {
     private lateinit var txtScanBox: EditText
@@ -48,6 +48,22 @@ class ScanBinForCheckingActivity : AppCompatActivity() {
         textBranch=findViewById(R.id.textBranch)
         lblError1=findViewById(R.id.lblError)
         lblScanDestination=findViewById(R.id.lblDestination)
+
+        val lblDescription:TextView =findViewById(R.id.lblDescription)
+        val lblBox:TextView =findViewById(R.id.lblBox)
+
+        if( General.getGeneral(applicationContext).packType=="PaletteBinsChecking"){
+            title = "Scan Palette";
+            lblDescription.text="Please scan your barcode and the palette barcode"
+            lblBox.text="Palette"
+
+        }
+        else{
+            title = "Scan Box";
+            lblDescription.text="Please scan your barcode and the box barcode"
+            lblBox.text="Box"
+        }
+
 
 
         txtScanBox.setShowSoftInputOnFocus(false);
@@ -128,9 +144,14 @@ class ScanBinForCheckingActivity : AppCompatActivity() {
 
 
     private fun proceed(boxNb:String,destination:String){
-        ValidateBin(boxNb,102,general.UserID,general.mainLocationID,destination)
+
        // val intent = Intent (applicationContext, CountActivity::class.java)
        // startActivity(intent)
+
+        if( General.getGeneral(applicationContext).packType=="PaletteBinsChecking")
+            ValidatePalette(boxNb,102,General.getGeneral(applicationContext).UserID,General.getGeneral(applicationContext).mainLocationID,destination)
+        else
+            ValidateBin(boxNb,102,general.UserID,general.mainLocationID,destination)
     }
 
 
@@ -187,6 +208,91 @@ class ScanBinForCheckingActivity : AppCompatActivity() {
                                 if(t is HttpException){
                                     var ex: HttpException =t as HttpException
                                     showMessage( ex.response().errorBody()!!.string()+ " (Http Error) ",Color.RED)
+                                }
+                                else{
+                                    if(t?.message!=null)
+                                        showMessage(t.message.toString()+ " (API Error) ",Color.RED)
+                                }
+
+
+                            }
+                        }
+                    )
+            )
+        } catch (e: Throwable) {
+            showMessage("Exception: "+e?.message,Color.RED)
+
+        }
+        finally {
+        }
+    }
+
+
+    fun ValidatePalette(paletteBarcode:String, packingTypeId:Int, userId:Int, locationId:Int, destination:String) {
+
+
+        try {
+            lblError1.text = "fetching data..."
+            Log.i("ScanPaletteForCountActivity","started api")
+            Log.i("AH-Log-Checking", "$paletteBarcode,$packingTypeId,$userId,$destination,$locationId,$userId,$paletteBarcode")
+            api= APIClient.getInstance(IPAddress ,true).create(
+                BasicApi::class.java)
+            compositeDisposable.addAll(
+                api.ValidateBinForChecking(paletteBarcode,userId,locationId)
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(
+                        {s->
+                            var ErrorMsg = ""
+                            try {
+                                ErrorMsg = s.string()
+                            } catch (e: Exception) {
+                                e.printStackTrace()
+                            }
+                            Log.i("AH-Log","response  "+s.string())
+                            Log.i("AH-Log","response  "+ErrorMsg.length)
+                            Log.i("AH-Log","response  "+ErrorMsg.isEmpty())
+
+                            if (ErrorMsg.isEmpty() || ErrorMsg.startsWith("allowed") || ErrorMsg.startsWith("success") || ErrorMsg.lowercase().startsWith("released")) {
+                                Log.i("AH-Log","response  "+s.string())
+                                general.boxNb=paletteBarcode
+                                general.packReason=""
+                                general.packReasonId=-1
+                                general.saveGeneral(applicationContext)
+                                showMessage("",Color.GREEN)
+                                val intent = Intent (applicationContext, PaletteBinsCheckingActivity::class.java)
+                                startActivity(intent)
+                                finish()
+
+                            } else {
+                                showMessage("$ErrorMsg (API Return)",Color.RED)
+                            }
+                            runOnUiThread{
+                                txtScanBox.isEnabled=false
+                                UpdatingText=false
+                            }
+
+
+                        },
+                        {t:Throwable?->
+                            run {
+
+                                if(t is HttpException){
+                                    var ex: HttpException =t as HttpException
+                                    var ss2="Error "
+                                    if(ex!=null){
+                                        var ss=ex.response()
+                                        if(ss!=null){
+                                            var ss1=ss.errorBody()
+                                            if(ss1!=null){
+                                                ss2=ss1.string()
+                                            }
+
+                                        }
+
+                                    }
+
+                                    showMessage("$ss2 (Http Error) ",Color.RED)
                                 }
                                 else{
                                     if(t?.message!=null)

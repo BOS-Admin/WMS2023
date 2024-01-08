@@ -9,3 +9,13 @@ val NewSalesPrice: Double,
 val NewLetter: String,
 val NewUSDPrice: String
 )
+
+public data class BrandInToIsResponseModel (
+
+    val Company :String?,
+    val PrevPrice :String?,
+    val Letter :String?,
+    val NewPrice: String?,
+    val ItemSerial:String?,
+    val ItemNo:String?
+)

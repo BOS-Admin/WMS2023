@@ -49,6 +49,15 @@ class PaletteBinsMainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        findViewById<Button>(R.id.btnPaletteChecking).setOnClickListener{
+            General.getGeneral(applicationContext).packType="PaletteBinsChecking"
+            General.getGeneral(applicationContext).saveGeneral(applicationContext)
+            val intent = Intent (applicationContext, ScanBinForCheckingActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
         findViewById<Button>(R.id.btnChange).setOnClickListener {
             val intent = Intent (applicationContext, PrinterSelectionActivity::class.java)
             startActivity(intent)

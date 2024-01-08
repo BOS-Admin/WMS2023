@@ -443,8 +443,8 @@ class LoginActivity : AppCompatActivity() {
         login.setOnClickListener {
             //   loading.visibility = View.VISIBLE
             //Abdullah Changes
-         //   login(username.text.toString(), password.text.toString())
-            login("5555","5555")
+           login(username.text.toString(), password.text.toString())
+          //  login("5555","5555")
         }
         username.requestFocus()
 

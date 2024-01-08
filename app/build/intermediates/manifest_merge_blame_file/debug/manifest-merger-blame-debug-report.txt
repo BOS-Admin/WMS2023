@@ -6,960 +6,1005 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-8-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml
+8-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="33" />
-9-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml
+9-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-12-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:6:5-76
-12-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:6:22-73
+12-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:6:5-76
+12-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:6:22-73
 13    <uses-permission android:name="android.permission.BLUETOOTH" />
-13-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:7:5-68
-13-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:7:22-65
+13-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:7:5-68
+13-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:7:22-65
 14    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-14-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:8:5-74
-14-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:8:22-71
+14-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:8:5-74
+14-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:8:22-71
 15    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-15-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:9:5-81
-15-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:9:22-78
+15-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:9:5-81
+15-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:9:22-78
 16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-16-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:10:5-79
-16-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:10:22-76
+16-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:10:5-79
+16-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:10:22-76
 17    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
-17-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:11:5-72
-17-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:11:22-70
+17-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:11:5-72
+17-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:11:22-70
 18    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-18-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:12:5-75
-18-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:12:22-73
+18-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:12:5-75
+18-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:12:22-73
 19    <uses-permission android:name="android.permission.VIBRATE" />
-19-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:13:5-66
-19-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:13:22-63
+19-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:13:5-66
+19-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:13:22-63
 20    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-20-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:14:5-82
-20-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:14:22-79
+20-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:14:5-82
+20-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:14:22-79
 21    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-21-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:15:5-81
-21-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:15:22-78
+21-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:15:5-81
+21-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:15:22-78
 22    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-22-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:16:5-83
-22-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:16:22-80
+22-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:16:5-83
+22-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:16:22-80
 23    <uses-permission
-23-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:17:5-19:38
+23-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:17:5-19:38
 24        android:name="android.permission.READ_EXTERNAL_STORAGE"
-24-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:18:9-64
+24-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:18:9-64
 25        android:maxSdkVersion="18" />
-25-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:19:9-35
+25-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:19:9-35
 26
 27    <uses-feature android:name="android.hardware.camera.any" />
-27-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:21:5-64
-27-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:21:19-61
+27-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:21:5-64
+27-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:21:19-61
 28    <uses-feature
-28-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:22:5-24:35
+28-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:22:5-24:35
 29        android:name="android.hardware.camera"
-29-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:23:9-47
+29-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:23:9-47
 30        android:required="true" />
-30-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:24:9-32
+30-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:24:9-32
 31
 32    <uses-permission android:name="android.permission.CAMERA" />
-32-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:26:5-65
-32-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:26:22-62
+32-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:26:5-65
+32-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:26:22-62
 33
 34    <queries>
-34-->[androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\m.serhan\.gradle\caches\transforms-3\431c62dec666c68eb42798b4a036f2c7\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:24:5-28:15
+34-->[androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\431c62dec666c68eb42798b4a036f2c7\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:24:5-28:15
 35        <intent>
-35-->[androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\m.serhan\.gradle\caches\transforms-3\431c62dec666c68eb42798b4a036f2c7\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:25:9-27:18
+35-->[androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\431c62dec666c68eb42798b4a036f2c7\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:25:9-27:18
 36            <action android:name="androidx.camera.extensions.action.VENDOR_ACTION" />
-36-->[androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\m.serhan\.gradle\caches\transforms-3\431c62dec666c68eb42798b4a036f2c7\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:26:13-86
-36-->[androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\m.serhan\.gradle\caches\transforms-3\431c62dec666c68eb42798b4a036f2c7\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:26:21-83
+36-->[androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\431c62dec666c68eb42798b4a036f2c7\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:26:13-86
+36-->[androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\431c62dec666c68eb42798b4a036f2c7\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:26:21-83
 37        </intent>
 38    </queries>
 39
 40    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-40-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:22:5-79
-40-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:22:22-76
+40-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:22:5-79
+40-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:22:22-76
 41    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-41-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:24:5-68
-41-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:24:22-65
+41-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:24:5-68
+41-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:24:22-65
 42    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-42-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:26:5-82
-42-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:26:22-79
+42-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:26:5-82
+42-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:26:22-79
 43    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-43-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:26:5-110
-43-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:26:22-107
+43-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:26:5-110
+43-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:26:22-107
 44    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-44-->[com.google.android.gms:play-services-measurement-impl:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\712a2d9fb626e6d23e15499e62bb7965\transformed\jetified-play-services-measurement-impl-21.0.0\AndroidManifest.xml:27:5-79
-44-->[com.google.android.gms:play-services-measurement-impl:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\712a2d9fb626e6d23e15499e62bb7965\transformed\jetified-play-services-measurement-impl-21.0.0\AndroidManifest.xml:27:22-76
+44-->[com.google.android.gms:play-services-measurement-impl:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\712a2d9fb626e6d23e15499e62bb7965\transformed\jetified-play-services-measurement-impl-21.0.0\AndroidManifest.xml:27:5-79
+44-->[com.google.android.gms:play-services-measurement-impl:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\712a2d9fb626e6d23e15499e62bb7965\transformed\jetified-play-services-measurement-impl-21.0.0\AndroidManifest.xml:27:22-76
 45
 46    <application
-46-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:28:5-297:19
+46-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:28:5-326:19
 47        android:allowBackup="true"
-47-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:29:9-35
+47-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:29:9-35
 48        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-48-->[androidx.core:core:1.8.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c1a551cc35c87b756fbb29792a7b008b\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+48-->[androidx.core:core:1.8.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c1a551cc35c87b756fbb29792a7b008b\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 49        android:debuggable="true"
 50        android:extractNativeLibs="false"
 51        android:icon="@mipmap/ic_launcher"
-51-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:30:9-43
+51-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:30:9-43
 52        android:label="@string/app_name"
-52-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:31:9-41
+52-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:31:9-41
 53        android:roundIcon="@mipmap/ic_launcher_round"
-53-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:32:9-54
+53-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:32:9-54
 54        android:supportsRtl="true"
-54-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:33:9-35
-55        android:theme="@style/AppTheme"
-55-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:34:9-40
-56        android:usesCleartextTraffic="true" >
-56-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:35:9-44
-57        <activity
-57-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:37:9-41:56
-58            android:name="com.bos.wms.mlkit.app.StoreRepriceCountActivity"
-58-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:38:13-58
-59            android:exported="false"
-59-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:39:13-37
-60            android:theme="@style/AppTheme.NoActionBar"
-60-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:40:13-56
-61            android:windowSoftInputMode="stateHidden" />
-61-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:41:13-54
-62        <activity
-62-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:44:9-46:40
-63            android:name="com.bos.wms.mlkit.app.tpo.TPOResetTruckActivity"
-63-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:45:13-58
-64            android:exported="false" />
-64-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:46:13-37
-65        <activity
-65-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:47:9-49:40
-66            android:name="com.bos.wms.mlkit.app.PrintBPricesActivity"
-66-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:48:13-53
-67            android:exported="false" />
-67-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:49:13-37
-68        <activity
-68-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:50:9-54:56
-69            android:name="com.bos.wms.mlkit.app.tpo.TPOReceiveBinsActivity"
-69-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:51:13-59
-70            android:exported="false"
-70-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:52:13-37
-71            android:theme="@style/AppTheme.NoActionBar"
-71-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:53:13-56
-72            android:windowSoftInputMode="stateHidden" />
-72-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:54:13-54
-73        <activity
-73-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:55:9-59:56
-74            android:name="com.bos.wms.mlkit.app.RepriceActivity"
-74-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:56:13-48
-75            android:exported="false"
-75-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:57:13-37
-76            android:theme="@style/AppTheme.NoActionBar"
-76-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:58:13-56
-77            android:windowSoftInputMode="stateHidden" />
-77-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:59:13-54
+54-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:33:9-35
+55        android:testOnly="true"
+56        android:theme="@style/AppTheme"
+56-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:34:9-40
+57        android:usesCleartextTraffic="true" >
+57-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:35:9-44
+58        <activity
+58-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:37:9-41:56
+59            android:name="com.bos.wms.mlkit.app.StoreRepriceCountActivity"
+59-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:38:13-58
+60            android:exported="false"
+60-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:39:13-37
+61            android:theme="@style/AppTheme.NoActionBar"
+61-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:40:13-56
+62            android:windowSoftInputMode="stateHidden" />
+62-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:41:13-54
+63        <activity
+63-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:44:9-46:40
+64            android:name="com.bos.wms.mlkit.app.tpo.TPOResetTruckActivity"
+64-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:45:13-58
+65            android:exported="false" />
+65-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:46:13-37
+66        <activity
+66-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:48:9-50:40
+67            android:name="com.bos.wms.mlkit.app.BrandsInToIsActivity"
+67-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:49:13-53
+68            android:exported="false" />
+68-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:50:13-37
+69        <activity
+69-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:51:9-53:40
+70            android:name="com.bos.wms.mlkit.app.PutAwayActivity"
+70-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:52:13-48
+71            android:exported="false" />
+71-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:53:13-37
+72        <activity
+72-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:54:9-56:40
+73            android:name="com.bos.wms.mlkit.app.PingActivity"
+73-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:55:13-45
+74            android:exported="false" />
+74-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:56:13-37
+75        <activity
+75-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:57:9-59:40
+76            android:name="com.bos.wms.mlkit.app.PrintBPricesActivity"
+76-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:58:13-53
+77            android:exported="false" />
+77-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:59:13-37
 78        <activity
-78-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:60:9-63:59
-79            android:name="com.bos.wms.mlkit.app.tpo.TPOCountBinsActivity"
-79-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:61:13-57
+78-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:60:9-64:56
+79            android:name="com.bos.wms.mlkit.app.tpo.TPOReceiveBinsActivity"
+79-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:61:13-59
 80            android:exported="false"
-80-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:62:13-37
-81            android:theme="@style/AppTheme.NoActionBar" />
-81-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:63:13-56
-82        <activity
-82-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:64:9-67:59
-83            android:name="com.bos.wms.mlkit.app.tpo.TPOLoadBinsActivity"
-83-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:65:13-56
-84            android:exported="false"
-84-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:66:13-37
-85            android:theme="@style/AppTheme.NoActionBar" />
-85-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:67:13-56
-86        <activity
-86-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:68:9-71:59
-87            android:name="com.bos.wms.mlkit.app.tpo.TPOMainActivity"
-87-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:69:13-52
-88            android:exported="false"
-88-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:70:13-37
-89            android:theme="@style/AppTheme.NoActionBar" />
-89-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:71:13-56
-90        <activity
-90-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:72:9-76:57
-91            android:name="com.bos.wms.mlkit.app.tpo.TPOBinsActivity"
-91-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:73:13-52
-92            android:exported="false"
-92-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:74:13-37
-93            android:theme="@style/AppTheme.NoActionBar"
-93-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:75:13-56
-94            android:windowSoftInputMode="stateHidden" />
-94-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:76:13-54
-95        <activity
-95-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:77:9-81:57
-96            android:name="com.bos.wms.mlkit.app.UPCPricingOverrideActivity"
-96-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:78:13-59
-97            android:exported="false"
-97-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:79:13-37
-98            android:theme="@style/AppTheme.NoActionBar"
-98-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:80:13-56
-99            android:windowSoftInputMode="stateHidden" />
-99-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:81:13-54
+80-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:62:13-37
+81            android:theme="@style/AppTheme.NoActionBar"
+81-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:63:13-56
+82            android:windowSoftInputMode="stateHidden" />
+82-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:64:13-54
+83        <activity
+83-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:65:9-69:56
+84            android:name="com.bos.wms.mlkit.app.RepriceActivity"
+84-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:66:13-48
+85            android:exported="false"
+85-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:67:13-37
+86            android:theme="@style/AppTheme.NoActionBar"
+86-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:68:13-56
+87            android:windowSoftInputMode="stateHidden" />
+87-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:69:13-54
+88        <activity
+88-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:70:9-73:59
+89            android:name="com.bos.wms.mlkit.app.tpo.TPOCountBinsActivity"
+89-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:71:13-57
+90            android:exported="false"
+90-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:72:13-37
+91            android:theme="@style/AppTheme.NoActionBar" />
+91-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:73:13-56
+92        <activity
+92-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:74:9-77:59
+93            android:name="com.bos.wms.mlkit.app.tpo.TPOLoadBinsActivity"
+93-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:75:13-56
+94            android:exported="false"
+94-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:76:13-37
+95            android:theme="@style/AppTheme.NoActionBar" />
+95-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:77:13-56
+96        <activity
+96-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:78:9-81:59
+97            android:name="com.bos.wms.mlkit.app.tpo.TPOMainActivity"
+97-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:79:13-52
+98            android:exported="false"
+98-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:80:13-37
+99            android:theme="@style/AppTheme.NoActionBar" />
+99-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:81:13-56
 100        <activity
-100-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:82:9-86:57
-101            android:name="com.bos.wms.mlkit.app.UPCRecognitionPricingActivity"
-101-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:83:13-62
+100-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:82:9-86:57
+101            android:name="com.bos.wms.mlkit.app.tpo.TPOBinsActivity"
+101-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:83:13-52
 102            android:exported="false"
-102-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:84:13-37
+102-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:84:13-37
 103            android:theme="@style/AppTheme.NoActionBar"
-103-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:85:13-56
+103-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:85:13-56
 104            android:windowSoftInputMode="stateHidden" />
-104-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:86:13-54
+104-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:86:13-54
 105        <activity
-105-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:87:9-89:40
-106            android:name="com.bos.wms.mlkit.app.PasBrandOCRActivity"
-106-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:88:13-52
-107            android:exported="false" />
-107-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:89:13-37
-108        <activity
-108-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:90:9-92:40
-109            android:name="com.bos.wms.mlkit.app.BrandOCRActivity"
-109-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:91:13-49
-110            android:exported="false" />
-110-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:92:13-37
-111        <activity
-111-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:93:9-96:57
-112            android:name="com.bos.wms.mlkit.app.EmptyBoxActivity"
-112-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:94:13-49
-113            android:exported="false"
-113-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:95:13-37
+105-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:87:9-91:57
+106            android:name="com.bos.wms.mlkit.app.UPCPricingOverrideActivity"
+106-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:88:13-59
+107            android:exported="false"
+107-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:89:13-37
+108            android:theme="@style/AppTheme.NoActionBar"
+108-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:90:13-56
+109            android:windowSoftInputMode="stateHidden" />
+109-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:91:13-54
+110        <activity
+110-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:92:9-96:57
+111            android:name="com.bos.wms.mlkit.app.UPCRecognitionPricingActivity"
+111-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:93:13-62
+112            android:exported="false"
+112-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:94:13-37
+113            android:theme="@style/AppTheme.NoActionBar"
+113-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:95:13-56
 114            android:windowSoftInputMode="stateHidden" />
-114-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:96:13-54
+114-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:96:13-54
 115        <activity
-115-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:97:9-100:57
-116            android:name="com.bos.wms.mlkit.app.ScanUPCsForBolActivity"
-116-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:98:13-55
-117            android:exported="false"
-117-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:99:13-37
-118            android:windowSoftInputMode="stateHidden" />
-118-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:100:13-54
-119        <activity
-119-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:101:9-103:40
-120            android:name="com.bos.wms.mlkit.app.BolRecognitionActivity"
-120-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:102:13-55
-121            android:exported="false" />
-121-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:103:13-37
-122
-123        <provider
-124            android:name="androidx.core.content.FileProvider"
-124-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:106:13-62
-125            android:authorities="com.bos.wms.mlkit.provider"
-125-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:107:13-60
-126            android:exported="false"
-126-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:108:13-37
-127            android:grantUriPermissions="true" >
-127-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:109:13-47
-128            <meta-data
-128-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:110:13-112:58
-129                android:name="android.support.FILE_PROVIDER_PATHS"
-129-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:111:17-67
-130                android:resource="@xml/provider_paths" />
-130-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:112:17-55
-131        </provider>
+115-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:97:9-99:40
+116            android:name="com.bos.wms.mlkit.app.PasBrandOCRActivity"
+116-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:98:13-52
+117            android:exported="false" />
+117-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:99:13-37
+118        <activity
+118-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:100:9-102:40
+119            android:name="com.bos.wms.mlkit.app.BrandOCRActivity"
+119-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:101:13-49
+120            android:exported="false" />
+120-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:102:13-37
+121        <activity
+121-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:103:9-106:57
+122            android:name="com.bos.wms.mlkit.app.EmptyBoxActivity"
+122-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:104:13-49
+123            android:exported="false"
+123-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:105:13-37
+124            android:windowSoftInputMode="stateHidden" />
+124-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:106:13-54
+125        <activity
+125-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:107:9-110:57
+126            android:name="com.bos.wms.mlkit.app.ScanUPCsForBolActivity"
+126-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:108:13-55
+127            android:exported="false"
+127-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:109:13-37
+128            android:windowSoftInputMode="stateHidden" />
+128-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:110:13-54
+129        <activity
+129-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:111:9-113:40
+130            android:name="com.bos.wms.mlkit.app.BolRecognitionActivity"
+130-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:112:13-55
+131            android:exported="false" />
+131-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:113:13-37
 132
-133        <activity
-133-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:115:9-118:63
-134            android:name="com.bos.wms.mlkit.app.bosApp.PutAwayActivity"
-134-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:116:13-55
-135            android:label="Put Away"
-135-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:117:13-37
-136            android:windowSoftInputMode="stateAlwaysHidden" />
-136-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:118:13-60
-137        <activity
-137-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:119:9-122:63
-138            android:name="com.bos.wms.mlkit.app.bosApp.ScanRackPutAwayActivity"
-138-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:120:13-63
-139            android:label="Scan Rack Put Away"
-139-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:121:13-47
-140            android:windowSoftInputMode="stateAlwaysHidden" />
-140-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:122:13-60
-141        <activity
-141-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:123:9-126:63
-142            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferReceivingDCActivity"
-142-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:124:13-76
-143            android:label="Transfer Receiving DC"
-143-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:125:13-50
-144            android:windowSoftInputMode="stateAlwaysHidden" />
-144-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:126:13-60
-145        <activity
-145-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:127:9-130:63
-146            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferReceivingActivity"
-146-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:128:13-74
-147            android:label="Transfer Receiving"
-147-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:129:13-47
-148            android:windowSoftInputMode="stateAlwaysHidden" />
-148-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:130:13-60
-149        <activity
-149-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:131:9-134:63
-150            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.ScanTransferReceivingActivity"
-150-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:132:13-78
-151            android:label="Scan Transfer Receiving"
-151-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:133:13-52
-152            android:windowSoftInputMode="stateAlwaysHidden" />
-152-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:134:13-60
-153        <activity
-153-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:135:9-138:63
-154            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferActivity"
-154-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:136:13-65
-155            android:label="Transfer Type"
-155-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:137:13-42
-156            android:windowSoftInputMode="stateAlwaysHidden" />
-156-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:138:13-60
-157        <activity
-157-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:139:9-142:63
-158            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.ShipmentActivity"
-158-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:140:13-65
-159            android:label="Transfer Shipment"
-159-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:141:13-46
-160            android:windowSoftInputMode="stateAlwaysHidden" />
-160-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:142:13-60
-161        <activity android:name="com.bos.wms.mlkit.app.NextReceivingStatusActivity" />
-161-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:143:9-69
-161-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:143:19-66
-162        <activity
-162-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:144:9-147:63
-163            android:name="com.bos.wms.mlkit.app.bosApp.PackingDCActivity"
-163-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:145:13-57
-164            android:label="@string/title_activity_packing_dc"
-164-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:146:13-62
-165            android:windowSoftInputMode="stateAlwaysHidden" />
-165-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:147:13-60
-166        <activity
-166-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:148:9-151:63
-167            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeCountActivity"
-167-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:149:13-62
-168            android:label="@string/title_activity_stock_count"
-168-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:150:13-63
-169            android:windowSoftInputMode="stateAlwaysHidden" />
-169-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:151:13-60
-170        <activity
-170-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:152:9-155:63
-171            android:name="com.bos.wms.mlkit.app.bosApp.ScanForCountStockTakeActivity"
-171-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:153:13-69
-172            android:label="@string/title_activity_scan_count_stock_ake"
-172-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:154:13-72
-173            android:windowSoftInputMode="stateAlwaysHidden" />
-173-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:155:13-60
-174        <activity
-174-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:156:9-159:63
-175            android:name="com.bos.wms.mlkit.app.bosApp.ScanRackStockTakeActivity"
-175-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:157:13-65
-176            android:label="@string/title_activity_scan_rack_count_stock_ake"
-176-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:158:13-77
-177            android:windowSoftInputMode="stateAlwaysHidden" />
-177-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:159:13-60
-178        <activity
-178-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:160:9-163:63
-179            android:name="com.bos.wms.mlkit.app.bosApp.CheckingActivity"
-179-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:161:13-56
-180            android:label="@string/title_activity_checking_dc"
-180-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:162:13-63
-181            android:windowSoftInputMode="stateAlwaysHidden" />
-181-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:163:13-60
-182        <activity
-182-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:164:9-167:63
-183            android:name="com.bos.wms.mlkit.app.bosApp.ScanBinForCheckingActivity"
-183-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:165:13-66
-184            android:label="@string/title_activity_scan_checking"
-184-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:166:13-65
-185            android:windowSoftInputMode="stateAlwaysHidden" />
-185-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:167:13-60
-186        <activity
-186-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:168:9-171:63
-187            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeDCActivity"
-187-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:169:13-59
-188            android:label="@string/title_activity_stock_take_dc"
-188-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:170:13-65
-189            android:windowSoftInputMode="stateAlwaysHidden" />
-189-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:171:13-60
-190        <activity
-190-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:172:9-175:63
-191            android:name="com.bos.wms.mlkit.app.bosApp.CountActivity"
-191-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:173:13-53
-192            android:label="Count"
-192-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:174:13-34
-193            android:windowSoftInputMode="stateAlwaysHidden" />
-193-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:175:13-60
-194        <activity
-194-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:176:9-179:63
-195            android:name="com.bos.wms.mlkit.app.bosApp.ScanBoxForStockTakeActivity"
-195-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:177:13-67
-196            android:label="@string/title_activity_scan_box_stock_dc"
-196-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:178:13-69
-197            android:windowSoftInputMode="stateAlwaysHidden" />
-197-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:179:13-60
-198        <activity
-198-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:180:9-183:63
-199            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeActivity"
-199-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:181:13-57
-200            android:label="@string/title_activity_stock_take"
-200-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:182:13-62
-201            android:windowSoftInputMode="stateAlwaysHidden" />
-201-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:183:13-60
-202        <activity
-202-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:184:9-187:63
-203            android:name="com.bos.wms.mlkit.app.bosApp.ScanBinForCountActivity"
-203-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:185:13-63
-204            android:label="@string/title_activity_scan_count"
-204-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:186:13-62
-205            android:windowSoftInputMode="stateAlwaysHidden" />
-205-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:187:13-60
-206        <activity
-206-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:188:9-191:63
-207            android:name="com.bos.wms.mlkit.app.bosApp.ScanContainerActivity"
-207-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:189:13-61
-208            android:label="@string/title_activity_scan_container"
-208-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:190:13-66
-209            android:windowSoftInputMode="stateAlwaysHidden" />
-209-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:191:13-60
-210        <activity
-210-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:192:9-195:63
-211            android:name="com.bos.wms.mlkit.app.bosApp.PrinterSelectionActivity"
-211-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:193:13-64
-212            android:label="@string/title_activity_printer_selection"
-212-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:194:13-69
-213            android:windowSoftInputMode="stateAlwaysHidden" />
-213-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:195:13-60
-214        <activity
-214-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:196:9-199:63
-215            android:name="com.bos.wms.mlkit.app.bosApp.PackingReasonActivity"
-215-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:197:13-61
-216            android:label="@string/title_activity_packing_reason"
-216-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:198:13-66
-217            android:windowSoftInputMode="stateAlwaysHidden" />
-217-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:199:13-60
-218        <activity
-218-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:200:9-204:63
-219            android:name="com.bos.wms.mlkit.app.bosApp.PackingActivity"
-219-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:201:13-55
-220            android:label="@string/title_activity_packing_dc"
-220-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:202:13-62
-221            android:theme="@style/AppTheme.NoActionBar"
-221-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:203:13-56
-222            android:windowSoftInputMode="stateAlwaysHidden" />
-222-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:204:13-60
-223        <activity
-223-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:205:9-209:63
-224            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeRackDCActivity"
-224-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:206:13-63
-225            android:label="Stock Take Rack DC"
-225-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:207:13-47
-226            android:theme="@style/AppTheme.NoActionBar"
-226-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:208:13-56
+133        <provider
+134            android:name="androidx.core.content.FileProvider"
+134-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:116:13-62
+135            android:authorities="com.bos.wms.mlkit.provider"
+135-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:117:13-60
+136            android:exported="false"
+136-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:118:13-37
+137            android:grantUriPermissions="true" >
+137-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:119:13-47
+138            <meta-data
+138-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:120:13-122:58
+139                android:name="android.support.FILE_PROVIDER_PATHS"
+139-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:121:17-67
+140                android:resource="@xml/provider_paths" />
+140-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:122:17-55
+141        </provider>
+142
+143        <activity
+143-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:125:9-128:63
+144            android:name="com.bos.wms.mlkit.app.bosApp.PutAwayActivity"
+144-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:126:13-55
+145            android:label="Put Away"
+145-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:127:13-37
+146            android:windowSoftInputMode="stateAlwaysHidden" />
+146-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:128:13-60
+147        <activity
+147-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:129:9-132:63
+148            android:name="com.bos.wms.mlkit.app.bosApp.ScanRackPutAwayActivity"
+148-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:130:13-63
+149            android:label="Scan Rack Put Away"
+149-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:131:13-47
+150            android:windowSoftInputMode="stateAlwaysHidden" />
+150-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:132:13-60
+151        <activity
+151-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:133:9-136:63
+152            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferReceivingDCActivity"
+152-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:134:13-76
+153            android:label="Transfer Receiving DC"
+153-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:135:13-50
+154            android:windowSoftInputMode="stateAlwaysHidden" />
+154-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:136:13-60
+155        <activity
+155-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:137:9-140:63
+156            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferReceivingActivity"
+156-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:138:13-74
+157            android:label="Transfer Receiving"
+157-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:139:13-47
+158            android:windowSoftInputMode="stateAlwaysHidden" />
+158-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:140:13-60
+159        <activity
+159-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:141:9-144:63
+160            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.ScanTransferReceivingActivity"
+160-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:142:13-78
+161            android:label="Scan Transfer Receiving"
+161-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:143:13-52
+162            android:windowSoftInputMode="stateAlwaysHidden" />
+162-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:144:13-60
+163        <activity
+163-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:145:9-148:63
+164            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.TransferActivity"
+164-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:146:13-65
+165            android:label="Transfer Type"
+165-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:147:13-42
+166            android:windowSoftInputMode="stateAlwaysHidden" />
+166-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:148:13-60
+167        <activity
+167-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:149:9-152:63
+168            android:name="com.bos.wms.mlkit.app.bosApp.Transfer.ShipmentActivity"
+168-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:150:13-65
+169            android:label="Transfer Shipment"
+169-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:151:13-46
+170            android:windowSoftInputMode="stateAlwaysHidden" />
+170-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:152:13-60
+171        <activity android:name="com.bos.wms.mlkit.app.NextReceivingStatusActivity" />
+171-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:153:9-69
+171-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:153:19-66
+172        <activity
+172-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:154:9-157:63
+173            android:name="com.bos.wms.mlkit.app.bosApp.PackingDCActivity"
+173-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:155:13-57
+174            android:label="@string/title_activity_packing_dc"
+174-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:156:13-62
+175            android:windowSoftInputMode="stateAlwaysHidden" />
+175-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:157:13-60
+176        <activity
+176-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:158:9-161:63
+177            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeCountActivity"
+177-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:159:13-62
+178            android:label="@string/title_activity_stock_count"
+178-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:160:13-63
+179            android:windowSoftInputMode="stateAlwaysHidden" />
+179-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:161:13-60
+180        <activity
+180-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:162:9-165:63
+181            android:name="com.bos.wms.mlkit.app.bosApp.ScanForCountStockTakeActivity"
+181-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:163:13-69
+182            android:label="@string/title_activity_scan_count_stock_ake"
+182-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:164:13-72
+183            android:windowSoftInputMode="stateAlwaysHidden" />
+183-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:165:13-60
+184        <activity
+184-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:166:9-169:63
+185            android:name="com.bos.wms.mlkit.app.bosApp.ScanRackStockTakeActivity"
+185-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:167:13-65
+186            android:label="@string/title_activity_scan_rack_count_stock_ake"
+186-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:168:13-77
+187            android:windowSoftInputMode="stateAlwaysHidden" />
+187-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:169:13-60
+188        <activity
+188-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:170:9-173:63
+189            android:name="com.bos.wms.mlkit.app.bosApp.CheckingActivity"
+189-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:171:13-56
+190            android:label="@string/title_activity_checking_dc"
+190-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:172:13-63
+191            android:windowSoftInputMode="stateAlwaysHidden" />
+191-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:173:13-60
+192        <activity
+192-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:174:9-177:63
+193            android:name="com.bos.wms.mlkit.app.bosApp.ScanBinForCheckingActivity"
+193-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:175:13-66
+194            android:label="@string/title_activity_scan_checking"
+194-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:176:13-65
+195            android:windowSoftInputMode="stateAlwaysHidden" />
+195-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:177:13-60
+196        <activity
+196-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:178:9-181:63
+197            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeDCActivity"
+197-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:179:13-59
+198            android:label="@string/title_activity_stock_take_dc"
+198-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:180:13-65
+199            android:windowSoftInputMode="stateAlwaysHidden" />
+199-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:181:13-60
+200        <activity
+200-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:182:9-185:63
+201            android:name="com.bos.wms.mlkit.app.bosApp.CountActivity"
+201-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:183:13-53
+202            android:label="Count"
+202-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:184:13-34
+203            android:windowSoftInputMode="stateAlwaysHidden" />
+203-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:185:13-60
+204        <activity
+204-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:186:9-189:63
+205            android:name="com.bos.wms.mlkit.app.bosApp.ScanBoxForStockTakeActivity"
+205-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:187:13-67
+206            android:label="@string/title_activity_scan_box_stock_dc"
+206-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:188:13-69
+207            android:windowSoftInputMode="stateAlwaysHidden" />
+207-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:189:13-60
+208        <activity
+208-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:190:9-193:63
+209            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeActivity"
+209-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:191:13-57
+210            android:label="@string/title_activity_stock_take"
+210-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:192:13-62
+211            android:windowSoftInputMode="stateAlwaysHidden" />
+211-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:193:13-60
+212        <activity
+212-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:194:9-197:63
+213            android:name="com.bos.wms.mlkit.app.bosApp.ScanBinForCountActivity"
+213-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:195:13-63
+214            android:label="@string/title_activity_scan_count"
+214-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:196:13-62
+215            android:windowSoftInputMode="stateAlwaysHidden" />
+215-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:197:13-60
+216        <activity
+216-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:199:9-202:63
+217            android:name="com.bos.wms.mlkit.app.bosApp.PaletteBinsCheckingActivity"
+217-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:200:13-67
+218            android:label="Palette Checking Activity"
+218-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:201:13-54
+219            android:windowSoftInputMode="stateAlwaysHidden" />
+219-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:202:13-60
+220        <activity
+220-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:205:9-208:63
+221            android:name="com.bos.wms.mlkit.app.bosApp.ScanContainerActivity"
+221-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:206:13-61
+222            android:label="@string/title_activity_scan_container"
+222-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:207:13-66
+223            android:windowSoftInputMode="stateAlwaysHidden" />
+223-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:208:13-60
+224        <activity
+224-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:209:9-212:63
+225            android:name="com.bos.wms.mlkit.app.bosApp.PrinterSelectionActivity"
+225-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:210:13-64
+226            android:label="@string/title_activity_printer_selection"
+226-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:211:13-69
 227            android:windowSoftInputMode="stateAlwaysHidden" />
-227-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:209:13-60
+227-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:212:13-60
 228        <activity
-228-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:210:9-214:63
-229            android:name="com.bos.wms.mlkit.app.PickingActivity"
-229-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:211:13-48
-230            android:label="@string/title_activity_picking"
-230-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:212:13-59
-231            android:theme="@style/AppTheme.NoActionBar"
-231-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:213:13-56
-232            android:windowSoftInputMode="stateAlwaysHidden" />
-232-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:214:13-60
-233        <activity
-233-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:215:9-219:63
-234            android:name="com.bos.wms.mlkit.app.LocationCheckActivity"
-234-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:216:13-54
-235            android:label="Location Check"
-235-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:217:13-43
-236            android:theme="@style/AppTheme.NoActionBar"
-236-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:218:13-56
-237            android:windowSoftInputMode="stateAlwaysHidden" />
-237-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:219:13-60
-238        <activity
-238-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:220:9-224:63
-239            android:name="com.bos.wms.mlkit.app.PutAwayPalleteActivity"
-239-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:221:13-55
-240            android:label="Put Away Pallete"
-240-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:222:13-45
-241            android:theme="@style/AppTheme.NoActionBar"
-241-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:223:13-56
-242            android:windowSoftInputMode="stateAlwaysHidden" />
-242-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:224:13-60
-243        <activity
-243-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:225:9-229:63
-244            android:name="com.bos.wms.mlkit.app.ShipmentPalleteReceivingActivity"
-244-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:226:13-65
-245            android:label="Shipment Pallete Receiving"
-245-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:227:13-55
-246            android:theme="@style/AppTheme.NoActionBar"
-246-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:228:13-56
-247            android:windowSoftInputMode="stateAlwaysHidden" />
-247-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:229:13-60
-248        <activity
-248-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:230:9-234:63
-249            android:name="com.bos.wms.mlkit.app.ShipmentCartonReceivingActivity"
-249-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:231:13-64
-250            android:label="Shipment Carton Receiving"
-250-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:232:13-54
-251            android:theme="@style/AppTheme.NoActionBar"
-251-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:233:13-56
-252            android:windowSoftInputMode="stateAlwaysHidden" />
-252-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:234:13-60
-253        <activity
-253-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:235:9-239:63
-254            android:name="com.bos.wms.mlkit.app.ShipmentCartonReceivingV2Activity"
-254-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:236:13-66
-255            android:label="Shipment Carton Receiving V2"
-255-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:237:13-57
-256            android:theme="@style/AppTheme.NoActionBar"
-256-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:238:13-56
-257            android:windowSoftInputMode="stateAlwaysHidden" />
-257-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:239:13-60
-258        <activity
-258-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:240:9-244:63
-259            android:name="com.bos.wms.mlkit.app.ShipmentCartonCountReceivingActivity"
-259-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:241:13-69
-260            android:label="Shipment Receiving Carton Count"
-260-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:242:13-60
-261            android:theme="@style/AppTheme.NoActionBar"
-261-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:243:13-56
-262            android:windowSoftInputMode="stateAlwaysHidden" />
-262-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:244:13-60
-263        <activity
-263-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:245:9-249:63
-264            android:name="com.bos.wms.mlkit.app.FoldingScanActivity"
-264-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:246:13-52
-265            android:label="Folding Scan"
-265-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:247:13-41
-266            android:theme="@style/AppTheme.NoActionBar"
-266-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:248:13-56
-267            android:windowSoftInputMode="stateAlwaysHidden" />
-267-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:249:13-60
-268        <activity
-268-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:250:9-254:57
-269            android:name="com.bos.wms.mlkit.app.UPCPricingActivity"
-269-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:251:13-51
-270            android:label="UPC Pricing"
-270-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:252:13-40
-271            android:theme="@style/AppTheme.NoActionBar"
-271-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:253:13-56
-272            android:windowSoftInputMode="stateHidden" />
-272-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:254:13-54
-273        <activity
-273-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:255:9-259:63
-274            android:name="com.bos.wms.mlkit.app.PGPricingActivity"
-274-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:256:13-50
-275            android:label="PG Pricing"
-275-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:257:13-39
-276            android:theme="@style/AppTheme.NoActionBar"
-276-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:258:13-56
-277            android:windowSoftInputMode="stateAlwaysHidden" />
-277-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:259:13-60
-278        <activity
-278-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:260:9-264:63
-279            android:name="com.bos.wms.mlkit.app.ItemSerialMissingActivity"
-279-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:261:13-58
-280            android:label="Missing Item"
-280-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:262:13-41
-281            android:theme="@style/AppTheme.NoActionBar"
-281-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:263:13-56
-282            android:windowSoftInputMode="stateAlwaysHidden" />
-282-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:264:13-60
-283        <activity
-283-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:265:9-269:63
-284            android:name="com.bos.wms.mlkit.app.ItemSerialUPCMissingActivity"
-284-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:266:13-61
-285            android:label="Missing Item"
-285-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:267:13-41
-286            android:theme="@style/AppTheme.NoActionBar"
-286-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:268:13-56
-287            android:windowSoftInputMode="stateAlwaysHidden" />
-287-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:269:13-60
-288        <activity
-288-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:270:9-273:59
-289            android:name="com.bos.wms.mlkit.app.SerialGeneratorActivity"
-289-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:271:13-56
-290            android:label="Serial Generator"
-290-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:272:13-45
-291            android:theme="@style/AppTheme.NoActionBar" />
-291-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:273:13-56
-292        <activity
-292-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:274:9-278:63
-293            android:name="com.bos.wms.mlkit.app.NewItemPricingActivity"
-293-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:275:13-55
-294            android:label="Item Pricing"
-294-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:276:13-41
-295            android:theme="@style/AppTheme.NoActionBar"
-295-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:277:13-56
-296            android:windowSoftInputMode="stateAlwaysHidden" />
-296-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:278:13-60
-297        <activity
-297-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:279:9-283:63
-298            android:name="com.bos.wms.mlkit.app.FillPalleteActivity"
-298-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:280:13-52
-299            android:label="Fill Pallete Activity"
-299-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:281:13-50
-300            android:theme="@style/AppTheme.NoActionBar"
-300-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:282:13-56
-301            android:windowSoftInputMode="stateAlwaysHidden" />
-301-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:283:13-60
-302        <activity
-302-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:284:9-286:64
-303            android:name="com.bos.wms.mlkit.app.MainMenu"
-303-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:285:13-41
-304            android:label="@string/title_activity_main_menu" />
-304-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:286:13-61
-305        <activity
-305-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:287:9-296:20
-306            android:name="com.bos.wms.mlkit.ui.login.LoginActivity"
-306-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:288:13-51
-307            android:exported="true"
-307-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:289:13-36
-308            android:label="@string/title_activity_login" >
-308-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:290:13-57
-309            <intent-filter>
-309-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:291:13-295:29
-310                <action android:name="android.intent.action.MAIN" />
-310-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:292:17-69
-310-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:292:25-66
-311
-312                <category android:name="android.intent.category.LAUNCHER" />
-312-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:294:17-77
-312-->C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:294:27-74
-313            </intent-filter>
-314        </activity>
-315
-316        <uses-library
-316-->[androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\m.serhan\.gradle\caches\transforms-3\431c62dec666c68eb42798b4a036f2c7\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:31:9-33:40
-317            android:name="androidx.camera.extensions.impl"
-317-->[androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\m.serhan\.gradle\caches\transforms-3\431c62dec666c68eb42798b4a036f2c7\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:32:13-59
-318            android:required="false" />
-318-->[androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\m.serhan\.gradle\caches\transforms-3\431c62dec666c68eb42798b4a036f2c7\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:33:13-37
-319
-320        <service
-320-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\m.serhan\.gradle\caches\transforms-3\544d99608568731bfd0f32b17fefa80b\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:24:9-33:19
-321            android:name="androidx.camera.core.impl.MetadataHolderService"
-321-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\m.serhan\.gradle\caches\transforms-3\544d99608568731bfd0f32b17fefa80b\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:25:13-75
-322            android:enabled="false"
-322-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\m.serhan\.gradle\caches\transforms-3\544d99608568731bfd0f32b17fefa80b\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:26:13-36
-323            android:exported="false" >
-323-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\m.serhan\.gradle\caches\transforms-3\544d99608568731bfd0f32b17fefa80b\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:27:13-37
-324            <meta-data
-324-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\m.serhan\.gradle\caches\transforms-3\544d99608568731bfd0f32b17fefa80b\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:30:13-32:89
-325                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
-325-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\m.serhan\.gradle\caches\transforms-3\544d99608568731bfd0f32b17fefa80b\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:31:17-103
-326                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
-326-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\m.serhan\.gradle\caches\transforms-3\544d99608568731bfd0f32b17fefa80b\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:32:17-86
-327        </service>
-328        <service
-328-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\9189dd849f2f61d0acb8733fb6997eda\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:9:9-15:19
-329            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
-329-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\9189dd849f2f61d0acb8733fb6997eda\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:10:13-91
-330            android:directBootAware="true"
-330-->[com.google.mlkit:common:18.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:17:13-43
-331            android:exported="false" >
-331-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\9189dd849f2f61d0acb8733fb6997eda\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:11:13-37
-332            <meta-data
-332-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\9189dd849f2f61d0acb8733fb6997eda\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:12:13-14:85
-333                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
-333-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\9189dd849f2f61d0acb8733fb6997eda\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:13:17-120
-334                android:value="com.google.firebase.components.ComponentRegistrar" />
-334-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\9189dd849f2f61d0acb8733fb6997eda\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:14:17-82
-335            <meta-data
-335-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\m.serhan\.gradle\caches\transforms-3\c6d28e570c23b908f385f6665cff1ca6\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:12:13-14:85
-336                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
-336-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\m.serhan\.gradle\caches\transforms-3\c6d28e570c23b908f385f6665cff1ca6\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:13:17-114
-337                android:value="com.google.firebase.components.ComponentRegistrar" />
-337-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\m.serhan\.gradle\caches\transforms-3\c6d28e570c23b908f385f6665cff1ca6\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:14:17-82
-338            <meta-data
-338-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\a48b22d6c81b3661afcac249c6ae0d80\transformed\jetified-play-services-mlkit-text-recognition-common-17.0.0\AndroidManifest.xml:12:13-14:85
-339                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
-339-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\a48b22d6c81b3661afcac249c6ae0d80\transformed\jetified-play-services-mlkit-text-recognition-common-17.0.0\AndroidManifest.xml:13:17-114
-340                android:value="com.google.firebase.components.ComponentRegistrar" />
-340-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\a48b22d6c81b3661afcac249c6ae0d80\transformed\jetified-play-services-mlkit-text-recognition-common-17.0.0\AndroidManifest.xml:14:17-82
-341            <meta-data
-341-->[com.google.mlkit:vision-common:17.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c74b1a0c0a5dfbd93407a9cccce3f909\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:12:13-14:85
-342                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
-342-->[com.google.mlkit:vision-common:17.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c74b1a0c0a5dfbd93407a9cccce3f909\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:13:17-124
-343                android:value="com.google.firebase.components.ComponentRegistrar" />
-343-->[com.google.mlkit:vision-common:17.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c74b1a0c0a5dfbd93407a9cccce3f909\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:14:17-82
-344            <meta-data
-344-->[com.google.mlkit:common:18.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:20:13-22:85
-345                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
-345-->[com.google.mlkit:common:18.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:21:17-120
-346                android:value="com.google.firebase.components.ComponentRegistrar" />
-346-->[com.google.mlkit:common:18.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:22:17-82
-347        </service>
-348        <service
-348-->[com.google.firebase:firebase-functions:20.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\46b8c6688375a8dbef6ae8bce35636b4\transformed\jetified-firebase-functions-20.1.0\AndroidManifest.xml:15:9-21:19
-349            android:name="com.google.firebase.components.ComponentDiscoveryService"
-349-->[com.google.firebase:firebase-functions:20.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\46b8c6688375a8dbef6ae8bce35636b4\transformed\jetified-firebase-functions-20.1.0\AndroidManifest.xml:16:13-84
-350            android:directBootAware="true"
-350-->[com.google.firebase:firebase-common:20.1.1] C:\Users\m.serhan\.gradle\caches\transforms-3\281cd675f112adf33e0a09a5905f425a\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:35:13-43
-351            android:exported="false" >
-351-->[com.google.firebase:firebase-functions:20.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\46b8c6688375a8dbef6ae8bce35636b4\transformed\jetified-firebase-functions-20.1.0\AndroidManifest.xml:17:13-37
-352            <meta-data
-352-->[com.google.firebase:firebase-functions:20.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\46b8c6688375a8dbef6ae8bce35636b4\transformed\jetified-firebase-functions-20.1.0\AndroidManifest.xml:18:13-20:85
-353                android:name="com.google.firebase.components:com.google.firebase.functions.FunctionsRegistrar"
-353-->[com.google.firebase:firebase-functions:20.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\46b8c6688375a8dbef6ae8bce35636b4\transformed\jetified-firebase-functions-20.1.0\AndroidManifest.xml:19:17-111
-354                android:value="com.google.firebase.components.ComponentRegistrar" />
-354-->[com.google.firebase:firebase-functions:20.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\46b8c6688375a8dbef6ae8bce35636b4\transformed\jetified-firebase-functions-20.1.0\AndroidManifest.xml:20:17-82
+228-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:213:9-216:63
+229            android:name="com.bos.wms.mlkit.app.bosApp.PackingReasonActivity"
+229-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:214:13-61
+230            android:label="@string/title_activity_packing_reason"
+230-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:215:13-66
+231            android:windowSoftInputMode="stateAlwaysHidden" />
+231-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:216:13-60
+232        <activity
+232-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:217:9-221:63
+233            android:name="com.bos.wms.mlkit.app.bosApp.PackingActivity"
+233-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:218:13-55
+234            android:label="@string/title_activity_packing_dc"
+234-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:219:13-62
+235            android:theme="@style/AppTheme.NoActionBar"
+235-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:220:13-56
+236            android:windowSoftInputMode="stateAlwaysHidden" />
+236-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:221:13-60
+237        <activity
+237-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:222:9-226:63
+238            android:name="com.bos.wms.mlkit.app.bosApp.PaletteBinsMainActivity"
+238-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:223:13-63
+239            android:label="Palette Bins "
+239-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:224:13-42
+240            android:theme="@style/AppTheme.NoActionBar"
+240-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:225:13-56
+241            android:windowSoftInputMode="stateAlwaysHidden" />
+241-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:226:13-60
+242        <activity
+242-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:227:9-231:63
+243            android:name="com.bos.wms.mlkit.app.bosApp.PaletteBinsDCActivity"
+243-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:228:13-61
+244            android:label="Palette Bins DC"
+244-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:229:13-44
+245            android:windowSoftInputMode="stateAlwaysHidden" />
+245-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:231:13-60
+246        <activity
+246-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:233:9-237:63
+247            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeRackDCActivity"
+247-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:234:13-63
+248            android:label="Stock Take Rack DC"
+248-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:235:13-47
+249            android:theme="@style/AppTheme.NoActionBar"
+249-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:236:13-56
+250            android:windowSoftInputMode="stateAlwaysHidden" />
+250-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:237:13-60
+251        <activity
+251-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:238:9-242:63
+252            android:name="com.bos.wms.mlkit.app.PickingActivity"
+252-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:239:13-48
+253            android:label="@string/title_activity_picking"
+253-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:240:13-59
+254            android:theme="@style/AppTheme.NoActionBar"
+254-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:241:13-56
+255            android:windowSoftInputMode="stateAlwaysHidden" />
+255-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:242:13-60
+256        <activity
+256-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:243:9-247:63
+257            android:name="com.bos.wms.mlkit.app.LocationCheckActivity"
+257-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:244:13-54
+258            android:label="Location Check"
+258-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:245:13-43
+259            android:theme="@style/AppTheme.NoActionBar"
+259-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:246:13-56
+260            android:windowSoftInputMode="stateAlwaysHidden" />
+260-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:247:13-60
+261        <activity
+261-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:248:9-252:63
+262            android:name="com.bos.wms.mlkit.app.PutAwayPalleteActivity"
+262-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:249:13-55
+263            android:label="Put Away Pallete"
+263-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:250:13-45
+264            android:theme="@style/AppTheme.NoActionBar"
+264-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:251:13-56
+265            android:windowSoftInputMode="stateAlwaysHidden" />
+265-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:252:13-60
+266        <activity
+266-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:253:9-257:63
+267            android:name="com.bos.wms.mlkit.app.ShipmentPalleteReceivingActivity"
+267-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:254:13-65
+268            android:label="Shipment Pallete Receiving"
+268-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:255:13-55
+269            android:theme="@style/AppTheme.NoActionBar"
+269-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:256:13-56
+270            android:windowSoftInputMode="stateAlwaysHidden" />
+270-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:257:13-60
+271        <activity
+271-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:258:9-262:63
+272            android:name="com.bos.wms.mlkit.app.ShipmentCartonReceivingActivity"
+272-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:259:13-64
+273            android:label="Shipment Carton Receiving"
+273-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:260:13-54
+274            android:theme="@style/AppTheme.NoActionBar"
+274-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:261:13-56
+275            android:windowSoftInputMode="stateAlwaysHidden" />
+275-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:262:13-60
+276        <activity
+276-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:263:9-267:63
+277            android:name="com.bos.wms.mlkit.app.ShipmentCartonReceivingV2Activity"
+277-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:264:13-66
+278            android:label="Shipment Carton Receiving V2"
+278-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:265:13-57
+279            android:theme="@style/AppTheme.NoActionBar"
+279-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:266:13-56
+280            android:windowSoftInputMode="stateAlwaysHidden" />
+280-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:267:13-60
+281        <activity
+281-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:268:9-272:63
+282            android:name="com.bos.wms.mlkit.app.ShipmentCartonCountReceivingActivity"
+282-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:269:13-69
+283            android:label="Shipment Receiving Carton Count"
+283-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:270:13-60
+284            android:theme="@style/AppTheme.NoActionBar"
+284-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:271:13-56
+285            android:windowSoftInputMode="stateAlwaysHidden" />
+285-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:272:13-60
+286        <activity
+286-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:273:9-277:63
+287            android:name="com.bos.wms.mlkit.app.FoldingScanActivity"
+287-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:274:13-52
+288            android:label="Folding Scan"
+288-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:275:13-41
+289            android:theme="@style/AppTheme.NoActionBar"
+289-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:276:13-56
+290            android:windowSoftInputMode="stateAlwaysHidden" />
+290-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:277:13-60
+291        <activity
+291-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:278:9-282:57
+292            android:name="com.bos.wms.mlkit.app.UPCPricingActivity"
+292-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:279:13-51
+293            android:label="UPC Pricing"
+293-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:280:13-40
+294            android:theme="@style/AppTheme.NoActionBar"
+294-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:281:13-56
+295            android:windowSoftInputMode="stateHidden" />
+295-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:282:13-54
+296        <activity
+296-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:283:9-287:63
+297            android:name="com.bos.wms.mlkit.app.PGPricingActivity"
+297-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:284:13-50
+298            android:label="PG Pricing"
+298-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:285:13-39
+299            android:theme="@style/AppTheme.NoActionBar"
+299-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:286:13-56
+300            android:windowSoftInputMode="stateAlwaysHidden" />
+300-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:287:13-60
+301        <activity
+301-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:288:9-292:63
+302            android:name="com.bos.wms.mlkit.app.ItemSerialMissingActivity"
+302-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:289:13-58
+303            android:label="Missing Item"
+303-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:290:13-41
+304            android:theme="@style/AppTheme.NoActionBar"
+304-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:291:13-56
+305            android:windowSoftInputMode="stateAlwaysHidden" />
+305-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:292:13-60
+306        <activity
+306-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:293:9-297:63
+307            android:name="com.bos.wms.mlkit.app.ItemSerialUPCMissingActivity"
+307-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:294:13-61
+308            android:label="Missing Item"
+308-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:295:13-41
+309            android:theme="@style/AppTheme.NoActionBar"
+309-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:296:13-56
+310            android:windowSoftInputMode="stateAlwaysHidden" />
+310-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:297:13-60
+311        <activity
+311-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:298:9-301:59
+312            android:name="com.bos.wms.mlkit.app.SerialGeneratorActivity"
+312-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:299:13-56
+313            android:label="Serial Generator"
+313-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:300:13-45
+314            android:theme="@style/AppTheme.NoActionBar" />
+314-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:301:13-56
+315        <activity
+315-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:302:9-306:63
+316            android:name="com.bos.wms.mlkit.app.NewItemPricingActivity"
+316-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:303:13-55
+317            android:label="Item Pricing"
+317-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:304:13-41
+318            android:theme="@style/AppTheme.NoActionBar"
+318-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:305:13-56
+319            android:windowSoftInputMode="stateAlwaysHidden" />
+319-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:306:13-60
+320        <activity
+320-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:307:9-311:63
+321            android:name="com.bos.wms.mlkit.app.FillPalleteActivity"
+321-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:308:13-52
+322            android:label="Fill Pallete Activity"
+322-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:309:13-50
+323            android:theme="@style/AppTheme.NoActionBar"
+323-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:310:13-56
+324            android:windowSoftInputMode="stateAlwaysHidden" />
+324-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:311:13-60
+325        <activity
+325-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:313:9-315:64
+326            android:name="com.bos.wms.mlkit.app.MainMenu"
+326-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:314:13-41
+327            android:label="@string/title_activity_main_menu" />
+327-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:315:13-61
+328        <activity
+328-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:316:9-325:20
+329            android:name="com.bos.wms.mlkit.ui.login.LoginActivity"
+329-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:317:13-51
+330            android:exported="true"
+330-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:318:13-36
+331            android:label="@string/title_activity_login" >
+331-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:319:13-57
+332            <intent-filter>
+332-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:320:13-324:29
+333                <action android:name="android.intent.action.MAIN" />
+333-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:321:17-69
+333-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:321:25-66
+334
+335                <category android:name="android.intent.category.LAUNCHER" />
+335-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:323:17-77
+335-->C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:323:27-74
+336            </intent-filter>
+337        </activity>
+338
+339        <uses-library
+339-->[androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\431c62dec666c68eb42798b4a036f2c7\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:31:9-33:40
+340            android:name="androidx.camera.extensions.impl"
+340-->[androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\431c62dec666c68eb42798b4a036f2c7\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:32:13-59
+341            android:required="false" />
+341-->[androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\431c62dec666c68eb42798b4a036f2c7\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:33:13-37
+342
+343        <service
+343-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\544d99608568731bfd0f32b17fefa80b\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:24:9-33:19
+344            android:name="androidx.camera.core.impl.MetadataHolderService"
+344-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\544d99608568731bfd0f32b17fefa80b\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:25:13-75
+345            android:enabled="false"
+345-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\544d99608568731bfd0f32b17fefa80b\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:26:13-36
+346            android:exported="false" >
+346-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\544d99608568731bfd0f32b17fefa80b\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:27:13-37
+347            <meta-data
+347-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\544d99608568731bfd0f32b17fefa80b\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:30:13-32:89
+348                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+348-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\544d99608568731bfd0f32b17fefa80b\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:31:17-103
+349                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+349-->[androidx.camera:camera-camera2:1.2.0-alpha04] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\544d99608568731bfd0f32b17fefa80b\transformed\jetified-camera-camera2-1.2.0-alpha04\AndroidManifest.xml:32:17-86
+350        </service>
+351        <service
+351-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\9189dd849f2f61d0acb8733fb6997eda\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:9:9-15:19
+352            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+352-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\9189dd849f2f61d0acb8733fb6997eda\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:10:13-91
+353            android:directBootAware="true"
+353-->[com.google.mlkit:common:18.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:17:13-43
+354            android:exported="false" >
+354-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\9189dd849f2f61d0acb8733fb6997eda\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:11:13-37
 355            <meta-data
-355-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:32:13-34:85
-356                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-356-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:33:17-96
+355-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\9189dd849f2f61d0acb8733fb6997eda\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:12:13-14:85
+356                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+356-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\9189dd849f2f61d0acb8733fb6997eda\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:13:17-120
 357                android:value="com.google.firebase.components.ComponentRegistrar" />
-357-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:34:17-82
+357-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\9189dd849f2f61d0acb8733fb6997eda\transformed\jetified-play-services-mlkit-barcode-scanning-18.0.0\AndroidManifest.xml:14:17-82
 358            <meta-data
-358-->[com.google.firebase:firebase-analytics-ktx:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\929beed513c3a66cdf092e0d66e1cdbc\transformed\jetified-firebase-analytics-ktx-21.0.0\AndroidManifest.xml:11:13-13:85
-359                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
-359-->[com.google.firebase:firebase-analytics-ktx:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\929beed513c3a66cdf092e0d66e1cdbc\transformed\jetified-firebase-analytics-ktx-21.0.0\AndroidManifest.xml:12:17-126
+358-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c6d28e570c23b908f385f6665cff1ca6\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:12:13-14:85
+359                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
+359-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c6d28e570c23b908f385f6665cff1ca6\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:13:17-114
 360                android:value="com.google.firebase.components.ComponentRegistrar" />
-360-->[com.google.firebase:firebase-analytics-ktx:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\929beed513c3a66cdf092e0d66e1cdbc\transformed\jetified-firebase-analytics-ktx-21.0.0\AndroidManifest.xml:13:17-82
+360-->[com.google.android.gms:play-services-mlkit-face-detection:17.0.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c6d28e570c23b908f385f6665cff1ca6\transformed\jetified-play-services-mlkit-face-detection-17.0.1\AndroidManifest.xml:14:17-82
 361            <meta-data
-361-->[com.google.firebase:firebase-firestore-ktx:24.1.2] C:\Users\m.serhan\.gradle\caches\transforms-3\e7b2dbcd054a5874e25faae556bfcfcc\transformed\jetified-firebase-firestore-ktx-24.1.2\AndroidManifest.xml:15:13-17:85
-362                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar"
-362-->[com.google.firebase:firebase-firestore-ktx:24.1.2] C:\Users\m.serhan\.gradle\caches\transforms-3\e7b2dbcd054a5874e25faae556bfcfcc\transformed\jetified-firebase-firestore-ktx-24.1.2\AndroidManifest.xml:16:17-126
+361-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\a48b22d6c81b3661afcac249c6ae0d80\transformed\jetified-play-services-mlkit-text-recognition-common-17.0.0\AndroidManifest.xml:12:13-14:85
+362                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
+362-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\a48b22d6c81b3661afcac249c6ae0d80\transformed\jetified-play-services-mlkit-text-recognition-common-17.0.0\AndroidManifest.xml:13:17-114
 363                android:value="com.google.firebase.components.ComponentRegistrar" />
-363-->[com.google.firebase:firebase-firestore-ktx:24.1.2] C:\Users\m.serhan\.gradle\caches\transforms-3\e7b2dbcd054a5874e25faae556bfcfcc\transformed\jetified-firebase-firestore-ktx-24.1.2\AndroidManifest.xml:17:17-82
+363-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\a48b22d6c81b3661afcac249c6ae0d80\transformed\jetified-play-services-mlkit-text-recognition-common-17.0.0\AndroidManifest.xml:14:17-82
 364            <meta-data
-364-->[com.google.firebase:firebase-firestore:24.1.2] C:\Users\m.serhan\.gradle\caches\transforms-3\8380e6e316aec5cde0c382bdd5f6d801\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:20:13-22:85
-365                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-365-->[com.google.firebase:firebase-firestore:24.1.2] C:\Users\m.serhan\.gradle\caches\transforms-3\8380e6e316aec5cde0c382bdd5f6d801\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:21:17-111
+364-->[com.google.mlkit:vision-common:17.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c74b1a0c0a5dfbd93407a9cccce3f909\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:12:13-14:85
+365                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+365-->[com.google.mlkit:vision-common:17.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c74b1a0c0a5dfbd93407a9cccce3f909\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:13:17-124
 366                android:value="com.google.firebase.components.ComponentRegistrar" />
-366-->[com.google.firebase:firebase-firestore:24.1.2] C:\Users\m.serhan\.gradle\caches\transforms-3\8380e6e316aec5cde0c382bdd5f6d801\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:22:17-82
+366-->[com.google.mlkit:vision-common:17.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c74b1a0c0a5dfbd93407a9cccce3f909\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:14:17-82
 367            <meta-data
-367-->[com.google.firebase:firebase-auth-ktx:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\af10b46fd52871df95617e5ed6d31de1\transformed\jetified-firebase-auth-ktx-21.0.5\AndroidManifest.xml:11:13-13:85
-368                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar"
-368-->[com.google.firebase:firebase-auth-ktx:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\af10b46fd52871df95617e5ed6d31de1\transformed\jetified-firebase-auth-ktx-21.0.5\AndroidManifest.xml:12:17-116
+367-->[com.google.mlkit:common:18.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:20:13-22:85
+368                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+368-->[com.google.mlkit:common:18.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:21:17-120
 369                android:value="com.google.firebase.components.ComponentRegistrar" />
-369-->[com.google.firebase:firebase-auth-ktx:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\af10b46fd52871df95617e5ed6d31de1\transformed\jetified-firebase-auth-ktx-21.0.5\AndroidManifest.xml:13:17-82
-370            <meta-data
-370-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:67:13-69:85
-371                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-371-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:68:17-109
-372                android:value="com.google.firebase.components.ComponentRegistrar" />
-372-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:69:17-82
-373            <meta-data
-373-->[com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\m.serhan\.gradle\caches\transforms-3\f2ede05943f5e4c9e25f8a5685d0eece\transformed\jetified-firebase-common-ktx-20.1.1\AndroidManifest.xml:15:13-17:85
-374                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
-374-->[com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\m.serhan\.gradle\caches\transforms-3\f2ede05943f5e4c9e25f8a5685d0eece\transformed\jetified-firebase-common-ktx-20.1.1\AndroidManifest.xml:16:17-113
-375                android:value="com.google.firebase.components.ComponentRegistrar" />
-375-->[com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\m.serhan\.gradle\caches\transforms-3\f2ede05943f5e4c9e25f8a5685d0eece\transformed\jetified-firebase-common-ktx-20.1.1\AndroidManifest.xml:17:17-82
-376            <meta-data
-376-->[com.google.android.gms:play-services-measurement-api:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\18df52f1bb23913ae21440427c711ca1\transformed\jetified-play-services-measurement-api-21.0.0\AndroidManifest.xml:31:13-33:85
-377                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-377-->[com.google.android.gms:play-services-measurement-api:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\18df52f1bb23913ae21440427c711ca1\transformed\jetified-play-services-measurement-api-21.0.0\AndroidManifest.xml:32:17-139
-378                android:value="com.google.firebase.components.ComponentRegistrar" />
-378-->[com.google.android.gms:play-services-measurement-api:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\18df52f1bb23913ae21440427c711ca1\transformed\jetified-play-services-measurement-api-21.0.0\AndroidManifest.xml:33:17-82
-379            <meta-data
-379-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\m.serhan\.gradle\caches\transforms-3\8c76066a21008ca8f0dec67e78b6a4a3\transformed\jetified-firebase-installations-17.0.1\AndroidManifest.xml:18:13-20:85
-380                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-380-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\m.serhan\.gradle\caches\transforms-3\8c76066a21008ca8f0dec67e78b6a4a3\transformed\jetified-firebase-installations-17.0.1\AndroidManifest.xml:19:17-127
-381                android:value="com.google.firebase.components.ComponentRegistrar" />
-381-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\m.serhan\.gradle\caches\transforms-3\8c76066a21008ca8f0dec67e78b6a4a3\transformed\jetified-firebase-installations-17.0.1\AndroidManifest.xml:20:17-82
-382        </service>
-383
-384        <receiver
-384-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:29:9-33:20
-385            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-385-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:30:13-85
-386            android:enabled="true"
-386-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:31:13-35
-387            android:exported="false" >
-387-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:32:13-37
-388        </receiver>
-389
-390        <service
-390-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:35:9-38:40
-391            android:name="com.google.android.gms.measurement.AppMeasurementService"
-391-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:36:13-84
-392            android:enabled="true"
-392-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:37:13-35
-393            android:exported="false" />
-393-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:38:13-37
-394        <service
-394-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:39:9-43:72
-395            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-395-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:40:13-87
-396            android:enabled="true"
-396-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:41:13-35
-397            android:exported="false"
-397-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:42:13-37
-398            android:permission="android.permission.BIND_JOB_SERVICE" />
-398-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:43:13-69
-399
-400        <provider
-400-->[com.google.mlkit:common:18.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:9:9-13:38
-401            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
-401-->[com.google.mlkit:common:18.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:10:13-78
-402            android:authorities="com.bos.wms.mlkit.mlkitinitprovider"
-402-->[com.google.mlkit:common:18.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:11:13-69
-403            android:exported="false"
-403-->[com.google.mlkit:common:18.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:12:13-37
-404            android:initOrder="99" />
-404-->[com.google.mlkit:common:18.1.0] C:\Users\m.serhan\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:13:13-35
-405
-406        <activity
-406-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:27:9-44:20
-407            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-407-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:28:13-80
-408            android:excludeFromRecents="true"
-408-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:29:13-46
-409            android:exported="true"
-409-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:30:13-36
-410            android:launchMode="singleTask"
-410-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:31:13-44
-411            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-411-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:32:13-72
-412            <intent-filter>
-412-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:33:13-43:29
-413                <action android:name="android.intent.action.VIEW" />
-413-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:34:17-69
-413-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:34:25-66
-414
-415                <category android:name="android.intent.category.DEFAULT" />
-415-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:36:17-76
-415-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:36:27-73
-416                <category android:name="android.intent.category.BROWSABLE" />
-416-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:37:17-78
-416-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:37:27-75
-417
-418                <data
-418-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:39:17-42:51
-419                    android:host="firebase.auth"
-419-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:40:21-49
-420                    android:path="/"
-420-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:41:21-37
-421                    android:scheme="genericidp" />
-421-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:42:21-48
-422            </intent-filter>
-423        </activity>
-424        <activity
-424-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:45:9-62:20
-425            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-425-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:46:13-79
-426            android:excludeFromRecents="true"
-426-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:47:13-46
-427            android:exported="true"
-427-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:48:13-36
-428            android:launchMode="singleTask"
-428-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:49:13-44
-429            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-429-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:50:13-72
-430            <intent-filter>
-430-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:51:13-61:29
-431                <action android:name="android.intent.action.VIEW" />
-431-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:34:17-69
-431-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:34:25-66
-432
-433                <category android:name="android.intent.category.DEFAULT" />
-433-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:36:17-76
-433-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:36:27-73
-434                <category android:name="android.intent.category.BROWSABLE" />
-434-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:37:17-78
-434-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:37:27-75
-435
-436                <data
-436-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:39:17-42:51
-437                    android:host="firebase.auth"
-437-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:40:21-49
-438                    android:path="/"
-438-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:41:21-37
-439                    android:scheme="recaptcha" />
-439-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\m.serhan\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:42:21-48
-440            </intent-filter>
-441        </activity>
-442        <activity
-442-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\m.serhan\.gradle\caches\transforms-3\e8c89364a434709f22fb1990ae5ef6c4\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-443            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-443-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\m.serhan\.gradle\caches\transforms-3\e8c89364a434709f22fb1990ae5ef6c4\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-444            android:exported="false"
-444-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\m.serhan\.gradle\caches\transforms-3\e8c89364a434709f22fb1990ae5ef6c4\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-445            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-445-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\m.serhan\.gradle\caches\transforms-3\e8c89364a434709f22fb1990ae5ef6c4\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-446
-447        <provider
-447-->[com.google.firebase:firebase-common:20.1.1] C:\Users\m.serhan\.gradle\caches\transforms-3\281cd675f112adf33e0a09a5905f425a\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:26:9-31:39
-448            android:name="com.google.firebase.provider.FirebaseInitProvider"
-448-->[com.google.firebase:firebase-common:20.1.1] C:\Users\m.serhan\.gradle\caches\transforms-3\281cd675f112adf33e0a09a5905f425a\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:27:13-77
-449            android:authorities="com.bos.wms.mlkit.firebaseinitprovider"
-449-->[com.google.firebase:firebase-common:20.1.1] C:\Users\m.serhan\.gradle\caches\transforms-3\281cd675f112adf33e0a09a5905f425a\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:28:13-72
-450            android:directBootAware="true"
-450-->[com.google.firebase:firebase-common:20.1.1] C:\Users\m.serhan\.gradle\caches\transforms-3\281cd675f112adf33e0a09a5905f425a\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:29:13-43
-451            android:exported="false"
-451-->[com.google.firebase:firebase-common:20.1.1] C:\Users\m.serhan\.gradle\caches\transforms-3\281cd675f112adf33e0a09a5905f425a\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:30:13-37
-452            android:initOrder="100" />
-452-->[com.google.firebase:firebase-common:20.1.1] C:\Users\m.serhan\.gradle\caches\transforms-3\281cd675f112adf33e0a09a5905f425a\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:31:13-36
-453
-454        <meta-data
-454-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\b65c6db9faecc069ef5c5a963c31d170\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
-455            android:name="com.google.android.gms.version"
-455-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\b65c6db9faecc069ef5c5a963c31d170\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
-456            android:value="@integer/google_play_services_version" />
-456-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\b65c6db9faecc069ef5c5a963c31d170\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
-457
-458        <provider
-458-->[androidx.emoji2:emoji2:1.2.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c2ce43ffeeb8512ba971a765ef40e12d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-459            android:name="androidx.startup.InitializationProvider"
-459-->[androidx.emoji2:emoji2:1.2.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c2ce43ffeeb8512ba971a765ef40e12d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-460            android:authorities="com.bos.wms.mlkit.androidx-startup"
-460-->[androidx.emoji2:emoji2:1.2.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c2ce43ffeeb8512ba971a765ef40e12d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-461            android:exported="false" >
-461-->[androidx.emoji2:emoji2:1.2.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c2ce43ffeeb8512ba971a765ef40e12d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-462            <meta-data
-462-->[androidx.emoji2:emoji2:1.2.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c2ce43ffeeb8512ba971a765ef40e12d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-463                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-463-->[androidx.emoji2:emoji2:1.2.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c2ce43ffeeb8512ba971a765ef40e12d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-464                android:value="androidx.startup" />
-464-->[androidx.emoji2:emoji2:1.2.0] C:\Users\m.serhan\.gradle\caches\transforms-3\c2ce43ffeeb8512ba971a765ef40e12d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-465            <meta-data
-465-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\m.serhan\.gradle\caches\transforms-3\0678e602f2263a68556b41a7b1f2a47f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-466                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-466-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\m.serhan\.gradle\caches\transforms-3\0678e602f2263a68556b41a7b1f2a47f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-467                android:value="androidx.startup" />
-467-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\m.serhan\.gradle\caches\transforms-3\0678e602f2263a68556b41a7b1f2a47f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-468        </provider>
+369-->[com.google.mlkit:common:18.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:22:17-82
+370        </service>
+371        <service
+371-->[com.google.firebase:firebase-functions:20.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\46b8c6688375a8dbef6ae8bce35636b4\transformed\jetified-firebase-functions-20.1.0\AndroidManifest.xml:15:9-21:19
+372            android:name="com.google.firebase.components.ComponentDiscoveryService"
+372-->[com.google.firebase:firebase-functions:20.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\46b8c6688375a8dbef6ae8bce35636b4\transformed\jetified-firebase-functions-20.1.0\AndroidManifest.xml:16:13-84
+373            android:directBootAware="true"
+373-->[com.google.firebase:firebase-common:20.1.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\281cd675f112adf33e0a09a5905f425a\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:35:13-43
+374            android:exported="false" >
+374-->[com.google.firebase:firebase-functions:20.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\46b8c6688375a8dbef6ae8bce35636b4\transformed\jetified-firebase-functions-20.1.0\AndroidManifest.xml:17:13-37
+375            <meta-data
+375-->[com.google.firebase:firebase-functions:20.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\46b8c6688375a8dbef6ae8bce35636b4\transformed\jetified-firebase-functions-20.1.0\AndroidManifest.xml:18:13-20:85
+376                android:name="com.google.firebase.components:com.google.firebase.functions.FunctionsRegistrar"
+376-->[com.google.firebase:firebase-functions:20.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\46b8c6688375a8dbef6ae8bce35636b4\transformed\jetified-firebase-functions-20.1.0\AndroidManifest.xml:19:17-111
+377                android:value="com.google.firebase.components.ComponentRegistrar" />
+377-->[com.google.firebase:firebase-functions:20.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\46b8c6688375a8dbef6ae8bce35636b4\transformed\jetified-firebase-functions-20.1.0\AndroidManifest.xml:20:17-82
+378            <meta-data
+378-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:32:13-34:85
+379                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+379-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:33:17-96
+380                android:value="com.google.firebase.components.ComponentRegistrar" />
+380-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\b5709b6914bb36964b10208d7bded771\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:34:17-82
+381            <meta-data
+381-->[com.google.firebase:firebase-analytics-ktx:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\929beed513c3a66cdf092e0d66e1cdbc\transformed\jetified-firebase-analytics-ktx-21.0.0\AndroidManifest.xml:11:13-13:85
+382                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
+382-->[com.google.firebase:firebase-analytics-ktx:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\929beed513c3a66cdf092e0d66e1cdbc\transformed\jetified-firebase-analytics-ktx-21.0.0\AndroidManifest.xml:12:17-126
+383                android:value="com.google.firebase.components.ComponentRegistrar" />
+383-->[com.google.firebase:firebase-analytics-ktx:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\929beed513c3a66cdf092e0d66e1cdbc\transformed\jetified-firebase-analytics-ktx-21.0.0\AndroidManifest.xml:13:17-82
+384            <meta-data
+384-->[com.google.firebase:firebase-firestore-ktx:24.1.2] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e7b2dbcd054a5874e25faae556bfcfcc\transformed\jetified-firebase-firestore-ktx-24.1.2\AndroidManifest.xml:15:13-17:85
+385                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar"
+385-->[com.google.firebase:firebase-firestore-ktx:24.1.2] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e7b2dbcd054a5874e25faae556bfcfcc\transformed\jetified-firebase-firestore-ktx-24.1.2\AndroidManifest.xml:16:17-126
+386                android:value="com.google.firebase.components.ComponentRegistrar" />
+386-->[com.google.firebase:firebase-firestore-ktx:24.1.2] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e7b2dbcd054a5874e25faae556bfcfcc\transformed\jetified-firebase-firestore-ktx-24.1.2\AndroidManifest.xml:17:17-82
+387            <meta-data
+387-->[com.google.firebase:firebase-firestore:24.1.2] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\8380e6e316aec5cde0c382bdd5f6d801\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:20:13-22:85
+388                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+388-->[com.google.firebase:firebase-firestore:24.1.2] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\8380e6e316aec5cde0c382bdd5f6d801\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:21:17-111
+389                android:value="com.google.firebase.components.ComponentRegistrar" />
+389-->[com.google.firebase:firebase-firestore:24.1.2] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\8380e6e316aec5cde0c382bdd5f6d801\transformed\jetified-firebase-firestore-24.1.2\AndroidManifest.xml:22:17-82
+390            <meta-data
+390-->[com.google.firebase:firebase-auth-ktx:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\af10b46fd52871df95617e5ed6d31de1\transformed\jetified-firebase-auth-ktx-21.0.5\AndroidManifest.xml:11:13-13:85
+391                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar"
+391-->[com.google.firebase:firebase-auth-ktx:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\af10b46fd52871df95617e5ed6d31de1\transformed\jetified-firebase-auth-ktx-21.0.5\AndroidManifest.xml:12:17-116
+392                android:value="com.google.firebase.components.ComponentRegistrar" />
+392-->[com.google.firebase:firebase-auth-ktx:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\af10b46fd52871df95617e5ed6d31de1\transformed\jetified-firebase-auth-ktx-21.0.5\AndroidManifest.xml:13:17-82
+393            <meta-data
+393-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:67:13-69:85
+394                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+394-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:68:17-109
+395                android:value="com.google.firebase.components.ComponentRegistrar" />
+395-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:69:17-82
+396            <meta-data
+396-->[com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\f2ede05943f5e4c9e25f8a5685d0eece\transformed\jetified-firebase-common-ktx-20.1.1\AndroidManifest.xml:15:13-17:85
+397                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+397-->[com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\f2ede05943f5e4c9e25f8a5685d0eece\transformed\jetified-firebase-common-ktx-20.1.1\AndroidManifest.xml:16:17-113
+398                android:value="com.google.firebase.components.ComponentRegistrar" />
+398-->[com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\f2ede05943f5e4c9e25f8a5685d0eece\transformed\jetified-firebase-common-ktx-20.1.1\AndroidManifest.xml:17:17-82
+399            <meta-data
+399-->[com.google.android.gms:play-services-measurement-api:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\18df52f1bb23913ae21440427c711ca1\transformed\jetified-play-services-measurement-api-21.0.0\AndroidManifest.xml:31:13-33:85
+400                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+400-->[com.google.android.gms:play-services-measurement-api:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\18df52f1bb23913ae21440427c711ca1\transformed\jetified-play-services-measurement-api-21.0.0\AndroidManifest.xml:32:17-139
+401                android:value="com.google.firebase.components.ComponentRegistrar" />
+401-->[com.google.android.gms:play-services-measurement-api:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\18df52f1bb23913ae21440427c711ca1\transformed\jetified-play-services-measurement-api-21.0.0\AndroidManifest.xml:33:17-82
+402            <meta-data
+402-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\8c76066a21008ca8f0dec67e78b6a4a3\transformed\jetified-firebase-installations-17.0.1\AndroidManifest.xml:18:13-20:85
+403                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+403-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\8c76066a21008ca8f0dec67e78b6a4a3\transformed\jetified-firebase-installations-17.0.1\AndroidManifest.xml:19:17-127
+404                android:value="com.google.firebase.components.ComponentRegistrar" />
+404-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\8c76066a21008ca8f0dec67e78b6a4a3\transformed\jetified-firebase-installations-17.0.1\AndroidManifest.xml:20:17-82
+405        </service>
+406
+407        <receiver
+407-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:29:9-33:20
+408            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+408-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:30:13-85
+409            android:enabled="true"
+409-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:31:13-35
+410            android:exported="false" >
+410-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:32:13-37
+411        </receiver>
+412
+413        <service
+413-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:35:9-38:40
+414            android:name="com.google.android.gms.measurement.AppMeasurementService"
+414-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:36:13-84
+415            android:enabled="true"
+415-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:37:13-35
+416            android:exported="false" />
+416-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:38:13-37
+417        <service
+417-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:39:9-43:72
+418            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+418-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:40:13-87
+419            android:enabled="true"
+419-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:41:13-35
+420            android:exported="false"
+420-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:42:13-37
+421            android:permission="android.permission.BIND_JOB_SERVICE" />
+421-->[com.google.android.gms:play-services-measurement:21.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c65fed0eed15e457359295f3ed3fd7ac\transformed\jetified-play-services-measurement-21.0.0\AndroidManifest.xml:43:13-69
+422
+423        <provider
+423-->[com.google.mlkit:common:18.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:9:9-13:38
+424            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+424-->[com.google.mlkit:common:18.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:10:13-78
+425            android:authorities="com.bos.wms.mlkit.mlkitinitprovider"
+425-->[com.google.mlkit:common:18.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:11:13-69
+426            android:exported="false"
+426-->[com.google.mlkit:common:18.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:12:13-37
+427            android:initOrder="99" />
+427-->[com.google.mlkit:common:18.1.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\7abcc50d1ec3a53dc275691bf521c0e7\transformed\jetified-common-18.1.0\AndroidManifest.xml:13:13-35
+428
+429        <activity
+429-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:27:9-44:20
+430            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+430-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:28:13-80
+431            android:excludeFromRecents="true"
+431-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:29:13-46
+432            android:exported="true"
+432-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:30:13-36
+433            android:launchMode="singleTask"
+433-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:31:13-44
+434            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+434-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:32:13-72
+435            <intent-filter>
+435-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:33:13-43:29
+436                <action android:name="android.intent.action.VIEW" />
+436-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:34:17-69
+436-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:34:25-66
+437
+438                <category android:name="android.intent.category.DEFAULT" />
+438-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:36:17-76
+438-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:36:27-73
+439                <category android:name="android.intent.category.BROWSABLE" />
+439-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:37:17-78
+439-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:37:27-75
+440
+441                <data
+441-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:39:17-42:51
+442                    android:host="firebase.auth"
+442-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:40:21-49
+443                    android:path="/"
+443-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:41:21-37
+444                    android:scheme="genericidp" />
+444-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:42:21-48
+445            </intent-filter>
+446        </activity>
+447        <activity
+447-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:45:9-62:20
+448            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+448-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:46:13-79
+449            android:excludeFromRecents="true"
+449-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:47:13-46
+450            android:exported="true"
+450-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:48:13-36
+451            android:launchMode="singleTask"
+451-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:49:13-44
+452            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+452-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:50:13-72
+453            <intent-filter>
+453-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:51:13-61:29
+454                <action android:name="android.intent.action.VIEW" />
+454-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:34:17-69
+454-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:34:25-66
+455
+456                <category android:name="android.intent.category.DEFAULT" />
+456-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:36:17-76
+456-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:36:27-73
+457                <category android:name="android.intent.category.BROWSABLE" />
+457-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:37:17-78
+457-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:37:27-75
+458
+459                <data
+459-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:39:17-42:51
+460                    android:host="firebase.auth"
+460-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:40:21-49
+461                    android:path="/"
+461-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:41:21-37
+462                    android:scheme="recaptcha" />
+462-->[com.google.firebase:firebase-auth:21.0.5] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e400c42cabfe499581fceccfdc870708\transformed\jetified-firebase-auth-21.0.5\AndroidManifest.xml:42:21-48
+463            </intent-filter>
+464        </activity>
+465        <activity
+465-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e8c89364a434709f22fb1990ae5ef6c4\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+466            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+466-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e8c89364a434709f22fb1990ae5ef6c4\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+467            android:exported="false"
+467-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e8c89364a434709f22fb1990ae5ef6c4\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+468            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+468-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\e8c89364a434709f22fb1990ae5ef6c4\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
 469
-470        <uses-library
-470-->[androidx.window:window:1.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\400284c7846ba91fe89e70f6dbcffd4b\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
-471            android:name="androidx.window.extensions"
-471-->[androidx.window:window:1.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\400284c7846ba91fe89e70f6dbcffd4b\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
-472            android:required="false" />
-472-->[androidx.window:window:1.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\400284c7846ba91fe89e70f6dbcffd4b\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
-473        <uses-library
-473-->[androidx.window:window:1.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\400284c7846ba91fe89e70f6dbcffd4b\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
-474            android:name="androidx.window.sidecar"
-474-->[androidx.window:window:1.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\400284c7846ba91fe89e70f6dbcffd4b\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
-475            android:required="false" />
-475-->[androidx.window:window:1.0.0] C:\Users\m.serhan\.gradle\caches\transforms-3\400284c7846ba91fe89e70f6dbcffd4b\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+470        <provider
+470-->[com.google.firebase:firebase-common:20.1.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\281cd675f112adf33e0a09a5905f425a\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:26:9-31:39
+471            android:name="com.google.firebase.provider.FirebaseInitProvider"
+471-->[com.google.firebase:firebase-common:20.1.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\281cd675f112adf33e0a09a5905f425a\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:27:13-77
+472            android:authorities="com.bos.wms.mlkit.firebaseinitprovider"
+472-->[com.google.firebase:firebase-common:20.1.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\281cd675f112adf33e0a09a5905f425a\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:28:13-72
+473            android:directBootAware="true"
+473-->[com.google.firebase:firebase-common:20.1.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\281cd675f112adf33e0a09a5905f425a\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:29:13-43
+474            android:exported="false"
+474-->[com.google.firebase:firebase-common:20.1.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\281cd675f112adf33e0a09a5905f425a\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:30:13-37
+475            android:initOrder="100" />
+475-->[com.google.firebase:firebase-common:20.1.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\281cd675f112adf33e0a09a5905f425a\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:31:13-36
 476
-477        <service
-477-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\m.serhan\.gradle\caches\transforms-3\f0b5063a6162149cafb3be4b9bae7753\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
-478            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-478-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\m.serhan\.gradle\caches\transforms-3\f0b5063a6162149cafb3be4b9bae7753\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
-479            android:exported="false" >
-479-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\m.serhan\.gradle\caches\transforms-3\f0b5063a6162149cafb3be4b9bae7753\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
-480            <meta-data
-480-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\m.serhan\.gradle\caches\transforms-3\f0b5063a6162149cafb3be4b9bae7753\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
-481                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-481-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\m.serhan\.gradle\caches\transforms-3\f0b5063a6162149cafb3be4b9bae7753\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
-482                android:value="cct" />
-482-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\m.serhan\.gradle\caches\transforms-3\f0b5063a6162149cafb3be4b9bae7753\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
-483        </service>
-484        <service
-484-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\m.serhan\.gradle\caches\transforms-3\106f83e2bbb282faf1e8636309888194\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
-485            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-485-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\m.serhan\.gradle\caches\transforms-3\106f83e2bbb282faf1e8636309888194\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
-486            android:exported="false"
-486-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\m.serhan\.gradle\caches\transforms-3\106f83e2bbb282faf1e8636309888194\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
-487            android:permission="android.permission.BIND_JOB_SERVICE" >
-487-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\m.serhan\.gradle\caches\transforms-3\106f83e2bbb282faf1e8636309888194\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
-488        </service>
-489
-490        <receiver
-490-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\m.serhan\.gradle\caches\transforms-3\106f83e2bbb282faf1e8636309888194\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
-491            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-491-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\m.serhan\.gradle\caches\transforms-3\106f83e2bbb282faf1e8636309888194\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
-492            android:exported="false" />
-492-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\m.serhan\.gradle\caches\transforms-3\106f83e2bbb282faf1e8636309888194\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
-493    </application>
-494
-495</manifest>
+477        <meta-data
+477-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\b65c6db9faecc069ef5c5a963c31d170\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+478            android:name="com.google.android.gms.version"
+478-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\b65c6db9faecc069ef5c5a963c31d170\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+479            android:value="@integer/google_play_services_version" />
+479-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\b65c6db9faecc069ef5c5a963c31d170\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+480
+481        <provider
+481-->[androidx.emoji2:emoji2:1.2.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c2ce43ffeeb8512ba971a765ef40e12d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+482            android:name="androidx.startup.InitializationProvider"
+482-->[androidx.emoji2:emoji2:1.2.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c2ce43ffeeb8512ba971a765ef40e12d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+483            android:authorities="com.bos.wms.mlkit.androidx-startup"
+483-->[androidx.emoji2:emoji2:1.2.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c2ce43ffeeb8512ba971a765ef40e12d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+484            android:exported="false" >
+484-->[androidx.emoji2:emoji2:1.2.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c2ce43ffeeb8512ba971a765ef40e12d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+485            <meta-data
+485-->[androidx.emoji2:emoji2:1.2.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c2ce43ffeeb8512ba971a765ef40e12d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+486                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+486-->[androidx.emoji2:emoji2:1.2.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c2ce43ffeeb8512ba971a765ef40e12d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+487                android:value="androidx.startup" />
+487-->[androidx.emoji2:emoji2:1.2.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\c2ce43ffeeb8512ba971a765ef40e12d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+488            <meta-data
+488-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\0678e602f2263a68556b41a7b1f2a47f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+489                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+489-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\0678e602f2263a68556b41a7b1f2a47f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+490                android:value="androidx.startup" />
+490-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\0678e602f2263a68556b41a7b1f2a47f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+491        </provider>
+492
+493        <uses-library
+493-->[androidx.window:window:1.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\400284c7846ba91fe89e70f6dbcffd4b\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+494            android:name="androidx.window.extensions"
+494-->[androidx.window:window:1.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\400284c7846ba91fe89e70f6dbcffd4b\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+495            android:required="false" />
+495-->[androidx.window:window:1.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\400284c7846ba91fe89e70f6dbcffd4b\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+496        <uses-library
+496-->[androidx.window:window:1.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\400284c7846ba91fe89e70f6dbcffd4b\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+497            android:name="androidx.window.sidecar"
+497-->[androidx.window:window:1.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\400284c7846ba91fe89e70f6dbcffd4b\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+498            android:required="false" />
+498-->[androidx.window:window:1.0.0] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\400284c7846ba91fe89e70f6dbcffd4b\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+499
+500        <service
+500-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\f0b5063a6162149cafb3be4b9bae7753\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+501            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+501-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\f0b5063a6162149cafb3be4b9bae7753\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+502            android:exported="false" >
+502-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\f0b5063a6162149cafb3be4b9bae7753\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+503            <meta-data
+503-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\f0b5063a6162149cafb3be4b9bae7753\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+504                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+504-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\f0b5063a6162149cafb3be4b9bae7753\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+505                android:value="cct" />
+505-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\f0b5063a6162149cafb3be4b9bae7753\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+506        </service>
+507        <service
+507-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\106f83e2bbb282faf1e8636309888194\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
+508            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+508-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\106f83e2bbb282faf1e8636309888194\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
+509            android:exported="false"
+509-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\106f83e2bbb282faf1e8636309888194\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
+510            android:permission="android.permission.BIND_JOB_SERVICE" >
+510-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\106f83e2bbb282faf1e8636309888194\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
+511        </service>
+512
+513        <receiver
+513-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\106f83e2bbb282faf1e8636309888194\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
+514            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+514-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\106f83e2bbb282faf1e8636309888194\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
+515            android:exported="false" />
+515-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\A.HAYDAR\.gradle\caches\transforms-3\106f83e2bbb282faf1e8636309888194\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
+516    </application>
+517
+518</manifest>
