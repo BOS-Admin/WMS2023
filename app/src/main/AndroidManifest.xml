@@ -180,6 +180,10 @@
             android:label="@string/title_activity_stock_take_dc"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
+            android:name=".app.bosApp.StockTakeDCRFIDActivity"
+            android:label="@string/title_activity_stock_take_dc"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
             android:name=".app.bosApp.CountActivity"
             android:label="Count"
             android:windowSoftInputMode="stateAlwaysHidden" />

@@ -924,6 +924,9 @@ public class PasBrandOCRActivity extends AppCompatActivity {
         });
     }
 
+
+
+
     /**
      * This function stop the configured rfid readings
      */

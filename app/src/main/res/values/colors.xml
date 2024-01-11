@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="texBackgroundColor">#33000000</color>
+    <color name="custom_green">#4CAF50</color> <!-- Change to your preferred shade of green -->
+    <color name="custom_red">#FFED1000</color> <!-- Change to your preferred shade of red -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>

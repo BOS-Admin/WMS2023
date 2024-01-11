@@ -3,11 +3,20 @@ package com.bos.wms.mlkit.app.bosApp
 import Remote.APIClient
 import Remote.BasicApi
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
+import android.media.AudioManager
+import android.media.ToneGenerator
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.bos.wms.mlkit.General
 import com.bos.wms.mlkit.General.hideSoftKeyboard
 import com.bos.wms.mlkit.R
@@ -15,13 +24,6 @@ import com.bos.wms.mlkit.storage.Storage
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import retrofit2.HttpException
-import android.content.Intent
-import android.media.AudioManager
-import android.media.ToneGenerator
-import android.util.Log
-import android.widget.EditText
-import android.widget.TextView
-import androidx.core.view.isVisible
 
 class ScanBoxForStockTakeActivity : AppCompatActivity() {
 
@@ -36,6 +38,7 @@ class ScanBoxForStockTakeActivity : AppCompatActivity() {
     private lateinit var general: General
     private var stockTakeType:Int=-1
     private lateinit var lblScanDestination: TextView
+    private var isRFID: Boolean = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -171,13 +174,30 @@ class ScanBoxForStockTakeActivity : AppCompatActivity() {
                                     }
                                     else{
 
-                                        lblError1.setTextColor(Color.GREEN)
-                                        lblError1.text = "Success"
-                                        general.stockType=s.binTypeId
-                                        General.getGeneral(applicationContext).saveGeneral(applicationContext)
-                                        val intent = Intent (applicationContext, StockTakeDCActivity::class.java)
-                                        startActivity(intent)
-                                        finish()
+                                        Decision_if_RFID { isRFIDOption ->
+                                            // Use the userChoseOption1 Boolean value here as needed
+                                            isRFID = isRFIDOption
+                                            lblError1.setTextColor(Color.GREEN)
+                                            lblError1.text = "Success"
+                                            general.stockType=s.binTypeId
+                                            General.getGeneral(applicationContext).saveGeneral(applicationContext)
+
+                                            if(isRFID){
+                                                val intent = Intent (applicationContext, StockTakeDCRFIDActivity::class.java)
+                                                startActivity(intent)
+                                                finish()
+
+                                            }else{
+                                                val intent = Intent (applicationContext, StockTakeDCActivity::class.java)
+                                                startActivity(intent)
+                                                finish()
+                                            }
+                                        }
+
+
+
+
+
                                     }
 
 
@@ -220,6 +240,32 @@ class ScanBoxForStockTakeActivity : AppCompatActivity() {
         finally {
         }
     }
+
+
+
+    fun Decision_if_RFID(callback: (Boolean) -> Unit) {
+        runOnUiThread{
+        val builder = AlertDialog.Builder(this)
+            val inflater = this.layoutInflater
+            val dialogView = inflater.inflate(R.layout.custom_dialog_rfid, null)
+            val btnWithRFID = dialogView.findViewById<Button>(R.id.btnWithRfid)
+            val btnWithoutRFID = dialogView.findViewById<Button>(R.id.btnWithoutRfid)
+            builder.setView(dialogView)
+            val alertDialog = builder.create()
+
+            btnWithRFID.setOnClickListener{
+                callback(true)
+                alertDialog.dismiss()
+            }
+            btnWithoutRFID.setOnClickListener{
+                callback(false)
+                alertDialog.dismiss()
+            }
+
+            alertDialog.setCancelable(false)
+            alertDialog.setCanceledOnTouchOutside(false)
+            alertDialog.show()
+    }}
 
 
     var compositeDisposable= CompositeDisposable()

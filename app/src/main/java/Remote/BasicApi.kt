@@ -167,6 +167,9 @@ interface BasicApi {
     @GET("api/ItemSerial/GetRFIDItemSerial")
     fun GetRFIDItemSerial(@Query("rfid") rfid: String): Observable<String>
 
+    @GET("api/RfidPacking/GetRFIDItemNumber")
+    fun GetRFIDItemNumber(@Query("rfid") rfid: String): Observable<String>
+
     @GET("api/UserPermissions/GetPermissions")
     fun GetPermissions(@Query("appName") appName:String, @Query("appVersion") appVersion:String, @Query("userID") userID:Int): Observable<List<String>>
 
