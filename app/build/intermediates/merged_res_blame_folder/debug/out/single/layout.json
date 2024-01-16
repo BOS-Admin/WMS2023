@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_new_stand_switch.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_new_stand_switch.xml"
+    },
+    {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_tpoload_bins.xml",
         "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_tpoload_bins.xml"
     },
@@ -18,10 +22,6 @@
     {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_main_menu1.xml",
         "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_main_menu1.xml"
-    },
-    {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/dialog_scan_rfid.xml",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/dialog_scan_rfid.xml"
     },
     {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_itemserial_missing.xml",
@@ -46,6 +46,14 @@
     {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_printer_selection.xml",
         "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_printer_selection.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\spinner_item_layout.xml",
+        "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\spinner_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_new_stand_switch.xml",
+        "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_new_stand_switch.xml"
     },
     {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_shipment.xml",
@@ -118,6 +126,10 @@
     {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_reprice_count.xml",
         "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_reprice_count.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_new_stand_release.xml",
+        "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_new_stand_release.xml"
     },
     {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_listview.xml",
@@ -228,12 +240,12 @@
         "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_upc_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_fillpallete.xml",
-        "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_fillpallete.xml"
-    },
-    {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\fragment_dashboard.xml",
         "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_fillpallete.xml",
+        "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_fillpallete.xml"
     },
     {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_item_pricing.xml",

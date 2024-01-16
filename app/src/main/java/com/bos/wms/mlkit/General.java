@@ -42,7 +42,9 @@ public class General {
 
     public Integer operationType=-1;
     public String BoxStartsWith="";
+    public String StandStartsWith = "";
     public String BoxNbDigits= "" ;
+    public String StandNbDigits= "" ;
 
     public String LocationString="";
 
@@ -95,7 +97,9 @@ public class General {
             packType = sp.getString("PackType", "");
             transferNavNo = sp.getString("TransferNavNo", "");
             BoxStartsWith=sp.getString("BoxStartsWith","");
+            StandStartsWith=sp.getString("StandStartsWith","");
             BoxNbDigits=sp.getString("BoxNbDigits","");
+            StandNbDigits=sp.getString("StandNbDigits","");
             stockType=sp.getInt("StockType",-1);
             operationType=sp.getInt("OperationType",-1);
             transactionType=sp.getInt("TransactionType",-1);

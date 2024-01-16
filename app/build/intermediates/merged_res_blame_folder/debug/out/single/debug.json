@@ -8,12 +8,20 @@
         "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable\\brandocr.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_new_stand_switch.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_new_stand_switch.xml"
+    },
+    {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_activity_tporeset_truck.xml.flat",
         "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_tporeset_truck.xml"
     },
     {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_activity_tpoload_bins.xml.flat",
         "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_tpoload_bins.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_activity_new_stand_switch.xml.flat",
+        "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_new_stand_switch.xml"
     },
     {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_activity_pg_pricing.xml.flat",
@@ -164,10 +172,6 @@
         "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\fragment_dashboard.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_dialog_scan_rfid.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/dialog_scan_rfid.xml"
-    },
-    {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable_baseline_settings_icon.xml.flat",
         "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable\\baseline_settings_icon.xml"
     },
@@ -204,12 +208,20 @@
         "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_spinner_item_layout.xml.flat",
+        "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\spinner_item_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable_missingitem.xml.flat",
         "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable\\missingitem.xml"
     },
     {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_activity_print_prices.xml.flat",
         "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_print_prices.xml"
+    },
+    {
+        "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_activity_new_stand_release.xml.flat",
+        "source": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_new_stand_release.xml"
     },
     {
         "merged": "C:\\Users\\m.othman\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable_locationcheck.xml.flat",

@@ -310,6 +310,7 @@ interface BasicApi {
     ): Observable<BinModelItem>
 
 
+
     @GET("api/FillBinBarcodes/ValidateBinForCount")
     fun ValidateBinForCount(
         @Query("binBarcode") binBarcode: String,
@@ -427,7 +428,14 @@ interface BasicApi {
 
 
 
-
+    @POST("api/FillBinBarcodes/FillBinStockTake")
+    fun FillBinStockTake(
+            @Query("UserID") UserID: Int,
+            @Query("PackingReasonType") PackingReasonType :Int,
+            @Query("Stand") Stand: String,
+            @Query("Box") Box :String,
+            @Query("LocationID") LocationID:Int
+    ): Observable<ResponseBody>
 
 
     @POST("api/FillBinBarcodes")

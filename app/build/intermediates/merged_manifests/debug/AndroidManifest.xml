@@ -56,6 +56,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.NewStandSwitchActivity"
+            android:exported="false" />
+        <activity
             android:name="com.bos.wms.mlkit.app.StoreRepriceCountActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar"

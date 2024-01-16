@@ -4,7 +4,7 @@ import com.hc.mixthebluetooth.Model.*
 import com.hc.mixthebluetooth.Model.RfidBulkTypeUpdateSessionModel
 import com.hc.mixthebluetooth.Model.RfidLotBond.RfidLotBondSessionModel
 import com.hc.mixthebluetooth.Model.RfidSessionModel
-import com.hc.mixthebluetooth.activity.UndoBoxLocationAssignmentActivity
+//import com.hc.mixthebluetooth.activity.UndoBoxLocationAssignmentActivity
 import io.reactivex.Observable
 import okhttp3.ResponseBody
 import retrofit2.Call
