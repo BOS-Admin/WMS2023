@@ -79,6 +79,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
     var dialogScan: AlertDialog? = null
     var tempDialogScan: AlertDialog? = null
     private var singleProcessLocked = false
+    var CanConnectRFID = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -168,6 +169,9 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                 Log.i("Ah-Log", "3")
                 Logger.Debug("StockTakeTest", "to show dialog ")
                 dialogScan?.show();
+                if(CanConnectRFID)
+                    RFIDStartRead()
+
                 CurrentBarcode = item
                 singleProcessLocked = true
                 //block threads to complete after approval (callback)
@@ -269,8 +273,8 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
      * @param rfid
      */
     fun CheckDetectedRFIDTag(rfid: String) {
-         Logger.Debug("API", "CheckBarcodePreviousOCR - Detected RFID: $rfid Checking IS Now")
-       // RFIDStopRead()
+        Logger.Debug("API", "CheckBarcodePreviousOCR - Detected RFID: $rfid Checking IS Now")
+        // RFIDStopRead()
         try {
             Logger.Debug("StockTakeTest", "Start API call")
             val api = getInstanceStatic(IPAddress, false).create(BasicApi::class.java)
@@ -319,7 +323,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
             ShowSnackBar("Connection Error Occurred", Snackbar.LENGTH_LONG)
             RFIDStartRead()
         }
-singleProcessLocked = false
+        singleProcessLocked = false
         Logger.Debug("StockTakeTest","unlocked process")
     }
 
@@ -336,10 +340,12 @@ singleProcessLocked = false
             Logger.Debug("StockTakeTest", "Matched")
             runOnUiThread {
                 dialogScan!!.dismiss()
+                RFIDStopRead()
             }
         } else {
             runOnUiThread {
                 dialogScan!!.dismiss()
+                RFIDStopRead()
             }
         }
         return callback(res)
@@ -418,7 +424,8 @@ singleProcessLocked = false
     fun OnRFIDReaderConnected() {
         mainProgressDialog?.cancel()
         Logger.Debug("StockTakeTest", "will start read")
-        RFIDStartRead()
+        //RFIDStartRead()
+        CanConnectRFID = true
     }
 
     /**
