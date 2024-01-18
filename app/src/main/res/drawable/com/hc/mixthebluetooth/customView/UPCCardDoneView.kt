@@ -4,17 +4,20 @@ import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
 import android.graphics.Color
+import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
 import android.widget.TextView
-import com.hc.mixthebluetooth.R
+import com.bos.wms.mlkit.R
+
 
 class UPCCardDoneView @JvmOverloads constructor(
     context: Context,
-    title:String,
-    qty:String,
-    items:List<String>,
+    ItemSerial:String,
+    ItemNo:String,
+    PrevPrice:String,
+    NewPrice:String,
     attrs: AttributeSet? = null,
     defStyle: Int = 0,
     defStyleRes: Int = 0
@@ -26,24 +29,13 @@ class UPCCardDoneView @JvmOverloads constructor(
             .inflate(R.layout.upc_card_done, this, true)
 
         orientation = HORIZONTAL
-        findViewById<TextView>(R.id.title).text = title
-        findViewById<TextView>(R.id.qty).text = qty
+        findViewById<TextView>(R.id.textPrevLBPPrice).text = PrevPrice
+        findViewById<TextView>(R.id.textNewLBPPrice).text = NewPrice
+        findViewById<TextView>(R.id.textItemNo).text = ItemNo
+        findViewById<TextView>(R.id.textItemSerial).text = ItemSerial
+        findViewById<TextView>(R.id.textPrevLBPPrice).paintFlags = Paint.STRIKE_THRU_TEXT_FLAG;
 
-        this.setOnClickListener{
-            showMessage(title,items.joinToString(separator = "\n"))
-        }
 
-    }
-
-    private fun showMessage(title:String ,msg: String) {
-        AlertDialog.Builder(context)
-            .setTitle(title)
-            .setMessage(msg)
-            .setPositiveButton(
-                "OK"
-            ) { dialog: DialogInterface?, which: Int -> }
-            .setIcon(android.R.drawable.ic_dialog_alert) // .setCancelable(false)
-            .show()
     }
 
 }

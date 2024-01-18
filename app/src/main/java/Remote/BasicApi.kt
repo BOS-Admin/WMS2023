@@ -21,11 +21,58 @@ interface BasicApi {
 
     /* Transfer Preparation Order */
 
+    @GET("api/box/types")
+    fun GetBoxTypes(): Observable<List<BoxTypeModel>>
+
+    @POST("api/putAway/ClassB")
+    fun PostClassBPutAway(
+        @Query("binCode") palette: String,
+        @Query("rackCode") rackCode: String,
+        @Query("userID") userID: Int,
+        @Query("type") type: Char
+    ): Observable<Boolean>
+
+    @GET("api/putAway/validatePalette")
+    fun ValidatePutAwayPalette(
+        @Query("palette") palette: String,
+        @Query("userID") userID: Int
+    ): Observable<String>
+
+    @POST("api/putAway/classC")
+    fun PostPutAway(
+        @Query("palette") palette: String,
+        @Query("rackCode") rackCode: String,
+        @Query("userID") userID: Int,
+        @Query("allowRackOverride") allowRackOverride: Boolean
+    ): Observable<Boolean>
+
+    @GET("api/putAway/validateClassBPutAway")
+    fun ValidateClassBPutAway(
+        @Query("binCode") bin: String,
+        @Query("userID") userID: Int
+    ): Observable<Boolean>
     @POST("api/reprice/store/")
     fun Reprice( @Query("UserId") UserId: Int,
                  @Query("ItemCode") BoxBarcode:String,
                  @Query("Store") Store:String
     ): Observable<ClassBRepriceResponseModel>
+
+
+    @POST("api/brands/")
+    fun BrandsInToIs( @Query("UserId") UserId: Int,
+                 @Query("ItemNo") ItemNo:String,
+                 @Query("PricingStandId") PricingStandId:Int,
+                 @Query("PrintingStation") PrintingStation:String,
+    ): Observable<BrandInToIsResponseModel>
+
+
+
+    @POST("api/brands/createStand")
+    fun CreateBrandsPricingStand(@Query("UserId") UserId: Int, @Query("PricingLineCode") PricingLineCode: String): Observable<PricingStandModel>
+
+    @GET("api/brands/print")
+    fun SendBrandsPrintingStand( @Query("StandId") StandId:Int ): Observable<ResponseBody>
+
 
     @GET("api/reprice/store/getStoreRepriceCount")
     fun GetRepriceCount(  @Query("Store") Store:String
@@ -120,6 +167,9 @@ interface BasicApi {
     @GET("api/ItemSerial/GetRFIDItemSerial")
     fun GetRFIDItemSerial(@Query("rfid") rfid: String): Observable<String>
 
+    @GET("api/RfidPacking/GetRFIDItemNumber")
+    fun GetRFIDItemNumber(@Query("rfid") rfid: String): Observable<String>
+
     @GET("api/UserPermissions/GetPermissions")
     fun GetPermissions(@Query("appName") appName:String, @Query("appVersion") appVersion:String, @Query("userID") userID:Int): Observable<List<String>>
 
@@ -176,6 +226,10 @@ interface BasicApi {
     fun CheckingDC(@Body model: CheckingDCModel): Observable<ResponseBody>
     @POST("api/FillBinBarcodes/FillBinDC")
     fun FillBinDC(@Body model: FillBinDCModel): Observable<ResponseBody>
+    @POST("api/palette/FillPaletteBinsDC")
+    fun FillPaletteBinsDC(@Body model: FillBinDCModel): Observable<ResponseBody>
+    @POST("api/palette/PaletteCheckingPost")
+    fun PaletteCheckingPost (@Body model: FillBinDCModel): Observable<ResponseBody>
     @POST("api/StockTake/FillBinStockTake1")
     fun FillBinStockTake1(@Body model: FillStockTakeDCModel): Observable<ResponseBody>
     @POST("api/Transfer/TransferDC")
@@ -239,6 +293,13 @@ interface BasicApi {
         @Query("userId") userId: Int,
         @Query("locationId") locationId: Int
     ): Observable<BinModelItem>
+    @GET("/api/palette/ValidatePalette")
+    fun ValidatePalette(
+        @Query("paletteBarcode") binBarcode: String,
+        @Query("packingTypeId") packingTypeId: Int,
+        @Query("userId") userId: Int,
+        @Query("locationId") locationId: Int
+    ): Observable<ResponseBody>
 
     @GET("/api/StockTake/ValidateBin")
     fun ValidateBinForStockTake(
@@ -249,9 +310,18 @@ interface BasicApi {
     ): Observable<BinModelItem>
 
 
+
     @GET("api/FillBinBarcodes/ValidateBinForCount")
     fun ValidateBinForCount(
         @Query("binBarcode") binBarcode: String,
+        @Query("packingTypeId") packingTypeId: Int,
+        @Query("userId") userId: Int,
+        @Query("locationId") locationId: Int
+    ): Observable<ResponseBody>
+
+    @GET("api/palette/ValidatePaletteForCount")
+    fun ValidatePaletteForCount(
+        @Query("paletteBarcode") binBarcode: String,
         @Query("packingTypeId") packingTypeId: Int,
         @Query("userId") userId: Int,
         @Query("locationId") locationId: Int
@@ -269,12 +339,41 @@ interface BasicApi {
     ): Observable<ResponseBody>
 
 
+    @GET("api/palette/FillPaletteBinsCount")
+    fun FillPaletteBinsCount(
+        @Query("UserID") UserID: Int,
+        @Query("Count") ItemSerials: Int,
+        @Query("PaletteBarcode") BinBarcode: String,
+        @Query("LocationId") LocationId:Int
+    ): Observable<ResponseBody>
+
+
     @GET("api/FillBinBarcodes/ValidateFillBinItem")
     fun ValidateFillBinItem(
         @Query("ItemCode") ItemCode: String,
         @Query("Location") Location: String,
         @Query("UserId") UserId: Int=-1,
         @Query("PackReasonId") PackReasonId: Int): Observable<ResponseBody>
+    @GET("api/palette/ValidatePaletteBin")
+    fun ValidatePaletteBin(
+        @Query("BinCode") ItemCode: String,
+        @Query("Location") Location: String,
+        @Query("UserId") UserId: Int=-1
+    ): Observable<ResponseBody>
+
+    @GET("api/palette/ValidatePaletteBinChecking")
+    fun ValidatePaletteBinChecking(
+        @Query("BinCode") ItemCode: String,
+        @Query("Location") Location: String,
+        @Query("UserId") UserId: Int=-1
+    ): Observable<ResponseBody>
+
+    @GET("api/palette/ValidatePaletteBinForChecking")
+    fun ValidatePaletteBinForChecking(
+        @Query("BinCode") ItemCode: String,
+        @Query("Location") Location: String,
+        @Query("UserId") UserId: Int=-1
+    ): Observable<ResponseBody>
 
 
     @GET("api/StockTake/ValidateItem")
@@ -293,6 +392,12 @@ interface BasicApi {
     @GET("api/FillBinBarcodes/ValidateBinForChecking")
     fun ValidateBinForChecking(
         @Query("BinBarcode") BinBarcode: String,
+        @Query("UserID") UserID: Int,
+        @Query("LocationId") LocationId: Int
+    ): Observable<ResponseBody>
+    @GET("api/Palette/ValidatePaletteForChecking")
+    fun ValidatePaletteForChecking(
+        @Query("PaletteCode") BinBarcode: String,
         @Query("UserID") UserID: Int,
         @Query("LocationId") LocationId: Int
     ): Observable<ResponseBody>
@@ -323,7 +428,14 @@ interface BasicApi {
 
 
 
-
+    @POST("api/FillBinBarcodes/FillBinStockTake")
+    fun FillBinStockTake(
+            @Query("UserID") UserID: Int,
+            @Query("PackingReasonType") PackingReasonType :Int,
+            @Query("Stand") Stand: String,
+            @Query("Box") Box :String,
+            @Query("LocationID") LocationID:Int
+    ): Observable<ResponseBody>
 
 
     @POST("api/FillBinBarcodes")

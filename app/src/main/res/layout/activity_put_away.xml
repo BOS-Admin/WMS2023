@@ -1,199 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_scan_rfid"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".app.bosApp.Transfer.ShipmentActivity">
+    tools:context=".app.bosApp.Transfer.ShipmentActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="20dp"
+    android:paddingRight="10dp"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
 
-    <TextView
-        android:layout_width="332dp"
-        android:layout_height="55dp"
-        android:textSize="33sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lblTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Put Away           "
+            android:textColor="#5D3FD3"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnPopUp"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#FFFFFF"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="Button"
+            app:icon="@drawable/baseline_notes_icon"
+            app:iconSize="50dp"
+            app:iconTint="#3F51B5" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/lblType"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:paddingLeft="20dp"
+        android:text="Box Type: "
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
         android:orientation="vertical"
-        android:padding="10dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Branch"
-                android:textSize="16sp" />
-
-            <EditText
-                android:id="@+id/textBranch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="User"
-                android:textSize="16sp" />
-
-            <EditText
-                android:id="@+id/textUser"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
-
-
+        android:paddingTop="10dp">
         <TextView
-            android:id="@+id/lblScanError"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:id="@+id/lblBox"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="5dp"
-            android:paddingBottom="10dp"
-            android:text="Please Scan the Rack and Box Barcodes"
-            android:textAlignment="center"
-            android:textSize="18sp" />
+            android:paddingLeft="20dp"
+            android:text="Scan Box Code"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="italic" />
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/lblLocationScan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rack Barcode"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/textLocationScanned"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/customborder"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/lblBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Box Barcode"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/textBoxScanned"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/customborder"
-                android:textAlignment="center" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp"
-            android:text="Last Box/Stand to be deleted if needed"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-
-            <EditText
-                android:id="@+id/textLastBox"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-            <EditText
-                android:id="@+id/textLastLocation"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            android:paddingTop="20dp">
-
-            <Button
-                android:id="@+id/btnDone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="Done"
-                android:textColor="@color/cardview_light_background" />
-
-            <Button
-                android:id="@+id/btnDelete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="Delete"
-                android:textColor="@color/cardview_light_background" />
-
-        </LinearLayout>
-        <TextView
-            android:id="@+id/lblError"
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/txtBox"
+            android:layout_width="200dp"
             android:layout_height="50dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:textColor="#fff"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/lblRack"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:paddingLeft="20dp"
+            android:text="Scan Rack Code"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/txtRack"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:textColor="#fff"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/lblAssignedRack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:paddingRight="20dp"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textColor="#B10625"
+            android:textSize="16sp"
+            android:textStyle="italic" />
 
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--    <TextView-->
+    <!--        android:id="@+id/txtCount"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="end"-->
+    <!--        android:paddingTop="5dp"-->
+    <!--        android:paddingEnd="10dp"-->
+    <!--        android:text="Count: 0"-->
+    <!--        android:textColor="#1BCD22"-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:textStyle="bold" />-->
+
+    <TextView
+        android:id="@id/lblResult"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Result"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/items_list"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btnClear"-->
+    <!--        style="@style/Widget.Material3.Button"-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:backgroundTint="#119C70"-->
+    <!--        android:padding="10dp"-->
+    <!--        android:text="Clear"-->
+    <!--        android:textColor="#F6F3F3"-->
+    <!--        android:textSize="20sp" />-->
+
+
+</LinearLayout>

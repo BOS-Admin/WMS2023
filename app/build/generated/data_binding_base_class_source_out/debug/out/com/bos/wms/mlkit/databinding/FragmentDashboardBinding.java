@@ -25,7 +25,7 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final Button btnCount;
 
   @NonNull
-  public final Button btnPutAway;
+  public final Button btnStandSwitch;
 
   @NonNull
   public final Button btnStockTake;
@@ -43,12 +43,12 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final EditText textUser;
 
   private FragmentDashboardBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnCount,
-      @NonNull Button btnPutAway, @NonNull Button btnStockTake, @NonNull Button btnTransfer,
+      @NonNull Button btnStandSwitch, @NonNull Button btnStockTake, @NonNull Button btnTransfer,
       @NonNull LinearLayout layoutDashboard, @NonNull EditText textBranch,
       @NonNull EditText textUser) {
     this.rootView = rootView;
     this.btnCount = btnCount;
-    this.btnPutAway = btnPutAway;
+    this.btnStandSwitch = btnStandSwitch;
     this.btnStockTake = btnStockTake;
     this.btnTransfer = btnTransfer;
     this.layoutDashboard = layoutDashboard;
@@ -89,9 +89,9 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnPutAway;
-      Button btnPutAway = ViewBindings.findChildViewById(rootView, id);
-      if (btnPutAway == null) {
+      id = R.id.btnStandSwitch;
+      Button btnStandSwitch = ViewBindings.findChildViewById(rootView, id);
+      if (btnStandSwitch == null) {
         break missingId;
       }
 
@@ -125,7 +125,7 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentDashboardBinding((ConstraintLayout) rootView, btnCount, btnPutAway,
+      return new FragmentDashboardBinding((ConstraintLayout) rootView, btnCount, btnStandSwitch,
           btnStockTake, btnTransfer, layoutDashboard, textBranch, textUser);
     }
     String missingId = rootView.getResources().getResourceName(id);

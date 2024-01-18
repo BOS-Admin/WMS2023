@@ -438,10 +438,13 @@ class LoginActivity : AppCompatActivity() {
 //                login(username.text.toString(), password.text.toString())
 //            } //       }
 
-
+        //Abdullah Changes
+        login.isEnabled=true
         login.setOnClickListener {
             //   loading.visibility = View.VISIBLE
-            login(username.text.toString(), password.text.toString())
+            //Abdullah Changes
+           login(username.text.toString(), password.text.toString())
+          //  login("5555","5555")
         }
         username.requestFocus()
 

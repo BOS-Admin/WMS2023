@@ -38,6 +38,9 @@ public final class ActivityPackingBinding implements ViewBinding {
   public final Button btnDestination;
 
   @NonNull
+  public final Button btnPaletteBins;
+
+  @NonNull
   public final EditText textBranch;
 
   @NonNull
@@ -55,14 +58,16 @@ public final class ActivityPackingBinding implements ViewBinding {
   private ActivityPackingBinding(@NonNull CoordinatorLayout rootView,
       @NonNull CoordinatorLayout activityPaking, @NonNull Button btnChange,
       @NonNull Button btnChecking, @NonNull Button btnCount, @NonNull Button btnDestination,
-      @NonNull EditText textBranch, @NonNull TextView textPrintSection, @NonNull EditText textUser,
-      @NonNull TextView textView2, @NonNull Toolbar toolbar) {
+      @NonNull Button btnPaletteBins, @NonNull EditText textBranch,
+      @NonNull TextView textPrintSection, @NonNull EditText textUser, @NonNull TextView textView2,
+      @NonNull Toolbar toolbar) {
     this.rootView = rootView;
     this.activityPaking = activityPaking;
     this.btnChange = btnChange;
     this.btnChecking = btnChecking;
     this.btnCount = btnCount;
     this.btnDestination = btnDestination;
+    this.btnPaletteBins = btnPaletteBins;
     this.textBranch = textBranch;
     this.textPrintSection = textPrintSection;
     this.textUser = textUser;
@@ -123,6 +128,12 @@ public final class ActivityPackingBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnPaletteBins;
+      Button btnPaletteBins = ViewBindings.findChildViewById(rootView, id);
+      if (btnPaletteBins == null) {
+        break missingId;
+      }
+
       id = R.id.textBranch;
       EditText textBranch = ViewBindings.findChildViewById(rootView, id);
       if (textBranch == null) {
@@ -154,8 +165,8 @@ public final class ActivityPackingBinding implements ViewBinding {
       }
 
       return new ActivityPackingBinding((CoordinatorLayout) rootView, activityPaking, btnChange,
-          btnChecking, btnCount, btnDestination, textBranch, textPrintSection, textUser, textView2,
-          toolbar);
+          btnChecking, btnCount, btnDestination, btnPaletteBins, textBranch, textPrintSection,
+          textUser, textView2, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

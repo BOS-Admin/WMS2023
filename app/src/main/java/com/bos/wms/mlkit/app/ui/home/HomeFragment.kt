@@ -44,6 +44,8 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
 
         if(UserPermissions.PermissionsReceived()){
+            UserPermissions.ValidatePermission("WMSApp.PutAway", root.btnPutAway);
+            UserPermissions.ValidatePermission("WMSApp.BrandsInToIs", root.btnBrandsInToIs);
             UserPermissions.ValidatePermission("WMSApp.RepriceClassB", root.btnRepriceClassB);
             UserPermissions.ValidatePermission("WMSApp.UPCPricing", root.btnUPCPricing);
             UserPermissions.ValidatePermission("WMSApp.UPCPricingOverride", root.btnUPCPricingOverride);
@@ -66,12 +68,16 @@ class HomeFragment : Fragment() {
             UserPermissions.ValidatePermission("WMSApp.PASBrandOCR", root.btnPASBrandOCR);
             UserPermissions.ValidatePermission("WMSApp.StoreRepriceCount", root.btnStoreRepriceCount);
             UserPermissions.ValidatePermission("WMSApp.PrintClassBPrices", root.btnPrintReprice);
+            UserPermissions.ValidatePermission("WMSApp.Ping", root.btnPing);
 
             /* Transfer Preparation Order */
             UserPermissions.ValidatePermission("WMSApp.TPO.MainMenu", root.btnTPOMainActivity);
 
         }else {
             UserPermissions.AddOnReceiveListener {
+
+                UserPermissions.ValidatePermission("WMSApp.PutAway", root.btnPutAway);
+                UserPermissions.ValidatePermission("WMSApp.BrandsInToIs", root.btnBrandsInToIs);
                 UserPermissions.ValidatePermission("WMSApp.RepriceClassB", root.btnRepriceClassB);
                 UserPermissions.ValidatePermission("WMSApp.UPCPricing", root.btnUPCPricing);
                 UserPermissions.ValidatePermission("WMSApp.UPCPricingOverride", root.btnUPCPricingOverride);
@@ -94,6 +100,7 @@ class HomeFragment : Fragment() {
                 UserPermissions.ValidatePermission("WMSApp.PASBrandOCR", root.btnPASBrandOCR);
                 UserPermissions.ValidatePermission("WMSApp.StoreRepriceCount", root.btnStoreRepriceCount);
                 UserPermissions.ValidatePermission("WMSApp.PrintClassBPrices", root.btnPrintReprice);
+                UserPermissions.ValidatePermission("WMSApp.Ping", root.btnPing);
 
                 /* Transfer Preparation Order */
                 UserPermissions.ValidatePermission("WMSApp.TPO.MainMenu", root.btnTPOMainActivity);
@@ -118,6 +125,16 @@ class HomeFragment : Fragment() {
             }
         }
 
+        root.btnBrandsInToIs.setOnClickListener {
+            ProceedBrandsInToIsMainActivity()
+        }
+        root.btnPutAway.setOnClickListener {
+            ProceedPutAway()
+        }
+        root.btnPing.setOnClickListener {
+            val intent = Intent (getActivity(), PingActivity::class.java)
+            startActivity(intent)
+        }
         root.btnTPOMainActivity.setOnClickListener {
             ProceedTPOMainActivity()
         }
@@ -306,6 +323,13 @@ class HomeFragment : Fragment() {
 
     fun ProceedTPOMainActivity() {
         val intent = Intent (getActivity(), TPOMainActivity::class.java)
+        startActivity(intent)
+    }   fun ProceedBrandsInToIsMainActivity() {
+        val intent = Intent (getActivity(), BrandsInToIsActivity::class.java)
+        startActivity(intent)
+    }
+    fun ProceedPutAway() {
+        val intent = Intent (getActivity(), PutAwayActivity::class.java)
         startActivity(intent)
     }
     fun ProceedPrintBPrices() {

@@ -25,6 +25,18 @@
 
 
             <Button
+                android:id="@+id/btnBrandsInToIs"
+                style="@style/button_main_menu_style"
+                android:drawableLeft="@drawable/upcpricing"
+                android:text="BRANDS IN To IS"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/btnPutAway"
+                style="@style/button_main_menu_style"
+                android:drawableLeft="@drawable/upcpricing"
+                android:text="Put Away"
+                android:visibility="gone"/>
+            <Button
                 android:id="@+id/btnRepriceClassB"
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/upcpricing"
@@ -184,6 +196,14 @@
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/pasbrandocr"
                 android:text="PAS Brand OCR"
+                android:visibility="gone"/>
+
+
+            <Button
+                android:id="@+id/btnPing"
+                style="@style/button_main_menu_style"
+                android:drawableLeft="@drawable/upcpricing"
+                android:text="Ping"
                 android:visibility="gone"/>
 
         </com.google.android.flexbox.FlexboxLayout>

@@ -98,15 +98,26 @@
                 android:visibility="gone"/>
 
             <Button
-                android:id="@+id/btnPutAway"
+                android:id="@+id/btnStandSwitch"
                 android:layout_width="140dp"
                 android:layout_height="120dp"
                 android:layout_marginLeft="20dp"
-                android:background="@color/colorPrimary"
-                android:text="Put Away"
+                android:text="Stand Switch"
                 android:textColor="#F6F0F0"
+                android:background="@color/colorPrimary"
                 android:textSize="20sp"
                 android:visibility="gone"/>
+
+<!--            <Button-->
+<!--                android:id="@+id/btnPutAway"-->
+<!--                android:layout_width="140dp"-->
+<!--                android:layout_height="120dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:background="@color/colorPrimary"-->
+<!--                android:text="Put Away"-->
+<!--                android:textColor="#F6F0F0"-->
+<!--                android:textSize="20sp"-->
+<!--                android:visibility="gone"/>-->
 
 
         </LinearLayout>

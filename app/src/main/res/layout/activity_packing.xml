@@ -118,13 +118,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10dp">
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/btnDestination"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
                 android:background="?attr/colorPrimary"
                 android:text="Destination"
                 android:textColor="#F6F0F0"
@@ -132,27 +132,33 @@
 
             <Button
                 android:id="@+id/btnCount"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_marginLeft="20dp"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
                 android:layout_weight="1"
                 android:background="?attr/colorPrimary"
                 android:text="Count"
                 android:textColor="#F6F0F0"
                 android:textSize="20sp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10dp">
 
             <Button
                 android:id="@+id/btnChecking"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
                 android:background="?attr/colorPrimary"
                 android:text="Checking"
+                android:textColor="#F6F0F0"
+                android:textSize="20sp" />
+
+
+            <Button
+                android:id="@+id/btnPaletteBins"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:background="?attr/colorPrimary"
+                android:text="Palette Bins"
                 android:textColor="#F6F0F0"
                 android:textSize="20sp" />
 

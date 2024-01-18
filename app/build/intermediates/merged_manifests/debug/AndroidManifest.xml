@@ -52,8 +52,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.NewStandSwitchActivity"
+            android:exported="false" />
         <activity
             android:name="com.bos.wms.mlkit.app.StoreRepriceCountActivity"
             android:exported="false"
@@ -61,6 +65,15 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="com.bos.wms.mlkit.app.tpo.TPOResetTruckActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.BrandsInToIsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.PutAwayActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.PingActivity"
             android:exported="false" />
         <activity
             android:name="com.bos.wms.mlkit.app.PrintBPricesActivity"
@@ -188,6 +201,10 @@
             android:label="@string/title_activity_stock_take_dc"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.StockTakeDCRFIDActivity"
+            android:label="@string/title_activity_stock_take_dc"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
             android:name="com.bos.wms.mlkit.app.bosApp.CountActivity"
             android:label="Count"
             android:windowSoftInputMode="stateAlwaysHidden" />
@@ -202,6 +219,10 @@
         <activity
             android:name="com.bos.wms.mlkit.app.bosApp.ScanBinForCountActivity"
             android:label="@string/title_activity_scan_count"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.PaletteBinsCheckingActivity"
+            android:label="Palette Checking Activity"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="com.bos.wms.mlkit.app.bosApp.ScanContainerActivity"
@@ -219,6 +240,15 @@
             android:name="com.bos.wms.mlkit.app.bosApp.PackingActivity"
             android:label="@string/title_activity_packing_dc"
             android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.PaletteBinsMainActivity"
+            android:label="Palette Bins "
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bos.wms.mlkit.app.bosApp.PaletteBinsDCActivity"
+            android:label="Palette Bins DC"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="com.bos.wms.mlkit.app.bosApp.StockTakeRackDCActivity"
