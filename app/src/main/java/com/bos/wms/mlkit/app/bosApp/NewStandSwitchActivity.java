@@ -344,6 +344,7 @@ public class NewStandSwitchActivity extends AppCompatActivity {
                             .subscribe((s) -> {
                                 if (s != null) {
                                     setBtnResultState(1, "Stand has been switched successfully");
+                                    RestartView();
                                 }
                             }, (throwable) -> {
                                 String error = throwable.toString();
@@ -416,6 +417,18 @@ public class NewStandSwitchActivity extends AppCompatActivity {
     }
 
 
+    private void RestartView(){
+        ableToUpdateStand = false;
+        standScanned = false;
+        edtStand.setText("");
+        ableToUpdateStand = true;
+
+        ableToUpdateBox = false;
+        boxScanned = false;
+        edtBox.setText("");
+        ableToUpdateBox = true;
+
+    }
     public interface ApiCallback {
         void onResultSuccess();
 
