@@ -368,6 +368,9 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                             override fun PortClosing(s: String) {}
                             override fun OutPutTags(model: Tag_Model) {
                                 val key: String = TagModelKey(model)
+                                if(key.startsWith("303"))
+                                    return
+
                                 if (!key.isEmpty()) {
                                     Logger.Debug("StockTakeTest","checking Lock, current lock status is: $singleProcessLocked")
                                     if (!singleProcessLocked)
