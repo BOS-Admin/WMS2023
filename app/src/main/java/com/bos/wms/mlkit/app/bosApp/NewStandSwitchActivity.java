@@ -110,11 +110,8 @@ public class NewStandSwitchActivity extends AppCompatActivity {
 
                 StandStr = String.valueOf(edtStand.getText());
                 if (!StandNbValidated(StandStr)) {
-                    ableToUpdateStand = false;
-                    standScanned = false;
-                    edtStand.setText("");
+                    ResetStand();
                     setBtnResultState(0, "Scan a valid Stand");
-                    ableToUpdateStand = true;
                 }
                 validateBoxScanned(StandStr, new ApiCallback() {
                     @Override
@@ -130,11 +127,9 @@ public class NewStandSwitchActivity extends AppCompatActivity {
 
                     @Override
                     public void onResultFailure(String errorMessage) {
-                        ableToUpdateStand = false;
-                        standScanned = false;
-                        edtStand.setText("");
+                        ResetStand();
                         setBtnResultState(0, "Scan a valid Stand");
-                        ableToUpdateStand = true;
+
                     }
                 });
             }
@@ -159,11 +154,8 @@ public class NewStandSwitchActivity extends AppCompatActivity {
 
                 BoxStr = String.valueOf(edtBox.getText());
                 if (!BoxNbValidated(BoxStr)) {
-                    ableToUpdateBox = false;
-                    boxScanned = false;
-                    edtBox.setText("");
+                    ResetBox();
                     setBtnResultState(0, "Scan a valid Box");
-                    ableToUpdateBox = true;
                 }
                 validateBoxScanned(BoxStr, new ApiCallback() {
                     @Override
@@ -179,11 +171,8 @@ public class NewStandSwitchActivity extends AppCompatActivity {
 
                     @Override
                     public void onResultFailure(String errorMessage) {
-                        ableToUpdateBox = false;
-                        boxScanned = false;
-                        edtBox.setText("");
+                        ResetBox();
                         setBtnResultState(0, "Scan a valid Box");
-                        ableToUpdateBox = true;
                     }
                 });
             }
@@ -329,7 +318,9 @@ public class NewStandSwitchActivity extends AppCompatActivity {
 
     }
 
-
+    /**
+     * This method do the Switch Action from Stand to a Box
+     */
     private void DoAction() {
         try {
 
@@ -345,7 +336,6 @@ public class NewStandSwitchActivity extends AppCompatActivity {
                             .subscribe((s) -> {
                                 if (s != null) {
                                     setBtnResultState(1, "Stand has been switched successfully");
-                                    RestartView();
                                 }
                             }, (throwable) -> {
                                 String error = throwable.toString();
@@ -365,6 +355,7 @@ public class NewStandSwitchActivity extends AppCompatActivity {
             Logger.Error("API", "FillBinStockTake - Error Connecting: " + e.getMessage());
             setBtnResultState(0, e.getMessage());
         }
+        RestartView();
     }
 
 
@@ -419,17 +410,24 @@ public class NewStandSwitchActivity extends AppCompatActivity {
 
 
     private void RestartView(){
+       ResetStand();
+       ResetBox();
+    }
+
+    private void ResetStand(){
         ableToUpdateStand = false;
         standScanned = false;
         edtStand.setText("");
         ableToUpdateStand = true;
+    }
 
+    private void ResetBox(){
         ableToUpdateBox = false;
         boxScanned = false;
         edtBox.setText("");
         ableToUpdateBox = true;
-
     }
+
     public interface ApiCallback {
         void onResultSuccess();
 
