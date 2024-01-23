@@ -336,6 +336,7 @@ public class NewStandSwitchActivity extends AppCompatActivity {
                             .subscribe((s) -> {
                                 if (s != null) {
                                     setBtnResultState(1, "Stand has been switched successfully");
+                                    RestartView();
                                 }
                             }, (throwable) -> {
                                 String error = throwable.toString();
@@ -345,17 +346,20 @@ public class NewStandSwitchActivity extends AppCompatActivity {
                                     if (error.isEmpty()) error = throwable.getMessage();
                                     Logger.Debug("API", "FillBinStockTake - Error In HTTP Response: " + error);
                                     setBtnResultState(0, error);
+                                    RestartView();
                                 } else {
                                     Logger.Error("API", "FillBinStockTake - Error In API Response: " + throwable.getMessage());
                                     setBtnResultState(0, throwable.getMessage());
+                                    RestartView();
                                 }
                             }));
 
         } catch (Throwable e) {
             Logger.Error("API", "FillBinStockTake - Error Connecting: " + e.getMessage());
             setBtnResultState(0, e.getMessage());
+            RestartView();
         }
-        RestartView();
+
     }
 
 
