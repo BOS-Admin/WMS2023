@@ -56,7 +56,7 @@ public class NewStandSwitchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new_stand_switch);
         mStorage = new Storage(this);
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82");
-        UserID = mStorage.getDataInt("UserID");
+        UserID = General.getGeneral(this).UserID;
         general = General.getGeneral(this);
         spinner = findViewById(R.id.spnReason);
         btnResult = findViewById(R.id.btnResult);
@@ -274,6 +274,7 @@ public class NewStandSwitchActivity extends AppCompatActivity {
         try {
 
             Logger.Debug("SwitchDebug", "API -  GetPackReasons");
+            Logger.Debug("SwitchDebug", "UserID: " + UserID);
 
             BasicApi api = APIClient.getInstanceStatic(IPAddress, false).create(BasicApi.class);
             CompositeDisposable compositeDisposable = new CompositeDisposable();
