@@ -1286,6 +1286,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1317,6 +1318,8 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color custom_green
+color custom_red
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1868,6 +1871,7 @@ color test_mtrl_calendar_day_selected
 color texBackgroundColor
 color tooltip_background_dark
 color tooltip_background_light
+color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -2598,6 +2602,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edittext_background
 drawable edittext_rounded_corners
 drawable empty_tall_divider
 drawable emptybox
@@ -2823,6 +2828,7 @@ id btnA
 id btnB
 id btnBolRecognition
 id btnBrandOCR
+id btnBrandsInToIs
 id btnC
 id btnCapture
 id btnChange
@@ -2860,8 +2866,11 @@ id btnModifyTPOBins
 id btnNext
 id btnPASBrandOCR
 id btnPackingReasonDone
+id btnPaletteBins
+id btnPaletteChecking
 id btnPause
 id btnPickingDone
+id btnPing
 id btnPopUp
 id btnPrev
 id btnPrint
@@ -2871,12 +2880,14 @@ id btnRackCount
 id btnReceiving
 id btnRepriceClassB
 id btnResetTruckCountMode
+id btnResult
 id btnSave
 id btnSerialGenerator
 id btnSerialMissing
 id btnSettings
 id btnShipPallReciDone
 id btnShipment
+id btnStandSwitch
 id btnStockTake
 id btnStoreRepriceCount
 id btnSubmit
@@ -2887,6 +2898,8 @@ id btnUPCPricing
 id btnUPCPricingDone
 id btnUPCPricingOverride
 id btnUPCRecognitionPricing
+id btnWithRfid
+id btnWithoutRfid
 id btnfillpalleteDone
 id btnlocationcheckDone
 id btnputawaypalleteDone
@@ -2967,6 +2980,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id dialogTitle
 id dialog_button
 id dimensions
 id direct
@@ -2993,6 +3007,8 @@ id east
 id edit_query
 id edittext_dropdown_editable
 id edittext_dropdown_noneditable
+id edtBox
+id edtStand
 id elastic
 id emptyBoxActivityLayout
 id end
@@ -3066,8 +3082,10 @@ id italic
 id item_touch_helper_previous_elevation
 id itemsListView
 id itemsMenuTitle
+id items_list
 id jumpToEnd
 id jumpToStart
+id label
 id labeled
 id layout
 id layoutBtns
@@ -3075,6 +3093,7 @@ id layoutDashboard
 id layoutNewPrice
 id layoutOldPrice
 id layoutUPCs
+id lblAssignedRack
 id lblBox
 id lblCount
 id lblDescription
@@ -3084,6 +3103,7 @@ id lblFoldingScanItem
 id lblFoldingScanStation
 id lblItemSerial
 id lblItemsCnt
+id lblLastItem
 id lblLocationCheckRemainingBins
 id lblLocationCheckRemainingShelfs
 id lblLocationScan
@@ -3097,6 +3117,7 @@ id lblPickingReminaingBins
 id lblPickingReminaingItems
 id lblPickingWave
 id lblPrintTypeItem
+id lblRack
 id lblResult
 id lblScanError
 id lblSeason
@@ -3110,6 +3131,7 @@ id lblShipPallReciNbOfCartons
 id lblShipPallReciPalleteNb
 id lblStatus
 id lblTitle
+id lblType
 id lblUPC
 id lblfillpalleteBarcode
 id lblfillpalleteBinBarcode
@@ -3146,6 +3168,7 @@ id linearLayout6
 id linearLayout7
 id linearLayout8
 id linearLayout9
+id linearLayoutUPCs
 id listMode
 id listView
 id list_item
@@ -3345,6 +3368,7 @@ id special_effects_controller_view_tag
 id spinner
 id spline
 id split_action_bar
+id spnReason
 id spread
 id spread_inside
 id spring
@@ -3389,11 +3413,14 @@ id textBox
 id textBoxNb
 id textBoxScanned
 id textBranch
+id textCompany
 id textCount
 id textDestination
 id textDone
 id textEnd
+id textItemNo
 id textItemScanned
+id textItemSerial
 id textLastBox
 id textLastItem
 id textLastLocation
@@ -3417,6 +3444,7 @@ id textView1
 id textView11
 id textView2
 id textView3
+id textView4
 id textView6
 id textViewTitle
 id text_input_end_icon
@@ -3460,6 +3488,7 @@ id truckIcon
 id truckInfoBtn
 id tv_label
 id txtAppVersion
+id txtBox
 id txtFoldingScanItem
 id txtFoldingScanStation
 id txtIPAddress
@@ -3476,6 +3505,7 @@ id txtPickingItemSerialBarcode
 id txtPricingLineCode
 id txtPutAwayPalleteBarcode
 id txtRFIDMac
+id txtRack
 id txtRemaining
 id txtScaleMac
 id txtSeason
@@ -3624,6 +3654,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_bol_recognition
 layout activity_brand_ocractivity
+layout activity_brands_in_to_is
 layout activity_count
 layout activity_empty_box
 layout activity_fillpallete
@@ -3631,19 +3662,23 @@ layout activity_foldingscan
 layout activity_item_pricing
 layout activity_itemserial_missing
 layout activity_itemserial_upc_missing
+layout activity_listview
 layout activity_locationcheck
 layout activity_login
 layout activity_main
 layout activity_main_menu
 layout activity_main_menu1
 layout activity_new_item_pricing
+layout activity_new_stand_switch
 layout activity_next_receiving_status
 layout activity_packing
 layout activity_packing_dc
 layout activity_packing_reason
+layout activity_palette_bins
 layout activity_pas_brand_ocractivity
 layout activity_pg_pricing
 layout activity_picking
+layout activity_ping
 layout activity_print_prices
 layout activity_printer_selection
 layout activity_put_away
@@ -3651,6 +3686,7 @@ layout activity_putawaypallete
 layout activity_reprice
 layout activity_reprice_count
 layout activity_scan_container
+layout activity_scan_stand_in_to_is
 layout activity_scan_upcs_for_bol
 layout activity_serial_generator
 layout activity_shipment
@@ -3683,6 +3719,7 @@ layout content_picking
 layout content_putawaypallete
 layout content_upc_pricing
 layout custom_dialog
+layout custom_dialog_rfid
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -3698,6 +3735,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_scan_rfid
 layout fragment_dashboard
 layout fragment_home
 layout fragment_notifications
@@ -3770,6 +3808,7 @@ layout scan_upcs_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout spinner_item_layout
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -3789,6 +3828,7 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout tpo_location_item
 layout tpo_locations_dialog
+layout upc_card_done
 layout upc_pricing_item
 menu bottom_nav_menu
 mipmap ic_launcher

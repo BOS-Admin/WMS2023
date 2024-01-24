@@ -4,8 +4,16 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_bol_recognition.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_edittext_background.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/drawable/edittext_background.xml"
+    },
+    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_pg_pricing.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_pg_pricing.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_new_stand_switch.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_new_stand_switch.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -68,6 +76,10 @@
         "source": "com.bos.wms.mlkit.app-main-62:/anim/up_from_bottom.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_palette_bins.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_palette_bins.xml"
+    },
+    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_shipment_pallete_receiving.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_shipment_pallete_receiving.xml"
     },
@@ -82,6 +94,10 @@
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_spinner_item_layout.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/spinner_item_layout.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/mipmap-xxxhdpi_ic_launcher.png.flat",
@@ -148,6 +164,10 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_reprice.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_dialog_scan_rfid.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/dialog_scan_rfid.xml"
+    },
+    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/mipmap-xhdpi/ic_launcher_round.png"
     },
@@ -170,6 +190,10 @@
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_content_putawaypallete.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/content_putawaypallete.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_scan_stand_in_to_is.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_scan_stand_in_to_is.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_baseline_notes_icon.xml.flat",
@@ -316,6 +340,10 @@
         "source": "com.bos.wms.mlkit.app-main-62:/drawable/baseline_play_arrow_icon.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_custom_dialog_rfid.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/custom_dialog_rfid.xml"
+    },
+    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_content_pg_pricing.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/content_pg_pricing.xml"
     },
@@ -408,6 +436,10 @@
         "source": "com.bos.wms.mlkit.app-main-62:/navigation/nav_graph.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_ping.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_ping.xml"
+    },
+    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/mipmap-xhdpi/ic_launcher.png"
     },
@@ -418,6 +450,10 @@
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_rounded_corner_blue.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/drawable/rounded_corner_blue.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_brands_in_to_is.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_brands_in_to_is.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_fragment_dashboard.xml.flat",
@@ -456,24 +492,24 @@
         "source": "com.bos.wms.mlkit.app-main-62:/drawable/edittext_rounded_corners.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_packing_dc.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_packing_dc.xml"
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_serialgenerator.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/drawable/serialgenerator.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_put_away.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_put_away.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_serialgenerator.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/drawable/serialgenerator.xml"
-    },
-    {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_content_upc_pricing.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_upc_pricing.xml"
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_packing_dc.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_packing_dc.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_itemserial_upc_missing.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_itemserial_upc_missing.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_content_upc_pricing.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_upc_pricing.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_reprice_count.xml.flat",
@@ -500,6 +536,10 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_login.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_upc_card_done.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/upc_card_done.xml"
+    },
+    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_print_prices.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_print_prices.xml"
     },
@@ -518,6 +558,10 @@
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_background.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/drawable/background.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_listview.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_listview.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/drawable_customborder1.xml.flat",

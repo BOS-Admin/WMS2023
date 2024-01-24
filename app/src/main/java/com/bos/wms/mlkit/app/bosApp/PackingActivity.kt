@@ -60,6 +60,8 @@ class PackingActivity : AppCompatActivity() {
             val intent = Intent (applicationContext, PaletteBinsMainActivity::class.java)
             startActivity(intent)
         }
+
+
         findViewById<Button>(R.id.btnChange).setOnClickListener {
             val intent = Intent (applicationContext, PrinterSelectionActivity::class.java)
             startActivity(intent)

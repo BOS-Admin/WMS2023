@@ -9,3 +9,8 @@ public data class BinModelItem (
     val binTypeId:Int,
 
     )
+
+public data class PaletteModelItem (
+
+    val paletteBarcode:String?,
+    )

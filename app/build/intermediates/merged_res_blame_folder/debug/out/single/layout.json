@@ -1,5 +1,13 @@
 [
     {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/upc_card_done.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/upc_card_done.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_new_stand_switch.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_new_stand_switch.xml"
+    },
+    {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_brand_ocractivity.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_brand_ocractivity.xml"
     },
@@ -32,8 +40,16 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_main.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/dialog_scan_rfid.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/dialog_scan_rfid.xml"
+    },
+    {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/upc_pricing_item.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/upc_pricing_item.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_ping.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_ping.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_locationcheck.xml",
@@ -54,6 +70,10 @@
     {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_itemserial_missing.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_itemserial_missing.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_listview.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_listview.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/fragment_notifications.xml",
@@ -140,6 +160,22 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tporeset_truck.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_palette_bins.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_palette_bins.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/spinner_item_layout.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/spinner_item_layout.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/custom_dialog_rfid.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/custom_dialog_rfid.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_scan_stand_in_to_is.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_scan_stand_in_to_is.xml"
+    },
+    {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_shipment.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_shipment.xml"
     },
@@ -166,6 +202,10 @@
     {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/content_new_item_pricing.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/content_new_item_pricing.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_brands_in_to_is.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_brands_in_to_is.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_tpocount_bins.xml",
@@ -248,12 +288,12 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_pg_pricing.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/tpo_locations_dialog.xml",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/tpo_locations_dialog.xml"
-    },
-    {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_new_item_pricing.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_new_item_pricing.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/tpo_locations_dialog.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/tpo_locations_dialog.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_stock_take.xml",

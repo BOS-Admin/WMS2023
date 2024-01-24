@@ -1,36 +1,23 @@
 package com.bos.wms.mlkit.app.ui.dashboard
 
-import Remote.APIClient
 import Remote.BasicApi
 import Remote.UserPermissions.UserPermissions
-import android.app.AlertDialog
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bos.wms.mlkit.General
-import com.bos.wms.mlkit.app.ZebraPrinter
+import com.bos.wms.mlkit.app.bosApp.NewStandSwitchActivity
 import com.bos.wms.mlkit.app.bosApp.PackingActivity
-import com.bos.wms.mlkit.app.bosApp.ScanRackPutAwayActivity
 import com.bos.wms.mlkit.app.bosApp.StockTakeActivity
 import com.bos.wms.mlkit.app.bosApp.Transfer.TransferActivity
 import com.bos.wms.mlkit.databinding.FragmentDashboardBinding
 import com.bos.wms.mlkit.storage.Storage
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_dashboard.view.*
-import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_home.view.*
-import retrofit2.HttpException
-import java.io.IOException
 
 
 class DashboardFragment : Fragment() {
@@ -66,14 +53,16 @@ class DashboardFragment : Fragment() {
             UserPermissions.ValidatePermission("WMSApp.Dashboard.Packing", root.btnCount);
             UserPermissions.ValidatePermission("WMSApp.Dashboard.StockTake", root.btnStockTake);
             UserPermissions.ValidatePermission("WMSApp.Dashboard.Transfer", root.btnTransfer);
-            UserPermissions.ValidatePermission("WMSApp.Dashboard.PutAway", root.btnPutAway);
+            UserPermissions.ValidatePermission("WMSApp.Dashboard.StandSwitch", root.btnStandSwitch);
+//            UserPermissions.ValidatePermission("WMSApp.Dashboard.PutAway", root.btnPutAway);
 
         }else {
             UserPermissions.AddOnReceiveListener {
                 UserPermissions.ValidatePermission("WMSApp.Dashboard.Packing", root.btnCount);
                 UserPermissions.ValidatePermission("WMSApp.Dashboard.StockTake", root.btnStockTake);
                 UserPermissions.ValidatePermission("WMSApp.Dashboard.Transfer", root.btnTransfer);
-                UserPermissions.ValidatePermission("WMSApp.Dashboard.PutAway", root.btnPutAway);
+                UserPermissions.ValidatePermission("WMSApp.Dashboard.StandSwitch", root.btnStandSwitch);
+//                UserPermissions.ValidatePermission("WMSApp.Dashboard.PutAway", root.btnPutAway);
             }
         }
 
@@ -94,10 +83,14 @@ class DashboardFragment : Fragment() {
             val intent = Intent(activity, TransferActivity::class.java)
             startActivity(intent)
         }
-        root.btnPutAway.setOnClickListener {
-            val intent = Intent(activity, ScanRackPutAwayActivity::class.java)
+        root.btnStandSwitch.setOnClickListener {
+            val intent = Intent(activity, NewStandSwitchActivity::class.java)
             startActivity(intent)
         }
+//        root.btnPutAway.setOnClickListener {
+//            val intent = Intent(activity, ScanRackPutAwayActivity::class.java)
+//            startActivity(intent)
+//        }
 
         root.textBranch.isEnabled = false;
         root.textBranch.isEnabled = false;

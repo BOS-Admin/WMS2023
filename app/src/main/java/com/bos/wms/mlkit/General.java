@@ -25,7 +25,7 @@ public class General {
     public Integer FloorID=0;
 
     public String UserName="";
-    public String AppVersion="2.2.9 14/11/2023";
+    public String AppVersion="2.2.16 3/1/2024";
     int interval = 3600;    // when there's no activity
 
     public String ipAddress="";
@@ -42,7 +42,9 @@ public class General {
 
     public Integer operationType=-1;
     public String BoxStartsWith="";
+    public String StandStartsWith = "";
     public String BoxNbDigits= "" ;
+    public String StandNbDigits= "" ;
 
     public String LocationString="";
 
@@ -95,7 +97,9 @@ public class General {
             packType = sp.getString("PackType", "");
             transferNavNo = sp.getString("TransferNavNo", "");
             BoxStartsWith=sp.getString("BoxStartsWith","");
+            StandStartsWith=sp.getString("StandStartsWith","");
             BoxNbDigits=sp.getString("BoxNbDigits","");
+            StandNbDigits=sp.getString("StandNbDigits","");
             stockType=sp.getInt("StockType",-1);
             operationType=sp.getInt("OperationType",-1);
             transactionType=sp.getInt("TransactionType",-1);
@@ -235,7 +239,7 @@ public class General {
 
 
     public static Boolean ValidateDestination(String str){
-        return !str.isEmpty() && str.length() >2;
+        return str!=null && !str.isEmpty() && str.length() >2;
     }
     public static Boolean ValidatePalleteCode(String str){
         return !str.isEmpty() && str.length()>1;

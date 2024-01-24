@@ -55,6 +55,11 @@ class ScanBinForCountActivity : AppCompatActivity() {
             lblDescription.text="Please scan your barcode and the palette barcode"
             lblBox.text="Palette"
         }
+        else{
+            title = "Scan Box";
+            lblDescription.text="Please scan your barcode and the box barcode"
+            lblBox.text="Box"
+        }
 
 
 

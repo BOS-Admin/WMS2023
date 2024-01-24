@@ -1,0 +1,38 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:material="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnWithRfid"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="With RFID"
+        android:layout_marginEnd="8dp"
+        material:strokeColor="@color/custom_green"
+        material:strokeWidth="2dp"
+        material:rippleColor="@color/custom_green"
+        android:backgroundTint="@color/custom_green"
+        android:textColor="@color/white"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnWithoutRfid"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="WITHOUT RFID"
+        android:layout_marginStart="8dp"
+        material:strokeColor="@color/custom_red"
+        material:strokeWidth="2dp"
+        material:rippleColor="@color/custom_red"
+        android:backgroundTint="@color/custom_red"
+        android:textColor="@color/white"
+        />
+</LinearLayout>

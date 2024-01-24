@@ -179,18 +179,31 @@ class CountActivity : AppCompatActivity() {
                         {t:Throwable?->
                             run {
 
-                                if (t is HttpException) {
-                                    var ex: HttpException = t as HttpException
+
+                                    if(t is HttpException){
+                                        var ex: HttpException =t as HttpException
+                                        var ss2="Error "
+                                        if(ex!=null){
+                                            var ss=ex.response()
+                                            if(ss!=null){
+                                                var ss1=ss.errorBody()
+                                                if(ss1!=null){
+                                                    ss2=ss1.string()
+                                                }
+
+                                            }
+
+                                        }
+
+                                        showMessage("$ss2 (Http Error) ",Color.RED)
+
 
                                     runOnUiThread {
-                                        lblError.text = "Error: "+ex.response().errorBody()!!.string() + ""
+                                        lblError.text = ss2
                                         lblError.setTextColor(Color.RED )
                                     }
 
-                                    showMessage(
-                                        "Error: "+ex.response().errorBody()!!.string() + "",
-                                        Color.RED
-                                    )
+
 
                                 } else {
 

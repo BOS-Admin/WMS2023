@@ -8,8 +8,8 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -33,16 +33,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name=".app.bosApp.NewStandSwitchActivity"
+            android:exported="false" />
         <activity
             android:name=".app.StoreRepriceCountActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden"/>
-
-
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".app.tpo.TPOResetTruckActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.BrandsInToIsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.PutAwayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.PingActivity"
             android:exported="false" />
         <activity
             android:name=".app.PrintBPricesActivity"
@@ -51,12 +60,12 @@
             android:name=".app.tpo.TPOReceiveBinsActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".app.RepriceActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".app.tpo.TPOCountBinsActivity"
             android:exported="false"
@@ -170,6 +179,10 @@
             android:label="@string/title_activity_stock_take_dc"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
+            android:name=".app.bosApp.StockTakeDCRFIDActivity"
+            android:label="@string/title_activity_stock_take_dc"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
             android:name=".app.bosApp.CountActivity"
             android:label="Count"
             android:windowSoftInputMode="stateAlwaysHidden" />
@@ -184,6 +197,10 @@
         <activity
             android:name=".app.bosApp.ScanBinForCountActivity"
             android:label="@string/title_activity_scan_count"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".app.bosApp.PaletteBinsCheckingActivity"
+            android:label="Palette Checking Activity"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".app.bosApp.ScanContainerActivity"
@@ -210,9 +227,7 @@
         <activity
             android:name=".app.bosApp.PaletteBinsDCActivity"
             android:label="Palette Bins DC"
-
             android:windowSoftInputMode="stateAlwaysHidden" />
-
         <activity
             android:name=".app.bosApp.StockTakeRackDCActivity"
             android:label="Stock Take Rack DC"

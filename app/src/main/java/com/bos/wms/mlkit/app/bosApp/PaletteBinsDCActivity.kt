@@ -369,6 +369,12 @@ class PaletteBinsDCActivity : AppCompatActivity() {
                                 showMessage(response, Color.GREEN)
                             } else {
 
+                                if (response != null && response.trim() == "Status: (103,Released)"){
+                                    showMessage("" + response?.toString(), Color.GREEN)
+                                }
+                                else
+
+
                                 showMessage("" + response?.toString(), Color.RED)
                             }
                             runOnUiThread {
@@ -384,10 +390,18 @@ class PaletteBinsDCActivity : AppCompatActivity() {
                             run {
                                 if (t is HttpException) {
                                     var ex: HttpException = t as HttpException
-                                    showMessage(
-                                        ex.response().errorBody()!!.string() + "",
-                                        Color.RED
-                                    )
+                                    var errMsg=ex.response().errorBody()!!.string() + ""
+                                    if (errMsg != null && errMsg.trim() == "Status :(101,DC)  NextStatus: (Count)"){
+                                        showMessage("" + errMsg?.toString(), Color.GREEN)
+                                    }
+
+                                    else
+                                        showMessage(
+                                            errMsg,
+                                            Color.RED
+                                        )
+
+
                                 } else {
                                     if (t?.message != null)
                                         showMessage(

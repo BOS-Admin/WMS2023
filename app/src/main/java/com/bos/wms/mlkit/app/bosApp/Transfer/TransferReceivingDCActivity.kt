@@ -360,7 +360,7 @@ class TransferReceivingDCActivity : AppCompatActivity() {
                 return "IS00" + upca.substring(2, upca.length - 1)
             }
             fun isValidUPCA(barcode: String): Boolean {
-                if (barcode.length != 12 || !barcode.startsWith("22")) {
+                if (barcode.length != 12 || ( !barcode.startsWith("22") && !barcode.startsWith("23")) ){
                     return false
                 }
 
