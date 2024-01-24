@@ -173,7 +173,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                     lblScanError.text = "$item Cannot be scanned (IN) !!!"
                     textItemScanned.setText("")
                     updatingText = false;
-                    return;
+                    return
                 }
                 Log.i("Ah-Log", "3")
                 Logger.Debug("StockTakeTest", "to show dialog, ItemNo scanned: $item")
@@ -283,7 +283,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
      * @param rfid
      */
     fun CheckDetectedRFIDTag(rfid: String) {
-        Logger.Debug("API", "CheckBarcodePreviousOCR - Detected RFID: $rfid Checking IS Now")
+        Logger.Debug("StockTakeTest", "CheckBarcodePreviousOCR - Detected RFID: $rfid Checking IS Now")
         // RFIDStopRead()
         try {
             Logger.Debug("StockTakeTest", "Start API call - CheckDetectedRFIDTag()")
@@ -327,13 +327,13 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                                 RFIDStartRead()
                                 Logger.Debug("StockTakeTest", "Throwable : $throwable.message")
                                 Logger.Error("API", "CheckDetectedRFIDTag - Error In Response: " + throwable.message)
-                                ShowSnackBar("Server Error: " + throwable.message, Snackbar.LENGTH_LONG)
+                               // ShowSnackBar("Server Error: " + throwable.message, Snackbar.LENGTH_LONG)
                             })
         } catch (e: Throwable) {
             Logger.Debug("StockTakeTest", "Throwable : $e.message")
             Logger.Error("API", "CheckDetectedRFIDTag - Error Connecting: " + e.message)
             CurrentBarcode = null
-            ShowSnackBar("Connection Error Occurred", Snackbar.LENGTH_LONG)
+          //  ShowSnackBar("Connection Error Occurred", Snackbar.LENGTH_LONG)
             RFIDStartRead()
         }
         singleProcessLocked = false
@@ -388,6 +388,10 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                             override fun OutPutTags(model: Tag_Model) {
                                 val key: String = TagModelKey(model)
                                 Logger.Debug("StockTakeTest", "rfid read: $key")
+
+                                if (!singleProcessLocked)
+                                    return
+                                singleProcessLocked = false
                                 if(key.startsWith("3") || key.startsWith("DDD"))
                                 {
                                     Logger.Debug("StockTakeTest", "(3 or DDD) rfid scanned")
@@ -401,14 +405,13 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
 
                                             if (!key.isEmpty()) {
                                                 Logger.Debug("StockTakeTest","checking Lock, current lock status is: $singleProcessLocked")
-                                                if (!singleProcessLocked)
-                                                    return
-                                                singleProcessLocked = false
+
+
                                                 Logger.Debug("StockTakeTest","Process Locked")
                                                 if (lastDetectedRFIDTag !== key) {
                                                     lastDetectedRFIDTag = key
                                                     Logger.Debug("ConnectToRFIDReader", "will check detected rfid tag")
-                                                    Logger.Debug("StockTakeTest", "CheckDetectedRFIDTag( " + key + ")")
+                                                    Logger.Debug("StockTakeTest", "CheckDetectedRFIDTag( " + key + ")");
                                                     CheckDetectedRFIDTag(key)
                                                 }
                                             }
@@ -425,16 +428,46 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                                     Logger.Debug("StockTakeTest", "Normal rfid scanned")
                                     if (!key.isEmpty()) {
                                         Logger.Debug("StockTakeTest","checking Lock, current lock status is: $singleProcessLocked")
-                                        if (!singleProcessLocked)
-                                            return
-                                        singleProcessLocked = false
-                                        Logger.Debug("StockTakeTest","Process Locked")
-                                        if (lastDetectedRFIDTag !== key) {
-                                            lastDetectedRFIDTag = key
-                                            Logger.Debug("ConnectToRFIDReader", "will check detected rfid tag")
-                                            Logger.Debug("StockTakeTest", "CheckDetectedRFIDTag( " + key + ")")
-                                            CheckDetectedRFIDTag(key)
-                                        }
+                                        CheckLotBondedRFID(key,object : RFIDCallback{
+                                            override fun onSuccess() {
+                                                // Handle success case
+                                                Logger.Debug("StockTakeTest", "BBB rfid lotbonded")
+
+
+                                                if (!key.isEmpty()) {
+                                                    Logger.Debug("StockTakeTest","checking Lock, current lock status is: $singleProcessLocked")
+
+
+                                                    Logger.Debug("StockTakeTest","Process Locked")
+                                                    if (lastDetectedRFIDTag !== key) {
+                                                        lastDetectedRFIDTag = key
+                                                        Logger.Debug("ConnectToRFIDReader", "will check detected rfid tag")
+                                                        Logger.Debug("StockTakeTest", "CheckDetectedRFIDTag( " + key + ")");
+                                                        CheckDetectedRFIDTag(key)
+                                                    }
+                                                }
+                                            }
+
+                                            override fun onFailure() {
+                                                // Handle failure case
+                                                Logger.Debug("StockTakeTest", "BBB rfid NOT lotbonded")
+
+                                                runOnUiThread {
+                                                    dialogScan!!.dismiss()
+                                                    updatingText = true
+                                                    textItemScanned.setText("")
+                                                    updatingText = false
+                                                    textItemScanned.isEnabled = true
+                                                    textItemScanned.requestFocus()
+                                                    Logger.Debug("StockTakeTest", "calling show scan Message, MISMATCH")
+                                                    showScanMessage("Mismatch RFID for item: $CurrentBarcode", Color.RED)
+                                                    Log.i("DC-Packing", "Mismatch RFID for item: $CurrentBarcode")
+                                                    RFIDStopRead()
+                                                }
+                                            }
+                                        })
+
+
                                     }
                                 }
 
