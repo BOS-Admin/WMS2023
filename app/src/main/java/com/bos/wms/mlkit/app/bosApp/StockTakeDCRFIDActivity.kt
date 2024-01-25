@@ -79,7 +79,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
     var btnResult: Button? = null
     var dialogScan: AlertDialog? = null
     var tempDialogScan: AlertDialog? = null
-    private var singleProcessLocked = false
+    private var processIsSafe = false
     var CanConnectRFID = false
 
 
@@ -183,7 +183,8 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                     RFIDStartRead()
 
                 CurrentBarcode = item
-                singleProcessLocked = true
+                processIsSafe = true
+                Logger.Debug("StockTakeTest", "locking Process: $processIsSafe" )
                 //block threads to complete after approval (callback)
 
 
@@ -336,8 +337,8 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
           //  ShowSnackBar("Connection Error Occurred", Snackbar.LENGTH_LONG)
             RFIDStartRead()
         }
-        singleProcessLocked = false
-        Logger.Debug("StockTakeTest","unlocked process .. FINISH OF CheckDetectedRFIDTag()")
+        processIsSafe = false
+        Logger.Debug("StockTakeTest","unlocked process .. Lock Status: $processIsSafe")
     }
 
 
@@ -389,9 +390,12 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                                 val key: String = TagModelKey(model)
                                 Logger.Debug("StockTakeTest", "rfid read: $key")
 
-                                if (!singleProcessLocked)
+                                Logger.Debug("StockTakeTest", "Checking safe Status: $processIsSafe" )
+                                if (!processIsSafe)
                                     return
-                                singleProcessLocked = false
+                                
+
+                                Logger.Debug("StockTakeTest", "Locking Process.. safe State: $processIsSafe" )
                                 if(key.startsWith("3") || key.startsWith("DDD"))
                                 {
                                     Logger.Debug("StockTakeTest", "(3 or DDD) rfid scanned")
@@ -399,12 +403,13 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                                     //api to check if rfid lotbonded
                                     CheckLotBondedRFID(key,object : RFIDCallback{
                                         override fun onSuccess() {
+                                            processIsSafe = false
                                             // Handle success case
                                             Logger.Debug("StockTakeTest", "deprived rfid lotbonded")
 
 
                                             if (!key.isEmpty()) {
-                                                Logger.Debug("StockTakeTest","checking Lock, current lock status is: $singleProcessLocked")
+                                                Logger.Debug("StockTakeTest","checking Lock, current lock status is: $processIsSafe")
 
 
                                                 Logger.Debug("StockTakeTest","Process Locked")
@@ -425,9 +430,10 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                                     })
 
                                 }else{
+                                    processIsSafe = false
                                     Logger.Debug("StockTakeTest", "Normal rfid scanned")
                                     if (!key.isEmpty()) {
-                                        Logger.Debug("StockTakeTest","checking Lock, current lock status is: $singleProcessLocked")
+                                        Logger.Debug("StockTakeTest","checking Lock, current lock status is: $processIsSafe")
                                         CheckLotBondedRFID(key,object : RFIDCallback{
                                             override fun onSuccess() {
                                                 // Handle success case
@@ -435,7 +441,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
 
 
                                                 if (!key.isEmpty()) {
-                                                    Logger.Debug("StockTakeTest","checking Lock, current lock status is: $singleProcessLocked")
+                                                    Logger.Debug("StockTakeTest","checking Lock, current lock status is: $processIsSafe")
 
 
                                                     Logger.Debug("StockTakeTest","Process Locked")
