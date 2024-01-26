@@ -3492,6 +3492,7 @@ id txtBox
 id txtFoldingScanItem
 id txtFoldingScanStation
 id txtIPAddress
+id txtIPAddress2
 id txtItem
 id txtItemCode
 id txtItemSerial
