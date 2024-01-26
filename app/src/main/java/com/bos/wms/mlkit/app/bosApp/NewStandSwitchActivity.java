@@ -56,7 +56,7 @@ public class NewStandSwitchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new_stand_switch);
         mStorage = new Storage(this);
         IPAddress = mStorage.getDataString("IPAddress", "192.168.10.82");
-        UserID = mStorage.getDataInt("UserID");
+        UserID = General.getGeneral(this).UserID;
         general = General.getGeneral(this);
         spinner = findViewById(R.id.spnReason);
         btnResult = findViewById(R.id.btnResult);
@@ -110,11 +110,8 @@ public class NewStandSwitchActivity extends AppCompatActivity {
 
                 StandStr = String.valueOf(edtStand.getText());
                 if (!StandNbValidated(StandStr)) {
-                    ableToUpdateStand = false;
-                    standScanned = false;
-                    edtStand.setText("");
+                    ResetStand();
                     setBtnResultState(0, "Scan a valid Stand");
-                    ableToUpdateStand = true;
                 }
                 validateBoxScanned(StandStr, new ApiCallback() {
                     @Override
@@ -130,11 +127,9 @@ public class NewStandSwitchActivity extends AppCompatActivity {
 
                     @Override
                     public void onResultFailure(String errorMessage) {
-                        ableToUpdateStand = false;
-                        standScanned = false;
-                        edtStand.setText("");
+                        ResetStand();
                         setBtnResultState(0, "Scan a valid Stand");
-                        ableToUpdateStand = true;
+
                     }
                 });
             }
@@ -159,11 +154,8 @@ public class NewStandSwitchActivity extends AppCompatActivity {
 
                 BoxStr = String.valueOf(edtBox.getText());
                 if (!BoxNbValidated(BoxStr)) {
-                    ableToUpdateBox = false;
-                    boxScanned = false;
-                    edtBox.setText("");
+                    ResetBox();
                     setBtnResultState(0, "Scan a valid Box");
-                    ableToUpdateBox = true;
                 }
                 validateBoxScanned(BoxStr, new ApiCallback() {
                     @Override
@@ -179,11 +171,8 @@ public class NewStandSwitchActivity extends AppCompatActivity {
 
                     @Override
                     public void onResultFailure(String errorMessage) {
-                        ableToUpdateBox = false;
-                        boxScanned = false;
-                        edtBox.setText("");
+                        ResetBox();
                         setBtnResultState(0, "Scan a valid Box");
-                        ableToUpdateBox = true;
                     }
                 });
             }
@@ -274,6 +263,7 @@ public class NewStandSwitchActivity extends AppCompatActivity {
         try {
 
             Logger.Debug("SwitchDebug", "API -  GetPackReasons");
+            Logger.Debug("SwitchDebug", "UserID: " + UserID);
 
             BasicApi api = APIClient.getInstanceStatic(IPAddress, false).create(BasicApi.class);
             CompositeDisposable compositeDisposable = new CompositeDisposable();
@@ -328,7 +318,9 @@ public class NewStandSwitchActivity extends AppCompatActivity {
 
     }
 
-
+    /**
+     * This method do the Switch Action from Stand to a Box
+     */
     private void DoAction() {
         try {
 
@@ -354,16 +346,20 @@ public class NewStandSwitchActivity extends AppCompatActivity {
                                     if (error.isEmpty()) error = throwable.getMessage();
                                     Logger.Debug("API", "FillBinStockTake - Error In HTTP Response: " + error);
                                     setBtnResultState(0, error);
+                                    RestartView();
                                 } else {
                                     Logger.Error("API", "FillBinStockTake - Error In API Response: " + throwable.getMessage());
                                     setBtnResultState(0, throwable.getMessage());
+                                    RestartView();
                                 }
                             }));
 
         } catch (Throwable e) {
             Logger.Error("API", "FillBinStockTake - Error Connecting: " + e.getMessage());
             setBtnResultState(0, e.getMessage());
+            RestartView();
         }
+
     }
 
 
@@ -418,17 +414,24 @@ public class NewStandSwitchActivity extends AppCompatActivity {
 
 
     private void RestartView(){
+       ResetStand();
+       ResetBox();
+    }
+
+    private void ResetStand(){
         ableToUpdateStand = false;
         standScanned = false;
         edtStand.setText("");
         ableToUpdateStand = true;
+    }
 
+    private void ResetBox(){
         ableToUpdateBox = false;
         boxScanned = false;
         edtBox.setText("");
         ableToUpdateBox = true;
-
     }
+
     public interface ApiCallback {
         void onResultSuccess();
 

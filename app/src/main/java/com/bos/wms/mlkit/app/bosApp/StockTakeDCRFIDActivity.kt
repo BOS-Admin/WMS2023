@@ -71,6 +71,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
     val BluetoothDevicelistStr: MutableList<String> = mutableListOf()
     val BluetoothDevicelistMac: MutableList<String> = mutableListOf()
     var bluetoothAdapter = BluetoothAdapter.getDefaultAdapter()
+    val itemsINMap: HashMap<String, String> = hashMapOf()
 
     var dialogBuilder: AlertDialog.Builder? = null
     var dialogView: View? = null
@@ -78,7 +79,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
     var btnResult: Button? = null
     var dialogScan: AlertDialog? = null
     var tempDialogScan: AlertDialog? = null
-    private var singleProcessLocked = false
+    private var processIsSafe = false
     var CanConnectRFID = false
 
 
@@ -166,14 +167,24 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                     updatingText = false;
                     return;
                 }
+                if (!item.startsWith("IS")) {
+                    Beep()
+                    lblScanError.setTextColor(Color.RED)
+                    lblScanError.text = "$item Cannot be scanned (IN) !!!"
+                    textItemScanned.setText("")
+                    updatingText = false;
+                    return
+                }
                 Log.i("Ah-Log", "3")
-                Logger.Debug("StockTakeTest", "to show dialog ")
+                Logger.Debug("StockTakeTest", "to show dialog, ItemNo scanned: $item")
+
                 dialogScan?.show();
                 if(CanConnectRFID)
                     RFIDStartRead()
 
                 CurrentBarcode = item
-                singleProcessLocked = true
+                processIsSafe = true
+                Logger.Debug("StockTakeTest", "locking Process: $processIsSafe" )
                 //block threads to complete after approval (callback)
 
 
@@ -273,10 +284,10 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
      * @param rfid
      */
     fun CheckDetectedRFIDTag(rfid: String) {
-        Logger.Debug("API", "CheckBarcodePreviousOCR - Detected RFID: $rfid Checking IS Now")
+        Logger.Debug("StockTakeTest", "CheckBarcodePreviousOCR - Detected RFID: $rfid Checking IS Now")
         // RFIDStopRead()
         try {
-            Logger.Debug("StockTakeTest", "Start API call")
+            Logger.Debug("StockTakeTest", "Start API call - CheckDetectedRFIDTag()")
             val api = getInstanceStatic(IPAddress, false).create(BasicApi::class.java)
             val compositeDisposable = CompositeDisposable()
             compositeDisposable.addAll(
@@ -290,6 +301,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                                         CheckRFIDScanResult(it, s
                                         ) { isSuccess ->
                                             if (isSuccess) {
+                                                Logger.Debug("StockTakeTest", "on Success RFID scan result")
                                                 ValidateScan(CurrentBarcode!!)
                                                 textItemScanned.isEnabled = false
 
@@ -300,7 +312,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                                                     updatingText = false
                                                     textItemScanned.isEnabled = true
                                                     textItemScanned.requestFocus()
-                                                    Logger.Debug("StockTakeTest", "calling show scan Message")
+                                                    Logger.Debug("StockTakeTest", "calling show scan Message, MISMATCH")
                                                     showScanMessage("Mismatch RFID for item: $CurrentBarcode", Color.RED)
                                                     Log.i("DC-Packing", "Mismatch RFID for item: $CurrentBarcode")
                                                 }
@@ -309,22 +321,24 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
 
                                     }
 
-                                    Logger.Debug("StockTakeTest", s)
+                                    Logger.Debug("StockTakeTest", "API result: $s")
 
                                 }
                             }) { throwable: Throwable ->
                                 RFIDStartRead()
+                                Logger.Debug("StockTakeTest", "Throwable : $throwable.message")
                                 Logger.Error("API", "CheckDetectedRFIDTag - Error In Response: " + throwable.message)
-                                ShowSnackBar("Server Error: " + throwable.message, Snackbar.LENGTH_LONG)
+                               // ShowSnackBar("Server Error: " + throwable.message, Snackbar.LENGTH_LONG)
                             })
         } catch (e: Throwable) {
+            Logger.Debug("StockTakeTest", "Throwable : $e.message")
             Logger.Error("API", "CheckDetectedRFIDTag - Error Connecting: " + e.message)
             CurrentBarcode = null
-            ShowSnackBar("Connection Error Occurred", Snackbar.LENGTH_LONG)
+          //  ShowSnackBar("Connection Error Occurred", Snackbar.LENGTH_LONG)
             RFIDStartRead()
         }
-        singleProcessLocked = false
-        Logger.Debug("StockTakeTest","unlocked process")
+        processIsSafe = false
+        Logger.Debug("StockTakeTest","unlocked process .. Lock Status: $processIsSafe")
     }
 
 
@@ -333,8 +347,12 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
             RFIDBarcode: String,
             callback: (Boolean) -> Unit
     ) {
-        Logger.Debug("StockTakeTest", "scannedBarcode: " + scannedBarcode + " RFIDBarcode: " + RFIDBarcode)
-        val res: Boolean = scannedBarcode == RFIDBarcode
+        Logger.Debug("StockTakeTest", "scannedBarcode: $scannedBarcode RFIDBarcode: $RFIDBarcode")
+
+        // If RFIDBarcode starts with "IN", prepend it to scannedBarcode
+        val modifiedScannedBarcode = if (RFIDBarcode.startsWith("IN")) "IN$scannedBarcode" else scannedBarcode
+
+        val res: Boolean = modifiedScannedBarcode == RFIDBarcode
 
         if (res) {
             Logger.Debug("StockTakeTest", "Matched")
@@ -343,13 +361,15 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                 RFIDStopRead()
             }
         } else {
+            Logger.Debug("StockTakeTest", "Mismatched")
             runOnUiThread {
                 dialogScan!!.dismiss()
                 RFIDStopRead()
             }
         }
-        return callback(res)
+        callback(res)
     }
+
 
     //region RFID configurations
     private fun ConnectToRFIDReader() {
@@ -368,19 +388,96 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                             override fun PortClosing(s: String) {}
                             override fun OutPutTags(model: Tag_Model) {
                                 val key: String = TagModelKey(model)
-                                if (!key.isEmpty()) {
-                                    Logger.Debug("StockTakeTest","checking Lock, current lock status is: $singleProcessLocked")
-                                    if (!singleProcessLocked)
-                                        return
-                                    singleProcessLocked = false
-                                    Logger.Debug("StockTakeTest","Process Locked")
-                                    if (lastDetectedRFIDTag !== key) {
-                                        lastDetectedRFIDTag = key
-                                        Logger.Debug("ConnectToRFIDReader", "will check detected rfid tag")
-                                        Logger.Debug("StockTakeTest", "CheckDetectedRFIDTag( " + key + ")")
-                                        CheckDetectedRFIDTag(key)
+                                Logger.Debug("StockTakeTest", "rfid read: $key")
+
+                                Logger.Debug("StockTakeTest", "Checking safe Status: $processIsSafe" )
+                                if (!processIsSafe)
+                                    return
+                                
+
+                                Logger.Debug("StockTakeTest", "Locking Process.. safe State: $processIsSafe" )
+                                if(key.startsWith("3") || key.startsWith("DDD"))
+                                {
+                                    Logger.Debug("StockTakeTest", "(3 or DDD) rfid scanned")
+
+                                    //api to check if rfid lotbonded
+                                    CheckLotBondedRFID(key,object : RFIDCallback{
+                                        override fun onSuccess() {
+                                            processIsSafe = false
+                                            // Handle success case
+                                            Logger.Debug("StockTakeTest", "deprived rfid lotbonded")
+
+
+                                            if (!key.isEmpty()) {
+                                                Logger.Debug("StockTakeTest","checking Lock, current lock status is: $processIsSafe")
+
+
+                                                Logger.Debug("StockTakeTest","Process Locked")
+                                                if (lastDetectedRFIDTag !== key) {
+                                                    lastDetectedRFIDTag = key
+                                                    Logger.Debug("ConnectToRFIDReader", "will check detected rfid tag")
+                                                    Logger.Debug("StockTakeTest", "CheckDetectedRFIDTag( " + key + ")");
+                                                    CheckDetectedRFIDTag(key)
+                                                }
+                                            }
+                                        }
+
+                                        override fun onFailure() {
+                                            // Handle failure case
+                                            Logger.Debug("StockTakeTest", "deprived rfid NOT lotbonded")
+
+                                        }
+                                    })
+
+                                }else{
+                                    processIsSafe = false
+                                    Logger.Debug("StockTakeTest", "Normal rfid scanned")
+                                    if (!key.isEmpty()) {
+                                        Logger.Debug("StockTakeTest","checking Lock, current lock status is: $processIsSafe")
+                                        CheckLotBondedRFID(key,object : RFIDCallback{
+                                            override fun onSuccess() {
+                                                // Handle success case
+                                                Logger.Debug("StockTakeTest", "BBB rfid lotbonded")
+
+
+                                                if (!key.isEmpty()) {
+                                                    Logger.Debug("StockTakeTest","checking Lock, current lock status is: $processIsSafe")
+
+
+                                                    Logger.Debug("StockTakeTest","Process Locked")
+                                                    if (lastDetectedRFIDTag !== key) {
+                                                        lastDetectedRFIDTag = key
+                                                        Logger.Debug("ConnectToRFIDReader", "will check detected rfid tag")
+                                                        Logger.Debug("StockTakeTest", "CheckDetectedRFIDTag( " + key + ")");
+                                                        CheckDetectedRFIDTag(key)
+                                                    }
+                                                }
+                                            }
+
+                                            override fun onFailure() {
+                                                // Handle failure case
+                                                Logger.Debug("StockTakeTest", "BBB rfid NOT lotbonded")
+
+                                                runOnUiThread {
+                                                    dialogScan!!.dismiss()
+                                                    updatingText = true
+                                                    textItemScanned.setText("")
+                                                    updatingText = false
+                                                    textItemScanned.isEnabled = true
+                                                    textItemScanned.requestFocus()
+                                                    Logger.Debug("StockTakeTest", "calling show scan Message, MISMATCH")
+                                                    showScanMessage("Mismatch RFID for item: $CurrentBarcode", Color.RED)
+                                                    Log.i("DC-Packing", "Mismatch RFID for item: $CurrentBarcode")
+                                                    RFIDStopRead()
+                                                }
+                                            }
+                                        })
+
+
                                     }
                                 }
+
+
                             }
 
                             override fun OutPutTagsOver() {}
@@ -563,6 +660,27 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
     //endregion
 //endregion
 
+    fun CheckLotBondedRFID(RFID:String,callback: RFIDCallback) {
+        try {
+            api = APIClient.getInstance(IPAddress, false).create(BasicApi::class.java)
+            compositeDisposable.addAll(
+                    api.GETBondedRFID(RFID)
+                            .subscribeOn(Schedulers.io())
+                            // .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe(
+                                    { s ->
+                                       callback.onSuccess()
+
+                                    },
+                                    { t: Throwable? ->
+                                     callback.onFailure()
+                                    }
+                            )
+            )
+        } catch (e: Throwable) {
+           callback.onFailure()
+        }
+    }
 
     fun removeLastItem() {
 
@@ -793,5 +911,10 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
         }
     }
 
+
+    interface RFIDCallback {
+        fun onSuccess()
+        fun onFailure()
+    }
 
 }

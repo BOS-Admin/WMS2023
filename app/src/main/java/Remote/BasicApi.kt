@@ -214,6 +214,10 @@ interface BasicApi {
     @POST("api/StockTake/RackPutAway")
     fun RackPutAway(@Body model:PutAwayModel):Observable<ResponseBody>
 
+    @GET("api/StockTake/GETBondedRFID")
+    fun GETBondedRFID(
+            @Query("RFID") RFID: String
+    ):Observable<ResponseBody>
 
     @POST("api/Transfer/EndProcess")
     fun EndTransferReceivingProcess(
