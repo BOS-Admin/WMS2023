@@ -145,6 +145,7 @@ class LoginActivity : AppCompatActivity() {
                                         Logger.Debug("Version API", "App Version isn't up to date, current App Version: $currentAppVersion highest App Version: $highestVersion")
                                         val fileName = "WMSApp" + s.version + ".apk"
                                         var downloadFileUrl: String = s.apiPath + fileName
+                                        progressDialog!!.cancel()
                                         saveFile(downloadFileUrl, fileName)
 
                                     }else {
@@ -180,6 +181,10 @@ class LoginActivity : AppCompatActivity() {
 
 
     private fun saveFile(url: String, fileName: String) {
+        if(progressDialog != null){
+            progressDialog!!.cancel()
+            progressDialog = null
+        }
         progressDialog = ProgressDialog(this)
         progressDialog!!.setMessage("Downloading $fileName Please Wait...")
         progressDialog!!.isIndeterminate = false
@@ -223,8 +228,8 @@ class LoginActivity : AppCompatActivity() {
                 }
                 finish()
             } catch (e: Exception) {
-                Logger.Error("AutoUpdate", "Error Downloading File, $e")
                 if (progressDialog != null) progressDialog!!.cancel()
+                Logger.Error("AutoUpdate", "Error Downloading File, $e")
             }
         }.start()
     }

@@ -38,6 +38,8 @@ class PackingDCActivity : AppCompatActivity() {
         textBranch = findViewById(R.id.textBranch)
         val general = General.getGeneral(applicationContext)
         IPAddress = general.ipAddress
+        mStorage = Storage(applicationContext)
+        IPAddress2 = mStorage.getDataString("IPAddress2", "192.168.51.20")
         var UserId = general.UserID
         locationId = general.mainLocationID
         textBranch.text = general.fullLocation;
@@ -52,7 +54,7 @@ class PackingDCActivity : AppCompatActivity() {
         textBoxNb = findViewById(R.id.textBox)
         textLastItem = findViewById(R.id.textLastItem)
         textItemScanned = findViewById(R.id.textItemScanned)
-        mStorage = Storage(applicationContext)
+
         PackingTypeId = general.packReasonId
         textBoxNb.text = general.boxNb
         textBranch.isEnabled = false;
@@ -234,7 +236,7 @@ class PackingDCActivity : AppCompatActivity() {
 
             Log.i("Ah-Log", "Packing Reason Id " + general.packReasonId)
             //Logger.Debug("PackingDC","Ping" ,"Packing Reason Id " + general.packReasonId)
-            api = APIClient.getInstance(IPAddress, false).create(BasicApi::class.java)
+            api = APIClient.getInstance(IPAddress, true).create(BasicApi::class.java)
 
 
 //
@@ -251,8 +253,8 @@ class PackingDCActivity : AppCompatActivity() {
             Logger.Debug("PackingDC.log","API Start" ,"ItemSerial: ($ItemSerial) ")
 //            start = System.currentTimeMillis()
 
-
-            api = APIClient.getInstance(IPAddress, false).create(BasicApi::class.java)
+            api = APIClient.getInstance(IPAddress, true).create(BasicApi::class.java)
+            api2 = APIClient.getInstance(IPAddress2, true).create(BasicApi::class.java)
             compositeDisposable.addAll(
                 api.ValidateFillBinItem(
                     itemCode,
@@ -274,21 +276,114 @@ class PackingDCActivity : AppCompatActivity() {
                                 btnPrev.isEnabled = true
                             }
 
-//                            Logger.Debug("PackingDC.log","API Done" ,"ItemSerial: ($ItemSerial) => (${System.currentTimeMillis()-start})")
-
                             if (response != null && response == "success") {
-                                runOnUiThread {
-                                    lblScanError.setTextColor(Color.GREEN)
-                                    lblScanError.text = response
-                                    index = items.size
-                                    items[index] = itemCode
-                                    textLastItem.text = itemCode
-                                    updatingText = true
-                                    textItemScanned.setText("")
-                                    updatingText = false
-                                    textItemScanned.isEnabled = true
-                                    textItemScanned.requestFocus()
-                                    Log.i("DC-Packing", response)
+                                Logger.Debug("PackingTest", "OriginalLocation " + general.mainLocation + " Destination: " + general.destination)
+                                if(general.mainLocation.equals("W1005")){
+
+                                    runOnUiThread {
+                                        btnNext.isEnabled = false
+                                        btnPrev.isEnabled = false
+                                    }
+
+                                    try {
+                                        compositeDisposable.addAll(
+                                            api2.ValidateFillBinItemLocal(itemCode, general.destination).subscribeOn(Schedulers.io())
+                                            .subscribe(
+                                                    { s ->
+                                                        var response = try {
+                                                            s.string()
+                                                        } catch (e: Exception) {
+                                                            e.message.toString()
+                                                        }
+                                                        runOnUiThread {
+                                                            btnNext.isEnabled = true
+                                                            btnPrev.isEnabled = true
+                                                        }
+
+                                                        if (response != null && response == "success") {
+
+                                                            runOnUiThread {
+                                                                lblScanError.setTextColor(Color.GREEN)
+                                                                lblScanError.text = response
+                                                                index = items.size
+                                                                items[index] = itemCode
+                                                                textLastItem.text = itemCode
+                                                                updatingText = true
+                                                                textItemScanned.setText("")
+                                                                updatingText = false
+                                                                textItemScanned.isEnabled = true
+                                                                textItemScanned.requestFocus()
+                                                                Log.i("DC-Packing", response)
+                                                            }
+                                                        } else {
+                                                            runOnUiThread {
+                                                                updatingText = true
+                                                                textItemScanned.setText("")
+                                                                updatingText = false
+                                                                textItemScanned.isEnabled = true
+                                                                textItemScanned.requestFocus()
+                                                                showScanMessage(response, Color.RED)
+                                                                Log.i("DC-Packing", response)
+                                                            }
+                                                        }
+
+                                                    },
+                                                    { t: Throwable? ->
+                                                        run {
+                                                            runOnUiThread {
+                                                                btnNext.isEnabled = true
+                                                                btnPrev.isEnabled = true
+                                                            }
+
+                                                            if (t is HttpException) {
+                                                                var ex: HttpException = t as HttpException
+                                                                showScanMessage(
+                                                                        ex.response().errorBody()!!.string() + " - " + t?.message,
+                                                                        Color.RED
+                                                                )
+
+                                                            } else {
+
+                                                                showScanMessage(t?.message + " (API Error)", Color.RED)
+
+                                                                val error=t?.message + " (API Error)"
+                                                                var start:Long=System.currentTimeMillis();
+                                                                Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n Start Ping ($ItemSerial)")
+                                                            }
+
+                                                            Logger.Debug("PACKING-ERROR-2", t?.message + " Local: " + IPAddress2);
+
+                                                            runOnUiThread {
+                                                                updatingText = true
+                                                                textItemScanned.setText("")
+                                                                updatingText = false
+                                                                textItemScanned.isEnabled = true
+                                                                textItemScanned.requestFocus()
+                                                            }
+                                                        }
+                                                    }
+                                            )
+                                        )
+                                    }
+                                    catch (e: java.lang.Exception) {
+                                        Logger.Debug("PACKING-ERROR", e?.message);
+                                        showScanMessage("Error:" + e?.message, Color.RED)
+                                    }
+
+                                }else {
+                                    runOnUiThread {
+                                        lblScanError.setTextColor(Color.GREEN)
+                                        lblScanError.text = response
+                                        index = items.size
+                                        items[index] = itemCode
+                                        textLastItem.text = itemCode
+                                        updatingText = true
+                                        textItemScanned.setText("")
+                                        updatingText = false
+                                        textItemScanned.isEnabled = true
+                                        textItemScanned.requestFocus()
+                                        Log.i("DC-Packing", response)
+                                    }
                                 }
                             } else {
                                 runOnUiThread {
@@ -315,7 +410,7 @@ class PackingDCActivity : AppCompatActivity() {
                                 if (t is HttpException) {
                                     var ex: HttpException = t as HttpException
                                     showScanMessage(
-                                        ex.response().errorBody()!!.string() + "",
+                                        ex.response().errorBody()!!.string() + " - " + t?.message,
                                         Color.RED
                                     )
 
@@ -329,6 +424,8 @@ class PackingDCActivity : AppCompatActivity() {
 //                                    val x=executeCommand()
 //                                    Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n End Ping ($ItemSerial): => $x => (${System.currentTimeMillis()-start})")
                                 }
+
+                                Logger.Debug("PACKING-ERROR-3", t?.message + " Local: " + IPAddress2);
 
                                 runOnUiThread {
                                     updatingText = true
@@ -378,7 +475,7 @@ class PackingDCActivity : AppCompatActivity() {
                 )
 
 
-            api = APIClient.getInstance(IPAddress, false).create(BasicApi::class.java)
+            api = APIClient.getInstance(IPAddress, true).create(BasicApi::class.java)
             compositeDisposable.addAll(
                 api.FillBinDC(model)
                     .subscribeOn(Schedulers.io())
@@ -519,11 +616,13 @@ class PackingDCActivity : AppCompatActivity() {
     private var locationId: Int = -1
     private lateinit var general: General
     lateinit var api: BasicApi
+    lateinit var api2: BasicApi
     var compositeDisposable = CompositeDisposable()
     lateinit var mStorage: Storage;
     private var items: HashMap<Int, String> = HashMap();
     private var index: Int = -1
     var IPAddress = ""
+    var IPAddress2 = ""
     var updatingText = false;
 
 }

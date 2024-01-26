@@ -32,6 +32,7 @@ public class PopWindowMain {
     private AppCompatEditText txtPricingLineCode;
     private AppCompatEditText txtRFIDMac;
     private AppCompatEditText txtIP;
+    private AppCompatEditText txtIP2;
     private Button btnSave ;
     private LinearLayout layoutFilter;
 
@@ -56,6 +57,7 @@ public class PopWindowMain {
                 layout, null);
         txtPricingLineCode=contentView.findViewById(R.id.txtPricingLineCode);
         txtIP = contentView.findViewById(R.id.txtIPAddress);
+        txtIP2 = contentView.findViewById(R.id.txtIPAddress2);
         txtRFIDMac = contentView.findViewById(R.id.txtRFIDMac);
         txtScaleMac = contentView.findViewById(R.id.txtScaleMac);
         btnSave=contentView.findViewById(R.id.btnSave);
@@ -91,6 +93,7 @@ public class PopWindowMain {
                         storage.saveData("RFIDMac",txtRFIDMac.getText().toString());
                         storage.saveData("WeightMac",txtScaleMac.getText().toString());
                         storage.saveData("IPAddress",txtIP.getText().toString());
+                        storage.saveData("IPAddress2",txtIP2.getText().toString());
                         storage.saveData("PricingLineCode",txtPricingLineCode.getText().toString());
                         break;
                 }
@@ -103,6 +106,7 @@ public class PopWindowMain {
                 storage.saveData("RFIDMac",txtRFIDMac.getText().toString());
                 storage.saveData("WeightMac",txtScaleMac.getText().toString());
                 storage.saveData("IPAddress",txtIP.getText().toString());
+                storage.saveData("IPAddress2",txtIP2.getText().toString());
                 storage.saveData("PricingLineCode",txtPricingLineCode.getText().toString());
                 if (listener != null){
                     listener.onDismissListener(isResetEngine);
@@ -119,7 +123,8 @@ public class PopWindowMain {
         boolean b = storage.getData(BLE_KEY);
 
         txtRFIDMac.setText(storage.getDataString("RFIDMac","BTR-80021070009"));
-        txtIP.setText(storage.getDataString("IPAddress","192.168.10.82"));
+        txtIP.setText(storage.getDataString("IPAddress","192.168.50.20"));
+        txtIP2.setText(storage.getDataString("IPAddress2","192.168.51.20"));
         txtPricingLineCode.setText(storage.getDataString("PricingLineCode","PL001"));
         txtScaleMac.setText(storage.getDataString("WeightMac","58:DA:04:A4:50:14"));
 
