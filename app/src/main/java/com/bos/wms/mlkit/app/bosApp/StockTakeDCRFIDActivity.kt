@@ -397,7 +397,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
 
                                 Logger.Debug("StockTakeTest", "Locking Process.. safe State: $processIsSafe" )
                                 if(key.startsWith("3") || key.startsWith("DDD"))
-                                {
+                                 {
                                     Logger.Debug("StockTakeTest", "(3 or DDD) rfid scanned")
 
                                     //api to check if rfid lotbonded
@@ -804,7 +804,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                 modelItems.add(FillStockTakeDCModelItem(it.value))
 
             var model =
-                    FillStockTakeDCModel(textBoxNb.text.toString(), General.getGeneral(this).UserID, modelItems, PackingTypeId, locationId)
+                    FillStockTakeDCModel(textBoxNb.text.toString(), General.getGeneral(this).UserID, modelItems, PackingTypeId, locationId,true)
 
 
             api = APIClient.getInstance(IPAddress, false).create(BasicApi::class.java)
