@@ -3491,6 +3491,7 @@ int id txtBox 0x7f090321
 int id txtFoldingScanItem 0x7f090322
 int id txtFoldingScanStation 0x7f090323
 int id txtIPAddress 0x7f090324
+int id txtIPAddress2 0x7f090367
 int id txtItem 0x7f090325
 int id txtItemCode 0x7f090326
 int id txtItemSerial 0x7f090327

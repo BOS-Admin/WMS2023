@@ -19,6 +19,7 @@ import android.widget.TextView;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.core.widget.PopupWindowCompat;
 
+import com.bos.wms.mlkit.app.Logger;
 import com.hc.mixthebluetooth.Model.RfidType;
 import com.hc.mixthebluetooth.R;
 import com.hc.mixthebluetooth.Remote.UserPermissions.UserPermissions;
@@ -460,8 +461,8 @@ public class PopWindowMain {
         txtReads.setText(storage.getDataString("Reads","1"));
 
 
-        txtIP.setText(storage.getDataString("IPAddress","192.168.10.82"));
-        txtIP2.setText(storage.getDataString("IPAddressWarehouseManager","192.168.10.82"));
+        txtIP.setText(storage.getDataString("IPAddress","192.168.50.20"));
+        txtIP2.setText(storage.getDataString("IPAddressWarehouseManager","192.168.51.20"));
         txtScaleMac.setText(storage.getDataString("WeightMac","58:DA:04:A4:50:14"));
 
         txtLotBond.setText(storage.getDataString("LotBondStation","58:DA:04"));
