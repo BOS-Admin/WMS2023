@@ -814,6 +814,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                             // .observeOn(AndroidSchedulers.mainThread())
                             .subscribe(
                                     { s ->
+                                        Logger.Debug("StockTakeTest","FillBinStockTake1")
                                         var response = try {
                                             s.string()
                                         } catch (e: Exception) {
@@ -853,6 +854,8 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                             )
             )
         } catch (e: Throwable) {
+            Logger.Debug("StockTakeTest","FillBinStockTake1 .")
+
             showMessage("Error: " + e?.message, Color.RED)
         } finally {
 
