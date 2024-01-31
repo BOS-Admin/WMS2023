@@ -326,7 +326,7 @@ class StockTakeDCActivity : AppCompatActivity() {
                  modelItems.add(FillStockTakeDCModelItem(it.value))
 
             var model=
-                FillStockTakeDCModel (textBoxNb.text.toString(),General.getGeneral(this).UserID,modelItems,PackingTypeId,locationId)
+                FillStockTakeDCModel (textBoxNb.text.toString(),General.getGeneral(this).UserID,modelItems,PackingTypeId,locationId,false)
 
 
             api= APIClient.getInstance(IPAddress,false).create(BasicApi::class.java)

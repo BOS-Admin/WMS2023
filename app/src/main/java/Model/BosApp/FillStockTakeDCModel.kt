@@ -9,6 +9,7 @@ data class FillStockTakeDCModel (
     val itemSerials : List<FillStockTakeDCModelItem>,
     val packingReasonType : Int,
     val locationId : Int,
+    val isRFIDStockTake : Boolean
 )
 
 data class FillStockTakeDCModelItem (
