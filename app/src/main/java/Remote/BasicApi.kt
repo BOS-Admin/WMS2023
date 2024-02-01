@@ -241,6 +241,11 @@ interface BasicApi {
     ): Observable<ResponseBody>
 
 
+    @POST("api/Palette/PalletAssociateBin")
+    fun PalletAssociateBin(@Query("PalletBarcode") PalletBarcode: String,
+                           @Query("BinBarcode") BinBarcode:String,
+                           @Query("LocationID") LocationID:Int,
+                           @Query("UserID") UserID: Int): Observable<ResponseBody>
 
     @GET("api/Transfer/ValidateTransferItem")
     fun ValidateTransferItem(

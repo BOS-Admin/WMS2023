@@ -25,6 +25,12 @@
 
 
             <Button
+                android:id="@+id/btnPalletBinAssociation"
+                style="@style/button_main_menu_style"
+                android:drawableLeft="@drawable/putawaypallet"
+                android:text="INTERNAL Pallet Bin Association"
+                android:visibility="gone"/>
+            <Button
                 android:id="@+id/btnBrandsInToIs"
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/upcpricing"
