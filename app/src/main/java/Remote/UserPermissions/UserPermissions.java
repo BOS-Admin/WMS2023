@@ -25,7 +25,7 @@ public class UserPermissions {
     /**
      * This will be used to validate that the user is using the latest app version
      */
-    public static String AppVersion = "2.2.27";
+    public static String AppVersion = "2.2.28";
 
     /**
      * This will let the backend know the app name of the current application
