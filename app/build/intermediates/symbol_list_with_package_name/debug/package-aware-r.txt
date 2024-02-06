@@ -2869,6 +2869,8 @@ id btnPackingReasonDone
 id btnPaletteBins
 id btnPaletteChecking
 id btnPalletBinAssociation
+id btnPalletRackAssignment
+id btnPalletRackUnAssign
 id btnPause
 id btnPickingDone
 id btnPing
@@ -3277,6 +3279,7 @@ id outward
 id overshoot
 id packed
 id palletBinAssociationActivity
+id palletRackAssignmentActivity
 id parallax
 id parent
 id parentPanel
@@ -3683,6 +3686,7 @@ layout activity_packing_dc
 layout activity_packing_reason
 layout activity_palette_bins
 layout activity_pallet_bin_association
+layout activity_pallet_rack_assignment
 layout activity_pas_brand_ocractivity
 layout activity_pg_pricing
 layout activity_picking

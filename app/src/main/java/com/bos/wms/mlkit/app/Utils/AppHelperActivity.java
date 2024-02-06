@@ -46,12 +46,12 @@ public class AppHelperActivity extends AppCompatActivity {
 
     protected TextView lblResult;
 
-    private int ColorOrange = Color.parseColor("#FFB200");
-    private int ColorGreen = Color.parseColor("#52ac24");
-    private int ColorRed = Color.parseColor("#ef2112");
-    private int ColorBlack = Color.parseColor("#000000");
+    public int HelperColorOrange = Color.parseColor("#FFB200");
+    public int HelperColorGreen = Color.parseColor("#52ac24");
+    public int HelperColorRed = Color.parseColor("#ef2112");
+    public int HelperColorBlack = Color.parseColor("#000000");
 
-    private int ColorWhite = Color.parseColor("#FFFFFF");
+    public int HelperColorWhite = Color.parseColor("#FFFFFF");
 
 
 
@@ -727,17 +727,17 @@ public class AppHelperActivity extends AppCompatActivity {
             public void run() {
                 switch(Color){
                     case BLACK:
-                        btnResult.setBackgroundColor(ColorBlack);
-                        btnResult.setTextColor(ColorWhite);
+                        btnResult.setBackgroundColor(HelperColorBlack);
+                        btnResult.setTextColor(HelperColorWhite);
                         break;
                     case GREEN:
-                        btnResult.setBackgroundColor(ColorGreen);
+                        btnResult.setBackgroundColor(HelperColorGreen);
                         break;
                     case ORANGE:
-                        btnResult.setBackgroundColor(ColorOrange);
+                        btnResult.setBackgroundColor(HelperColorOrange);
                         break;
                     case RED:
-                        btnResult.setBackgroundColor(ColorRed);
+                        btnResult.setBackgroundColor(HelperColorRed);
                         break;
                 }
 
@@ -808,25 +808,25 @@ public class AppHelperActivity extends AppCompatActivity {
                         break;
                     case Success:
                         activityResultButton.setText(title);
-                        activityResultButton.setBackgroundColor(ColorGreen);
+                        activityResultButton.setBackgroundColor(HelperColorGreen);
                         activityResultButton.setVisibility(View.VISIBLE);
                         CreateViewBeatAnimation(activityResultButton, 300, null);
                         break;
                     case Pending:
                         activityResultButton.setText(title);
-                        activityResultButton.setBackgroundColor(ColorOrange);
+                        activityResultButton.setBackgroundColor(HelperColorOrange);
                         activityResultButton.setVisibility(View.VISIBLE);
                         CreateViewBeatAnimation(activityResultButton, 300, null);
                         break;
                     case PendingStageTwo:
                         activityResultButton.setText(title);
-                        activityResultButton.setBackgroundColor(ColorBlack);
+                        activityResultButton.setBackgroundColor(HelperColorBlack);
                         activityResultButton.setVisibility(View.VISIBLE);
                         CreateViewBeatAnimation(activityResultButton, 300, null);
                         break;
                     case Error:
                         activityResultButton.setText(title);
-                        activityResultButton.setBackgroundColor(ColorRed);
+                        activityResultButton.setBackgroundColor(HelperColorRed);
                         activityResultButton.setVisibility(View.VISIBLE);
                         CreateViewBeatAnimation(activityResultButton, 300, null);
                         break;

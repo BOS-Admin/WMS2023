@@ -4,16 +4,16 @@
         "source": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_print_prices.xml"
     },
     {
-        "merged": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
         "merged": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_content_new_item_pricing.xml.flat",
         "source": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_new_item_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_activity_shipment_pallete_carton_count.xml.flat",
@@ -392,6 +392,10 @@
         "source": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable\\edittext_rounded_corners.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_pallet_rack_assignment.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_pallet_rack_assignment.xml"
+    },
+    {
         "merged": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable_rounded_corner_red.xml.flat",
         "source": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable\\rounded_corner_red.xml"
     },
@@ -448,10 +452,6 @@
         "source": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_fragment_home.xml.flat",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/fragment_home.xml"
-    },
-    {
         "merged": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable_brandocr.xml.flat",
         "source": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable\\brandocr.xml"
     },
@@ -502,6 +502,10 @@
     {
         "merged": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\drawable_baseline_print_icon.xml.flat",
         "source": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\drawable\\baseline_print_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_activity_pallet_rack_assignment.xml.flat",
+        "source": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_pallet_rack_assignment.xml"
     },
     {
         "merged": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-merged_res-60:\\layout_scan_upcs_item.xml.flat",

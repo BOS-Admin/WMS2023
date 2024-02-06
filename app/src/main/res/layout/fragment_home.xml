@@ -39,9 +39,23 @@
             <Button
                 android:id="@+id/btnPutAway"
                 style="@style/button_main_menu_style"
-                android:drawableLeft="@drawable/upcpricing"
+                android:drawableLeft="@drawable/putawaypallet"
                 android:text="Put Away"
                 android:visibility="gone"/>
+            <Button
+                android:id="@+id/btnPalletRackAssignment"
+                style="@style/button_main_menu_style"
+                android:drawableLeft="@drawable/putawaypallet"
+                android:text="Pallet Rack Assignment"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnPalletRackUnAssign"
+                style="@style/button_main_menu_style"
+                android:drawableLeft="@drawable/putawaypallet"
+                android:text="Pallet Rack UnAsssign"
+                android:visibility="gone"/>
+
             <Button
                 android:id="@+id/btnRepriceClassB"
                 style="@style/button_main_menu_style"

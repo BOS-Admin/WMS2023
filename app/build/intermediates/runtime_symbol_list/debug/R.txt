@@ -2868,6 +2868,8 @@ int id btnPackingReasonDone 0x7f0900b2
 int id btnPaletteBins 0x7f0900b3
 int id btnPaletteChecking 0x7f0900b4
 int id btnPalletBinAssociation 0x7f0900b5
+int id btnPalletRackAssignment 0x7f09036e
+int id btnPalletRackUnAssign 0x7f09036f
 int id btnPause 0x7f0900b6
 int id btnPickingDone 0x7f0900b7
 int id btnPing 0x7f0900b8
@@ -3276,6 +3278,7 @@ int id outward 0x7f09024a
 int id overshoot 0x7f09024b
 int id packed 0x7f09024c
 int id palletBinAssociationActivity 0x7f09024d
+int id palletRackAssignmentActivity 0x7f090370
 int id parallax 0x7f09024e
 int id parent 0x7f09024f
 int id parentPanel 0x7f090250
@@ -3682,6 +3685,7 @@ int layout activity_packing_dc 0x7f0c0030
 int layout activity_packing_reason 0x7f0c0031
 int layout activity_palette_bins 0x7f0c0032
 int layout activity_pallet_bin_association 0x7f0c0033
+int layout activity_pallet_rack_assignment 0x7f0c00cf
 int layout activity_pas_brand_ocractivity 0x7f0c0034
 int layout activity_pg_pricing 0x7f0c0035
 int layout activity_picking 0x7f0c0036
