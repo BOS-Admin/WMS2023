@@ -46,6 +46,24 @@ interface BasicApi {
         @Query("allowRackOverride") allowRackOverride: Boolean
     ): Observable<Boolean>
 
+    @GET("api/putAway/GetBinRackAssignment")
+    fun GetBinRackAssignment(
+            @Query("BinBarcode") BinBarcode: String,
+            @Query("UserID") UserID: Int
+    ): Observable<ResponseBody>
+
+    @GET("api/putAway/RemoveBinFromRack")
+    fun RemoveBinFromRack(
+            @Query("BinBarcode") BinBarcode: String,
+            @Query("UserID") UserID: Int
+    ): Observable<ResponseBody>
+
+    @GET("api/putAway/ValidateRack")
+    fun ValidatePutAwayRack(
+            @Query("Rack") Rack: String,
+            @Query("UserID") UserID: Int
+    ): Observable<RackValidationModel>
+
     @GET("api/putAway/validateClassBPutAway")
     fun ValidateClassBPutAway(
         @Query("binCode") bin: String,
@@ -241,6 +259,11 @@ interface BasicApi {
     ): Observable<ResponseBody>
 
 
+    @POST("api/Palette/PalletAssociateBin")
+    fun PalletAssociateBin(@Query("PalletBarcode") PalletBarcode: String,
+                           @Query("BinBarcode") BinBarcode:String,
+                           @Query("LocationID") LocationID:Int,
+                           @Query("UserID") UserID: Int): Observable<ResponseBody>
 
     @GET("api/Transfer/ValidateTransferItem")
     fun ValidateTransferItem(

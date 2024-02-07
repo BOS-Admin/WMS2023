@@ -34,6 +34,12 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".PalletRackAssignmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PalletBinAssociationActivity"
+            android:exported="false" />
+        <activity
             android:name=".app.bosApp.NewStandSwitchActivity"
             android:exported="false" />
         <activity
@@ -95,6 +101,15 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".app.PasBrandOCRActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.PalletBinAssociationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.PalletRackAssignmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.PalletRackUnAssignActivity"
             android:exported="false" />
         <activity
             android:name=".app.BrandOCRActivity"

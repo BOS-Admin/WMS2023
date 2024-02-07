@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bos.wms.mlkit.General;
 import com.bos.wms.mlkit.R;
+import com.bos.wms.mlkit.app.Utils.ActivityActionsResultState;
 import com.bos.wms.mlkit.app.bosApp.PackingDCActivity;
 import com.bos.wms.mlkit.customView.UPCCardDoneView;
 import com.bos.wms.mlkit.storage.Storage;
@@ -71,7 +72,7 @@ General general;
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
         Storage mStorage = new Storage(this);
-        IPAddress = mStorage.getDataString("IPAddress2", "192.168.50.20");
+        IPAddress = mStorage.getDataString("IPAddress", "192.168.50.20");
         general = General.getGeneral(getApplicationContext());
 
         setContentView(R.layout.activity_put_away);
@@ -536,10 +537,9 @@ General general;
                 UpdateResult("Failed to determine box type",false);
                 return;
             }
-            if(currentType.getId()==1)
-                postPalettePutAway();
-            else
-                postPutAway(rack);
+            else {
+                ValidatePutAwayRack(rack);
+            }
 
 
         }
@@ -610,7 +610,63 @@ General general;
         }
     }
 
+    public void ValidatePutAwayRack(String rack){
+        try {
 
+            Logger.Debug("API", "ValidatePutAwayRack - Validating Rack '" + rack + "'");
+
+            BasicApi api = APIClient.getNewInstanceStatic(IPAddress,60).create(BasicApi.class);
+            CompositeDisposable compositeDisposable = new CompositeDisposable();
+
+            compositeDisposable.addAll(
+                    api.ValidatePutAwayRack(rack, General.getGeneral(this).UserID)
+                            .subscribeOn(Schedulers.io())
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe((s) -> {
+                                if(s != null){
+                                    Logger.Debug("API", "ValidatePutAwayRack - Returned: " + s.toString());
+                                    if(s.getStatus() == 1){
+                                        runOnUiThread(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                if(currentType.getId()==1)
+                                                    postPalettePutAway();
+                                                else
+                                                    postPutAway(rack);
+                                            }
+                                        });
+                                    }else {
+                                        runOnUiThread(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                UpdateResult("You Must Remove Bin (" + s.getPalletBarcode() + ") Of VC (" + s.getPalletVendorCategory() +
+                                                        ") From Rack (" + s.getRackCode() + ") First!",false);
+                                            }
+                                        });
+                                    }
+                                    Beep();
+                                }
+                            }, (throwable) -> {
+                                String error = throwable.toString();
+                                if(throwable instanceof HttpException){
+                                    HttpException ex = (HttpException) throwable;
+                                    error = ex.response().errorBody().string();
+                                    if(error.isEmpty()) error = throwable.getMessage();
+                                    Logger.Debug("API", "ValidatePutAwayRack - Error In HTTP Response: " + error);
+                                }else {
+                                    Logger.Error("API", "ValidatePutAwayRack - Error In API Response: " + throwable.getMessage());
+                                }
+                                Beep();
+                                showMessage("Error",error, false);
+                            }));
+
+
+        }catch (Exception ex){
+            Beep();
+            Logger.Error("API", "ValidatePutAwayRack - Error Connecting: " + ex.getMessage());
+            showMessage("Error",ex.getMessage(), false);
+        }
+    }
 
     private void Beep() {
         new ToneGenerator(AudioManager.STREAM_MUSIC, ToneGenerator.MAX_VOLUME).startTone(ToneGenerator.TONE_SUP_ERROR, 300);

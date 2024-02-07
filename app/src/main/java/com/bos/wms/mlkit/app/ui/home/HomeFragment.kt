@@ -69,7 +69,9 @@ class HomeFragment : Fragment() {
             UserPermissions.ValidatePermission("WMSApp.StoreRepriceCount", root.btnStoreRepriceCount);
             UserPermissions.ValidatePermission("WMSApp.PrintClassBPrices", root.btnPrintReprice);
             UserPermissions.ValidatePermission("WMSApp.Ping", root.btnPing);
-
+            UserPermissions.ValidatePermission("WMSApp.PalletBinAssociation", root.btnPalletBinAssociation);
+            UserPermissions.ValidatePermission("WMSApp.PalletRackAssignment", root.btnPalletRackAssignment);
+            UserPermissions.ValidatePermission("WMSApp.PalletRackUnAssign", root.btnPalletRackUnAssign);
             /* Transfer Preparation Order */
             UserPermissions.ValidatePermission("WMSApp.TPO.MainMenu", root.btnTPOMainActivity);
 
@@ -101,6 +103,9 @@ class HomeFragment : Fragment() {
                 UserPermissions.ValidatePermission("WMSApp.StoreRepriceCount", root.btnStoreRepriceCount);
                 UserPermissions.ValidatePermission("WMSApp.PrintClassBPrices", root.btnPrintReprice);
                 UserPermissions.ValidatePermission("WMSApp.Ping", root.btnPing);
+                UserPermissions.ValidatePermission("WMSApp.PalletBinAssociation", root.btnPalletBinAssociation);
+                UserPermissions.ValidatePermission("WMSApp.PalletRackAssignment", root.btnPalletRackAssignment);
+                UserPermissions.ValidatePermission("WMSApp.PalletRackUnAssign", root.btnPalletRackUnAssign);
 
                 /* Transfer Preparation Order */
                 UserPermissions.ValidatePermission("WMSApp.TPO.MainMenu", root.btnTPOMainActivity);
@@ -135,6 +140,24 @@ class HomeFragment : Fragment() {
             val intent = Intent (getActivity(), PingActivity::class.java)
             startActivity(intent)
         }
+
+        root.btnPalletBinAssociation.setOnClickListener {
+            val intent = Intent (getActivity(), PalletBinAssociationActivity::class.java)
+            startActivity(intent)
+        }
+
+        root.btnPalletRackAssignment.setOnClickListener {
+            val intent = Intent (getActivity(), PalletRackAssignmentActivity::class.java)
+            startActivity(intent)
+        }
+
+        root.btnPalletRackUnAssign.setOnClickListener {
+            val intent = Intent (getActivity(), PalletRackUnAssignActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
         root.btnTPOMainActivity.setOnClickListener {
             ProceedTPOMainActivity()
         }

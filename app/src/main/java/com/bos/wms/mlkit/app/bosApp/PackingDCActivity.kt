@@ -253,8 +253,8 @@ class PackingDCActivity : AppCompatActivity() {
             Logger.Debug("PackingDC.log","API Start" ,"ItemSerial: ($ItemSerial) ")
 //            start = System.currentTimeMillis()
 
-            api = APIClient.getInstance(IPAddress, true).create(BasicApi::class.java)
-            api2 = APIClient.getInstance(IPAddress2, true).create(BasicApi::class.java)
+            api = APIClient.getInstance(IPAddress, false).create(BasicApi::class.java)
+            api2 = APIClient.getNewInstanceStatic(IPAddress2).create(BasicApi::class.java)
             compositeDisposable.addAll(
                 api.ValidateFillBinItem(
                     itemCode,

@@ -65,6 +65,15 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final Button btnPASBrandOCR;
 
   @NonNull
+  public final Button btnPalletBinAssociation;
+
+  @NonNull
+  public final Button btnPalletRackAssignment;
+
+  @NonNull
+  public final Button btnPalletRackUnAssign;
+
+  @NonNull
   public final Button btnPing;
 
   @NonNull
@@ -109,12 +118,13 @@ public final class FragmentHomeBinding implements ViewBinding {
       @NonNull Button btnMenuShipmentCartonReceivingV2,
       @NonNull Button btnMenuShipmentPalleteReceiving,
       @NonNull Button btnMenuShipmentReceivingPalleteCount, @NonNull Button btnPASBrandOCR,
-      @NonNull Button btnPing, @NonNull Button btnPrintReprice, @NonNull Button btnPutAway,
-      @NonNull Button btnRepriceClassB, @NonNull Button btnSerialGenerator,
-      @NonNull Button btnSerialMissing, @NonNull Button btnStoreRepriceCount,
-      @NonNull Button btnTPOMainActivity, @NonNull Button btnUPCPricing,
-      @NonNull Button btnUPCPricingOverride, @NonNull Button btnUPCRecognitionPricing,
-      @NonNull LinearLayout homeFragmentLayout) {
+      @NonNull Button btnPalletBinAssociation, @NonNull Button btnPalletRackAssignment,
+      @NonNull Button btnPalletRackUnAssign, @NonNull Button btnPing,
+      @NonNull Button btnPrintReprice, @NonNull Button btnPutAway, @NonNull Button btnRepriceClassB,
+      @NonNull Button btnSerialGenerator, @NonNull Button btnSerialMissing,
+      @NonNull Button btnStoreRepriceCount, @NonNull Button btnTPOMainActivity,
+      @NonNull Button btnUPCPricing, @NonNull Button btnUPCPricingOverride,
+      @NonNull Button btnUPCRecognitionPricing, @NonNull LinearLayout homeFragmentLayout) {
     this.rootView = rootView;
     this.btnBolRecognition = btnBolRecognition;
     this.btnBrandOCR = btnBrandOCR;
@@ -131,6 +141,9 @@ public final class FragmentHomeBinding implements ViewBinding {
     this.btnMenuShipmentPalleteReceiving = btnMenuShipmentPalleteReceiving;
     this.btnMenuShipmentReceivingPalleteCount = btnMenuShipmentReceivingPalleteCount;
     this.btnPASBrandOCR = btnPASBrandOCR;
+    this.btnPalletBinAssociation = btnPalletBinAssociation;
+    this.btnPalletRackAssignment = btnPalletRackAssignment;
+    this.btnPalletRackUnAssign = btnPalletRackUnAssign;
     this.btnPing = btnPing;
     this.btnPrintReprice = btnPrintReprice;
     this.btnPutAway = btnPutAway;
@@ -262,6 +275,24 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnPalletBinAssociation;
+      Button btnPalletBinAssociation = ViewBindings.findChildViewById(rootView, id);
+      if (btnPalletBinAssociation == null) {
+        break missingId;
+      }
+
+      id = R.id.btnPalletRackAssignment;
+      Button btnPalletRackAssignment = ViewBindings.findChildViewById(rootView, id);
+      if (btnPalletRackAssignment == null) {
+        break missingId;
+      }
+
+      id = R.id.btnPalletRackUnAssign;
+      Button btnPalletRackUnAssign = ViewBindings.findChildViewById(rootView, id);
+      if (btnPalletRackUnAssign == null) {
+        break missingId;
+      }
+
       id = R.id.btnPing;
       Button btnPing = ViewBindings.findChildViewById(rootView, id);
       if (btnPing == null) {
@@ -334,8 +365,9 @@ public final class FragmentHomeBinding implements ViewBinding {
           btnBrandsInToIs, btnEmptyBox, btnLocationCheck, btnMenuFillPallete, btnMenuItemPricing,
           btnMenuPGPricing, btnMenuPicking, btnMenuPutAwayPallete, btnMenuShipmentCartonReceiving,
           btnMenuShipmentCartonReceivingV2, btnMenuShipmentPalleteReceiving,
-          btnMenuShipmentReceivingPalleteCount, btnPASBrandOCR, btnPing, btnPrintReprice,
-          btnPutAway, btnRepriceClassB, btnSerialGenerator, btnSerialMissing, btnStoreRepriceCount,
+          btnMenuShipmentReceivingPalleteCount, btnPASBrandOCR, btnPalletBinAssociation,
+          btnPalletRackAssignment, btnPalletRackUnAssign, btnPing, btnPrintReprice, btnPutAway,
+          btnRepriceClassB, btnSerialGenerator, btnSerialMissing, btnStoreRepriceCount,
           btnTPOMainActivity, btnUPCPricing, btnUPCPricingOverride, btnUPCRecognitionPricing,
           homeFragmentLayout);
     }

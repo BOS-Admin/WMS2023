@@ -148,7 +148,7 @@
     <TextView
         android:id="@id/lblResult"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:gravity="center"
         android:text="Result"

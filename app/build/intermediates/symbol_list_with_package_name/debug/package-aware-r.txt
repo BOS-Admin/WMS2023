@@ -2868,6 +2868,9 @@ id btnPASBrandOCR
 id btnPackingReasonDone
 id btnPaletteBins
 id btnPaletteChecking
+id btnPalletBinAssociation
+id btnPalletRackAssignment
+id btnPalletRackUnAssign
 id btnPause
 id btnPickingDone
 id btnPing
@@ -2952,6 +2955,7 @@ id confirmationYes
 id constraint
 id constraintLayout
 id constraintLayout2
+id constraintLayout4
 id container
 id content
 id contentPanel
@@ -3036,6 +3040,7 @@ id fitXY
 id fixed
 id flex_end
 id flex_start
+id flexboxLayout
 id flexboxLayout2
 id flip
 id floating
@@ -3273,6 +3278,8 @@ id outline
 id outward
 id overshoot
 id packed
+id palletBinAssociationActivity
+id palletRackAssignmentActivity
 id parallax
 id parent
 id parentPanel
@@ -3318,10 +3325,12 @@ id scanBoxesTxt
 id scanUPCSButton
 id scanUPCSHelpText
 id scanUPCsForBolActivityLayout
+id scannedBag
 id scannedItemSerial
 id scannedItemUPC
 id scannedItemsCount
 id scannedItemsListView
+id scannedPallet
 id scannedUPCsList
 id screen
 id scroll
@@ -3676,6 +3685,8 @@ layout activity_packing
 layout activity_packing_dc
 layout activity_packing_reason
 layout activity_palette_bins
+layout activity_pallet_bin_association
+layout activity_pallet_rack_assignment
 layout activity_pas_brand_ocractivity
 layout activity_pg_pricing
 layout activity_picking
