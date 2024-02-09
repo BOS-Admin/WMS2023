@@ -100,7 +100,7 @@ class CheckingActivity : AppCompatActivity() {
                     updatingText = false;
                     return;
                 }
-                if(isValidUPCA(item))
+                if(!item.startsWith("220") && isValidUPCA(item))
                     item = convertToIS(item)
 
                 if (items.containsValue(item)) {
