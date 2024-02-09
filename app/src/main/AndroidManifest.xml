@@ -235,6 +235,11 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
+            android:name=".app.bosApp.ReceivingActivity"
+            android:label="@string/title_activity_receiving"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
             android:name=".app.bosApp.PaletteBinsMainActivity"
             android:label="Palette Bins "
             android:theme="@style/AppTheme.NoActionBar"
