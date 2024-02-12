@@ -2830,6 +2830,7 @@ id btnBolRecognition
 id btnBrandOCR
 id btnBrandsInToIs
 id btnC
+id btnCancel
 id btnCapture
 id btnChange
 id btnChecking
