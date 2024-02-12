@@ -8,9 +8,9 @@ val Count:Int,
 val PackReasonID:Int,
 val DateAdded:String,
 val BinBarcode:String,
-val TransferStatus:Int,
-val TransferNextStatus:String,
+var TransferStatus:Int,
+var TransferNextStatus:String,
 val CurrentTransferCode:String,
-val Received:Int
+var Received:Int
 
     )

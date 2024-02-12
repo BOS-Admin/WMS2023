@@ -60,6 +60,7 @@ public class General {
     public Integer transactionType=-1;
 
     public String transferNavNo="" ;
+    public boolean isReceiving=false ;
 
 
     /**
@@ -103,6 +104,7 @@ public class General {
             stockType=sp.getInt("StockType",-1);
             operationType=sp.getInt("OperationType",-1);
             transactionType=sp.getInt("TransactionType",-1);
+            isReceiving=sp.getBoolean("IsReceiving",false);
 
 
 
@@ -159,6 +161,8 @@ public class General {
             sp.putInt("StockType",stockType);
             sp.putInt("OperationType",operationType);
             sp.putInt("TransactionType",transactionType);
+            sp.putBoolean("IsReceiving",isReceiving);
+
             sp.commit();
         } catch (Exception e) {
             Log.e("General", "exception reading preferences: " + e, e);

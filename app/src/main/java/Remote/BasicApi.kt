@@ -284,6 +284,9 @@ interface BasicApi {
     @GET("/api/Transfer/GetBinInfo")
     fun GetBinTransferInfo(
         @Query("binBarcode") binBarcode: String,
+        @Query("UserId") UserId: Int,
+        @Query("toLocation") toLocation: String,
+
     ): Observable<BinModelItem2>
 
     @GET("api/Transfer/GetTransferBins")
@@ -426,7 +429,8 @@ interface BasicApi {
     fun ValidateBinForChecking(
         @Query("BinBarcode") BinBarcode: String,
         @Query("UserID") UserID: Int,
-        @Query("LocationId") LocationId: Int
+        @Query("LocationId") LocationId: Int,
+        @Query("IsReceiving") IsReceiving: Boolean
     ): Observable<ResponseBody>
     @GET("api/Palette/ValidatePaletteForChecking")
     fun ValidatePaletteForChecking(

@@ -154,7 +154,7 @@ lblResult.setText(branch);
             }
 
             UPCAHelper helper =new UPCAHelper();
-            if(helper.isValidUPCA(item))
+            if(  !item.startsWith("220") && helper.isValidUPCA(item))
                 item = helper.convertToIS(item);
 
             if(isNumeric(item)){
