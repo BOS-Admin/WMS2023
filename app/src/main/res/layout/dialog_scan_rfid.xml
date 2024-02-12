@@ -24,6 +24,13 @@
         android:backgroundTint="@color/black"
         android:text="Waiting for RFID Scan" />
 
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/custom_red"
+        android:text="Cancel" />
+
 
 </LinearLayout>
 
