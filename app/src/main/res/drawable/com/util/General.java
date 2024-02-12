@@ -36,7 +36,7 @@ public class General {
     public DeviceModule Device;
     public Integer UserID = 0;
     public Integer FloorID = 0;
-    public String AppVersion = "App Version 2.2.26 25/1/2024";
+    public String AppVersion = "App Version 2.2.29 25/1/2024";
     int interval = 3600;    // when there's no activity
 
     public PackReasonModelItem currentPackReason = null;
