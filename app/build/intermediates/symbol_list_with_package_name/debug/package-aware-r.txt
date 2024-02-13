@@ -2770,6 +2770,7 @@ id activity_chooser_view_content
 id activity_packing_reason
 id activity_paking
 id activity_printer_selection
+id activity_receiving
 id activity_scan_rfid
 id add
 id adjust_height
@@ -2866,6 +2867,7 @@ id btnModifyTPOBins
 id btnNext
 id btnPASBrandOCR
 id btnPackingReasonDone
+id btnPaletteBinReceiving
 id btnPaletteBins
 id btnPaletteChecking
 id btnPalletBinAssociation
@@ -3695,6 +3697,7 @@ layout activity_print_prices
 layout activity_printer_selection
 layout activity_put_away
 layout activity_putawaypallete
+layout activity_receiving
 layout activity_reprice
 layout activity_reprice_count
 layout activity_scan_container
@@ -4039,6 +4042,7 @@ string title_activity_packing_reason
 string title_activity_picking
 string title_activity_printer_selection
 string title_activity_put_away
+string title_activity_receiving
 string title_activity_scan_box_stock_dc
 string title_activity_scan_checking
 string title_activity_scan_container
