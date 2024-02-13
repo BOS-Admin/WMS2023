@@ -67,6 +67,9 @@ class ScanBinForCheckingActivity : AppCompatActivity() {
                 title = "Scan Palette Bin";
                 lblDescription.text="Please scan your barcode and the palette bin barcode"
                 lblBox.text="Palette Bin"
+                if(isReceiving)
+                    title = "Scan Palette Bin (Receiving)"
+
 
             }
             else -> {
