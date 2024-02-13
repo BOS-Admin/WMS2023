@@ -25,6 +25,9 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final Button btnCount;
 
   @NonNull
+  public final Button btnReceiving;
+
+  @NonNull
   public final Button btnStandSwitch;
 
   @NonNull
@@ -43,11 +46,12 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final EditText textUser;
 
   private FragmentDashboardBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnCount,
-      @NonNull Button btnStandSwitch, @NonNull Button btnStockTake, @NonNull Button btnTransfer,
-      @NonNull LinearLayout layoutDashboard, @NonNull EditText textBranch,
-      @NonNull EditText textUser) {
+      @NonNull Button btnReceiving, @NonNull Button btnStandSwitch, @NonNull Button btnStockTake,
+      @NonNull Button btnTransfer, @NonNull LinearLayout layoutDashboard,
+      @NonNull EditText textBranch, @NonNull EditText textUser) {
     this.rootView = rootView;
     this.btnCount = btnCount;
+    this.btnReceiving = btnReceiving;
     this.btnStandSwitch = btnStandSwitch;
     this.btnStockTake = btnStockTake;
     this.btnTransfer = btnTransfer;
@@ -89,6 +93,12 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnReceiving;
+      Button btnReceiving = ViewBindings.findChildViewById(rootView, id);
+      if (btnReceiving == null) {
+        break missingId;
+      }
+
       id = R.id.btnStandSwitch;
       Button btnStandSwitch = ViewBindings.findChildViewById(rootView, id);
       if (btnStandSwitch == null) {
@@ -125,8 +135,8 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentDashboardBinding((ConstraintLayout) rootView, btnCount, btnStandSwitch,
-          btnStockTake, btnTransfer, layoutDashboard, textBranch, textUser);
+      return new FragmentDashboardBinding((ConstraintLayout) rootView, btnCount, btnReceiving,
+          btnStandSwitch, btnStockTake, btnTransfer, layoutDashboard, textBranch, textUser);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

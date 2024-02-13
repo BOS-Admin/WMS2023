@@ -70,6 +70,7 @@ class DashboardFragment : Fragment() {
         root.btnCount.setOnClickListener {
             general.operationType = 100
             general.isReceiving=false;
+            general.packType=="Box"
             general.saveGeneral(context?.applicationContext)
             val intent = Intent(activity, PackingActivity::class.java)
             startActivity(intent)
@@ -77,6 +78,7 @@ class DashboardFragment : Fragment() {
         root.btnStockTake.setOnClickListener {
             general.operationType = 102
             general.isReceiving=false;
+            general.packType=="Box"
             general.saveGeneral(context?.applicationContext)
             val intent = Intent(activity, StockTakeActivity::class.java)
             startActivity(intent)
@@ -84,16 +86,19 @@ class DashboardFragment : Fragment() {
 
         root.btnTransfer.setOnClickListener {
             general.isReceiving=false;
+            general.packType=="Box"
             general.saveGeneral(context?.applicationContext)
             val intent = Intent(activity, TransferActivity::class.java)
             startActivity(intent)
         }
         root.btnStandSwitch.setOnClickListener {
+            general.packType=="Box"
             val intent = Intent(activity, NewStandSwitchActivity::class.java)
             startActivity(intent)
         }
         root.btnReceiving.setOnClickListener {
             general.isReceiving=true;
+            general.packType=="Box"
             general.saveGeneral(context?.applicationContext)
             val intent = Intent(activity, ReceivingActivity::class.java)
             startActivity(intent)

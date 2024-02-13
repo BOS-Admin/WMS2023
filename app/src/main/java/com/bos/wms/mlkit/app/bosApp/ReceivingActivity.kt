@@ -37,6 +37,7 @@ class ReceivingActivity : AppCompatActivity() {
 
 
         findViewById<Button>(R.id.btnPaletteBinReceiving).setOnClickListener{
+            General.getGeneral(applicationContext).packType="PaletteBin"
             General.getGeneral(applicationContext).isReceiving=true;
             General.getGeneral(applicationContext).saveGeneral(applicationContext)
             val intent = Intent (applicationContext, ScanBinForCheckingActivity::class.java)

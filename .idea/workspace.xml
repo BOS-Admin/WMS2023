@@ -9,14 +9,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ae77340-5efb-46bd-99d6-8632db512b26" name="Changes" comment="set cancel for stockTake RFID">
+    <list default="true" id="8ae77340-5efb-46bd-99d6-8632db512b26" name="Changes" comment="220 is UPC">
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +27,7 @@
       <option value="module" />
     </option>
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[510221121960]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[510221121947]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -85,7 +84,7 @@
   </component>
   <component name="GenerateSignedApkSettings">
     <option name="EXPORT_PRIVATE_KEY" value="false" />
-    <option name="KEY_STORE_PATH" value="C:\Users\m.othman\Desktop\RFID App And WMS V2\WMSAppSignedKey.jks" />
+    <option name="KEY_STORE_PATH" value="C:\Users\A.HAYDAR\Desktop\RFID App And WMS V2\WMSAppSignedKey.jks" />
     <option name="KEY_ALIAS" value="apk-key" />
     <option name="REMEMBER_PASSWORDS" value="true" />
     <option name="BUILD_TARGET_KEY" value="apk" />
@@ -93,7 +92,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="TestMaster" />
+        <entry key="$PROJECT_DIR$" value="Abdullah6" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -116,17 +115,16 @@
   &quot;keyToString&quot;: {
     &quot;ApkExportedModule&quot;: &quot;WMS2023.app&quot;,
     &quot;BundleExportedModule&quot;: &quot;WMS2023.app&quot;,
-    &quot;ExportApk.ApkPathForWMS2023.app&quot;: &quot;C:\\Users\\m.othman\\StudioProjects\\WMS2023&quot;,
+    &quot;ExportApk.ApkPathForWMS2023.app&quot;: &quot;C:\\Users\\A.HAYDAR\\StudioProjects\\WMS2023\\app&quot;,
     &quot;ExportBundle.BundlePathForWMS2023.app&quot;: &quot;C:\\Users\\m.serhan\\StudioProjects\\WMS2023\\app&quot;,
     &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;android-custom-viewC:/Users/A.HAYDAR/StudioProjects/WMS2023/app/src/main/java/com/bos/wms/mlkit/customView/UPCDoneView.kt_SELECTED&quot;: &quot;UPCCardDoneView&quot;,
     &quot;android-custom-viewC:/Users/A.HAYDAR/StudioProjects/WMS2023/app/src/main/res/drawable/com/hc/mixthebluetooth/customView/UPCCardDoneView.kt_SELECTED&quot;: &quot;UPCCardDoneView&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/m.othman/StudioProjects/WMSAppV3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/A.HAYDAR/StudioProjects/WMS2023/app&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -140,10 +138,10 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\res\layout" />
       <recent name="C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\java\com\bos\wms\mlkit\app" />
       <recent name="C:\Users\m.othman\StudioProjects\WMS2023\app\src\main\res\drawable" />
       <recent name="C:\Users\m.othman\StudioProjects\WMS2023\app\src\main\res\layout" />
-      <recent name="C:\Users\A.HAYDAR\StudioProjects\WMS2023\app\src\main\res\layout" />
       <recent name="C:\Users\m.serhan\StudioProjects\WMS2023\app\src\main\res\layout" />
     </key>
     <key name="android.template.-1361846487">
@@ -157,8 +155,8 @@
       <recent name="com.bos.wms.mlkit.app" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
-      <recent name="Model" />
       <recent name="com.bos.wms.mlkit.app.bosApp" />
+      <recent name="Model" />
       <recent name="com.bos.wms.mlkit.app.bosApp.Transfer" />
       <recent name="Model.BosApp" />
       <recent name="Model.BosApp.Transfer" />
@@ -243,27 +241,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673620504091</updated>
-    </task>
-    <task id="LOCAL-00017" summary="First Commit">
-      <created>1684231420540</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1684231420540</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Fixed UPC Recognition Trailing Spaces">
-      <created>1684828132352</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1684828132352</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Fixed TPO Boxes">
-      <created>1685378001566</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1685378001566</updated>
     </task>
     <task id="LOCAL-00020" summary="Fixed TPO Boxes">
       <created>1685378102093</created>
@@ -559,35 +536,56 @@
       <option name="project" value="LOCAL" />
       <updated>1706877122473</updated>
     </task>
-    <task id="LOCAL-00062" summary="version changes">
-      <created>1707722195126</created>
+    <task id="LOCAL-00062" summary="External Palette">
+      <created>1707495630306</created>
       <option name="number" value="00062" />
       <option name="presentableId" value="LOCAL-00062" />
       <option name="project" value="LOCAL" />
-      <updated>1707722195128</updated>
+      <updated>1707495630307</updated>
     </task>
-    <task id="LOCAL-00063" summary="set cancel for stockTake RFID">
-      <created>1707732809574</created>
+    <task id="LOCAL-00063" summary="External Palette">
+      <created>1707495816615</created>
       <option name="number" value="00063" />
       <option name="presentableId" value="LOCAL-00063" />
       <option name="project" value="LOCAL" />
-      <updated>1707732809574</updated>
+      <updated>1707495816616</updated>
     </task>
-    <task id="LOCAL-00064" summary="set cancel for stockTake RFID">
-      <created>1707732903014</created>
+    <task id="LOCAL-00064" summary="220 is UPC">
+      <created>1707497352680</created>
       <option name="number" value="00064" />
       <option name="presentableId" value="LOCAL-00064" />
       <option name="project" value="LOCAL" />
-      <updated>1707732903014</updated>
+      <updated>1707497352681</updated>
     </task>
-    <task id="LOCAL-00065" summary="set cancel for stockTake RFID">
-      <created>1707733172187</created>
+    <task id="LOCAL-00065" summary="220 is UPC">
+      <created>1707806120933</created>
       <option name="number" value="00065" />
       <option name="presentableId" value="LOCAL-00065" />
       <option name="project" value="LOCAL" />
-      <updated>1707733172187</updated>
+      <updated>1707806120934</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="220 is UPC">
+      <created>1707806872924</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1707806872924</updated>
+    </task>
+    <task id="LOCAL-00067" summary="220 is UPC">
+      <created>1707807249654</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1707807249654</updated>
+    </task>
+    <task id="LOCAL-00068" summary="220 is UPC">
+      <created>1707807350134</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1707807350134</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -625,9 +623,10 @@
     <MESSAGE value="fix IN in RFID Stock Take" />
     <MESSAGE value="StockTakeLog" />
     <MESSAGE value="edits" />
-    <MESSAGE value="version changes" />
-    <MESSAGE value="set cancel for stockTake RFID" />
-    <option name="LAST_COMMIT_MESSAGE" value="set cancel for stockTake RFID" />
+    <MESSAGE value="External Palette" />
+    <MESSAGE value="220 is UPC" />
+    <option name="LAST_COMMIT_MESSAGE" value="220 is UPC" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -648,6 +647,46 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/bos/wms/mlkit/app/bosApp/StockTakeDCRFIDActivity.kt</url>
+          <line>318</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/bos/wms/mlkit/app/bosApp/StockTakeDCRFIDActivity.kt</url>
+          <line>333</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/bos/wms/mlkit/app/bosApp/StockTakeDCRFIDActivity.kt</url>
+          <line>334</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/bos/wms/mlkit/app/bosApp/StockTakeDCRFIDActivity.kt</url>
+          <line>343</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/bos/wms/mlkit/app/bosApp/StockTakeDCRFIDActivity.kt</url>
+          <line>336</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/bos/wms/mlkit/app/bosApp/StockTakeDCRFIDActivity.kt</url>
+          <line>363</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/bos/wms/mlkit/app/bosApp/StockTakeDCRFIDActivity.kt</url>
+          <line>364</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/bos/wms/mlkit/app/bosApp/StockTakeDCRFIDActivity.kt</url>
+          <line>369</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
