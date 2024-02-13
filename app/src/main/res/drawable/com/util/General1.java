@@ -41,7 +41,7 @@ public class General1 {
     public Integer UserID = 0;
     public Integer FloorID = 0;
    // public String AppVersion = "0.0.60 12/08/2022";
-   public String AppVersion = "App Version 2.2.35 13/2/2024";
+   public String AppVersion = "App Version 2.2.36 13/2/2024";
     int interval = 3600;    // when there's no activity
 
     boolean IsAdmin=false;
