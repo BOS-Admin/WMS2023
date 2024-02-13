@@ -195,6 +195,9 @@ class CheckingActivity : AppCompatActivity() {
         return "IS00" + upca.substring(2, upca.length - 1)
     }
     fun isValidUPCA(barcode: String): Boolean {
+        if(barcode.startsWith("230"))
+            return false;
+
         if (barcode.length != 12 || ( !barcode.startsWith("22") && !barcode.startsWith("23")) ){
             return false
         }

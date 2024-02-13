@@ -3126,6 +3126,7 @@ id lblPickingReminaingItems
 id lblPickingWave
 id lblPrintTypeItem
 id lblRack
+id lblRes
 id lblResult
 id lblScanError
 id lblSeason

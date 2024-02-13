@@ -582,7 +582,7 @@ class TransferReceivingActivity : AppCompatActivity() {
                 Log.i("Ah-Log", "3")
                 textBox.isEnabled = false
 
-                if(bin.startsWith("2010"))
+                if(bin.startsWith("2010") && "W1005" == general.mainLocation)
                     GetExternalPalette(bin);
                 else
                     GetBin(bin)
