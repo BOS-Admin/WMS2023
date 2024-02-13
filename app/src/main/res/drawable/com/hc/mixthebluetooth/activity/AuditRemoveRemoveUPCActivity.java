@@ -178,7 +178,7 @@ public class AuditRemoveRemoveUPCActivity extends BasActivity  {
             }
 
             UPCAHelper helper=new UPCAHelper();
-            if(!item.startsWith("220") &&  helper.isValidUPCA(item)){
+            if(!item.startsWith("230") &&  helper.isValidUPCA(item)){
                 item = helper.convertToIS(item);
             }
 

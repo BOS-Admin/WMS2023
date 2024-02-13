@@ -102,7 +102,7 @@ class StockTakeDCActivity : AppCompatActivity() {
                     return;
                 }
 
-                if(!item.startsWith("220") && isValidUPCA(item))
+                if(!item.startsWith("230") && isValidUPCA(item))
                     item = convertToIS(item)
 
                 if(items.containsValue(item)  ){
