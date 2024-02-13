@@ -55,17 +55,25 @@ class ScanBinForCheckingActivity : AppCompatActivity() {
 
         val lblDescription:TextView =findViewById(R.id.lblDescription)
         val lblBox:TextView =findViewById(R.id.lblBox)
+        //showMessage(General.getGeneral(applicationContext).packType,Color.GREEN)
+        when (General.getGeneral(applicationContext).packType) {
+            "PaletteBinsChecking" -> {
+                title = "Scan Palette";
+                lblDescription.text="Please scan your barcode and the palette barcode"
+                lblBox.text="Palette"
 
-        if( General.getGeneral(applicationContext).packType=="PaletteBinsChecking"){
-            title = "Scan Palette";
-            lblDescription.text="Please scan your barcode and the palette barcode"
-            lblBox.text="Palette"
+            }
+            "PaletteBin" -> {
+                title = "Scan Palette Bin";
+                lblDescription.text="Please scan your barcode and the palette bin barcode"
+                lblBox.text="Palette Bin"
 
-        }
-        else{
-            title = "Scan Box";
-            lblDescription.text="Please scan your barcode and the box barcode"
-            lblBox.text="Box"
+            }
+            else -> {
+                title = "Scan Box";
+                lblDescription.text="Please scan your barcode and the box barcode"
+                lblBox.text="Box"
+            }
         }
 
 
