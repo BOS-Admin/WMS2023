@@ -322,6 +322,12 @@ public class NewStandSwitchActivity extends AppCompatActivity {
      * This method do the Switch Action from Stand to a Box
      */
     private void DoAction() {
+        if(BoxStr.equals(StandStr)){
+            setBtnResultState(0,"Box and Stand are equal");
+            RestartView();
+            return;
+        }
+
         try {
 
             Logger.Debug("SwitchDebug", "API -  FillBinStockTake");
@@ -422,6 +428,7 @@ public class NewStandSwitchActivity extends AppCompatActivity {
         ableToUpdateStand = false;
         standScanned = false;
         edtStand.setText("");
+        StandStr = "";
         ableToUpdateStand = true;
     }
 
@@ -429,6 +436,7 @@ public class NewStandSwitchActivity extends AppCompatActivity {
         ableToUpdateBox = false;
         boxScanned = false;
         edtBox.setText("");
+        BoxStr = "";
         ableToUpdateBox = true;
     }
 
