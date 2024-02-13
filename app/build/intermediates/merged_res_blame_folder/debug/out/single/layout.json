@@ -1,322 +1,322 @@
 [
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_scan_container.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_scan_container.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/upc_card_done.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/upc_card_done.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\upc_pricing_item.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\upc_pricing_item.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_new_stand_switch.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_new_stand_switch.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_packing_dc.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_packing_dc.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_brand_ocractivity.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_brand_ocractivity.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_tporeceive_bins.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_tporeceive_bins.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_foldingscan.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_foldingscan.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_locationcheck.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_locationcheck.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_reprice.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_reprice.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_reprice.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_reprice.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/content_upc_pricing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_upc_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_pg_pricing.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_pg_pricing.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_item_pricing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_item_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\custom_dialog_rfid.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\custom_dialog_rfid.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_print_prices.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_print_prices.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_transfer_receiving.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_transfer_receiving.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_scan_container.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_scan_container.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_main_menu1.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_main_menu1.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_main.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_putawaypallete.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_putawaypallete.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/dialog_scan_rfid.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/dialog_scan_rfid.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_listview.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_listview.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/upc_pricing_item.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/upc_pricing_item.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_bol_recognition.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_bol_recognition.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_ping.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_ping.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_packing.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_packing.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_locationcheck.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_locationcheck.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\fragment_notifications.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\fragment_notifications.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_serial_generator.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_serial_generator.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\scan_upcs_item.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\scan_upcs_item.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/content_pg_pricing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_pg_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\item_list.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\item_list.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/content_locationcheck.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_locationcheck.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_transfer.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_transfer.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_itemserial_missing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_itemserial_missing.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_brands_in_to_is.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_brands_in_to_is.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_listview.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_listview.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_itemserial_missing.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_itemserial_missing.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/fragment_notifications.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/fragment_notifications.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_upcpricing_override.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_upcpricing_override.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/scan_upcs_item.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/scan_upcs_item.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_locationcheck.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_locationcheck.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_upc_pricing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_upc_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\spinner_item_layout.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\spinner_item_layout.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/content_picking.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_picking.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_new_item_pricing.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_new_item_pricing.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_pas_brand_ocractivity.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_pas_brand_ocractivity.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_shipment_pallete_receiving.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_shipment_pallete_receiving.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_shipment_pallete_carton.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_shipment_pallete_carton.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\dialog_scan_rfid.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\dialog_scan_rfid.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/content_item_pricing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_item_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_serial_generator.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_serial_generator.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_tpobins.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tpobins.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_upc_pricing.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_upc_pricing.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_main_menu1.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_main_menu1.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_tpobins.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_tpobins.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_packing_dc.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_packing_dc.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_main_menu.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_main_menu.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_scan_upcs_for_bol.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_scan_upcs_for_bol.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_count.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_count.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_packing_reason.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_packing_reason.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_item_pricing.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_item_pricing.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_main_menu.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_main_menu.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_putawaypallete.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_putawaypallete.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_printer_selection.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_printer_selection.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_next_receiving_status.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_next_receiving_status.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/content_putawaypallete.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_putawaypallete.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_shipment_pallete_carton_count.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_shipment_pallete_carton_count.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_packing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_packing.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_itemserial_upc_missing.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_itemserial_upc_missing.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_tporeceive_bins.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tporeceive_bins.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_main.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_shipment_pallete_carton_count.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_shipment_pallete_carton_count.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_foldingscan.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_foldingscan.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_putawaypallete.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_putawaypallete.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_pallet_bin_association.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_pallet_bin_association.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_transfer.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_transfer.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_new_stand_switch.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_new_stand_switch.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_tporeset_truck.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tporeset_truck.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_tpomain.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_tpomain.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_palette_bins.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_palette_bins.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_shipment.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_shipment.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/spinner_item_layout.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/spinner_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_foldingscan.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_foldingscan.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/custom_dialog_rfid.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/custom_dialog_rfid.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_shipment_pallete_carton.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_shipment_pallete_carton.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_scan_stand_in_to_is.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_scan_stand_in_to_is.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\upc_card_done.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\upc_card_done.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_shipment.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_shipment.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_scan_stand_in_to_is.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_scan_stand_in_to_is.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_upcpricing_override.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_upcpricing_override.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_ping.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_ping.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_tpomain.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tpomain.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_itemserial_missing.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_itemserial_missing.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/content_fillpallete.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_fillpallete.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_upcrecognition_pricing.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_upcrecognition_pricing.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_pallet_rack_assignment.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_pallet_rack_assignment.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\fragment_dashboard.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\fragment_dashboard.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/pop_window_main.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/pop_window_main.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_brand_ocractivity.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_brand_ocractivity.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/item_list.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/item_list.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_pallet_rack_assignment.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_pallet_rack_assignment.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/content_new_item_pricing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_new_item_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_new_item_pricing.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_new_item_pricing.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_brands_in_to_is.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_brands_in_to_is.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\pop_window_main.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\pop_window_main.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_tpocount_bins.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tpocount_bins.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_login.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/fragment_dashboard.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/fragment_dashboard.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_palette_bins.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_palette_bins.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_put_away.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_put_away.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\tpo_locations_dialog.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\tpo_locations_dialog.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/tpo_location_item.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/tpo_location_item.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_upc_pricing.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_upc_pricing.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_login.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_put_away.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_put_away.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_tpoload_bins.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_tpoload_bins.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_fillpallete.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_fillpallete.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_upcrecognition_pricing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_upcrecognition_pricing.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_empty_box.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_empty_box.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/content_itemserial_upc_missing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_itemserial_upc_missing.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\tpo_location_item.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\tpo_location_item.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_transfer_receiving.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_transfer_receiving.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_packing_reason.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_packing_reason.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/content_foldingscan.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_foldingscan.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\fragment_home.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\fragment_home.xml"
-    },
-    {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_tpoload_bins.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_tpoload_bins.xml"
-    },
-    {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_scan_upcs_for_bol.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_scan_upcs_for_bol.xml"
-    },
-    {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_printer_selection.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_printer_selection.xml"
-    },
-    {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_pas_brand_ocractivity.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_pas_brand_ocractivity.xml"
-    },
-    {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_picking.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_picking.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/content_itemserial_missing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/content_itemserial_missing.xml"
     },
     {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_receiving.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_receiving.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_itemserial_upc_missing.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_itemserial_upc_missing.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/fragment_home.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_pg_pricing.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_pg_pricing.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_reprice_count.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_reprice_count.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_item_pricing.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_item_pricing.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_fillpallete.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_fillpallete.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_print_prices.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_print_prices.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_itemserial_upc_missing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_itemserial_upc_missing.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_tporeset_truck.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_tporeset_truck.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_next_receiving_status.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_next_receiving_status.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_picking.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_picking.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_pallet_bin_association.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_pallet_bin_association.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_tpocount_bins.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_tpocount_bins.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_picking.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_picking.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_stock_take.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_stock_take.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_bol_recognition.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_bol_recognition.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_reprice_count.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_reprice_count.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_shipment_pallete_receiving.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_shipment_pallete_receiving.xml"
     },
     {
-        "merged": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\content_fillpallete.xml",
-        "source": "C:\\Users\\A.HAYDAR\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\content_fillpallete.xml"
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_pg_pricing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_pg_pricing.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_new_item_pricing.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_new_item_pricing.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/tpo_locations_dialog.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/tpo_locations_dialog.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_stock_take.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_stock_take.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_empty_box.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_empty_box.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_count.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_count.xml"
     }
 ]
