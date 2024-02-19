@@ -2,7 +2,6 @@ package com.bos.wms.mlkit.app.bosApp.Transfer
 
 
 import Model.BosApp.BinModelItem1
-import Model.BosApp.BinModelItem2
 import Model.BosApp.ReceivingPaletteBin
 import Remote.APIClient
 import Remote.BasicApi
@@ -15,16 +14,13 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ListView
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.bos.wms.mlkit.General
 import com.bos.wms.mlkit.R
 import com.bos.wms.mlkit.storage.Storage
+import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import retrofit2.HttpException
@@ -178,6 +174,84 @@ class TransferReceivingActivity : AppCompatActivity() {
     }
 
 
+    fun ProceedBin(binBarcode: String) {
+        try {
+
+
+            Log.i("IsExternalPalette", "PaletteBarcode = $binBarcode")
+            api = APIClient.getInstance(general.ipAddress, true).create(BasicApi::class.java)
+            compositeDisposable.addAll(
+                api.IsExternalPalette(binBarcode)
+                    .subscribeOn(Schedulers.io())
+                     .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(
+                        { s ->
+                            if (s != null) {
+                                Log.i("GetExternalPalette", "NextStatus $s")
+
+                                if (s && binBarcode.startsWith("2010") && "W1005" == general.mainLocation ) {
+                                    Toast.makeText(this.applicationContext,"External Palette",Toast.LENGTH_SHORT).show();
+                                    GetExternalPalette(binBarcode);
+                                } else {
+                                 GetBin(binBarcode);
+                                }
+
+
+                            } else {
+                                showScanMessage("Bin Model is Empty (1)", Color.RED)
+                            }
+
+                        },
+                        { t: Throwable? ->
+                            run {
+
+                                runOnUiThread{
+                                    lblScanError.text = ""
+                                }
+
+                                if (t is HttpException) {
+                                    var ex: HttpException = t as HttpException
+                                    showScanMessage(
+                                        ex.response().errorBody()!!
+                                            .string() + " (Failed)",
+                                        Color.RED
+                                    )
+                                } else {
+                                    if (t?.message != null)
+                                        showScanMessage(
+                                            t.message.toString() + " (Failed)",
+                                            Color.RED
+                                        )
+                                }
+
+                                runOnUiThread {
+                                    textBox.isEnabled = true
+                                    updatingText = true
+                                    textBox.setText("")
+                                    textBox.requestFocus()
+                                    updatingText = false
+                                }
+
+
+                            }
+                        }
+                    )
+            )
+        } catch (e: Throwable) {
+            showScanMessage(e?.message + " Error Fetching Bin (Error)", Color.RED)
+            runOnUiThread {
+                textBox.isEnabled = true
+                updatingText = true
+                textBox.setText("")
+                textBox.requestFocus()
+                updatingText = false
+            }
+        } finally {
+
+        }
+    }
+
+
     fun GetExternalPalette(binBarcode: String) {
         try {
             var isCount = false
@@ -185,7 +259,7 @@ class TransferReceivingActivity : AppCompatActivity() {
             Log.i("TransferReceivingActivity", "transfer = $binBarcode")
             api = APIClient.getInstance(general.ipAddress, true).create(BasicApi::class.java)
             compositeDisposable.addAll(
-                api.GetBinTransferInfo(binBarcode,general.UserID,general.mainLocation)
+                api.GetBinTransferInfo(binBarcode,general.UserID,general.mainLocation,general.transferNavNo,true)
                     .subscribeOn(Schedulers.io())
                     //  .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
@@ -295,7 +369,7 @@ class TransferReceivingActivity : AppCompatActivity() {
             Log.i("TransferReceivingActivity", "transfer = $binBarcode")
             api = APIClient.getInstance(general.ipAddress, true).create(BasicApi::class.java)
             compositeDisposable.addAll(
-                api.GetBinTransferInfo(binBarcode,general.UserID,general.mainLocation)
+                api.GetBinTransferInfo(binBarcode,general.UserID,general.mainLocation,general.transferNavNo,false)
                     .subscribeOn(Schedulers.io())
                     //  .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
@@ -582,10 +656,8 @@ class TransferReceivingActivity : AppCompatActivity() {
                 Log.i("Ah-Log", "3")
                 textBox.isEnabled = false
 
-                if(bin.startsWith("2010") && "W1005" == general.mainLocation)
-                    GetExternalPalette(bin);
-                else
-                    GetBin(bin)
+                ProceedBin(bin);
+
 
             }
 
