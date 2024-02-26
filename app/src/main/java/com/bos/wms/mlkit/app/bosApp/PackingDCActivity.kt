@@ -260,7 +260,7 @@ class PackingDCActivity : AppCompatActivity() {
                     itemCode,
                     general.mainLocation,
                     general.UserID,
-                    general.packReasonId
+                    general.packReasonId,textBoxNb.text.toString()
                 )
                     .subscribeOn(Schedulers.io())
                     // .observeOn(AndroidSchedulers.mainThread())

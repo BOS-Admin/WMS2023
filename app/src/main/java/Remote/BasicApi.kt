@@ -380,7 +380,8 @@ interface BasicApi {
         @Query("ItemCode") ItemCode: String,
         @Query("Location") Location: String,
         @Query("UserId") UserId: Int=-1,
-        @Query("PackReasonId") PackReasonId: Int): Observable<ResponseBody>
+        @Query("PackReasonId") PackReasonId: Int,
+        @Query("BoxBarcode") BoxBarcode: String): Observable<ResponseBody>
 
     @GET("api/Packing/validateItem")
     fun ValidateFillBinItemLocal(
