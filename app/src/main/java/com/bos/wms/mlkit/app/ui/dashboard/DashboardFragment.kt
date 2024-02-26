@@ -10,9 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bos.wms.mlkit.General
-import com.bos.wms.mlkit.app.bosApp.NewStandSwitchActivity
-import com.bos.wms.mlkit.app.bosApp.PackingActivity
-import com.bos.wms.mlkit.app.bosApp.StockTakeActivity
+import com.bos.wms.mlkit.app.bosApp.*
 import com.bos.wms.mlkit.app.bosApp.Transfer.TransferActivity
 import com.bos.wms.mlkit.databinding.FragmentDashboardBinding
 import com.bos.wms.mlkit.storage.Storage
@@ -49,11 +47,13 @@ class DashboardFragment : Fragment() {
         root.textBranch.setText(General.getGeneral(context).fullLocation);
         root.textUser.setText(General.getGeneral(context).userFullName);
 
+
         if(UserPermissions.PermissionsReceived()){
             UserPermissions.ValidatePermission("WMSApp.Dashboard.Packing", root.btnCount);
             UserPermissions.ValidatePermission("WMSApp.Dashboard.StockTake", root.btnStockTake);
             UserPermissions.ValidatePermission("WMSApp.Dashboard.Transfer", root.btnTransfer);
             UserPermissions.ValidatePermission("WMSApp.Dashboard.StandSwitch", root.btnStandSwitch);
+            UserPermissions.ValidatePermission("WMSApp.Dashboard.Receiving", root.btnReceiving);
 //            UserPermissions.ValidatePermission("WMSApp.Dashboard.PutAway", root.btnPutAway);
 
         }else {
@@ -62,31 +62,48 @@ class DashboardFragment : Fragment() {
                 UserPermissions.ValidatePermission("WMSApp.Dashboard.StockTake", root.btnStockTake);
                 UserPermissions.ValidatePermission("WMSApp.Dashboard.Transfer", root.btnTransfer);
                 UserPermissions.ValidatePermission("WMSApp.Dashboard.StandSwitch", root.btnStandSwitch);
+                UserPermissions.ValidatePermission("WMSApp.Dashboard.Receiving", root.btnReceiving);
 //                UserPermissions.ValidatePermission("WMSApp.Dashboard.PutAway", root.btnPutAway);
             }
         }
 
         root.btnCount.setOnClickListener {
             general.operationType = 100
+            general.isReceiving=false;
+            general.packType=="Box"
             general.saveGeneral(context?.applicationContext)
             val intent = Intent(activity, PackingActivity::class.java)
             startActivity(intent)
         }
         root.btnStockTake.setOnClickListener {
             general.operationType = 102
+            general.isReceiving=false;
+            general.packType=="Box"
             general.saveGeneral(context?.applicationContext)
             val intent = Intent(activity, StockTakeActivity::class.java)
             startActivity(intent)
         }
 
         root.btnTransfer.setOnClickListener {
+            general.isReceiving=false;
+            general.packType=="Box"
+            general.saveGeneral(context?.applicationContext)
             val intent = Intent(activity, TransferActivity::class.java)
             startActivity(intent)
         }
         root.btnStandSwitch.setOnClickListener {
+            general.packType=="Box"
             val intent = Intent(activity, NewStandSwitchActivity::class.java)
             startActivity(intent)
         }
+        root.btnReceiving.setOnClickListener {
+            general.isReceiving=true;
+            general.packType=="Box"
+            general.saveGeneral(context?.applicationContext)
+            val intent = Intent(activity, ReceivingActivity::class.java)
+            startActivity(intent)
+        }
+
 //        root.btnPutAway.setOnClickListener {
 //            val intent = Intent(activity, ScanRackPutAwayActivity::class.java)
 //            startActivity(intent)

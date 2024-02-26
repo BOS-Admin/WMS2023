@@ -360,6 +360,10 @@
         "source": "com.bos.wms.mlkit.app-main-62:/drawable/baseline_print_icon.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_activity_receiving.xml.flat",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_receiving.xml"
+    },
+    {
         "merged": "com.bos.wms.mlkit.app-merged_res-60:/layout_fragment_home.xml.flat",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/fragment_home.xml"
     },

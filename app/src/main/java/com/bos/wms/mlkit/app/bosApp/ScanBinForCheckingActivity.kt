@@ -35,7 +35,7 @@ class ScanBinForCheckingActivity : AppCompatActivity() {
     private lateinit var lblError1: TextView
 
     private lateinit var TextChangeEvent:TextWatcher
-
+    private var isReceiving:Boolean =false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scan_container)
@@ -48,20 +48,35 @@ class ScanBinForCheckingActivity : AppCompatActivity() {
         textBranch=findViewById(R.id.textBranch)
         lblError1=findViewById(R.id.lblError)
         lblScanDestination=findViewById(R.id.lblDestination)
+        general= General.getGeneral(applicationContext)
+        isReceiving=general.isReceiving;
+        if(isReceiving)
+            title = "Scan Palette Bin (Receiving)"
 
         val lblDescription:TextView =findViewById(R.id.lblDescription)
         val lblBox:TextView =findViewById(R.id.lblBox)
+        //showMessage(General.getGeneral(applicationContext).packType,Color.GREEN)
+        when (General.getGeneral(applicationContext).packType) {
+            "PaletteBinsChecking" -> {
+                title = "Scan Palette";
+                lblDescription.text="Please scan your barcode and the palette barcode"
+                lblBox.text="Palette"
 
-        if( General.getGeneral(applicationContext).packType=="PaletteBinsChecking"){
-            title = "Scan Palette";
-            lblDescription.text="Please scan your barcode and the palette barcode"
-            lblBox.text="Palette"
+            }
+            "PaletteBin" -> {
+                title = "Scan Palette Bin";
+                lblDescription.text="Please scan your barcode and the palette bin barcode"
+                lblBox.text="Palette Bin"
+                if(isReceiving)
+                    title = "Scan Palette Bin (Receiving)"
 
-        }
-        else{
-            title = "Scan Box";
-            lblDescription.text="Please scan your barcode and the box barcode"
-            lblBox.text="Box"
+
+            }
+            else -> {
+                title = "Scan Box";
+                lblDescription.text="Please scan your barcode and the box barcode"
+                lblBox.text="Box"
+            }
         }
 
 
@@ -69,7 +84,7 @@ class ScanBinForCheckingActivity : AppCompatActivity() {
         txtScanBox.setShowSoftInputOnFocus(false);
         txtScanUser.setShowSoftInputOnFocus(false);
         //txtScanDestination.setShowSoftInputOnFocus(false);
-        general= General.getGeneral(applicationContext)
+
         var userCode: String= general.UserCode
         var branch: String=general.fullLocation
         textUser.text = userCode.toString() + ", " + General.getGeneral(applicationContext).UserName
@@ -166,7 +181,7 @@ class ScanBinForCheckingActivity : AppCompatActivity() {
             api= APIClient.getInstance(IPAddress ,true).create(
                 BasicApi::class.java)
             compositeDisposable.addAll(
-                api.ValidateBinForChecking(binBarcode,userId,locationId)
+                api.ValidateBinForChecking(binBarcode,userId,locationId,isReceiving)
                     .subscribeOn(Schedulers.io())
                     //.observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
@@ -238,7 +253,7 @@ class ScanBinForCheckingActivity : AppCompatActivity() {
             api= APIClient.getInstance(IPAddress ,true).create(
                 BasicApi::class.java)
             compositeDisposable.addAll(
-                api.ValidateBinForChecking(paletteBarcode,userId,locationId)
+                api.ValidateBinForChecking(paletteBarcode,userId,locationId,isReceiving)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(

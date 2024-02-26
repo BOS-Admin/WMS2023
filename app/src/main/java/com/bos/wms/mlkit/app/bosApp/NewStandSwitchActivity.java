@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -13,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.bos.wms.mlkit.General;
 import com.bos.wms.mlkit.R;
@@ -45,6 +47,7 @@ public class NewStandSwitchActivity extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     EditText edtStand, edtBox;
     String BoxStr, StandStr;
+    TextView lblRes;
     int packReasonId, LocationId;
     boolean ableToUpdateStand = true, ableToUpdateBox = true;
 
@@ -59,6 +62,8 @@ public class NewStandSwitchActivity extends AppCompatActivity {
         UserID = General.getGeneral(this).UserID;
         general = General.getGeneral(this);
         spinner = findViewById(R.id.spnReason);
+        lblRes =  findViewById(R.id.lblRes);
+        lblRes.setVisibility(View.VISIBLE);
         btnResult = findViewById(R.id.btnResult);
         edtStand = findViewById(R.id.edtStand);
         edtBox = findViewById(R.id.edtBox);
@@ -301,16 +306,20 @@ public class NewStandSwitchActivity extends AppCompatActivity {
     }
 
     private void setBtnResultState(int Case, String BodyMsg) {
+        lblRes.setText(BodyMsg);
+        Logger.Debug("SwitchDebug","lbl written: " + BodyMsg);
         if (Case == 0) {
             btnResult.setText("Error");
             btnResult.setBackgroundColor(getResources().getColor(R.color.custom_red));
+            lblRes.setTextColor(Color.RED);
         } else if (Case == 1) {
-         
                 btnResult.setText("Success");
             btnResult.setBackgroundColor(getResources().getColor(R.color.custom_green));
+            lblRes.setTextColor(Color.GREEN);
         }else if( Case == 5){
             btnResult.setText("Result");
             btnResult.setBackgroundColor(getResources().getColor(R.color.black));
+            lblRes.setTextColor(Color.BLACK);
         }
         btnResult.setOnClickListener((click) -> {
             showAlertDialog(BodyMsg);
@@ -322,6 +331,12 @@ public class NewStandSwitchActivity extends AppCompatActivity {
      * This method do the Switch Action from Stand to a Box
      */
     private void DoAction() {
+        if(BoxStr.equals(StandStr)){
+            setBtnResultState(0,"Box and Stand are equal");
+            RestartView();
+            return;
+        }
+
         try {
 
             Logger.Debug("SwitchDebug", "API -  FillBinStockTake");
@@ -416,12 +431,14 @@ public class NewStandSwitchActivity extends AppCompatActivity {
     private void RestartView(){
        ResetStand();
        ResetBox();
+       edtStand.requestFocus();
     }
 
     private void ResetStand(){
         ableToUpdateStand = false;
         standScanned = false;
         edtStand.setText("");
+        StandStr = "";
         ableToUpdateStand = true;
     }
 
@@ -429,6 +446,7 @@ public class NewStandSwitchActivity extends AppCompatActivity {
         ableToUpdateBox = false;
         boxScanned = false;
         edtBox.setText("");
+        BoxStr = "";
         ableToUpdateBox = true;
     }
 

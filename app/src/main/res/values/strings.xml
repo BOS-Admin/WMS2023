@@ -20,6 +20,7 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_picking">Picking</string>
     <string name="title_activity_packing_dc">Packing DC</string>
+    <string name="title_activity_receiving">Receiving</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

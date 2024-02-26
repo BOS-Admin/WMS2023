@@ -256,6 +256,10 @@
         "source": "com.bos.wms.mlkit.app-main-62:/layout/content_itemserial_missing.xml"
     },
     {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_receiving.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_receiving.xml"
+    },
+    {
         "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/fragment_home.xml",
         "source": "com.bos.wms.mlkit.app-main-62:/layout/fragment_home.xml"
     },

@@ -10,6 +10,7 @@ import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
+import android.content.Context
 import android.content.DialogInterface
 import android.graphics.Color
 import android.media.AudioManager
@@ -77,6 +78,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
     var dialogView: View? = null
     var dialogTitle: TextView? = null
     var btnResult: Button? = null
+    var btnCancel: Button? = null
     var dialogScan: AlertDialog? = null
     var tempDialogScan: AlertDialog? = null
     private var processIsSafe = false
@@ -124,6 +126,22 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
 
         dialogBuilder = AlertDialog.Builder(this@StockTakeDCRFIDActivity)
         dialogView = layoutInflater.inflate(R.layout.dialog_scan_rfid, null)
+        btnCancel = dialogView!!.findViewById(R.id.btnCancel)
+        btnCancel!!.setOnClickListener{
+            runOnUiThread {
+                dialogScan!!.dismiss()
+                RFIDStopRead()
+                updatingText = true
+                textItemScanned.setText("")
+                updatingText = false
+                textItemScanned.isEnabled = true
+                textItemScanned.requestFocus()
+                Logger.Debug("StockTakeTest", "calling show scan Message, MISMATCH")
+                showScanMessage("Mismatch RFID for item: $CurrentBarcode", Color.RED)
+                Log.i("DC-Packing", "Mismatch RFID for item: $CurrentBarcode")
+
+            }
+        }
         // Ensure dialogView is not null before proceeding
         if (dialogView != null) {
             dialogBuilder!!.setView(dialogView)
@@ -133,6 +151,9 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
             // Get references safely
             dialogTitle = dialogView!!.findViewById(R.id.dialogTitle)
             btnResult = dialogView!!.findViewById(R.id.btnResult)
+
+
+
 
         } else {
             Logger.Debug("StocktakeRFID", "Error in reference")
@@ -157,7 +178,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                     return;
                 }
 
-                if (isValidUPCA(item))
+                if ( !item.startsWith("230") &&  isValidUPCA(item))
                     item = convertToIS(item)
 
                 if (items.containsValue(item)) {
@@ -265,6 +286,8 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
     }
 
     fun isValidUPCA(barcode: String): Boolean {
+        if(barcode.startsWith("230"))
+            return false;
         if (barcode.length != 12 || (!barcode.startsWith("22") && !barcode.startsWith("23"))) {
             return false
         }
@@ -306,6 +329,7 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
                                                 textItemScanned.isEnabled = false
 
                                             } else {
+                                                //MA CRFID
                                                 runOnUiThread {
                                                     updatingText = true
                                                     textItemScanned.setText("")
@@ -919,5 +943,8 @@ class StockTakeDCRFIDActivity : AppCompatActivity() {
         fun onSuccess()
         fun onFailure()
     }
+
+
+
 
 }

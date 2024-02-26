@@ -2,7 +2,7 @@ package com.bos.wms.mlkit.app.bosApp.Transfer
 
 
 import Model.BosApp.BinModelItem1
-import Model.BosApp.Transfer.BinModelItem
+import Model.BosApp.ReceivingPaletteBin
 import Remote.APIClient
 import Remote.BasicApi
 import android.app.AlertDialog
@@ -14,16 +14,13 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ListView
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.bos.wms.mlkit.General
 import com.bos.wms.mlkit.R
 import com.bos.wms.mlkit.storage.Storage
+import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import retrofit2.HttpException
@@ -177,6 +174,194 @@ class TransferReceivingActivity : AppCompatActivity() {
     }
 
 
+    fun ProceedBin(binBarcode: String) {
+        try {
+
+
+            Log.i("IsExternalPalette", "PaletteBarcode = $binBarcode")
+            api = APIClient.getInstance(general.ipAddress, true).create(BasicApi::class.java)
+            compositeDisposable.addAll(
+                api.IsExternalPalette(binBarcode)
+                    .subscribeOn(Schedulers.io())
+                     .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(
+                        { s ->
+                            if (s != null) {
+                                Log.i("GetExternalPalette", "NextStatus $s")
+
+                                if (s && binBarcode.startsWith("2010") && "W1005" == general.mainLocation ) {
+                                    Toast.makeText(this.applicationContext,"External Palette",Toast.LENGTH_SHORT).show();
+                                    GetExternalPalette(binBarcode);
+                                } else {
+                                 GetBin(binBarcode);
+                                }
+
+
+                            } else {
+                                showScanMessage("Bin Model is Empty (1)", Color.RED)
+                            }
+
+                        },
+                        { t: Throwable? ->
+                            run {
+
+                                runOnUiThread{
+                                    lblScanError.text = ""
+                                }
+
+                                if (t is HttpException) {
+                                    var ex: HttpException = t as HttpException
+                                    showScanMessage(
+                                        ex.response().errorBody()!!
+                                            .string() + " (Failed)",
+                                        Color.RED
+                                    )
+                                } else {
+                                    if (t?.message != null)
+                                        showScanMessage(
+                                            t.message.toString() + " (Failed)",
+                                            Color.RED
+                                        )
+                                }
+
+                                runOnUiThread {
+                                    textBox.isEnabled = true
+                                    updatingText = true
+                                    textBox.setText("")
+                                    textBox.requestFocus()
+                                    updatingText = false
+                                }
+
+
+                            }
+                        }
+                    )
+            )
+        } catch (e: Throwable) {
+            showScanMessage(e?.message + " Error Fetching Bin (Error)", Color.RED)
+            runOnUiThread {
+                textBox.isEnabled = true
+                updatingText = true
+                textBox.setText("")
+                textBox.requestFocus()
+                updatingText = false
+            }
+        } finally {
+
+        }
+    }
+
+
+    fun GetExternalPalette(binBarcode: String) {
+        try {
+            var isCount = false
+            lblScanError.text = "fetching data..."
+            Log.i("TransferReceivingActivity", "transfer = $binBarcode")
+            api = APIClient.getInstance(general.ipAddress, true).create(BasicApi::class.java)
+            compositeDisposable.addAll(
+                api.GetBinTransferInfo(binBarcode,general.UserID,general.mainLocation,general.transferNavNo,true)
+                    .subscribeOn(Schedulers.io())
+                    //  .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(
+                        { s ->
+                            if (s != null) {
+                                Log.i("GetExternalPalette", "NextStatus " + s.transferNextStatus)
+                                runOnUiThread{
+                                    lblScanError.text = ""
+                                }
+
+                                if (s.transferStatus == 103) {
+                                    showScanMessage("Palette Released ✓✓✓✓✓✓", Color.GREEN)
+
+                                    for(x in boxesModel){
+                                        if(x.BinBarcode == binBarcode){
+                                            x.TransferStatus=s.transferStatus
+                                            x.TransferNextStatus=s.transferNextStatus;
+                                            break;
+                                        }
+                                    }
+
+                                    updateUiWithBins(boxesModel);
+                                } else {
+                                    var msg="Not All Palette Bins Are Received For\nPalette $binBarcode\n\n" +
+                                            "Palette Bins\n";
+                                    msg+= s.receivingPaletteBins?.let { getMessagesForPaletteBins(it) }
+
+                                    showScanMessage(msg,"Not All Palette Bins Are Received For Palette $binBarcode", Color.RED)
+
+                                }
+
+
+                            } else {
+                                showScanMessage("Palette Model is Empty", Color.RED)
+                            }
+                            runOnUiThread {
+                                textBox.isEnabled = true
+                                if(isCount){
+                                    updatingText = false
+                                    textCount.requestFocus()
+                                }
+                                else{
+                                    updatingText = true
+                                    textBox.setText("")
+                                    textBox.requestFocus()
+                                    updatingText = false
+                                }
+
+                            }
+
+                        },
+                        { t: Throwable? ->
+                            run {
+
+                                runOnUiThread{
+                                    lblScanError.text = ""
+                                }
+
+                                if (t is HttpException) {
+                                    var ex: HttpException = t as HttpException
+                                    showScanMessage(
+                                        ex.response().errorBody()!!
+                                            .string() + " (Failed)",
+                                        Color.RED
+                                    )
+                                } else {
+                                    if (t?.message != null)
+                                        showScanMessage(
+                                            t.message.toString() + " (Failed)",
+                                            Color.RED
+                                        )
+                                }
+
+                                runOnUiThread {
+                                    textBox.isEnabled = true
+                                    updatingText = true
+                                    textBox.setText("")
+                                    textBox.requestFocus()
+                                    updatingText = false
+                                }
+
+
+                            }
+                        }
+                    )
+            )
+        } catch (e: Throwable) {
+            showScanMessage(e?.message + " Error Fetching Bin (Error)", Color.RED)
+            runOnUiThread {
+                textBox.isEnabled = true
+                updatingText = true
+                textBox.setText("")
+                textBox.requestFocus()
+                updatingText = false
+            }
+        } finally {
+
+        }
+    }
+
+
+
     fun GetBin(binBarcode: String) {
         try {
             var isCount = false
@@ -184,7 +369,7 @@ class TransferReceivingActivity : AppCompatActivity() {
             Log.i("TransferReceivingActivity", "transfer = $binBarcode")
             api = APIClient.getInstance(general.ipAddress, true).create(BasicApi::class.java)
             compositeDisposable.addAll(
-                api.GetBinTransferInfo(binBarcode)
+                api.GetBinTransferInfo(binBarcode,general.UserID,general.mainLocation,general.transferNavNo,false)
                     .subscribeOn(Schedulers.io())
                     //  .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
@@ -194,7 +379,6 @@ class TransferReceivingActivity : AppCompatActivity() {
                                 runOnUiThread{
                                     lblScanError.text = ""
                                 }
-
 
                                 if (s.transferStatus == 103) {
                                     showScanMessage("Box Already Released !!!", Color.RED)
@@ -358,19 +542,32 @@ class TransferReceivingActivity : AppCompatActivity() {
     }
 
     private fun updateUiWithBins(model: List<BinModelItem1>) {
-        listBoxes.clear()
-        renderedListBoxes.clear()
-        unreleasedBins = arrayListOf();
-        for (x in model) {
-            if(x.TransferStatus!=103 && x.Received==0)
-                unreleasedBins.add(x.BinBarcode)
-            Log.i("Ah-Log-X", "BinId " + x.BinId)
+
+        runOnUiThread {
+
+            listBoxes.clear()
+            renderedListBoxes.clear()
+            unreleasedBins = arrayListOf();
+            for (x in model) {
+                if (x.TransferStatus != 103 && x.Received == 0)
+                    unreleasedBins.add(x.BinBarcode)
+                Log.i("Ah-Log-X", "BinId " + x.BinId)
+            }
+            for (x in model) {
+                listBoxes.add(x.BinBarcode)
+                renderedListBoxes.add(renderBinInList(x))
+            }
+            arrayAdapter.notifyDataSetChanged()
+
         }
-            for (x in model){
-            listBoxes.add(x.BinBarcode)
-            renderedListBoxes.add(renderBinInList(x))
+    }
+
+    private fun getMessagesForPaletteBins(model: List<ReceivingPaletteBin>):String {
+        var str="";
+        for (x in model){
+           str+=renderPaletteBinInList(x)+"\n"
         }
-        arrayAdapter.notifyDataSetChanged()
+       return str;
 
     }
 
@@ -419,8 +616,8 @@ class TransferReceivingActivity : AppCompatActivity() {
                     return;
                 updatingText = true;
                 lblScanError.text = "";
-                val item = textBox.text.toString()
-                if (item.length < 5) {
+                val bin = textBox.text.toString()
+                if (bin.length < 5) {
                     Beep()
                     lblScanError.text = "Invalid ItemCode"
                     textBox.setText("")
@@ -436,13 +633,13 @@ class TransferReceivingActivity : AppCompatActivity() {
                 }
                 var b: BinModelItem1? =null
                 for(x in boxesModel)
-                    if(x.BinBarcode==item){
+                    if(x.BinBarcode==bin){
                         b=x
                         break
                 }
 
                 if (b==null) {
-                    showScanMessage("$item  is not included in Transfer", Color.RED)
+                    showScanMessage("$bin  is not included in Transfer", Color.RED)
                     textBox.setText("")
                     updatingText = false;
                     return;
@@ -450,7 +647,7 @@ class TransferReceivingActivity : AppCompatActivity() {
 
 
                 if (b.Received==1) {
-                    showScanMessage("$item  is already received", Color.RED)
+                    showScanMessage("$bin  is already received", Color.RED)
                     textBox.setText("")
                     updatingText = false;
                     return;
@@ -459,7 +656,8 @@ class TransferReceivingActivity : AppCompatActivity() {
                 Log.i("Ah-Log", "3")
                 textBox.isEnabled = false
 
-                GetBin(item)
+                ProceedBin(bin);
+
 
             }
 
@@ -570,6 +768,19 @@ class TransferReceivingActivity : AppCompatActivity() {
 
     }
 
+    private fun renderPaletteBinInList(bin: ReceivingPaletteBin): String {
+
+        val x = "                                     ";
+        val l = x.length
+        var res = "(${bin.message})"
+        return if(bin.binBarcode!=null)
+            bin.binBarcode + x.substring(bin.binBarcode.length) + res
+        else
+            ""
+
+    }
+
+
     private fun statusToString(s: Int): String {
         return when (s) {
             100 -> "Empty"
@@ -589,9 +800,10 @@ class TransferReceivingActivity : AppCompatActivity() {
     private fun showScanMessage(msg: String, color: Int) {
         if (color == Color.RED)
             Beep()
+
         runOnUiThread {
             AlertDialog.Builder(this)
-                .setTitle("Item Error")
+                .setTitle("Info")
                 .setMessage(msg)
                 .setPositiveButton("OK") { _, _ ->
 //                    val intent = Intent (applicationContext, PackingActivity::class.java)
@@ -606,6 +818,25 @@ class TransferReceivingActivity : AppCompatActivity() {
         }
     }
 
+    private fun showScanMessage(msg: String,shortMessage:String, color: Int) {
+        if (color == Color.RED)
+            Beep()
+        runOnUiThread {
+            AlertDialog.Builder(this)
+                .setTitle("Info")
+                .setMessage(msg)
+                .setPositiveButton("OK") { _, _ ->
+//                    val intent = Intent (applicationContext, PackingActivity::class.java)
+//                    startActivity(intent)
+                    //finish()
+                }
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                // .setCancelable(false)
+                .show()
+            lblScanError.setTextColor(color)
+            lblScanError.text = shortMessage
+        }
+    }
 
 
 

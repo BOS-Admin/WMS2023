@@ -284,7 +284,19 @@ interface BasicApi {
     @GET("/api/Transfer/GetBinInfo")
     fun GetBinTransferInfo(
         @Query("binBarcode") binBarcode: String,
+        @Query("UserId") UserId: Int,
+        @Query("toLocation") toLocation: String,
+        @Query("navNo") transferNavNo: String,
+        @Query("isExternal") isExternal: Boolean,
+
     ): Observable<BinModelItem2>
+
+    @GET("/api/Palette/IsExternalPalette")
+    fun IsExternalPalette(
+        @Query("paletteBarcode") binBarcode: String,
+        ): Observable<Boolean>
+
+
 
     @GET("api/Transfer/GetTransferBins")
     fun GetTransferBins(@Query("transferNavNo") transferNavNo:String): Observable<List<BinModelItem1>>
@@ -427,7 +439,8 @@ interface BasicApi {
     fun ValidateBinForChecking(
         @Query("BinBarcode") BinBarcode: String,
         @Query("UserID") UserID: Int,
-        @Query("LocationId") LocationId: Int
+        @Query("LocationId") LocationId: Int,
+        @Query("IsReceiving") IsReceiving: Boolean
     ): Observable<ResponseBody>
     @GET("api/Palette/ValidatePaletteForChecking")
     fun ValidatePaletteForChecking(

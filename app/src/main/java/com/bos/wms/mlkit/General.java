@@ -25,7 +25,7 @@ public class General {
     public Integer FloorID=0;
 
     public String UserName="";
-    public String AppVersion="2.2.28 02/02/2024";
+    public String AppVersion="2.2.37 19/02/2024";
     int interval = 3600;    // when there's no activity
 
     public String ipAddress="";
@@ -60,6 +60,7 @@ public class General {
     public Integer transactionType=-1;
 
     public String transferNavNo="" ;
+    public boolean isReceiving=false ;
 
 
     /**
@@ -103,6 +104,7 @@ public class General {
             stockType=sp.getInt("StockType",-1);
             operationType=sp.getInt("OperationType",-1);
             transactionType=sp.getInt("TransactionType",-1);
+            isReceiving=sp.getBoolean("IsReceiving",false);
 
 
 
@@ -159,6 +161,8 @@ public class General {
             sp.putInt("StockType",stockType);
             sp.putInt("OperationType",operationType);
             sp.putInt("TransactionType",transactionType);
+            sp.putBoolean("IsReceiving",isReceiving);
+
             sp.commit();
         } catch (Exception e) {
             Log.e("General", "exception reading preferences: " + e, e);

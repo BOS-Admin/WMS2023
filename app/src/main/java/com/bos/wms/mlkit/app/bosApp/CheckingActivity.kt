@@ -27,6 +27,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_scan_container.*
 import retrofit2.HttpException
+import retrofit2.http.Query
 import java.io.IOException
 
 
@@ -46,10 +47,12 @@ class CheckingActivity : AppCompatActivity() {
     private var PackingTypeId: Int = -1
     private var locationId: Int = -1
     private lateinit var general: General
+    private var isReceiving:Boolean =false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_packing_dc)
+
         general = General.getGeneral(applicationContext)
         textUser = findViewById(R.id.textUser)
         textBranch = findViewById(R.id.textBranch)
@@ -59,6 +62,9 @@ class CheckingActivity : AppCompatActivity() {
         locationId = general.mainLocationID
         textBranch.text = general.fullLocation;
         textUser.text = general.userFullName;
+        isReceiving=general.isReceiving;
+        if(isReceiving)
+            title = "Palette Bin Receiving"
 
         lblError = findViewById(R.id.lblError)
         lblScanError = findViewById(R.id.lblScanError)
@@ -94,7 +100,7 @@ class CheckingActivity : AppCompatActivity() {
                     updatingText = false;
                     return;
                 }
-                if(isValidUPCA(item))
+                if(!item.startsWith("230") && isValidUPCA(item))
                     item = convertToIS(item)
 
                 if (items.containsValue(item)) {
@@ -189,6 +195,9 @@ class CheckingActivity : AppCompatActivity() {
         return "IS00" + upca.substring(2, upca.length - 1)
     }
     fun isValidUPCA(barcode: String): Boolean {
+        if(barcode.startsWith("230"))
+            return false;
+
         if (barcode.length != 12 || ( !barcode.startsWith("22") && !barcode.startsWith("23")) ){
             return false
         }
@@ -323,7 +332,8 @@ class CheckingActivity : AppCompatActivity() {
                     general.UserID,
                     modelItems,
                     PackingTypeId,
-                    locationId
+                    locationId,
+                    isReceiving
                 )
 
             api = APIClient.getInstance(IPAddress, false).create(BasicApi::class.java)
