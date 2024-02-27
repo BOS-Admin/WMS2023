@@ -303,7 +303,7 @@ class PackingDCActivity : AppCompatActivity() {
                                                             btnPrev.isEnabled = true
                                                         }
 
-                                                        if (response != null && response == "success") {
+                                                        if (response != null && response.contains("success")) {
 
                                                             runOnUiThread {
                                                                 lblScanError.setTextColor(Color.GREEN)
@@ -318,6 +318,22 @@ class PackingDCActivity : AppCompatActivity() {
                                                                 textItemScanned.requestFocus()
                                                                 Log.i("DC-Packing", response)
                                                             }
+
+                                                            if(IsValidQueueCheckBin(textBoxNb.text.toString())) {
+                                                                var splitArgs = response.split('-');
+                                                                if (splitArgs.size > 1) {
+                                                                    try {
+                                                                        var currentQueueID = splitArgs[1].toInt();
+                                                                        Logger.Debug("PACKING-QID", "Got Item Queue ID: " + itemCode + " Queue: " + currentQueueID);
+                                                                        if (!itemsQueueCount.containsKey(itemCode)) {
+                                                                            itemsQueueCount.put(itemCode, currentQueueID);
+                                                                        }
+                                                                    } catch (ex: Throwable) {
+
+                                                                    }
+                                                                }
+                                                            }
+
                                                         } else {
                                                             runOnUiThread {
                                                                 updatingText = true
@@ -463,6 +479,37 @@ class PackingDCActivity : AppCompatActivity() {
             textItemScanned.isEnabled = false
 
 
+            if(itemsQueueCount.size > 0){
+                val thresholdStr = General.getGeneral(application).getSetting(applicationContext, "QueueItemPackingValidationThreshold")
+                try {
+                    var threshold:Double = (thresholdStr.toInt() / 100.0);
+                    var maxCountForAnyQID = items.size * threshold;
+                    var queueIDSizes = itemsQueueCount.map { it.value }
+                            .groupBy { it }
+                            .map { Pair(it.key, it.value.size) }
+
+                    for ((key, value) in queueIDSizes) {
+                        Logger.Debug("PACKING-QID-COUNT", "Got Total QID: " + key + " Item Size: " + value);
+                        if(value > maxCountForAnyQID){
+                            showMessage("Error Queue ID: " + key + " Reached Max Items Inside Box (" + value + ")/" + items.size + ", MAX: " + maxCountForAnyQID + "(" + thresholdStr + "%)", Color.RED)
+                            runOnUiThread {
+                                itemsQueueCount.clear()
+                                items.clear()
+                                textLastItem.text = ""
+                                index = -1;
+                                btnDone.isVisible = false
+                                btnDelete.isVisible = false
+                            }
+                            return;
+                        }
+                    }
+
+                }catch(e: Throwable){
+
+                }
+            }
+
+
             var modelItems: ArrayList<FillBinDCModelItem> = arrayListOf()
             for (it in items)
                 modelItems.add(FillBinDCModelItem(it.value))
@@ -509,6 +556,7 @@ class PackingDCActivity : AppCompatActivity() {
 
                             }
                             runOnUiThread {
+                                itemsQueueCount.clear()
                                 items.clear()
                                 textLastItem.text = ""
                                 index = -1;
@@ -603,6 +651,21 @@ class PackingDCActivity : AppCompatActivity() {
         }
     }
 
+    fun IsValidQueueCheckBin(box: String): Boolean {
+        val validations = General.getGeneral(application).getSetting(applicationContext, "QueueItemPackingValidationBoxes")
+        if (validations == null) {
+            Logger.Error("SystemControl", "Failed Finding System Control Value With QueueItemPackingValidationBoxes")
+            return false
+        }
+        val args = validations.split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+        if (args.size == 0) return box.startsWith(validations)
+        for (arg in args) {
+            if (box.startsWith(arg)) return true
+        }
+        return false
+    }
+
+    private var itemsQueueCount: HashMap<String, Int> = HashMap();
 
     private lateinit var textUser: TextView
     private lateinit var textBranch: TextView

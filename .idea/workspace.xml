@@ -10,8 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ae77340-5efb-46bd-99d6-8632db512b26" name="Changes" comment="edit packing">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/Remote/UserPermissions/UserPermissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/Remote/UserPermissions/UserPermissions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bos/wms/mlkit/General.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bos/wms/mlkit/General.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bos/wms/mlkit/app/bosApp/PackingDCActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bos/wms/mlkit/app/bosApp/PackingDCActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +89,7 @@
   </component>
   <component name="GenerateSignedApkSettings">
     <option name="EXPORT_PRIVATE_KEY" value="false" />
-    <option name="KEY_STORE_PATH" value="C:\Users\A.HAYDAR\Desktop\RFID App And WMS V2\WMSAppSignedKey.jks" />
+    <option name="KEY_STORE_PATH" value="C:\Users\MhmdSerhan\Desktop\WMSAppSignedKey.jks" />
     <option name="KEY_ALIAS" value="apk-key" />
     <option name="REMEMBER_PASSWORDS" value="true" />
     <option name="BUILD_TARGET_KEY" value="apk" />
@@ -111,7 +120,7 @@
   &quot;keyToString&quot;: {
     &quot;ApkExportedModule&quot;: &quot;WMS2023.app&quot;,
     &quot;BundleExportedModule&quot;: &quot;WMS2023.app&quot;,
-    &quot;ExportApk.ApkPathForWMS2023.app&quot;: &quot;C:\\Users\\A.HAYDAR\\StudioProjects\\WMS2023\\app&quot;,
+    &quot;ExportApk.ApkPathForWMS2023.app&quot;: &quot;C:\\Users\\MhmdSerhan\\StudioProjects\\WMS2023\\app&quot;,
     &quot;ExportBundle.BundlePathForWMS2023.app&quot;: &quot;C:\\Users\\m.serhan\\StudioProjects\\WMS2023\\app&quot;,
     &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -120,7 +129,7 @@
     &quot;android-custom-viewC:/Users/A.HAYDAR/StudioProjects/WMS2023/app/src/main/java/com/bos/wms/mlkit/customView/UPCDoneView.kt_SELECTED&quot;: &quot;UPCCardDoneView&quot;,
     &quot;android-custom-viewC:/Users/A.HAYDAR/StudioProjects/WMS2023/app/src/main/res/drawable/com/hc/mixthebluetooth/customView/UPCCardDoneView.kt_SELECTED&quot;: &quot;UPCCardDoneView&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/A.HAYDAR/StudioProjects/WMS2023/app&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/MhmdSerhan/Desktop/WMSAppSignedKey.jks&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -237,13 +246,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673620504091</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Fix Login Crash">
-      <created>1692713996487</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1692713996487</updated>
     </task>
     <task id="LOCAL-00030" summary="Fix Login Crash">
       <created>1692714038915</created>
@@ -581,7 +583,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708965938670</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="edit packing">
+      <created>1708966942440</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1708966942440</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
