@@ -63,7 +63,7 @@ public class StoreRepriceCountActivity extends AppCompatActivity {
         UserID = General.getGeneral(this).UserID;
         branch= General.getGeneral(this).mainLocation;
 
-        branch="S1006";
+        //branch="S1006";
 
         btnPopUp=findViewById(R.id.btnPopUp);
         txtStore =findViewById(R.id.txtStore);
