@@ -202,6 +202,9 @@ interface BasicApi {
     @GET("api/EmptyBin/CheckBin")
     fun CheckBinEmpty(@Query("UserID") UserID: Int, @Query("binBarcode") binBarcode: String): Observable<EmptyBinModel>
 
+    @GET("api/EmptyBin/VerifyBinBarcode")
+    fun VerifyEmptyBin(@Query("BinBarcode") BinBarcode: String, @Query("RFID") RFID: String): Observable<ResponseBody>
+
     @POST("api/BolRecognition")
     fun ProceedBolFailedUpload(@Body ocr: BolRecognitionModel): Observable<String>
 
