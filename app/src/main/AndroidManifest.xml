@@ -60,9 +60,6 @@
             android:name=".app.PingActivity"
             android:exported="false" />
         <activity
-            android:name=".app.PrintBPricesActivity"
-            android:exported="false" />
-        <activity
             android:name=".app.tpo.TPOReceiveBinsActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar"

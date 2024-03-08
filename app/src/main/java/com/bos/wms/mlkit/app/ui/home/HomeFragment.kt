@@ -350,10 +350,6 @@ class HomeFragment : Fragment() {
         val intent = Intent (getActivity(), PutAwayActivity::class.java)
         startActivity(intent)
     }
-    fun ProceedPrintBPrices() {
-        val intent = Intent (getActivity(), PrintBPricesActivity::class.java)
-        startActivity(intent)
-    }
     fun ProceedStoreRepriceCountActivity() {
         val intent = Intent (getActivity(), StoreRepriceCountActivity::class.java)
         startActivity(intent)

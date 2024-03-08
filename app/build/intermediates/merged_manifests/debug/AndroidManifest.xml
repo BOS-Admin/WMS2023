@@ -82,9 +82,6 @@
             android:name="com.bos.wms.mlkit.app.PingActivity"
             android:exported="false" />
         <activity
-            android:name="com.bos.wms.mlkit.app.PrintBPricesActivity"
-            android:exported="false" />
-        <activity
             android:name="com.bos.wms.mlkit.app.tpo.TPOReceiveBinsActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar"

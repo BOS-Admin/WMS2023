@@ -98,7 +98,7 @@ interface BasicApi {
 
 
     @POST("api/reprice/store/printV2")
-    fun PrintV2(  @Query("Store") Store:String, @Query("Count")   Count:Int, @Query("Printer")  Printer :String
+    fun PrintV2(  @Body model: ClassBPrintingRequest
     ): Observable<ResponseBody>
 
 

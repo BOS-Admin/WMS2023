@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:132:9-140:20
+INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:129:9-137:20
 	android:grantUriPermissions
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:136:13-47
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:133:13-47
 	android:authorities
 		INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:134:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:131:13-60
 	android:exported
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:135:13-37
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:132:13-37
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:133:13-62
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:130:13-62
 manifest
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-348:12
-INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-348:12
-INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-348:12
-INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-348:12
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-345:12
+INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-345:12
+INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-345:12
+INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-345:12
 MERGED from [androidx.databinding:viewbinding:7.2.0] C:\Users\MhmdSerhan\.gradle\caches\transforms-3\4b39775a56ad32cad1fadeeb9dfe9c96\transformed\jetified-viewbinding-7.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.5.1] C:\Users\MhmdSerhan\.gradle\caches\transforms-3\d02a3ba58a6b19150b6197086c7354a1\transformed\navigation-ui-ktx-2.5.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui:2.5.1] C:\Users\MhmdSerhan\.gradle\caches\transforms-3\96c3f746f2b74021ac44b8f339a6584e\transformed\navigation-ui-2.5.1\AndroidManifest.xml:17:1-24:12
@@ -139,20 +139,20 @@ MERGED from [com.google.android.flexbox:flexbox:3.0.0] C:\Users\MhmdSerhan\.grad
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\MhmdSerhan\.gradle\caches\transforms-3\e69680151a1996d02cc1cf8759a8bc78\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\MhmdSerhan\.gradle\caches\transforms-3\58cbad5e76e5c1e654e95d1362407828\transformed\jetified-image-1.0.0-beta1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\MhmdSerhan\.gradle\caches\transforms-3\7c3f583301d96899adcd86c33a3faf28\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-348:12
-INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-348:12
-INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-348:12
+INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-345:12
+INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-345:12
+INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-345:12
 	package
 		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-348:12
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-345:12
 		INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-348:12
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:1-345:12
 		INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:2:11-69
@@ -247,7 +247,7 @@ ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManife
 	android:name
 		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:26:22-62
 application
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:28:5-346:19
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:28:5-343:19
 MERGED from [com.google.android.material:material:1.6.0] C:\Users\MhmdSerhan\.gradle\caches\transforms-3\66c9f899bb35b560cbe361956da59749\transformed\material-1.6.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.6.0] C:\Users\MhmdSerhan\.gradle\caches\transforms-3\66c9f899bb35b560cbe361956da59749\transformed\material-1.6.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\MhmdSerhan\.gradle\caches\transforms-3\e39d701d0b24ffb3bb73ee6ff6ecdf46\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -406,552 +406,546 @@ ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManife
 		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:61:13-37
 	android:name
 		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:60:13-45
-activity#com.bos.wms.mlkit.app.PrintBPricesActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:62:9-64:40
+activity#com.bos.wms.mlkit.app.tpo.TPOReceiveBinsActivity
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:62:9-66:57
+	android:windowSoftInputMode
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:66:13-54
 	android:exported
 		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:64:13-37
-	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:63:13-53
-activity#com.bos.wms.mlkit.app.tpo.TPOReceiveBinsActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:65:9-69:57
-	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:69:13-54
-	android:exported
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:67:13-37
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:68:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:65:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:66:13-59
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:63:13-59
 activity#com.bos.wms.mlkit.app.RepriceActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:70:9-74:57
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:67:9-71:57
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:74:13-54
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:71:13-54
 	android:exported
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:72:13-37
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:69:13-37
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:73:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:70:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:71:13-48
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:68:13-48
 activity#com.bos.wms.mlkit.app.tpo.TPOCountBinsActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:75:9-78:59
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:72:9-75:59
 	android:exported
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:77:13-37
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:74:13-37
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:78:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:75:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:76:13-57
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:73:13-57
 activity#com.bos.wms.mlkit.app.tpo.TPOLoadBinsActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:79:9-82:59
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:76:9-79:59
 	android:exported
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:81:13-37
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:78:13-37
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:82:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:79:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:80:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:77:13-56
 activity#com.bos.wms.mlkit.app.tpo.TPOMainActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:83:9-86:59
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:80:9-83:59
 	android:exported
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:85:13-37
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:82:13-37
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:86:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:83:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:84:13-52
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:81:13-52
 activity#com.bos.wms.mlkit.app.tpo.TPOBinsActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:87:9-91:57
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:84:9-88:57
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:91:13-54
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:88:13-54
 	android:exported
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:89:13-37
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:86:13-37
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:90:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:87:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:88:13-52
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:85:13-52
 activity#com.bos.wms.mlkit.app.UPCPricingOverrideActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:92:9-96:57
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:89:9-93:57
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:96:13-54
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:93:13-54
 	android:exported
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:94:13-37
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:91:13-37
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:95:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:92:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:93:13-59
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:90:13-59
 activity#com.bos.wms.mlkit.app.UPCRecognitionPricingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:97:9-101:57
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:94:9-98:57
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:101:13-54
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:98:13-54
 	android:exported
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:99:13-37
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:96:13-37
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:100:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:97:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:98:13-62
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:95:13-62
 activity#com.bos.wms.mlkit.app.PasBrandOCRActivity
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:99:9-101:40
+	android:exported
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:101:13-37
+	android:name
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:100:13-52
+activity#com.bos.wms.mlkit.app.PalletBinAssociationActivity
 ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:102:9-104:40
 	android:exported
 		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:104:13-37
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:103:13-52
-activity#com.bos.wms.mlkit.app.PalletBinAssociationActivity
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:103:13-61
+activity#com.bos.wms.mlkit.app.PalletRackAssignmentActivity
 ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:105:9-107:40
 	android:exported
 		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:107:13-37
 	android:name
 		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:106:13-61
-activity#com.bos.wms.mlkit.app.PalletRackAssignmentActivity
+activity#com.bos.wms.mlkit.app.PalletRackUnAssignActivity
 ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:108:9-110:40
 	android:exported
 		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:110:13-37
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:109:13-61
-activity#com.bos.wms.mlkit.app.PalletRackUnAssignActivity
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:109:13-59
+activity#com.bos.wms.mlkit.app.ClassBBulkRepriceActivity
 ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:111:9-113:40
 	android:exported
 		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:113:13-37
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:112:13-59
-activity#com.bos.wms.mlkit.app.ClassBBulkRepriceActivity
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:112:13-58
+activity#com.bos.wms.mlkit.app.BrandOCRActivity
 ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:114:9-116:40
 	android:exported
 		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:116:13-37
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:115:13-58
-activity#com.bos.wms.mlkit.app.BrandOCRActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:117:9-119:40
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:115:13-49
+activity#com.bos.wms.mlkit.app.EmptyBoxActivity
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:117:9-120:57
+	android:windowSoftInputMode
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:120:13-54
 	android:exported
 		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:119:13-37
 	android:name
 		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:118:13-49
-activity#com.bos.wms.mlkit.app.EmptyBoxActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:120:9-123:57
-	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:123:13-54
-	android:exported
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:122:13-37
-	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:121:13-49
 activity#com.bos.wms.mlkit.app.ScanUPCsForBolActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:124:9-127:57
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:121:9-124:57
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:127:13-54
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:124:13-54
 	android:exported
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:126:13-37
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:123:13-37
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:125:13-55
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:122:13-55
 activity#com.bos.wms.mlkit.app.BolRecognitionActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:128:9-130:40
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:125:9-127:40
 	android:exported
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:130:13-37
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:127:13-37
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:129:13-55
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:126:13-55
 activity#com.bos.wms.mlkit.app.bosApp.PutAwayActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:142:9-145:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:139:9-142:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:144:13-37
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:141:13-37
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:145:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:142:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:143:13-55
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:140:13-55
 activity#com.bos.wms.mlkit.app.bosApp.ScanRackPutAwayActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:146:9-149:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:143:9-146:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:148:13-47
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:145:13-47
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:149:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:146:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:147:13-63
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:144:13-63
 activity#com.bos.wms.mlkit.app.bosApp.Transfer.TransferReceivingDCActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:150:9-153:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:147:9-150:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:152:13-50
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:149:13-50
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:153:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:150:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:151:13-76
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:148:13-76
 activity#com.bos.wms.mlkit.app.bosApp.Transfer.TransferReceivingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:154:9-157:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:151:9-154:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:156:13-47
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:153:13-47
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:157:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:154:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:155:13-74
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:152:13-74
 activity#com.bos.wms.mlkit.app.bosApp.Transfer.ScanTransferReceivingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:158:9-161:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:155:9-158:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:160:13-52
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:157:13-52
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:161:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:158:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:159:13-78
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:156:13-78
 activity#com.bos.wms.mlkit.app.bosApp.Transfer.TransferActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:162:9-165:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:159:9-162:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:164:13-42
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:161:13-42
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:165:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:162:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:163:13-65
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:160:13-65
 activity#com.bos.wms.mlkit.app.bosApp.Transfer.ShipmentActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:166:9-169:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:163:9-166:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:168:13-46
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:165:13-46
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:169:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:166:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:167:13-65
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:164:13-65
 activity#com.bos.wms.mlkit.app.NextReceivingStatusActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:170:9-69
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:167:9-69
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:170:19-66
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:167:19-66
 activity#com.bos.wms.mlkit.app.bosApp.PackingDCActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:171:9-174:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:168:9-171:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:173:13-62
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:170:13-62
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:174:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:171:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:172:13-57
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:169:13-57
 activity#com.bos.wms.mlkit.app.bosApp.StockTakeCountActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:175:9-178:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:172:9-175:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:177:13-63
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:174:13-63
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:178:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:175:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:176:13-62
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:173:13-62
 activity#com.bos.wms.mlkit.app.bosApp.ScanForCountStockTakeActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:179:9-182:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:176:9-179:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:181:13-72
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:178:13-72
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:182:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:179:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:180:13-69
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:177:13-69
 activity#com.bos.wms.mlkit.app.bosApp.ScanRackStockTakeActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:183:9-186:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:180:9-183:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:185:13-77
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:182:13-77
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:186:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:183:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:184:13-65
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:181:13-65
 activity#com.bos.wms.mlkit.app.bosApp.CheckingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:187:9-190:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:184:9-187:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:189:13-63
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:186:13-63
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:190:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:187:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:188:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:185:13-56
 activity#com.bos.wms.mlkit.app.bosApp.ScanBinForCheckingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:191:9-194:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:188:9-191:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:193:13-65
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:190:13-65
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:194:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:191:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:192:13-66
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:189:13-66
 activity#com.bos.wms.mlkit.app.bosApp.StockTakeDCActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:195:9-198:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:192:9-195:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:197:13-65
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:194:13-65
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:198:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:195:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:196:13-59
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:193:13-59
 activity#com.bos.wms.mlkit.app.bosApp.StockTakeDCRFIDActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:199:9-202:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:196:9-199:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:201:13-65
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:198:13-65
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:202:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:199:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:200:13-63
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:197:13-63
 activity#com.bos.wms.mlkit.app.bosApp.CountActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:203:9-206:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:200:9-203:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:205:13-34
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:202:13-34
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:206:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:203:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:204:13-53
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:201:13-53
 activity#com.bos.wms.mlkit.app.bosApp.ScanBoxForStockTakeActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:207:9-210:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:204:9-207:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:209:13-69
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:206:13-69
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:210:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:207:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:208:13-67
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:205:13-67
 activity#com.bos.wms.mlkit.app.bosApp.StockTakeActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:211:9-214:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:208:9-211:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:213:13-62
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:210:13-62
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:214:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:211:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:212:13-57
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:209:13-57
 activity#com.bos.wms.mlkit.app.bosApp.ScanBinForCountActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:215:9-218:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:212:9-215:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:217:13-62
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:214:13-62
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:218:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:215:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:216:13-63
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:213:13-63
 activity#com.bos.wms.mlkit.app.bosApp.PaletteBinsCheckingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:219:9-222:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:216:9-219:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:221:13-54
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:218:13-54
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:222:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:219:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:220:13-67
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:217:13-67
 activity#com.bos.wms.mlkit.app.bosApp.ScanContainerActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:223:9-226:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:220:9-223:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:225:13-66
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:222:13-66
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:226:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:223:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:224:13-61
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:221:13-61
 activity#com.bos.wms.mlkit.app.bosApp.PrinterSelectionActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:227:9-230:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:224:9-227:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:229:13-69
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:226:13-69
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:230:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:227:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:228:13-64
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:225:13-64
 activity#com.bos.wms.mlkit.app.bosApp.PackingReasonActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:231:9-234:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:228:9-231:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:233:13-66
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:230:13-66
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:234:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:231:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:232:13-61
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:229:13-61
 activity#com.bos.wms.mlkit.app.bosApp.PackingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:235:9-239:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:232:9-236:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:237:13-62
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:234:13-62
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:239:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:236:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:238:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:235:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:236:13-55
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:233:13-55
 activity#com.bos.wms.mlkit.app.bosApp.ReceivingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:240:9-244:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:237:9-241:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:242:13-61
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:239:13-61
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:244:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:241:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:243:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:240:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:241:13-57
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:238:13-57
 activity#com.bos.wms.mlkit.app.bosApp.PaletteBinsMainActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:245:9-249:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:242:9-246:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:247:13-42
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:244:13-42
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:249:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:246:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:248:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:245:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:246:13-63
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:243:13-63
 activity#com.bos.wms.mlkit.app.bosApp.PaletteBinsDCActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:250:9-253:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:247:9-250:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:252:13-44
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:249:13-44
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:253:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:250:13-60
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:251:13-61
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:248:13-61
 activity#com.bos.wms.mlkit.app.bosApp.StockTakeRackDCActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:254:9-258:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:251:9-255:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:256:13-47
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:253:13-47
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:258:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:255:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:257:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:254:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:255:13-63
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:252:13-63
 activity#com.bos.wms.mlkit.app.PickingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:259:9-263:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:256:9-260:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:261:13-59
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:258:13-59
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:263:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:260:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:262:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:259:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:260:13-48
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:257:13-48
 activity#com.bos.wms.mlkit.app.LocationCheckActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:264:9-268:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:261:9-265:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:266:13-43
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:263:13-43
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:268:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:265:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:267:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:264:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:265:13-54
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:262:13-54
 activity#com.bos.wms.mlkit.app.PutAwayPalleteActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:269:9-273:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:266:9-270:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:271:13-45
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:268:13-45
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:273:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:270:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:272:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:269:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:270:13-55
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:267:13-55
 activity#com.bos.wms.mlkit.app.ShipmentPalleteReceivingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:274:9-278:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:271:9-275:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:276:13-55
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:273:13-55
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:278:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:275:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:277:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:274:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:275:13-65
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:272:13-65
 activity#com.bos.wms.mlkit.app.ShipmentCartonReceivingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:279:9-283:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:276:9-280:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:281:13-54
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:278:13-54
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:283:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:280:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:282:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:279:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:280:13-64
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:277:13-64
 activity#com.bos.wms.mlkit.app.ShipmentCartonReceivingV2Activity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:284:9-288:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:281:9-285:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:286:13-57
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:283:13-57
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:288:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:285:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:287:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:284:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:285:13-66
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:282:13-66
 activity#com.bos.wms.mlkit.app.ShipmentCartonCountReceivingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:289:9-293:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:286:9-290:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:291:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:288:13-60
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:293:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:290:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:292:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:289:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:290:13-69
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:287:13-69
 activity#com.bos.wms.mlkit.app.FoldingScanActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:294:9-298:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:291:9-295:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:296:13-41
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:293:13-41
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:298:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:295:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:297:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:294:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:295:13-52
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:292:13-52
 activity#com.bos.wms.mlkit.app.UPCPricingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:299:9-303:57
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:296:9-300:57
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:301:13-40
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:298:13-40
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:303:13-54
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:300:13-54
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:302:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:299:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:300:13-51
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:297:13-51
 activity#com.bos.wms.mlkit.app.PGPricingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:304:9-308:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:301:9-305:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:306:13-39
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:303:13-39
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:308:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:305:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:307:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:304:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:305:13-50
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:302:13-50
 activity#com.bos.wms.mlkit.app.ItemSerialMissingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:309:9-313:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:306:9-310:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:311:13-41
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:308:13-41
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:313:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:310:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:312:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:309:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:310:13-58
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:307:13-58
 activity#com.bos.wms.mlkit.app.ItemSerialUPCMissingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:314:9-318:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:311:9-315:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:316:13-41
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:313:13-41
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:318:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:315:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:317:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:314:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:315:13-61
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:312:13-61
 activity#com.bos.wms.mlkit.app.SerialGeneratorActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:319:9-322:59
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:316:9-319:59
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:321:13-45
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:318:13-45
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:322:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:319:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:320:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:317:13-56
 activity#com.bos.wms.mlkit.app.NewItemPricingActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:323:9-327:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:320:9-324:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:325:13-41
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:322:13-41
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:327:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:324:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:326:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:323:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:324:13-55
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:321:13-55
 activity#com.bos.wms.mlkit.app.FillPalleteActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:328:9-332:63
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:325:9-329:63
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:330:13-50
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:327:13-50
 	android:windowSoftInputMode
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:332:13-60
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:329:13-60
 	android:theme
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:331:13-56
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:328:13-56
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:329:13-52
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:326:13-52
 activity#com.bos.wms.mlkit.app.MainMenu
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:333:9-335:64
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:330:9-332:64
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:335:13-61
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:332:13-61
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:334:13-41
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:331:13-41
 activity#com.bos.wms.mlkit.ui.login.LoginActivity
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:336:9-345:20
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:333:9-342:20
 	android:label
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:339:13-57
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:336:13-57
 	android:exported
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:338:13-36
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:335:13-36
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:337:13-51
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:334:13-51
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:340:13-344:29
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:337:13-341:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:341:17-69
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:338:17-69
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:341:25-66
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:338:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:343:17-77
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:340:17-77
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:343:27-74
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:340:27-74
 uses-sdk
 INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml
@@ -1215,11 +1209,11 @@ INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidMan
 		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:137:13-139:58
+ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:134:13-136:58
 	android:resource
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:139:17-55
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:136:17-55
 	android:name
-		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:138:17-67
+		ADDED from C:\Users\MhmdSerhan\StudioProjects\WMS2023\app\src\main\AndroidManifest.xml:135:17-67
 queries
 ADDED from [androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\MhmdSerhan\.gradle\caches\transforms-3\431c62dec666c68eb42798b4a036f2c7\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:24:5-28:15
 intent#action:name:androidx.camera.extensions.action.VENDOR_ACTION

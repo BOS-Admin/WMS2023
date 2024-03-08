@@ -23,6 +23,7 @@ import com.bos.wms.mlkit.storage.Storage;
 import java.util.ArrayList;
 
 import Model.BrandInToIsResponseModel;
+import Model.ClassBPrintingRequest;
 import Model.ClassBRepriceResponseModel;
 import Model.Pricing.PricingStandModel;
 import Remote.APIClient;
@@ -119,7 +120,7 @@ public class ClassBBulkRepriceActivity extends AppCompatActivity {
             BasicApi api = APIClient.getInstanceStatic(IPAddress, false).create(BasicApi.class);
             CompositeDisposable compositeDisposable = new CompositeDisposable();
             compositeDisposable.addAll(
-                    api.PrintV2(branch, -1, PricingLineCode)
+                    api.PrintV2(new ClassBPrintingRequest(branch, PricingLineCode, PricedItems, General.getGeneral(getApplicationContext()).UserID))
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe((s) -> {
@@ -127,9 +128,9 @@ public class ClassBBulkRepriceActivity extends AppCompatActivity {
                                             String message = "";
                                             try {
                                                 message = s.string();
-                                                Logger.Debug("API", "UInToIs-SendPrintOrder - Returned Response: " + message);
+                                                Logger.Debug("API", "RepriceClassB-SendPrintOrder - Returned Response: " + message);
                                             } catch (Exception ex) {
-                                                Logger.Error("API", "InToIs-SendPrintOrder - Error In Inner Response: " + ex.getMessage());
+                                                Logger.Error("API", "RepriceClassB-SendPrintOrder - Error In Inner Response: " + ex.getMessage());
                                                 message="Error "+ex.getMessage();
                                             }
                                             if(message.startsWith("Success") && message.equalsIgnoreCase("Success")){
