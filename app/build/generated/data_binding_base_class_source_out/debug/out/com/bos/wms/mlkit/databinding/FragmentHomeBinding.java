@@ -77,9 +77,6 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final Button btnPing;
 
   @NonNull
-  public final Button btnPrintReprice;
-
-  @NonNull
   public final Button btnPutAway;
 
   @NonNull
@@ -119,12 +116,12 @@ public final class FragmentHomeBinding implements ViewBinding {
       @NonNull Button btnMenuShipmentPalleteReceiving,
       @NonNull Button btnMenuShipmentReceivingPalleteCount, @NonNull Button btnPASBrandOCR,
       @NonNull Button btnPalletBinAssociation, @NonNull Button btnPalletRackAssignment,
-      @NonNull Button btnPalletRackUnAssign, @NonNull Button btnPing,
-      @NonNull Button btnPrintReprice, @NonNull Button btnPutAway, @NonNull Button btnRepriceClassB,
-      @NonNull Button btnSerialGenerator, @NonNull Button btnSerialMissing,
-      @NonNull Button btnStoreRepriceCount, @NonNull Button btnTPOMainActivity,
-      @NonNull Button btnUPCPricing, @NonNull Button btnUPCPricingOverride,
-      @NonNull Button btnUPCRecognitionPricing, @NonNull LinearLayout homeFragmentLayout) {
+      @NonNull Button btnPalletRackUnAssign, @NonNull Button btnPing, @NonNull Button btnPutAway,
+      @NonNull Button btnRepriceClassB, @NonNull Button btnSerialGenerator,
+      @NonNull Button btnSerialMissing, @NonNull Button btnStoreRepriceCount,
+      @NonNull Button btnTPOMainActivity, @NonNull Button btnUPCPricing,
+      @NonNull Button btnUPCPricingOverride, @NonNull Button btnUPCRecognitionPricing,
+      @NonNull LinearLayout homeFragmentLayout) {
     this.rootView = rootView;
     this.btnBolRecognition = btnBolRecognition;
     this.btnBrandOCR = btnBrandOCR;
@@ -145,7 +142,6 @@ public final class FragmentHomeBinding implements ViewBinding {
     this.btnPalletRackAssignment = btnPalletRackAssignment;
     this.btnPalletRackUnAssign = btnPalletRackUnAssign;
     this.btnPing = btnPing;
-    this.btnPrintReprice = btnPrintReprice;
     this.btnPutAway = btnPutAway;
     this.btnRepriceClassB = btnRepriceClassB;
     this.btnSerialGenerator = btnSerialGenerator;
@@ -299,12 +295,6 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnPrintReprice;
-      Button btnPrintReprice = ViewBindings.findChildViewById(rootView, id);
-      if (btnPrintReprice == null) {
-        break missingId;
-      }
-
       id = R.id.btnPutAway;
       Button btnPutAway = ViewBindings.findChildViewById(rootView, id);
       if (btnPutAway == null) {
@@ -366,10 +356,9 @@ public final class FragmentHomeBinding implements ViewBinding {
           btnMenuPGPricing, btnMenuPicking, btnMenuPutAwayPallete, btnMenuShipmentCartonReceiving,
           btnMenuShipmentCartonReceivingV2, btnMenuShipmentPalleteReceiving,
           btnMenuShipmentReceivingPalleteCount, btnPASBrandOCR, btnPalletBinAssociation,
-          btnPalletRackAssignment, btnPalletRackUnAssign, btnPing, btnPrintReprice, btnPutAway,
-          btnRepriceClassB, btnSerialGenerator, btnSerialMissing, btnStoreRepriceCount,
-          btnTPOMainActivity, btnUPCPricing, btnUPCPricingOverride, btnUPCRecognitionPricing,
-          homeFragmentLayout);
+          btnPalletRackAssignment, btnPalletRackUnAssign, btnPing, btnPutAway, btnRepriceClassB,
+          btnSerialGenerator, btnSerialMissing, btnStoreRepriceCount, btnTPOMainActivity,
+          btnUPCPricing, btnUPCPricingOverride, btnUPCRecognitionPricing, homeFragmentLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

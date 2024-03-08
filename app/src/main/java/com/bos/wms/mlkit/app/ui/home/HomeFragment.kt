@@ -67,7 +67,6 @@ class HomeFragment : Fragment() {
             UserPermissions.ValidatePermission("WMSApp.BrandOCR", root.btnBrandOCR);
             UserPermissions.ValidatePermission("WMSApp.PASBrandOCR", root.btnPASBrandOCR);
             UserPermissions.ValidatePermission("WMSApp.StoreRepriceCount", root.btnStoreRepriceCount);
-            UserPermissions.ValidatePermission("WMSApp.PrintClassBPrices", root.btnPrintReprice);
             UserPermissions.ValidatePermission("WMSApp.Ping", root.btnPing);
             UserPermissions.ValidatePermission("WMSApp.PalletBinAssociation", root.btnPalletBinAssociation);
             UserPermissions.ValidatePermission("WMSApp.PalletRackAssignment", root.btnPalletRackAssignment);
@@ -101,7 +100,6 @@ class HomeFragment : Fragment() {
                 UserPermissions.ValidatePermission("WMSApp.BrandOCR", root.btnBrandOCR);
                 UserPermissions.ValidatePermission("WMSApp.PASBrandOCR", root.btnPASBrandOCR);
                 UserPermissions.ValidatePermission("WMSApp.StoreRepriceCount", root.btnStoreRepriceCount);
-                UserPermissions.ValidatePermission("WMSApp.PrintClassBPrices", root.btnPrintReprice);
                 UserPermissions.ValidatePermission("WMSApp.Ping", root.btnPing);
                 UserPermissions.ValidatePermission("WMSApp.PalletBinAssociation", root.btnPalletBinAssociation);
                 UserPermissions.ValidatePermission("WMSApp.PalletRackAssignment", root.btnPalletRackAssignment);
@@ -160,9 +158,6 @@ class HomeFragment : Fragment() {
 
         root.btnTPOMainActivity.setOnClickListener {
             ProceedTPOMainActivity()
-        }
-        root.btnPrintReprice.setOnClickListener {
-            ProceedPrintBPrices()
         }
         root.btnStoreRepriceCount.setOnClickListener {
             ProceedStoreRepriceCountActivity()
@@ -364,7 +359,7 @@ class HomeFragment : Fragment() {
         startActivity(intent)
     }
   fun ProceedClassBReprice() {
-        val intent = Intent (getActivity(), RepriceActivity::class.java)
+        val intent = Intent (getActivity(), ClassBBulkRepriceActivity::class.java)
         startActivity(intent)
     }
 

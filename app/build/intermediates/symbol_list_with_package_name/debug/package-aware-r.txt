@@ -2880,7 +2880,6 @@ id btnPing
 id btnPopUp
 id btnPrev
 id btnPrint
-id btnPrintReprice
 id btnPutAway
 id btnRackCount
 id btnReceiving
@@ -3129,6 +3128,7 @@ id lblRack
 id lblRes
 id lblResult
 id lblScanError
+id lblScanUPC
 id lblSeason
 id lblShipCartonReciBolNb
 id lblShipCartonReciCartonCode

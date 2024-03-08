@@ -112,6 +112,9 @@
             android:name=".app.PalletRackUnAssignActivity"
             android:exported="false" />
         <activity
+            android:name=".app.ClassBBulkRepriceActivity"
+            android:exported="false" />
+        <activity
             android:name=".app.BrandOCRActivity"
             android:exported="false" />
         <activity

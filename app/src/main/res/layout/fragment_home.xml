@@ -64,12 +64,6 @@
                 android:visibility="gone"/>
 
             <Button
-                android:id="@+id/btnPrintReprice"
-                style="@style/button_main_menu_style"
-                android:drawableLeft="@drawable/pasbrandocr"
-                android:text="Print B Prices"
-                android:visibility="gone"/>
-            <Button
                 android:id="@+id/btnStoreRepriceCount"
                 style="@style/button_main_menu_style"
                 android:drawableLeft="@drawable/pasbrandocr"

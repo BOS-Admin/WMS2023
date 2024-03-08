@@ -134,6 +134,9 @@
             android:name="com.bos.wms.mlkit.app.PalletRackUnAssignActivity"
             android:exported="false" />
         <activity
+            android:name="com.bos.wms.mlkit.app.ClassBBulkRepriceActivity"
+            android:exported="false" />
+        <activity
             android:name="com.bos.wms.mlkit.app.BrandOCRActivity"
             android:exported="false" />
         <activity
