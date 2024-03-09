@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 import Remote.APIClient;
@@ -26,14 +27,27 @@ public class Logger {
     private static Context appContext;
     private static boolean isInitialized = false;
 
+    private static ArrayList<String> LoggerFileTypes;
+
     /**
      * Initializes the logger by cleaning up log files older than 10 days
      * @param context the application context, used to get the logger output directory
      */
-    public static void Initialize(Context context){
+    public static void Initialize(Context context, String[] LogTypes){
         if(!isInitialized) {
             appContext = context;
             isInitialized = true;
+
+            LoggerFileTypes = new ArrayList<>();
+
+            for(String logType : LogTypes){
+                if(!LoggerFileTypes.contains(logType))
+                    LoggerFileTypes.add(logType);
+            }
+
+            AddLoggerType("Error");
+            AddLoggerType("Debug");
+
             CleanUpLogFiles(10);
             Debug("LOGGER", "Logger Has Been Initialized");
 
@@ -47,8 +61,9 @@ public class Logger {
      * @param days
      */
     private static void CleanUpLogFiles(int days){
-        CleanUpSingleLogFile(days, new File (getOutputDirectory(),"/Debug/"));
-        CleanUpSingleLogFile(days, new File (getOutputDirectory(),"/Error/"));
+        for(String type : LoggerFileTypes) {
+            CleanUpSingleLogFile(days, new File(getOutputDirectory(), "/Logs/" + type + "/"));
+        }
         CleanUpAPKS(days, new File(getOutputDirectory(), "/Downloads/"));//Cleaned up the downloaded files
         Debug("LOGGER", "CleanUpLogFiles - Done All Log Files Cleanups");
     }
@@ -109,6 +124,7 @@ public class Logger {
         Debug("LOGGER", "CleanUpAPKS - Done Cleanup For " + file.getAbsolutePath());
     }
 
+
     /**
      * Sends a debug log which is saved to the current day's log file in the /Debug/ Folder
      * @param tag The log tag
@@ -120,81 +136,7 @@ public class Logger {
             Log.e("LOGGER", "Logger Not Initialized Yet");
             return;
         }
-        File FolerPath = new File(
-                getOutputDirectory(),
-                "/Debug/"
-        );
-
-
-        String time = new SimpleDateFormat("HH:mm:ss.SSS").format(new Date());
-        String data = "[" + tag + "] " + time + ": " + msg +"\n\r";
-        FolerPath.mkdirs();
-        String fileName = new SimpleDateFormat("dd-MM-yyyy'.txt'").format(new Date());
-        fileName = "Log " + fileName;
-        File logFile = new File(
-                FolerPath, fileName);
-
-        if (!logFile.exists()){
-            try {
-                logFile.createNewFile();
-            }catch(IOException e){
-                Log.e("LOGGER", "Failed Creating Debug LogFile (" + logFile.getAbsolutePath() + ")");
-            }
-        }
-        try {
-            FileOutputStream outStream = new FileOutputStream(logFile, true) ;
-            OutputStreamWriter outStreamWriter = new OutputStreamWriter(outStream);
-
-            outStreamWriter.append(data);
-            outStreamWriter.flush();
-        }catch(IOException e){
-            Log.e("LOGGER", "Failed Creating An Output Stream Writer (" + logFile.getAbsolutePath() + ")");
-        }
-
-    }
-
-    /**
-     * Sends a debug log which is saved to a custom file in the /Debug/ Folder
-     * @param fileName The custom file name
-     * @param tag The log tag
-     * @param msg The log message
-     */
-    public static void Debug(String fileName, String tag, String msg) {
-        Log.d(tag, msg);
-        if(!isInitialized){
-            Log.e("LOGGER", "Logger Not Initialized Yet");
-            return;
-        }
-        File FolerPath = new File(
-                getOutputDirectory(),
-                "/Debug/"
-        );
-
-
-        String time = new SimpleDateFormat("HH:mm:ss.SSS").format(new Date());
-        String data = "[" + tag + "] " + time + ": " + msg +"\n\r";
-        FolerPath.mkdirs();
-        fileName = "Log " + fileName;
-        File logFile = new File(
-                FolerPath, fileName);
-
-        if (!logFile.exists()){
-            try {
-                logFile.createNewFile();
-            }catch(IOException e){
-                Log.e("LOGGER", "Failed Creating Debug LogFile (" + logFile.getAbsolutePath() + ")");
-            }
-        }
-        try {
-            FileOutputStream outStream = new FileOutputStream(logFile, true) ;
-            OutputStreamWriter outStreamWriter = new OutputStreamWriter(outStream);
-
-            outStreamWriter.append(data);
-            outStreamWriter.flush();
-        }catch(IOException e){
-            Log.e("LOGGER", "Failed Creating An Output Stream Writer (" + logFile.getAbsolutePath() + ")");
-        }
-
+        LogToFile("Debug", tag, msg);
     }
 
 
@@ -209,9 +151,42 @@ public class Logger {
             Log.e("LOGGER", "Logger Not Initialized Yet");
             return;
         }
+
+        LogToFile("Error", tag, msg);
+
+    }
+
+    /**
+     * Sends a debug log which is saved to the current day's log file in the /TYPE/ Folder
+     * @param type the log type, the log will be saved in a folder names by the type
+     * @param tag The log tag
+     * @param msg The log message
+     */
+    public static void Log(String type, String tag, String msg) {
+        Log.d(tag, msg);
+        if(!isInitialized){
+            Log.e("LOGGER", "Logger Not Initialized Yet");
+            return;
+        }
+        LogToFile(type, tag, msg);
+    }
+
+    /**
+     * Saves The Log Data To A File
+     * @param type
+     * @param tag
+     * @param msg
+     */
+    private static void LogToFile(String type, String tag, String msg){
+
+        if(!IsLoggerTypeValid(type)){
+            Error("LOGGER", "Attempting To Log Date For Type: " + type + " While Logger Type Is Not Valid!");
+            return;
+        }
+
         File FolerPath = new File(
                 getOutputDirectory(),
-                "/Error/"
+                "/Logs/" + type + "/"
         );
 
 
@@ -227,7 +202,7 @@ public class Logger {
             try {
                 logFile.createNewFile();
             }catch(IOException e){
-                Log.e("LOGGER", "Failed Creating Debug LogFile (" + logFile.getAbsolutePath() + ")");
+                Log.e("LOGGER", "Failed Creating LogFile (" + logFile.getAbsolutePath() + ")");
             }
         }
         try {
@@ -239,55 +214,31 @@ public class Logger {
         }catch(IOException e){
             Log.e("LOGGER", "Failed Creating An Output Stream Writer (" + logFile.getAbsolutePath() + ")");
         }
-
-
     }
 
     /**
-     * Sends an error log which is saved to a custom file in the /Error/ Folder
-     * @param fileName The custom file name
-     * @param tag The log tag
-     * @param msg The log message
+     * Adds A Logger Type Such As Debug, Error, And Such
+     * @param type
      */
-    public static void Error(String fileName, String tag, String msg)  {
-        Log.e(tag, msg);
-        if(!isInitialized) {
-            Log.e("LOGGER", "Logger Not Initialized Yet");
+    public static void AddLoggerType(String type){
+        if(LoggerFileTypes.contains(type))
             return;
-        }
-        File FolerPath = new File(
-                getOutputDirectory(),
-                "/Error/"
-        );
-
-
-        String time = new SimpleDateFormat("HH:mm:ss.SSS").format(new Date());
-        String data = "[" + tag + "] " + time + ": " + msg +"\n\r";
-        FolerPath.mkdirs();
-        fileName = "Log " + fileName;
-        File logFile = new File(
-                FolerPath, fileName);
-
-        if (!logFile.exists()){
-            try {
-                logFile.createNewFile();
-            }catch(IOException e){
-                Log.e("LOGGER", "Failed Creating Debug LogFile (" + logFile.getAbsolutePath() + ")");
-            }
-        }
-        try {
-            FileOutputStream outStream = new FileOutputStream(logFile, true) ;
-            OutputStreamWriter outStreamWriter = new OutputStreamWriter(outStream);
-
-            outStreamWriter.append(data);
-            outStreamWriter.flush();
-        }catch(IOException e){
-            Log.e("LOGGER", "Failed Creating An Output Stream Writer (" + logFile.getAbsolutePath() + ")");
-        }
-
-
+        LoggerFileTypes.add(type);
     }
 
+    /**
+     * Checks If A Logger Type Is Valid
+     * @param type
+     * @return
+     */
+    public static boolean IsLoggerTypeValid(String type){
+        return LoggerFileTypes.contains(type);
+    }
+
+    /**
+     * Returns The Application Output Directory
+     * @return
+     */
     private static File getOutputDirectory() {
         File[] allMediaDirs = appContext.getExternalMediaDirs();
         File mediaDir = allMediaDirs.length > 0 ? allMediaDirs[0] : null;

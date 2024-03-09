@@ -2,7 +2,7 @@ package com.bos.wms.mlkit.utils.RFID;
 
 import android.os.StrictMode;
 
-import com.bos.wmsapp.Utils.Logger;
+import com.bos.wms.mlkit.app.Logger;
 import com.rfidread.Connect.BaseConnect;
 import com.rfidread.Enumeration.eAntennaNo;
 import com.rfidread.Enumeration.eReadType;

@@ -253,7 +253,7 @@ class PackingDCActivity : AppCompatActivity() {
 
             Log.i("Ah-Log", "Packing Reason Id " + general.packReasonId)
 
-            Logger.Debug("PackingDC.log","API Start" ,"ItemSerial: ($ItemSerial) ")
+            Logger.Debug("PackingDC","API Start ItemSerial: ($ItemSerial) ")
 //            start = System.currentTimeMillis()
 
             api = APIClient.getInstance(IPAddress, false).create(BasicApi::class.java)
@@ -367,7 +367,7 @@ class PackingDCActivity : AppCompatActivity() {
 
                                                                 val error=t?.message + " (API Error)"
                                                                 var start:Long=System.currentTimeMillis();
-                                                                Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n Start Ping ($ItemSerial)")
+                                                                Logger.Debug("PackingDC","API-Timeout $error \n Start Ping ($ItemSerial)")
                                                             }
 
                                                             Logger.Debug("PACKING-ERROR-2", t?.message + " Local: " + IPAddress2);
@@ -439,7 +439,7 @@ class PackingDCActivity : AppCompatActivity() {
 
                                     val error=t?.message + " (API Error)"
                                     var start:Long=System.currentTimeMillis();
-                                    Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n Start Ping ($ItemSerial)")
+                                    Logger.Debug("PackingDC.log","API-Timeout $error \n Start Ping ($ItemSerial)")
 //                                    val x=executeCommand()
 //                                    Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n End Ping ($ItemSerial): => $x => (${System.currentTimeMillis()-start})")
                                 }

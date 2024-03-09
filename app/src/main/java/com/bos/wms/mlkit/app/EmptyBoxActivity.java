@@ -12,6 +12,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -29,6 +30,7 @@ import com.bos.wms.mlkit.storage.Storage;
 import com.bos.wms.mlkit.utils.RFID.RFIDConnectionListener;
 import com.bos.wms.mlkit.utils.RFID.RFIDController;
 import com.bos.wms.mlkit.utils.RFID.RFIDHandlerOutputListener;
+import com.bos.wms.mlkit.utils.RFID.RFIDSledHandler;
 import com.google.android.flexbox.FlexboxLayout;
 import com.google.android.material.snackbar.Snackbar;
 import com.rfidread.Models.Tag_Model;
@@ -143,11 +145,12 @@ public class EmptyBoxActivity extends AppHelperActivity {
                         @Override
                         public void run() {
                             scannedBoxBarcode.setText(CurrentBoxBarcode);
+                            if(CurrentBoxRFID != null){
+                                VerifyBinBarcode(CurrentBoxBarcode, CurrentBoxRFID);
+                            }
                         }
                     });
-                    if(CurrentBoxRFID != null){
-                        VerifyBinBarcode(CurrentBoxBarcode, CurrentBoxRFID);
-                    }
+
 
                     //VerifyBinBarcode(s.toString().replaceAll(" ", ""));
                 }else if(s.length() != 0 && !s.toString().isEmpty()){;
@@ -162,6 +165,11 @@ public class EmptyBoxActivity extends AppHelperActivity {
 
         insertBinBoxBarcode.requestFocus();
 
+        if(RFIDController.CurrentSledHandler == null){
+            RFIDController.CurrentSledHandler = new RFIDSledHandler(mStorage.getDataString("RFIDMac","00:00:00:00:00"));
+        }
+
+
 
         mainProgressDialog = ProgressDialog.show(this, "",
                 "Connecting To Sled, Please wait...", true);
@@ -171,9 +179,7 @@ public class EmptyBoxActivity extends AppHelperActivity {
         RFIDController.CurrentSledHandler.SetConnectionListener(new RFIDConnectionListener() {
             @Override
             public void onConnectionEstablished(String deviceName, boolean newConnection) {
-                if(newConnection){
-                    mainProgressDialog.cancel();
-                }
+                mainProgressDialog.cancel();
             }
 
             @Override
@@ -200,6 +206,12 @@ public class EmptyBoxActivity extends AppHelperActivity {
                 if(CurrentBoxRFID == null)
                 {
                     CurrentBoxRFID = rfid;
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            scannedItem.setText("Rescan RFID");
+                        }
+                    });
                 }
                 else if(!CurrentBoxRFID.equalsIgnoreCase(rfid)){
                     ProcessMultiReadRFIDS(true);
@@ -210,9 +222,6 @@ public class EmptyBoxActivity extends AppHelperActivity {
             public void onTagProcessed(String rfid, Tag_Model model, int count, boolean isTheOnlyTagRead) {
                 Logger.Error("TEST", "Read RFID: " + rfid + " Is The Only One? " + isTheOnlyTagRead);
                 if(isTheOnlyTagRead){
-                    if(CurrentBoxBarcode != null){
-                        VerifyBinBarcode(CurrentBoxBarcode, rfid);
-                    }
                     CreateViewBeatAnimation(scannedItem, 200, new AnimatorListenerAdapter() {
                         @Override
                         public void onAnimationEnd(Animator animation) {
@@ -220,7 +229,10 @@ public class EmptyBoxActivity extends AppHelperActivity {
                                 @Override
                                 public void run() {
                                     scannedItem.setText("RFID Detected");
-                                    scannedItem.setBackgroundColor(Color.parseColor("#FFB200"));
+                                    scannedItem.setBackgroundColor(Color.parseColor("#52ac24"));
+                                    if(CurrentBoxBarcode != null){
+                                        VerifyBinBarcode(CurrentBoxBarcode, rfid);
+                                    }
                                 }
                             });
                         }
@@ -231,6 +243,7 @@ public class EmptyBoxActivity extends AppHelperActivity {
 
         scannedItem.setOnClickListener(view -> {
             scannedItem.setText("Waiting For RFID");
+            scannedItem.setBackgroundColor(Color.parseColor("#6200EE"));
             scannedBoxBarcode.setText("");
             CurrentBoxRFID = null;
             CurrentBoxBarcode = null;
@@ -241,6 +254,9 @@ public class EmptyBoxActivity extends AppHelperActivity {
     public void VerifyBinBarcode(String barcode, String rfid){
         try {
 
+            if(Looper.myLooper() == null) {
+                Looper.prepare();
+            }
 
             Logger.Debug("API", "VerifyBinBarcode - Start Verify For Bin, Barcode '" + barcode + "'");
 
@@ -258,6 +274,16 @@ public class EmptyBoxActivity extends AppHelperActivity {
                             .subscribe((s) -> {
                                 if(s != null){
                                     Logger.Debug("API", "VerifyBinBarcode - Returned: " + s.string());
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            scannedItem.setText("Waiting For RFID");
+                                            scannedItem.setBackgroundColor(Color.parseColor("#6200EE"));
+                                            scannedBoxBarcode.setText("");
+                                            CurrentBoxRFID = null;
+                                            CurrentBoxBarcode = null;
+                                        }
+                                    });
                                     ProcessBinBarCode(barcode);
                                     mainProgressDialog.cancel();
                                 }
@@ -277,6 +303,7 @@ public class EmptyBoxActivity extends AppHelperActivity {
                                     @Override
                                     public void run() {
                                         scannedItem.setText("Waiting For RFID");
+                                        scannedItem.setBackgroundColor(Color.parseColor("#6200EE"));
                                         scannedBoxBarcode.setText("");
                                         CurrentBoxRFID = null;
                                         CurrentBoxBarcode = null;
@@ -286,6 +313,7 @@ public class EmptyBoxActivity extends AppHelperActivity {
                             }));
 
         } catch (Throwable e) {
+            mainProgressDialog.cancel();
             Logger.Error("API", "VerifyBinBarcode - Error Connecting: " + e.getMessage());
             Snackbar.make(findViewById(R.id.emptyBoxActivityLayout), "Connection To Server Failed!", Snackbar.LENGTH_LONG)
                     .setAction("No action", null).show();

@@ -6,7 +6,7 @@ import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 
-import com.bos.wmsapp.Utils.Logger;
+import com.bos.wms.mlkit.app.Logger;
 import com.rfidread.Connect.BaseConnect;
 import com.rfidread.Enumeration.eReadType;
 import com.rfidread.Helper.Helper_ThreadPool;

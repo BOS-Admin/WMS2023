@@ -28,6 +28,14 @@ public class General {
     public String AppVersion="2.2.41 08/03/2024";
     int interval = 3600;    // when there's no activity
 
+    /**
+     * This Will Be Used For Custom Logger Logging Types
+     */
+    public static String[] LoggerLogTypes = new String[] {
+            "RFIDHandler",
+            "Machine/Controller",
+    };
+
     public String ipAddress="";
 
     public String UserCode="";
