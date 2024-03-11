@@ -276,10 +276,6 @@
         "source": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_ping.xml"
     },
     {
-        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/fragment_home.xml",
-        "source": "com.bos.wms.mlkit.app-main-62:/layout/fragment_home.xml"
-    },
-    {
         "merged": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_shipment_pallete_carton_count.xml",
         "source": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_shipment_pallete_carton_count.xml"
     },
@@ -318,6 +314,10 @@
     {
         "merged": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_locationcheck.xml",
         "source": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-main-62:\\layout\\activity_locationcheck.xml"
+    },
+    {
+        "merged": "com.bos.wms.mlkit.app-mergeDebugResources-59:/layout/activity_empty_box.xml",
+        "source": "com.bos.wms.mlkit.app-main-62:/layout/activity_empty_box.xml"
     },
     {
         "merged": "C:\\Users\\MhmdSerhan\\.gradle\\daemon\\7.3.3\\com.bos.wms.mlkit.app-mergeDebugResources-59:\\layout\\activity_put_away.xml",

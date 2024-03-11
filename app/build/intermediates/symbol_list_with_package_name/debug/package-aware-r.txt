@@ -3326,10 +3326,13 @@ id scale
 id scanBarcodeHelpText
 id scanBinsHelpText
 id scanBoxesTxt
+id scanRFIDHelpText
 id scanUPCSButton
 id scanUPCSHelpText
 id scanUPCsForBolActivityLayout
 id scannedBag
+id scannedBoxBarcode
+id scannedItem
 id scannedItemSerial
 id scannedItemUPC
 id scannedItemsCount
