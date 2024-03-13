@@ -63,6 +63,7 @@ class PackingDCActivity : AppCompatActivity() {
         textItemScanned.requestFocus()
         textLastItem.isEnabled = false
 
+        queuePackingThreshold = General.getGeneral(application).getSetting(applicationContext, "QueueItemPackingValidationThreshold").toInt()
 
         textItemScanned.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {
@@ -253,7 +254,7 @@ class PackingDCActivity : AppCompatActivity() {
 
             Log.i("Ah-Log", "Packing Reason Id " + general.packReasonId)
 
-            Logger.Debug("PackingDC.log","API Start" ,"ItemSerial: ($ItemSerial) ")
+            Logger.Debug("PackingDC","API Start ItemSerial: ($ItemSerial) ")
 //            start = System.currentTimeMillis()
 
             api = APIClient.getInstance(IPAddress, false).create(BasicApi::class.java)
@@ -305,32 +306,104 @@ class PackingDCActivity : AppCompatActivity() {
 
                                                         if (response != null && response.contains("success")) {
 
-                                                            runOnUiThread {
-                                                                lblScanError.setTextColor(Color.GREEN)
-                                                                lblScanError.text = response
-                                                                index = items.size
-                                                                items[index] = itemCode
-                                                                textLastItem.text = itemCode
-                                                                updatingText = true
-                                                                textItemScanned.setText("")
-                                                                updatingText = false
-                                                                textItemScanned.isEnabled = true
-                                                                textItemScanned.requestFocus()
-                                                                Log.i("DC-Packing", response)
-                                                            }
-
                                                             if(IsValidQueueCheckBin(textBoxNb.text.toString())) {
                                                                 var splitArgs = response.split('-');
                                                                 if (splitArgs.size > 1) {
                                                                     try {
                                                                         var currentQueueID = splitArgs[1].toInt();
-                                                                        Logger.Debug("PACKING-QID", "Got Item Queue ID: " + itemCode + " Queue: " + currentQueueID);
+                                                                        var currentQueueItemCount = splitArgs[2].toInt();
+                                                                        Logger.Debug("PACKING-QID", "Got Item Queue ID: " + itemCode + " Queue: " + currentQueueID + " Count: " + currentQueueItemCount);
+                                                                        /*if(!queueItemCount.containsKey(currentQueueID)){
+                                                                            queueItemCount.put(currentQueueID, currentQueueItemCount);
+                                                                        }*/
                                                                         if (!itemsQueueCount.containsKey(itemCode)) {
                                                                             itemsQueueCount.put(itemCode, currentQueueID);
+                                                                        }
+                                                                        try {
+                                                                            var threshold:Double = (queuePackingThreshold / 100.0);
+                                                                            var queueIDSize = 0
+
+                                                                            for ((key, value) in itemsQueueCount){
+                                                                                if(value == currentQueueID){
+                                                                                    queueIDSize++;
+                                                                                }
+                                                                            }
+
+                                                                            Logger.Debug("PACKING-QID-COUNT", "Got Total QID: " + currentQueueID + " Item Size: " + queueIDSize);
+                                                                            var maxSizeForQueue = currentQueueItemCount * threshold
+                                                                            if(queueIDSize > maxSizeForQueue){
+                                                                                var errorMessage = "Error Queue ID: " + currentQueueID + " Reached Max Items From Same Stand (" + queueIDSize + ")/" + currentQueueItemCount + ", MAX: " + maxSizeForQueue + "(" + queuePackingThreshold + "%)";
+                                                                                //showMessage(errorMessage, Color.RED)
+                                                                                /*runOnUiThread {
+                                                                                    itemsQueueCount.clear()
+                                                                                    queueItemCount.clear()
+                                                                                    items.clear()
+                                                                                    textLastItem.text = ""
+                                                                                    index = -1;
+                                                                                    btnDone.isVisible = false
+                                                                                    btnDelete.isVisible = false
+                                                                                }*/
+                                                                                runOnUiThread {
+                                                                                    Beep()
+                                                                                    lblScanError.setTextColor(Color.RED)
+                                                                                    lblScanError.text = errorMessage
+                                                                                    updatingText = true
+                                                                                    textItemScanned.setText("")
+                                                                                    updatingText = false
+                                                                                    textItemScanned.isEnabled = true
+                                                                                    textItemScanned.requestFocus()
+                                                                                    Log.i("DC-Packing", errorMessage)
+                                                                                }
+                                                                            }else {
+                                                                                runOnUiThread {
+                                                                                    lblScanError.setTextColor(Color.GREEN)
+                                                                                    lblScanError.text = "Success"
+                                                                                    index = items.size
+                                                                                    items[index] = itemCode
+                                                                                    textLastItem.text = itemCode
+                                                                                    updatingText = true
+                                                                                    textItemScanned.setText("")
+                                                                                    updatingText = false
+                                                                                    textItemScanned.isEnabled = true
+                                                                                    textItemScanned.requestFocus()
+                                                                                    Log.i("DC-Packing", response)
+                                                                                }
+                                                                            }
+
+                                                                        }catch(e: Throwable){
+
                                                                         }
                                                                     } catch (ex: Throwable) {
 
                                                                     }
+                                                                }else {
+                                                                    runOnUiThread {
+                                                                        lblScanError.setTextColor(Color.GREEN)
+                                                                        lblScanError.text = "Success"
+                                                                        index = items.size
+                                                                        items[index] = itemCode
+                                                                        textLastItem.text = itemCode
+                                                                        updatingText = true
+                                                                        textItemScanned.setText("")
+                                                                        updatingText = false
+                                                                        textItemScanned.isEnabled = true
+                                                                        textItemScanned.requestFocus()
+                                                                        Log.i("DC-Packing", response)
+                                                                    }
+                                                                }
+                                                            }else {
+                                                                runOnUiThread {
+                                                                    lblScanError.setTextColor(Color.GREEN)
+                                                                    lblScanError.text = "Success"
+                                                                    index = items.size
+                                                                    items[index] = itemCode
+                                                                    textLastItem.text = itemCode
+                                                                    updatingText = true
+                                                                    textItemScanned.setText("")
+                                                                    updatingText = false
+                                                                    textItemScanned.isEnabled = true
+                                                                    textItemScanned.requestFocus()
+                                                                    Log.i("DC-Packing", response)
                                                                 }
                                                             }
 
@@ -367,7 +440,7 @@ class PackingDCActivity : AppCompatActivity() {
 
                                                                 val error=t?.message + " (API Error)"
                                                                 var start:Long=System.currentTimeMillis();
-                                                                Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n Start Ping ($ItemSerial)")
+                                                                Logger.Debug("PackingDC","API-Timeout $error \n Start Ping ($ItemSerial)")
                                                             }
 
                                                             Logger.Debug("PACKING-ERROR-2", t?.message + " Local: " + IPAddress2);
@@ -439,7 +512,7 @@ class PackingDCActivity : AppCompatActivity() {
 
                                     val error=t?.message + " (API Error)"
                                     var start:Long=System.currentTimeMillis();
-                                    Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n Start Ping ($ItemSerial)")
+                                    Logger.Debug("PackingDC.log","API-Timeout $error \n Start Ping ($ItemSerial)")
 //                                    val x=executeCommand()
 //                                    Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n End Ping ($ItemSerial): => $x => (${System.currentTimeMillis()-start})")
                                 }
@@ -479,21 +552,25 @@ class PackingDCActivity : AppCompatActivity() {
             textItemScanned.isEnabled = false
 
 
-            if(itemsQueueCount.size > 0){
-                val thresholdStr = General.getGeneral(application).getSetting(applicationContext, "QueueItemPackingValidationThreshold")
+            /*if(itemsQueueCount.size > 0){
                 try {
-                    var threshold:Double = (thresholdStr.toInt() / 100.0);
-                    var maxCountForAnyQID = items.size * threshold;
+                    var threshold:Double = (queuePackingThreshold / 100.0);
                     var queueIDSizes = itemsQueueCount.map { it.value }
                             .groupBy { it }
                             .map { Pair(it.key, it.value.size) }
 
                     for ((key, value) in queueIDSizes) {
                         Logger.Debug("PACKING-QID-COUNT", "Got Total QID: " + key + " Item Size: " + value);
-                        if(value > maxCountForAnyQID){
-                            showMessage("Error Queue ID: " + key + " Reached Max Items Inside Box (" + value + ")/" + items.size + ", MAX: " + maxCountForAnyQID + "(" + thresholdStr + "%)", Color.RED)
+                        var maxSizeForQueue = 0.0
+                        var currentQueueCount = queueItemCount.get(key)
+                        if(queueItemCount.containsKey(key)){
+                            maxSizeForQueue = currentQueueCount!!.times(threshold)
+                        }
+                        if(value > maxSizeForQueue){
+                            showMessage("Error Queue ID: " + key + " Reached Max Items From Same Stand (" + value + ")/" + currentQueueCount + ", MAX: " + maxSizeForQueue + "(" + queuePackingThreshold + "%)", Color.RED)
                             runOnUiThread {
                                 itemsQueueCount.clear()
+                                queueItemCount.clear()
                                 items.clear()
                                 textLastItem.text = ""
                                 index = -1;
@@ -507,7 +584,7 @@ class PackingDCActivity : AppCompatActivity() {
                 }catch(e: Throwable){
 
                 }
-            }
+            }*/
 
 
             var modelItems: ArrayList<FillBinDCModelItem> = arrayListOf()
@@ -557,6 +634,7 @@ class PackingDCActivity : AppCompatActivity() {
                             }
                             runOnUiThread {
                                 itemsQueueCount.clear()
+                                queueItemCount.clear()
                                 items.clear()
                                 textLastItem.text = ""
                                 index = -1;
@@ -667,6 +745,8 @@ class PackingDCActivity : AppCompatActivity() {
 
     private var itemsQueueCount: HashMap<String, Int> = HashMap();
 
+    private var queueItemCount: HashMap<Int, Int> = HashMap();
+
     private lateinit var textUser: TextView
     private lateinit var textBranch: TextView
     private lateinit var lblError: TextView
@@ -678,6 +758,7 @@ class PackingDCActivity : AppCompatActivity() {
     private lateinit var btnDelete: Button
     private lateinit var btnDone: Button
     private lateinit var btnPrev: Button
+    private var queuePackingThreshold: Int = 0
     private var PackingTypeId: Int = -1
     private var locationId: Int = -1
     private lateinit var general: General

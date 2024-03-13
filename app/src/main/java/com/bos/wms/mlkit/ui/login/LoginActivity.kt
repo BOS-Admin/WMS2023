@@ -155,11 +155,11 @@ class LoginActivity : AppCompatActivity() {
                                 }
                             }, {t:Throwable?->
                                 progressDialog!!.cancel()
-                                Logger.Debug("Login", "Version API", "Error: " + t!!.message)
+                                Logger.Debug("Login", "Version API Error: " + t!!.message)
                             }))
         } catch (e: Throwable) {
             progressDialog!!.cancel()
-            Logger.Debug("Login", "Version API", "Error Connecting: " + e.message)
+            Logger.Debug("Login", "Version API Error Connecting: " + e.message)
         }
     }
 
@@ -454,7 +454,7 @@ class LoginActivity : AppCompatActivity() {
         username.requestFocus()
 
         //Initialize classes
-        Logger.Initialize(applicationContext)
+        Logger.Initialize(applicationContext, arrayOf<String>())
         ZebraPrinter.establishFirstConnection(mStorage.getDataString("PrinterMacAddress", "00"))
         OCRBackgroundThread.Initialize(this);
 

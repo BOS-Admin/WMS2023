@@ -25,8 +25,16 @@ public class General {
     public Integer FloorID=0;
 
     public String UserName="";
-    public String AppVersion="2.2.42 08/03/2024";
+    public String AppVersion="2.2.43 13/03/2024";
     int interval = 3600;    // when there's no activity
+
+    /**
+     * This Will Be Used For Custom Logger Logging Types
+     */
+    public static String[] LoggerLogTypes = new String[] {
+            "RFIDHandler",
+            "Machine/Controller",
+    };
 
     public String ipAddress="";
 

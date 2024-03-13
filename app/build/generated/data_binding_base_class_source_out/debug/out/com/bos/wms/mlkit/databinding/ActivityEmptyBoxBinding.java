@@ -51,6 +51,15 @@ public final class ActivityEmptyBoxBinding implements ViewBinding {
   public final TextView scanBinsHelpText;
 
   @NonNull
+  public final TextView scanRFIDHelpText;
+
+  @NonNull
+  public final TextView scannedBoxBarcode;
+
+  @NonNull
+  public final Button scannedItem;
+
+  @NonNull
   public final Button scannedItemsCount;
 
   private ActivityEmptyBoxBinding(@NonNull ConstraintLayout rootView,
@@ -58,7 +67,9 @@ public final class ActivityEmptyBoxBinding implements ViewBinding {
       @NonNull TextView confirmationMessage, @NonNull Button confirmationNo,
       @NonNull Button confirmationYes, @NonNull ConstraintLayout emptyBoxActivityLayout,
       @NonNull FlexboxLayout flexboxLayout2, @NonNull EditText insertBinBoxBarcode,
-      @NonNull TextView scanBinsHelpText, @NonNull Button scannedItemsCount) {
+      @NonNull TextView scanBinsHelpText, @NonNull TextView scanRFIDHelpText,
+      @NonNull TextView scannedBoxBarcode, @NonNull Button scannedItem,
+      @NonNull Button scannedItemsCount) {
     this.rootView = rootView;
     this.confirmationButtons = confirmationButtons;
     this.confirmationLayout = confirmationLayout;
@@ -69,6 +80,9 @@ public final class ActivityEmptyBoxBinding implements ViewBinding {
     this.flexboxLayout2 = flexboxLayout2;
     this.insertBinBoxBarcode = insertBinBoxBarcode;
     this.scanBinsHelpText = scanBinsHelpText;
+    this.scanRFIDHelpText = scanRFIDHelpText;
+    this.scannedBoxBarcode = scannedBoxBarcode;
+    this.scannedItem = scannedItem;
     this.scannedItemsCount = scannedItemsCount;
   }
 
@@ -149,6 +163,24 @@ public final class ActivityEmptyBoxBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.scanRFIDHelpText;
+      TextView scanRFIDHelpText = ViewBindings.findChildViewById(rootView, id);
+      if (scanRFIDHelpText == null) {
+        break missingId;
+      }
+
+      id = R.id.scannedBoxBarcode;
+      TextView scannedBoxBarcode = ViewBindings.findChildViewById(rootView, id);
+      if (scannedBoxBarcode == null) {
+        break missingId;
+      }
+
+      id = R.id.scannedItem;
+      Button scannedItem = ViewBindings.findChildViewById(rootView, id);
+      if (scannedItem == null) {
+        break missingId;
+      }
+
       id = R.id.scannedItemsCount;
       Button scannedItemsCount = ViewBindings.findChildViewById(rootView, id);
       if (scannedItemsCount == null) {
@@ -158,7 +190,7 @@ public final class ActivityEmptyBoxBinding implements ViewBinding {
       return new ActivityEmptyBoxBinding((ConstraintLayout) rootView, confirmationButtons,
           confirmationLayout, confirmationMessage, confirmationNo, confirmationYes,
           emptyBoxActivityLayout, flexboxLayout2, insertBinBoxBarcode, scanBinsHelpText,
-          scannedItemsCount);
+          scanRFIDHelpText, scannedBoxBarcode, scannedItem, scannedItemsCount);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -218,7 +218,7 @@ class PaletteBinsCheckingActivity : AppCompatActivity() {
 
             Log.i("Ah-Log", "Packing Reason Id " + general.packReasonId)
 
-            Logger.Debug("PackingDC.log","API Start" ,"ItemSerial: ($ItemSerial) ")
+            Logger.Debug("PackingDC.log","API Start ItemSerial: ($ItemSerial) ")
 //            start = System.currentTimeMillis()
 
 
@@ -295,7 +295,7 @@ class PaletteBinsCheckingActivity : AppCompatActivity() {
 
                                     val error=t?.message + " (API Error)"
                                     var start:Long=System.currentTimeMillis();
-                                    Logger.Debug("Palette Checking.log","API-Timeout" ,"$error \n Start Ping ($ItemSerial)")
+                                    Logger.Debug("Palette Checking.log","API-Timeout $error \n Start Ping ($ItemSerial)")
 //                                    val x=executeCommand()
 //                                    Logger.Debug("PackingDC.log","API-Timeout" ,"$error \n End Ping ($ItemSerial): => $x => (${System.currentTimeMillis()-start})")
                                 }
