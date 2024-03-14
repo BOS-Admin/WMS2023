@@ -152,10 +152,12 @@ class PackingDCActivity : AppCompatActivity() {
     }
 
     fun removeLastItem() {
-        if(itemsQueueCount.containsKey(items[items.size - 1])){
-            itemsQueueCount.remove(items[items.size - 1])
+        var itemSerial = items.remove(items.size - 1)
+
+        if(itemsQueueCount.containsKey(itemSerial)){
+            itemsQueueCount.remove(itemSerial)
         }
-        items.remove(items.size - 1)
+
         index = items.size - 1
         if (index < 0) {
             textLastItem.text = ""
