@@ -41,6 +41,7 @@ import java.util.List;
 
 import Remote.APIClient;
 import Remote.BasicApi;
+import Remote.UserPermissions.UserPermissions;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
@@ -145,8 +146,12 @@ public class EmptyBoxActivity extends AppHelperActivity {
                         @Override
                         public void run() {
                             scannedBoxBarcode.setText(CurrentBoxBarcode);
-                            if(CurrentBoxRFID != null){
-                                VerifyBinBarcode(CurrentBoxBarcode, CurrentBoxRFID);
+                            if(UserPermissions.HasPermission("WMSApp.EmptyBoxAdmin")){
+                                ProcessBinBarCode(CurrentBoxBarcode);
+                            }else {
+                                if (CurrentBoxRFID != null) {
+                                    VerifyBinBarcode(CurrentBoxBarcode, CurrentBoxRFID);
+                                }
                             }
                         }
                     });
@@ -254,68 +259,44 @@ public class EmptyBoxActivity extends AppHelperActivity {
     public void VerifyBinBarcode(String barcode, String rfid){
         try {
 
+            Logger.Debug("API", "VerifyBinBarcode - Start Verify For Bin, Barcode '" + barcode + "'");
+
             if(Looper.myLooper() == null) {
                 Looper.prepare();
             }
 
-            Logger.Debug("API", "VerifyBinBarcode - Start Verify For Bin, Barcode '" + barcode + "'");
+            String rfidSubString = rfid.substring(0, 16);
 
-            mainProgressDialog = ProgressDialog.show(this, "",
-                    "Verify Bin RFID, Please Wait...", true);
-            mainProgressDialog.show();
-
-            BasicApi api = APIClient.getInstanceStatic(IPAddress,false).create(BasicApi.class);
-            CompositeDisposable compositeDisposable = new CompositeDisposable();
-
-            compositeDisposable.addAll(
-                    api.VerifyEmptyBin(barcode, rfid)
-                            .subscribeOn(Schedulers.io())
-                            .observeOn(AndroidSchedulers.mainThread())
-                            .subscribe((s) -> {
-                                if(s != null){
-                                    Logger.Debug("API", "VerifyBinBarcode - Returned: " + s.string());
-                                    runOnUiThread(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            scannedItem.setText("Waiting For RFID");
-                                            scannedItem.setBackgroundColor(Color.parseColor("#6200EE"));
-                                            scannedBoxBarcode.setText("");
-                                            CurrentBoxRFID = null;
-                                            CurrentBoxBarcode = null;
-                                        }
-                                    });
-                                    ProcessBinBarCode(barcode);
-                                    mainProgressDialog.cancel();
-                                }
-                            }, (throwable) -> {
-                                String error = throwable.toString();
-                                if(throwable instanceof HttpException){
-                                    HttpException ex = (HttpException) throwable;
-                                    error = ex.response().errorBody().string();
-                                    if(error.isEmpty()) error = throwable.getMessage();
-                                    Logger.Debug("API", "VerifyBinBarcode - Error In HTTP Response: " + error);
-                                }else {
-                                    Logger.Error("API", "VerifyBinBarcode - Error In API Response: " + throwable.getMessage());
-                                }
-                                mainProgressDialog.cancel();
-                                String finalError = error;
-                                runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        scannedItem.setText("Waiting For RFID");
-                                        scannedItem.setBackgroundColor(Color.parseColor("#6200EE"));
-                                        scannedBoxBarcode.setText("");
-                                        CurrentBoxRFID = null;
-                                        CurrentBoxBarcode = null;
-                                        ShowAlertDialog("Error", finalError);
-                                    }
-                                });
-                            }));
+            if(rfidSubString.contains(barcode)){
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        scannedItem.setText("Waiting For RFID");
+                        scannedItem.setBackgroundColor(Color.parseColor("#6200EE"));
+                        scannedBoxBarcode.setText("");
+                        CurrentBoxRFID = null;
+                        CurrentBoxBarcode = null;
+                    }
+                });
+                ProcessBinBarCode(barcode);
+            }else {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        scannedItem.setText("Waiting For RFID");
+                        scannedItem.setBackgroundColor(Color.parseColor("#6200EE"));
+                        scannedBoxBarcode.setText("");
+                        CurrentBoxRFID = null;
+                        CurrentBoxBarcode = null;
+                        ShowAlertDialog("Error", "Bin Barcode: " + barcode + " Doesn't Match Bin RFID!");
+                    }
+                });
+            }
 
         } catch (Throwable e) {
             mainProgressDialog.cancel();
-            Logger.Error("API", "VerifyBinBarcode - Error Connecting: " + e.getMessage());
-            Snackbar.make(findViewById(R.id.emptyBoxActivityLayout), "Connection To Server Failed!", Snackbar.LENGTH_LONG)
+            Logger.Error("API", "VerifyBinBarcode - Error Verifying Bin RFID: " + e.toString());
+            Snackbar.make(findViewById(R.id.emptyBoxActivityLayout), "Error Verifying Bin RFID!", Snackbar.LENGTH_LONG)
                     .setAction("No action", null).show();
         }
     }
