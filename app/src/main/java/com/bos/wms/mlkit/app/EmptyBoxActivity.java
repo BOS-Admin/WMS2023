@@ -73,7 +73,7 @@ public class EmptyBoxActivity extends AppHelperActivity {
 
     Button scannedItem;
 
-    TextView scannedBoxBarcode;
+    Button scannedBoxBarcode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,7 +145,18 @@ public class EmptyBoxActivity extends AppHelperActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            scannedBoxBarcode.setText(CurrentBoxBarcode);
+                            CreateViewBeatAnimation(scannedItem, 200, new AnimatorListenerAdapter() {
+                                @Override
+                                public void onAnimationEnd(Animator animation) {
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            scannedBoxBarcode.setText(CurrentBoxBarcode);
+                                            scannedBoxBarcode.setBackgroundColor(Color.parseColor("#52ac24"));
+                                        }
+                                    });
+                                }
+                            });
                             if(UserPermissions.HasPermission("WMSApp.EmptyBoxAdmin")){
                                 ProcessBinBarCode(CurrentBoxBarcode);
                             }else {
@@ -249,7 +260,8 @@ public class EmptyBoxActivity extends AppHelperActivity {
         scannedItem.setOnClickListener(view -> {
             scannedItem.setText("Waiting For RFID");
             scannedItem.setBackgroundColor(Color.parseColor("#6200EE"));
-            scannedBoxBarcode.setText("");
+            scannedBoxBarcode.setText("Waiting For Barcode");
+            scannedBoxBarcode.setBackgroundColor(Color.parseColor("#6200EE"));
             CurrentBoxRFID = null;
             CurrentBoxBarcode = null;
         });
@@ -273,7 +285,8 @@ public class EmptyBoxActivity extends AppHelperActivity {
                     public void run() {
                         scannedItem.setText("Waiting For RFID");
                         scannedItem.setBackgroundColor(Color.parseColor("#6200EE"));
-                        scannedBoxBarcode.setText("");
+                        scannedBoxBarcode.setText("Waiting For Barcode");
+                        scannedBoxBarcode.setBackgroundColor(Color.parseColor("#6200EE"));
                         CurrentBoxRFID = null;
                         CurrentBoxBarcode = null;
                     }
@@ -285,7 +298,8 @@ public class EmptyBoxActivity extends AppHelperActivity {
                     public void run() {
                         scannedItem.setText("Waiting For RFID");
                         scannedItem.setBackgroundColor(Color.parseColor("#6200EE"));
-                        scannedBoxBarcode.setText("");
+                        scannedBoxBarcode.setText("Waiting For Barcode");
+                        scannedBoxBarcode.setBackgroundColor(Color.parseColor("#6200EE"));
                         CurrentBoxRFID = null;
                         CurrentBoxBarcode = null;
                         ShowAlertDialog("Error", "Bin Barcode: " + barcode + " Doesn't Match Bin RFID!");
