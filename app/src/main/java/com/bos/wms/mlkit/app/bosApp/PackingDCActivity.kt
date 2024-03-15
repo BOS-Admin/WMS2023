@@ -152,12 +152,12 @@ class PackingDCActivity : AppCompatActivity() {
     }
 
     fun removeLastItem() {
-        var itemSerial = items.remove(items.size - 1)
-
+        var itemSerial = items.get(items.size - 1)
+        Logger.Debug("DC-Packing-REMOVE-Item", "Removing Item Serial: " + itemSerial + " Size: " + index)
         if(itemsQueueCount.containsKey(itemSerial)){
             itemsQueueCount.remove(itemSerial)
         }
-
+        items.remove(items.size - 1)
         index = items.size - 1
         if (index < 0) {
             textLastItem.text = ""
@@ -336,6 +336,7 @@ class PackingDCActivity : AppCompatActivity() {
                                                                             Logger.Debug("PACKING-QID-COUNT", "Got Total QID: " + currentQueueID + " Item Size: " + queueIDSize);
                                                                             var maxSizeForQueue = currentQueueItemCount * threshold
                                                                             if(queueIDSize > maxSizeForQueue){
+                                                                                itemsQueueCount.remove(itemCode);
                                                                                 var errorMessage = "Error Queue ID: " + currentQueueID + " Reached Max Items From Same Stand (" + queueIDSize + ")/" + currentQueueItemCount + ", MAX: " + maxSizeForQueue + "(" + queuePackingThreshold + "%)";
                                                                                 //showMessage(errorMessage, Color.RED)
                                                                                 /*runOnUiThread {
