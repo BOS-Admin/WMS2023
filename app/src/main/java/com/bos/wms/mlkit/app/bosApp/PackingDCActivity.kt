@@ -86,6 +86,7 @@ class PackingDCActivity : AppCompatActivity() {
                 if (items.containsValue(item)) {
                     Beep()
                     lblScanError.text = "$item Scanned Twice !!!"
+                    lblScanError.setTextColor(Color.RED)
                     textItemScanned.setText("")
                     updatingText = false;
                     return;
